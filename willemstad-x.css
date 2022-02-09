@@ -232,7 +232,7 @@ SOFTWARE.
 
 
 /* ────────────────────────────────────────────────────────────────────────────────
-> TITLEBAR
+> TITLEBAR | TITLE BAR
 ───────────────────────────────────────────────────────────────────────────────────
     >> (OPTION) REMOVE TITLE
     ──────────────────────────────────────────────────────────────────────────── */
@@ -257,6 +257,21 @@ SOFTWARE.
         .theme-light:is(.tb-tb-remove):not(.is-mobile) {
             padding: 0 !important;
         }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> TEST
+    ──────────────────────────────────────────────────────────────────────────── */
+
+        /*
+        .titlebar {
+            display: none;
+        }
+        body {
+            padding-top: 0 !important;
+        }
+        .workspace-ribbon.side-dock-ribbon.mod-right:hover {
+            -webkit-app-region: drag;
+        }
+        */
 
 /* ────────────────────────────────────────────────────────────────────────────────
 > STATUS BAR
@@ -1405,7 +1420,6 @@ SOFTWARE.
                 visibility: visible;
                 transition: 150ms ease-in-out;
             }
-
             .sd-eclipse-tabs .workspace-ribbon.side-dock-ribbon.mod-left {
                 border-radius: 0 calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25) 0;
                 border-right: 0.25rem solid var(--col-sd);
@@ -1426,6 +1440,80 @@ SOFTWARE.
                 visibility: visible;
             }
             */
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) ECLIPSE TABS PLUS | HIDE STUFF! LEFT RIGHT GO HIDEEEEE | CODE: ISAMAA+
+        /// can think about something where the opacity is zero first, and that everything is hidden until hovering
+        ───────────────────────────────────────────────────────────────────────── */
+        .sd-eclipse-tp .workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
+            visibility: hidden;
+            transition: var(--medium-transition);
+        }
+        .sd-eclipse-tp .workspace-ribbon:hover .workspace-ribbon-collapse-btn {
+            visibility: visible;
+            transition: 150ms ease-in-out;
+        }
+
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon.mod-left {
+            border-radius: 0 calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25) 0;
+            border-right: 0.25rem solid var(--col-sd);
+            border-top: 0.25rem solid var(--col-sd);
+            border-bottom: 0.25rem solid var(--col-sd);
+        }
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon.mod-right {
+            border-radius: calc(var(--shape-roundish) * 1.25) 0 0 calc(var(--shape-roundish) * 1.25);
+            border-left: 0.25rem solid var(--col-sd);
+            border-top: 0.25rem solid var(--col-sd);
+            border-bottom: 0.25rem solid var(--col-sd);
+        }
+
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left) {
+            opacity: 100%;
+            transition: var(--medium-transition);
+        }
+
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left):hover {
+            opacity: 100%;
+        }
+
+        .sd-eclipse-tp .side-dock-ribbon {
+            background-color: var(--col-sd);
+        }
+
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon.mod-left {
+            position: absolute;
+            left: 0;
+            top: calc(50% - 5rem);
+            width: 1rem;
+            height: 10rem;            
+        }
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon.mod-left:hover {
+            position: absolute;
+            left: 0;
+            top: calc(25%); /* 5rem */
+            opacity: 100%;
+            background-color: var(--background-primary);
+            transition: var(--quick-transition);
+            width: 2.25rem;
+            height: 50%; /* calc(100% - 5rem) */
+        }
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon.mod-right {
+            position: absolute;
+            right: 0;
+            top: calc(50% - 5rem);
+            width: 1rem;
+            height: 10rem;
+        }
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon.mod-right:hover {
+            position: absolute;
+            right: 0;
+            top: calc(25%);
+            opacity: 100%;
+            background-color: var(--background-primary);
+            transition: var(--quick-transition);
+            width: 2.25rem;
+            height: 50%
+        }
 
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -1567,6 +1655,31 @@ SOFTWARE.
             }
     /* ────────────────────────────────────────────────────────────────────────────
     >> [COMMUNITY THEME MODAL INFOBOX]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ADD TEXT
+        ──────────────────────────────────────────────────────────────────────── */
+        .community-theme.is-selected .community-theme-info::after {
+            content: "👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
+            white-space: pre-wrap;
+
+            font-size: 0.85rem;
+            line-height: 100%;
+            letter-spacing: -0.01rem;
+            position: absolute;
+            top: 23.5%;
+            right: 5%;
+            left: 5%;
+
+            padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+            margin: 0.25rem;
+
+            color: black;
+            background-color: var(--background-primary);
+            border-radius: calc(var(--shape-roundish) * 1.25);
+            border: 0.125rem solid var(--interactive-accent);
+        }
+        /* ────────────────────────────────────────────────────────────────────────────
+    >> [COMMUNITY THEME FIX GITHUB]
     ───────────────────────────────────────────────────────────────────────────────
         >>> ADD TEXT
         ──────────────────────────────────────────────────────────────────────── */
@@ -1882,6 +1995,7 @@ SOFTWARE.
     >>> Hide Scrollbars | BE GONE SCROLLBARS
     ──────────────────────────────────────────────────────────────────────────── */
     .kanban-plugin .kanban-plugin__lane ::-webkit-scrollbar {
+        height: 0%;
         display: none;
     }
     /* ────────────────────────────────────────────────────────────────────────────
@@ -2117,6 +2231,9 @@ settings:
         allowEmpty: false
         default: sd-eclipse-tabs
         options:
+            -
+                label: Eclipse Tabs Plus | EXPERIMENTAL
+                value: sd-eclipse-tp
             -
                 label: Eclipse Tabs | Mini tabs that appear at the top left/right when not hovered
                 value: sd-eclipse-tabs
