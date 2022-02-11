@@ -870,9 +870,9 @@ body {
                 --interactive-accent: hsl(155, 100%, 37%);
                 --interactive-accent-hover: hsl(184, 74%, 20%);
                 --scroll-hover: hsl(155, 100%, 48%);            
-                --col-selection: var(--accent-lighterer);
+                --col-selection: hsl(41, 100%, 55%);
 
-                --col-sd: var(--text-accent);
+                --col-sd: hsl(184, 75%, 20%);
         } 
             
         /* ────────────────────────────────────────────────────────────────────────
@@ -909,9 +909,9 @@ body {
                 --interactive-accent: hsl(155, 100%, 37%);
                 --interactive-accent-hover: hsl(184, 74%, 20%);
                 --scroll-hover: hsl(155, 100%, 48%);          
-                --col-selection: var(--accent-lighterer);
+                --col-selection: hsl(41, 100%, 55%);
 
-                --col-sd: var(--accent-lighter);
+                --col-sd: hsl(41, 100%, 55%);
 
         }
             
@@ -1025,7 +1025,7 @@ body {
                     --scroll-hover: hsl(155, 100%, 48%);                
                     --col-selection: var(--accent-lighterer);
 
-                    --col-sd: var(--text-accent);
+                    --col-sd: hsl(184, 75%, 20%);
 
                 /* ─────────────────────────────────────────────────────────────────
                 >>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
@@ -1072,7 +1072,7 @@ body {
                     --scroll-hover: hsl(155, 100%, 48%); 
                     --col-selection: var(--accent-lighterer);
 
-                    --col-sd: var(--accent-lighter);
+                    --col-sd: hsl(41, 100%, 55%);
 
                 /* ─────────────────────────────────────────────────────────────────
                 >>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
@@ -2449,7 +2449,7 @@ body {
 
 /* @settings
 name: "🏘️ Willemstad" 
-id: Willemstad
+id: Willemstad-Core
 settings:
     -
         id: col-palette
@@ -2547,7 +2547,7 @@ settings:
                 id: col-sd
                 title: '⏸️🖌️ Colours — Sidebars (Side Docks)'
                 type: variable-themed-color
-                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Eclipse Bars, and all colours for the Eclipse Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 40%)]' 
+                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Eclipse Bars, and all colours for the Eclipse Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 55%)]' 
                 opacity: true
                 format: hsl
                 default-light: hsl(184, 74%, 20%)
@@ -2670,7 +2670,7 @@ settings:
 
 /* @settings
 name: "🏘️ Willemstad \_ \_ \_ ✍️ Typography" 
-id: Willemstad
+id: Willemstad-Typography
 settings:
     -
         id: font-pairings
@@ -2933,7 +2933,7 @@ settings:
 
 /* @settings
 name: "🏘️ Willemstad \_ \_ \_ 🛠️ Plugin Settings" 
-id: Willemstad
+id: Willemstad-Plugins
 settings:
     -
      id: plugin
