@@ -223,7 +223,7 @@ SOFTWARE.
                     padding-right: -1.3rem;
                 }
         /* ────────────────────────────────────────────────────────────────────────
-        >>> LOL I THOUGHT IT WAS AN ITALIC
+        >>> LOL I THOUGHT IT WAS AN ITALIC | making them # nice
         ──────────────────────────────────────────────────────────────────────── */
             span.cm-formatting.cm-formatting-header:is(.cm-formatting-header-1, .cm-formatting-header-2, .cm-formatting-header-3, .cm-formatting-header-4, .cm-formatting-header-5, .cm-formatting-header-6).cm-header {
                 font-style: normal;
@@ -1941,6 +1941,22 @@ body {
                 padding: 0.35rem 0.5rem;
                 border-radius: calc(var(--shape-roundish) * 1.25);
             }
+
+            :not(.cm-formatting).cm-string.cm-url {
+            } 
+            .cm-formatting.cm-link::after {
+            } 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [KBD]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
+        ──────────────────────────────────────────────────────────────────────── */
+            kbd {
+                padding: 0 0.5em;
+                border: 1px solid var(--text-accent-hover);
+                border-radius: calc(var(--shape-roundish) * 1);
+
+            }
     
     /* ────────────────────────────────────────────────────────────────────────────
     >> [HIGHLIGHTS AND SELECTION] | thanks @pseudometa, from Shimmering Focus
@@ -2580,266 +2596,9 @@ settings:
                     max: 2.5
                     step: 0.1                    
     -
-        id: typography
-        title: ✍️ Typography
-        description:
-        type: heading
-        level: 1
-        collapsed: true
-    -
-            id: font-pairings
-            title: Font Pairings + Enable Custom Fonts
-            description: 'There are two suggested Font Pairings with Willemstad, available here. These options here are quick options provided. To override them, please select "Custom Fonts".'
-            type: class-select
-            allowEmpty: false
-            default: fp-manDM
-            options:
-                -
-                    label: Manrope + DM Sans
-                    value: fp-manDM
-                -
-                    label: Inter (v3.19)
-                    value: fp-inter
-                -
-                    label: Custom Fonts
-                    value: fp-custom
-    -
-            id: yaml-coloured
-            title: Coloured YAML
-            type: class-toggle
-            description: When enabled, YAML will be coloured selectively to increase readabiity.
-            default: enabled
-    -
-            id: size-font-searchbox
-            title: Font Size — Small Elements
-            type: variable-number-slider
-            description: Use this setting to change the font size of smaller elements.
-            format: "em"
-            default: 0.9
-            min: 0.25
-            max: 1.5
-            step: 0.05
-    -
-            id: font-monospace
-            title: Font — Monospace
-            description:
-            type: variable-text
-            default: "'DM Mono'"
-    -
-            id: font-heading
-            title: Font — Headings
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "Manrope", "DM Sans"'
-    -
-            id: font-editor
-            title: Font — Editor
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-menu
-            title: Font — Menu
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-ui
-            title: Font — User Interface (UI)
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-editor-m
-            title: Font — Mobile Editor
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-menu-m
-            title: Font — Mobile Menu
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-ui-m
-            title: Font — Mobile User Interface (UI)
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: mermaid-font
-            title: "Font — Mermaid.js 📊"
-            description: Changes font for the in-built Mermaid.js visualisations in the theme.
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: typography-col-text
-            title: Colours — Header Text
-            type: heading
-            description: Changes the font colours of the headers (H1–H6).
-            level: 2
-            collapsed: true
-    -
-                id: col-h1
-                title: Font Colour — H1
-                type: variable-themed-color
-                description:                
-                opacity: false
-                format: hsl
-                default-light: rgb(0, 191, 111)
-                default-dark: rgb(217, 225, 226)
-    -
-                id: col-h2
-                title: Font Colour — H2
-                type: variable-themed-color
-                description:                
-                opacity: false
-                format: hsl
-                default-light: rgb(13, 82, 87)
-                default-dark: rgb(0, 191, 111)
-    -
-                id: col-h3
-                title: Font Colour — H3
-                type: variable-themed-color
-                description:                
-                opacity: false
-                format: hsl
-                default-light: rgb(30, 34, 170)
-                default-dark: rgb(0, 174, 199)
-    -
-                id: col-h4
-                title: Font Colour — H4
-                type: variable-themed-color
-                description:                
-                opacity: false
-                format: hsl
-                default-light: rgb(255, 106, 38)
-                default-dark: rgb(255, 184, 28)
-    -
-                id: col-h5
-                title: Font Colour — H5
-                type: variable-themed-color
-                description:                
-                opacity: false
-                format: hsl
-                default-light: rgb(75, 0, 45)
-                default-dark: rgb(255, 177, 187)
-    -
-                id: col-h6
-                title: Font Colour — H6
-                type: variable-themed-color
-                description:
-                opacity: false
-                format: hsl
-                default-light: rgb(13, 82, 87)
-                default-dark: rgb(0, 191, 111)
-    -
-            id: typography-col-bg
-            title: Colours — Header Background
-            type: heading
-            description: Changes the background colours of the headers (H1–H6).
-            level: 2
-            collapsed: true
-    -
-                id: col-h1-bg
-                title: Background Colour — H1
-                type: variable-themed-color
-                description:
-                opacity: true
-                format: hsl
-                default-light: rgba(13, 82, 87, 0.08)
-                default-dark: rgba(0, 191, 111, 0.73)
-    -
-                id: col-h2-bg
-                title: Background Colour — H2
-                type: variable-themed-color
-                description:                
-                opacity: true
-                format: hsl
-                default-light: rgba(0, 191, 111, 0.20)
-                default-dark: rgba(13, 82, 87, 0.20)
-    -
-                id: col-h3-bg
-                title: Background Colour — H3
-                description:                
-                type: variable-themed-color
-                opacity: true
-                format: hsl
-                default-light: rgba(0, 174, 199, 0.25)
-                default-dark: rgba(30, 34, 170, 0.25)
-    -
-                id: col-h4-bg
-                title: Background Colour — H4
-                type: variable-themed-color
-                description:               
-                opacity: true
-                format: hsl
-                default-light: rgba(255, 184, 28, 0.20)
-                default-dark: rgba(254, 80, 0, 0.20)
-    -
-                id: col-h5-bg
-                title: Background Colour — H5
-                type: variable-themed-color
-                description:                
-                opacity: true
-                format: hsl
-                default-light: rgba(255, 177, 187, 0.20)
-                default-dark: rgba(75, 0, 45, 0.20)
-    -
-                id: col-h6-bg
-                title: Background Colour — H6
-                type: variable-themed-color
-                description:                
-                opacity: true
-                format: hsl
-                default-light: rgba(255, 255, 255, .00)
-                default-dark: rgba(255, 255, 255, .00)
-    -
-            id: typography-undl
-            title: ✍️〰️ Underlines
-            description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
-            type: heading
-            level: 2
-            collapsed: true
-    -
-                id: undl-text-norm
-                title: Underlines Spacing — Normal Text
-                description: Choose which underline spacing you would like your normal text to have.
-                type: class-select
-                allowEmpty: false
-                default: llus-nor-max
-                options:
-                    -
-                        label: 🔴 Standard (Classic Obsidian Core/Classic Shimmering Focus style)
-                        value: default
-                    -
-                        label: 🟡 Additional (Shimmering Focus style for hyperlinks)
-                        value: llus-nor-add
-                    -
-                        label: 🟢 Maximum (Willemstad style) | Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
-                        value: llus-nor-max
-    -
-                id: undl-hlink
-                title: Underlines Spacing — Hyperlinks
-                description: Choose which underline spacing you would like your hyperlinks to have.
-                type: class-select
-                allowEmpty: false
-                default: llus-hyp-max
-                options:
-                    -
-                        label: 🔴 Standard (Classic Obsidian style)
-                        value: default
-                    -
-                        label: 🟡 Additional (Shimmering Focus style)
-                        value: llus-hyp-add
-                    -
-                        label: 🟢 Maximum (Willemstad style) | Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
-                        value: llus-hyp-max
-    -
             id: modal-widths
             title: 🆕 Modal Widths
-            description: "Change the widths of modals (the settings/community plugins/themes/Publish menus) | For modal height, please use the existing Menu Size setting under Miscellaneous in Shimmering Focus' own style settings."
+            description: "Change the widths of modals (the settings/community plugins/themes/Publish menus)."
             type: heading
             level: 2
             collapsed: true
@@ -2892,61 +2651,6 @@ settings:
                 type: class-toggle
                 description: When enabled, this centres embedded images in your notes.
                 default: true
-    -
-        id: plugin
-        title: 🛠️ Plugin-Specific Settings
-        type: heading
-        description: Admonitions, Calendar, Emoji Toolbar, Sliding Panes, Style Settings | The options here allows you to tweak how plugins are displayed.
-        level: 1
-        collapsed: true
-    -
-            id: PComm001-col-today
-            title: 📆 Calendar | Δ Colour, Font of today's date
-            type: variable-themed-color
-            description: Change the font colour for today's date in the Calendar plugin.
-            opacity: false
-            format: hsl
-            default-light: rgb(0, 191, 111)
-            default-dark: rgb(0, 191, 111)
-    -
-            id: PComm001-col-year
-            title: 📆 Calendar | Δ Colour, Font of the year
-            type: variable-themed-color
-            description: Change the font colour for the year in the Calendar plugin.
-            opacity: false
-            format: hsl
-            default-light: rgb(0, 191, 111)
-            default-dark: rgb(0, 191, 111)
-    -
-            id: PComm001-col-dot
-            title: 📆 Calendar | Δ Colour, Filled dot
-            type: variable-themed-color
-            description: Change the colour of the dot in the Calendar plugin.
-            opacity: false
-            format: hsl
-            default-light: rgb(0, 191, 111)
-            default-dark: rgb(0, 191, 111)
-    -
-            id: PComm002-noshadow
-            title: Sliding Panes | No shadows between two panes
-            type: class-toggle
-            description: When enabled, this removes the shadows between two sliding panes when using the Sliding Panes plugin.
-            default: true
-    -
-            id: PComm003-margin
-            title: Admonitions | Change the size of the margins
-            type: variable-number-slider
-            format: px
-            default: 0
-            min: 0
-            max: 25
-            step: 0.5
-    -
-            id: PComm000-blockdesc-appear
-            title: ⚙️ Style Settings | Keep Heading Block Description visible
-            type: class-toggle
-            description: When enabled, this keeps the heading description in the Style Settings visible when said option is toggled.
-            default: true
 
 */
 /*
@@ -2964,7 +2668,322 @@ settings:
             default: "Obsidian"
 */
 
+/* @settings
+name: "🏘️ Willemstad \_ \_ \_ ✍️ Typography" 
+id: Willemstad
+settings:
+    -
+        id: font-pairings
+        title: ✍️✨ Font Pairings + Enable Custom Fonts
+        description: 'There are two suggested Font Pairings with Willemstad, available here. These options here are quick options provided. To override them, please select "Custom Fonts".'
+        type: class-select
+        allowEmpty: false
+        default: fp-manDM
+        options:
+            -
+                label: Manrope + DM Sans
+                value: fp-manDM
+            -
+                label: Inter (v3.19)
+                value: fp-inter
+            -
+                label: Custom Fonts
+                value: fp-custom
+    -
+        id: yaml-coloured
+        title: Coloured YAML
+        type: class-toggle
+        description: When enabled, YAML will be coloured selectively to increase readabiity.
+        default: enabled
+    -
+        id: size-font-searchbox
+        title: Font Size — Small Elements
+        type: variable-number-slider
+        description: Use this setting to change the font size of smaller elements.
+        format: "em"
+        default: 0.9
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
+        id: font-monospace
+        title: Font — Monospace
+        description:
+        type: variable-text
+        default: "'DM Mono'"
+    -
+        id: font-heading
+        title: Font — Headings
+        description:
+        type: variable-text
+        default: '"Inter 3.19", "Manrope", "DM Sans"'
+    -
+        id: font-editor
+        title: Font — Editor
+        description:
+        type: variable-text
+        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: font-menu
+        title: Font — Menu
+        description:
+        type: variable-text
+        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: font-ui
+        title: Font — User Interface (UI)
+        description:
+        type: variable-text
+        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: font-editor-m
+        title: Font — Mobile Editor
+        description:
+        type: variable-text
+        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: font-menu-m
+        title: Font — Mobile Menu
+        description:
+        type: variable-text
+        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: font-ui-m
+        title: Font — Mobile User Interface (UI)
+        description:
+        type: variable-text
+        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: mermaid-font
+        title: "Font — Mermaid.js 📊"
+        description: Changes font for the in-built Mermaid.js visualisations in the theme.
+        type: variable-text
+        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: typography-col-text
+        title: Colours — Header Text
+        type: heading
+        description: Changes the font colours of the headers (H1–H6).
+        level: 2
+        collapsed: true
+    -
+            id: col-h1
+            title: Font Colour — H1
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: rgb(0, 191, 111)
+            default-dark: rgb(217, 225, 226)
+    -
+            id: col-h2
+            title: Font Colour — H2
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: rgb(13, 82, 87)
+            default-dark: rgb(0, 191, 111)
+    -
+            id: col-h3
+            title: Font Colour — H3
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: rgb(30, 34, 170)
+            default-dark: rgb(0, 174, 199)
+    -
+            id: col-h4
+            title: Font Colour — H4
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: rgb(255, 106, 38)
+            default-dark: rgb(255, 184, 28)
+    -
+            id: col-h5
+            title: Font Colour — H5
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: rgb(75, 0, 45)
+            default-dark: rgb(255, 177, 187)
+    -
+            id: col-h6
+            title: Font Colour — H6
+            type: variable-themed-color
+            description:
+            opacity: false
+            format: hsl
+            default-light: rgb(13, 82, 87)
+            default-dark: rgb(0, 191, 111)
+    -
+        id: typography-col-bg
+        title: Colours — Header Background
+        type: heading
+        description: Changes the background colours of the headers (H1–H6).
+        level: 2
+        collapsed: true
+    -
+            id: col-h1-bg
+            title: Background Colour — H1
+            type: variable-themed-color
+            description:
+            opacity: true
+            format: hsl
+            default-light: rgba(13, 82, 87, 0.08)
+            default-dark: rgba(0, 191, 111, 0.73)
+    -
+            id: col-h2-bg
+            title: Background Colour — H2
+            type: variable-themed-color
+            description:                
+            opacity: true
+            format: hsl
+            default-light: rgba(0, 191, 111, 0.20)
+            default-dark: rgba(13, 82, 87, 0.20)
+    -
+            id: col-h3-bg
+            title: Background Colour — H3
+            description:                
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: rgba(0, 174, 199, 0.25)
+            default-dark: rgba(30, 34, 170, 0.25)
+    -
+            id: col-h4-bg
+            title: Background Colour — H4
+            type: variable-themed-color
+            description:               
+            opacity: true
+            format: hsl
+            default-light: rgba(255, 184, 28, 0.20)
+            default-dark: rgba(254, 80, 0, 0.20)
+    -
+            id: col-h5-bg
+            title: Background Colour — H5
+            type: variable-themed-color
+            description:                
+            opacity: true
+            format: hsl
+            default-light: rgba(255, 177, 187, 0.20)
+            default-dark: rgba(75, 0, 45, 0.20)
+    -
+            id: col-h6-bg
+            title: Background Colour — H6
+            type: variable-themed-color
+            description:                
+            opacity: true
+            format: hsl
+            default-light: rgba(255, 255, 255, .00)
+            default-dark: rgba(255, 255, 255, .00)
+    -
+        id: typography-undl
+        title: ✍️〰️ Underlines
+        description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+            id: undl-text-norm
+            title: Underlines Spacing — Normal Text
+            description: Choose which underline spacing you would like your normal text to have.
+            type: class-select
+            allowEmpty: false
+            default: llus-nor-max
+            options:
+                -
+                    label: 🔴 Standard (Classic Obsidian Core/Classic Shimmering Focus style)
+                    value: default
+                -
+                    label: 🟡 Additional (Shimmering Focus style for hyperlinks)
+                    value: llus-nor-add
+                -
+                    label: 🟢 Maximum (Willemstad style) | Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                    value: llus-nor-max
+    -
+            id: undl-hlink
+            title: Underlines Spacing — Hyperlinks
+            description: Choose which underline spacing you would like your hyperlinks to have.
+            type: class-select
+            allowEmpty: false
+            default: llus-hyp-max
+            options:
+                -
+                    label: 🔴 Standard (Classic Obsidian style)
+                    value: default
+                -
+                    label: 🟡 Additional (Shimmering Focus style)
+                    value: llus-hyp-add
+                -
+                    label: 🟢 Maximum (Willemstad style) | Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                    value: llus-hyp-max
+*/
 
+/* @settings
+name: "🏘️ Willemstad \_ \_ \_ 🛠️ Plugin Settings" 
+id: Willemstad
+settings:
+    -
+     id: plugin
+     title: 🛠️ Plugin-Specific Settings
+     type: heading
+     description: Admonitions, Calendar, Emoji Toolbar, Sliding Panes, Style Settings | The options here allows you to tweak how plugins are displayed.
+     level: 1
+     collapsed: false
+    -
+        id: PComm001-col-today
+        title: 📆 Calendar | Δ Colour, Font of today's date
+        type: variable-themed-color
+        description: Change the font colour for today's date in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: rgb(0, 191, 111)
+        default-dark: rgb(0, 191, 111)
+    -
+        id: PComm001-col-year
+        title: 📆 Calendar | Δ Colour, Font of the year
+        type: variable-themed-color
+        description: Change the font colour for the year in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: rgb(0, 191, 111)
+        default-dark: rgb(0, 191, 111)
+    -
+        id: PComm001-col-dot
+        title: 📆 Calendar | Δ Colour, Filled dot
+        type: variable-themed-color
+        description: Change the colour of the dot in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: rgb(0, 191, 111)
+        default-dark: rgb(0, 191, 111)
+    -
+        id: PComm002-noshadow
+        title: Sliding Panes | No shadows between two panes
+        type: class-toggle
+        description: When enabled, this removes the shadows between two sliding panes when using the Sliding Panes plugin.
+        default: true
+    -
+        id: PComm003-margin
+        title: Admonitions | Change the size of the margins
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 25
+        step: 0.5
+    -
+        id: PComm000-blockdesc-appear
+        title: ⚙️ Style Settings | Keep Heading Block Description visible
+        type: class-toggle
+        description: When enabled, this keeps the heading description in the Style Settings visible when said option is toggled.
+        default: true
+*/
 /* ────────────────────────────────────────────────────────────────────────────────
 > FONT BASE64 ENCODING | converted via transfonter.org, thanks @Chetachi for rec
 ──────────────────────────────────────────────────────────────────────────────── */
