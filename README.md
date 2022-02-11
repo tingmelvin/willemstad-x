@@ -8,6 +8,8 @@ It's up to you! I intend to maintain Willemstad for SF minimally, since I don't 
 
 Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundup.org/2022-02-05/), so if that's the deciding factor, then go for that!
 
+⚠️ There are sidebar/sidedock and titlebar styling in Willemstad X than isn't present in Willemstad for SF!
+
 ## Things to complete
 1. renaming `RGB` to `HSL`
 2. ... and a bunch of other stuff in my Obsidian file that I didn't write it here 
