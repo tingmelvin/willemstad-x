@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.1a1
+Willemstad X | v0.0.1a2
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -285,6 +285,7 @@ SOFTWARE.
     /* ────────────────────────────────────────────────────────────────────────────
     >> CUSTOM TITLEBAR
     ──────────────────────────────────────────────────────────────────────────── */
+        /*
         .tb-custom div.titlebar-button {
             color: black;
         }
@@ -297,20 +298,21 @@ SOFTWARE.
             font-family: var(--font-ui);
             font-weight: 600;
             font-size: 1rem;
-            color: var(--text-accent);
+            color: var(--text-accent);*/
             /*
             text-transform: uppercase;
             letter-spacing: -0.05em;
             */
+        /*
         }
         .tb-custom div.titlebar-text {
             position: absolute;
             top: 0;
             left: 0;
-            /*
+
             text-align: left;
             margin-left: 0.5rem;
-            */
+
             font-size: 0rem;
         }
 
@@ -321,6 +323,7 @@ SOFTWARE.
         .tb-custom:is(.theme-light,.theme-dark) {
             --title-custom: "Obsidian";
         }
+        */
 
 
     /*
@@ -2495,18 +2498,6 @@ settings:
             description: When enabled, the entire top titlebar from Obsidian is removed. Note! This means that you will not be able to resize your screen, or exit Obsidian with a mouse. These can be done via hotkeys instead.
             default: disabled
     -
-            id: tb-custom
-            title: Titlebar — Custom
-            type: class-toggle
-            description: When enabled, the titlebar is restyled instead, with the original title removed and replaced with a custom field.
-            default: enabled
-    -
-            id: title-custom
-            title: Titlebar — Custom Title (for Custom Titlebar)
-            type: variable-text
-            description: Add some words!
-            default: "Obsidian"
-    -
             id: collapse-header-sanctum
             title: Sanctum-style Header Collapse Indicator
             type: class-toggle
@@ -2958,7 +2949,20 @@ settings:
             default: true
 
 */
-
+/*
+    -
+            id: tb-custom
+            title: Titlebar — Custom
+            type: class-toggle
+            description: When enabled, the titlebar is restyled instead, with the original title removed and replaced with a custom field.
+            default: enabled
+    -
+            id: title-custom
+            title: Titlebar — Custom Title (for Custom Titlebar)
+            type: variable-text
+            description: Add some words!
+            default: "Obsidian"
+*/
 
 
 /* ────────────────────────────────────────────────────────────────────────────────
