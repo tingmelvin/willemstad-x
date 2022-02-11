@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.1a2
+Willemstad X | v0.0.1a3
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -2545,23 +2545,23 @@ settings:
             collapsed: true
     -
                 id: col-sd
-                title: 'Colours — Sidebars (Side Docks)'
+                title: '⏸️🖌️ Colours — Sidebars (Side Docks)'
                 type: variable-themed-color
-                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Eclipse Bars, and all colours for the Eclipse Tabs. Does not affect the default bars.'
+                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Eclipse Bars, and all colours for the Eclipse Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 40%)]' 
                 opacity: true
                 format: hsl
-                default-light: rgb(255, 182, 26)
-                default-dark: rgb(255, 182, 26)
+                default-light: hsl(184, 74%, 20%)
+                default-dark: hsl(184, 74%, 20%)
     -
                 id: elements-sd
-                title: Customisation — Eclipse Tabs
+                title: ⏸️✨ Customisation — Eclipse Tabs
                 description: 'If you have selected the Eclipse Tabs option in the "Sidebars (Side Docks)" style setting, customise the Eclipse Tabs here.'
                 type: heading
                 level: 3
                 collapsed: false
     -
                     id: sd-opacity-none
-                    title: 'Disappearing Eclipse Tabs'
+                    title: '💨 Disappearing Eclipse Tabs'
                     type: class-toggle
                     description: 'If toggled, Eclipse Tabs will disappear when not hovered.'
                     default: disabled
@@ -2681,23 +2681,23 @@ settings:
         default: fp-manDM
         options:
             -
-                label: Manrope + DM Sans
+                label: 🟢 Manrope + DM Sans
                 value: fp-manDM
             -
-                label: Inter (v3.19)
+                label: ⚫ Inter (v3.19)
                 value: fp-inter
             -
-                label: Custom Fonts
+                label: ⭕ Custom Fonts
                 value: fp-custom
     -
         id: yaml-coloured
-        title: Coloured YAML
+        title: 🌈 Coloured YAML
         type: class-toggle
         description: When enabled, YAML will be coloured selectively to increase readabiity.
         default: enabled
     -
         id: size-font-searchbox
-        title: Font Size — Small Elements
+        title: 🔡 Font Size — Small Elements
         type: variable-number-slider
         description: Use this setting to change the font size of smaller elements.
         format: "em"
@@ -2706,62 +2706,69 @@ settings:
         max: 1.5
         step: 0.05
     -
-        id: font-monospace
-        title: Font — Monospace
-        description:
-        type: variable-text
-        default: "'DM Mono'"
+        id: typography-
+        title: ✍️🔤 Font Customisation
+        type: heading
+        description: Core typography options and fonts for Willemstad
+        level: 2
+        collapsed: false
     -
-        id: font-heading
-        title: Font — Headings
-        description:
-        type: variable-text
-        default: '"Inter 3.19", "Manrope", "DM Sans"'
+            id: font-monospace
+            title: Font — Monospace
+            description:
+            type: variable-text
+            default: "'DM Mono'"
     -
-        id: font-editor
-        title: Font — Editor
-        description:
-        type: variable-text
-        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            id: font-heading
+            title: Font — Headings
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "Manrope", "DM Sans"'
     -
-        id: font-menu
-        title: Font — Menu
-        description:
-        type: variable-text
-        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            id: font-editor
+            title: Font — Editor
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
     -
-        id: font-ui
-        title: Font — User Interface (UI)
-        description:
-        type: variable-text
-        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            id: font-menu
+            title: Font — Menu
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
     -
-        id: font-editor-m
-        title: Font — Mobile Editor
-        description:
-        type: variable-text
-        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            id: font-ui
+            title: Font — User Interface (UI)
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
     -
-        id: font-menu-m
-        title: Font — Mobile Menu
-        description:
-        type: variable-text
-        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            id: font-editor-m
+            title: Font — Mobile Editor
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
     -
-        id: font-ui-m
-        title: Font — Mobile User Interface (UI)
-        description:
-        type: variable-text
-        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            id: font-menu-m
+            title: Font — Mobile Menu
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
     -
-        id: mermaid-font
-        title: "Font — Mermaid.js 📊"
-        description: Changes font for the in-built Mermaid.js visualisations in the theme.
-        type: variable-text
-        default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            id: font-ui-m
+            title: Font — Mobile User Interface (UI)
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: mermaid-font
+            title: "Font — Mermaid.js 📊"
+            description: Changes font for the in-built Mermaid.js visualisations in the theme.
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
     -
         id: typography-col-text
-        title: Colours — Header Text
+        title: 🖌️🔤 Colours — Header Text
         type: heading
         description: Changes the font colours of the headers (H1–H6).
         level: 2
@@ -2773,8 +2780,8 @@ settings:
             description:                
             opacity: false
             format: hsl
-            default-light: rgb(0, 191, 111)
-            default-dark: rgb(217, 225, 226)
+            default-light: hsl(155, 100%, 37%)
+            default-dark: hsl(187, 13%, 87%)
     -
             id: col-h2
             title: Font Colour — H2
@@ -2782,8 +2789,8 @@ settings:
             description:                
             opacity: false
             format: hsl
-            default-light: rgb(13, 82, 87)
-            default-dark: rgb(0, 191, 111)
+            default-light: hsl(184, 74%, 20%)
+            default-dark: hsl(155, 100%, 37%)
     -
             id: col-h3
             title: Font Colour — H3
@@ -2791,8 +2798,8 @@ settings:
             description:                
             opacity: false
             format: hsl
-            default-light: rgb(30, 34, 170)
-            default-dark: rgb(0, 174, 199)
+            default-light: hsl(238, 70%, 39%)
+            default-dark: hsl(188, 100%, 39%)
     -
             id: col-h4
             title: Font Colour — H4
@@ -2800,8 +2807,8 @@ settings:
             description:                
             opacity: false
             format: hsl
-            default-light: rgb(255, 106, 38)
-            default-dark: rgb(255, 184, 28)
+            default-light: hsl(19, 100%, 57%)
+            default-dark: hsl(41, 100%, 55%)
     -
             id: col-h5
             title: Font Colour — H5
@@ -2809,8 +2816,8 @@ settings:
             description:                
             opacity: false
             format: hsl
-            default-light: rgb(75, 0, 45)
-            default-dark: rgb(255, 177, 187)
+            default-light: hsl(324, 100%, 15%)
+            default-dark: hsl(352, 100%, 85%)
     -
             id: col-h6
             title: Font Colour — H6
@@ -2818,11 +2825,11 @@ settings:
             description:
             opacity: false
             format: hsl
-            default-light: rgb(13, 82, 87)
-            default-dark: rgb(0, 191, 111)
+            default-light: hsl(184, 74%, 20%)
+            default-dark: hsl(155, 100%, 37%)
     -
         id: typography-col-bg
-        title: Colours — Header Background
+        title: 🖌️🚥 Colours — Header Background
         type: heading
         description: Changes the background colours of the headers (H1–H6).
         level: 2
@@ -2834,8 +2841,8 @@ settings:
             description:
             opacity: true
             format: hsl
-            default-light: rgba(13, 82, 87, 0.08)
-            default-dark: rgba(0, 191, 111, 0.73)
+            default-light: hsla(184, 74%, 20%, 0.08)
+            default-dark: hsla(155, 100%, 37%, 0.73)
     -
             id: col-h2-bg
             title: Background Colour — H2
@@ -2843,8 +2850,8 @@ settings:
             description:                
             opacity: true
             format: hsl
-            default-light: rgba(0, 191, 111, 0.20)
-            default-dark: rgba(13, 82, 87, 0.20)
+            default-light: hsla(155, 100%, 37%, 0.2)
+            default-dark: hsla(184, 74%, 20%, 0.2)
     -
             id: col-h3-bg
             title: Background Colour — H3
@@ -2852,8 +2859,8 @@ settings:
             type: variable-themed-color
             opacity: true
             format: hsl
-            default-light: rgba(0, 174, 199, 0.25)
-            default-dark: rgba(30, 34, 170, 0.25)
+            default-light: hsla(188, 100%, 39%, 0.25)
+            default-dark: hsla(238, 70%, 39%, 0.25)
     -
             id: col-h4-bg
             title: Background Colour — H4
@@ -2861,8 +2868,8 @@ settings:
             description:               
             opacity: true
             format: hsl
-            default-light: rgba(255, 184, 28, 0.20)
-            default-dark: rgba(254, 80, 0, 0.20)
+            default-light: hsla(41, 100%, 55%, 0.2)
+            default-dark: hsla(19, 100%, 50%, 0.2)
     -
             id: col-h5-bg
             title: Background Colour — H5
@@ -2870,8 +2877,8 @@ settings:
             description:                
             opacity: true
             format: hsl
-            default-light: rgba(255, 177, 187, 0.20)
-            default-dark: rgba(75, 0, 45, 0.20)
+            default-light: hsla(352, 100%, 85%, 0.2)
+            default-dark: hsla(324, 100%, 15%, 0.2)
     -
             id: col-h6-bg
             title: Background Colour — H6
@@ -2930,7 +2937,7 @@ id: Willemstad
 settings:
     -
      id: plugin
-     title: 🛠️ Plugin-Specific Settings
+     title: 🛠️
      type: heading
      description: Admonitions, Calendar, Emoji Toolbar, Sliding Panes, Style Settings | The options here allows you to tweak how plugins are displayed.
      level: 1
