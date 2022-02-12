@@ -1649,13 +1649,14 @@ body {
             visibility: visible;
             transition: 150ms ease-in-out;
             margin: 0;
-            padding: 1rem 0.5rem 0.5rem 0.5rem;
+            
         }
         .sd-eclipse-tp .workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
             visibility: hidden;
             transition: var(--medium-transition);
+            margin: 0;
         }   /* transition and add colour before hover */
-        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right):not(:hover) .side-dock-actions .side-dock-ribbon-action {
+        .sd-eclipse-tp .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right):not(:hover) :is(.side-dock-actions, .side-dock-ribbon-action) {
             color: var(--col-sd);
             transition: var(--slow-transition);
         }   /* transition and add colour before hover */ /* COLOURS: --col-sd */
@@ -1678,7 +1679,7 @@ body {
             transition: var(--medium-transition);
 
             position: absolute;
-            top: calc(50% - (var(--sd-height-norm) / 2));
+            top: calc((100% - var(--sd-height-norm)) / 2 ) ;
             width: var(--sd-width-norm);
             height: var(--sd-height-norm);      /* --sd-height-norm */
 
@@ -1694,7 +1695,6 @@ body {
             transition: var(--quick-transition);
             width: 2.5rem;
             height: var(--sd-height-hover);     /* --sd-height-hover */
-
         }
 
         .sd-eclipse-tp .side-dock-ribbon {
