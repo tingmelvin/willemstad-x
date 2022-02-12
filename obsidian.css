@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.1a3
+Willemstad X | v0.0.1a4
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -298,33 +298,50 @@ SOFTWARE.
             font-family: var(--font-ui);
             font-weight: 600;
             font-size: 1rem;
-            color: var(--text-accent);*/
+            color: var(--text-accent);
+        }
+        */
+        /*
+        .titlebar-button-container.mod-right {
+            position: absolute;
+            background-color: var(--background-secondary);
+            border-color: var(--background-secondary-alt);
+            border-radius: 0 0 calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5);
+            height: 1.35rem;
+            right: 0;
+            top: 0;
+        }
+        .titlebar-button-container.mod-right > * {
+            color: black;
+        }
+        .titlebar-button.mod-maximize {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        */
             /*
             text-transform: uppercase;
             letter-spacing: -0.05em;
             */
+
         /*
-        }
         .tb-custom div.titlebar-text {
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: none;
+        }
 
-            text-align: left;
-            margin-left: 0.5rem;
-
-            font-size: 0rem;
+        .tb-custom div.titlebar-inner::before {
+            content: var(--title-custom);
+            margin: 0.5rem;
         }
 
         .tb-custom div.titlebar-button-container.mod-left {
             display: none;
         }
 
-        .tb-custom:is(.theme-light,.theme-dark) {
+        .tb-custom:is(.theme-light, .theme-dark) {
             --title-custom: "Obsidian";
         }
         */
-
 
     /*
     div.titlebar:is(:hover),
@@ -1698,7 +1715,7 @@ body {
                 --sd-width-norm:    1.1rem;
                 --sd-opacity:       100%;
                 --sd-height-hover:  50%;
-                --sd-height-norm:   10rem;
+                --sd-height-norm:   15%;
             }
 
         /* ─────────────────────────────────────────────────────────────────────────
@@ -2448,7 +2465,7 @@ body {
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* @settings
-name: "🏘️ Willemstad \_ \_ \_ ⭕ Core" 
+name: "🏘️ Willemstad \_ \_ > \_ \_ ⭕ Core" 
 id: Willemstad-Core
 settings:
     -
@@ -2571,10 +2588,10 @@ settings:
                     type: variable-number-slider
                     description: 'Set the height of the tabs for the Eclipse Tabs sidebars, when not hovered.'
                     format: "rem"
-                    default: 10
-                    min: 1
-                    max: 20
-                    step: 0.25
+                    default: 15
+                    min: 5
+                    max: 100
+                    step: 1
     -
                     id: sd-height-hover
                     title: 'Eclipse Tab Height, when hovered'
@@ -2669,7 +2686,7 @@ settings:
 */
 
 /* @settings
-name: "🏘️ Willemstad \_ \_ \_ ✍️ Typography" 
+name: "🏘️ Willemstad \_ \_  > \_ \_ ✍️ Typography" 
 id: Willemstad-Typography
 settings:
     -
@@ -2932,7 +2949,7 @@ settings:
 */
 
 /* @settings
-name: "🏘️ Willemstad \_ \_ \_ 🛠️ Plugin Settings" 
+name: "🏘️ Willemstad \_ \_ > \_ \_ 🛠️ Plugin Settings" 
 id: Willemstad-Plugins
 settings:
     -
