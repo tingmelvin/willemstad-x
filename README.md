@@ -13,6 +13,22 @@ Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundu
 ### Why is Inter embedded into Willemstad X, isn't that included in Obsidian proper?
 Yes, it is. Inter is included in Obsidian proper. However, most people will download Inter onto their computers, and Obsidian [will use the font with the name that is present in your computer](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/Best+Practices+and+Tips+for+Theme+Development). Moreover, most people (**including myself**) download/-s/-ed Inter from Google Fonts, [which is probably the most outdated version you can get of the font](https://github.com/rsms/inter#alternate-distributions). (No proper _italics_, need I say more?!) By embedding Inter, alongside the other fonts, allows me to quality control and ensure the quality of your experience.
 
+### Supported Community Plugins
+Like Primary, Willemstad aims to get the core features right before delving into plugins. However, I totally agree that some plugins are almost essential to the Obsidian experience, and they were my daily drivers too, so they got some love here.
+1. Style Settings
+2. Calendar
+3. Sliding Panes
+4. Admonitions
+5. Dataview
+7. Breadcrumbs
+8. Get Info
+9. CookLang Plugin
+10. Emoji Toolbar
+11. Maps of Content
+12. cMenu
+
+The community plugins I have an intention to support can also be seen [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX).
+
 ### Things to complete + WIP
 1. adding Multiple Highlighting
 2. Colour Palettes (revamping the Oxford one from Willemstad SF, and creating the Le Corbusier Colour Keyboard one)
