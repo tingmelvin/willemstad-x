@@ -6,7 +6,7 @@ Named after the capital of Curaçao (which is known for its colourful houses), t
 ### Should I use this or Willemstad for Shimmering Focus?
 It's up to you! I intend to maintain Willemstad for SF _without too much effort (read: not minimally, but almost minimally)_, since I don't think there are too many more features I'd like to add, or can add without conflicting with Shimmering Focus' base options. I don't want to conflict too many changes with Shimmering Focus as well! But if you are a power user and use most of Shimmering Focus's stuff, I'd suggest you stay with Shimmering Focus. Chris is way better/faster at doing CSS stuff than I am, too!
 
-Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundup.org/2022-02-05/) (_yes, **the** Roundup__), so if that's the deciding factor, then go for that!
+Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundup.org/2022-02-05/) (_yes, **the** Roundup_), so if that's the deciding factor, then go for that!
 
 ⚠️ Almost all UI styling (sans modals) that are present in Willemstad X, are not in Willemstad for SF. Willemstad X also encodes the DM family of fonts and Manrope, but this is not included in the Willemstad for SF files.
 
