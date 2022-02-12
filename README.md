@@ -6,7 +6,7 @@ Named after the capital of Curaçao (which is known for its colourful houses), t
 ### Should I use this or Willemstad for Shimmering Focus?
 It's up to you! I intend to maintain Willemstad for SF _without too much effort (read: not minimally, but almost minimally)_, since I don't think there are too many more features I'd like to add, or can add without conflicting with Shimmering Focus' base options. I don't want to conflict too many changes with Shimmering Focus as well! But if you are a power user and use most of Shimmering Focus's stuff, I'd suggest you stay with Shimmering Focus. Chris is way better/faster at doing CSS stuff than I am, too!
 
-Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundup.org/2022-02-05/), so if that's the deciding factor, then go for that!
+Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundup.org/2022-02-05/) (_yes, **the** Roundup__), so if that's the deciding factor, then go for that!
 
 ⚠️ Almost all UI styling (sans modals) that are present in Willemstad X, are not in Willemstad for SF. Willemstad X also encodes the DM family of fonts and Manrope, but this is not included in the Willemstad for SF files.
 
@@ -14,9 +14,10 @@ Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundu
 Yes, it is. Inter is included in Obsidian proper. However, most people will download Inter onto their computers, and Obsidian [will use the font with the name that is present in your computer](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/Best+Practices+and+Tips+for+Theme+Development). Moreover, most people (**including myself**) download/-s/-ed Inter from Google Fonts, [which is probably the most outdated version you can get of the font](https://github.com/rsms/inter#alternate-distributions). (No proper _italics_, need I say more?!) By embedding Inter, alongside the other fonts, allows me to quality control and ensure the quality of your experience.
 
 ### Things to complete + WIP
-1. adding multiple highlighting
-2. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-13-ThingsToDo_WillemstadX), although obviously it's not neat in any sense of the word.
-3. theme documentation
+1. adding Multiple Highlighting
+2. Colour Palettes (revamping the Oxford one from Willemstad SF, and creating the Le Corbusier Colour Keyboard one)
+3. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-13-ThingsToDo_WillemstadX), although obviously it's not neat in any sense of the word.
+4. Theme Documentation
 
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
