@@ -16,4 +16,8 @@ Yes, it is. Inter is included in Obsidian proper. However, most people will down
 ### Things to complete + WIP
 1. adding multiple highlighting
 2. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-13-ThingsToDo_WillemstadX), although obviously it's not neat in any sense of the word.
+3. theme documentation
 
+### Just another word
+Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
+That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
