@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.2
+Willemstad X | v0.0.2h1
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -2568,7 +2568,7 @@ settings:
                 opacity: true
                 format: hsl
                 default-light: hsl(184, 74%, 20%)
-                default-dark: hsl(184, 74%, 20%)
+                default-dark: hsl(41, 100%, 55%)
     -
                 id: elements-sd
                 title: ⏸️✨ Customisation — Eclipse Tabs
