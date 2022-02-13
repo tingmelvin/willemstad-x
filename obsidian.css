@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.2h4
+Willemstad X | v0.0.2h5
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -2825,7 +2825,7 @@ settings:
             max: 3.5
             step: 0.1
             format: em
-	-
+    -
             id: h2-size
             title: Font Size — H2
             type: variable-number-slider
@@ -2834,7 +2834,7 @@ settings:
             max: 2.7
             step: 0.05
             format: em
-	-
+    -
             id: h3-size
             title: Font Size — H3
             type: variable-number-slider
@@ -2843,7 +2843,7 @@ settings:
             max: 2.7
             step: 0.05
             format: em
-	-
+    -
             id: h4-size
             title: Font Size — H4
             type: variable-number-slider
@@ -2852,7 +2852,7 @@ settings:
             max: 2.7
             step: 0.05
             format: em
-	-
+    -
             id: h5-size
             title: Font Size — H5
             type: variable-number-slider
@@ -2861,7 +2861,7 @@ settings:
             max: 2.7
             step: 0.05
             format: em
-	-
+    -
             id: h6-size
             title: Font Size — H6
             type: variable-number-slider
