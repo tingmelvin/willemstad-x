@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.2h2
+Willemstad X | v0.0.2h3
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -535,6 +535,8 @@ body {
         >>> INTER 3.19
         ──────────────────────────────────────────────────────────────────────── */
         .fp-inter:is(.theme-light, .theme-dark) {
+            --font-monospace: "DM Mono";
+
             --font-heading: "Inter 3.19";
             --font-editor:  "Inter 3.19";
             --font-menu:    "Inter 3.19";
@@ -545,6 +547,8 @@ body {
         >>> MANROPE + DM SANS
         ──────────────────────────────────────────────────────────────────────── */
         .fp-manDM:is(.theme-light, .theme-dark) {
+            --font-monospace: "DM Mono";
+            
             --font-heading: "Manrope";
             --font-editor:  "DM Sans";
             --font-menu:    "Manrope";
@@ -1887,6 +1891,8 @@ body {
                 border-color: var(--background-modifier-border);
             }
 
+
+
     /* ────────────────────────────────────────────────────────────────────────────
     >> [CENTRE IMAGES]
     ───────────────────────────────────────────────────────────────────────────────
@@ -2734,7 +2740,7 @@ settings:
             title: Font — Monospace
             description:
             type: variable-text
-            default: "'DM Mono'"
+            default: '"DM Mono"'
     -
             id: font-heading
             title: Font — Headings
@@ -2956,9 +2962,18 @@ settings:
      id: plugin
      title: 🛠️
      type: heading
-     description: Admonitions, Calendar, Emoji Toolbar, Sliding Panes, Style Settings | The options here allows you to tweak how plugins are displayed.
+     description: Admonitions, Calendar, Sliding Panes, Style Settings | The options here allows you to tweak how plugins are displayed.
      level: 1
      collapsed: false
+    -
+        id: PComm003-margin
+        title: Admonitions > Change the size of the margins
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 25
+        step: 0.5
     -
         id: PComm001-col-today
         title: 📆 Calendar | Δ Colour, Font of today's date
@@ -2992,15 +3007,7 @@ settings:
         type: class-toggle
         description: When enabled, this removes the shadows between two sliding panes when using the Sliding Panes plugin.
         default: true
-    -
-        id: PComm003-margin
-        title: Admonitions | Change the size of the margins
-        type: variable-number-slider
-        format: px
-        default: 0
-        min: 0
-        max: 25
-        step: 0.5
+
     -
         id: PComm000-blockdesc-appear
         title: ⚙️ Style Settings | Keep Heading Block Description visible
