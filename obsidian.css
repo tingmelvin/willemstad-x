@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.2h3
+Willemstad X | v0.0.2h4
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -1551,6 +1551,26 @@ body {
             /* ────────────────────────────────────────────────────────────────────
             >>>> ROUNDED BORDERS | BORDER RADIUS | do we need this?
             ──────────────────────────────────────────────────────────────────── */
+
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> TEXT WRAP FOR FILE AND FOLDER TITLES
+            ──────────────────────────────────────────────────────────────────── */    
+            .nav-file-title,
+            .nav-folder-title {
+                line-height: 1.2em;
+                white-space: normal;
+            
+                width: 100%;
+            
+                color: var(--extra-contrast);
+            
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .nav-file-title-content,
+            .nav-folder-title-content {
+                word-break: break-all;
+            }
     /* ────────────────────────────────────────────────────────────────────────────
     >> LEFT SIDE PANE > NAVIGATION FONTS
     ───────────────────────────────────────────────────────────────────────────────
@@ -2789,6 +2809,67 @@ settings:
             description: Changes font for the in-built Mermaid.js visualisations in the theme.
             type: variable-text
             default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: typography-size-text
+        title: 🖋️🔤 Size — Header Text
+        type: heading
+        description: Changes the font size of the headers (H1–H6).
+        level: 2
+        collapsed: true
+    -
+            id: h1-size
+            title: Font Size — H1
+            type: variable-number-slider
+            default: 1.8
+            min: 1
+            max: 3.5
+            step: 0.1
+            format: em
+	-
+            id: h2-size
+            title: Font Size — H2
+            type: variable-number-slider
+            default: 1.6
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+	-
+            id: h3-size
+            title: Font Size — H3
+            type: variable-number-slider
+            default: 1.45
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+	-
+            id: h4-size
+            title: Font Size — H4
+            type: variable-number-slider
+            default: 1.3
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+	-
+            id: h5-size
+            title: Font Size — H5
+            type: variable-number-slider
+            default: 1.15
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+	-
+            id: h6-size
+            title: Font Size — H6
+            type: variable-number-slider
+            default: 1.05
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
     -
         id: typography-col-text
         title: 🖌️🔤 Colours — Header Text
