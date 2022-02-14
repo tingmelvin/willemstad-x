@@ -2563,7 +2563,7 @@ body {
     div .style-settings-heading {
         margin-bottom: 0.125rem; 
     }
-    .themed-color-wrapper > div {
+    div .themed-color-wrapper > div {
         padding-top: 0.125rem;
         padding-bottom: 0.125rem;
         padding-right: 0.25rem;
