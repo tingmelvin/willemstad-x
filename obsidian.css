@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.2h5
+Willemstad X | v0.0.3
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -53,7 +53,7 @@ SOFTWARE.
 /* ────────────────────────────────────────────────────────────────────────────────
 > ROOT | Where new stuff can be set!
 ──────────────────────────────────────────────────────────────────────────────── */
-    .theme-light, .theme-dark{
+    .theme-light, .theme-dark {
     /* ────────────────────────────────────────────────────────────────────────────
     >> [TYPOGRAPHY] (Fonts, Headings)
     ──────────────────────────────────────────────────────────────────────────── */
@@ -61,6 +61,7 @@ SOFTWARE.
         >>> FONT SIZES
         ──────────────────────────────────────────────────────────────────────── */
              --size-font-searchbox:      0.9em;
+             --size-font-editor-table:   0.8em;
 
         /* ────────────────────────────────────────────────────────────────────────
         >>> FONT > Obsidian Core > Set + Enable changes
@@ -103,6 +104,14 @@ SOFTWARE.
             --h4-size: 1.3em;
             --h5-size: 1.15em;
             --h6-size: 1.05em;
+
+        /* ──────────────────────────────────────────────────────────────────────
+        >>> HIGHLIGHT COLOURS | thanks @pseudometa and @Atlas
+        ────────────────────────────────────────────────────────────────────── */
+            --col-highlight-0: yellow;
+            --col-highlight-1: lime;
+            --col-highlight-2: cyan;
+            --col-highlight-text: black;
   
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -766,7 +775,6 @@ body {
                 line-height: 125%
             }
 
-
     /* ────────────────────────────────────────────────────────────────────────────
     >> [UNDERLINES > Readable Underlines]
     /// thanks to Cecilia May for suggestions re: "u" and streamlining code!
@@ -884,6 +892,7 @@ body {
             ───────────────────────────────────────────────────────────────── */
                 --text-accent: hsl(184, 75%, 20%);
                 --text-accent-hover: hsl(155, 100%, 37%);
+                --col-bg-table: hsl(155, 100%, 37%);
                 --col-header-title-active: hsl(155, 100%, 37%);
                 --col-header-title-dormant: hsl(184, 74%, 20%);
                 --interactive-bg: hsl(155, 100%, 37%);
@@ -923,6 +932,7 @@ body {
             ───────────────────────────────────────────────────────────────── */
                 --text-accent: hsl(155, 100%, 37%);
                 --text-accent-hover: hsl(184, 74%, 20%);
+                --col-bg-table: hsl(184, 74%, 20%);
                 --col-header-title-active: hsl(155, 100%, 37%);
                 --col-header-title-dormant: hsl(184, 74%, 20%);
                 --interactive-bg: hsl(155, 100%, 37%);
@@ -1037,6 +1047,7 @@ body {
                 ───────────────────────────────────────────────────────────────── */
                     --text-accent: hsl(184, 75%, 20%);
                     --text-accent-hover: hsl(155, 100%, 37%);
+                    --col-bg-table: hsl(155, 100%, 37%);
                     --col-header-title-active: hsl(155, 100%, 37%);
                     --col-header-title-dormant: hsl(184, 74%, 20%);
                     --interactive-bg: hsl(155, 100%, 37%);
@@ -1084,6 +1095,7 @@ body {
                 ───────────────────────────────────────────────────────────────── */
                     --text-accent: hsl(155, 100%, 37%);
                     --text-accent-hover: hsl(184, 74%, 20%);
+                    --col-bg-table: hsl(184, 74%, 20%);
                     --col-header-title-active: hsl(155, 100%, 37%);
                     --col-header-title-dormant: hsl(184, 74%, 20%);
                     --interactive-bg: hsl(155, 100%, 37%);
@@ -1984,11 +1996,12 @@ body {
                 padding: 0.35rem 0.5rem;
                 border-radius: calc(var(--shape-roundish) * 1.25);
             }
-
+            /*
             :not(.cm-formatting).cm-string.cm-url {
             } 
             .cm-formatting.cm-link::after {
             } 
+            */
     /* ────────────────────────────────────────────────────────────────────────────
     >> [KBD]
     ───────────────────────────────────────────────────────────────────────────────
@@ -2002,14 +2015,39 @@ body {
             }
     
     /* ────────────────────────────────────────────────────────────────────────────
-    >> [HIGHLIGHTS AND SELECTION] | thanks @pseudometa, from Shimmering Focus
+    >> [HIGHLIGHTS AND SELECTION]
+    \\ thanks @pseudometa, from Shimmering Focus;
+    \\ and also thanks to @Atlas
     ───────────────────────────────────────────────────────────────────────────────
         >>> HIGHLIGHTS
         ──────────────────────────────────────────────────────────────────────── */
             .markdown-preview-view mark,
+            .markdown-preview-view mark .internal-link, /* override specificity for links */
             .cm-s-obsidian span.cm-highlight {
-                background-color: var(--col-highlight);
+                background-color: var(--col-highlight-0);
+                color: var(--col-highlight-text);
             }
+
+            .markdown-preview-view em > mark,
+            .markdown-preview-view em > mark .internal-link, /* override specificity for links */
+            span.cm-em.cm-highlight {
+                font-style: normal;
+                text-decoration: unset;
+                background: none;
+                background-color: var(--col-highlight-1);
+                color: var(--col-highlight-text);
+            }
+            
+            .markdown-preview-view strong > mark,
+            .markdown-preview-view strong > mark .internal-link, /* override specificity for links */
+            span.cm-strong.cm-highlight {
+                font-weight: normal;
+                text-decoration: unset;
+                background: none;
+                background-color: var(--col-highlight-2);
+                color: var(--col-highlight-text);
+            }
+
         /* ─────────────────────────────────────────────────────────────────────────
         >>> SELECTION (SELECTED TEXT)
         ───────────────────────────────────────────────────────────────────────── */
@@ -2146,7 +2184,7 @@ body {
     >>> ADD LINES AND REMOVE PADDING |
     ──────────────────────────────────────────────────────────────────────────── */
     .markdown-preview-view th {
-        background-color: var(--text-accent-hover)
+        background-color: var(--col-bg-table);
     }
 
 
@@ -2156,7 +2194,7 @@ body {
     }
     body.theme-light .table-view-table > thead > tr > th {
         border: 0.05rem solid slategrey;
-        background-color: var(--text-accent-hover);
+        background-color: var(--col-bg-table);
     }
     body.theme-light :not(.workspace-leaf-content[data-type="calendar"]) > .app-container table > tbody > tr > td {
         border: 0.05rem solid slategrey;
@@ -2170,12 +2208,20 @@ body {
     }
     body.theme-dark .table-view-table > thead > tr > th {
         border: 0.05rem solid slategrey;
-        background-color: var(--text-accent-hover);
+        background-color: var(--col-bg-table);
     }
     body.theme-dark :not(.workspace-leaf-content[data-type="calendar"]) > .app-container table > tbody > tr > td {
         border: 0.05rem solid slategrey;
         padding: 0.25rem 0.5rem;
     }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> CHANGE FONT SIZE IN EDITOR MODE?
+    ──────────────────────────────────────────────────────────────────────────── */
+    .cm-s-obsidian .HyperMD-table-row {
+        font-size: var(--size-font-editor-table);
+    }
+
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> {UNDER CONSTRUCTION}
@@ -2460,7 +2506,39 @@ body {
     .cMenu-statusbar-menu .menu-item {
         font-size: var(--size-font-searchbox)
     }
-    
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Footnote & Citation Indicator]
+\\ (NOMEN | PComm027)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) GUTTER INDICATOR
+    ──────────────────────────────────────────────────────────────────────────── */
+    .theme-light, .theme-dark {
+    --PComm027-indicator: '⦿';
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> GUTTER FIXES
+    ──────────────────────────────────────────────────────────────────────────── */
+    div .footnote-link:not(.footnote-backref)::BEFORE,
+    div .cm-s-obsidian span.cm-footref.cm-formatting::BEFORE {
+        content: var(--PComm027-indicator);
+        font-size: 0.7rem;
+        line-height: 1rem;
+        color: var(--text-accent);
+        background-color: var(--background-primary);
+        position: absolute;
+        left: 0rem;
+        padding: 0 0.125rem;
+    }
+
+    div .footnote-link:not(.footnote-backref)::BEFORE {
+        margin-top: 0.3em;
+    }
+    div .cm-s-obsidian span.cm-footref.cm-formatting::BEFORE {
+        margin-top: 0.2em;
+    }
+
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Style Settings]
 \\ (NOMEN | PComm000)
@@ -2484,6 +2562,12 @@ body {
     }
     div .style-settings-heading {
         margin-bottom: 0.125rem; 
+    }
+    .themed-color-wrapper > div {
+        padding-top: 0.125rem;
+        padding-bottom: 0.125rem;
+        padding-right: 0.25rem;
+        padding-left: 0.375rem;
     }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -2739,6 +2823,84 @@ settings:
         description: When enabled, YAML will be coloured selectively to increase readabiity.
         default: enabled
     -
+        id: col-bg-table
+        title: Background Colour — Table Headings
+        type: variable-themed-color
+        description: Change the background colour of the table headings.
+        opacity: false
+        format: hsl
+        default-light: hsl(155, 100%, 37%)
+        default-dark: hsl(184, 74%, 20%)
+
+    -
+        id: typography-typeface
+        title: ✍️🔤 Font Typeface Customisation
+        type: heading
+        description: Core typeface options for Willemstad
+        level: 2
+        collapsed: true
+    -
+            id: font-monospace
+            title: Font Typeface — Monospace
+            description:
+            type: variable-text
+            default: '"DM Mono"'
+    -
+            id: font-heading
+            title: Font Typeface — Headings
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "Manrope", "DM Sans"'
+    -
+            id: font-editor
+            title: Font Typeface — Editor
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-menu
+            title: Font Typeface — Menu
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-ui
+            title: Font Typeface — User Interface (UI)
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-editor-m
+            title: Font Typeface — Mobile Editor
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-menu-m
+            title: Font Typeface — Mobile Menu
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-ui-m
+            title: Font Typeface — Mobile User Interface (UI)
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: mermaid-font
+            title: "Font Typeface — Mermaid.js 📊"
+            description: Changes font for the in-built Mermaid.js visualisations in the theme.
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: typography-size
+        title: ✍️🀄 Font Size Customisation
+        type: heading
+        description: Options to change default font sizes (relative to the normal font size).
+        level: 2
+        collapsed: true
+    -
         id: size-font-searchbox
         title: 🔡 Font Size — Small Elements
         type: variable-number-slider
@@ -2749,72 +2911,21 @@ settings:
         max: 1.5
         step: 0.05
     -
-        id: typography-
-        title: ✍️🔤 Font Customisation
-        type: heading
-        description: Core typography options and fonts for Willemstad
-        level: 2
-        collapsed: false
+        id: size-font-editor-table
+        title: Font Size — Tables (in Editing mode)
+        type: variable-number-slider
+        description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview).
+        format: "em"
+        default: 0.8
+        min: 0.25
+        max: 1.5
+        step: 0.05
     -
-            id: font-monospace
-            title: Font — Monospace
-            description:
-            type: variable-text
-            default: '"DM Mono"'
-    -
-            id: font-heading
-            title: Font — Headings
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "Manrope", "DM Sans"'
-    -
-            id: font-editor
-            title: Font — Editor
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-menu
-            title: Font — Menu
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-ui
-            title: Font — User Interface (UI)
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-editor-m
-            title: Font — Mobile Editor
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-menu-m
-            title: Font — Mobile Menu
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: font-ui-m
-            title: Font — Mobile User Interface (UI)
-            description:
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-            id: mermaid-font
-            title: "Font — Mermaid.js 📊"
-            description: Changes font for the in-built Mermaid.js visualisations in the theme.
-            type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
-    -
-        id: typography-size-text
-        title: 🖋️🔤 Size — Header Text
+        id: typography-h-size-text
+        title: Size — Header Text
         type: heading
         description: Changes the font size of the headers (H1–H6).
-        level: 2
+        level: 3
         collapsed: true
     -
             id: h1-size
@@ -2871,7 +2982,7 @@ settings:
             step: 0.05
             format: em
     -
-        id: typography-col-text
+        id: typography-h-col-text
         title: 🖌️🔤 Colours — Header Text
         type: heading
         description: Changes the font colours of the headers (H1–H6).
@@ -2932,7 +3043,7 @@ settings:
             default-light: hsl(184, 74%, 20%)
             default-dark: hsl(155, 100%, 37%)
     -
-        id: typography-col-bg
+        id: typography-h-col-bg
         title: 🖌️🚥 Colours — Header Background
         type: heading
         description: Changes the background colours of the headers (H1–H6).
@@ -3033,6 +3144,49 @@ settings:
                 -
                     label: 🟢 Maximum (Willemstad style) | Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
                     value: llus-hyp-max
+    -
+        id: typography-highlight
+        title: ✍️🟡 Highlights
+        description: Options to change highlighting colours.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+            id: col-highlight-text
+            title: 'Highlighted Text Colour'
+            type: variable-themed-color
+            description: 'Colour of the text highlighted — this defaults to black.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 0%)
+            default-dark: hsl(0, 0%, 0%)
+    -
+            id: col-highlight-0
+            title: 'Highlight Colour (default)'
+            type: variable-themed-color
+            description: 'Default highlight colour (==)'
+            opacity: false
+            format: hsl
+            default-light: hsl(60, 100%, 50%)
+            default-dark: hsl(60, 100%, 50%)
+    -
+            id: col-highlight-1
+            title: 'Highlight Colour — #1 (italics + highlight markdown)'
+            type: variable-themed-color
+            description: 'Colour of the highlight when you use the italics markdown syntax (*) with the highlight markdown syntax (==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(120, 100%, 50%)
+            default-dark: hsl(120, 100%, 50%)
+    -
+            id: col-highlight-2
+            title: 'Highlight Colour — #2 (bold + highlight markdown)'
+            description: 'Colour of the highlight when you use the bold markdown syntax (**) with the highlight markdown syntax (==).'     
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(180, 100%, 50%)
+            default-dark: hsl(180, 100%, 50%)
 */
 
 /* @settings
@@ -3082,6 +3236,12 @@ settings:
         format: hsl
         default-light: rgb(0, 191, 111)
         default-dark: rgb(0, 191, 111)
+    -
+        id: PComm027-indicator
+        title: 🦶📝 Footnotes & Citation Indicator | Δ Gutter Indicator
+        type: variable-text
+        description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin. ⚠️NOTE: PLEASE use your apostrophes (' ') to ensure the new indicator renders!"
+        default: '⦿'
     -
         id: PComm002-noshadow
         title: Sliding Panes | No shadows between two panes
