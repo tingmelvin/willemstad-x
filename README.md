@@ -50,7 +50,7 @@ That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus]
 
 ### Attribution
 As is with most theme codes in Obsidian, many pieces/snippets of code have been cobbled together from whatever the hive mind has created. It is therefore not possible to accurately and fully attribute everyone's efforts, which might have come into and been adopted by this theme. That being said, there are multiple pieces of instrumental code that I can attribute to, which I do so here:
-- Multi-Colour Highlighting, adapted from Atlas and [Chris Grieser](https://github.com/chrisgrieser)
+- Multi-Colour Highlighting, adapted from [Zhang Chenyu (@Atlas)](https://github.com/zcysxy) and [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)
 - Varying/Readable Underlines, co-written by myself and [Cecilia May](https://github.com/ceciliamay)
 - Dataview Word Wraps, from [SlRvB](https://github.com/SlRvb)
 - No-Shadow Sliding Panes, with input from [Damian Korcz](https://github.com/damiankorcz)
