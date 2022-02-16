@@ -2028,7 +2028,7 @@ body {
             text-underline-position: under;
         }
         .community-theme.is-selected .community-theme-info::after {
-            content: "👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
+            content: " /A👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
             white-space: pre-wrap;
 
             font-size: 0.85rem;
@@ -2060,6 +2060,7 @@ body {
             width: 100%;
             background-color: var(--background-tertiary);
             border: 0.125rem solid var(--interactive-accent);
+            color: var(--text-accent);
             cursor: pointer;
             display: block;
             text-align: center;
@@ -2067,6 +2068,7 @@ body {
         }  
 
         .community-theme.is-selected .community-theme-info .clickable-icon::after {
+            color: var(--text-accent);
             content: "Repository";
             padding-left: 0.25rem;
         }
