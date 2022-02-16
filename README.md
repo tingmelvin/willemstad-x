@@ -37,11 +37,10 @@ The community plugins I have an intention to support can also be seen [here](htt
 
 ### Things to complete + WIP
 1. Colour Palettes (revamping the Oxford one from Willemstad SF, and creating the Le Corbusier Colour Keyboard one)
-2. Adding support for `writing` cssClass from Shimmering Focus
-3. ~~Adding support for Minimal Cards from [Minimal](https://github.com/kepano/obsidian-minimal)~~
-4. Fixes for mobile (albeit not offering official support yet)
-5. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-13-ThingsToDo_WillemstadX), although obviously it's not neat in any sense of the word.
-6. Theme Documentation
+2. ~~Adding support for Minimal Cards from [Minimal](https://github.com/kepano/obsidian-minimal)~~ (might not come to fruition as it relies on plugins)
+3. Fixes for mobile (albeit not offering official support yet)
+4. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-13-ThingsToDo_WillemstadX), although obviously it's not neat in any sense of the word.
+5. Theme Documentation
 
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
