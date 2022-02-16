@@ -2038,7 +2038,8 @@ body {
         .community-theme.is-selected .community-theme-info::after {
             content: "👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
             white-space: pre-wrap;
-
+            
+            font-weight: bold;
             font-size: 0.85rem;
             line-height: 100%;
             letter-spacing: -0.01rem;
@@ -2090,7 +2091,6 @@ body {
         }
         .community-theme.is-selected .community-theme-info {
             color: var(--text-accent);
-            font-weight: bold;
         }
 
     /* ────────────────────────────────────────────────────────────────────────────
