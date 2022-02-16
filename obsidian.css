@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.5
+Willemstad X | v0.0.5h1
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -298,8 +298,16 @@ SOFTWARE.
             padding: 0 !important;
         }
     /* ────────────────────────────────────────────────────────────────────────────
+    >> ADD WILLEMSTAD VERSION NUMBER
+    ──────────────────────────────────────────────────────────────────────────── */
+    .tb-willemstad div.titlebar-text::after {
+        content: '\ \ | \ \ Willemstad X v0.0.5h1'
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
     >> CUSTOM TITLEBAR
     ──────────────────────────────────────────────────────────────────────────── */
+
         /*
         .tb-custom div.titlebar-button {
             color: black;
@@ -2018,7 +2026,7 @@ body {
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.0.5";
+            content: "\A v0.0.5h1";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -2052,7 +2060,6 @@ body {
         >>> {UNDER CONSTRUCTION} GITHUB REPOSITORY BUTTON
         ───────────────────────────────────────────────────────────────────────── */
         .community-theme-info {
-            align-items: flex-end;
             justify-content: flex-start;
             flex-wrap: wrap;
         }
@@ -2677,7 +2684,7 @@ body {
         padding: 0.5rem;
 
         display: block;
-        content: "🏘️ Willemstad X (v0.0.5) \A \A Theme Documentation coming soon! \A Please install the 'Settings Search' plugin by javalent to find settings faster.";
+        content: "🏘️ Willemstad X \A \A Theme Documentation coming soon! \A Please install the 'Settings Search' plugin by javalent to find settings faster.";
         font-family: var(--font-menu);
         font-size: 1rem;
         line-height: 100%;
@@ -2759,6 +2766,12 @@ settings:
             type: class-toggle
             description: When enabled, the entire top titlebar from Obsidian is removed. Note! This means that you will not be able to resize your screen, or exit Obsidian with a mouse. These can be done via hotkeys instead.
             default: disabled
+    -
+            id: tb-willemstad
+            title: Titlebar — Add Willemstad Version Number
+            type: class-toggle
+            description: When enabled, the titlebar appends the Willemstad version number to the end of the Obsidian version number.
+            default: enabled           
     -
             id: collapse-header-sanctum
             title: Sanctum-style Header Collapse Indicator
