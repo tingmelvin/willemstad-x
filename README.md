@@ -31,6 +31,7 @@ Like Primary, Willemstad aims to get the core features right before delving into
 11. Maps of Content
 12. cMenu
 13. Footnote & Citation Indicator
+14. Longform
 
 The community plugins I have an intention to support can also be seen [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX).
 
@@ -50,9 +51,10 @@ That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus]
 
 ### Attribution
 As is with most theme codes in Obsidian, many pieces/snippets of code have been cobbled together from whatever the hive mind has created. It is therefore not possible to accurately and fully attribute everyone's efforts, which might have come into and been adopted by this theme. That being said, there are multiple pieces of instrumental code that I can attribute to, which I do so here:
-- Multi-Colour Highlighting, adapted from [Zhang Chenyu (@Atlas)](https://github.com/zcysxy) and [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)
+- Multi-Colour Highlighting, adapted from [Zhang Chenyu (@Atlas)](https://github.com/zcysxy)'s and [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code
 - Varying/Readable Underlines, co-written by myself and [Cecilia May](https://github.com/ceciliamay)
 - Dataview Word Wraps, from [SlRvB](https://github.com/SlRvb)
 - No-Shadow Sliding Panes, with input from [Damian Korcz](https://github.com/damiankorcz)
 - No-Shadow Admonitions, inspired by Leah's lamentations to [Jeremy Valentine](https://github.com/valentine195)
+- Longform plugin and `writing` cssclass support, adapted from [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code, and also with credits to [Kevin Barrett (@kevboh)](https://github.com/kevboh/longform)'s [styling](https://github.com/kevboh/longform#scene-only-styling)
 - and many other snippets that were written by [Chris Grieser](https://github.com/chrisgrieser)
