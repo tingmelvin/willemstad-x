@@ -2028,7 +2028,7 @@ body {
             text-underline-position: under;
         }
         .community-theme.is-selected .community-theme-info::after {
-            content: " /A👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
+            content: "\A👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
             white-space: pre-wrap;
 
             font-size: 0.85rem;
