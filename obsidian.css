@@ -2,7 +2,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.0.5h1
+Willemstad X | v0.0.5h2
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -301,7 +301,7 @@ SOFTWARE.
     >> ADD WILLEMSTAD VERSION NUMBER
     ──────────────────────────────────────────────────────────────────────────── */
     .tb-willemstad div.titlebar-text::after {
-        content: '\ \ | \ \ Willemstad X v0.0.5h1'
+        content: '\ \ | \ \ Willemstad X v0.0.5h2'
     }
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -2026,7 +2026,7 @@ body {
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.0.5h1";
+            content: "\A v0.0.5h2";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -2036,7 +2036,7 @@ body {
             text-underline-position: under;
         }
         .community-theme.is-selected .community-theme-info::after {
-            content: "\A👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
+            content: "👋 Hi! Welcome to Willemstad. \A\A Hover over elements for them to be visible. \A\A Please use the Style Settings plugin to enable full functionality of this theme and to change default pre-set options.";
             white-space: pre-wrap;
 
             font-size: 0.85rem;
@@ -2047,7 +2047,7 @@ body {
             right: 5%;
             left: 5%;
 
-            padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+            padding: 0.25rem 0.125rem 0.25rem 0.125rem;
             margin: 0.25rem;
 
             color: black;
