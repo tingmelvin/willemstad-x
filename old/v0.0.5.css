@@ -2035,7 +2035,7 @@ body {
             line-height: 100%;
             letter-spacing: -0.01rem;
             position: absolute;
-            top: 25%;
+            top: 30%;
             right: 5%;
             left: 5%;
 
@@ -2051,6 +2051,11 @@ body {
         /* ─────────────────────────────────────────────────────────────────────────
         >>> {UNDER CONSTRUCTION} GITHUB REPOSITORY BUTTON
         ───────────────────────────────────────────────────────────────────────── */
+        .community-theme-info {
+            align-items: flex-end;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
         .community-theme.is-selected .community-theme-info .clickable-icon {
             width: 100%;
             background-color: var(--background-tertiary);
