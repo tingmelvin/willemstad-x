@@ -18,7 +18,7 @@ Yes, it is. Inter is included in Obsidian proper. However, most people will down
 ---
 
 ### Supported Community Plugins
-Like Primary, Willemstad aims to get the core features right before delving into plugins. However, I totally agree that some plugins are almost essential to the Obsidian experience, and they were my daily drivers too, so they got some love here.
+Like Primary, Willemstad aims to get the core features right before delving into plugins. However, I totally agree that some plugins are almost essential to the Obsidian experience, and they were my daily drivers too, so they got some attention.
 1. Style Settings
 2. Calendar
 3. Sliding Panes
@@ -32,6 +32,7 @@ Like Primary, Willemstad aims to get the core features right before delving into
 12. cMenu
 13. Footnote & Citation Indicator
 14. Longform
+15. Settings Search
 
 The community plugins I have an intention to support can also be seen [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX).
 
