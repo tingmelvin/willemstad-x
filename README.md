@@ -57,3 +57,4 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - No-Shadow Admonitions, inspired by Leah's lamentations to [Jeremy Valentine](https://github.com/valentine195)
 - Longform plugin and `writing` cssclass support, adapted from [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code, and also with credits to [Kevin Barrett (@kevboh)](https://github.com/kevboh/longform)'s [styling](https://github.com/kevboh/longform#scene-only-styling)
 - and many other snippets that were written by [Chris Grieser](https://github.com/chrisgrieser)
+- Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
