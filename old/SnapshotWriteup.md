@@ -50,3 +50,20 @@ v0.0.1a1 | v0.0.2 | v0.0.3 | v0.0.4 | v0.0.5
 
 ✨ __New plugin support__
 - Settings Search
+
+---
+
+**Willemstad X v0.1.0 Refshaleøen**
+
+✨ __New features and improvements__ (since last major update, v0.0.3)
+- __New colour palette__ — Willemstad-style Nord theme added (both light and dark mode)
+- __Added support and options for `writing` cssclass and Longform plugins__, courtesy of @pseudometa (keeping Willemstad roughly in line with Shimmering Focus) + new serif font added (Crimson Pro) for `writing` and Longform.
+- __Significant improvements to tables__ (alternate row highlighting, table header background-colour choices, font size controls, min/max-width options, zero-padding options for those needing more space), courtesy of @gregp 's requests
+- Added Willemstad version numbers to titlebar (can be switched off via Style Settings) and Community Theme store for easier debugging
+- Major fixes for searchboxes — should be wholly responsive based on modal width changes without being too large/small at any size
+- Multiple new, smaller quality-of-life improvements (styling for Command Palette; new Style Settings options — bold for certain options a la Shimmering Focus, modal heights etc.)
+- Other bug fixes
+
+✨ __New plugin support__
+- Settings Search
+- Longform
