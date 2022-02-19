@@ -40,6 +40,21 @@
         }
 
         /* ─────────────────────────────────────────────────────────────────────────
+        >>> FIXES THE WEIRD BOX THINGUM ALIGNING LEFT
+        \\\ as in, what it makes is that the name and the Github thingy a bit off
+        ───────────────────────────────────────────────────────────────────────── */        
+        .community-theme.is-selected span.community-theme-downloads {
+            position: relative;
+            color: var(--text-accent);
+            padding: 0 0 0.25rem 0;
+        }
+        .community-theme.is-selected .community-theme-info {
+            color: var(--text-accent);
+            justify-content: center;
+            padding: 0 0 0.75rem 0;
+        }
+
+        /* ─────────────────────────────────────────────────────────────────────────
         >>> GITHUB REPOSITORY BUTTON
         ───────────────────────────────────────────────────────────────────────── */
         .community-theme-info {

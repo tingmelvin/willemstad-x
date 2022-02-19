@@ -1,0 +1,68 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D33] MODALS (COMMUNITY PLUGINS)
+──────────────────────────────────────────────────────────────────────────────── */
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | BORDER RADIUS FOR LEFT PANE
+        ──────────────────────────────────────────────────────────────────────── */
+        .community-plugin-search {
+            border-radius: calc(var(--shape-roundish) * 2) 0 0 calc(var(--shape-roundish) * 2);
+        }
+        .search-result-container {
+            padding: 0;
+        }
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL PADDINGS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | ITEM DISPLAY 
+        ──────────────────────────────────────────────────────────────────────── */
+            .community-plugin-item {
+                margin: 0 0;
+                padding: 0.25rem 0.5rem 0.25rem 1rem;
+            }
+            .theme-light .community-plugin-item {
+                border-top: 1px solid slategrey;
+            }
+            .theme-dark .community-plugin-item {
+                border-top: 1px solid darkslategrey;
+            }
+            .community-plugin-search {
+                padding-top: 0.25rem;
+            }
+            .community-plugin-search > .setting-item > .setting-item-info > .setting-item-control > .search-input-container > input[type='text'] {
+                border-radius: calc(var(--shape-roundish) * 1.5)
+
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL TYPOGRAPHY]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | Changing the Message for Installed Plugins
+        \\\ ✓ instead of Installed
+        \\\ taken from Shimmering Focus, thanks @pseudometa!
+        ──────────────────────────────────────────────────────────────────────── */   
+        .flair.mod-pop {
+            font-size: 0;
+            top: 0;
+            padding: 0.5rem;
+            border-radius: 5rem;
+            border: 0.125rem solid var(--text-accent);
+        }
+
+        .flair.mod-pop::before {
+            content: "✓";
+            position: relative;
+            top: 0.2rem;
+            font-family: var(--original-font);
+            font-size: 0.65rem;
+            line-height: 0.8rem;
+            color: var(--interactive-normal);
+            background-color: var(--interactive-accent);
+            padding-right: 0.2rem;
+            padding-left: 0.2rem;
+
+            border-radius: 5rem;
+        }

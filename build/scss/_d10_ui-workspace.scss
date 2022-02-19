@@ -1,0 +1,42 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D10] WORKSPACE
+───────────────────────────────────────────────────────────────────────────────────
+    >> MARGINS | Rationalise them, with rem too
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> READING MODE
+        ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-view {
+            padding: 0.75rem 1rem;
+        }
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> EDITING MODE (Live Preview and Source Mode)
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-source-view.mod-cm6 .cm-scroller {
+            padding: 0.75rem 1rem;
+        }
+        .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+            padding: 0;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>>> FIX PADDINGS FOR EDITING MODE
+        ──────────────────────────────────────────────────────────────────────── */         
+            :is(.HyperMD-header-1.cm-line, .HyperMD-header-2.cm-line, .HyperMD-header-3.cm-line, .HyperMD-header-4.cm-line, .HyperMD-header-5.cm-line, .HyperMD-header-6.cm-line) {
+                padding-left: 1.8rem;
+            }
+            .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+                padding-right: -1.3rem;
+            }
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> LOL I THOUGHT IT WAS AN ITALIC
+    \\\ making them # (the header markdown syntax) nice
+    ──────────────────────────────────────────────────────────────────────── */
+        span.cm-formatting.cm-formatting-header:is(.cm-formatting-header-1, .cm-formatting-header-2, .cm-formatting-header-3, .cm-formatting-header-4, .cm-formatting-header-5, .cm-formatting-header-6).cm-header {
+            font-style: normal;
+            /*
+            font-weight: lighter;
+            */
+            font-size: 0.8em;
+            font-stretch: condensed;
+            
+        }
