@@ -344,43 +344,43 @@ settings:
             title: Font Typeface — Editor
             description:
             type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
             id: font-menu
             title: Font Typeface — Menu
             description:
             type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
             id: font-ui
             title: Font Typeface — User Interface (UI)
             description:
             type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
             id: font-editor-m
             title: Font Typeface — Mobile Editor
             description:
             type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
             id: font-menu-m
             title: Font Typeface — Mobile Menu
             description:
             type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
             id: font-ui-m
             title: Font Typeface — Mobile User Interface (UI)
             description:
             type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
             id: mermaid-font
             title: "Font Typeface — Mermaid.js 📊"
             description: Changes font for the in-built Mermaid.js visualisations in the theme.
             type: variable-text
-            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+            default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
         id: typography-size
         title: ✍️🀄 Font Size Customisation

@@ -1,0 +1,78 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ROOT | TYPOGRAPHY
+───────────────────────────────────────────────────────────────────────────────────
+    >> [TYPOGRAPHY] (Fonts, Headings)
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .theme-light, .theme-dark {
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> FONT SIZES
+        ──────────────────────────────────────────────────────────────────────── */
+
+             --size-font-searchbox:      0.9em;
+             --size-font-editor-table:   0.8em;
+             --size-font-preview-table:  1em;
+             
+             --size-font-longform:       1.2em;
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> FONT TYPEFACE > Obsidian Core > Set + Enable changes
+        ──────────────────────────────────────────────────────────────────────── */
+
+            /* to edit --default-font, edit the mobile/desktop equivalents (--font-editor-m) and (--font-editor) */
+
+            --font-monospace:       "DM Mono";
+            --font-heading:         "Inter 3.19", "Manrope", "DM Sans";
+
+            /* to edit --menu-font, edit the mobile/desktop equivalents (--font-menu-m) and (--font-menu) */
+            /* to edit --ui-font, edit the mobile/desktop equivalents (--font-ui-m) and (--font-ui) */
+
+            --smallcap-font:        "Inter 3.19", "DM Sans", "Manrope";   /* what is this for again? */
+            --setting-heading:      "Inter 3.19", "DM Sans", "Manrope";   /* what is this for again? */
+            --mermaid-font:         "Inter 3.19", "DM Sans", "Manrope";   /* for Mermaid.js */
+            --reveal-font:          "Inter 3.19", "DM Sans", "Manrope";   /* for Slides core plugin */
+    
+        /* ──────────────────────────────────────────────────────────────────────
+        >>> FONT TYPEFACE > Desktop
+        ────────────────────────────────────────────────────────────────────── */
+
+            --font-editor:          "Inter 3.19", "DM Sans", "Manrope";
+            --font-menu:            "Inter 3.19", "DM Sans", "Manrope";
+            --font-ui:              "Inter 3.19", "DM Sans", "Manrope";
+
+        /* ──────────────────────────────────────────────────────────────────────
+        >>> FONT TYPEFACE > Mobile
+        ────────────────────────────────────────────────────────────────────── */
+
+            --font-editor-m:        "Inter 3.19", "DM Sans", "Manrope";
+            --font-menu-m:          "Inter 3.19", "DM Sans", "Manrope";
+            --font-ui-m:            "Inter 3.19", "DM Sans", "Manrope";
+
+        /* ──────────────────────────────────────────────────────────────────────
+        >>> FONT > Additional + Plugins
+        ────────────────────────────────────────────────────────────────────── */
+
+            --font-longform:        "Crimson Pro";
+
+        /* ──────────────────────────────────────────────────────────────────────
+        >>> HEADINGS > Size | a la Shimmering Focus | thanks @pseudometa
+        ────────────────────────────────────────────────────────────────────── */
+
+            --h1-size: 1.8em;
+            --h2-size: 1.6em;
+            --h3-size: 1.45em;
+            --h4-size: 1.3em;
+            --h5-size: 1.15em;
+            --h6-size: 1.05em;
+
+        /* ──────────────────────────────────────────────────────────────────────
+        >>> HIGHLIGHT COLOURS | thanks @pseudometa and @Atlas
+        ────────────────────────────────────────────────────────────────────── */
+        
+            --col-highlight-0: hsl(60, 100%, 50%);  /* yellow */
+            --col-highlight-1: hsl(120, 100%, 50%); /* lime */
+            --col-highlight-2: hsl(180, 100%, 50%); /* cyan */
+            --col-highlight-text: hsl(0, 0%, 0%);   /* black */
+        
+    }
