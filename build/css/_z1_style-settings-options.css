@@ -107,13 +107,13 @@ settings:
             type: class-select
             description: Choose which sidebars/side docks you would like to use for Obsidian.
             allowEmpty: false
-            default: sd-eclipse-tp
+            default: sd-float-tabs
             options:
                 -
-                    label: Eclipse Tabs | Tabs that come into full-view when hovered
-                    value: sd-eclipse-tp
+                    label: Floating Tabs | tabs that come into full-view when hovered
+                    value: sd-float-tabs
                 -
-                    label: Eclipse Bars | Styled Bars
+                    label: Styled Bars
                     value: sd-eclipse-bars
                 -
                     label: Default Bars
@@ -129,29 +129,29 @@ settings:
                 id: col-sd
                 title: '⏸️🖌️ Colours — Sidebars (Side Docks)'
                 type: variable-themed-color
-                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Eclipse Bars, and all colours for the Eclipse Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 55%)]' 
+                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Styled Bars, and all colours for the Floating Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 55%)]' 
                 opacity: true
                 format: hsl
                 default-light: hsl(184, 74%, 20%)
                 default-dark: hsl(41, 100%, 55%)
     -
                 id: elements-sd
-                title: ⏸️✨ Customisation — Eclipse Tabs
-                description: 'If you have selected the Eclipse Tabs option in the "Sidebars (Side Docks)" style setting, customise the Eclipse Tabs here.'
+                title: ⏸️✨ Customisation — Floating Tabs
+                description: 'If you have selected the Floating Tabs option in the "Sidebars (Side Docks)" style setting, customise the Floating Tabs here.'
                 type: heading
                 level: 3
                 collapsed: false
     -
                     id: sd-opacity-none
-                    title: '💨 Disappearing Eclipse Tabs'
+                    title: '💨 Disappearing Floating Tabs'
                     type: class-toggle
-                    description: 'If toggled, Eclipse Tabs will disappear when not hovered.'
+                    description: 'If toggled, Floating Tabs will disappear when not hovered.'
                     default: false
     -
                     id: sd-height-norm
-                    title: 'Eclipse Tab Height, when not hovered'
+                    title: 'Floating Tab Height, when not hovered'
                     type: variable-number-slider
-                    description: 'Set the height of the tabs for the Eclipse Tabs sidebars, when not hovered.'
+                    description: 'Set the height of the tabs for the Floating Tabs sidebars, when not hovered.'
                     format: "rem"
                     default: 15
                     min: 5
@@ -159,9 +159,9 @@ settings:
                     step: 1
     -
                     id: sd-height-hover
-                    title: 'Eclipse Tab Height, when hovered'
+                    title: 'Floating Tab Height, when hovered'
                     type: variable-number-slider
-                    description: 'Set the height of the tabs for the Eclipse Tabs sidebars, when hovered.'
+                    description: 'Set the height of the tabs for the Floating Tabs sidebars, when hovered.'
                     format: "%"
                     default: 50
                     min: 5
@@ -169,9 +169,9 @@ settings:
                     step: 1
     -
                     id: sd-width-norm
-                    title: 'Eclipse Tab Width, when not hovered'
+                    title: 'Floating Tab Width, when not hovered'
                     type: variable-number-slider
-                    description: 'Set the width of the tabs for the Eclipse Tabs sidebars, when not hovered.'
+                    description: 'Set the width of the tabs for the Floating Tabs sidebars, when not hovered.'
                     format: "rem"
                     default: 1.1
                     min: 0.7
@@ -774,7 +774,7 @@ settings:
             id: normal-command-palette
             title: Command Palette — Revert back to standard Obsidian style
             type: class-toggle
-            description: When enabled, this moves the plugin name back to the left. Use when the Command Palette looks wonky
+            description: When enabled, this moves the plugin name back to the left. Use when the Command Palette looks wonky.
             default: false
     -
      id: plugin-community
