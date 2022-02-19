@@ -621,41 +621,6 @@
     }
 
     /* ────────────────────────────────────────────────────────────────────────────
-    >>> ADD REFERENCE TO THEME DOCS AND JAVALENT'S STUFF
-    \\\ thanks to @pseudometa for Theme Doc content code
-    ──────────────────────────────────────────────────────────────────────────── */
-    .modal .setting-item-heading[data-id="Willemstad-Core"] {
-        padding-top: 2.75rem; /* fixes padding so that the Willemstad thing won't overlap */
-    }
-
-
-    .modal .setting-item-heading[data-id="Willemstad-Core"]::before,
-    .modal .setting-item-heading[data-id="Willemstad-Typography"]::before,  /* just to fix minor bug re: the indicators appearing in front of text */
-    .modal .setting-item-heading[data-id="Willemstad-Plugins"]::before,     /* just to fix minor bug re: the indicators appearing in front of text */
-    .modal .setting-item-heading[data-id="Willemstad-Adv-Settings"]::before /* just to fix minor bug re: the indicators appearing in front of text */
-    .workspace-leaf-content[data-type="style-settings"] > .view-content > .setting-item:first-child::before {
-        position: absolute;
-        top: 0.5rem;
-        /* left: calc(0.5rem + 200px); */
-        padding: 0.5rem;
-        overflow-x: auto;
-        /* margin-right: 1.875rem; */
-        margin-right: 10rem;
-
-        display: block;
-        content: "🏘️ Willemstad X \A \A Theme Documentation coming soon! \A Please install the 'Settings Search' plugin by javalent to find settings faster.";
-        font-family: var(--font-menu);
-        font-size: 1rem;
-        line-height: 100%;
-        font-weight: normal;
-        white-space: pre-wrap;
-        background-color: var(--background-secondary-alt);
-        border: 0.125rem solid var(--interactive-border-color);
-        border-radius: calc(var(--shape-roundish) * 1.5);
-        pointer-events: none;
-    }
-
-    /* ────────────────────────────────────────────────────────────────────────────
     >>> MAKING STYLE SETTINGS PWETTY
     \\\ thanks to Cecilia May for the idea
     ──────────────────────────────────────────────────────────────────────────── */

@@ -1,0 +1,40 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D12] TITLEBAR | TITLE BAR
+───────────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) REMOVE TITLE
+    ──────────────────────────────────────────────────────────────────────────── */
+        
+        .tb-title-remove .titlebar-text {
+            display: none;
+        }
+        
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) REMOVE ENTIRE TITLEBAR
+    ──────────────────────────────────────────────────────────────────────────── */
+        
+        .tb-tb-remove .titlebar {
+            display: none;
+        }
+        .theme-dark:is(.tb-tb-remove):not(.is-mobile),
+        .theme-light:is(.tb-tb-remove):not(.is-mobile) {
+            padding: 0 !important;
+        }
+
+        .titlebar {
+            height: 0;
+        }
+        .theme-dark:is(.tb-tb-remove):not(.is-mobile),
+        .theme-light:is(.tb-tb-remove):not(.is-mobile) {
+            padding: 0 !important;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> RESPONSIVE TITLEBAR RESIZING
+    ──────────────────────────────────────────────────────────────────────────── */
+        
+        .titlebar, .titlebar-button-container:is(.mod-left, .mod-right){
+            height: 1.5rem !important;
+        }
+        body {
+            padding-top: 1.5rem !important;
+        }
