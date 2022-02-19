@@ -1,0 +1,75 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+───────────────────────────────────────────────────────────────────────────────────
+> [Y1] CORE PLUGINS
+───────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [CORE PLUGIN | Publish]
+\\ (NOMEN | PCore010)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> MODAL STUFF
+    ──────────────────────────────────────────────────────────────────────────── */
+    .modal.mod-publish:not(.is-mobile) {
+        min-width: 800px; /* sets minimum width so that it wouldn't turn distorted | not vw since larger screens should be able to take smaller % */
+        min-height: 400px;
+        max-height: unset;
+
+    }
+
+    .modal.mod-publish {
+        width: var(--modal-width-publish);
+        height: var(--modal-height-publish);
+    } /* adds the Style Settings options for Modal Widths*/
+
+    .modal.mod-publish:not(.is-mobile) {
+        border-radius: calc(var(--shape-roundish) * 2); /* rounded boxes modal borders */
+    }
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [CORE PLUGIN | Command Palette] (alias: hotkeys + Ctrl+P)
+\\ (NOMEN | PCore011)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Things to the right
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.is-mobile, .normal-command-palette) .suggestion-item {
+        padding-left: 1.5rem;
+    }
+        
+    body:not(.is-mobile, .normal-command-palette) span.suggestion-content {
+        letter-spacing: -0.01rem;
+        font-size: 0.95rem;
+    }
+    
+    body:not(.is-mobile, .normal-command-palette) span.suggestion-prefix::after {
+        display: none;
+    }
+    
+    body:not(.is-mobile, .normal-command-palette) span.suggestion-prefix {
+        background-color: transparent;
+        color: var(--text-accent);
+        position: absolute;
+        right: 25%;
+        padding-left: 0.125rem;
+        padding-right: 0.125rem;
+        font-size: 0.7rem;
+        letter-spacing: -0.01rem;
+    }
+
+    body:not(.is-mobile, .normal-command-palette) kbd.suggestion-hotkey {
+        font-size: 0.6rem;
+        letter-spacing: -0.01rem;
+    }
+
+    body:not(.is-mobile, .normal-command-palette) .suggestion-flair {
+        left: 0.25rem;
+    }
+    
+    body:not(.is-mobile, .normal-command-palette) div.prompt-instructions {
+        padding: 0.25rem 0 0 0;
+    }
+
+
+
+

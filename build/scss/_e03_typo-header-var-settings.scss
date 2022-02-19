@@ -1,0 +1,91 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [E03] Header `var` Settings
+───────────────────────────────────────────────────────────────────────────────────
+    >> [HEADINGS > Colours > Background]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (OPTIONS) Δ Heading Background Colours
+        ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-section h1,
+        .HyperMD-header-1.cm-line{
+            background-color: var(--col-h1-bg);
+        }
+        .markdown-preview-section h2,
+        .HyperMD-header-2.cm-line{
+            background-color: var(--col-h2-bg);
+        } 
+        .markdown-preview-section h3,
+        .HyperMD-header-3.cm-line{
+            background-color: var(--col-h3-bg);
+        } 
+        .markdown-preview-section h4,
+        .HyperMD-header-4.cm-line{
+            background-color: var(--col-h4-bg);
+        }
+        .markdown-preview-section h5,
+        .HyperMD-header-5.cm-line{
+            background-color: var(--col-h5-bg);
+        } 
+        .markdown-preview-section h6,
+        .HyperMD-header-6.cm-line{
+            background-color: var(--col-h6-bg);
+        }
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> [HEADINGS > Colours > Text/Font]
+───────────────────────────────────────────────────────────────────────────────
+    >>> (OPTIONS) Δ Heading Font Colours
+    ───────────────────────────────────────────────────────────────────────────
+    >>>> for READING MODE
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-view h1 {
+            color: var(--col-h1);
+        }
+        .markdown-preview-view h2 {
+            color: var(--col-h2);
+        }
+        .markdown-preview-view h3 {
+            color: var(--col-h3);
+        }
+        .markdown-preview-view h4 {
+            color: var(--col-h4);
+        }
+        .markdown-preview-view h5 {
+            color: var(--col-h5);
+        }
+        .markdown-preview-view h6 {
+            color: var(--col-h6);
+        }
+    /* ─────────────────────────────────────────────────────────────────────────
+    >>>> for EDITING MODE | Source View + Live Preview
+    ───────────────────────────────────────────────────────────────────────── */
+        .cm-header-1 {
+            color: var(--col-h1);
+        }
+        .cm-header-2 {
+            color: var(--col-h2);
+        }
+        .cm-header-3 {
+            color: var(--col-h3);
+        }
+        .cm-header-4 {
+            color: var(--col-h4);
+        }
+        .cm-header-5 {
+            color: var(--col-h5);
+        }
+        .cm-header-6 {
+            color: var(--col-h6);
+        }
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> [HEADINGS > Typography and Display of Text]
+───────────────────────────────────────────────────────────────────────────────
+    >>> FONT > to var --font heading + LINE HEIGHT
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+        .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
+            font-family: var(--font-heading);
+        }
+        body .cm-s-obsidian .cm-header, body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+            line-height: 125%
+        }

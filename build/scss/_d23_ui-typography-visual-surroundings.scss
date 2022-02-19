@@ -1,0 +1,143 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D23] Typography Visual Surroundings
+───────────────────────────────────────────────────────────────────────────────────
+    >> [HEADERS] 
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> {DRAFT} ROUNDER SHAPES
+        ───────────────────────────────────────────────────────────────────────────
+            >>>> for READING MODE
+            ──────────────────────────────────────────────────────────────────── */
+            body.headers-round .cm-s-obsidian .cm-header,
+            body.headers-round .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                border-radius: calc(var(--shape-roundish) * 1.25);
+            }
+        /* ────────────────────────────────────────────────────────────────────
+        >>>> for EDITING MODE (LIVE PREVIEW) | SEEMS TO INTERFERE WITH CODE BLOCKS
+        ──────────────────────────────────────────────────────────────────── */
+            .headers-round :is(.HyperMD-header-1.cm-line, .HyperMD-header-2.cm-line, .HyperMD-header-3.cm-line, .HyperMD-header-4.cm-line, .HyperMD-header-5.cm-line, .HyperMD-header-6.cm-line) {
+                border-radius: calc(var(--shape-roundish) * 1.25);
+            }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [EMBED BLOCKS] 
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> REMOVE BORDERS AND PADDINGS
+        ──────────────────────────────────────────────────────────────────────── */
+            .markdown-embed, .file-embed {
+                padding: 0 0;
+                margin: 0 0;
+            }
+            .markdown-embed .markdown-preview-view {
+                padding: 0 0 0 0;
+            }
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> for READING MODE
+            ──────────────────────────────────────────────────────────────────── */
+                .markdown-embed, .file-embed {
+                    border-top: 0;
+                    border-bottom: 0;
+                }
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> for EDITING MODE (LIVE PREVIEW)
+            ──────────────────────────────────────────────────────────────────── */
+                .markdown-source-view .markdown-embed,
+                .markdown-source-view .file-embed {
+                    border: 0;
+                    padding: 0;
+                }
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> NO MAX HEIGHT (display all embed content)
+        ───────────────────────────────────────────────────────────────────────── */
+            .markdown-embed-content {
+                max-height: none;
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [BLOCKQUOTES]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
+        ──────────────────────────────────────────────────────────────────────── */
+            .markdown-preview-view blockquote {
+                margin: 0.5rem 0;
+                border-left-width: 0.3rem;
+                padding: 0.35rem 0.5rem;
+                border-radius: calc(var(--shape-roundish) * 1.25);
+                background-color: var(--background-primary-alt);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [CODEBLOCKS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ TO ROUNDER SHAPES
+        ──────────────────────────────────────────────────────────────────────── */
+            .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+                border-radius: calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25) 0 0;
+            }
+            
+            .cm-s-obsidian div.HyperMD-codeblock-end-bg {
+                border-radius: 0 0 calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25);
+            }
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> COLOURS OF TOP OF A CODEBLOCK
+        ───────────────────────────────────────────────────────────────────────── */
+            .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+                background-color: var(--background-secondary-alt-2);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [QUOTE BLOCKS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> SOURCE MODE > Δ TO GREY
+        ──────────────────────────────────────────────────────────────────────── */
+            .HyperMD-quote.HyperMD-quote-1.cm-line {
+                background-color: var(--background-primary-alt)
+            }
+
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> MORE COLOURS IN CODE
+        ───────────────────────────────────────────────────────────────────────── */
+            .cm-s-obsidian .HyperMD-codeblock-begin,
+            .cm-s-obsidian .HyperMD-codeblock-end {
+                color: hsl(345, 69%, 46%);
+            }
+
+            .theme-light .token.operator,
+            .theme-light .token.entity,
+            .theme-light .token.url,
+            .theme-light .language-css .token.string,
+            .theme-light .style .token.string,
+            .theme-light .cm-operator,
+            .theme-light .cm-string,
+            .theme-light .cm-string-2,
+            .theme-light .cm-link {
+                color: hsl(33, 45%, 42%);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [KEYBOARD BINDINGS] KBD
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
+        ──────────────────────────────────────────────────────────────────────── */
+        kbd {
+            padding: 0 0.5em;
+            border: 1px solid var(--text-accent-hover);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FIX | HR
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> READING MODE
+        ──────────────────────────────────────────────────────────────────────── */
+            hr {
+                margin: 1rem 0;
+            }
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> LIVE PREVIEW | ADDITIONAL DECLARATIONS
+        ───────────────────────────────────────────────────────────────────────── */
+            .hr.cm-line > hr {
+                border: none;
+                border-top: 2px solid;
+                border-color: var(--background-modifier-border);
+            }
