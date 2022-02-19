@@ -1,0 +1,178 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [B01] ROOT | BASE COLOURS
+───────────────────────────────────────────────────────────────────────────────────
+    >> BASE COLOURS
+    ──────────────────────────────────────────────────────────────────────────── */
+    :is(.theme-light, .theme-dark) {
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> ACCENTS
+        ──────────────────────────────────────────────────────────────────── */
+            --accent-light: hsl(41, 100%, 40%);
+            --accent-lighter: hsl(41, 100%, 55%);
+            --accent-lighterer: hsl(41, 100%, 70%);
+            --accent-lightest: hsl(41, 100%, 85%);
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
+        ──────────────────────────────────────────────────────────────────── */
+            --PComm001-col-today: hsl(184, 74%, 20%);
+            --PComm001-col-year: hsl(155, 100%, 37%);
+            --PComm001-col-dot: hsl(184, 74%, 20%);
+    }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> LIGHT THEME
+        ───────────────────────────────────────────────────────────────────────── */
+        .theme-light {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(155, 100%, 37%);
+                --col-h2: hsl(184, 74%, 20%);
+                --col-h3: hsl(238, 70%, 39%);
+                --col-h4: hsl(19, 100%, 57%); /* rgb(254 80 0) rgb(255 125 0);*/
+                --col-h5: hsl(324, 100%, 15%);
+                --col-h6: hsl(184, 74%, 20%); 
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(184, 74%, 20%, 0.08);
+                --col-h2-bg: hsla(155, 100%, 37%, 0.2);
+                --col-h3-bg: hsla(188, 100%, 39%, 0.25);
+                --col-h4-bg: hsla(41, 100%, 55%, 0.2);
+                --col-h5-bg: hsla(352, 100%, 85%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(184, 75%, 20%);
+                --text-accent-hover: hsl(155, 100%, 37%);
+                --col-bg-table: hsl(155, 100%, 37%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(184, 74%, 20%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+                --scroll-hover: hsl(155, 100%, 48%);            
+                --col-selection: hsl(41, 100%, 55%);
+
+                --col-sd: hsl(184, 75%, 20%);
+        } 
+        
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> DARK THEME
+        ───────────────────────────────────────────────────────────────────────── */
+        .theme-dark {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(187, 13%, 87%);
+                --col-h2: hsl(155, 100%, 37%);
+                --col-h3: hsl(188, 100%, 39%);
+                --col-h4: hsl(41, 100%, 55%);
+                --col-h5: hsl(352, 100%, 85%);
+                --col-h6: hsl(155, 100%, 37%);
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(155, 100%, 37%, 0.73);
+                --col-h2-bg: hsla(184, 74%, 20%, 0.2);
+                --col-h3-bg: hsla(238, 70%, 39%, 0.25);
+                --col-h4-bg: hsla(19, 100%, 50%, 0.2);
+                --col-h5-bg: hsla(324, 100%, 15%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(155, 100%, 37%);
+                --text-accent-hover: hsl(184, 74%, 20%);
+                --col-bg-table: hsl(184, 74%, 20%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(155, 100%, 37%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+                --scroll-hover: hsl(155, 100%, 48%);          
+                --col-selection: hsl(41, 100%, 55%);
+
+                --col-sd: hsl(41, 100%, 55%);
+
+        }
+        
+        
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> SETTING BASE COLOURS AND ALL | CODE: HIUMAA
+    ───────────────────────────────────────────────────────────────────────── */
+    .theme-light {
+
+        --background-primary:           hsl(0, 0%, 100%);
+        --background-primary-alt:       hsl(220, 18%, 97%);
+        --background-primary-alt-2:     hsl(220, 15%, 96%);
+
+        --background-secondary:         hsl(220, 13%, 95%);
+        --background-secondary-alt:     hsl(216, 10%, 90%);
+        --background-secondary-alt-2:   hsl(218, 11.5%, 92.5%);
+
+        --background-tertiary:          hsl(212, 9%, 85%);
+        --background-tertiary-alt:      hsl(208, 8%, 80%);
+
+
+
+        --text-normal: #2e3338;
+        --text-muted: #888888;
+        --text-faint: #999999;
+        --text-error: #800000;
+        --text-error-hover: #990000;
+        
+        /*
+        --background-modifier-border: #ddd;
+        --background-modifier-form-field: #fff;
+        --background-modifier-form-field-highlighted: #fff;
+        --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+        --background-modifier-success: #A4E7C3;
+        --background-modifier-error: #990000;
+        --background-modifier-error-rgb: 230, 135, 135;
+        --background-modifier-error-hover: #bb0000;
+        --background-modifier-cover: rgba(0, 0, 0, 0.8);
+        --text-normal: #2e3338;
+        --text-muted: #888888;
+        --text-muted-rgb: 136, 136, 136;
+        --text-faint: #999999;
+        --text-error: #800000;
+        --text-error-hover: #990000;
+        --text-highlight-bg: rgba(255, 255, 0, 0.4);
+        --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+        --text-selection: rgba(204, 230, 255, 0.99);
+        --text-on-accent: #f2f2f2;
+        --interactive-normal: #f2f3f5;
+        --interactive-hover: #e9e9e9;
+        --interactive-accent: #7b6cd9;
+        --interactive-accent-rgb: 123, 108, 217;
+        --interactive-accent-hover: #8273e6;
+        --interactive-success: #197300;
+        --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+        --scrollbar-bg: rgba(0, 0, 0, 0.05);
+        --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+        --highlight-mix-blend-mode: darken;
+        */
+
+    }
+
+    .theme-dark {
+
+        --background-primary:           #202020;
+        --background-primary-alt:       #1a1a1a;
+        --background-primary-alt-2:     ;
+
+        --background-secondary:         #161616;
+        --background-secondary-alt:     #000000;
+        --background-secondary-alt-2:   ;
+
+        --background-tertiary:          ;
+        --background-tertiary-alt:      ;
+
+
+    }

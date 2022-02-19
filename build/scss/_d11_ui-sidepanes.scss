@@ -1,0 +1,80 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D11] SIDE PANES (LEFT AND RIGHT)
+───────────────────────────────────────────────────────────────────────────────────
+    >> WORKSPACE-LEAF-CONTENT > NO PADDING
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content .view-content {
+        padding: 0 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> LEFT SIDE PANE > NAVIGATION PANEL/BUTTONS
+    ───────────────────────────────────────────────────────────────────────────────
+            >>> REMOVE EXCESS MARGIN AND PADDINGS
+            ──────────────────────────────────────────────────────────────────── */
+            .nav-header {
+                padding: 0.5rem 0 0.3rem 0;
+                border-bottom: 0.125rem solid var(--background-secondary-alt);
+            }
+            .nav-action-button {
+                padding: 0rem 0.5rem;
+                margin: 0 0 0 0;
+                border-radius: none;
+            }
+
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> TEXT WRAP FOR FILE AND FOLDER TITLES
+            ──────────────────────────────────────────────────────────────────── */    
+            .nav-file-title,
+            .nav-folder-title {
+                line-height: 1.2em;
+                white-space: normal;
+            
+                width: 100%;
+            
+                color: var(--extra-contrast);
+            
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .nav-file-title-content,
+            .nav-folder-title-content {
+                word-break: break-all;
+            }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> LEFT SIDE PANE > NAVIGATION FONTS
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> REMOVE EXCESS MARGIN AND PADDINGS
+        ──────────────────────────────────────────────────────────────────────── */
+            .nav-file-title-content, .nav-folder-title-content {
+                padding: 0 0;
+            }
+            .nav-file-title, .nav-folder-title {
+                padding: 0 0.5rem 0 1.5rem;
+            }
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> Make Font more condensed
+            ──────────────────────────────────────────────────────────────────── */
+            .nav-file-title, .nav-folder-title {
+                letter-spacing: -0.02rem;
+            }
+
+            .nav-files-container {
+                overflow-wrap: break-word;
+            }
+            /*
+            .workspace-leaf-content > .nav-files-container.node-insert-event.show-unsupported {
+                word-break: break-all;
+            }
+            .nav-file-title-content, .nav-folder-title-content {
+                word-break: break-all;
+            }
+            */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> NAV PANES
+    ──────────────────────────────────────────────────────────────────────────── */
+            >>> SQUEEZE LETTER SPACING
+        ──────────────────────────────────────────────────────────────────────── */
+        .horizontal-tab-nav-item, .vertical-tab-nav-item {
+            letter-spacing: -0.02rem;
+        }

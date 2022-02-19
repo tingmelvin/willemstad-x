@@ -184,3 +184,22 @@
             input[type='password'], input[type='number'] {
                 border-radius: calc(var(--shape-roundish) * 3);
             }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> DOCUMENT INPUT BOX (What is it really called?)
+    ───────────────────────────────────────────────────────────────────────────────
+        >> Adding a pop of colour to whatever it's being hovered over
+        ──────────────────────────────────────────────────────────────────────── */
+        .suggestion-item.is-selected .suggestion-prefix,
+        .suggestion-item.is-selected,
+        .suggestion-item.is-selected .suggestion-flair,
+        .suggestion-item.is-selected .suggestion-highlight {
+            color: var(--text-accent);
+        }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> [ROUNDED MODAL]
+        ──────────────────────────────────────────────────────────────────────── */
+            .prompt {
+                border-radius: calc(var(--shape-roundish) * 3);
+                width: 60vw;
+            }
