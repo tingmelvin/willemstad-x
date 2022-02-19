@@ -1,0 +1,1216 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+>> OPTIONS FOR STYLE SETTINGS
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* @settings
+name: "🏘️ Willemstad \_ \_ > \_ \_ ⭕ Core" 
+id: Willemstad-Core
+settings:
+    -
+        id: col-palette
+        title: "🎨 Colour Palettes"
+        description: "Choose a colour palette!"
+        type: class-select
+        allowEmpty: false
+        default: cp-classic-lshtm
+        options:
+            -
+                label: "🟢 Revolution | London School of Hygiene and Tropical Medicine (LSHTM)"
+                value: cp-classic-lshtm
+            -
+                label: "❄️ Adaptation | Noord [Willemstad-style Nord]"
+                value: cp-exobs-nord
+            -
+                label: "🚧 UNDER CONSTRUCTION | 🔵 Revolution | University of Oxford"
+                value: cp-classic-oxon
+            -
+                label: "🚧 UNDER CONSTRUCTION | 🎹 Adaptation | Le Corbusier Colour Keyboards"
+                value: cp-classic-lc
+            -
+                label: "🖌️ Custom Colours"
+                value: custom-colors
+    -
+        id: true-black
+        title: True Black mode
+        type: class-toggle
+        description: "When enabled, this makes the dark mode True Black. ⚠️ This has not been sufficiently optimised for the Nord/Noord palette!"
+        default: false
+    -
+        id: no-animations
+        title: No Animations
+        type: class-toggle
+        description: "When enabled, this disables all animations in this theme."
+        default: false
+    -
+        id: elements-ui
+        title: 🌠 User Interface (UI) Elements
+        description: 'Customise the UI elements here.'
+        type: heading
+        level: 1
+        collapsed: false
+    -
+            id: headers-round
+            title: Rounded Headers
+            type: class-toggle
+            description: If toggled, Rounded Headers will be enabled over the standard rectangular headers.
+            default: false
+    -
+            id: sb
+            title: Status Bar
+            type: class-select
+            description: Choose which status bar you would like to use for Obsidian.
+            allowEmpty: false
+            default: sb-conjuring
+            options:
+                -
+                    label: 💫 Conjuring | Hidden until hovered, mini-size
+                    value: sb-conjuring
+                -
+                    label: 🌥️ Enduring | Persistent, mini-size
+                    value: sb-enduring
+                -
+                    label: ☀️ Unchanging | Persistent, full-length (Obsidian default)
+                    value: default
+    -
+            id: tb-title-remove
+            title: Titlebar — Remove Title
+            type: class-toggle
+            description: When enabled, this removes the title from the titlebar.
+            default: false
+    -
+            id: tb-tb-remove
+            title: Titlebar — Remove Entire Titlebar
+            type: class-toggle
+            description: When enabled, the entire top titlebar from Obsidian is removed. Note! This means that you will not be able to resize your screen, or exit Obsidian with a mouse. These can be done via hotkeys instead.
+            default: false
+    -
+            id: tb-willemstad
+            title: Titlebar — Remove Willemstad Version Number
+            type: class-toggle
+            description: When enabled, the titlebar removes the Willemstad version number from the end of the Obsidian version number.
+            default: false        
+    -
+            id: collapse-header-sanctum
+            title: Sanctum-style Header Collapse Indicator
+            type: class-toggle
+            description: When enabled, Sanctum's more minimalist header collapse indicator will be used instead of the original Obsidian indicator.
+            default: true
+    -
+            id: modal-cp-options-bold
+            title: "Shimmering Focus-style Bold for Appearance, Hotkeys and Community Plugins options"
+            type: class-toggle
+            description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
+            default: false
+    -
+            id: sd
+            title: Sidebars (Side Docks)
+            type: class-select
+            description: Choose which sidebars/side docks you would like to use for Obsidian.
+            allowEmpty: false
+            default: sd-eclipse-tp
+            options:
+                -
+                    label: Eclipse Tabs | Tabs that come into full-view when hovered
+                    value: sd-eclipse-tp
+                -
+                    label: Eclipse Bars | Styled Bars
+                    value: sd-eclipse-bars
+                -
+                    label: Default Bars
+                    value: default
+    -
+            id: elements-sd
+            title: ⏸️ Sidebar (Side Docks) Elements
+            description: 'Customise the sidebar/side docks elements here.'
+            type: heading
+            level: 2
+            collapsed: true
+    -
+                id: col-sd
+                title: '⏸️🖌️ Colours — Sidebars (Side Docks)'
+                type: variable-themed-color
+                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Eclipse Bars, and all colours for the Eclipse Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 55%)]' 
+                opacity: true
+                format: hsl
+                default-light: hsl(184, 74%, 20%)
+                default-dark: hsl(41, 100%, 55%)
+    -
+                id: elements-sd
+                title: ⏸️✨ Customisation — Eclipse Tabs
+                description: 'If you have selected the Eclipse Tabs option in the "Sidebars (Side Docks)" style setting, customise the Eclipse Tabs here.'
+                type: heading
+                level: 3
+                collapsed: false
+    -
+                    id: sd-opacity-none
+                    title: '💨 Disappearing Eclipse Tabs'
+                    type: class-toggle
+                    description: 'If toggled, Eclipse Tabs will disappear when not hovered.'
+                    default: false
+    -
+                    id: sd-height-norm
+                    title: 'Eclipse Tab Height, when not hovered'
+                    type: variable-number-slider
+                    description: 'Set the height of the tabs for the Eclipse Tabs sidebars, when not hovered.'
+                    format: "rem"
+                    default: 15
+                    min: 5
+                    max: 100
+                    step: 1
+    -
+                    id: sd-height-hover
+                    title: 'Eclipse Tab Height, when hovered'
+                    type: variable-number-slider
+                    description: 'Set the height of the tabs for the Eclipse Tabs sidebars, when hovered.'
+                    format: "%"
+                    default: 50
+                    min: 5
+                    max: 100
+                    step: 1
+    -
+                    id: sd-width-norm
+                    title: 'Eclipse Tab Width, when not hovered'
+                    type: variable-number-slider
+                    description: 'Set the width of the tabs for the Eclipse Tabs sidebars, when not hovered.'
+                    format: "rem"
+                    default: 1.1
+                    min: 0.7
+                    max: 2.5
+                    step: 0.1                    
+    -
+            id: modal-widths
+            title: 🆕 Modal Widths
+            description: "Change the widths of modals (the settings/community plugins/themes/Publish menus)."
+            type: heading
+            level: 2
+            collapsed: true
+    -
+                id: modal-width-settings
+                title: Modal Widths — Settings
+                type: variable-number-slider
+                format: "vw"
+                default: 70
+                min: 40
+                max: 98
+                step: 1
+    -
+                id: modal-width-community-plugin
+                title: Modal Widths — Community Plugin Store
+                type: variable-number-slider
+                format: "vw"
+                default: 70
+                min: 40
+                max: 98
+                step: 1
+    -
+                id: modal-width-community-theme
+                title: Modal Widths — Theme Store
+                type: variable-number-slider
+                format: "vw"
+                default: 70
+                min: 40
+                max: 98
+                step: 1
+    -
+                id: modal-width-publish
+                title: Modal Widths — Publish
+                type: variable-number-slider
+                format: "vw"
+                default: 42
+                min: 40
+                max: 98
+                step: 1
+    -
+            id: modal-heights
+            title: 🆕 Modal Heights
+            description: "Change the heights of modals (the settings/community plugins/themes/Publish menus)."
+            type: heading
+            level: 2
+            collapsed: true
+    -
+                id: modal-height-settings
+                title: Modal Heights — Settings
+                type: variable-number-slider
+                format: "vh"
+                default: 70
+                min: 20
+                max: 98
+                step: 1
+    -
+                id: modal-height-community-plugin
+                title: Modal Heights — Community Plugin Store
+                type: variable-number-slider
+                format: "vh"
+                default: 90
+                min: 20
+                max: 98
+                step: 1
+    -
+                id: modal-height-community-theme
+                title: Modal Heights — Theme Store
+                type: variable-number-slider
+                format: "vh"
+                default: 90
+                min: 20
+                max: 98
+                step: 1
+    -
+                id: modal-height-publish
+                title: Modal Heights — Publish
+                type: variable-number-slider
+                format: "vh"
+                default: 25
+                min: 20
+                max: 98
+                step: 1
+    -
+        id: misc
+        title: Ⓜ️ Miscellany
+        type: heading
+        description: Centre Image | The options here allows you to tweak the miscellanous items in Obsidian.
+        level: 1
+        collapsed: true
+    -
+                id: centre-image
+                title: Centre Image
+                type: class-toggle
+                description: When enabled, this centres embedded images in your notes.
+                default: true
+
+*/
+/*
+    -
+            id: tb-custom
+            title: Titlebar — Custom
+            type: class-toggle
+            description: When enabled, the titlebar is restyled instead, with the original title removed and replaced with a custom field.
+            default: enabled
+    -
+            id: title-custom
+            title: Titlebar — Custom Title (for Custom Titlebar)
+            type: variable-text
+            description: Add some words!
+            default: "Obsidian"
+*/
+
+/* @settings
+name: "🏘️ Willemstad \_ \_  > \_ \_ ✍️ Typography" 
+id: Willemstad-Typography
+settings:
+    -
+        id: font-pairings
+        title: ✍️✨ Font Pairings + Enable Custom Fonts
+        description: 'There are two suggested Font Pairings with Willemstad, available here. These options here are quick options provided. To override them, please select "Custom Fonts".'
+        type: class-select
+        allowEmpty: false
+        default: fp-manDM
+        options:
+            -
+                label: 🟢 Manrope + DM Sans
+                value: fp-manDM
+            -
+                label: ⚫ Inter (v3.19)
+                value: fp-inter
+            -
+                label: ⭕ Custom Fonts
+                value: fp-custom
+    -
+        id: yaml-coloured
+        title: 🌈 Coloured YAML
+        type: class-toggle
+        description: When enabled, YAML will be coloured selectively to increase readabiity.
+        default: true
+    -
+        id: typography-typeface
+        title: ✍️🔤 Font Typeface Customisation
+        type: heading
+        description: Core typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel.
+        level: 2
+        collapsed: true
+    -
+            id: font-monospace
+            title: Font Typeface — Monospace
+            description:
+            type: variable-text
+            default: '"DM Mono"'
+    -
+            id: font-heading
+            title: Font Typeface — Headings
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "Manrope", "DM Sans"'
+    -
+            id: font-editor
+            title: Font Typeface — Editor
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-menu
+            title: Font Typeface — Menu
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-ui
+            title: Font Typeface — User Interface (UI)
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-editor-m
+            title: Font Typeface — Mobile Editor
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-menu-m
+            title: Font Typeface — Mobile Menu
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: font-ui-m
+            title: Font Typeface — Mobile User Interface (UI)
+            description:
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+            id: mermaid-font
+            title: "Font Typeface — Mermaid.js 📊"
+            description: Changes font for the in-built Mermaid.js visualisations in the theme.
+            type: variable-text
+            default: '"Inter 3.19", "DM Sans", "Roboto", "Helvetica", sans-serif'
+    -
+        id: typography-size
+        title: ✍️🀄 Font Size Customisation
+        type: heading
+        description: Options to change default font sizes (relative to the normal font size). Table-specific font size customisation options are listed within the "Tables" heading.
+        level: 2
+        collapsed: true
+    -
+        id: size-font-searchbox
+        title: 🔡 Font Size — Small Elements
+        type: variable-number-slider
+        description: Use this setting to change the font size of smaller elements.
+        format: "em"
+        default: 0.9
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
+        id: typography-h-size-text
+        title: Size — Header Text
+        type: heading
+        description: Changes the font size of the headers (H1–H6).
+        level: 3
+        collapsed: true
+    -
+            id: h1-size
+            title: Font Size — H1
+            type: variable-number-slider
+            default: 1.8
+            min: 1
+            max: 3.5
+            step: 0.1
+            format: em
+    -
+            id: h2-size
+            title: Font Size — H2
+            type: variable-number-slider
+            default: 1.6
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h3-size
+            title: Font Size — H3
+            type: variable-number-slider
+            default: 1.45
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h4-size
+            title: Font Size — H4
+            type: variable-number-slider
+            default: 1.3
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h5-size
+            title: Font Size — H5
+            type: variable-number-slider
+            default: 1.15
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h6-size
+            title: Font Size — H6
+            type: variable-number-slider
+            default: 1.05
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+        id: typography-h-col-text
+        title: 🖌️🔤 Colours — Header Text
+        type: heading
+        description: Changes the font colours of the headers (H1–H6).
+        level: 2
+        collapsed: true
+    -
+            id: col-h1
+            title: Font Colour — H1
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark: hsl(187, 13%, 87%)
+    -
+            id: col-h2
+            title: Font Colour — H2
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: hsl(184, 74%, 20%)
+            default-dark: hsl(155, 100%, 37%)
+    -
+            id: col-h3
+            title: Font Colour — H3
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: hsl(238, 70%, 39%)
+            default-dark: hsl(188, 100%, 39%)
+    -
+            id: col-h4
+            title: Font Colour — H4
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: hsl(19, 100%, 57%)
+            default-dark: hsl(41, 100%, 55%)
+    -
+            id: col-h5
+            title: Font Colour — H5
+            type: variable-themed-color
+            description:                
+            opacity: false
+            format: hsl
+            default-light: hsl(324, 100%, 15%)
+            default-dark: hsl(352, 100%, 85%)
+    -
+            id: col-h6
+            title: Font Colour — H6
+            type: variable-themed-color
+            description:
+            opacity: false
+            format: hsl
+            default-light: hsl(184, 74%, 20%)
+            default-dark: hsl(155, 100%, 37%)
+    -
+        id: typography-h-col-bg
+        title: 🖌️🚥 Colours — Header Background
+        type: heading
+        description: Changes the background colours of the headers (H1–H6).
+        level: 2
+        collapsed: true
+    -
+            id: col-h1-bg
+            title: Background Colour — H1
+            type: variable-themed-color
+            description:
+            opacity: true
+            format: hsl
+            default-light: hsla(184, 74%, 20%, 0.08)
+            default-dark: hsla(155, 100%, 37%, 0.73)
+    -
+            id: col-h2-bg
+            title: Background Colour — H2
+            type: variable-themed-color
+            description:                
+            opacity: true
+            format: hsl
+            default-light: hsla(155, 100%, 37%, 0.2)
+            default-dark: hsla(184, 74%, 20%, 0.2)
+    -
+            id: col-h3-bg
+            title: Background Colour — H3
+            description:                
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(188, 100%, 39%, 0.25)
+            default-dark: hsla(238, 70%, 39%, 0.25)
+    -
+            id: col-h4-bg
+            title: Background Colour — H4
+            type: variable-themed-color
+            description:               
+            opacity: true
+            format: hsl
+            default-light: hsla(41, 100%, 55%, 0.2)
+            default-dark: hsla(19, 100%, 50%, 0.2)
+    -
+            id: col-h5-bg
+            title: Background Colour — H5
+            type: variable-themed-color
+            description:                
+            opacity: true
+            format: hsl
+            default-light: hsla(352, 100%, 85%, 0.2)
+            default-dark: hsla(324, 100%, 15%, 0.2)
+    -
+            id: col-h6-bg
+            title: Background Colour — H6
+            type: variable-themed-color
+            description:                
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 100%, 0.0)
+            default-dark: hsla(0, 0%, 100%, 0.0)
+    -
+        id: typography-undl
+        title: ✍️〰️ Underlines
+        description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+            id: undl-text-norm
+            title: Underlines Spacing — Normal Text
+            description: Choose which underline spacing you would like your normal text to have.
+            type: class-select
+            allowEmpty: false
+            default: llus-nor-max
+            options:
+                -
+                    label: 🔴 Standard (Classic Obsidian Core/Classic Shimmering Focus style)
+                    value: default
+                -
+                    label: 🟡 Additional (Shimmering Focus style for hyperlinks)
+                    value: llus-nor-add
+                -
+                    label: 🟢 Maximum (Willemstad style) | Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                    value: llus-nor-max
+    -
+            id: undl-hlink
+            title: Underlines Spacing — Hyperlinks
+            description: Choose which underline spacing you would like your hyperlinks to have.
+            type: class-select
+            allowEmpty: false
+            default: llus-hyp-max
+            options:
+                -
+                    label: 🔴 Standard (Classic Obsidian style)
+                    value: default
+                -
+                    label: 🟡 Additional (Shimmering Focus style)
+                    value: llus-hyp-add
+                -
+                    label: 🟢 Maximum (Willemstad style) | Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                    value: llus-hyp-max
+    -
+        id: typography-highlight
+        title: ✍️🟡 Highlights
+        description: Options to change highlighting colours.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+            id: col-highlight-text
+            title: 'Highlighted Text Colour'
+            type: variable-themed-color
+            description: 'Colour of the text highlighted — this defaults to black.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 0%)
+            default-dark: hsl(0, 0%, 0%)
+    -
+            id: col-highlight-0
+            title: 'Highlight Colour (default)'
+            type: variable-themed-color
+            description: 'Default highlight colour (==)'
+            opacity: false
+            format: hsl
+            default-light: hsl(60, 100%, 50%)
+            default-dark: hsl(60, 100%, 50%)
+    -
+            id: col-highlight-1
+            title: 'Highlight Colour — #1 (italics + highlight markdown)'
+            type: variable-themed-color
+            description: 'Colour of the highlight when you use the italics markdown syntax (*) with the highlight markdown syntax (==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(120, 100%, 50%)
+            default-dark: hsl(120, 100%, 50%)
+    -
+            id: col-highlight-2
+            title: 'Highlight Colour — #2 (bold + highlight markdown)'
+            description: 'Colour of the highlight when you use the bold markdown syntax (**) with the highlight markdown syntax (==).'     
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(180, 100%, 50%)
+            default-dark: hsl(180, 100%, 50%)
+    -
+        id: table-options
+        title: ✍️⏸️ Tables
+        description: Table-specific options.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+            id: size-font-editor-table
+            title: Font Size — Tables (in Editing mode)
+            type: variable-number-slider
+            description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview).
+            format: "em"
+            default: 0.8
+            min: 0.25
+            max: 1.5
+            step: 0.05
+    -
+            id: size-font-preview-table
+            title: Font Size — Tables (in Preview mode)
+            type: variable-number-slider
+            description: Use this setting to change the font size of the tables in Preview mode.
+            format: "em"
+            default: 1
+            min: 0.25
+            max: 1.5
+            step: 0.05
+    -
+            id: col-bg-table
+            title: Background Colour — Table Headings
+            type: variable-themed-color
+            description: Change the background colour of the table headings.
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark: hsl(184, 74%, 20%)
+    -
+            id: table-alt-bg
+            title: Alternate Colours for Tables
+            type: class-toggle
+            description: When enabled, the background colours of each successive row (every 2 rows) in the table will be of a different colour.
+            default: false
+    -
+            id: table-no-borders-td
+            title: No Borders for Table Body
+            type: class-toggle
+            description: When enabled, the body of the tables will not display a border.
+            default: false
+    -
+            id: table-no-borders-th
+            title: No Borders for Table Headers
+            type: class-toggle
+            description: When enabled, the headers of the tables will not display a border.
+            default: false
+    -
+            id: table-min-space
+            title: Space Maximiser (removes all margins/paddings)
+            type: class-toggle
+            description: When enabled, all margins and paddings of/in the tables will be removed. ⚠️ This option is not meant to be aesthetically pleasing.
+            default: false
+    -
+            id: table-set-minmax
+            title: Set Minimum and Maximum Table Widths
+            type: class-toggle
+            description: When enabled, you will gain the ability to set the minimum and maximum widths of your tables.
+            default: false
+    -
+                id: table-width-settings
+                title: "Additional settings available with 'Set Minimum and Maximum Table Widths' option"
+                type: heading
+                level: 3
+                collapsed: true
+    -
+                id: width-tables-min
+                title: "Minimum Table Width"
+                type: variable-number-slider
+                description: "Set the minimum width your tables should be. ⚠️ This option only works if the 'Set Minimum and Maximum Table Widths' option is enabled."
+                format: rem
+                default: 2.5
+                min: 0.5
+                max: 200
+                step: 0.5
+    -
+                id: width-tables-max
+                title: "Maximum Table Width"
+                type: variable-number-slider
+                description: "Set the maximum width your tables should be. ⚠️ This option only works if the 'Set Minimum and Maximum Table Widths' option is enabled."
+                format: rem
+                default: 25
+                min: 0.5
+                max: 200
+                step: 0.5
+*/
+
+/* @settings
+name: "🏘️ Willemstad \_ \_ > \_ \_ 🛠️ Plugin Settings" 
+id: Willemstad-Plugins
+settings:
+    -
+     id: plugin-core
+     title: 🛠️ Core Plugins
+     type: heading
+     description: "Command Palette"
+     level: 1
+     collapsed: false
+    -
+            id: normal-command-palette
+            title: Command Palette — Revert back to standard Obsidian style
+            type: class-toggle
+            description: When enabled, this moves the plugin name back to the left. Use when the Command Palette looks wonky
+            default: false
+    -
+     id: plugin-community
+     title: 🛠️ Community Plugins
+     type: heading
+     description: "Admonitions, Calendar, Footnotes & Citation Indicator, Sliding Panes, Style Settings | The options here allows you to tweak how plugins are displayed."
+     level: 1
+     collapsed: false
+    -
+        id: PComm003-margin
+        title: Admonitions — Change the size of the margins
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 25
+        step: 0.5
+    -
+        id: PComm001-col-today
+        title: 📆 Calendar — Δ Colour, Font of today's date
+        type: variable-themed-color
+        description: Change the font colour for today's date in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: hsl(155, 100%, 37%)
+        default-dark: hsl(155, 100%, 37%)
+    -
+        id: PComm001-col-year
+        title: 📆 Calendar — Δ Colour, Font of the year
+        type: variable-themed-color
+        description: Change the font colour for the year in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: hsl(155, 100%, 37%)
+        default-dark: hsl(155, 100%, 37%)
+    -
+        id: PComm001-col-dot
+        title: 📆 Calendar — Δ Colour, Filled dot
+        type: variable-themed-color
+        description: Change the colour of the dot in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: hsl(155, 100%, 37%)
+        default-dark: hsl(155, 100%, 37%)
+    -
+        id: PComm027-indicator
+        title: 🦶📝 Footnotes & Citation Indicator — Δ Gutter Indicator
+        type: variable-text
+        description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin. ⚠️NOTE: PLEASE use your apostrophes (' ') to ensure the new indicator renders!"
+        default: '⦿'
+    -
+        id: PComm002-noshadow
+        title: Sliding Panes — No shadows between two panes
+        type: class-toggle
+        description: When enabled, this removes the shadows between two sliding panes when using the Sliding Panes plugin.
+        default: true
+
+    -
+        id: PComm000-blockdesc-appear
+        title: ⚙️ Style Settings — Keep Heading Block Description visible
+        type: class-toggle
+        description: When enabled, this keeps the heading description in the Style Settings visible when said option is toggled.
+        default: true
+    -
+     id: longform-settings
+     title: ✍️📕 Longform plugin & Writing cssclass
+     description: "Settings for the Longform plugin, and 'writing' cssclass. "
+     type: heading
+     level: 2
+     collapsed: true
+    -
+        id: font-longform
+        title: Font Typeface — Longform & Writing notes
+        description: "Globally overrides all font typefaces for specific use with longform & writing notes, except for code, which still uses the monospace font."
+        type: variable-text
+        default: '"Crimson Pro"'
+    -
+        id: size-font-longform
+        title: Font Size — Longform & Writing notes
+        type: variable-number-slider
+        default: 1.2
+        min: 0.7
+        max: 2
+        step: 0.05
+        format: 'rem'
+    -
+        id: PComm029-text-indent
+        title: Text Indentation — Longform & Writing notes
+        type: class-toggle
+        description: When enabled, longform & writing notes will be indented.
+        default: false
+    -
+        id: PComm029-justify
+        title: Text Justification — Longform & Writing notes
+        type: class-toggle
+        description: When enabled, longform & writing notes will be justified.
+        default: false
+*/
+
+/* @settings
+name: "🏘️ Willemstad \_ \_ > \_ \_ ⚠️ Advanced Settings" 
+id: Willemstad-Adv-Settings
+settings:
+    -
+     id: adv-settings
+     title: ⚠️🎨 Advanced Settings — Colours
+     type: heading
+     description: "Ever wanted to change every single element's colour? Here's your chance to do so! ⚠️ PLEASE ONLY USE THIS IF YOU ARE ABSOLUTELY SURE OF WHAT YOU ARE DOING. In the event you might have changed something inadvertently, reset to the theme's original colours using the button beside the colour picker."
+     level: 1
+     collapsed: false
+    -
+            id: background-primary
+            title: background-primary
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#ffffff'
+            default-dark:  '#202020'
+    -
+            id: background-primary-alt
+            title: background-primary-alt
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#f5f6f8'
+            default-dark:  '#1a1a1a'
+    -
+            id: background-primary-alt-2
+            title: background-primary-alt-2
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: 
+            default-dark:
+    -
+            id: background-secondary
+            title: background-secondary
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#f2f3f5'
+            default-dark:  '#161616'
+    -
+            id: background-secondary-alt
+            title: background-secondary-alt
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#e3e5e8'
+            default-dark:  '#000000'
+    -
+            id: background-secondary-alt-2
+            title: background-secondary-alt-2
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: 
+            default-dark:
+    -
+            id: background-tertiary
+            title: background-tertiary
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: 
+            default-dark:
+    -
+            id: background-tertiary-alt
+            title: background-tertiary-alt
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: 
+            default-dark:
+    -
+            id: background-primary-contra
+            title: background-primary-contra
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light:
+            default-dark: 
+    -
+            id: background-modifier-border
+            title: background-modifier-border
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#ddd'
+            default-dark:  '#333'
+    -
+            id: background-modifier-form-field
+            title: background-modifier-form-field
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#fff'
+            default-dark:  rgba(0, 0, 0, 0.3)
+    -
+            id: background-modifier-form-field-highlighted
+            title: background-modifier-form-field-highlighted
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#fff'
+            default-dark:  rgba(0, 0, 0, 0.22)
+    -
+            id: background-modifier-box-shadow
+            title: background-modifier-box-shadow
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(0, 0, 0, 0.1)
+            default-dark:  rgba(0, 0, 0, 0.3)
+    -
+            id: background-modifier-success
+            title: background-modifier-success
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#A4E7C3'
+            default-dark:  '#197300'
+    -
+            id: background-modifier-error
+            title: background-modifier-error
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#990000'
+            default-dark:  '#3d0000'
+    -
+            id: background-modifier-error-rgb
+            title: background-modifier-error-rgb
+            type: variable-themed-color
+            opacity: false
+            format: rgb-values
+            default-light: 230, 135, 135
+            default-dark:  61, 0, 0
+    -
+            id: background-modifier-error-hover
+            title: background-modifier-error-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#bb0000'
+            default-dark:  '#470000'
+    -
+            id: background-modifier-cover
+            title: background-modifier-cover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(0, 0, 0, 0.8)
+            default-dark:  rgba(0, 0, 0, 0.8)
+    -
+            id: text-accent
+            title: text-accent
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#705dcf'
+            default-dark:  '#7f6df2'
+    -
+            id: text-accent-hover
+            title: text-accent-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#7a6ae6'
+            default-dark:  '#8875ff'
+    -
+            id: text-normal
+            title: text-normal
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#2e3338'
+            default-dark:  '#dcddde'
+    -
+            id: text-muted
+            title: text-muted
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#888888'
+            default-dark:  '#999'
+    -
+            id: text-muted-rgb
+            title: text-muted-rgb
+            type: variable-themed-color
+            opacity: false
+            format: rgb-values
+            default-light: 136, 136, 136
+            default-dark:  153, 153, 153
+    -
+            id: text-faint
+            title: text-faint
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#999999'
+            default-dark:  '#666'
+    -
+            id: text-error
+            title: text-error
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#800000'
+            default-dark:  '#ff3333'
+    -
+            id: text-error-hover
+            title: text-error-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#990000' 
+            default-dark:  '#990000'
+    -
+            id: text-highlight-bg
+            title: text-highlight-bg
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(255, 255, 0, 0.4)
+            default-dark:  rgba(255, 255, 0, 0.4)
+    -
+            id: text-highlight-bg-active
+            title: text-highlight-bg-active
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(255, 128, 0, 0.4)
+            default-dark:  rgba(255, 128, 0, 0.4)
+    -
+            id: text-selection
+            title: text-selection
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(204, 230, 255, 0.99)
+            default-dark:  rgba(23, 48, 77, 0.99)
+    -
+            id: text-on-accent
+            title: text-on-accent
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#f2f2f2'
+            default-dark:  '#dcddde'
+    -
+            id: interactive-normal
+            title: interactive-normal
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#f2f3f5'
+            default-dark:  '#2a2a2a'
+    -
+            id: interactive-hover
+            title: interactive-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#e9e9e9'
+            default-dark:  '#303030'
+    -
+            id: interactive-accent
+            title: interactive-accent
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#7b6cd9'
+            default-dark:  '#483699'
+    -
+            id: interactive-accent-rgb
+            title: interactive-accent-rgb
+            type: variable-themed-color
+            opacity: false
+            format: rgb-values
+            default-light: 123, 108, 217
+            default-dark:  72, 54, 153
+    -
+            id: interactive-accent-hover
+            title: interactive-accent-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#8273e6'
+            default-dark:  '#4d3ca6'
+    -
+            id: interactive-success
+            title: interactive-success
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#197300'
+            default-dark:  '#197300'
+    -
+            id: scrollbar-active-thumb-bg
+            title: scrollbar-active-thumb-bg
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(0, 0, 0, 0.2)
+            default-dark:  rgba(255, 255, 255, 0.2)
+    -
+            id: scrollbar-bg
+            title: scrollbar-bg
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(0, 0, 0, 0.05)
+            default-dark:  rgba(255, 255, 255, 0.05)
+    -
+            id: scrollbar-thumb-bg
+            title: scrollbar-thumb-bg
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(0, 0, 0, 0.1)
+            default-dark:  rgba(255, 255, 255, 0.1)                                                                                                                                                                                                                                                                                                                                                                                                      
+*/
+
+
+/*
+            --background-primary-alt-2:     hsl(220, 15%, 96%);
+
+
+            --background-secondary-alt-2:   hsl(218, 11.5%, 92.5%);
+
+            --background-tertiary:          hsl(212, 9%, 85%);
+            --background-tertiary-alt:      hsl(208, 8%, 80%);
+
+                             --accent-light: hsl(193, 43%, 67%);
+                --accent-lighter: hsl(193, 43%, 72%);
+                --accent-lighterer: hsl(193, 43%, 77%);
+                --accent-lightest: hsl(193, 43%, 82%);
+*/

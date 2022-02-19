@@ -1,0 +1,53 @@
+        /* ────────────────────────────────────────────────────────────────────────────
+        >> [MULTI-COLOUR HIGHLIGHTS AND SELECTION]
+        \\ thanks @pseudometa, from Shimmering Focus;
+        \\ and also thanks to @Atlas
+        ───────────────────────────────────────────────────────────────────────────────
+            >>> HIGHLIGHTS
+            ───────────────────────────────────────────────────────────────────────────
+                >>>> (0) STANDARD (==)
+                ──────────────────────────────────────────────────────────────────── */
+
+                .markdown-preview-view mark,
+                .markdown-preview-view mark .internal-link, /* override specificity for links */
+                .cm-s-obsidian span.cm-highlight {
+                    background-color: var(--col-highlight-0);
+                    color: var(--col-highlight-text);
+                }
+
+                /* ────────────────────────────────────────────────────────────────────
+                >>>> (1) HIGHLIGHT 1 | WITH ITALICS (*==)
+                ──────────────────────────────────────────────────────────────────── */
+
+                .markdown-preview-view em > mark,
+                .markdown-preview-view em > mark .internal-link, /* override specificity for links */
+                span.cm-em.cm-highlight {
+                    font-style: normal;
+                    text-decoration: unset;
+                    background: none;
+                    background-color: var(--col-highlight-1);
+                    color: var(--col-highlight-text);
+                }
+
+                /* ────────────────────────────────────────────────────────────────────
+                >>>> (2) HIGHLIGHT 1 | WITH BOLD (**==)
+                ──────────────────────────────────────────────────────────────────── */
+            
+                .markdown-preview-view strong > mark,
+                .markdown-preview-view strong > mark .internal-link, /* override specificity for links */
+                span.cm-strong.cm-highlight {
+                    font-weight: normal;
+                    text-decoration: unset;
+                    background: none;
+                    background-color: var(--col-highlight-2);
+                    color: var(--col-highlight-text);
+                }
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> SELECTION (SELECTED TEXT COLOUR)
+        ───────────────────────────────────────────────────────────────────────── */
+            .theme-light,
+            .theme-dark {
+                --text-selection: var(--col-selection);
+            }
+        
