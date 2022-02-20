@@ -2,7 +2,8 @@
     "extends": ["stylelint-config-recommended"],
 
     "plugins": [
-        "stylelint-order"
+        "stylelint-order",
+        "stylelint-no-unsupported-browser-features"
     ],
 
     "rules": {
