@@ -6,7 +6,7 @@
 name: "🏘️ Willemstad \_ \_ > \_ \_ ⭕ Core" 
 id: Willemstad-Core
 settings:
-        -
+    -
         id: col-palette
         title: "🎨 Colour Palettes"
         description: "Choose a colour palette!"
@@ -278,10 +278,11 @@ settings:
                 default: true
     -
         id: support-willemstad
-        title: Support Willemstad's Development
+        title: 😍 Support Willemstad's Development
         type: heading
         level: 1
         description: 'Hi! I hope you enjoy Willemstad. There are a few ways you can support its continuing development:'
+        collapsed: false
     -
         id: support-willemstad-github
         title: ⭐ Star the repository on Github!
@@ -883,7 +884,12 @@ settings:
         default: false
 */
 
-/* @settings
+
+
+/* TO BE FIXED */
+/* @settings */
+
+/*
 name: "🏘️ Willemstad \_ \_ > \_ \_ ⚠️ Advanced Settings" 
 id: Willemstad-Adv-Settings
 settings:
@@ -893,7 +899,7 @@ settings:
      type: heading
      description: "Ever wanted to change every single element's colour? Here's your chance to do so! ⚠️ PLEASE ONLY USE THIS IF YOU ARE ABSOLUTELY SURE OF WHAT YOU ARE DOING. In the event you might have changed something inadvertently, reset to the theme's original colours using the button beside the colour picker."
      level: 1
-     collapsed: false
+     collapsed: true
     -
             id: background-primary
             title: background-primary
@@ -1207,3 +1213,6 @@ settings:
             default-light: rgba(0, 0, 0, 0.1)
             default-dark:  rgba(255, 255, 255, 0.1)                                                                                                                                                                                                                                                                                                                                                                                                      
 */
+
+
+

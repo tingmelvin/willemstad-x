@@ -8,7 +8,7 @@
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.1.1 Refshaleøen";
+            content: "\A v0.1.2 Refshaleøen";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -84,7 +84,7 @@
             >>> ADD WILLEMSTAD VERSION NUMBER
             ──────────────────────────────────────────────────────────────────────── */
             div.titlebar-text::after {
-                content: '\ \ | \ \ Willemstad X v0.1.1 Refshaleøen';
+                content: '\ \ | \ \ Willemstad X v0.1.2 Refshaleøen';
             }
 
             .tb-willemstad div.titlebar-text::after {
@@ -97,15 +97,13 @@
             >>> ADD REFERENCE TO THEME DOCS AND JAVALENT'S STUFF
             \\\ thanks to @pseudometa for Theme Doc content code
             ──────────────────────────────────────────────────────────────────────── */
-            .modal .setting-item-heading[data-id="Willemstad-Core"] {
-                padding-top: 2.75rem; /* fixes padding so that the Willemstad thing won't overlap */
+            .setting-item-heading[data-id="Willemstad-Core"] {
+                padding-top: 2.65rem;  /* fixes padding so that the Willemstad thing won't overlap */
             }
 
-
-            .modal .setting-item-heading[data-id="Willemstad-Core"]::before,
-            .modal .setting-item-heading[data-id="Willemstad-Typography"]::before,  /* just to fix minor bug re: the indicators appearing in front of text */
-            .modal .setting-item-heading[data-id="Willemstad-Plugins"]::before,     /* just to fix minor bug re: the indicators appearing in front of text */
-            .modal .setting-item-heading[data-id="Willemstad-Adv-Settings"]::before /* just to fix minor bug re: the indicators appearing in front of text */
+            .setting-item-heading[data-id="Willemstad-Core"]::before,
+            .setting-item-heading[data-id="Willemstad-Typography"]::before,  /* just to fix minor bug re: the indicators appearing in front of text */
+            .setting-item-heading[data-id="Willemstad-Plugins"]::before,     /* just to fix minor bug re: the indicators appearing in front of text */
             .workspace-leaf-content[data-type="style-settings"] > .view-content > .setting-item:first-child::before {
                 position: absolute;
                 top: 0.5rem;

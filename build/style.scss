@@ -1,3 +1,4 @@
+@use 'scss/_a1_license-mit';
 @use 'scss/_b01_root-basecolours';
 @use 'scss/_b03_root-typography';
 @use 'scss/_b04_root-smallersettings';
@@ -26,3 +27,6 @@
 @use 'scss/_q21_styling-other-improvements';
 @use 'scss/_y1_plugins-core';
 @use 'scss/_y2_plugins-community';
+@use 'scss/_z1_style-settings-options';
+@use 'scss/_z2_base64-font-encoding';
+@use 'scss/_z3_compatibility-info';

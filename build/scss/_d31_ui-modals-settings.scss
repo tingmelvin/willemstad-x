@@ -32,7 +32,7 @@
         ──────────────────────────────────────────────────────────────────────── */
         .horizontal-tab-nav-item,
         .vertical-tab-nav-item {
-            font-size: var(--size-font-searchbox) * 1.1;
+            font-size: calc(var(--size-font-searchbox) * 1.1);
         }
         .vertical-tab-header-group-title {
             font-size: var(--size-font-searchbox);

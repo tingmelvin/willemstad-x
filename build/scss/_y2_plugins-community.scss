@@ -644,3 +644,14 @@
         border-left: 1px solid var(--background-modifier-border);
         padding-left: 1.5rem;
     }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> MAKING SOME THINGS COPYABLE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .setting-item.style-settings-heading[data-id="support-willemstad-github"] .setting-item-description,
+    .setting-item.style-settings-heading[data-id="support-willemstad-issue"] .setting-item-description,
+    .setting-item.style-settings-heading[data-id="support-willemstad-obsidian"] .setting-item-description {
+        cursor: text;
+        user-select: all;
+        color: var(--text-accent);
+    }
