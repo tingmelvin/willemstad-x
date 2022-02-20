@@ -584,6 +584,17 @@
         --lh-longform: 1.3rem;
     }
 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> makes Longform Explorer fit nicer
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type="VIEW_TYPE_LONGFORM_EXPLORER"] .view-content {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    .workspace-leaf-content[data-type="VIEW_TYPE_LONGFORM_EXPLORER"] ul {
+        padding-inline-start: 1em;
+    }
+
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Style Settings]
 \\ (NOMEN | PComm000)
@@ -653,5 +664,5 @@
     .setting-item.style-settings-heading[data-id="support-willemstad-obsidian"] .setting-item-description {
         cursor: text;
         user-select: all;
-        color: var(--text-accent);
+        color: var(--text-accent-hover);
     }
