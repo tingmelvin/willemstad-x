@@ -5,10 +5,18 @@ Named after the capital of Curaçao (which is known for its colourful houses), t
 
 **NOTE!** Willemstad X is not supported for the legacy editor (CodeMirror 5), or for mobile. While mobile support might be coming in the longer future, you are advised only to use Willemstad X on desktop, and in the current default editor.
 
+**To use**:
+
+For the most current version, use the Community Theme store in Obsidian. __(preferred/highly recommended method!)__ 
+
+Alternatively, download the release, and drop `obsidian.css` into your `.obsidian\themes` folder in the vault you wish to have the theme in.
+
+---
+
 ### Should I use this or Willemstad for Shimmering Focus?
 It's up to you! I intend to maintain Willemstad for SF _without too much effort (read: not minimally, but almost minimally)_, since I don't think there are too many more features I'd like to add, or can add without conflicting with Shimmering Focus' base options. I don't want to conflict too many changes with Shimmering Focus as well! But if you are a power user and use most of Shimmering Focus's stuff, I'd suggest you stay with Shimmering Focus. Chris is way better/faster at doing CSS stuff than I am, too!
 
-Willemstad for SF got featured in [Eleanor's roundup](https://www.obsidianroundup.org/2022-02-05/) (_yes, **the** Roundup_), so if that's the deciding factor, then go for that!
+Willemstad for SF got featured _twice_ in Eleanor's roundup ([1](https://www.obsidianroundup.org/2022-02-05/), [2](https://www.obsidianroundup.org/2022-02-12/)) (_yes, **the** Roundup_), versus _once_ for Willemstad X ([1](https://www.obsidianroundup.org/2022-02-19/)) so if that's the deciding factor, then go for that!
 
 ⚠️ Almost all UI styling (sans modals) that are present in Willemstad X, are not in Willemstad for SF. Willemstad X also encodes the DM family of fonts and Manrope, but this is not included in the Willemstad for SF files.
 
@@ -42,6 +50,8 @@ The community plugins I have an intention to support can also be seen [here](htt
 3. Fixes for mobile (albeit not offering official support yet)
 4. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-13-ThingsToDo_WillemstadX), although obviously it's not neat in any sense of the word.
 5. Theme Documentation
+
+---
 
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
