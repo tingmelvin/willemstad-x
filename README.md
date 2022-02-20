@@ -23,6 +23,11 @@ Willemstad for SF got featured _twice_ in Eleanor's roundup ([1](https://www.obs
 ### Why is Inter embedded into Willemstad X, isn't that included in Obsidian proper?
 Yes, it is. Inter is included in Obsidian proper. However, most people will download Inter onto their computers, and Obsidian [will use the font with the name that is present in your computer](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/Best+Practices+and+Tips+for+Theme+Development). Moreover, most people (**including myself**) download/-s/-ed Inter from Google Fonts, [which is probably the most outdated version you can get of the font](https://github.com/rsms/inter#alternate-distributions). (No proper _italics_, need I say more?!) By embedding Inter, alongside the other fonts, allows me to quality control and ensure the quality of your experience.
 
+### I'd like to change something or propose something. What's the easiest way to do so?
+If it's something you reckon people would need/want as well, the easiest way to request changes is to use the Issues tab here on GitHub. If you would like to change something that you can reckon you rather do it yourself, the best way would be to use a snippet. I recommend the [snippets](https://github.com/Mara-Li/Obsidian-Snippet-collection) by Mara Li, and the theme overlay [Absolve by mulfok](https://github.com/mulfok/obsidian-absolve).
+
+Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemstad yourself via the files in the `build` folder, and fork the repo and edit the relevant files you want to. To understand what each specific SCSS file consists of, consult [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#SCSS%20Compile%20Order).
+
 ---
 
 ### Supported Community Plugins
@@ -42,13 +47,13 @@ Like Primary, Willemstad aims to get the core features right before delving into
 14. Longform
 15. Settings Search
 
-The community plugins I have an intention to support can also be seen [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX).
+The community plugins I have an intention to support can also be seen [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#Coding%20Nomenclature).
 
 ### Things to complete + WIP
 1. Colour Palettes (revamping the Oxford one from Willemstad SF, and creating the Le Corbusier Colour Keyboard one)
 2. ~~Adding support for Minimal Cards from [Minimal](https://github.com/kepano/obsidian-minimal)~~ (might not come to fruition as it relies on plugins)
 3. Fixes for mobile (albeit not offering official support yet)
-4. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-13-ThingsToDo_WillemstadX), although obviously it's not neat in any sense of the word.
+4. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#Additional%20stuff%20that%20I%20need%20to%20add).
 5. Theme Documentation
 
 ---
