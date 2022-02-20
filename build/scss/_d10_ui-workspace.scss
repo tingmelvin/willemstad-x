@@ -40,3 +40,17 @@
             font-stretch: condensed;
             
         }
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> HOTFIX FOR BROKEN TOO-MUCH-PADDING EMBEDS (since v0.13.25)
+    \\\ provided by @SlRvB
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-embed div.markdown-preview-section {
+            padding-bottom: unset !important;
+        } 
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> FIX ugliness caused by a random top-left-radius
+    ──────────────────────────────────────────────────────────────────────── */
+        .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+            border-top-left-radius: 0;
+          }

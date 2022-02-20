@@ -4,6 +4,7 @@
     >> ANIMATIONS! | from Shimmering Focus | thanks to @pseudometa
     ──────────────────────────────────────────────────────────────────────────── */
     body:not(.no-animations) {
+        --quicker-transition: 100ms ease-in-out;
         --quick-transition: 200ms ease-in-out;
         --medium-transition: 350ms ease-in-out;
         --slow-transition: 550ms ease-in-out;
@@ -70,6 +71,25 @@
         >>> (OPTION) desaturate images when not hovered
         \\\ AND ALLOW PEOPLE TO CHOOSE HOW MUCH
         ──────────────────────────────────────────────────────────────────────── */
+        .image-desaturation-reading .markdown-preview-view img[src]:not(:hover) {
+            filter: grayscale(40%);
+            transition: var(--quick-transition);
+        } /* can't var filter I believe */
+
+        .image-desaturation-reading .markdown-preview-view img[src]:hover {
+            filter: grayscale(0%);
+            transition: var(--quick-transition);
+        }
+
+        .image-desaturation-all img[src]:not(:hover) {
+            filter: grayscale(40%);
+            transition: var(--quick-transition);
+        } /* can't var filter I believe */
+        
+        .image-desaturation-all img[src]:hover {
+            filter: grayscale(0%);
+            transition: var(--quick-transition);
+        }
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> [METADATA INFO]

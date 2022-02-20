@@ -85,3 +85,27 @@
         .horizontal-tab-nav-item, .vertical-tab-nav-item {
             padding: 0 0.125rem 0.125rem 1rem;
         }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> SIDEBAR TABS > HIDE!
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.show-sidebar-tabs) .workspace-tabs.workspace-tabs.workspace-tabs.workspace-tabs .workspace-tab-header-container {
+        height: clamp(2.5px, 0.3rem, 7px);
+        transition: var(--medium-transition);
+    }
+    body:not(.show-sidebar-tabs) .workspace-tabs.workspace-tabs.workspace-tabs.workspace-tabs .workspace-tab-header-container:hover {
+        height: 1.9rem;
+        transition: var(--medium-transition);
+    }
+    body .workspace-tab-header-container {
+        padding-top: clamp(2.5px, 0.3rem, 7px);
+    }
+    body .workspace-tab-header-container:hover {
+        padding-top: 0.2rem;
+    }
+/* ────────────────────────────────────────────────────────────────────────────
+>> SIDEBAR TABS > Make Tabs Pretty Again (Margins + Paddings etc.)
+──────────────────────────────────────────────────────────────────────────── */
+    .workspace-tab-header-inner {
+        padding: 0.3rem 0.5rem;
+    }

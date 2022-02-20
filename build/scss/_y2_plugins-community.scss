@@ -87,26 +87,26 @@
 ───────────────────────────────────────────────────────────────────────────────────
     >>> TABLE DON'T U BREAK | thanks loads to @SlRvB for your snippet :P
     ──────────────────────────────────────────────────────────────────────────── */
-    body .table-view-table > thead > tr > th {
+    body .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
         white-space: pre;
     }
-    .table-view-table > tbody > tr > td {
+    .workspace-leaf-content[data-type=markdown] table > tbody > tr > td {
         word-wrap: normal;
         word-break: normal;
     }
     /* ────────────────────────────────────────────────────────────────────────────
     >>> ADD LINES AND REMOVE PADDING |
     ──────────────────────────────────────────────────────────────────────────── */
-    .markdown-preview-view th {
+    th {
         background-color: var(--col-bg-table);
     }
 
 
-    .theme-light .markdown-preview-view :is(th, td) {
+    .theme-light .workspace-leaf-content[data-type=markdown] :is(th, td) {
         padding: 0.25rem 0.5rem;
         border: 0.05rem solid slategrey;
     }
-    body.theme-light .table-view-table > thead > tr > th {
+    body.theme-light .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
         border: 0.05rem solid slategrey;
         background-color: var(--col-bg-table);
     }
@@ -116,17 +116,21 @@
     }
 
 
-    .theme-dark .markdown-preview-view :is(th, td) {
+    .theme-dark .workspace-leaf-content[data-type=markdown] :is(th, td) {
         padding: 0.25rem 0.5rem;
         border: 0.05rem solid slategrey;
     }
-    body.theme-dark .table-view-table > thead > tr > th {
+    body.theme-dark .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
         border: 0.05rem solid slategrey;
         background-color: var(--col-bg-table);
     }
     body.theme-dark :not(.workspace-leaf-content[data-type="calendar"]) > .app-container table > tbody > tr > td {
         border: 0.05rem solid slategrey;
         padding: 0.25rem 0.5rem;
+    }
+
+    body .workspace-leaf-content[data-type=markdown] table {
+        border-spacing: 0;
     }
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -139,7 +143,7 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) Δ TABLE FONT SIZE IN PREVIEW MODE
     ──────────────────────────────────────────────────────────────────────────── */
-    :is(.theme-light, .theme-dark) .markdown-preview-view :is(th, td) {
+    :is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(th, td) {
         font-size: var(--size-font-preview-table);
     }
 
@@ -153,23 +157,23 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) NO BORDERS FOR TABLE BODY
     ──────────────────────────────────────────────────────────────────────────── */
-    .table-no-borders-td:is(.theme-light, .theme-dark) .markdown-preview-view :is(td) {
+    .table-no-borders-td:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td) {
         border: none;
     }
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) NO BORDERS FOR TABLE HEADERS
     ──────────────────────────────────────────────────────────────────────────── */
-    .table-no-borders-th:is(.theme-light, .theme-dark) .markdown-preview-view :is(th),
-    .table-no-borders-th:is(body.theme-light, body.theme-dark) .table-view-table > thead > tr > th {
+    .table-no-borders-th:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(th),
+    .table-no-borders-th:is(body.theme-light, body.theme-dark) .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
         border: none;
     }
     
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) NO EXTRANEOUS SPACE
     ──────────────────────────────────────────────────────────────────────────── */
-    .table-min-space:is(.theme-light, .theme-dark) .markdown-preview-view :is(td, th),
-    .table-min-space:is(body.theme-light, body.theme-dark) .table-view-table > thead > tr > th {
+    .table-min-space:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td, th),
+    .table-min-space:is(body.theme-light, body.theme-dark) .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
         padding: 0;
         margin: 0;
         border-collapse: collapse;
@@ -178,7 +182,7 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) SET MIN + MAX WIDTH FOR TABLES
     ──────────────────────────────────────────────────────────────────────────── */
-    .table-set-minmax:is(.theme-light, .theme-dark) .markdown-preview-view :is(td, th),
+    .table-set-minmax:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td, th),
     table.dataview.table-view-table {
         min-width: var(--width-tables-min);
         max-width: var(--width-tables-max);
@@ -319,6 +323,21 @@
     body .kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
         margin: 0.2rem 0.3rem 0.2rem 0;
     }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Advanced Tables]
+\\ (NOMEN | PComm008)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it neat
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
+        padding-top: 1rem;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+    }
+
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Get Info]
 \\ (NOMEN | PComm022)
@@ -371,11 +390,11 @@
 ───────────────────────────────────────────────────────────────────────────────────
     >>> Fixing How the CookLang stuff is displayed
     ──────────────────────────────────────────────────────────────────────────── */
-    .workspace-leaf-content[data-type="cook"] .view-content {
+    .workspace-leaf-content[data-type=cook] .view-content {
         padding-right: 1em;
         padding-left: 1em;
     }
-    .workspace-leaf-content[data-type="cook"] ul {
+    .workspace-leaf-content[data-type=cook] ul {
         padding-inline-start: 1em;
     }
     /* ────────────────────────────────────────────────────────────────────────────

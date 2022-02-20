@@ -267,7 +267,7 @@ settings:
         id: misc
         title: Ⓜ️ Miscellany
         type: heading
-        description: Centre Image | The options here allows you to tweak the miscellanous items in Obsidian.
+        description: Centre Image, Image Desaturation | The options here allows you to tweak the miscellanous items in Obsidian.
         level: 1
         collapsed: true
     -
@@ -276,6 +276,23 @@ settings:
                 type: class-toggle
                 description: When enabled, this centres embedded images in your notes.
                 default: true
+    -
+                id: image-desaturation
+                title: Image Desaturation
+                description: Choose which images should be desaturated when not hovered.
+                type: class-select
+                allowEmpty: false
+                default: default
+                options:
+                    -
+                        label: None
+                        value: default
+                    -
+                        label: "Reading mode"
+                        value: image-desaturation-reading
+                    -
+                        label: "Reading mode + Live Preview"
+                        value: image-desaturation-all
     -
         id: support-willemstad
         title: 😍 Support Willemstad's Development
