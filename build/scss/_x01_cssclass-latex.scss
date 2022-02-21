@@ -1,0 +1,61 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [X01] CSSCLASS: LATEX
+──────────────────────────────────────────────────────────────────────────────── */
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FONT SIZE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex.markdown-preview-view {
+        font-family: var(--font-cssclass-latex-reading);
+        font-size: var(--size-cssclass-latex);
+        letter-spacing: 0.01rem;
+    }
+
+    .latex.mod-cm6.cm-s-obsidian .cm-contentContainer {
+        font-family: var(--font-cssclass-latex-source); 
+        font-size: var(--size-cssclass-latex);
+        letter-spacing: 0.01rem;
+    }
+
+    .theme-light, .theme-dark {
+        --size-cssclass-latex: 14pt;
+        --font-cssclass-latex-reading: "MathJax Main", "MJXZERO", "MJXTEX";
+        --font-cssclass-latex-source: "DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX";
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> LINE HEIGHT
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex.markdown-preview-view table {
+        line-height: 100%;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> DIFFERENT HEADING STYLE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex :is(h1, h2, h3, h4, h5, h6),
+    .latex .cm-header.cm-header {
+        font-family: "MathJax Main", "MJXZERO", "MJXTEX";
+        line-height: 1em;
+    }
+
+    :is(.latex.markdown-preview-view,
+    .latex.mod-cm6.cm-s-obsidian .cm-contentContainer) {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> CURSOR FIX
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FIX FOR BREADCRUMB TRAIL GRID 
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex div.BC-trail-grid.BC-trail-grid.BC-trail-grid {
+        text-align: initial;
+    }
+
+    .latex .cm-cursor { 
+        height: 10px;
+      }

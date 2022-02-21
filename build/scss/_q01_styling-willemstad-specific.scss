@@ -8,7 +8,7 @@
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.1.3 Refshaleøen";
+            content: "\A v0.1.4 Refshaleøen";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -84,7 +84,7 @@
             >>> ADD WILLEMSTAD VERSION NUMBER
             ──────────────────────────────────────────────────────────────────────── */
             div.titlebar-text::after {
-                content: '\ \ | \ \ Willemstad X v0.1.3 Refshaleøen';
+                content: '\ \ | \ \ Willemstad X v0.1.4 Refshaleøen';
             }
 
             .tb-willemstad div.titlebar-text::after {

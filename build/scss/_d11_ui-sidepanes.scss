@@ -56,6 +56,7 @@
             ──────────────────────────────────────────────────────────────────── */
             .nav-file-title, .nav-folder-title {
                 letter-spacing: -0.02rem;
+                font-size: var(--size-font-nav);
             }
 
             .nav-files-container {
@@ -69,6 +70,10 @@
                 word-break: break-all;
             }
             */
+
+            .theme-light, .theme-dark {
+                --size-font-nav: 0.9em;
+            }
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> NAV PANES

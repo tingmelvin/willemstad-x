@@ -426,6 +426,16 @@ settings:
         max: 1.5
         step: 0.05
     -
+        id: size-font-nav
+        title: 🔡 Font Size — Navigation Pane
+        type: variable-number-slider
+        description: Use this setting to change the font size of the navigation pane.
+        format: "em"
+        default: 0.9
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
         id: typography-h-size-text
         title: Size — Header Text
         type: heading
@@ -787,7 +797,7 @@ settings:
 */
 
 /* @settings
-name: "🏘️ Willemstad \_ \_ > \_ \_ 🛠️ Plugin Settings" 
+name: "🏘️ Willemstad \_ \_ > \_ \_ 🛠️ Plugin and CSSClass Settings" 
 id: Willemstad-Plugins
 settings:
     -
@@ -867,8 +877,8 @@ settings:
         default: true
     -
      id: longform-settings
-     title: ✍️📕 Longform plugin & Writing cssclass
-     description: "Settings for the Longform plugin, and 'writing' cssclass. "
+     title: ✍️📕 Longform plugin & Writing CSSClass
+     description: "Settings for the Longform plugin, and 'writing' CSSClass. "
      type: heading
      level: 2
      collapsed: true
@@ -899,6 +909,39 @@ settings:
         type: class-toggle
         description: When enabled, longform & writing notes will be justified.
         default: false
+    -
+     id: cssclass-settings
+     title: 🛠️ CSSClass Settings
+     type: heading
+     description: "LaTeX | The options here allows you to tweak settings re: CSSClasses."
+     level: 1
+     collapsed: true
+    -
+     id: longform-settings
+     title: ➗ LaTeX CSSClass
+     description: "Settings for the 'latex' CSSClass."
+     type: heading
+     level: 2
+     collapsed: false
+    -
+        id: size-cssclass-latex
+        title: "Font Size — LaTeX CSSClass"
+        type: variable-number-slider
+        default: 14
+        min: 8
+        max: 22
+        step: 0.5
+        format: 'pt'
+    -
+        id: font-cssclass-latex-source
+        title: "Font Typeface (Source mode) — LaTeX CSSClass"
+        type: variable-text
+        default: '"DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: font-cssclass-latex-reading
+        title: "Font Typeface (Reading mode) — LaTeX CSSClass"
+        type: variable-text
+        default: '"MathJax Main", "MJXZERO", "MJXTEX"'
 */
 
 

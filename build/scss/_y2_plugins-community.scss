@@ -223,6 +223,11 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (for Matrix)
     ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content:is([data-type=BC-matrix]) div.view-content {
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
     body .BC-Matrix-header.BC-Matrix-header.BC-Matrix-header {
         margin: 0;
         padding: 0 0.75rem;
@@ -249,7 +254,26 @@
     button.BC-sort-button.BC-sort-button {
         height: 2rem;
     }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> for BC-stats and BC-tree
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content:is([data-type=BC-stats]) div.view-content {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
+    .workspace-leaf-content:is([data-type=BC-tree]) div.view-content {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+    }    
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> for BC-ducks
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content:is([data-type=BC-ducks]) div.view-content > * > h6 {
+        margin-top: 0;
+    }
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Kanban]
