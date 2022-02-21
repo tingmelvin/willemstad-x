@@ -54,3 +54,22 @@
         .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
             border-top-left-radius: 0;
           }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> FIX HR (again, for LP and Preview)
+    ──────────────────────────────────────────────────────────────────────── */
+          .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+
+              color: var(--background-modifier-border);
+          
+            } /* LP */
+
+
+          .markdown-preview-view hr {
+
+            border: none;
+            border-top: 2px solid;
+            border-color: var(--background-modifier-border);
+
+          } /* Preview */
+

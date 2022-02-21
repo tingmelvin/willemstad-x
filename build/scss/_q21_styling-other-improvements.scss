@@ -1,7 +1,7 @@
 /* ────────────────────────────────────────────────────────────────────────────────
 > [Q21] Other Improvements
 ───────────────────────────────────────────────────────────────────────────────────
-    >> ANIMATIONS! | from Shimmering Focus | thanks to @pseudometa
+    >> (OPTION) ANIMATIONS! | from Shimmering Focus | thanks to @pseudometa
     ──────────────────────────────────────────────────────────────────────────── */
     body:not(.no-animations) {
         --quicker-transition: 100ms ease-in-out;
@@ -22,7 +22,7 @@
         }
 
     /* ────────────────────────────────────────────────────────────────────────────
-    >> [CENTRE IMAGES]
+    >> (OPTION) CENTRE IMAGES
     ───────────────────────────────────────────────────────────────────────────────
         >>> (includes Emoji fix)
         ──────────────────────────────────────────────────────────────────────── */
@@ -66,7 +66,7 @@
         */
 
     /* ────────────────────────────────────────────────────────────────────────────
-    >> IMAGE DESATURATION
+    >> (OPTION) IMAGE DESATURATION
     ───────────────────────────────────────────────────────────────────────────────
         >>> (OPTION) desaturate images when not hovered
         \\\ AND ALLOW PEOPLE TO CHOOSE HOW MUCH
@@ -107,5 +107,47 @@
             } 
             */
 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) MERMAID.JS GRAPH WIDTH FIX
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ WIDTH TO FIT
+        ──────────────────────────────────────────────────────────────────────── */
+            .fix-mermaid-width .mermaid svg {
+                width: 100%;
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> MATHJAX IMPROVEMENTS
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ FONT SIZE
+        ──────────────────────────────────────────────────────────────────────── */
+            div mjx-math {
+                font-size: 1.1em;
+            }
 
 
+            /* test */
+            /*body {
+                counter-reset: maths;
+            }
+
+            .math-block {
+                font-family: "MathJax Main";
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .el-div > .math-block {
+                counter-increment: maths;
+            }    
+            
+            .math-block::before {
+                content: "(" counter(maths) ")";
+                visibility: hidden;
+            }
+            
+            .math-block::after {
+                content: "(" counter(maths) ")";
+            }
+            */

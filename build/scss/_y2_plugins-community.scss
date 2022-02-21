@@ -62,6 +62,12 @@
     body.plugin-sliding-panes-stacking.PComm002-noshadow .workspace > .mod-root > .workspace-leaf {
         box-shadow: 0 0 0 0;
     }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> MAXIMISED FOCUS MODE - remove the bar for Sliding Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-split.mod-vertical.mod-root.maximised.workspace-split.mod-vertical.mod-root.maximised > * > .workspace-leaf-content {
+        padding-left: 0;
+    }
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Admonitions]
@@ -73,6 +79,22 @@
         margin-top: var(--PComm003-margin);
         margin-bottom: var(--PComm003-margin);
     }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Padding sizes
+    ──────────────────────────────────────────────────────────────────────────── */
+    .theme-light, .theme-dark {
+        --admonition-margin-top: 0.5em; /* standard admonitions: 1.625em */
+        --admonition-margin-bottom: var(--admonition-margin-top);
+        --admonition-margin-top-lp: 0;
+        --admonition-margin-bottom-lp: calc(var(--admonition-margin-top));
+    }
+
+    .markdown-source-view.mod-cm6 .cm-preview-code-block.cm-embed-block.admonition-parent {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+    } /* removes embed spaces for Admonitions, tries to fit LP with Reading */
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> TURNS OFF ADMONITIONS BOX SHADOWS
@@ -192,6 +214,32 @@
         --width-tables-min: 2.5rem; /* only triggered if the above is enabled */
         --width-tables-max: 25rem; /* only triggered if the above is enabled */
     }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> LP table magic? | USE A MONOSPACE FONT
+    ──────────────────────────────────────────────────────────────────────── */
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row {
+        border: 0.05rem solid slategrey;
+        padding: 0.25rem 0.5rem;
+        margin-top: -0.05rem !important; /* overrides obsidian.css, req for non-overlapping borders */
+    } /* makes borders, a la in Preview */
+
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line {
+        background-color: var(--interactive-bg);
+        font-weight: bold;
+    } /* makes first line a certain color */
+
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line > .cm-hmd-table-sep {
+      color: var(--interactive-bg);
+    } /* makes sure the "|" in the first line is the same color */
+
+    .table-lp-magic .cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep {
+        color: var(--background-primary);
+    } /* blends the "|" into the background of the other columns (? columns? rows?) */
+
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-1.cm-line {
+        display: none;
+    } /* disappears the divider row */
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> {UNDER CONSTRUCTION}
@@ -351,6 +399,7 @@
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Advanced Tables]
 \\ (NOMEN | PComm008)
+\\ for Tables, go to Dataview (NOMEN | PComm 004)
 ───────────────────────────────────────────────────────────────────────────────────
     >>> make it neat
     ──────────────────────────────────────────────────────────────────────────── */

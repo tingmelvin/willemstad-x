@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────────────
->> OPTIONS FOR STYLE SETTINGS
+>> [Z1] OPTIONS FOR STYLE SETTINGS
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* @settings
@@ -267,7 +267,7 @@ settings:
         id: misc
         title: Ⓜ️ Miscellany
         type: heading
-        description: Centre Image, Image Desaturation | The options here allows you to tweak the miscellanous items in Obsidian.
+        description: Centre Image, Image Desaturation, FIx Mermaid.js Graph Width | The options here allows you to tweak the miscellanous items in Obsidian.
         level: 1
         collapsed: true
     -
@@ -293,6 +293,12 @@ settings:
                     -
                         label: "Reading mode + Live Preview"
                         value: image-desaturation-all
+    -
+                id: fix-mermaid-width
+                title: Fix Mermaid.js Graph Width
+                type: class-toggle
+                description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
+                default: true
     -
         id: support-willemstad
         title: 😍 Support Willemstad's Development
@@ -710,6 +716,12 @@ settings:
         level: 2
         collapsed: true
     -
+            id: table-lp-magic
+            title: "✨ [EXPERIMENTAL] Live Preview Almost-True Rendering"
+            type: class-toggle
+            description: "When enabled, this renders Live Preview Tables congruently similar to Reading mode. ⚠️ Please ENSURE you use a true monospace font for the 'Font Typeface — Monospace' option in Typography > Font Typeface Customisation, and have the Advanced Tables plugin with the 'Pad cell width using spaces' option turned on for it to work properly."
+            default: false
+    -                   
             id: size-font-editor-table
             title: Font Size — Tables (in Editing mode)
             type: variable-number-slider
@@ -721,9 +733,9 @@ settings:
             step: 0.05
     -
             id: size-font-preview-table
-            title: Font Size — Tables (in Preview mode)
+            title: Font Size — Tables (in Reading mode)
             type: variable-number-slider
-            description: Use this setting to change the font size of the tables in Preview mode.
+            description: Use this setting to change the font size of the tables in Reading mode.
             format: "em"
             default: 1
             min: 0.25
@@ -829,6 +841,15 @@ settings:
         min: 0
         max: 25
         step: 0.5
+    -
+        id: admonition-margin-top
+        title: Admonitions — Change size of padding
+        type: variable-number-slider
+        format: em
+        default: 1.55
+        min: 0
+        max: 3
+        step: 0.05
     -
         id: PComm001-col-today
         title: 📆 Calendar — Δ Colour, Font of today's date
@@ -942,6 +963,35 @@ settings:
         title: "Font Typeface (Reading mode) — LaTeX CSSClass"
         type: variable-text
         default: '"MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: textindent-cssclass-latex
+        title: "Text Indent for first paragraph line — LaTeX CSSClass"
+        type: variable-number-slider
+        default: 0
+        min: -0.5
+        max: 4
+        step: 0.05
+        format: 'em'
+    -                   
+        id: size-font-editor-table-latex
+        title: Font Size — Tables (in Editing mode) for LaTeX CSSClass
+        type: variable-number-slider
+        description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview) for the LaTeX CSSClass.
+        format: "em"
+        default: 0.8
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
+        id: size-font-preview-table-latex
+        title: Font Size — Tables (in Reading mode) for LaTeX CSSClass
+        type: variable-number-slider
+        description: Use this setting to change the font size of the tables in Reading mode for the LaTeX CSSClass.
+        format: "em"
+        default: 1
+        min: 0.25
+        max: 1.5
+        step: 0.05
 */
 
 

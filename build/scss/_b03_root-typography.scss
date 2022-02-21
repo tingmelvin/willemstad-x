@@ -4,21 +4,25 @@
     >> [TYPOGRAPHY] (Fonts, Headings)
     ──────────────────────────────────────────────────────────────────────────── */
 
-    .theme-light, .theme-dark {
 
         /* ────────────────────────────────────────────────────────────────────────
         >>> FONT SIZES
         ──────────────────────────────────────────────────────────────────────── */
+
+        :is(.theme-light, .theme-dark) {
 
              --size-font-searchbox:      0.9em;
              --size-font-editor-table:   0.8em;
              --size-font-preview-table:  1em;
              
              --size-font-longform:       1.2em;
+        
+        }
 
         /* ────────────────────────────────────────────────────────────────────────
         >>> FONT TYPEFACE > Obsidian Core > Set + Enable changes
         ──────────────────────────────────────────────────────────────────────── */
+        .theme-light, .theme-dark {
 
             /* to edit --default-font, edit the mobile/desktop equivalents (--font-editor-m) and (--font-editor) */
 
@@ -75,4 +79,4 @@
             --col-highlight-2: hsl(180, 100%, 50%); /* cyan */
             --col-highlight-text: hsl(0, 0%, 0%);   /* black */
         
-    }
+        }
