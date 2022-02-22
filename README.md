@@ -74,3 +74,7 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - Longform plugin and `writing` cssclass support, adapted from [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code, and also with credits to [Kevin Barrett (@kevboh)](https://github.com/kevboh/longform)'s [styling](https://github.com/kevboh/longform#scene-only-styling)
 - and many other snippets that were written by [Chris Grieser](https://github.com/chrisgrieser)
 - Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
+
+### License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This repository is licensed under the terms of the MIT License.
