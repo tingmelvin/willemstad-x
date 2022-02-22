@@ -309,20 +309,20 @@ settings:
     -
         id: support-willemstad-github
         title: ⭐ Star the repository on Github!
-        type: heading
-        level: 2
+        type: class-toggle
+        default: false
         description: https://github.com/tingmelvin/willemstad-x
     -
         id: support-willemstad-issue
         title: 🎫 Submit an issue or a feature request on Github!
-        type: heading
-        level: 2        
+        type: class-toggle
+        default: false    
         description: https://github.com/tingmelvin/willemstad-x/issues
     -
         id: support-willemstad-obsidian
         title: ☀️ Purchase a Catalyst license with Obsidian!
-        type: heading
-        level: 2
+        type: class-toggle
+        default: false
         description: https://obsidian.md/pricing
 */
 
@@ -719,7 +719,13 @@ settings:
             id: table-lp-magic
             title: "✨ [EXPERIMENTAL] Live Preview Almost-True Rendering"
             type: class-toggle
-            description: "When enabled, this renders Live Preview Tables congruently similar to Reading mode. ⚠️ Please ENSURE you use a true monospace font for the 'Font Typeface — Monospace' option in Typography > Font Typeface Customisation, and have the Advanced Tables plugin with the 'Pad cell width using spaces' option turned on for it to work properly."
+            description: "When enabled, this renders Live Preview Tables congruently similar to Reading mode. ⚠️ Please ENSURE you use a true monospace font for the 'Font Typeface — Monospace' option in Typography > Font Typeface Customisation, and have the Advanced Tables plugin with the 'Pad cell width using spaces' option turned on for it to work properly. You are strongly encouraged to consider using the 'Admonitions Pseudo-Reading-Mode Live Preview Tables' option right below this instead."
+            default: false
+    -
+            id: placeholder-1
+            title: "✨ Admonitions Pseudo-Reading-Mode Live Preview Tables (follow instructions on the link below)"
+            type: class-toggle
+            description: https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-Settings01-AdmonitionsLivePreviewTables
             default: false
     -                   
             id: size-font-editor-table

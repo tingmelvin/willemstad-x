@@ -751,10 +751,45 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> MAKING SOME THINGS COPYABLE
     ──────────────────────────────────────────────────────────────────────────── */
-    .setting-item.style-settings-heading[data-id="support-willemstad-github"] .setting-item-description,
-    .setting-item.style-settings-heading[data-id="support-willemstad-issue"] .setting-item-description,
-    .setting-item.style-settings-heading[data-id="support-willemstad-obsidian"] .setting-item-description {
+    .setting-item.mod-toggle[data-id="support-willemstad-github"] .setting-item-description,
+    .setting-item.mod-toggle[data-id="support-willemstad-issue"] .setting-item-description,
+    .setting-item.mod-toggle[data-id="support-willemstad-obsidian"] .setting-item-description,
+    .setting-item.mod-toggle[data-id="placeholder-1"] .setting-item-description {
         cursor: text;
         user-select: all;
         color: var(--text-accent-hover);
+    }
+
+    /*  KEEPING CODE FOR POSTERITY'S SAKE, IN CASE I USE HEADINGS AGAIN
+
+        .setting-item.style-settings-heading[data-id="support-willemstad-github"] .setting-item-description,
+        .setting-item.style-settings-heading[data-id="support-willemstad-issue"] .setting-item-description,
+        .setting-item.style-settings-heading[data-id="support-willemstad-obsidian"] .setting-item-description,
+        .setting-item.mod-toggle[data-id="placeholder-1"] .setting-item-description {
+        cursor: text;
+        user-select: all;
+        color: var(--text-accent-hover);
+    }
+
+    */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> UNDERLINE + BOLD SUPPORT DEVELOPMENT STUFF?
+    ──────────────────────────────────────────────────────────────────────────── */  
+    :is(.setting-item.mod-toggle[data-id="support-willemstad-github"],
+    .setting-item.mod-toggle[data-id="support-willemstad-issue"],
+    .setting-item.mod-toggle[data-id="support-willemstad-obsidian"]) .setting-item-name {
+        text-decoration: underline;
+        text-underline-position: under;
+        font-weight: 600;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> CHECKBOX + SETTING ITEM THINGUM LE POOF!
+    ──────────────────────────────────────────────────────────────────────────── */    
+    :is(.setting-item.mod-toggle[data-id="support-willemstad-github"],
+    .setting-item.mod-toggle[data-id="support-willemstad-issue"],
+    .setting-item.mod-toggle[data-id="support-willemstad-obsidian"],
+    .setting-item.mod-toggle[data-id="placeholder-1"]) :is(.setting-item-control, .checkbox-container) {
+        display: none;
     }
