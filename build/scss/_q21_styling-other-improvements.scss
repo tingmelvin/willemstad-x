@@ -151,3 +151,17 @@
                 content: "(" counter(maths) ")";
             }
             */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> AD-TABLE TEST WAIT IT WORKS
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> PSEUDO-TABLES
+        ──────────────────────────────────────────────────────────────────────── */ 
+        
+        .admonition-table .admonition,
+        .admonition-table>.admonition-content-holder>.admonition-content {
+            background-color: var(--background-primary);
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
