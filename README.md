@@ -51,10 +51,8 @@ The community plugins I have an intention to support can also be seen [here](htt
 
 ### Things to complete + WIP
 1. Colour Palettes (revamping the Oxford one from Willemstad SF, and creating the Le Corbusier Colour Keyboard one)
-2. ~~Adding support for Minimal Cards from [Minimal](https://github.com/kepano/obsidian-minimal)~~ (might not come to fruition as it relies on plugins)
-3. Fixes for mobile (albeit not offering official support yet)
-4. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#Additional%20stuff%20that%20I%20need%20to%20add).
-5. Theme Documentation
+2. Fixes for mobile (albeit not offering official support yet)
+3. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#Additional%20stuff%20that%20I%20need%20to%20add).
 
 ---
 
