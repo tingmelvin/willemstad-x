@@ -8,7 +8,7 @@
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.1.5h2 Refshaleøen";
+            content: "\A v0.2.0 Christianshavn";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -84,7 +84,7 @@
             >>> ADD WILLEMSTAD VERSION NUMBER
             ──────────────────────────────────────────────────────────────────────── */
             div.titlebar-text::after {
-                content: '\ \ | \ \ Willemstad X v0.1.5h2 Refshaleøen';
+                content: '\ \ | \ \ Willemstad X v0.2.0 Christianshavn';
             }
 
             .tb-willemstad div.titlebar-text::after {
@@ -96,21 +96,26 @@
         ───────────────────────────────────────────────────────────────────────────────
             >>> ADD REFERENCE TO THEME DOCS AND JAVALENT'S STUFF
             \\\ thanks to @pseudometa for Theme Doc content code
+            \\\ STYLE SETTINGS CHANGES NOW IN STYLE SETTINGS BIT in Y2/PComm000 (Plugins > Community > Style Settings)
+            \\\ also in Z10 (Style Settings Options)
             ──────────────────────────────────────────────────────────────────────── */
+            /* no need for setting headers since subsumed */
+            /*
             .setting-item-heading[data-id="Willemstad-Core"] {
-                padding-top: 2.65rem;  /* fixes padding so that the Willemstad thing won't overlap */
+                padding-top: 2.65rem;  
             }
+            */ /* fixes padding so that the Willemstad thing won't overlap */
 
-            .setting-item-heading[data-id="Willemstad-Core"]::before,
-            .setting-item-heading[data-id="Willemstad-Typography"]::before,  /* just to fix minor bug re: the indicators appearing in front of text */
-            .setting-item-heading[data-id="Willemstad-Plugins"]::before,     /* just to fix minor bug re: the indicators appearing in front of text */
+            /* just to fix minor bug re: the indicators appearing in front of text */
+            /* commented out as subsumed into the Style Settings itself */
+            /* code kept just in case */
+            /*
+            :is(.setting-item-heading):is([data-id="Willemstad-Core"], [data-id="Willemstad-Typography"], [data-id="Willemstad-Plugins"], [data-id="Minimal-Cards"])::before,
             .workspace-leaf-content[data-type="style-settings"] > .view-content > .setting-item:first-child::before {
                 position: absolute;
                 top: 0.5rem;
-                /* left: calc(0.5rem + 200px); */
                 padding: 0.5rem;
                 overflow-x: auto;
-                /* margin-right: 1.875rem; */
                 margin-right: 10rem;
 
                 display: block;
@@ -125,3 +130,4 @@
                 border-radius: calc(var(--shape-roundish) * 1.5);
                 pointer-events: none;
             }
+            */

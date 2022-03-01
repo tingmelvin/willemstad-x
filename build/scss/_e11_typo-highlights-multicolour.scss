@@ -30,7 +30,7 @@
                 }
 
                 /* ────────────────────────────────────────────────────────────────────
-                >>>> (2) HIGHLIGHT 1 | WITH BOLD (**==)
+                >>>> (2) HIGHLIGHT 2 | WITH BOLD (**==)
                 ──────────────────────────────────────────────────────────────────── */
             
                 .markdown-preview-view strong > mark,
@@ -43,11 +43,51 @@
                     color: var(--col-highlight-text);
                 }
 
+                /* ────────────────────────────────────────────────────────────────────
+                >>>> (3) HIGHLIGHT 3 | WITH BOLD + ITALICS (***==)
+                ──────────────────────────────────────────────────────────────────── */
+
+                .markdown-preview-view strong > em > mark,
+                .markdown-preview-view strong > em > mark .internal-link, /* override specificity for links */
+                span.cm-strong.cm-em.cm-highlight {
+                    font-weight: normal;
+                    text-decoration: unset;
+                    background: none;
+                    background-color: var(--col-highlight-3);
+                    color: var(--col-highlight-text);
+                }
+
+                /* ────────────────────────────────────────────────────────────────────
+                >>>> (3) HIGHLIGHT 3 | WITH BOLD + BOLD (***==)
+                ──────────────────────────────────────────────────────────────────── */
+
+                /* doesn't work cuz two .cm-strong */
+                /*
+                .markdown-preview-view strong > strong > mark,
+                .markdown-preview-view strong > strong > mark .internal-link, 
+                span.cm-strong.cm-strong.cm-highlight {
+                    font-weight: normal;
+                    text-decoration: unset;
+                    background: none;
+                    background-color: var(--col-highlight-4);
+                    color: var(--col-highlight-text);
+                }
+                */
+                
         /* ─────────────────────────────────────────────────────────────────────────
         >>> SELECTION (SELECTED TEXT COLOUR)
         ───────────────────────────────────────────────────────────────────────── */
-            .theme-light,
-            .theme-dark {
+        :is(.theme-light, .theme-dark) {
                 --text-selection: var(--col-selection);
+
+                --col-highlight-0: hsl(60, 100%, 50%);  /* yellow */
+                --col-highlight-1: hsl(120, 100%, 50%); /* lime */
+                --col-highlight-2: hsl(180, 100%, 50%); /* cyan */
+                --col-highlight-3: hsl(300, 100%, 50%);
+                --col-highlight-4: hsl(30, 100%, 50%);
+
+
+                --col-highlight-text: hsl(0, 0%, 0%);   /* black */
+
             }
         

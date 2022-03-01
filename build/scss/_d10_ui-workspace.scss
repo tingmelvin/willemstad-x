@@ -31,15 +31,24 @@
     >>> LOL I THOUGHT IT WAS AN ITALIC
     \\\ making them # (the header markdown syntax) nice
     ──────────────────────────────────────────────────────────────────────── */
+        .smol-headers span.cm-formatting.cm-formatting-header:is(.cm-formatting-header-1, .cm-formatting-header-2, .cm-formatting-header-3, .cm-formatting-header-4, .cm-formatting-header-5, .cm-formatting-header-6).cm-header {
+            font-style: normal;
+            /*
+            font-weight: lighter;
+            */
+            font-size: 0.8rem !important; /* needs an important since v0.13.27 */
+            font-stretch: condensed;
+            
+        } /* for smaller # */
+
         span.cm-formatting.cm-formatting-header:is(.cm-formatting-header-1, .cm-formatting-header-2, .cm-formatting-header-3, .cm-formatting-header-4, .cm-formatting-header-5, .cm-formatting-header-6).cm-header {
             font-style: normal;
             /*
             font-weight: lighter;
             */
-            font-size: 0.8em;
             font-stretch: condensed;
             
-        }
+        } /* for normal # */
     /* ────────────────────────────────────────────────────────────────────────
     >>> HOTFIX FOR BROKEN TOO-MUCH-PADDING EMBEDS (since v0.13.25)
     \\\ provided by @SlRvB

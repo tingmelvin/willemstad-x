@@ -9,13 +9,9 @@
             height: 2.35rem;
             padding: 0.25rem;
         }    
-        .document-search-button {
-            font-size: var(--size-font-searchbox);
-            margin: 0.1rem;
-            padding: 0 0.3rem;
-            background-color: var(--interactive-bg);
-            color: var(--text-accent);
-        }
+
+        /* doc search button below */
+
         input.document-search-input,
         input.document-replace-input {
             margin: 0 0.5rem;
@@ -128,6 +124,7 @@
             }
         /* ────────────────────────────────────────────────────────────────────────
         >>> MOAR BUTTON SHENANIGANS | STREAMLINING BUTTONS
+        \\\ MIGHT NEED SOME REWORKING?
         ──────────────────────────────────────────────────────────────────────── */        
             .modal.modal button:not(.mod-cta):not(.mod-warning) {
                 background-color: var(--background-secondary-alt);
@@ -136,6 +133,7 @@
             
         /* ────────────────────────────────────────────────────────────────────────
         >>> COMMUNITY THEME > SELECTED THEME > CHANGE TO CONTRASTING COLOUR
+        \\\ MIGHT NEED SOME REWORKING?
         ──────────────────────────────────────────────────────────────────────── */           
             div.community-theme.community-theme.community-theme.is-selected button {
                 background-color: var(--background-primary);
@@ -144,10 +142,34 @@
             }
 
         /* ────────────────────────────────────────────────────────────────────────
-        >>> FIX | COMMUNITY THEME > THEME FILTER > BUTTON
+        >>> FIX | COMMUNITY THEME > THEME FILTER > BUTTON + COMMUNITY PLUGIN > PLUGIN FILTER > BUTTON
         ──────────────────────────────────────────────────────────────────────── */ 
-            body .community-theme-filters-container.community-theme-filters-container > * > * > button.clickable-icon.clickable-icon {
-                color: var(--text-accent);
+            body .community-theme-filters-container.community-theme-filters-container > * > * > button.clickable-icon.clickable-icon,
+            body .community-plugin-search button.clickable-icon.clickable-icon.clickable-icon.clickable-icon {
+                background-color: var(--interactive-accent);                
+                color: var(--text-on-accent);
+            }
+
+            body .community-theme-filters-container.community-theme-filters-container > * > * > button.clickable-icon.clickable-icon:hover,
+            body .community-plugin-search button.clickable-icon.clickable-icon.clickable-icon.clickable-icon:hover {
+                background-color: var(--interactive-accent-hover);
+                color: var(--text-on-accent);
+            }
+                   
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> BUTTON > DOCUMENT SEARCH
+        ──────────────────────────────────────────────────────────────────────── */
+            .document-search-button {
+                margin: 0.1rem;
+                padding: 0 0.3rem;
+                background-color: var(--interactive-accent);
+                color: var(--text-on-accent);
+            }
+
+            .document-search-button:hover {
+                background-color: var(--interactive-accent-hover);
+                color: var(--text-on-accent);
             }
 
     /* ────────────────────────────────────────────────────────────────────────────

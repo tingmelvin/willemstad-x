@@ -69,4 +69,16 @@
         .modal-close-button:hover {
             opacity: 100%;
             transition: 100ms ease-in-out;
-        }      
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL HEADERS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ???
+        ──────────────────────────────────────────────────────────────────────── */
+        .vertical-tab-content :is(h1, h2, h3, h4, h5, h6) {
+            background-color: initial;
+            text-align: left;
+            color: var(--text-accent);
+            font-weight: 600; /* aligns to the normal h1-h6 font weight */
+        } /* change text-align, bg-color, text-color, resets font-weight */

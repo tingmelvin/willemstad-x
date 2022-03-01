@@ -1,0 +1,17 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W02] Admonition LP Tables being like Preview!
+\ :D by me!
+──────────────────────────────────────────────────────────────────────────────── */
+
+.admonition-table .admonition-title {
+    display: none;
+}
+
+.admonition-table .admonition,
+.admonition-table.admonition,
+.admonition-table > .admonition-content-holder > .admonition-content {
+    background-color: var(--background-primary);
+    border-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+}

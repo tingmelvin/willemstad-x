@@ -13,6 +13,7 @@
 @use 'scss/_d21_ui-scrollbars_resize-handles';
 @use 'scss/_d22_ui-search_checkboxes_buttons_dropdowns_input-boxes';
 @use 'scss/_d23_ui-typography-visual-surroundings';
+@use 'scss/_d15_ui-startup';
 @use 'scss/_d30_ui-modals-general';
 @use 'scss/_d31_ui-modals-settings';
 @use 'scss/_d32_ui-modals-communitythemes';
@@ -25,9 +26,15 @@
 @use 'scss/_q01_styling-willemstad-specific';
 @use 'scss/_q11_styling-other-themes';
 @use 'scss/_q21_styling-other-improvements';
+@use 'scss/_w01_admonition-infobox';
+@use 'scss/_w02_admonition-tables-lp';
 @use 'scss/_x01_cssclass-latex';
 @use 'scss/_y1_plugins-core';
 @use 'scss/_y2_plugins-community';
-@use 'scss/_z1_style-settings-options';
-@use 'scss/_z2_base64-font-encoding';
-@use 'scss/_z3_compatibility-info';
+@use 'scss/_z10_style-settings-options';
+@use 'scss/_z20_base64-font-encoding';
+@use 'scss/_z30_compatibility-info';
+/* add separate Licensing software at the back */
+@use 'scss/_x03_cssclass-cards-minimal';
+@use 'scss/_x04_cssclass-imggrid-minimal';
+@use 'scss/_z12_ss-cards-minimal';

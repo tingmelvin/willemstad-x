@@ -1,0 +1,43 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W01] Admonition Infobox by SlRvB
+──────────────────────────────────────────────────────────────────────────────── */
+
+div:not(.setting-item) > .admonition.admonition-infobox {
+    float: right;
+    max-width: 230px;
+
+    border: 0;
+    box-shadow: none;
+}
+div:not(.setting-item) > .admonition-infobox .admonition-title {
+    display: none;
+}
+.admonition-infobox table {
+    width: 100%;
+}
+.admonition-infobox .admonition-content {
+    padding: 0;
+    border: 0.1rem solid var(--background-modifier-border);
+    margin: 0;
+}
+.admonition-infobox .admonition-content p,
+.admonition-infobox table {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+}
+
+.admonition-infobox :is(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--editor-font-size);
+    text-align: center;
+    margin: 0;
+    padding: 0.125rem;
+}
+
+.admonition-infobox h1 {
+    background: var(--interactive-accent);
+}
+
+.admonition-infobox h6 {
+    background: var(--interactive-normal);
+}

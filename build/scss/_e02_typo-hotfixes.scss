@@ -14,12 +14,8 @@
     >> Make sure Headings renders correctly and not THICC
     ──────────────────────────────────────────────────────────────────────────── */
         body .cm-s-obsidian .cm-header,
-        body .markdown-preview-view h1,
-        body .markdown-preview-view h2,
-        body .markdown-preview-view h3,
-        body .markdown-preview-view h4,
-        body .markdown-preview-view h5,
-        body .markdown-preview-view h6 {
+        body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+        :is(h1, h2, h3, h4, h5, h6)  {
             letter-spacing: -0.015rem; /* FORCES LESS HEADER SPACING */
             font-style: normal;  /* FORCES NORMAL */
             font-weight: 600;

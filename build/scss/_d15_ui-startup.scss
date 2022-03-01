@@ -1,0 +1,20 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D15] STARTUP SCREEN
+──────────────────────────────────────────────────────────────────────────────── */
+
+/*Startup Progress Bar Moving Line*/
+
+.progress-bar-indicator :is(/*.progress-bar-line,*/ .progress-bar-subline) {
+    background: linear-gradient(to right, var(--col-startup-1), var(--col-startup-2))
+    /*linear-gradient(90deg, var(--col-startup-1), var(--col-startup-2) 50%, var(--col-startup-3))*/;
+    background-color: transparent;
+}
+
+.theme-light, .theme-dark {
+
+--col-startup-1: hsl(188, 100%, 39%);
+--col-startup-2: hsl(155, 100%, 37%);
+
+}
+
+
