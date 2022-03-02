@@ -5,32 +5,32 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> (OPTIONS) Δ Heading Background Colours
         ──────────────────────────────────────────────────────────────────────── */
-        .markdown-preview-section h1,
+        .markdown-preview-section :is(h1, div.el-h1),
         .admonition-content > h1,
         .HyperMD-header-1.cm-line{
             background-color: var(--col-h1-bg);
         }
-        .markdown-preview-section h2,
+        .markdown-preview-section :is(h2, div.el-h2),
         .admonition-content > h2,
         .HyperMD-header-2.cm-line{
             background-color: var(--col-h2-bg);
         }
-        .markdown-preview-section h3,
+        .markdown-preview-section :is(h3, div.el-h3),
         .admonition-content > h3,
         .HyperMD-header-3.cm-line{
             background-color: var(--col-h3-bg);
         }
-        .markdown-preview-section h4,
+        .markdown-preview-section :is(h4, div.el-h4),
         .admonition-content > h4,
         .HyperMD-header-4.cm-line{
             background-color: var(--col-h4-bg);
         }
-        .markdown-preview-section h5,
+        .markdown-preview-section :is(h5, div.el-h5),
         .admonition-content > h5,
         .HyperMD-header-5.cm-line{
             background-color: var(--col-h5-bg);
         }
-        .markdown-preview-section h6,
+        .markdown-preview-section :is(h6, div.el-h6),
         .admonition-content > h6,
         .HyperMD-header-6.cm-line{
             background-color: var(--col-h6-bg);
@@ -164,7 +164,7 @@
                 hsl(343deg 68% 30%) 69%,
                 hsl(334deg 83% 22%) 79%,
                 hsl(326deg 100% 15%) 100%
-              );
+            );
 
 
             --col-h6-grad: linear-gradient(
