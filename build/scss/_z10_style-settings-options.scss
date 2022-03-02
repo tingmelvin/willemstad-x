@@ -125,22 +125,10 @@ settings:
             default: true
     -
                 id: col-startup-1
-                title: Startup Bar Gradient Colour — Start
-                type: variable-themed-color
-                description:                
-                opacity: false
-                format: hsl
-                default-light: hsl(188, 100%, 39%)
-                default-dark: hsl(188, 100%, 39%)
-    -
-                id: col-startup-2
-                title: Startup Bar Gradient — End
-                type: variable-themed-color
-                description:                
-                opacity: false
-                format: hsl
-                default-light: hsl(155, 100%, 37%)
-                default-dark: hsl(155, 100%, 37%)
+                title: Gradient Startup Progress Bar — Colour
+                type: variable-text
+                description: 
+                default: linear-gradient(90deg, hsl(155, 100%, 37%), hsl(200, 93%, 77%) 50%, hsl(320, 65%, 50%))
     -
             id: sd
             title: Sidebars (Side Docks)
