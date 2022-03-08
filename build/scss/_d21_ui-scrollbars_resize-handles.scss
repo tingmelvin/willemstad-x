@@ -60,3 +60,20 @@
         .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
             height: 0.2rem;
         }
+        
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FIX
+    ──────────────────────────────────────────────────────────────────────────── */
+        body:not(.native-scrollbars) ::-webkit-scrollbar {
+            visibility: initial;
+            background-color: transparent;
+            width: 0.3rem;
+        }
+    
+        body:not(.native-scrollbars) ::-webkit-scrollbar,
+        body:not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+        body:not(.native-scrollbars) ::-webkit-scrollbar:hover,
+        body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
+            visibility: initial;
+            width: 0.3rem;
+        }

@@ -82,3 +82,25 @@
 
           } /* Preview */
 
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> FIX QUOTES
+    \\\ in LP mode
+    ──────────────────────────────────────────────────────────────────────── */
+          .HyperMD-quote.cm-line {
+              background-color: var(--background-primary-alt);
+          }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> NAV
+    ──────────────────────────────────────────────────────────────────────── */
+        .nav-buttons-left .nav-buttons-container {
+            justify-content: left;
+        }
+
+        .nav-buttons-center .nav-buttons-container {
+            justify-content: center;
+        }
+
+        .nav-buttons-right .nav-buttons-container {
+            justify-content: right;
+        }

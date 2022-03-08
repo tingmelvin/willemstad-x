@@ -4,22 +4,34 @@
 
 div:not(.setting-item) > .admonition.admonition-infobox {
     float: right;
-    max-width: 230px;
+    max-width: 50vw;
 
     border: 0;
     box-shadow: none;
+
+    margin-left: 0.5rem;
 }
+
+/*
 div:not(.setting-item) > .admonition-infobox .admonition-title {
     display: none;
 }
+*/
+
 .admonition-infobox table {
     width: 100%;
 }
+
 .admonition-infobox .admonition-content {
     padding: 0;
-    border: 0.1rem solid var(--background-modifier-border);
+    border: none;
     margin: 0;
 }
+
+.admonition-infobox .admonition-content-holder {
+    margin: 0.5rem;
+}
+
 .admonition-infobox .admonition-content p,
 .admonition-infobox table {
     margin-block-start: 0;
@@ -34,10 +46,52 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
     padding: 0.125rem;
 }
 
+/* no need for these, perhaps?
+
 .admonition-infobox h1 {
-    background: var(--interactive-accent);
+    background-color: var(--interactive-accent);
+    color: var(--interactive-normal);
 }
 
+
 .admonition-infobox h6 {
-    background: var(--interactive-normal);
+    background-color: var(--interactive-normal);
+}
+*/
+
+.admonition-infobox .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+}
+
+.admonition-infobox .admonition-title {
+
+    background-color: var(--col-bg-table);
+
+}
+
+.admonition-infobox .admonition-title-icon {
+
+    display: none;
+
+} /* removes the admonition-infobox icons */
+
+.admonition-infobox .admonition-title-content {
+
+    justify-content: center;
+
+} /* centers the title */
+
+
+
+
+
+/* move this away from infobox, but this really makes this look PERFECT. NO MORE OVERLAPPING STUFF! */
+
+.markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+p, kbd, hr, ol,
+blockquote,
+.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
+    overflow: hidden;
 }

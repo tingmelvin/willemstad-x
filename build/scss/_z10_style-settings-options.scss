@@ -71,6 +71,23 @@ settings:
             description: If toggled, Rounded Headers will be enabled over the standard rectangular headers.
             default: false
     -
+            id: nav-buttons-align
+            title: Navigation Buttons Alignment
+            type: class-select
+            description: Choose the alignment of your navigation buttons.
+            allowEmpty: false
+            default: nav-buttons-left
+            options:
+                -
+                    label: Left-aligned
+                    value: nav-buttons-left
+                -
+                    label: Centre-aligned
+                    value: nav-buttons-center
+                -
+                    label: Right-aligned
+                    value: nav-buttons-right
+    -
             id: sb
             title: Status Bar
             type: class-select
@@ -116,7 +133,7 @@ settings:
             title: "Shimmering Focus-style Bold for Appearance, Hotkeys and Community Plugins options"
             type: class-toggle
             description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
-            default: false
+            default: true
     -
             id: gradient-startup-bar
             title: Gradient Startup Progress Bar
@@ -295,7 +312,7 @@ settings:
         id: misc
         title: Ⓜ️ Miscellany
         type: heading
-        description: Centre Image, Image Desaturation, FIx Mermaid.js Graph Width | The options here allows you to tweak the miscellanous items in Obsidian.
+        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width | The options here allows you to tweak the miscellanous items in Obsidian.
         level: 1
         collapsed: true
     -
