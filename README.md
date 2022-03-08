@@ -31,7 +31,7 @@ Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemsta
 ---
 
 ### Supported Community Plugins
-Like Primary, Willemstad aims to get the core features right before delving into plugins. However, I totally agree that some plugins are almost essential to the Obsidian experience, and they were my daily drivers too, so they got some attention.
+Like Primary, Willemstad aims to get the core features right before delving into plugins. However, I totally agree that some plugins are almost essential to the Obsidian experience, and they were my daily drivers too, so they did get a bit of work done to it.
 1. Style Settings
 2. Calendar
 3. Sliding Panes
@@ -46,11 +46,10 @@ Like Primary, Willemstad aims to get the core features right before delving into
 13. Footnote & Citation Indicator
 14. Longform
 15. Settings Search
-
-The community plugins I have an intention to support can also be seen [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#Coding%20Nomenclature).
+16. LanguageTool Integration
 
 ### Things to complete + WIP
-1. Colour Palettes (revamping the Oxford one from Willemstad SF, and creating the Le Corbusier Colour Keyboard one)
+1. Colour Palettes
 2. Fixes for mobile (albeit not offering official support yet)
 3. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#Additional%20stuff%20that%20I%20need%20to%20add).
 
@@ -72,7 +71,11 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - Longform plugin and `writing` cssclass support, adapted from [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code, and also with credits to [Kevin Barrett (@kevboh)](https://github.com/kevboh/longform)'s [styling](https://github.com/kevboh/longform#scene-only-styling)
 - and many other snippets that were written by [Chris Grieser](https://github.com/chrisgrieser)
 - Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
+- Minimal Cards and Image Grids, from [Stephan Ango](https://github.com/kepano)
 
 ### License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This repository is licensed under the terms of the MIT License.
+
+### Theme Documentation (currently a work in progress)
+Available [here](https://willemstad.cc).
