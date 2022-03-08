@@ -141,6 +141,10 @@
                 color: var(--text-accent);
             }
 
+            div.community-theme.community-theme.community-theme.is-selected button:first-child {
+                display: none;
+            }
+
         /* ────────────────────────────────────────────────────────────────────────
         >>> FIX | COMMUNITY THEME > THEME FILTER > BUTTON + COMMUNITY PLUGIN > PLUGIN FILTER > BUTTON
         ──────────────────────────────────────────────────────────────────────── */ 
