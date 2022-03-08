@@ -143,7 +143,7 @@
 
             div.community-theme.community-theme.community-theme.is-selected button:first-child {
                 display: none;
-            }
+            } /* makes the "Selected" button disappear when on the theme */
 
         /* ────────────────────────────────────────────────────────────────────────
         >>> FIX | COMMUNITY THEME > THEME FILTER > BUTTON + COMMUNITY PLUGIN > PLUGIN FILTER > BUTTON

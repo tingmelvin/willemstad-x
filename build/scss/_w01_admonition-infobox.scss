@@ -4,7 +4,7 @@
 
 div:not(.setting-item) > .admonition.admonition-infobox {
     float: right;
-    max-width: 50vw;
+    max-width: 50%;
 
     border: 0;
     box-shadow: none;
@@ -92,6 +92,7 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
 p, kbd, hr, ol,
 blockquote,
+.nav-header,
 .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
     overflow: hidden;
 }

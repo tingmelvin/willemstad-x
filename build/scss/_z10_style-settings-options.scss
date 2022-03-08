@@ -71,6 +71,15 @@ settings:
             description: If toggled, Rounded Headers will be enabled over the standard rectangular headers.
             default: false
     -
+            id: size-scrollbar
+            title: Scrollbar Size
+            type: variable-number-slider
+            format: "rem"
+            default: 0.35
+            min: 0.2
+            max: 0.6
+            step: 0.025
+    -
             id: nav-buttons-align
             title: Navigation Buttons Alignment
             type: class-select

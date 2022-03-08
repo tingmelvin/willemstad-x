@@ -1,0 +1,49 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [Q31] Styling: HTML Aside
+\ UNDER TESTING.
+\ Primary, Sanctum, and ITS has this. need to choose a standard/unifying standard
+\ make sure I include Style Settings options for max width, and text-align
+──────────────────────────────────────────────────────────────────────────────── */
+
+div.cm-html-embed.cm-embed-block > aside {
+    color: var(--text-normal);
+}
+
+/*
+div.el-aside {
+
+}
+*/
+
+aside {
+    text-align: justify;
+    word-break: break-word;
+
+    float: right;
+    min-width: 125px;
+    max-width: 25%;
+
+    background-color: var(--background-primary-alt);
+
+    border-left: 2px solid var(--interactive-accent);
+    box-shadow: none;
+
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+
+}
+
+/*
+
+.admonition-infobox .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+}
+
+.admonition-infobox .admonition-title {
+
+    background-color: var(--col-bg-table);
+
+}
+*/
