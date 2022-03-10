@@ -91,3 +91,82 @@
         .community-plugin-name {
             font-weight: 600;
         }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> OVERHAUL OF THE PANE WITH THE COMM PLUGINS INFO
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> 
+        ──────────────────────────────────────────────────────────────────────── */
+
+        .community-plugin-info {
+            padding: 1rem;
+        
+
+            > .community-plugin-name {
+                font-size: 2.5rem;
+                display: inline-block;
+            }
+
+            > .community-plugin-downloads {
+                align-content: center;
+                position: relative;
+                float: right;
+                font-size: 2rem;
+
+                > span > svg.install {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+
+            > .community-plugin-version {
+                width: fit-content;
+                padding-right: 0.2rem;
+                clip-path: inset(0 0 0 3.75rem round 1rem);
+                margin-left: -3.75rem;
+                background-color: var(--background-secondary-alt);
+            }
+
+            > .community-plugin-author {
+                
+
+                &::first-letter {
+                    text-transform: lowercase;
+                }
+
+                +.community-plugin-author {
+                    font-size: 0;
+                    text-align: end;
+                    float: right;
+
+                    a {
+                        text-decoration: none;
+                    }
+                    a::after {
+                        content: "\ecaf";
+                        font-family: "remixicon";
+                        font-size: 1.25rem;
+                        color: var(--text-normal);
+                        background-color: var(--background-secondary-alt);
+                        border-radius: 5rem;
+                        padding: 0.3rem;
+                        border: 2px solid var(--text-accent);
+                        text-decoration: none;
+                        top: 40px;
+                        position: relative;
+
+                    }
+
+                    a:hover::after {
+                        background-color: var(--interactive-bg);
+                        transition: var(--medium-transition);
+                    }
+                }
+                
+            }
+
+            > .community-plugin-desc {
+                margin-top: 0;
+            }
+
+        }

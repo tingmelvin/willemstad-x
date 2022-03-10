@@ -319,6 +319,32 @@
         display: none;
     }
 
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FOR GENERAL STUFF
+    \\\ neither core or community plugin
+    ──────────────────────────────────────────────────────────────────────────── */
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>>> Startup Screen (2)
+        ───────────────────────────────────────────────────────────────────────── */
+
+        .setting-item[data-id="startup"] {
+    
+            /*
+            > * > * > .style-settings-collapse-indicator {
+                display: none;
+            }
+            */
+
+            .setting-item-name {
+                color: var(--text-accent);
+            }
+        }
+
+
+
+
     /* ────────────────────────────────────────────────────────────────────────────
     >>> CORE PLUGINS - SEPARATE PLUGIN NAME
     \\\ add new line for Plugin names, make them neat
@@ -582,7 +608,8 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> add 'experimental' tag
     ──────────────────────────────────────────────────────────────────────────── */
-    .setting-item:is([data-id="gradient-headers"], [data-id="table-lp-magic"]) :is(.setting-item-name) {
+    .setting-item:is([data-id="gradient-headers"], [data-id="table-lp-magic"],
+    [data-id="startup"]) :is(.setting-item-name) {
     
         &::after {
 

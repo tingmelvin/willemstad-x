@@ -39,6 +39,11 @@
         }
 
 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> making things fit nicer in the Installed Community Plugins bit
+    ───────────────────────────────────────────────────────────────────────────────
+           >>> 
+        ──────────────────────────────────────────────────────────────────────── */
         .installed-plugins-container  {
 
             .setting-item-name {
@@ -50,7 +55,17 @@
 
             .setting-item-description {
 
+                display: inline-block;
+
                 > div:nth-child(1) {
+                    display: inline-block;
+                    background-color: var(--background-secondary-alt);
+                    clip-path: inset(0 0 0 3.25rem round 0.5rem);
+                    width: fit-content;
+                    padding-right: 0.2rem;
+                    margin-left: -3.25rem;
+
+                    /*
                     text-indent: 0rem;
                     margin-left: 15rem;
                     overflow-x: hidden;
@@ -61,13 +76,19 @@
                     width: fit-content;
                     padding-right: 0.2rem;
                     position: relative;
+                    */
                 }
 
                 > div:nth-child(2) {
+
+                    display: inline-block;
+                    margin-left: 0.35rem;
+                    /*
                     position: relative;
                     margin-left: 21.5rem;
                     margin-top: -1.5rem;
                     float: left;
+                    */
 
                     &::first-letter {
                         text-transform: lowercase;

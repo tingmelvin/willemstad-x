@@ -26,9 +26,41 @@
     */
   }
 
-    /* progress message
-.progress-bar-message.u-center-text::before {
-    white-space: pre;
-    content: "Welcome back. \a"
-}
+    /* progress message */
+
+    /*
+    .progress-bar-message.u-center-text::before {
+        white-space: pre;
+        content: "Welcome back. \a"
+    }
     */
+    .startup-revolution {
+        .progress-bar {
+            background: var(--bg-start) no-repeat;
+            background-size: cover;
+            --bg-start: url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg);
+        }
+
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            /* background: hsla(0, 0%, 50%, 0.5); */
+            background-image: radial-gradient(var(--text-on-accent) 33%, transparent 33%);
+            background-size: 4px 4px;
+        }
+
+        .progress-bar-message {
+            /*
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            */
+            display: none;
+            color: var(--text-normal);
+        }
+
+    }

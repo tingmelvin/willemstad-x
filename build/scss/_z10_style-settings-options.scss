@@ -58,6 +58,24 @@ settings:
         description: "When enabled, this disables all animations in this theme."
         default: false
     -
+        id: startup
+        title: Startup Screen
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: startup-revolution
+        title: Customise the Startup Screen
+        type: class-toggle
+        description: "When enabled, this enables multiple options to customise the startup screen."
+        default: false
+    -
+        id: bg-start
+        title: Choose your Startup Background Image
+        type: variable-text
+        description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
+        default: "url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg)"
+    -
         id: elements-ui
         title: 🌠 User Interface (UI) Elements
         description: 'Customise the UI elements here.'
