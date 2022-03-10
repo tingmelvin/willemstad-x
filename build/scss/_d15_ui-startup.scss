@@ -8,8 +8,10 @@
     /* width: 100vw; */ /* to rework */
 }
 
+
 .progress-bar-indicator :is(.progress-bar-subline) {
     background: var(--col-startup);
+    border-radius: calc(var(--shape-roundish) * 1.5);
     
     /* linear-gradient(to right, var(--col-startup-1), var(--col-startup-2)); */
   
@@ -17,11 +19,16 @@
   }
   
   .theme-light, .theme-dark {
-    --col-startup: linear-gradient(90deg, hsl(155, 100%, 37%), hsl(200, 93%, 77%) 50%, hsl(320, 65%, 50%));
+    --col-startup: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%);
   
     /*
     --col-startup-2: hsl(155, 100%, 37%);
     */
   }
 
-
+    /* progress message
+.progress-bar-message.u-center-text::before {
+    white-space: pre;
+    content: "Welcome back. \a"
+}
+    */

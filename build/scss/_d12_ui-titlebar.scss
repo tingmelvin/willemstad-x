@@ -38,3 +38,14 @@
         body {
             padding-top: 1.5rem !important;
         }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> CHANGE COLOURS?
+    ──────────────────────────────────────────────────────────────────────────── */
+        .titlebar {
+            background-color: var(--col-titlebar);
+        }
+        
+        .theme-light, .theme-dark {
+            --col-titlebar: var(--background-modifier-cover);
+        }

@@ -12,6 +12,25 @@
             padding: 0;
         }
 
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | AUTHOR NAME INLINE
+        ──────────────────────────────────────────────────────────────────────── */
+        .community-plugin-item .community-plugin-author {
+            font-size: 0.85rem;
+            display: inline-block;
+            vertical-align: top;
+            color: var(--text-muted);
+
+            &::first-letter {
+                text-transform: lowercase;
+            }
+
+        }
+
+        .community-plugin-downloads {
+            margin-right: 0.5rem;
+        }
+
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> [MODAL PADDINGS]

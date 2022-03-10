@@ -93,6 +93,7 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
 p, kbd, hr, ol,
 blockquote,
-.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
+.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6,
+div.suggestion-item > :is(span.suggestion-prefix, span.suggestion-content, span.suggestion-hotkey) /*test this*/  {
     overflow: hidden;
 }

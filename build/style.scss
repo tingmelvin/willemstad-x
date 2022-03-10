@@ -11,9 +11,10 @@
 @use 'scss/_d13_ui-statusbar';
 @use 'scss/_d14_ui-sidedocks';
 @use 'scss/_d21_ui-scrollbars_resize-handles';
-@use 'scss/_d22_ui-search_checkboxes_buttons_dropdowns_input-boxes';
+@use 'scss/_d22_ui-interactives';
 @use 'scss/_d23_ui-typography-visual-surroundings';
 @use 'scss/_d15_ui-startup';
+@use 'scss/_d16_ui-backlink';
 @use 'scss/_d30_ui-modals-general';
 @use 'scss/_d31_ui-modals-settings';
 @use 'scss/_d32_ui-modals-communitythemes';
@@ -32,6 +33,7 @@
 @use 'scss/_x01_cssclass-latex';
 @use 'scss/_y1_plugins-core';
 @use 'scss/_y2_plugins-community';
+@use 'scss/_y2000_plugins-comm-ss';
 @use 'scss/_z10_style-settings-options';
 @use 'scss/_z20_base64-font-encoding';
 @use 'scss/_z30_compatibility-info';

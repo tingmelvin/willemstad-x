@@ -37,3 +37,41 @@
         .vertical-tab-header-group-title {
             font-size: var(--size-font-searchbox);
         }
+
+
+        .installed-plugins-container  {
+
+            .setting-item-name {
+            }
+
+            .setting-item:first-child {
+                padding-top: 0.25rem;
+            }
+
+            .setting-item-description {
+
+                > div:nth-child(1) {
+                    text-indent: 0rem;
+                    margin-left: 15rem;
+                    overflow-x: hidden;
+                    margin-top: -1.5rem;
+                    background-color: var(--background-secondary-alt);
+                    clip-path: inset(0 0 0 3.25rem round 0.5rem);
+                    color: var(--text-muted);
+                    width: fit-content;
+                    padding-right: 0.2rem;
+                    position: relative;
+                }
+
+                > div:nth-child(2) {
+                    position: relative;
+                    margin-left: 21.5rem;
+                    margin-top: -1.5rem;
+                    float: left;
+
+                    &::first-letter {
+                        text-transform: lowercase;
+                    }
+                }
+            }
+        }

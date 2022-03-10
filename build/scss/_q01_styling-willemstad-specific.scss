@@ -8,7 +8,7 @@
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.2.1h2 Christianshavn";
+            content: "\A v0.2.2 Christianshavn";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -34,7 +34,7 @@
             margin: 0.25rem;
 
             color: black;
-            background-color: hsl(0, 0%, 96%);
+            background-color: hsl(0, 0%, 96%); 
             border-radius: calc(var(--shape-roundish) * 3);
             border: 0.125rem solid var(--interactive-accent);
         }
@@ -84,7 +84,8 @@
             >>> ADD WILLEMSTAD VERSION NUMBER
             ──────────────────────────────────────────────────────────────────────── */
             div.titlebar-text::after {
-                content: '\ \ | \ \ Willemstad X v0.2.1h2 Christianshavn';
+                content: '\ \ /\ \ Willemstad X v0.2.2 Christianshavn';
+                white-space: pre;
             }
 
             .tb-willemstad div.titlebar-text::after {

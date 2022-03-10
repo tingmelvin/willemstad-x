@@ -90,6 +90,11 @@
             right: 0;
         } /* LEFT/RIGHT */
 
+        .sd-float-tabs .workspace-ribbon-collapse-btn {
+            padding-right: calc(var(--sd-width-norm) / 2);
+            padding-left: calc(var(--sd-width-norm) / 2);
+        } /* ensures that the ribbon collapse button is centred */
+
         /* ─────────────────────────────────────────────────────────────────────────
         >>> SD VARIABLES
         ───────────────────────────────────────────────────────────────────────── */

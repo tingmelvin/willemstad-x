@@ -1,0 +1,269 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D22] INTERACTIVES
+\ Search, Checkboxes, Buttons, Dropdowns, Input Boxes, Select
+───────────────────────────────────────────────────────────────────────────────── */
+
+    /* font declaration */
+
+            .dropdown, .prompt, select, input {
+                font-family: var(--font-ui);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────        
+    >> SEARCH | CODE: NYHAVN
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> DOCUMENT
+        ──────────────────────────────────────────────────────────────────────── */
+        .document-search-container {
+            height: 2.35rem;
+            padding: 0.25rem;
+        }    
+
+        /* doc search button below */
+
+        input.document-search-input,
+        input.document-replace-input {
+            margin: 0 0.5rem;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGIN MODAL SEARCH BUTTONS | FIX
+        ──────────────────────────────────────────────────────────────────────── */
+            .community-plugin-search button.clickable-icon {
+                position: absolute;
+
+                left: 0.25rem;
+                top: 0.3rem;
+                margin: 0;
+
+                padding: 0.25rem 0.675rem;
+
+            }
+
+            .community-plugin-search button.clickable-icon.clickable-icon.clickable-icon.clickable-icon {
+                background-color: var(--interactive-bg);
+            }
+
+
+
+            .community-plugin-search .search-input-container {
+                margin: 0;
+
+                position: absolute;
+                left: 3.25rem;
+                top: 0.25rem;
+                width: clamp(calc(800px * 0.25), calc(var(--modal-width-community-plugin) * 0.25), calc(23% + 1.25rem));
+
+            }
+
+            .community-plugin-search .search-input-container > input[type='text'] {
+                padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+            }
+
+            /*
+            .community-plugin-search button.clickable-icon {
+                position: absolute;
+                left: clamp(calc(800px * 0.255), calc(var(--modal-width-community-plugin) * 0.255), calc(0.255 * 98%));
+                top: 0.25rem;
+                margin-left: calc(var(--modal-width-community-plugin) * 0.0025);
+                margin-right: calc(var(--modal-width-community-plugin) * 0.0025);
+
+            }
+            */
+            /*
+            .community-plugin-search button.clickable-icon {
+                position: absolute;
+                right: clamp(calc(800px * 0.675), calc(var(--modal-width-community-plugin) * 0.675), calc(0.7 * 98%));
+                top: 0.25rem;
+
+            }  
+            */     
+
+            .community-plugin-search-summary {
+                padding: 1.75rem 1.25rem 0.25rem 1rem;
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> CHECKBOXES
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Making them round! (the toggles)
+        ──────────────────────────────────────────────────────────────────────── */
+
+            .checkbox-container {
+                height: 1.25rem;
+                width: 1.25rem;
+                border: 0.125rem solid var(--interactive-border-color);
+                border-radius: 50rem;
+                transition: var(--medium-transition);
+            }
+            .checkbox-container:after {
+                display: none;
+            }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> KANBAN STUFF? OR JUST IN GENERAL
+        ──────────────────────────────────────────────────────────────────────── */  
+        input[type=checkbox] {
+            border-radius: 50rem;
+            border: 0.125rem solid var(--interactive-border-color);
+            position: relative;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+        input[type=checkbox]:checked { /* thanks Chris! */
+            background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+            background-position: center;
+            background-size: 60%;
+            background-color: var(--interactive-bg);
+            background-repeat: no-repeat;
+            padding: 0;
+            opacity: 100%;
+        }
+        
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> BUTTONS
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ROUNDNESS + MARGINS + BORDER + FONT SIZE
+        ──────────────────────────────────────────────────────────────────────── */
+            button {
+                margin-right: 0.5rem;
+                border-radius: calc(var(--shape-roundish) * 3);
+                border: 2px solid var(--interactive-border-color);
+                font-size: 0.95rem;
+            }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> MOAR BUTTON SHENANIGANS | STREAMLINING BUTTONS
+        \\\ MIGHT NEED SOME REWORKING?
+        ──────────────────────────────────────────────────────────────────────── */        
+            .modal.modal button:not(.mod-cta):not(.mod-warning) {
+                background-color: var(--background-secondary-alt);
+                color: var(--text-normal);
+            }
+            
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY THEME > SELECTED THEME > CHANGE TO CONTRASTING COLOUR
+        \\\ MIGHT NEED SOME REWORKING?
+        ──────────────────────────────────────────────────────────────────────── */           
+            div.community-theme.community-theme.community-theme.is-selected button {
+                background-color: var(--background-primary);
+                font-weight: 600;
+                color: var(--text-accent);
+            }
+
+            div.community-theme.community-theme.community-theme.is-selected button:first-child {
+                display: none;
+            } /* makes the "Selected" button disappear when on the theme */
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> FIX | COMMUNITY THEME > THEME FILTER > BUTTON + COMMUNITY PLUGIN > PLUGIN FILTER > BUTTON
+        ──────────────────────────────────────────────────────────────────────── */ 
+            body .community-theme-filters-container.community-theme-filters-container > * > * > button.clickable-icon.clickable-icon,
+            body .community-plugin-search button.clickable-icon.clickable-icon.clickable-icon.clickable-icon {
+                background-color: var(--interactive-accent);                
+                color: var(--text-on-accent);
+            }
+
+            body .community-theme-filters-container.community-theme-filters-container > * > * > button.clickable-icon.clickable-icon:hover,
+            body .community-plugin-search button.clickable-icon.clickable-icon.clickable-icon.clickable-icon:hover {
+                background-color: var(--interactive-accent-hover);
+                color: var(--text-on-accent);
+            }
+                   
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> BUTTON > DOCUMENT SEARCH
+        ──────────────────────────────────────────────────────────────────────── */
+            .document-search-button {
+                margin: 0.1rem;
+                padding: 0 0.3rem;
+                background-color: var(--interactive-accent);
+                color: var(--text-on-accent);
+            }
+
+            .document-search-button:hover {
+                background-color: var(--interactive-accent-hover);
+                color: var(--text-on-accent);
+            }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> BUTTON > WARNING
+        ──────────────────────────────────────────────────────────────────────── */
+            button.mod-warning {
+                border: 2px solid var(--background-modifier-error);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> DROPDOWNS
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ FONT SIZE
+        ──────────────────────────────────────────────────────────────────────── */
+        body .dropdown {
+            font-size: var(--size-font-searchbox);
+        }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> BORDER RADIUS
+        ──────────────────────────────────────────────────────────────────────── */
+        .theme-light:not(.is-mobile) div.setting-item-control > select.dropdown,
+        .theme-light:not(.is-mobile) .modal div.setting-item-control > select.dropdown,
+        .theme-dark:not(.is-mobile) div.setting-item-control > select.dropdown,
+        .theme-dark:not(.is-mobile) .modal div.setting-item-control > select.dropdown {
+            border-radius: calc(var(--shape-roundish) * 3);
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> INPUT BOXES
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ FONT SIZE
+        ──────────────────────────────────────────────────────────────────────── */
+            input[type='text'], input[type='search'], input[type='email'],
+            input[type='password'], input[type='number'] {
+                font-size: var(--size-font-searchbox);
+            }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> BORDER RADIUS
+        ──────────────────────────────────────────────────────────────────────── */
+            input[type='text'], input[type='search'], input[type='email'],
+            input[type='password'], input[type='number'] {
+                border-radius: calc(var(--shape-roundish) * 3);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> DOCUMENT INPUT BOX (What is it really called?)
+    ───────────────────────────────────────────────────────────────────────────────
+        >> Adding a pop of colour to whatever it's being hovered over
+        ──────────────────────────────────────────────────────────────────────── */
+        .suggestion-item.is-selected .suggestion-prefix,
+        .suggestion-item.is-selected,
+        .suggestion-item.is-selected .suggestion-flair,
+        .suggestion-item.is-selected .suggestion-highlight {
+            color: var(--text-accent);
+        }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> [ROUNDED MODAL]
+        ──────────────────────────────────────────────────────────────────────── */
+            .prompt {
+                border-radius: calc(var(--shape-roundish) * 3);
+                width: 60vw;
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> SELECT
+    ───────────────────────────────────────────────────────────────────────────────
+        >> Margins and Paddings
+        ──────────────────────────────────────────────────────────────────────── */
+            select {
+                border-radius: calc(var(--shape-roundish) * 3);
+                margin-right: 0.5rem;
+                border: 1px solid var(--background-modifier-border);
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                font-size: var(--size-font-searchbox);
+            }
+
+            select > option {
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+                
+            }
+
+
