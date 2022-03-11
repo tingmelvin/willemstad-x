@@ -15,20 +15,41 @@
         /* ────────────────────────────────────────────────────────────────────────
         >>> COMMUNITY PLUGINS | AUTHOR NAME INLINE
         ──────────────────────────────────────────────────────────────────────── */
-        .community-plugin-item .community-plugin-author {
-            font-size: 0.85rem;
-            display: inline-block;
-            vertical-align: top;
-            color: var(--text-muted);
+        .community-plugin-item {
 
-            &::first-letter {
-                text-transform: lowercase;
+            .community-plugin-author {
+                font-size: 0.85rem;
+                display: inline-block;
+                position: relative;
+                color: var(--text-muted);
+                top: -1px;
+
+                &::first-letter {
+                    text-transform: lowercase;
+                }
+
             }
 
+            .community-plugin-downloads,
+            .community-plugin-downloads > span {
+                font-size: 0.85rem;
+                height: fit-content;
+                line-height: 100%;
+
+            }
+
+            .community-plugin-downloads {
+                margin-right: 0.35rem;
+            }
         }
 
         .community-plugin-downloads {
             margin-right: 0.5rem;
+            margin-top: 0;
+        }
+
+        .community-plugin-downloads-text {
+            display: inline-block;
         }
 
 

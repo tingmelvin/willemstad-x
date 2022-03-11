@@ -497,6 +497,33 @@
         } /* bottom border for bottom element */
 
         /* ─────────────────────────────────────────────────────────────────────────
+        >>>> (PComm009) Full Calendar (1)
+        ───────────────────────────────────────────────────────────────────────── */
+
+        .setting-item:is([data-id="PComm009-no-halfhour-grid"]) :is(.setting-item-name)::before {
+
+            content: "💯📆 Full Calendar \A ";
+            white-space: pre;
+            font-weight: 600;
+            color: var(--text-accent);
+
+        } /* adds plugin name to the top */
+
+        .setting-item:is([data-id="PComm009-no-halfhour-grid"]) {
+
+            /*
+            border-left: var(--border-style-settings);
+            border-right: var(--border-style-settings);
+            */
+
+            border-top: var(--border-style-settings-half);
+            border-bottom: var(--border-style-settings-half);
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+
+        } /* adds border around this specific plugin options + adds padding */
+
+        /* ─────────────────────────────────────────────────────────────────────────
         >>>> (PComm002) Sliding Panes (1)
         ───────────────────────────────────────────────────────────────────────── */
 
@@ -609,7 +636,7 @@
     >>> add 'experimental' tag
     ──────────────────────────────────────────────────────────────────────────── */
     .setting-item:is([data-id="gradient-headers"], [data-id="table-lp-magic"],
-    [data-id="startup"]) :is(.setting-item-name) {
+    [data-id="startup"], [data-id="no-animations"]) :is(.setting-item-name) {
     
         &::after {
 

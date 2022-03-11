@@ -8,7 +8,7 @@
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.2.3 Christianshavn";
+            content: "\A v0.2.4 Christianshavn";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -18,7 +18,7 @@
             text-underline-position: under;
         }
         .community-theme.is-selected .community-theme-info::after {
-            content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \A\A Hover over elements such as the status bar for them to become visible. \A\A Please use the 'Style Settings' plugin to enable the full functionality of this theme and to change default pre-set options.";
+            content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \A\A Hover over elements such as the status bar for them to become visible. \A\A Please use the 'Style Settings' plugin to enable this theme's full functionality and to change default options.";
             white-space: pre-wrap;
             
             font-weight: bold;
@@ -34,7 +34,7 @@
             margin: 0.25rem;
 
             color: black;
-            background-color: hsl(0, 0%, 96%); 
+            background-color: var(--background-secondary);
             border-radius: calc(var(--shape-roundish) * 3);
             border: 0.125rem solid var(--interactive-accent);
         }
@@ -84,7 +84,7 @@
             >>> ADD WILLEMSTAD VERSION NUMBER
             ──────────────────────────────────────────────────────────────────────── */
             div.titlebar-text::after {
-                content: '\ \ /\ \ Willemstad X v0.2.3 Christianshavn';
+                content: '\ \ /\ \ Willemstad X v0.2.4 Christianshavn';
                 white-space: pre;
             }
 

@@ -8,6 +8,9 @@
     /* width: 100vw; */ /* to rework */
 }
 
+.progress-bar-indicator {
+    border-radius: 0;
+}
 
 .progress-bar-indicator :is(.progress-bar-subline) {
     background: var(--col-startup);
@@ -16,31 +19,188 @@
     /* linear-gradient(to right, var(--col-startup-1), var(--col-startup-2)); */
   
     background-color: transparent;
-  }
-  
-  .theme-light, .theme-dark {
-    --col-startup: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%);
-  
-    /*
-    --col-startup-2: hsl(155, 100%, 37%);
-    */
-  }
+}
 
-    /* progress message */
+.progress-bar-message {
+    font-family: var(--font-ui);
+}
+      
+  
+.theme-light, .theme-dark {
+--col-startup: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%);
 
-    /*
-    .progress-bar-message.u-center-text::before {
-        white-space: pre;
-        content: "Welcome back. \a"
+/*
+--col-startup-2: hsl(155, 100%, 37%);
+*/
+}
+
+/* transition for the styled startup screen to not show elements yet */
+
+body:not(.no-animations) {
+    .progress-bar {
+            opacity: 0;
+            animation: cssAnimation 2.75s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes cssAnimation {
+            50% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            99% {
+                opacity: 0.99;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes cssAnimation {
+            50% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            99% {
+                opacity: 0.99;
+            }
+            100% {
+                opacity: 1;
+        }
+    } 
+
+    .titlebar {
+            opacity: 0;
+            animation: cssAnimation2 2.75s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes cssAnimation2 {
+            99% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes cssAnimation2 {
+            99% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+        }
+    } /* so they won't appear before the rest */
+} /* test */
+
+body:not(.no-animations).startup-revolution {
+    .progress-bar {
+            opacity: 0;
+            animation: cssAnimation 2.75s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes cssAnimation {
+            50% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            99% {
+                opacity: 0.99;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes cssAnimation {
+            50% {
+                opacity: 0;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            99% {
+                opacity: 0.99;
+            }
+            100% {
+                opacity: 1;
+        }
+    } 
+
+    .titlebar {
+            opacity: 0;
+            animation: cssAnimation2 2.75s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes cssAnimation2 {
+            99% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes cssAnimation2 {
+            99% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+        }
+    } /* so they won't appear before the rest */
+}
+
+/* startup revolution */
+
+    .theme-light, .theme-dark {
+        --bg-start: url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg);
     }
-    */
+
     .startup-revolution {
         .progress-bar {
-            background: var(--bg-start) no-repeat;
+            justify-content: start;
+
+            background: /* black */ var(--bg-start) no-repeat;
             background-size: cover;
-            --bg-start: url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg);
+
+        }
+        
+
+        .progress-bar-indicator {
+            margin: 0 0;
+            width: 100vw;
+            background-color: hsla(0, 0%, 0%, 0.5);
+        } /* takes up whole bar */
+
+        .progress-bar-message {
+
+            position: absolute;
+            width: 100%;
+            margin-bottom: 0;
+            margin-top: 8px; /* change this alongside the progress-bar indic. if you change away from default of 8px */
+
+            line-height: 150%;
+            font-size: 1.5rem;
+            padding-left: 0.5rem;
+
+            background-color: hsla(0, 0%, 0%, 0.3);
+
+            &.u-center-text {
+                text-align: left;
+            } /* fix this */
+
+            &::before {
+                content: "Welcome back.\a0";
+                white-space: pre;
+            }
+
         }
 
+    }
+
+    .startup-grid.startup-revolution {
         .progress-bar::before {
             content: '';
             position: absolute;
@@ -49,18 +209,9 @@
             top: 0;
             bottom: 0;
             /* background: hsla(0, 0%, 50%, 0.5); */
-            background-image: radial-gradient(var(--text-on-accent) 33%, transparent 33%);
-            background-size: 4px 4px;
-        }
+            background-image: radial-gradient(var(--text-on-accent) 1px, transparent 1px);
+            background-size: 8px 8px;
 
-        .progress-bar-message {
-            /*
-            position: absolute;
-            top: 0.5rem;
-            left: 0.5rem;
-            */
-            display: none;
-            color: var(--text-normal);
+            filter: blur(1px); /* test */
         }
-
-    }
+    } /* comment this out if the dotted background isn't to your liking */

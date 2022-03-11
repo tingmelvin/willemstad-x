@@ -58,6 +58,7 @@ settings:
         description: "When enabled, this disables all animations in this theme."
         default: false
     -
+    -
         id: startup
         title: Startup Screen
         type: heading
@@ -68,13 +69,32 @@ settings:
         title: Customise the Startup Screen
         type: class-toggle
         description: "When enabled, this enables multiple options to customise the startup screen."
-        default: false
+        default: true
     -
         id: bg-start
         title: Choose your Startup Background Image
         type: variable-text
         description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
         default: "url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg)"
+    -
+        id: startup-grid
+        title: Apply a Dotted Grid Overlay to the Startup Screen
+        type: class-toggle
+        description: "When enabled, this applies a dotted grid overlay to the startup screen."
+        default: true
+    -
+        id: gradient-startup-bar
+        title: Gradient Startup Progress Bar
+        type: class-toggle
+        description: "When enabled, the startup progress bar will have a gradient applied to it."
+        default: true
+    -
+        id: col-startup-1
+        title: Gradient Startup Progress Bar — Colour
+        type: variable-text
+        description: 
+        default: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%)
+    -
     -
         id: elements-ui
         title: 🌠 User Interface (UI) Elements
@@ -175,18 +195,6 @@ settings:
             type: class-toggle
             description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
             default: true
-    -
-            id: gradient-startup-bar
-            title: Gradient Startup Progress Bar
-            type: class-toggle
-            description: "When enabled, the startup progress bar will have a gradient applied to it."
-            default: true
-    -
-                id: col-startup-1
-                title: Gradient Startup Progress Bar — Colour
-                type: variable-text
-                description: 
-                default: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%)
     -
             id: sd
             title: Sidebars (Side Docks)
@@ -1008,7 +1016,7 @@ settings:
         title: Activate Footnotes and Citation Indicator and Relevant Settings
         note: 🦶📝 Footnotes & Citation Indicator
         type: class-toggle
-        description: "Toggle to make Style Settings changes to the Footnotes and Citation Indicator. When activated, this can alos be used independently of the plugin."
+        description: "Toggle to make Style Settings changes to the Footnotes and Citation Indicator. When enabled, this can also be used independently of the plugin."
         default: false
     -
         id: PComm027-indicator
@@ -1017,6 +1025,13 @@ settings:
         type: variable-text
         description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin. ⚠️NOTE: PLEASE use your apostrophes (' ') to ensure the new indicator renders!"
         default: '⦿'
+    -
+        id: PComm009-no-halfhour-grid
+        title: Remove Half-hour Dotted Lines
+        note: 💯📆 Full Calendar
+        type: class-toggle
+        description: "When enabled, this removes the half-hour dotted lines from the Full Calendar calendar view."
+        default: false
     -
         id: PComm002-noshadow
         title: No shadows between two panes

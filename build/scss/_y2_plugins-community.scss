@@ -464,6 +464,84 @@
     }
 
 /* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Full Calendar]
+\\ (NOMEN | PComm009)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make paddings
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=full-calendar-view] {
+
+        .view-content {
+            padding: 1rem;
+        }
+
+        .fc-timegrid-event {
+            border-radius: calc( var(--shape-roundish) * 1.5 );
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+
+            .fc-event-main {
+                mix-blend-mode: luminosity;
+                filter: contrast(175%);
+            } /* making light text pop up */
+        }
+
+        .fc .fc-toolbar-title {
+            text-align: center;
+        } /* for smaller screens, ensuring centering */
+
+        .fc-button {
+            text-transform: capitalize;
+        } /* Capitalise text */
+
+        .fc-direction-ltr .fc-button-group > .fc-button:is(:first-child) {
+            border-radius:  calc( var(--shape-roundish) * 1.5 ) 0 0 calc( var(--shape-roundish) * 1.5 );
+        } /* round first border */
+
+        .fc-direction-ltr .fc-button-group > .fc-button:is(:last-child) {
+            border-radius: 0 calc( var(--shape-roundish) * 1.5 ) calc( var(--shape-roundish) * 1.5 ) 0;
+        } /* round last border */
+
+        button.fc-today-button.fc-button.fc-button-primary {
+            border-radius: calc( var(--shape-roundish) * 1.5 );
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .fc-v-event .fc-event-title {
+            line-height: 120%;
+        } /* make calendar items line-height better */
+
+        .fc-timegrid-event .fc-event-time {
+            margin-bottom: 0;
+            line-height: 150%;
+
+            display: flex;
+            align-items: center;
+
+
+        } /* makes it neater */ /* for time */
+
+        .fc-timegrid-event-short .fc-event-time::after {
+            content: "\a0\a0\a0";
+        }
+
+        .fc-toolbar-chunk {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        
+
+    }
+
+    .PComm009-no-halfhour-grid .workspace-leaf-content[data-type=full-calendar-view] {
+        .fc .fc-timegrid-slot-minor {
+            border-top-style: none;
+        } /* removes border top grid */
+
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Get Info]
 \\ (NOMEN | PComm022)
 ───────────────────────────────────────────────────────────────────────────────────

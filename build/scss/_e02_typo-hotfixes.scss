@@ -57,9 +57,7 @@
         >>> works on the headers padding to the header text
             makes sure they are nice and tidy
         ──────────────────────────────────────────────────────────────────────── */
-            .markdown-preview-section h1, .markdown-preview-section h2,
-            .markdown-preview-section h3, .markdown-preview-section h4,
-            .markdown-preview-section h5, .markdown-preview-section h6 {
+            .markdown-preview-section :is(h1, h2, h3, h4, h5, h6) {
                 padding: 0.25rem 0.5rem 0.25rem 2rem;
                 margin: 0.5rem 0;
             }

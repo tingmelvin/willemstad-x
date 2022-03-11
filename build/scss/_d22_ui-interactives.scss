@@ -5,8 +5,12 @@
 
     /* font declaration */
 
-            .dropdown, .prompt, select, input {
+            .dropdown, .prompt, select, input, textarea, button {
                 font-family: var(--font-ui);
+            }
+
+            button {
+                font-weight: 500;
             }
 
     /* ────────────────────────────────────────────────────────────────────────────        
@@ -267,3 +271,12 @@
             }
 
 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> TEXTAREA
+    ───────────────────────────────────────────────────────────────────────────────
+        >> Margins and Paddings
+        ──────────────────────────────────────────────────────────────────────── */
+        textarea {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            padding: 0.25rem;
+        }
