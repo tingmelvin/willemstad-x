@@ -8,7 +8,7 @@
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.2.4h1 Christianshavn";
+            content: "\A v0.2.4h2 Christianshavn";
             white-space: pre-wrap;
 
             font-size: 0.8rem;
@@ -84,7 +84,7 @@
             >>> ADD WILLEMSTAD VERSION NUMBER
             ──────────────────────────────────────────────────────────────────────── */
             div.titlebar-text::after {
-                content: '\ \ /\ \ Willemstad X v0.2.4h1 Christianshavn';
+                content: '\ \ /\ \ Willemstad X v0.2.4h2 Christianshavn';
                 white-space: pre;
             }
 
