@@ -191,11 +191,6 @@ body:not(.no-animations).startup-revolution {
                 text-align: left;
             } /* fix this */
 
-            &::before {
-                content: "Welcome back.\a0";
-                white-space: pre;
-            }
-
         }
 
     }
@@ -215,3 +210,16 @@ body:not(.no-animations).startup-revolution {
             filter: blur(1px); /* test */
         }
     } /* comment this out if the dotted background isn't to your liking */
+
+    .startup-message-before.startup-revolution {
+        .progress-bar-message {
+            &::before {
+                content: var(--message-startup);
+                white-space: pre;
+            }
+        }
+    } /* toggle startup message */
+
+    .theme-light, .theme-dark {
+        --message-startup: "Welcome back. ";
+    } /* customise startup message? */

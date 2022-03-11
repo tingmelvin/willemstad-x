@@ -121,11 +121,31 @@
 
         .community-plugin-info {
             padding: 1rem;
-        
+    
+            div.community-plugin-name {
+                margin-right: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+    
+            div.community-plugin-author {
+                display: block;
+                position: relative;
+                vertical-align: top;
+                margin-bottom: 0.25rem;
+            }
+
+            div.community-plugin-version {
+                display: inline-block;
+                margin-bottom: 0.5rem;
+                position: relative;
+                vertical-align: top;
+            }
 
             > .community-plugin-name {
                 font-size: 2.5rem;
                 display: inline-block;
+                line-height: unset;
+                margin-bottom: 0.75rem;
             }
 
             > .community-plugin-downloads {
@@ -173,7 +193,7 @@
                         padding: 0.3rem;
                         border: 2px solid var(--text-accent);
                         text-decoration: none;
-                        top: 40px;
+                        top: calc(2.5rem - 1px);
                         position: relative;
 
                     }
@@ -190,4 +210,13 @@
                 margin-top: 0;
             }
 
+            p {
+                margin-top: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
         }
+
+        .community-plugin-version, .community-plugin-author {
+            line-height: unset;
+        }
+

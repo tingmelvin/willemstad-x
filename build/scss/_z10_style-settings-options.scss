@@ -83,6 +83,18 @@ settings:
         description: "When enabled, this applies a dotted grid overlay to the startup screen."
         default: true
     -
+        id: startup-message-before
+        title: Loading Message Prefix
+        type: class-toggle
+        description: "When enabled, this applies a customised message before the loading message."
+        default: true
+    -
+        id: message-startup
+        title: Loading Message Prefix — Text
+        type: variable-text
+        description: "Enter your own loading message prefix here."
+        default: '"Welcome back. "'
+    -
         id: gradient-startup-bar
         title: Gradient Startup Progress Bar
         type: class-toggle
