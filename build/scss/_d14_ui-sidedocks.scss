@@ -91,8 +91,7 @@
         } /* LEFT/RIGHT */
 
         .sd-float-tabs .workspace-ribbon-collapse-btn {
-            padding-right: calc(var(--sd-width-norm) / 2);
-            padding-left: calc(var(--sd-width-norm) / 2);
+            text-align: center; /* the fact that this works makes me angy */
         } /* ensures that the ribbon collapse button is centred */
 
         /* ─────────────────────────────────────────────────────────────────────────
