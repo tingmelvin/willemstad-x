@@ -63,6 +63,16 @@
         margin-right: 0.5rem;
     }
 
+    /* magic show re: level 1 on Willemstad-Core */
+        div.style-settings-heading[data-id="Willemstad-Core"] + * > .style-settings-container[data-level="1"] {
+            border-left: none;
+            padding-left: 0;
+        } /* should remove the lines and paddings */
+
+        div.style-settings-heading[data-id="Willemstad-Core"] + * > .style-settings-heading[data-level="1"] {
+            display: none; /* eventually, [data-id*="Willemstad"] */
+        } /* make level 1 disappear so that I can manoeuver it to allow for unheaded stuff later in the list */
+
     /* ────────────────────────────────────────────────────────────────────────────
     >>> MAKING SOME THINGS COPYABLE
     ──────────────────────────────────────────────────────────────────────────── */
@@ -173,70 +183,6 @@
         
     }
 
-    /* for gradient headers */
-    /* is dit een slecht idee? */
-
-    /*
-    :is(.gradient-headers) {
-
-        :is(.setting-item):is([data-id="Willemstad-Core"]) {
-
-            .setting-item-name {
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                background-image: var(--col-h1-grad);
-            }
-
-        }
-
-        :is(.setting-item):is([data-id="Willemstad-Typography"]) {
-
-
-            .setting-item-name {
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                background-image: var(--col-h2-grad);
-            }
-            
-        }
-
-        :is(.setting-item):is([data-id="Willemstad-Plugins"]) {
-
-
-            .setting-item-name {
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                background-image: var(--col-h3-grad);
-            }
-            
-        }
-
-        :is(.setting-item):is([data-id="Minimal-Cards"]) {
-
-
-            .setting-item-name {
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                background-image: var(--col-h4-grad);
-            }
-
-            .setting-item-name::after {
-                content: "\0020 \0020 bundled in Willemstad";
-                white-space: pre;
-                font-weight: 300;
-                font-size: 0.85em;
-            }
-            
-        }
-
-    }
-    */
-
-
     /* ────────────────────────────────────────────────────────────────────────────
     >>> THEME DOCS STYLING
     \\\ UNDERLINE + BOLD + ADD LINES + ADD MARGIN
@@ -326,22 +272,31 @@
     ──────────────────────────────────────────────────────────────────────────── */
 
         /* ─────────────────────────────────────────────────────────────────────────
-        >>>> Startup Screen (2)
+        >>>> Text Accents
         ───────────────────────────────────────────────────────────────────────── */
 
-        .setting-item[data-id="startup"] {
-    
-            /*
-            > * > * > .style-settings-collapse-indicator {
-                display: none;
-            }
-            */
+        /*
+        .setting-item:is([data-id="startup"], [data-id="tb"]) {
 
             .setting-item-name {
                 color: var(--text-accent);
             }
         }
+        */
+        /*
+        .setting-item:is([data-id="startup"]) .setting-item-name {
 
+            display: inline-block;
+
+            
+            &::before {
+                content: "\ea33";
+                display: inline-block;
+                font-family: 'remixicon';
+                margin-left: -17px;
+            }
+        }
+        */
 
 
 

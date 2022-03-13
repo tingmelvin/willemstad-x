@@ -526,11 +526,17 @@
             content: "\a0\a0\a0";
         }
 
-        .fc-toolbar-chunk {
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
         
+        .fc-header-toolbar {
+
+            > div:first-child {
+                margin-right: 1rem;
+            }
+
+            > div:last-child {
+                margin-left: 1rem;
+            }
+        }  /* aye, a fix for .fc-toolbar-chunk */       
 
     }
 

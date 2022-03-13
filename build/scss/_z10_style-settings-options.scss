@@ -62,50 +62,85 @@ settings:
         id: startup
         title: Startup Screen
         type: heading
+        description: Startup Background Image, Dotted Grid Overlay, Loading Message Prefix, Gradient Startup Progress Bar
         level: 2
-        collapsed: false
+        collapsed: true
     -
-        id: startup-revolution
-        title: Customise the Startup Screen
-        type: class-toggle
-        description: "When enabled, this enables multiple options to customise the startup screen."
-        default: true
+            id: startup-revolution
+            title: Customise the Startup Screen
+            type: class-toggle
+            description: "When enabled, this enables multiple options to customise the startup screen."
+            default: true
     -
-        id: bg-start
-        title: Choose your Startup Background Image
-        type: variable-text
-        description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
-        default: "url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg)"
+            id: bg-start
+            title: Choose your Startup Background Image
+            type: variable-text
+            description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
+            default: "url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg)"
     -
-        id: startup-grid
-        title: Apply a Dotted Grid Overlay to the Startup Screen
-        type: class-toggle
-        description: "When enabled, this applies a dotted grid overlay to the startup screen."
-        default: true
+            id: startup-grid
+            title: Apply a Dotted Grid Overlay to the Startup Screen
+            type: class-toggle
+            description: "When enabled, this applies a dotted grid overlay to the startup screen."
+            default: true
     -
-        id: startup-message-before
-        title: Loading Message Prefix
-        type: class-toggle
-        description: "When enabled, this applies a customised message before the loading message."
-        default: true
+            id: startup-message-before
+            title: Loading Message Prefix
+            type: class-toggle
+            description: "When enabled, this applies a customised message before the loading message."
+            default: true
     -
-        id: message-startup
-        title: Loading Message Prefix — Text
-        type: variable-text
-        description: "Enter your own loading message prefix here."
-        default: '"Welcome back. "'
+            id: message-startup
+            title: Loading Message Prefix — Text
+            type: variable-text
+            description: "Enter your own loading message prefix here."
+            default: '"Welcome back. "'
     -
-        id: gradient-startup-bar
-        title: Gradient Startup Progress Bar
-        type: class-toggle
-        description: "When enabled, the startup progress bar will have a gradient applied to it."
-        default: true
+            id: gradient-startup-bar
+            title: Gradient Startup Progress Bar
+            type: class-toggle
+            description: "When enabled, the startup progress bar will have a gradient applied to it."
+            default: true
     -
-        id: col-startup-1
-        title: Gradient Startup Progress Bar — Colour
-        type: variable-text
-        description: 
-        default: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%)
+            id: col-startup-1
+            title: Gradient Startup Progress Bar — Colour
+            type: variable-text
+            description: 
+            default: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%)
+    -
+    -
+        id: tb
+        title: Titlebar
+        type: heading
+        description: Titlebar Display Settings
+        level: 2
+        collapsed: true
+    -
+            id: tb-title-remove
+            title: Remove Title
+            type: class-toggle
+            description: When enabled, this removes the title from the titlebar.
+            default: false
+    -
+            id: tb-tb-remove
+            title: Remove Entire Titlebar
+            type: class-toggle
+            description: When enabled, the entire top titlebar from Obsidian is removed. Note! This means that you will not be able to resize your screen, or exit Obsidian with a mouse. These can be done via hotkeys instead.
+            default: false
+    -
+            id: tb-willemstad
+            title: Remove Willemstad Version Numbering Suffix
+            type: class-toggle
+            description: When enabled, the titlebar removes the suffixed Willemstad version number from the end of the Obsidian version number.
+            default: false        
+    -
+            id: col-titlebar
+            title: Change Titlebar Colour
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 0%, 0.8)
+            default-dark:  hsla(0, 0%, 0%, 0.8)
     -
     -
         id: elements-ui
@@ -116,9 +151,9 @@ settings:
         collapsed: false
     -
             id: headers-round
-            title: Rounded Headers
+            title: Rounded Headers and Boxes
             type: class-toggle
-            description: If toggled, Rounded Headers will be enabled over the standard rectangular headers.
+            description: When enabled, rounded-border headers and boxes (such as admonition boxes) will be applied over the standard rectangular ones.
             default: false
     -
             id: size-scrollbar
@@ -170,31 +205,6 @@ settings:
                     label: ☀️ Unchanging | Persistent, full-length (Obsidian default)
                     value: default
     -
-            id: tb-title-remove
-            title: Titlebar — Remove Title
-            type: class-toggle
-            description: When enabled, this removes the title from the titlebar.
-            default: false
-    -
-            id: tb-tb-remove
-            title: Titlebar — Remove Entire Titlebar
-            type: class-toggle
-            description: When enabled, the entire top titlebar from Obsidian is removed. Note! This means that you will not be able to resize your screen, or exit Obsidian with a mouse. These can be done via hotkeys instead.
-            default: false
-    -
-            id: tb-willemstad
-            title: Titlebar — Remove Willemstad Version Number
-            type: class-toggle
-            description: When enabled, the titlebar removes the Willemstad version number from the end of the Obsidian version number.
-            default: false        
-    -
-            id: col-titlebar
-            title: Titlebar — Change Colour
-            type: variable-themed-color
-            opacity: true
-            format: hsl
-            default-light: hsla(0, 0%, 0%, 0.8)
-            default-dark:  hsla(0, 0%, 0%, 0.8)
     -
             id: collapse-header-sanctum
             title: Sanctum-style Header Collapse Indicator
@@ -208,8 +218,15 @@ settings:
             description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
             default: true
     -
-            id: sd
+            id: elements-sd
             title: Sidebars (Side Docks)
+            description: 'Customise the sidebar/side docks elements here.'
+            type: heading
+            level: 2
+            collapsed: true
+    -
+            id: sd
+            title: Display Style
             type: class-select
             description: Choose which sidebars/side docks you would like to use for Obsidian.
             allowEmpty: false
@@ -225,15 +242,8 @@ settings:
                     label: Default Bars
                     value: default
     -
-            id: elements-sd
-            title: ⏸️ Sidebar (Side Docks) Elements
-            description: 'Customise the sidebar/side docks elements here.'
-            type: heading
-            level: 2
-            collapsed: true
-    -
                 id: col-sd
-                title: '⏸️🖌️ Colours — Sidebars (Side Docks)'
+                title: '⏸️🖌️ Colours'
                 type: variable-themed-color
                 description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Styled Bars, and all colours for the Floating Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 55%)]' 
                 opacity: true
@@ -284,11 +294,18 @@ settings:
                     max: 2.5
                     step: 0.1
     -
-            id: modal-widths
-            title: 🆕 Modal Widths
-            description: 'Change the widths of modals (the settings/community plugins/themes/Publish menus).'
+            id: modals
+            title: Modals
+            description: 'Change the widths and heights of modals (the settings/community plugins/themes/Publish menus).'
             type: heading
             level: 2
+            collapsed: true
+    -
+            id: modal-widths
+            title: Modal Widths
+            description:
+            type: heading
+            level: 3
             collapsed: true
     -
                 id: modal-width-settings
@@ -327,11 +344,12 @@ settings:
                 max: 98
                 step: 1
     -
+    -
             id: modal-heights
-            title: 🆕 Modal Heights
-            description: 'Change the heights of modals (the settings/community plugins/themes/Publish menus).'
+            title: Modal Heights
+            description:
             type: heading
-            level: 2
+            level: 3
             collapsed: true
     -
                 id: modal-height-settings
@@ -370,12 +388,13 @@ settings:
                 max: 98
                 step: 1
     -
+    -
         id: misc
-        title: Ⓜ️ Miscellany
+        title: "Miscellany"
         type: heading
-        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width | The options here allows you to tweak the miscellanous items in Obsidian.
-        level: 1
-        collapsed: true
+        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width
+        level: 2
+        collapsed: false
     -
                 id: centre-image
                 title: Centre Image
@@ -406,10 +425,16 @@ settings:
                 description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
                 default: true
     -
+    -
+        id: "?"
+        type: heading
+        level: 1
+        collapsed: false
+    -
         id: support-willemstad
         title: 😍 Support the development of Willemstad
         type: heading
-        level: 1
+        level: 2
         description: 'Hi! I hope you enjoy Willemstad. There are a few ways you can support its continuing development:'
         collapsed: false
     -
@@ -466,14 +491,8 @@ settings:
         description: "When enabled, the header hex prefix (#) will be made smaller."
         default: true
     -
-        id: gradient-headers
-        title: "Gradient Headers"
-        type: class-toggle
-        description: "When enabled, the headers will have a colour gradient applied to them."
-        default: false
-    -
         id: typography-typeface
-        title: ✍️🔤 Font Typeface Customisation
+        title: ✍️🔤 Font Typeface
         type: heading
         description: Core typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel.
         level: 2
@@ -534,7 +553,7 @@ settings:
             default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
         id: typography-size
-        title: ✍️🀄 Font Size Customisation
+        title: ✍️🀄 Font Size
         type: heading
         description: Options to change default font sizes (relative to the normal font size). Table-specific font size customisation options are listed within the "Tables" heading.
         level: 2
@@ -621,11 +640,24 @@ settings:
             step: 0.05
             format: em
     -
+        id: h-col
+        title: 🖌️🔤 Colours — Headers
+        type: heading
+        description: Change the font and background colours of the headers (H1–H6) here.
+        level: 2
+        collapsed: true
+    -
+        id: gradient-headers
+        title: "Gradient Headers"
+        type: class-toggle
+        description: "When enabled, the headers will have a colour gradient applied to them."
+        default: false
+    -
         id: typography-h-col-text
         title: 🖌️🔤 Colours — Header Text
         type: heading
         description: Changes the font colours of the headers (H1–H6).
-        level: 2
+        level: 3
         collapsed: true
     -
             id: col-h1
@@ -686,7 +718,7 @@ settings:
         title: 🖌️🚥 Colours — Header Background
         type: heading
         description: Changes the background colours of the headers (H1–H6).
-        level: 2
+        level: 3
         collapsed: true
     -
             id: no-header-bg
@@ -948,7 +980,7 @@ settings:
 */
 
 /* @settings
-name: "🛠️ Plugin and CSSClass Settings" 
+name: "🛠️ Plugins and CSSClass" 
 id: Willemstad-Plugins
 settings:
     -
