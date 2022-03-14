@@ -59,11 +59,21 @@
         padding-left: 1.5rem;
     }
 
+
     .style-settings-collapse-indicator {
         margin-right: 0.5rem;
     }
 
-    /* magic show re: level 1 on Willemstad-Core */
+    /*
+    div.style-settings-name > .style-settings-collapse-indicator {
+        margin-left: -21px;
+    }
+    */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Magic show re: level 1 on Willemstad-Core
+    ──────────────────────────────────────────────────────────────────────────── */
+
         div.style-settings-heading[data-id="Willemstad-Core"] + * > .style-settings-container[data-level="1"] {
             border-left: none;
             padding-left: 0;
@@ -283,7 +293,7 @@
             }
         }
         */
-        /*
+    
         .setting-item:is([data-id="startup"]) .setting-item-name {
 
             display: inline-block;
@@ -293,11 +303,9 @@
                 content: "\ea33";
                 display: inline-block;
                 font-family: 'remixicon';
-                margin-left: -17px;
+                top: 3px;
             }
         }
-        */
-
 
 
     /* ────────────────────────────────────────────────────────────────────────────

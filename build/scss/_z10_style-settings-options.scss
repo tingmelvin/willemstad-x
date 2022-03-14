@@ -31,16 +31,16 @@ settings:
         default: cp-classic-lshtm
         options:
             -
-                label: "🟢 Revolution | London School of Hygiene and Tropical Medicine (LSHTM)"
+                label: "🟢 Revolution — London School of Hygiene and Tropical Medicine (LSHTM)"
                 value: cp-classic-lshtm
             -
-                label: "❄️ Adaptation | Noord [Willemstad-style Nord]"
+                label: "❄️ Adaptation — Noord [Willemstad-style Nord]"
                 value: cp-exobs-nord
             -
-                label: "🚧 UNDER CONSTRUCTION | 🔵 Revolution | University of Oxford"
+                label: "🚧 UNDER CONSTRUCTION | 🔵 Revolution — University of Oxford"
                 value: cp-classic-oxon
             -
-                label: "🚧 UNDER CONSTRUCTION | 🎹 Adaptation | Le Corbusier Colour Keyboards"
+                label: "🚧 UNDER CONSTRUCTION | 🎹 Adaptation — Le Corbusier Colour Keyboards"
                 value: cp-classic-lc
             -
                 label: "🖌️ Custom Colours"
@@ -196,27 +196,15 @@ settings:
             default: sb-conjuring
             options:
                 -
-                    label: 💫 Conjuring | Hidden until hovered, mini-size
+                    label: 💫 Conjuring — Hidden until hovered, mini-size
                     value: sb-conjuring
                 -
-                    label: 🌥️ Enduring | Persistent, mini-size
+                    label: 🌥️ Enduring — Persistent, mini-size
                     value: sb-enduring
                 -
-                    label: ☀️ Unchanging | Persistent, full-length (Obsidian default)
+                    label: ☀️ Unchanging — Persistent, full-length (Obsidian default)
                     value: default
     -
-    -
-            id: collapse-header-sanctum
-            title: Sanctum-style Header Collapse Indicator
-            type: class-toggle
-            description: When enabled, Sanctum's more minimalist header collapse indicator will be used instead of the original Obsidian indicator.
-            default: true
-    -
-            id: modal-cp-options-bold
-            title: "Shimmering Focus-style Bold for Appearance, Hotkeys and Community Plugins options"
-            type: class-toggle
-            description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
-            default: true
     -
             id: elements-sd
             title: Sidebars (Side Docks)
@@ -233,7 +221,7 @@ settings:
             default: sd-float-tabs
             options:
                 -
-                    label: Floating Tabs | tabs that come into full-view when hovered
+                    label: Floating Tabs — tabs that come into full-view when hovered
                     value: sd-float-tabs
                 -
                     label: Styled Bars
@@ -426,7 +414,26 @@ settings:
                 default: true
     -
     -
-        id: "?"
+        id: "?1"
+        type: heading
+        level: 1
+        collapsed: false
+    -
+    -
+            id: collapse-header-sanctum
+            title: Sanctum-style Header Collapse Indicator
+            type: class-toggle
+            description: When enabled, Sanctum's more minimalist header collapse indicator will be used instead of the original Obsidian indicator.
+            default: true
+    -
+            id: modal-cp-options-bold
+            title: "Shimmering Focus-style Bold for Appearance, Hotkeys and Community Plugins options"
+            type: class-toggle
+            description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
+            default: true
+    -
+    -
+        id: "?2"
         type: heading
         level: 1
         collapsed: false
