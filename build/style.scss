@@ -24,10 +24,12 @@
 @use 'scss/_e03_typo-header-var-settings';
 @use 'scss/_e11_typo-highlights-multicolour';
 @use 'scss/_e12_typo-underlines-readable';
+@use 'scss/_h01_mobile';
 @use 'scss/_q01_styling-willemstad-specific';
 @use 'scss/_q11_styling-other-themes';
 @use 'scss/_q21_styling-other-improvements';
 @use 'scss/_q31_styling-html-aside';
+@use 'scss/_q32_styling-callouts';
 @use 'scss/_w01_admonition-infobox';
 @use 'scss/_w02_admonition-tables-lp';
 @use 'scss/_x01_cssclass-latex';

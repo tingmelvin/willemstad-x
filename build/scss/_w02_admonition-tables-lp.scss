@@ -15,3 +15,45 @@
     margin-left: 0;
     margin-right: 0;
 }
+
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W02A] Callout LP Tables being like Preview!
+\ :D by me!
+──────────────────────────────────────────────────────────────────────────────── */
+/* also for callouts */
+
+
+
+div.callout[data-callout="table"] {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div.el-div[data-callout="table"] {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div.el-div[data-callout="table"] + * > div.callout[data-callout="table"] {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.callout[data-callout="table"] {
+
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .callout-title {
+        display: none;
+    }
+
+    .callout-content {
+        background-color: var(--background-primary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,15 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [Q31] Styling: Callouts
+\ Introduced in Obsidian 0.14.0
+──────────────────────────────────────────────────────────────────────────────── */
+
+.callout {
+
+    overflow-x: hidden; /* ensures that it wouldn't eat into other things as well */
+
+
+}
+
+.headers-round .callout {
+    border-radius: calc(var(--shape-roundish) * 1.25);
+}

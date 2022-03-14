@@ -22,6 +22,7 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> COMMUNITY THEMES | PLACEMENTS | Again, playing with margins and paddings
         ──────────────────────────────────────────────────────────────────────── */
+        :not(.is-mobile) {
             .community-theme {
                 padding: 0.9rem 0.6rem;
                 margin: 0.5rem 0.5rem;
@@ -32,6 +33,7 @@
             .community-theme-filters-container {
                 padding: 0 0;
             }
+        }
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> [MODAL TYPOGRAPHY]

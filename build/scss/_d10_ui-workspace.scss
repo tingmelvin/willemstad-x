@@ -67,11 +67,12 @@
     /* ────────────────────────────────────────────────────────────────────────
     >>> FIX HR (again, for LP and Preview)
     ──────────────────────────────────────────────────────────────────────── */
-          .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+          
+    /*.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
 
               color: var(--background-modifier-border);
           
-            } /* LP */
+            } */ /* uH NO?! LP */
 
 
           .markdown-preview-view hr {
