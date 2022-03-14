@@ -16,7 +16,7 @@ div.el-aside {
 */
 
 aside {
-    text-align: justify;
+    /* text-align: justify; */
     word-break: break-word;
 
     float: right;
@@ -32,18 +32,3 @@ aside {
     padding: 0.5rem;
 
 }
-
-/*
-
-.admonition-infobox .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
-    padding-left: 0;
-    padding-right: 0;
-    justify-content: center;
-}
-
-.admonition-infobox .admonition-title {
-
-    background-color: var(--col-bg-table);
-
-}
-*/

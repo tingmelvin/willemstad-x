@@ -57,3 +57,18 @@ div.el-div[data-callout="table"] + * > div.callout[data-callout="table"] {
         padding: 0;
     }
 }
+
+/* 
+:is(div.callout, div.el-div, div.el-table)[data-callout|="table"] {
+    display: inline-block;
+}
+
+:is(div.el-div)[data-callout|="table"] + div.el-p {
+    display: inline-block;
+
+    & > p {
+        display: inline-block;
+    }
+
+}
+*/ /* no work, trying to get them to flush */

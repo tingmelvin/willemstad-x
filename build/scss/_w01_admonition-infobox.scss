@@ -91,16 +91,49 @@ div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
 
 
 
-/* move this away from infobox, but this really makes this look PERFECT. NO MORE OVERLAPPING STUFF! */
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W01A] Callout Infobox
+\ adapted from the original Admonition Infobox by SlRvB for the Admonition Plugin
+──────────────────────────────────────────────────────────────────────────────── */
 
-.markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
-p, kbd, hr, ol,
-blockquote,
-.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6,
-div.suggestion-item > :is(span.suggestion-prefix, span.suggestion-content, span.suggestion-hotkey) /*test this*/  {
-    overflow: hidden;
+.callout[data-callout="infobox"] {
+    float: right;
+    max-width: 50%;
+
+    border: 0;
+    margin-left: 0.5rem;
+
+    .callout-title {
+
+        background-color: var(--col-bg-table);
+        justify-content: center;
+        text-align: center;
+
+        .callout-icon {
+            display: none;
+        }
+
+    }
+
+    .callout-content {
+        padding: 0;
+        border: none;
+        margin: 0.5rem;
+        justify-content: center;
+        text-align: center;
+
+        :is(h1, h2, h3, h4, h5, h6) {
+
+            font-size: var(--editor-font-size);
+            text-align: center;
+            padding-left: 0.15rem;
+            padding-right: 0.15rem;
+        }
+
+    }
 }
 
-.headers-round .admonition.admonition {
-    border-radius: calc(var(--shape-roundish) * 1.25);
-} /* makes borders round */
+div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
+.el-hr) + * > div.callout[data-callout="infobox"] {
+    margin-top: calc(var(--margin-callout) - 0.5em);
+} /* ensures non-excessive margin-top if infobox comes after headings */ /* 0.5em since that's the default spacing*/

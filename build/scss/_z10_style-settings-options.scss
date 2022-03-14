@@ -153,7 +153,7 @@ settings:
             id: headers-round
             title: Rounded Headers and Boxes
             type: class-toggle
-            description: When enabled, rounded-border headers and boxes (such as admonition boxes) will be applied over the standard rectangular ones.
+            description: When enabled, rounded-border headers and boxes (such as Admonition and Callout boxes) will be applied over the standard rectangular ones.
             default: false
     -
             id: size-scrollbar
@@ -380,7 +380,7 @@ settings:
         id: misc
         title: "Miscellany"
         type: heading
-        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width
+        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width, Sanctum-style Header Collapse Indicator, Shimmering Focus-style Bold Typeface for Appearance, Hotkeys and Community Plugins options, Callout Margin Size
         level: 2
         collapsed: false
     -
@@ -413,24 +413,27 @@ settings:
                 description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
                 default: true
     -
+                id: collapse-header-sanctum
+                title: Sanctum-style Header Collapse Indicator
+                type: class-toggle
+                description: When enabled, Sanctum's more minimalist header collapse indicator will be used instead of the original Obsidian indicator.
+                default: true
     -
-        id: "?1"
-        type: heading
-        level: 1
-        collapsed: false
+                id: modal-cp-options-bold
+                title: "Shimmering Focus-style Bold Typeface for Appearance, Hotkeys and Community Plugins options"
+                type: class-toggle
+                description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
+                default: true
     -
-    -
-            id: collapse-header-sanctum
-            title: Sanctum-style Header Collapse Indicator
-            type: class-toggle
-            description: When enabled, Sanctum's more minimalist header collapse indicator will be used instead of the original Obsidian indicator.
-            default: true
-    -
-            id: modal-cp-options-bold
-            title: "Shimmering Focus-style Bold for Appearance, Hotkeys and Community Plugins options"
-            type: class-toggle
-            description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
-            default: true
+                id: margin-callout
+                title: Callout Margin Size
+                type: variable-number-slider
+                description: "Change the size of Callout margins."
+                format: em
+                default: 0.5
+                min: 0
+                max: 3
+                step: 0.05
     -
     -
         id: "?2"
@@ -891,7 +894,13 @@ settings:
             id: table-lp-magic
             title: "✨ Live Preview Almost-True Rendering"
             type: class-toggle
-            description: "When enabled, this renders Live Preview Tables congruently similar to Reading mode. ⚠️ Please ENSURE you use a true monospace font for the 'Font Typeface — Monospace' option in Typography > Font Typeface Customisation, and have the Advanced Tables plugin with the 'Pad cell width using spaces' option turned on for it to work properly. You are strongly encouraged to consider using the 'Admonitions Pseudo-Reading-Mode Live Preview Tables' option right below this instead."
+            description: "When enabled, this renders Live Preview Tables congruently similar to Reading mode. ⚠️ Please ENSURE you use a true monospace font for the 'Font Typeface — Monospace' option in Typography > Font Typeface Customisation, and have the Advanced Tables plugin with the 'Pad cell width using spaces' option turned on for it to work properly. You are strongly encouraged to consider using the other  option right below this instead."
+            default: false
+    -
+            id: placeholder-co-1
+            title: "✨ Callout Reading-Mode Live Preview Tables"
+            type: class-toggle
+            description: "Willemstad comes preset with the [!table] callout syntax (available since Obsidian 0.14), which will render your tables in Live Preview like in Reading Mode."
             default: false
     -
             id: placeholder-1

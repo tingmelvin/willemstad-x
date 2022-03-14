@@ -7,8 +7,15 @@
 
     overflow-x: hidden; /* ensures that it wouldn't eat into other things as well */
 
+    margin-top: var(--margin-callout);
+    margin-bottom: var(--margin-callout);
 
 }
+
+.theme-light, .theme-dark {
+    --margin-callout: 0.5em;
+}
+
 
 .headers-round .callout {
     border-radius: calc(var(--shape-roundish) * 1.25);

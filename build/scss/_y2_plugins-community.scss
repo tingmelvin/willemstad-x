@@ -111,6 +111,13 @@
         box-shadow: none;
     }
 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> OPTION for rounded headers
+    ──────────────────────────────────────────────────────────────────────────── */
+    .headers-round .admonition.admonition {
+        border-radius: calc(var(--shape-roundish) * 1.25);
+    } /* makes borders round */
+
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Dataview]
 \\ (NOMEN | PComm004)
@@ -654,10 +661,12 @@
     }
     /* ────────────────────────────────────────────────────────────────────────────
     >>> Δ Default emoticon to something nicer (yes, it's background position)
+        
     ──────────────────────────────────────────────────────────────────────────── */        
     span#emoji-mart-department_store.emoji-mart-emoji > span {
-        background-position: 53.5714% 64.2857% !important;
-    }
+        background-position: 17.8571% 76.7857% !important /* 53.5714% 64.2857% !important*/;
+    } /* use the houses one for Willemstad */
+
     /* ────────────────────────────────────────────────────────────────────────────
     >>> Δ Emoji Toolbar to default UI font
     ──────────────────────────────────────────────────────────────────────────── */
