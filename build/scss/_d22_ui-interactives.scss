@@ -105,6 +105,17 @@
             }
 
         /* ────────────────────────────────────────────────────────────────────────
+        >>> (FIX) why did it disappear?
+        ──────────────────────────────────────────────────────────────────────── */  
+            ul > li.task-list-item .task-list-item-checkbox {
+                margin-left: 0px;
+            }
+
+            .markdown-source-view.mod-cm6 .task-list-item-checkbox {
+                top: -2px;
+            } /* aligns properly with text */
+
+        /* ────────────────────────────────────────────────────────────────────────
         >>> KANBAN STUFF? OR JUST IN GENERAL
         ──────────────────────────────────────────────────────────────────────── */  
         input[type=checkbox] {

@@ -141,3 +141,7 @@
                 border-top: 2px solid;
                 border-color: var(--background-modifier-border);
             }
+        
+            .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] > hr {
+                color: var(--background-modifier-border);
+            } /* ensures it's grey */
