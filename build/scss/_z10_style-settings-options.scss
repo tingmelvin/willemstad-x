@@ -596,7 +596,8 @@ settings:
         level: 3
         collapsed: true
     -
-            id: h1-size
+            id: h1
+            find: h1-size
             title: Font Size — H1
             type: variable-number-slider
             default: 1.8
@@ -605,7 +606,8 @@ settings:
             step: 0.05
             format: em
     -
-            id: h2-size
+            id: h2
+            find: h2-size
             title: Font Size — H2
             type: variable-number-slider
             default: 1.6
@@ -614,7 +616,8 @@ settings:
             step: 0.05
             format: em
     -
-            id: h3-size
+            id: h3
+            find: h3-size
             title: Font Size — H3
             type: variable-number-slider
             default: 1.45
@@ -623,7 +626,8 @@ settings:
             step: 0.05
             format: em
     -
-            id: h4-size
+            id: h4
+            find: h4-size
             title: Font Size — H4
             type: variable-number-slider
             default: 1.3
@@ -632,7 +636,8 @@ settings:
             step: 0.05
             format: em
     -
-            id: h5-size
+            id: h5
+            find: h5-size
             title: Font Size — H5
             type: variable-number-slider
             default: 1.15
@@ -641,7 +646,8 @@ settings:
             step: 0.05
             format: em
     -
-            id: h6-size
+            id: h6
+            find: h6-size
             title: Font Size — H6
             type: variable-number-slider
             default: 1.05
