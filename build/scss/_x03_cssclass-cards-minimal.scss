@@ -326,7 +326,7 @@ https://github.com/sponsors/kepano
 }
 .cards table.dataview thead > tr > th:hover {
   color:var(--text-normal);
-  background-color:var(--background-tertiary);
+  background-color:var(--background-secondary-alt); /* to check if the change from tertiary is fine */
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────

@@ -71,16 +71,51 @@
     */
 
     /* ────────────────────────────────────────────────────────────────────────────
-    >>> Magic show re: level 1 on Willemstad-Core
+    >>> Magic show re: level 1 on Willemstad
+    \\\ (hides header/heading level 1)
     ──────────────────────────────────────────────────────────────────────────── */
 
-        div.style-settings-heading[data-id="Willemstad-Core"] + * > .style-settings-container[data-level="1"] {
+        div.style-settings-heading[data-id*="Willemstad"] + * > .style-settings-container[data-level="1"] {
+
             border-left: none;
             padding-left: 0;
-        } /* should remove the lines and paddings */
 
-        div.style-settings-heading[data-id="Willemstad-Core"] + * > .style-settings-heading[data-level="1"] {
-            display: none; /* eventually, [data-id*="Willemstad"] */
+        } /* should remove the lines and paddings*/
+
+            div.style-settings-heading[data-id="Willemstad-Plugins"] + * > * > .style-settings-container[data-level="3"] {
+
+                border-left: none;
+                padding-left: 0;
+
+                & > .setting-item:first-child {
+                    padding-top: 0;
+                }
+
+            } /* removes paddings on lvl 3 for Plugins */
+
+            div.style-settings-heading[data-id="Willemstad-Plugins"] + * > * > .style-settings-heading[data-level="3"] {
+
+                border-bottom: none;
+
+                & > * > .setting-item-name {
+
+                    color: var(--text-accent);
+
+                    > .style-settings-collapse-indicator {
+
+                        margin-left: -1rem;
+                        margin-right: 0.125rem; /* should do this for everything, but this can be done later */
+
+                        /* display: none; */
+
+                    } /* remove collapse indicator */
+                }
+            } /* removes paddings on lvl 3 for Plugins + bottom header + adds colours */
+
+        div.style-settings-heading[data-id*="Willemstad"] + * > .style-settings-heading[data-level="1"] {
+            
+            display: none; 
+
         } /* make level 1 disappear so that I can manoeuver it to allow for unheaded stuff later in the list */
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -296,7 +331,7 @@
         */
     
         /*
-        .setting-item:is([data-id="startup"]) .setting-item-name {
+        .setting-item:is([data-id="startup"]) .setting-item-name > #text::before {
 
             display: inline-block;
 
@@ -308,266 +343,6 @@
             }
         }
         */
-
-
-    /* ────────────────────────────────────────────────────────────────────────────
-    >>> CORE PLUGINS - SEPARATE PLUGIN NAME
-    \\\ add new line for Plugin names, make them neat
-    \\\ set to the first one, then remove lines?
-    \\\ do it by alphabetical order
-    ──────────────────────────────────────────────────────────────────────────── */
-
-    .theme-light, .theme-dark {
-        --border-style-settings: 0.05rem solid var(--background-secondary);
-        --border-style-settings-half: 0.025rem solid var(--background-secondary);
-        --margin-style-settings: 0.5rem;
-    } /* unifies border style */
-
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> Command Palette
-        ───────────────────────────────────────────────────────────────────────── */
-
-        .setting-item:is([data-id="normal-command-palette"]) :is(.setting-item-name)::before {
-
-            content: "Command Palette \A ";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        .setting-item:is([data-id="normal-command-palette"]) {
-
-            border-top: var(--border-style-settings-half);
-            border-bottom: var(--border-style-settings-half);
-
-        } /* adds border around this specific plugin options + adds padding */ 
-
-
-    /* ────────────────────────────────────────────────────────────────────────────
-    >>> COMMUNITY PLUGINS - SEPARATE PLUGIN NAME
-    \\\ add new line for Plugin names, make them neat
-    \\\ set to the first one, then remove lines?
-    \\\ do it by alphabetical order
-    ──────────────────────────────────────────────────────────────────────────── */
-    /*
-    .setting-item:is([data-id="PComm003-margin"],
-    [data-id="PComm001-col-today"],
-    [data-id="PComm027-indicator"]) {
-        margin-top: 1rem;
-    }
-    */
-        /* for top margin, to delineate stuff */
-        /* might not need it, just flush them together */
-
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> (PComm003) Admonitions (2)
-        ───────────────────────────────────────────────────────────────────────── */
-        .setting-item:is([data-id="PComm003-margin"]) :is(.setting-item-name)::before {
-
-            content: "Admonition \A ";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        /*
-        .setting-item:is([data-id="PComm003-margin"],
-        [data-id="admonition-margin-top"]) {
-
-            border-left: var(--border-style-settings);
-            border-right: var(--border-style-settings);
-
-        }
-        */ /* adds padding + left right borders*/ /* lol no need */
-
-        .setting-item:is([data-id="PComm003-margin"]) {
-
-            border-top: var(--border-style-settings);
-            padding-top: 0.25rem;
-
-        } /* top border for top element */
-
-        .setting-item:is([data-id="admonition-margin-top"]) {
-
-            border-bottom: var(--border-style-settings-half);
-            padding-bottom: 0.25rem;
-
-        } /* bottom border for bottom element */
-        
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> (PComm001) Calendar (3)
-        ───────────────────────────────────────────────────────────────────────── */
-
-        .setting-item:is([data-id="PComm001-col-today"]) :is(.setting-item-name)::before {
-
-            content: "📆 Calendar \A ";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        /*
-        .setting-item:is([data-id="PComm001-col-today"],
-        [data-id="PComm001-col-year"],
-        [data-id="PComm001-col-dot"]) {
-
-            border-left: var(--border-style-settings);
-            border-right: var(--border-style-settings);
-
-        }
-        */ /* adds padding */ /* lol no need */
-
-        .setting-item:is([data-id="PComm001-col-today"]) {
-
-            border-top: var(--border-style-settings-half);
-            padding-top: 0.25rem;
-
-        } /* top border for top element */
-
-        .setting-item:is([data-id="PComm001-col-dot"]) {
-
-            border-bottom: var(--border-style-settings-half);
-            padding-bottom: 0.25rem;
-
-        } /* bottom border for bottom element */
-        
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> (PComm027) Footnotes & Citation Indicator (2)
-        ───────────────────────────────────────────────────────────────────────── */
-
-        .setting-item:is([data-id="PComm027-active"]) :is(.setting-item-name)::before {
-
-            content: "🦶📝 Footnotes & Citation Indicator \A ";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        .setting-item:is([data-id="PComm027-active"]) {
-
-            border-top: var(--border-style-settings-half);
-            padding-top: 0.25rem;
-
-        } /* top border for top element */
-
-        .setting-item:is([data-id="PComm027-indicator"]) {
-
-            border-bottom: var(--border-style-settings-half);
-            padding-bottom: 0.25rem;
-
-        } /* bottom border for bottom element */
-
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> (PComm009) Full Calendar (1)
-        ───────────────────────────────────────────────────────────────────────── */
-
-        .setting-item:is([data-id="PComm009-no-halfhour-grid"]) :is(.setting-item-name)::before {
-
-            content: "💯📆 Full Calendar \A ";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        .setting-item:is([data-id="PComm009-no-halfhour-grid"]) {
-
-            /*
-            border-left: var(--border-style-settings);
-            border-right: var(--border-style-settings);
-            */
-
-            border-top: var(--border-style-settings-half);
-            border-bottom: var(--border-style-settings-half);
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-
-        } /* adds border around this specific plugin options + adds padding */
-
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> (PComm002) Sliding Panes (1)
-        ───────────────────────────────────────────────────────────────────────── */
-
-        .setting-item:is([data-id="PComm002-noshadow"]) :is(.setting-item-name)::before {
-
-            content: "Sliding Panes \A ";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        .setting-item:is([data-id="PComm002-noshadow"]) {
-
-            /*
-            border-left: var(--border-style-settings);
-            border-right: var(--border-style-settings);
-            */
-
-            border-top: var(--border-style-settings-half);
-            border-bottom: var(--border-style-settings-half);
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-
-        } /* adds border around this specific plugin options + adds padding */
-
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> (PComm000) Style Settings (1)
-        ───────────────────────────────────────────────────────────────────────── */
-
-        .setting-item:is([data-id="PComm000-blockdesc-appear"]) :is(.setting-item-name)::before {
-
-            content: "⚙️ Style Settings \A ";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        .setting-item:is([data-id="PComm000-blockdesc-appear"]) {
-
-            /*
-            border-left: var(--border-style-settings);
-            border-right: var(--border-style-settings);
-            */
-
-            border-top: var(--border-style-settings-half);
-            border-bottom: var(--border-style-settings-half);
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-
-        } /* adds border around this specific plugin options + adds padding */
-
-        /* ─────────────────────────────────────────────────────────────────────────
-        >>>> (PComm029) Longform Settings (4)
-        ───────────────────────────────────────────────────────────────────────── */
-
-        .setting-item:is([data-id="font-longform"]) :is(.setting-item-name)::before {
-
-            content: "✍️📕 Longform & Writing CSSClass \A";
-            white-space: pre;
-            font-weight: 600;
-            color: var(--text-accent);
-
-        } /* adds plugin name to the top */
-
-        .setting-item:is([data-id="font-longform"]) {
-
-            border-top: var(--border-style-settings-half);
-            padding-top: 0.25rem;
-
-        } /* top border for top element */
-
-        .setting-item:is([data-id="PComm029-justify"]) {
-
-            border-bottom: var(--border-style-settings-half);
-            padding-bottom: 0.25rem;
-
-        } /* bottom border for bottom element */
 
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -607,7 +382,7 @@
 
             content: "Experimental";
             white-space: pre;
-            color: var(--text-on-accent);
+            color: var(--background-primary); /* should provide contrast */
             font-size: 0.7rem;
             font-weight: 500;
 
@@ -632,7 +407,7 @@
 
             content: "follow instructions on the link below";
             white-space: pre;
-            color: var(--text-on-accent);
+            color: var(--background-primary);
             font-size: 0.7rem;
             font-weight: 500;
 
@@ -655,7 +430,7 @@
 
             content: "follow instructions written in the description below";
             white-space: pre;
-            color: var(--text-on-accent);
+            color: var(--background-primary);
             font-size: 0.7rem;
             font-weight: 500;
 
@@ -693,7 +468,7 @@
 
             content: "Under Construction\a";
             white-space: pre;
-            color: var(--text-on-accent);
+            color: var(--background-primary);
             font-size: 0.8rem;
             font-weight: 500;
 

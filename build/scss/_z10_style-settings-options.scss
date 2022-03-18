@@ -72,11 +72,17 @@ settings:
             description: "When enabled, this enables multiple options to customise the startup screen."
             default: true
     -
-            id: bg-start
-            title: Choose your Startup Background Image
+            id: bg-start-light
+            title: Choose your Startup Background Image (Light mode)
             type: variable-text
             description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
-            default: "url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg)"
+            default: "url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.webp)"
+    -
+            id: bg-start-dark
+            title: Choose your Startup Background Image (Dark mode)
+            type: variable-text
+            description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
+            default: "url(https://images.unsplash.com/photo-1644773741876-e5f43ac020ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.webp)"
     -
             id: startup-grid
             title: Apply a Dotted Grid Overlay to the Startup Screen
@@ -294,7 +300,7 @@ settings:
             description:
             type: heading
             level: 3
-            collapsed: true
+            collapsed: false
     -
                 id: modal-width-settings
                 title: Modal Widths — Settings
@@ -338,7 +344,7 @@ settings:
             description:
             type: heading
             level: 3
-            collapsed: true
+            collapsed: false
     -
                 id: modal-height-settings
                 title: Modal Heights — Settings
@@ -1000,7 +1006,7 @@ settings:
      title: Callouts
      type: heading
      description: "Customise your Callouts here! Current available classes: 'table', 'infobox', 'aside', 'aside-no-title', 'kanban', 'kanban-no-title'"
-     level: 1
+     level: 2
      collapsed: false
     -
         id: margin-callout
@@ -1047,7 +1053,14 @@ settings:
      title: 🛠️ Core Plugins
      type: heading
      description: "Command Palette"
-     level: 1
+     level: 2
+     collapsed: false
+    -
+     id: PCore001-settings
+     title: Command Palette
+     description: 
+     type: heading
+     level: 3
      collapsed: false
     -
             id: normal-command-palette
@@ -1061,7 +1074,14 @@ settings:
      title: 🛠️ Community Plugins
      type: heading
      description: "Admonitions, Calendar, Footnotes & Citation Indicator, Sliding Panes, Style Settings"
-     level: 1
+     level: 2
+     collapsed: false
+    -
+     id: PComm003-settings
+     title: Admonitions
+     description: 
+     type: heading
+     level: 3
      collapsed: false
     -
         id: PComm003-margin
@@ -1084,6 +1104,13 @@ settings:
         min: 0
         max: 3
         step: 0.05
+    -
+     id: PComm001-settings
+     title: 📆 Calendar
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
     -
         id: PComm001-col-today
         title: Change colour, Font of today's date
@@ -1115,6 +1142,13 @@ settings:
         default-light: hsl(155, 100%, 37%)
         default-dark: hsl(155, 100%, 37%)
     -
+     id: PComm027-settings
+     title: 🦶📝 Footnotes & Citation Indicator
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
         id: PComm027-active
         title: Activate Footnotes and Citation Indicator and Relevant Settings
         note: 🦶📝 Footnotes & Citation Indicator
@@ -1129,6 +1163,13 @@ settings:
         description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin. ⚠️NOTE: PLEASE use your apostrophes (' ') to ensure the new indicator renders!"
         default: '⦿'
     -
+     id: PComm009-settings
+     title: 💯📆 Full Calendar
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
         id: PComm009-no-halfhour-grid
         title: Remove Half-hour Dotted Lines
         note: 💯📆 Full Calendar
@@ -1136,13 +1177,26 @@ settings:
         description: "When enabled, this removes the half-hour dotted lines from the Full Calendar calendar view."
         default: false
     -
+     id: PComm002-settings
+     title: Sliding Panes
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
         id: PComm002-noshadow
         title: No shadows between two panes
         note: Sliding Panes
         type: class-toggle
         description: When enabled, this removes the shadows between two sliding panes when using the Sliding Panes plugin.
         default: true
-
+    -
+     id: PComm000-settings
+     title: ⚙️ Style Settings
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
     -
         id: PComm000-blockdesc-appear
         title: Keep Heading Block Description visible
@@ -1151,6 +1205,13 @@ settings:
         description: When enabled, this keeps the heading description in the Style Settings visible when said option is toggled.
         default: true
     -
+     id: longform-settings
+     title: ✍️📕 Longform plugin & Writing CSSClass
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -    
         id: font-longform
         title: Font Typeface — Longform & Writing notes
         description: "Globally overrides all font typefaces for specific use with longform & writing notes, except for code, which still uses the monospace font."
@@ -1186,14 +1247,14 @@ settings:
      title: 🛠️ CSSClass Settings
      type: heading
      description: "LaTeX"
-     level: 1
+     level: 2
      collapsed: true
     -
-     id: longform-settings
+     id: latex-settings
      title: ➗ LaTeX CSSClass
      description: "Settings for the 'latex' CSSClass."
      type: heading
-     level: 2
+     level: 3
      collapsed: false
     -
         id: size-cssclass-latex
@@ -1259,7 +1320,7 @@ settings:
      title: ⚠️🎨 Advanced Settings — Colours
      type: heading
      description: "Ever wanted to change every single element's colour? Here's your chance to do so! ⚠️ PLEASE ONLY USE THIS IF YOU ARE ABSOLUTELY SURE OF WHAT YOU ARE DOING. In the event you might have changed something inadvertently, reset to the theme's original colours using the button beside the colour picker."
-     level: 1
+     level: 2
      collapsed: true
     -
             id: background-primary

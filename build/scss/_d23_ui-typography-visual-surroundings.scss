@@ -80,7 +80,7 @@
         >>> COLOURS OF TOP OF A CODEBLOCK
         ───────────────────────────────────────────────────────────────────────── */
             .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-                background-color: var(--background-secondary-alt-2);
+                background-color: var(--background-secondary); /* was background-secondary-alt-2 - phased out */
             }
 
     /* ────────────────────────────────────────────────────────────────────────────

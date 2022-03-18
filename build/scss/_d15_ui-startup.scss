@@ -154,48 +154,105 @@ body:not(.no-animations).startup-revolution {
 
 /* startup revolution */
 
+
     .theme-light, .theme-dark {
-        --bg-start: url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg);
+        --bg-start: url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.jpg); /* former, to be removed */
+        --bg-start-light: url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.webp);
+        --bg-start-dark: url(https://images.unsplash.com/photo-1644773741876-e5f43ac020ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.webp);
     }
 
-    .startup-revolution {
-        .progress-bar {
-            justify-content: start;
+    .theme-light {
 
-            background: /* black */ var(--bg-start) no-repeat;
-            background-size: cover;
-
-        }
-        
-
-        .progress-bar-indicator {
-            margin: 0 0;
-            width: 100vw;
-            background-color: hsla(0, 0%, 0%, 0.5);
-        } /* takes up whole bar */
-
-        .progress-bar-message {
-
-            position: absolute;
-            width: 100%;
-            margin-bottom: 0;
-            margin-top: 8px; /* change this alongside the progress-bar indic. if you change away from default of 8px */
-
-            line-height: 150%;
-            font-size: 1.5rem;
-            padding-left: 0.5rem;
-
-            background-color: hsla(0, 0%, 0%, 0.3);
-
-            &.u-center-text {
-                text-align: left;
-            } /* fix this */
-
-        }
+        --text-message-progressbar: var(--background-primary);
 
     }
 
-    .startup-grid.startup-revolution {
+    .theme-dark {
+
+        --text-message-progressbar: var(--background-primary);
+    
+    }
+
+    /* theme light image */
+    .startup-revolution.theme-light {
+            .progress-bar {
+                justify-content: start;
+
+                background: /* black */ var(--bg-start-light) no-repeat;
+                background-size: cover;
+
+            }
+            
+
+            .progress-bar-indicator {
+                margin: 0 0;
+                width: 100vw;
+                background-color: hsla(0, 0%, 0%, 0.5);
+            } /* takes up whole bar */
+
+            .progress-bar-message {
+
+                position: absolute;
+                width: 100%;
+                margin-bottom: 0;
+                margin-top: 8px; /* change this alongside the progress-bar indic. if you change away from default of 8px */
+
+                line-height: 150%;
+                font-size: 1.5rem;
+                padding-left: 0.5rem;
+
+                background-color: hsla(0, 0%, 0%, 0.3);
+                color: var(--text-message-progressbar);
+
+                &.u-center-text {
+                    text-align: left;
+                } /* fix this */
+
+            }
+
+    }
+
+    /* theme dark image */
+    .startup-revolution.theme-dark {
+            .progress-bar {
+                justify-content: start;
+
+                background: /* black */ var(--bg-start-dark) no-repeat;
+                background-size: cover;
+
+            }
+            
+
+            .progress-bar-indicator {
+                margin: 0 0;
+                width: 100vw;
+                background-color: hsla(0, 0%, 0%, 0.5);
+            } /* takes up whole bar */
+
+            .progress-bar-message {
+
+                position: absolute;
+                width: 100%;
+                margin-bottom: 0;
+                margin-top: 8px; /* change this alongside the progress-bar indic. if you change away from default of 8px */
+
+                line-height: 150%;
+                font-size: 1.5rem;
+                padding-left: 0.5rem;
+
+                background-color: hsl(0, 0%, 100%, 0.2);
+                color: var(--text-message-progressbar);
+
+                &.u-center-text {
+                    text-align: left;
+                } /* fix this */
+
+            }
+
+    }
+
+    /* theme light grid */
+    .startup-grid.startup-revolution.theme-light {
         .progress-bar::before {
             content: '';
             position: absolute;
@@ -205,6 +262,23 @@ body:not(.no-animations).startup-revolution {
             bottom: 0;
             /* background: hsla(0, 0%, 50%, 0.5); */
             background-image: radial-gradient(var(--text-on-accent) 1px, transparent 1px);
+            background-size: 8px 8px;
+
+            filter: blur(1px); /* test */
+        }
+    } /* comment this out if the dotted background isn't to your liking */
+
+    /* theme dark grid */
+    .startup-grid.startup-revolution.theme-dark {
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            /* background: hsla(0, 0%, 50%, 0.5); */
+            background-image: radial-gradient(var(--text-accent) 1px, transparent 1px);
             background-size: 8px 8px;
 
             filter: blur(1px); /* test */
