@@ -7,31 +7,37 @@
         ──────────────────────────────────────────────────────────────────────── */
         .markdown-preview-section :is(h1),
         .admonition-content > h1,
+        .callout-content h1,
         .HyperMD-header-1.cm-line{
             background-color: var(--col-h1-bg);
         }
         .markdown-preview-section :is(h2),
         .admonition-content > h2,
+        .callout-content h2,
         .HyperMD-header-2.cm-line{
             background-color: var(--col-h2-bg);
         }
         .markdown-preview-section :is(h3),
         .admonition-content > h3,
+        .callout-content h3,
         .HyperMD-header-3.cm-line{
             background-color: var(--col-h3-bg);
         }
         .markdown-preview-section :is(h4),
         .admonition-content > h4,
+        .callout-content h4,
         .HyperMD-header-4.cm-line{
             background-color: var(--col-h4-bg);
         }
         .markdown-preview-section :is(h5),
         .admonition-content > h5,
+        .callout-content h5,
         .HyperMD-header-5.cm-line{
             background-color: var(--col-h5-bg);
         }
         .markdown-preview-section :is(h6),
         .admonition-content > h6,
+        .callout-content h6,
         .HyperMD-header-6.cm-line{
             background-color: var(--col-h6-bg);
         }
@@ -41,32 +47,38 @@
 ───────────────────────────────────────────────────────────────────────────────
     >>> (OPTIONS) Δ Heading Font Colours
     ───────────────────────────────────────────────────────────────────────────
-    >>>> for READING MODE
+    >>>> for READING MODE (and some editing mode for adm/callouts, lol, xD)
     \\\\ more specificity better
     \\\\ else Calendars etc. get affected with global H changes
     ──────────────────────────────────────────────────────────────────────── */
         .markdown-preview-view h1,
-        .admonition-content > h1 {
+        .admonition-content > h1,
+        .callout-content h1 {
             color: var(--col-h1);
         }
         .markdown-preview-view h2,
-        .admonition-content > h2 {
+        .admonition-content > h2,
+        .callout-content h2 {
             color: var(--col-h2);
         }
         .markdown-preview-view h3,
-        .admonition-content > h3 {
+        .admonition-content > h3,
+        .callout-content h3 {
             color: var(--col-h3);
         }
         .markdown-preview-view h4,
-        .admonition-content > h4 {
+        .admonition-content > h4,
+        .callout-content h4 {
             color: var(--col-h4);
         }
         .markdown-preview-view h5,
-        .admonition-content > h5 {
+        .admonition-content > h5,
+        .callout-content h5 {
             color: var(--col-h5);
         }
         .markdown-preview-view h6,
-        .admonition-content > h6 {
+        .admonition-content > h6,
+        .callout-content h6 {
             color: var(--col-h6);
         }
     /* ─────────────────────────────────────────────────────────────────────────
