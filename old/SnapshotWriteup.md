@@ -2,7 +2,8 @@
 
 ### Currently includes:
 v0.0.1a1 | v0.0.2 | v0.0.3 | v0.0.4 | v0.0.5 | v0.0.6
-v0.1 Refshaleøen (.0, .1, .2)
+v0.1 Refshaleøen (.0, .1, .2, .5)
+v0.2 Christianshavn (.4, .7)
 
 ## Changelogs
 
@@ -68,3 +69,7 @@ v0.1 Refshaleøen (.0, .1, .2)
 ✨ __New plugin support__
 - Settings Search
 - Longform
+
+---
+
+**All other changelogs from v0.1 onwards, see the Releases.** Changelogs are not produced for every release.
