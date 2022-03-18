@@ -380,7 +380,7 @@ settings:
         id: misc
         title: "Miscellany"
         type: heading
-        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width, Sanctum-style Header Collapse Indicator, Shimmering Focus-style Bold Typeface for Appearance, Hotkeys and Community Plugins options, Callout Margin Size
+        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width, Sanctum-style Header Collapse Indicator, Shimmering Focus-style Bold Typeface for selected options
         level: 2
         collapsed: false
     -
@@ -424,16 +424,6 @@ settings:
                 type: class-toggle
                 description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
                 default: true
-    -
-                id: margin-callout
-                title: Callout Margin Size
-                type: variable-number-slider
-                description: "Change the size of Callout margins."
-                format: em
-                default: 0.5
-                min: 0
-                max: 3
-                step: 0.05
     -
     -
         id: "?2"
@@ -1002,9 +992,56 @@ settings:
 */
 
 /* @settings
-name: "🛠️ Plugins and CSSClass" 
+name: "🛠️ Callouts, Plugins and CSSClass" 
 id: Willemstad-Plugins
 settings:
+    -
+     id: callouts-settings
+     title: Callouts
+     type: heading
+     description: "Customise your Callouts here! Current available classes: 'table', 'infobox', 'aside', 'aside-no-title', 'kanban', 'kanban-no-title'"
+     level: 1
+     collapsed: false
+    -
+        id: margin-callout
+        title: Callout Margin Size
+        type: variable-number-slider
+        description: "Change the size of Callout margins."
+        format: em
+        default: 0.5
+        min: 0
+        max: 3
+        step: 0.05
+    -
+        id: height-callout-kanban
+        title: "'Kanban' Callout — Callout Height"
+        type: variable-number-slider
+        description: "Set the callout height of the Kanban callouts."
+        format: rem
+        default: 30
+        min: 8
+        max: 120
+        step: 0.5
+    -
+        id: height-header-kanban
+        title: "'Kanban' Callout — Header Height"
+        type: variable-number-slider
+        description: "Set the header height of the Kanban callouts."
+        format: rem
+        default: 3.5
+        min: 1
+        max: 5
+        step: 0.1
+    -
+        id: width-ul-kanban
+        title: "'Kanban' Callout — Lane Width"
+        type: variable-number-slider
+        description: "Set the kanban lane width of the Kanban callouts."
+        format: px
+        default: 272
+        min: 80
+        max: 1000
+        step: 1
     -
      id: plugin-core
      title: 🛠️ Core Plugins
