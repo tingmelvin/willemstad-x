@@ -1,5 +1,7 @@
 ![Willemstad-X](https://user-images.githubusercontent.com/43155211/153649116-51cf06e1-3679-4b9e-b49d-abe3321485f7.png)
 
+
+
 # Willemstad X (Extended)
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
 
@@ -16,8 +18,6 @@ Alternatively, download the release, and drop `obsidian.css` into your `.obsidia
 ### Should I use this or Willemstad for Shimmering Focus?
 It's up to you! I intend to maintain Willemstad for SF _without too much effort (read: not minimally, but almost minimally)_, since I don't think there are too many more features I'd like to add, or can add without conflicting with Shimmering Focus' base options. I don't want to conflict too many changes with Shimmering Focus as well! But if you are a power user and use most of Shimmering Focus's stuff, I'd suggest you stay with Shimmering Focus. Chris is way better/faster at doing CSS stuff than I am, too!
 
-Willemstad for SF got featured _twice_ in Eleanor's roundup ([1](https://www.obsidianroundup.org/2022-02-05/), [2](https://www.obsidianroundup.org/2022-02-12/)) (_yes, **the** Roundup_), versus _once_ for Willemstad X ([1](https://www.obsidianroundup.org/2022-02-19/)) so if that's the deciding factor, then go for that!
-
 ⚠️ Almost all UI styling (sans modals) that are present in Willemstad X, are not in Willemstad for SF. Willemstad X also encodes the DM family of fonts and Manrope, but this is not included in the Willemstad for SF files.
 
 ### Why is Inter embedded into Willemstad X, isn't that included in Obsidian proper?
@@ -26,11 +26,11 @@ Yes, it is. Inter is included in Obsidian proper. However, most people will down
 ### I'd like to change something or propose something. What's the easiest way to do so?
 If it's something you reckon people would need/want as well, the easiest way to request changes is to use the Issues tab here on GitHub. If you would like to change something that you can reckon you rather do it yourself, the best way would be to use a snippet. I recommend the [snippets](https://github.com/Mara-Li/Obsidian-Snippet-collection) by Mara Li, and the theme overlay [Absolve by mulfok](https://github.com/mulfok/obsidian-absolve).
 
-Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemstad yourself via the files in the `build` folder, and fork the repo and edit the relevant files you want to. To understand what each specific SCSS file consists of, consult [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#SCSS%20Compile%20Order).
+Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemstad yourself via the files in the `build` folder, and fork the repo and edit the relevant files you want to. To understand what each specific SCSS file consists of, consult [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#SCSS%20Compile%20Order). This might be outdated.
 
 ---
 
-### Supported Community Plugins
+## Supported Community Plugins
 Like Primary, Willemstad aims to get the core features right before delving into plugins. However, I totally agree that some plugins are almost essential to the Obsidian experience, and they were my daily drivers too, so they did get a bit of work done to it.
 1. Style Settings
 2. Calendar
@@ -38,30 +38,19 @@ Like Primary, Willemstad aims to get the core features right before delving into
 4. Admonitions
 5. Dataview
 7. Breadcrumbs
-8. Get Info
-9. CookLang Plugin
-10. Emoji Toolbar
-11. Maps of Content
-12. cMenu
-13. Footnote & Citation Indicator
-14. Longform
-15. Settings Search
-16. LanguageTool Integration
+8. Advanced Tables
+9. Full Calendar
+10. Get Info
+11. CookLang Plugin
+12. Emoji Toolbar
+13. Maps of Content
+14. cMenu
+15. Footnote & Citation Indicator
+16. Longform
+17. Settings Search
+18. LanguageTool Integration
 
-### Things to complete + WIP
-1. Colour Palettes
-2. Fixes for mobile (albeit not offering official support yet)
-3. ... and a bunch of other stuff in my Obsidian file that I didn't write it here. However, most of what I have in mind can be found [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#Additional%20stuff%20that%20I%20need%20to%20add).
-
----
-
-### Just another word
-Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
-That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
-
----
-
-### Attribution
+## Attribution
 As is with most theme codes in Obsidian, many pieces/snippets of code have been cobbled together from whatever the hive mind has created. It is therefore not possible to accurately and fully attribute everyone's efforts, which might have come into and been adopted by this theme. That being said, there are multiple pieces of instrumental code that I can attribute to, which I do so here:
 - Multi-Colour Highlighting, adapted from [Zhang Chenyu (@Atlas)](https://github.com/zcysxy)'s and [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code
 - Varying/Readable Underlines, co-written by myself and [Cecilia May](https://github.com/ceciliamay)
@@ -73,9 +62,23 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
 - Minimal Cards and Image Grids, from [Stephan Ango](https://github.com/kepano)
 
+## Theme Documentation (currently a work in progress)
+Available [here](https://willemstad.cc).
+
+### Note on `callouts`
+Unfortunately the theme documentations aren't complete, but currently, Willemstad supports `table` (legacy; sherlocked by Licat into Obsidian 0.14.1), `infobox`, `aside`, `aside-no-title`, `kanban` and `kanban-no-title`.
+
+## Mentions in the Obsidian Roundup
+[12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
+
+and of the original Willemstad snippet for Shimmering Focus:
+[12th February](https://www.obsidianroundup.org/2022-02-12/) and [5th February](https://www.obsidianroundup.org/2022-02-05/)
+
+### Just another word
+Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
+That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
+
+---
 ### License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This repository is licensed under the terms of the MIT License.
-
-### Theme Documentation (currently a work in progress)
-Available [here](https://willemstad.cc).
