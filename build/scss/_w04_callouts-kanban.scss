@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────────────    
-> [W04] Callout Kanban
+> [W04] Kanban Callouts
 \ :D by me!
 ──────────────────────────────────────────────────────────────────────────────── */
 
@@ -27,6 +27,7 @@ div.callout[data-callout="kanban"] {
 
         background-color: var(--background-secondary);
         padding-bottom: 0;
+        padding-left: 1rem;
 
         .callout-icon {
             display: none;
@@ -141,6 +142,193 @@ div.callout[data-callout="kanban-no-title"] {
 
 
     :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+
+        height: var(--height-ul-kanban);
+        width: var(--width-ul-kanban);
+        overflow: scroll;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W04A] Kanban Admonition
+\ :D by me!
+──────────────────────────────────────────────────────────────────────────────── */
+
+.admonition-kanban {
+  
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .admonition-title {
+        /* display: none */ /* use if not using a title */
+        border-top-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-top-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        background-color: var(--background-secondary);
+        padding-bottom: 0;
+        padding-left: 1rem;
+
+        .admonition-title-icon {
+            display: none;
+        }
+    }
+
+    .admonition-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.5rem 0.25rem;
+        /* border-radius: calc(var(--shape-roundish) * 2); */ /* use if not using a title */
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: var(--height-callout-kanban);
+        align-content: flex-start;
+    }
+
+
+    .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+
+        height: var(--height-ul-kanban);
+        width: var(--width-ul-kanban);
+        overflow: scroll;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+    }
+}
+
+/* kanban without title */
+.admonition-kanban-no-title {
+  
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .admonition-title {
+        display: none; /* use if not using a title */
+
+        background-color: var(--background-secondary);
+        padding-bottom: 0;
+
+        .admonition-title-icon {
+            display: none;
+        }
+    }
+
+    .admonition-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.5rem 0.25rem;
+        border-radius: calc(var(--shape-roundish) * 2); /* use if not using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: var(--height-callout-kanban);
+        align-content: flex-start;
+    }
+
+
+    .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
         margin-bottom: 0;
         margin-top: 0;
         background-color: transparent;

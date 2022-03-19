@@ -12,6 +12,7 @@
 @use 'scss/_d12_ui-titlebar';
 @use 'scss/_d13_ui-statusbar';
 @use 'scss/_d14_ui-sidedocks';
+@use 'scss/_d14a_ui-sidedocks_remix';
 @use 'scss/_d15_ui-startup';
 @use 'scss/_d16_ui-backlink';
 @use 'scss/_d21_ui-scrollbars_resize-handles';
@@ -36,10 +37,12 @@
 @use 'scss/_w02_admonition-tables-lp';
 @use 'scss/_w03_callouts-aside';
 @use 'scss/_w04_callouts-kanban';
+@use 'scss/_w05_callouts-imggrid';
 @use 'scss/_x01_cssclass-latex';
 @use 'scss/_y1_plugins-core';
 @use 'scss/_y2_plugins-community';
-@use 'scss/_y2c000_plugins-comm-ss';
+@use 'scss/_y3a_pcomm-ss-gen';
+@use 'scss/_y3b_pcomm-ss-remix';
 @use 'scss/_z10_style-settings-options';
 @use 'scss/_z20_base64-font-encoding';
 @use 'scss/_z30_compatibility-info';

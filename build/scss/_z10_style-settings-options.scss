@@ -659,12 +659,6 @@ settings:
         level: 2
         collapsed: true
     -
-        id: gradient-headers
-        title: "Gradient Headers"
-        type: class-toggle
-        description: "When enabled, the headers will have a colour gradient applied to them."
-        default: false
-    -
         id: typography-h-col-text
         title: 🖌️🔤 Colours — Header Text
         type: heading
@@ -725,6 +719,55 @@ settings:
             format: hsl
             default-light: hsl(184, 74%, 20%)
             default-dark: hsl(155, 100%, 37%)
+    -
+        id: typography-h-col-text-grad
+        title: 🖌️🔤 Gradient Colours
+        type: heading
+        description: 'Changes the gradient colours of the headers (H1–H6). Use the setting "Gradient Headers" within to activate colour gradients.'
+        level: 4
+        collapsed: true
+    -
+            id: gradient-headers
+            title: "Gradient Headers"
+            type: class-toggle
+            description: "When enabled, the headers will have a colour gradient applied to them."
+            default: false
+    -
+            id: col-h1-grad
+            title: Font Colour (Gradient) — H1
+            description:
+            type: variable-text
+            default: linear-gradient( 160deg, hsl(184deg 75% 20%) 0%, hsl(182deg 100% 19%) 21%, hsl(179deg 100% 21%) 30%, hsl(176deg 100% 23%) 39%, hsl(173deg 100% 26%) 46%, hsl(170deg 100% 28%) 54%, hsl(166deg 100% 30%) 61%, hsl(162deg 100% 33%) 69%, hsl(159deg 100% 35%) 79%, hsl(155deg 100% 37%) 100% )
+    -
+            id: col-h2-grad
+            title: Font Colour (Gradient) — H2
+            description:                
+            type: variable-text
+            default: linear-gradient( 160deg, hsl(155deg 100% 37%) 0%, hsl(164deg 100% 35%) 21%, hsl(175deg 100% 33%) 30%, hsl(187deg 100% 34%) 39%, hsl(197deg 100% 38%) 46%, hsl(204deg 100% 41%) 54%, hsl(210deg 100% 42%) 61%, hsl(214deg 100% 41%) 69%, hsl(219deg 100% 38%) 79%, hsl(238deg 70% 39%) 100% )
+    -
+            id: col-h3-grad
+            title: Font Colour (Gradient) — H3
+            description:                
+            type: variable-text
+            default: linear-gradient( 160deg, hsl(238deg 70% 39%) 0%, hsl(221deg 100% 36%) 21%, hsl(216deg 100% 38%) 30%, hsl(212deg 100% 40%) 39%, hsl(208deg 100% 40%) 46%, hsl(204deg 100% 40%) 54%, hsl(200deg 100% 40%) 61%, hsl(196deg 100% 40%) 69%, hsl(192deg 100% 39%) 79%, hsl(188deg 100% 39%) 100% )
+    -
+            id: col-h4-grad
+            title: Font Colour (Gradient) — H4
+            description:                
+            type: variable-text
+            default: linear-gradient( 160deg, hsl(19deg 100% 57%) 0%, hsl(22deg 100% 56%) 21%, hsl(25deg 100% 56%) 30%, hsl(28deg 100% 55%) 39%, hsl(30deg 100% 55%) 46%, hsl(33deg 100% 54%) 54%, hsl(35deg 100% 54%) 61%, hsl(37deg 100% 54%) 69%, hsl(39deg 100% 54%) 79%, hsl(41deg 100% 55%) 100% )
+    -
+            id: col-h5-grad
+            title: Font Colour (Gradient) — H5
+            description:                
+            type: variable-text
+            default: linear-gradient( 160deg, hsl(41deg 100% 55%) 0%, hsl(34deg 93% 55%) 21%, hsl(27deg 83% 55%) 30%, hsl(19deg 70% 53%) 39%, hsl(11deg 58% 50%) 46%, hsl(2deg 52% 46%) 54%, hsl(352deg 58% 38%) 61%, hsl(343deg 68% 30%) 69%, hsl(334deg 83% 22%) 79%, hsl(326deg 100% 15%) 100% )
+    -
+            id: col-h6-grad
+            title: Font Colour (Gradient) — H6
+            description:
+            type: variable-text
+            default: linear-gradient( 160deg, hsl(324deg 100% 15%) 0%, hsl(330deg 62% 23%) 12%, hsl(334deg 46% 31%) 26%, hsl(337deg 38% 38%) 40%, hsl(340deg 32% 46%) 53%, hsl(343deg 32% 53%) 65%, hsl(345deg 38% 61%) 76%, hsl(348deg 48% 69%) 85%, hsl(350deg 65% 77%) 93%, hsl(352deg 100% 85%) 100% )
     -
         id: typography-h-col-bg
         title: 🖌️🚥 Colours — Header Background
@@ -894,9 +937,9 @@ settings:
         collapsed: true
     -
             id: table-lp-magic
-            title: "✨ Live Preview Almost-True Rendering"
+            title: "✨ Almost-True Rendering"
             type: class-toggle
-            description: "When enabled, this renders Live Preview Tables congruently similar to Reading mode. ⚠️ Please ENSURE you use a true monospace font for the 'Font Typeface — Monospace' option in Typography > Font Typeface Customisation, and have the Advanced Tables plugin with the 'Pad cell width using spaces' option turned on for it to work properly. You are strongly encouraged to consider using the other  option right below this instead."
+            description: "When enabled, this renders Source mode and being-edited Live Preview tables congruently similar to Reading mode and rendered Live Preview tables."
             default: false
     -
             id: placeholder-co-1
@@ -961,7 +1004,7 @@ settings:
             id: table-min-space
             title: Space Maximiser (removes all margins/paddings)
             type: class-toggle
-            description: When enabled, all margins and paddings of/in the tables will be removed. ⚠️ This option is not meant to be aesthetically pleasing.
+            description: When enabled, all margins and paddings of/in the tables will be removed.
             default: false
     -
             id: table-set-minmax
@@ -979,7 +1022,7 @@ settings:
                 id: width-tables-min
                 title: "Minimum Table Width"
                 type: variable-number-slider
-                description: "Set the minimum width your tables should be. ⚠️ This option only works if the 'Set Minimum and Maximum Table Widths' option is enabled."
+                description: "Set the minimum width your tables should be."
                 format: rem
                 default: 2.5
                 min: 0.5
@@ -989,7 +1032,7 @@ settings:
                 id: width-tables-max
                 title: "Maximum Table Width"
                 type: variable-number-slider
-                description: "Set the maximum width your tables should be. ⚠️ This option only works if the 'Set Minimum and Maximum Table Widths' option is enabled."
+                description: "Set the maximum width your tables should be. "
                 format: rem
                 default: 25
                 min: 0.5
@@ -1160,7 +1203,7 @@ settings:
         title: Change Gutter Indicator
         note: 🦶📝 Footnotes & Citation Indicator
         type: variable-text
-        description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin. ⚠️NOTE: PLEASE use your apostrophes (' ') to ensure the new indicator renders!"
+        description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin."
         default: '⦿'
     -
      id: PComm009-settings
