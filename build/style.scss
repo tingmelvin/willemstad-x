@@ -41,8 +41,9 @@
 @use 'scss/_x01_cssclass-latex';
 @use 'scss/_y1_plugins-core';
 @use 'scss/_y2_plugins-community';
-@use 'scss/_y3a_pcomm-ss-gen';
-@use 'scss/_y3b_pcomm-ss-remix';
+@use 'scss/_y3a00a_pcomm-ss-gen';
+@use 'scss/_y3a00b_pcomm-ss-remix';
+@use 'scss/_y3a04_pcomm-dataview_tables';
 @use 'scss/_z10_style-settings-options';
 @use 'scss/_z20_base64-font-encoding';
 @use 'scss/_z30_compatibility-info';
