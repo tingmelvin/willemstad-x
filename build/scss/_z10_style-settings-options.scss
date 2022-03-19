@@ -3,7 +3,7 @@
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* @settings
-name: "⭕ Core" 
+name: "Core" 
 id: Willemstad-Core
 settings:
     -
@@ -24,7 +24,7 @@ settings:
         default: false
     -
         id: col-palette
-        title: "🎨 Colour Palettes"
+        title: "Colour Palettes"
         description: "Choose a colour palette!"
         type: class-select
         allowEmpty: false
@@ -47,7 +47,7 @@ settings:
                 value: custom-colors
     -
         id: true-black
-        title: "⚫ True Black mode"
+        title: "True Black mode"
         type: class-toggle
         description: "When enabled, this makes the dark mode True Black."
         default: false
@@ -237,7 +237,7 @@ settings:
                     value: default
     -
                 id: col-sd
-                title: '⏸️🖌️ Colours'
+                title: 'Colours'
                 type: variable-themed-color
                 description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Styled Bars, and all colours for the Floating Tabs. Does not affect the default bars. [For Yellow | hsl(41, 100%, 55%)]' 
                 opacity: true
@@ -246,14 +246,14 @@ settings:
                 default-dark: hsl(41, 100%, 55%)
     -
                 id: custom-ft
-                title: '⏸️✨ Customisation — Floating Tabs'
+                title: 'Customisation — Floating Tabs'
                 description: 'If you have selected the Floating Tabs option in the Sidebars (Side Docks) style setting, customise the Floating Tabs here.'
                 type: heading
                 level: 3
                 collapsed: false
     -
                     id: sd-opacity-none
-                    title: '💨 Disappearing Floating Tabs'
+                    title: 'Disappearing Floating Tabs'
                     type: class-toggle
                     description: 'If toggled, Floating Tabs will disappear when not hovered.'
                     default: false
@@ -438,38 +438,38 @@ settings:
         collapsed: false
     -
         id: support-willemstad
-        title: 😍 Support the development of Willemstad
+        title: Support the development of Willemstad
         type: heading
         level: 2
         description: 'Hi! I hope you enjoy Willemstad. There are a few ways you can support its continuing development:'
         collapsed: false
     -
         id: support-willemstad-github
-        title: ⭐ Star the repository on Github!
+        title: Star the repository on Github!
         type: class-toggle
         default: false
         description: https://github.com/tingmelvin/willemstad-x
     -
         id: support-willemstad-issue
-        title: 🎫 Submit an issue or a feature request on Github!
+        title: Submit an issue or a feature request on Github!
         type: class-toggle
         default: false    
         description: https://github.com/tingmelvin/willemstad-x/issues
     -
         id: support-willemstad-obsidian
-        title: ☀️ Purchase a Catalyst license with Obsidian!
+        title: Purchase a Catalyst license with Obsidian!
         type: class-toggle
         default: false
         description: https://obsidian.md/pricing
 */
 
 /* @settings
-name: "✍️ Typography" 
+name: "Typography" 
 id: Willemstad-Typography
 settings:
     -
         id: font-pairings
-        title: ✍️✨ Font Pairings + Enable Custom Fonts
+        title: Font Pairings + Enable Custom Fonts
         description: 'There are two suggested Font Pairings with Willemstad, available here. These options here are quick options provided. To override them, please select "Custom Fonts".'
         type: class-select
         allowEmpty: false
@@ -486,19 +486,19 @@ settings:
                 value: fp-custom
     -
         id: yaml-coloured
-        title: 🌈 Coloured YAML
+        title: Coloured YAML
         type: class-toggle
         description: When enabled, YAML will be coloured selectively to increase readabiity.
         default: true
     -
         id: smol-headers
-        title: "Smaller Header Hexes (#)" 
+        title: "Smaller Header Hexes" 
         type: class-toggle
         description: "When enabled, the header hex prefix (#) will be made smaller."
         default: true
     -
         id: typography-typeface
-        title: ✍️🔤 Font Typeface
+        title: Font Typeface
         type: heading
         description: Core typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel.
         level: 2
@@ -553,20 +553,20 @@ settings:
             default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
             id: mermaid-font
-            title: "Font Typeface — Mermaid.js 📊"
+            title: "Font Typeface — Mermaid.js"
             description: Changes font for the in-built Mermaid.js visualisations in the theme.
             type: variable-text
             default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
         id: typography-size
-        title: ✍️🀄 Font Size
+        title: Font Size
         type: heading
         description: Options to change default font sizes (relative to the normal font size). Table-specific font size customisation options are listed within the "Tables" heading.
         level: 2
         collapsed: true
     -
         id: size-font-searchbox
-        title: 🔡 Font Size — Small Elements
+        title: Font Size — Small Elements
         type: variable-number-slider
         description: Use this setting to change the font size of smaller elements.
         format: "em"
@@ -576,7 +576,7 @@ settings:
         step: 0.05
     -
         id: size-font-nav
-        title: 🔡 Font Size — Navigation Pane
+        title: Font Size — Navigation Pane
         type: variable-number-slider
         description: Use this setting to change the font size of the navigation pane.
         format: "em"
@@ -653,14 +653,14 @@ settings:
             format: em
     -
         id: h-col
-        title: 🖌️🔤 Colours — Headers
+        title: Colours — Headers
         type: heading
         description: Change the font and background colours of the headers (H1–H6) here.
         level: 2
         collapsed: true
     -
         id: typography-h-col-text
-        title: 🖌️🔤 Colours — Header Text
+        title: Colours — Header Text
         type: heading
         description: Changes the font colours of the headers (H1–H6).
         level: 3
@@ -721,7 +721,7 @@ settings:
             default-dark: hsl(155, 100%, 37%)
     -
         id: typography-h-col-text-grad
-        title: 🖌️🔤 Gradient Colours
+        title: Gradient Colours
         type: heading
         description: 'Changes the gradient colours of the headers (H1–H6). Use the setting "Gradient Headers" within to activate colour gradients.'
         level: 4
@@ -770,7 +770,7 @@ settings:
             default: linear-gradient( 160deg, hsl(324deg 100% 15%) 0%, hsl(330deg 62% 23%) 12%, hsl(334deg 46% 31%) 26%, hsl(337deg 38% 38%) 40%, hsl(340deg 32% 46%) 53%, hsl(343deg 32% 53%) 65%, hsl(345deg 38% 61%) 76%, hsl(348deg 48% 69%) 85%, hsl(350deg 65% 77%) 93%, hsl(352deg 100% 85%) 100% )
     -
         id: typography-h-col-bg
-        title: 🖌️🚥 Colours — Header Background
+        title: Colours — Header Background
         type: heading
         description: Changes the background colours of the headers (H1–H6).
         level: 3
@@ -837,7 +837,7 @@ settings:
             default-dark: hsla(0, 0%, 100%, 0.0)
     -
         id: typography-undl
-        title: ✍️〰️ Underlines
+        title: Underlines
         description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
         type: heading
         level: 2
@@ -878,7 +878,7 @@ settings:
                     value: llus-hyp-max
     -
         id: typography-highlight
-        title: ✍️🟡 Highlights
+        title: Highlights
         description: Options to change highlighting colours.
         type: heading
         level: 2
@@ -930,14 +930,14 @@ settings:
             default-dark: hsl(300, 100%, 50%)    
     -
         id: table-options
-        title: ✍️⏸️ Tables
+        title: Tables
         description: Table-specific options.
         type: heading
         level: 2
         collapsed: true
     -
             id: table-lp-magic
-            title: "✨ Almost-True Rendering"
+            title: "Almost-True Rendering"
             type: class-toggle
             description: "When enabled, this renders Source mode and being-edited Live Preview tables congruently similar to Reading mode and rendered Live Preview tables."
             default: false
@@ -1041,7 +1041,7 @@ settings:
 */
 
 /* @settings
-name: "🛠️ Callouts, Plugins and CSSClass" 
+name: "Callouts, Plugins and CSSClass" 
 id: Willemstad-Plugins
 settings:
     -
@@ -1062,8 +1062,15 @@ settings:
         max: 3
         step: 0.05
     -
+        id: kanban-callout
+        title: "'Kanban' Callout"
+        type: heading
+        level: 3
+        collapsed: false
+    -
         id: height-callout-kanban
-        title: "'Kanban' Callout — Callout Height"
+        title: "Callout Height"
+        note: "'Kanban' Callout"
         type: variable-number-slider
         description: "Set the callout height of the Kanban callouts."
         format: rem
@@ -1073,7 +1080,8 @@ settings:
         step: 0.5
     -
         id: height-header-kanban
-        title: "'Kanban' Callout — Header Height"
+        title: "Header Height"
+        note: "'Kanban' Callout"
         type: variable-number-slider
         description: "Set the header height of the Kanban callouts."
         format: rem
@@ -1083,7 +1091,8 @@ settings:
         step: 0.1
     -
         id: width-ul-kanban
-        title: "'Kanban' Callout — Lane Width"
+        title: "Lane Width"
+        note: "'Kanban' Callout"
         type: variable-number-slider
         description: "Set the kanban lane width of the Kanban callouts."
         format: px
@@ -1093,7 +1102,7 @@ settings:
         step: 1
     -
      id: plugin-core
-     title: 🛠️ Core Plugins
+     title: Core Plugins
      type: heading
      description: "Command Palette"
      level: 2
@@ -1114,7 +1123,7 @@ settings:
             default: false
     -
      id: plugin-community
-     title: 🛠️ Community Plugins
+     title: Community Plugins
      type: heading
      description: "Admonitions, Calendar, Footnotes & Citation Indicator, Sliding Panes, Style Settings"
      level: 2
@@ -1149,7 +1158,7 @@ settings:
         step: 0.05
     -
      id: PComm001-settings
-     title: 📆 Calendar
+     title: Calendar
      description: 
      type: heading
      level: 3
@@ -1186,7 +1195,7 @@ settings:
         default-dark: hsl(155, 100%, 37%)
     -
      id: PComm027-settings
-     title: 🦶📝 Footnotes & Citation Indicator
+     title: Footnotes & Citation Indicator
      description: 
      type: heading
      level: 3
@@ -1207,7 +1216,7 @@ settings:
         default: '⦿'
     -
      id: PComm009-settings
-     title: 💯📆 Full Calendar
+     title: Full Calendar
      description: 
      type: heading
      level: 3
@@ -1235,7 +1244,7 @@ settings:
         default: true
     -
      id: PComm000-settings
-     title: ⚙️ Style Settings
+     title: Style Settings
      description: 
      type: heading
      level: 3
@@ -1249,7 +1258,7 @@ settings:
         default: true
     -
      id: longform-settings
-     title: ✍️📕 Longform plugin & Writing CSSClass
+     title: Longform plugin & Writing CSSClass
      description: 
      type: heading
      level: 3
@@ -1287,14 +1296,14 @@ settings:
         default: false
     -
      id: cssclass-settings
-     title: 🛠️ CSSClass Settings
+     title: CSSClass Settings
      type: heading
      description: "LaTeX"
      level: 2
      collapsed: true
     -
      id: latex-settings
-     title: ➗ LaTeX CSSClass
+     title: LaTeX CSSClass
      description: "Settings for the 'latex' CSSClass."
      type: heading
      level: 3
