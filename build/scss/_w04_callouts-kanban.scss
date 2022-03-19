@@ -383,3 +383,16 @@ div.callout[data-callout="kanban-no-title"] {
 
     }
 }
+
+/* LP fix for admonitions */
+.is-live-preview :is(.admonition-kanban, .admonition-kanban-no-title) .admonition-content > * {
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
