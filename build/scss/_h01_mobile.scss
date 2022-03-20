@@ -6,6 +6,11 @@
 
         ──────────────────────────────────────────────────────────────────────── */
 
+body.is-mobile {
+    padding-top: 0 !important; /* needs an important */
+}
+
+
 .is-mobile {
 
     .community-theme {
@@ -13,16 +18,25 @@
     }
 
     .setting-item-control {
+
+        justify-content: center;
+
         input, button {
-            
+
             width: 100%;
             margin: 0;
 
         }
     }
 
-    .vertical
-    .workspace {
-        
+    .modal {
+        max-width: calc(100% - 10px);
+        bottom: 5px;
     }
+
+    &.modal.modal:is(.mod-settings, .mod-community-plugin, .mod-community-theme) {
+        min-width: unset;
+        width: 100%;
+    }
+
 }
