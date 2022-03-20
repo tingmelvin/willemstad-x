@@ -198,7 +198,7 @@
 
     }
 
-    :is(.setting-item):is([data-id="Willemstad-Typography"]) {
+    :is(.setting-item):is([data-id="Willemstad-Editor"]) {
 
         background-color: var(--col-h2-bg);
 
@@ -208,7 +208,7 @@
         
     }
 
-    :is(.setting-item):is([data-id="Willemstad-Plugins"]) {
+    :is(.setting-item):is([data-id="Willemstad-Ancillary"]) {
 
         background-color: var(--col-h3-bg);
 
@@ -218,12 +218,22 @@
         
     }
 
-    :is(.setting-item):is([data-id="Minimal-Cards"]) {
+    :is(.setting-item):is([data-id="Willemstad-Plugins"]) {
 
         background-color: var(--col-h4-bg);
 
         .setting-item-name {
             color: var(--col-h4);
+        }
+        
+    }
+
+    :is(.setting-item):is([data-id="Minimal-Cards"]) {
+
+        background-color: var(--col-h5-bg);
+
+        .setting-item-name {
+            color: var(--col-h5);
         }
 
         .setting-item-name::after {
@@ -231,12 +241,12 @@
             white-space: pre;
             font-weight: 300;
             font-size: 0.8em;
-            border: 1px solid var(--col-h4);
+            border: 1px solid var(--col-h5);
             border-radius: calc(var(--shape-roundish) * 1);
             margin-left: 0.5rem;
             padding-left: 0.25rem;
             padding-right: 0.25rem;
-            color: var(--col-h4);
+            color: var(--col-h5);
             text-transform: uppercase;
             font-weight: 500;
             letter-spacing: 0.01rem;
@@ -602,6 +612,36 @@
 
     }
 
+    .setting-item:is([data-id="font-pairings"]) :is(.setting-item-description) {
+
+        &::after {
+
+            content: "✅ These options here are quick options provided. To override them, please select 'Custom Fonts'.";
+            white-space: initial;
+            color: var(--text-normal);
+            font-size: 0.75rem;
+            font-weight: 500;
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0 0.25rem;
+
+            display: inline-flex;
+
+            line-height: 1.5;
+
+        }
+
+    }
+
+    
+
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> bold certain elements
@@ -645,7 +685,7 @@
     >>> Styling for Willemstad ::before
     ──────────────────────────────────────────────────────────────────────────── */
 
-    :is(.setting-item):is([data-id="Willemstad-Core"], [data-id="Willemstad-Typography"], [data-id="Willemstad-Plugins"]) .setting-item-name {
+    :is(.setting-item):is([data-id="Willemstad-Core"], [data-id="Willemstad-Editor"], [data-id="Willemstad-Ancillary"], [data-id="Willemstad-Plugins"]) .setting-item-name {
         
         &::before {
             content: "🏘️ Willemstad";

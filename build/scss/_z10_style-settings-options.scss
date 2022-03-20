@@ -46,6 +46,24 @@ settings:
                 label: "🖌️ Custom Colours"
                 value: custom-colors
     -
+        id: font-pairings
+        title: Font Pairings + Enable Custom Fonts
+        description: 'There are two suggested font typeface pairings with Willemstad, available here.'
+        type: class-select
+        allowEmpty: false
+        default: fp-manDM
+        options:
+            -
+                label: 🟢 Manrope + DM Sans
+                value: fp-manDM
+            -
+                label: ⚫ Inter (v3.19)
+                value: fp-inter
+            -
+                label: ⭕ Custom Fonts
+                value: fp-custom
+    -
+    -
         id: true-black
         title: "True Black mode"
         type: class-toggle
@@ -156,44 +174,6 @@ settings:
         level: 1
         collapsed: false
     -
-            id: headers-round
-            title: Rounded Headers and Boxes
-            type: class-toggle
-            description: When enabled, rounded-border headers and boxes (such as Admonition and Callout boxes) will be applied over the standard rectangular ones.
-            default: false
-    -
-            id: size-scrollbar
-            title: Scrollbar Size
-            type: variable-number-slider
-            format: "rem"
-            default: 0.35
-            min: 0.2
-            max: 0.6
-            step: 0.025
-    -
-            id: nav-buttons-align
-            title: Navigation Buttons Alignment
-            type: class-select
-            description: Choose the alignment of your navigation buttons.
-            allowEmpty: false
-            default: nav-buttons-left
-            options:
-                -
-                    label: Left-aligned
-                    value: nav-buttons-left
-                -
-                    label: Centre-aligned
-                    value: nav-buttons-center
-                -
-                    label: Right-aligned
-                    value: nav-buttons-right
-    -
-            id: style-backlink
-            title: Backlink Pane Styling
-            type: class-toggle
-            description: When toggled, this styles the backlink panes.
-            default: true
-    -
             id: sb
             title: Status Bar
             type: class-select
@@ -213,11 +193,38 @@ settings:
     -
     -
             id: elements-sd
-            title: Sidebars (Side Docks)
-            description: 'Customise the sidebar/side docks elements here.'
+            title: Sidebars (Side Docks) and Navigation Pane
+            description: 'Customise the sidebar/side docks and navigation pane elements here.'
             type: heading
             level: 2
             collapsed: true
+    -
+            id: size-font-nav
+            title: Font Size — Navigation Pane
+            type: variable-number-slider
+            description: Use this setting to change the font size of the navigation pane.
+            format: "em"
+            default: 0.9
+            min: 0.25
+            max: 1.5
+            step: 0.05
+    -
+            id: nav-buttons-align
+            title: Navigation Buttons Alignment
+            type: class-select
+            description: Choose the alignment of your navigation buttons.
+            allowEmpty: false
+            default: nav-buttons-left
+            options:
+                -
+                    label: Left-aligned
+                    value: nav-buttons-left
+                -
+                    label: Centre-aligned
+                    value: nav-buttons-center
+                -
+                    label: Right-aligned
+                    value: nav-buttons-right
     -
             id: sd
             title: Display Style
@@ -294,6 +301,12 @@ settings:
             type: heading
             level: 2
             collapsed: true
+    -
+                id: modal-cp-options-bold
+                title: "Shimmering Focus-style Bold Typeface for Appearance, Hotkeys and Community Plugins options"
+                type: class-toggle
+                description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
+                default: true
     -
             id: modal-widths
             title: Modal Widths
@@ -383,124 +396,43 @@ settings:
                 step: 1
     -
     -
-        id: misc
-        title: "Miscellany"
-        type: heading
-        description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width, Sanctum-style Header Collapse Indicator, Shimmering Focus-style Bold Typeface for selected options
-        level: 2
-        collapsed: false
-    -
-                id: centre-image
-                title: Centre Image
-                type: class-toggle
-                description: When enabled, this centres embedded images in your notes.
-                default: true
-    -
-                id: image-desaturation
-                title: Image Desaturation
-                description: Choose which images should be desaturated when not hovered.
-                type: class-select
-                allowEmpty: false
-                default: default
-                options:
-                    -
-                        label: None
-                        value: default
-                    -
-                        label: 'Reading mode'
-                        value: image-desaturation-reading
-                    -
-                        label: 'Reading mode + Live Preview'
-                        value: image-desaturation-all
-    -
-                id: fix-mermaid-width
-                title: Fix Mermaid.js Graph Width
-                type: class-toggle
-                description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
-                default: true
-    -
-                id: collapse-header-sanctum
-                title: Sanctum-style Header Collapse Indicator
-                type: class-toggle
-                description: When enabled, Sanctum's more minimalist header collapse indicator will be used instead of the original Obsidian indicator.
-                default: true
-    -
-                id: modal-cp-options-bold
-                title: "Shimmering Focus-style Bold Typeface for Appearance, Hotkeys and Community Plugins options"
-                type: class-toggle
-                description: "When enabled, Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal will be applied."
-                default: true
-    -
-    -
         id: "?2"
         type: heading
         level: 1
         collapsed: false
     -
-        id: support-willemstad
-        title: Support the development of Willemstad
-        type: heading
-        level: 2
-        description: 'Hi! I hope you enjoy Willemstad. There are a few ways you can support its continuing development:'
-        collapsed: false
+            id: size-scrollbar
+            title: Scrollbar Size
+            type: variable-number-slider
+            format: "rem"
+            default: 0.35
+            min: 0.2
+            max: 0.6
+            step: 0.025
     -
-        id: support-willemstad-github
-        title: Star the repository on Github!
-        type: class-toggle
-        default: false
-        description: https://github.com/tingmelvin/willemstad-x
-    -
-        id: support-willemstad-issue
-        title: Submit an issue or a feature request on Github!
-        type: class-toggle
-        default: false    
-        description: https://github.com/tingmelvin/willemstad-x/issues
-    -
-        id: support-willemstad-obsidian
-        title: Purchase a Catalyst license with Obsidian!
-        type: class-toggle
-        default: false
-        description: https://obsidian.md/pricing
+            id: style-backlink
+            title: Backlink Pane Styling
+            type: class-toggle
+            description: When toggled, this styles the backlink panes.
+            default: true
 */
 
 /* @settings
-name: "Typography" 
-id: Willemstad-Typography
+name: "Editor" 
+id: Willemstad-Editor
 settings:
     -
-        id: font-pairings
-        title: Font Pairings + Enable Custom Fonts
-        description: 'There are two suggested Font Pairings with Willemstad, available here. These options here are quick options provided. To override them, please select "Custom Fonts".'
-        type: class-select
-        allowEmpty: false
-        default: fp-manDM
-        options:
-            -
-                label: 🟢 Manrope + DM Sans
-                value: fp-manDM
-            -
-                label: ⚫ Inter (v3.19)
-                value: fp-inter
-            -
-                label: ⭕ Custom Fonts
-                value: fp-custom
     -
         id: yaml-coloured
         title: Coloured YAML
         type: class-toggle
-        description: When enabled, YAML will be coloured selectively to increase readabiity.
-        default: true
-    -
-        id: smol-headers
-        title: "Smaller Header Hexes" 
-        type: class-toggle
-        description: "When enabled, the header hex prefix (#) will be made smaller."
+        description: When enabled, YAML frontmatter will be coloured selectively to increase readabiity.
         default: true
     -
         id: typography-typeface
         title: Font Typeface
         type: heading
-        description: Core typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel.
+        description: Typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel.
         level: 2
         collapsed: true
     -
@@ -575,89 +507,24 @@ settings:
         max: 1.5
         step: 0.05
     -
-        id: size-font-nav
-        title: Font Size — Navigation Pane
-        type: variable-number-slider
-        description: Use this setting to change the font size of the navigation pane.
-        format: "em"
-        default: 0.9
-        min: 0.25
-        max: 1.5
-        step: 0.05
-    -
-        id: typography-h-size-text
-        title: Size — Header Text
-        type: heading
-        description: Changes the font size of the headers (H1–H6).
-        level: 3
-        collapsed: true
-    -
-            id: h1
-            find: h1-size
-            title: Font Size — H1
-            type: variable-number-slider
-            default: 1.8
-            min: 1
-            max: 3.5
-            step: 0.05
-            format: em
-    -
-            id: h2
-            find: h2-size
-            title: Font Size — H2
-            type: variable-number-slider
-            default: 1.6
-            min: 1
-            max: 2.7
-            step: 0.05
-            format: em
-    -
-            id: h3
-            find: h3-size
-            title: Font Size — H3
-            type: variable-number-slider
-            default: 1.45
-            min: 1
-            max: 2.7
-            step: 0.05
-            format: em
-    -
-            id: h4
-            find: h4-size
-            title: Font Size — H4
-            type: variable-number-slider
-            default: 1.3
-            min: 1
-            max: 2.7
-            step: 0.05
-            format: em
-    -
-            id: h5
-            find: h5-size
-            title: Font Size — H5
-            type: variable-number-slider
-            default: 1.15
-            min: 1
-            max: 2.7
-            step: 0.05
-            format: em
-    -
-            id: h6
-            find: h6-size
-            title: Font Size — H6
-            type: variable-number-slider
-            default: 1.05
-            min: 1
-            max: 2.7
-            step: 0.05
-            format: em
-    -
         id: h-col
-        title: Colours — Headers
+        title: Headers
         type: heading
-        description: Change the font and background colours of the headers (H1–H6) here.
+        description: Change settings for headers (H1–H6) here.
         level: 2
         collapsed: true
+    -
+        id: smol-headers
+        title: "Smaller Header Hexes" 
+        type: class-toggle
+        description: "When enabled, the header hex prefix (#) will be made smaller."
+        default: true
+    -
+            id: collapse-header-sanctum
+            title: Sanctum-style Header Collapse Indicator
+            type: class-toggle
+            description: When enabled, Sanctum's more minimalist header collapse indicator will be used instead of the original Obsidian indicator.
+            default: true
     -
         id: typography-h-col-text
         title: Colours — Header Text
@@ -835,6 +702,73 @@ settings:
             format: hsl
             default-light: hsla(0, 0%, 100%, 0.0)
             default-dark: hsla(0, 0%, 100%, 0.0)
+    -
+        id: typography-h-size-text
+        title: Size — Header Text
+        type: heading
+        description: Changes the font size of the headers (H1–H6).
+        level: 3
+        collapsed: true
+    -
+            id: h1
+            find: h1-size
+            title: Font Size — H1
+            type: variable-number-slider
+            default: 1.8
+            min: 1
+            max: 3.5
+            step: 0.05
+            format: em
+    -
+            id: h2
+            find: h2-size
+            title: Font Size — H2
+            type: variable-number-slider
+            default: 1.6
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h3
+            find: h3-size
+            title: Font Size — H3
+            type: variable-number-slider
+            default: 1.45
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h4
+            find: h4-size
+            title: Font Size — H4
+            type: variable-number-slider
+            default: 1.3
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h5
+            find: h5-size
+            title: Font Size — H5
+            type: variable-number-slider
+            default: 1.15
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
+    -
+            id: h6
+            find: h6-size
+            title: Font Size — H6
+            type: variable-number-slider
+            default: 1.05
+            min: 1
+            max: 2.7
+            step: 0.05
+            format: em
     -
         id: typography-undl
         title: Underlines
@@ -1041,8 +975,8 @@ settings:
 */
 
 /* @settings
-name: "Callouts, Plugins and CSSClass" 
-id: Willemstad-Plugins
+name: "Callouts, CSSClass and Ancillaries" 
+id: Willemstad-Ancillary
 settings:
     -
      id: callouts-settings
@@ -1064,9 +998,10 @@ settings:
     -
         id: kanban-callout
         title: "'Kanban' Callout"
+        description: "Settings for the 'Kanban' callouts."
         type: heading
         level: 3
-        collapsed: false
+        collapsed: true
     -
         id: height-callout-kanban
         title: "Callout Height"
@@ -1100,6 +1035,190 @@ settings:
         min: 80
         max: 1000
         step: 1
+    -
+     id: cssclass-settings
+     title: CSSClass
+     type: heading
+     description: "LaTeX, Magazine"
+     level: 2
+     collapsed: false
+    -
+     id: latex-settings
+     title: LaTeX CSSClass
+     description: "Settings for the 'latex' CSSClass."
+     type: heading
+     level: 3
+     collapsed: true
+    -
+        id: size-cssclass-latex
+        title: "Font Size — LaTeX CSSClass"
+        type: variable-number-slider
+        default: 14
+        min: 8
+        max: 22
+        step: 0.5
+        format: 'pt'
+    -
+        id: font-cssclass-latex-source
+        title: "Font Typeface (Source mode) — LaTeX CSSClass"
+        type: variable-text
+        default: '"DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: font-cssclass-latex-reading
+        title: "Font Typeface (Reading mode) — LaTeX CSSClass"
+        type: variable-text
+        default: '"MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: textindent-cssclass-latex
+        title: "Text Indent for first paragraph line — LaTeX CSSClass"
+        type: variable-number-slider
+        default: 0
+        min: -0.5
+        max: 4
+        step: 0.05
+        format: 'em'
+    -                   
+        id: size-font-editor-table-latex
+        title: Font Size — Tables (in Editing mode) for LaTeX CSSClass
+        type: variable-number-slider
+        description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview) for the LaTeX CSSClass.
+        format: "em"
+        default: 0.8
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
+        id: size-font-preview-table-latex
+        title: Font Size — Tables (in Reading mode) for LaTeX CSSClass
+        type: variable-number-slider
+        description: Use this setting to change the font size of the tables in Reading mode for the LaTeX CSSClass.
+        format: "em"
+        default: 1
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
+     id: magazine-settings
+     title: Magazine CSSClass
+     description: "Settings for the 'magazine' CSSClass."
+     type: heading
+     level: 3
+     collapsed: true
+    -
+        id: size-cssclass-magazine
+        title: "Font Size — Magazine CSSClass"
+        type: variable-number-slider
+        default: 1.5
+        min: 0.75
+        max: 3
+        step: 0.05
+        format: 'rem'
+    -
+        id: font-cssclass-magazine
+        title: "Font Typeface — Magazine CSSClass"
+        type: variable-text
+        default: '"Manrope" ,"DM Sans", "Inter"'
+        note: do I change var(--font-ui) in the thing
+    -
+        id: weight-cssclass-magazine
+        title: "Font Weight — Magazine CSSClass"
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 800
+        step: 100
+        format: ''
+    -
+        id: height-items-magazine
+        title: "Card Height — Magazine CSSClass"
+        type: variable-number-slider
+        description: "Use this setting to change height of the magazine cards."
+        default: 10
+        min: 3
+        max: 50
+        step: 0.5
+        format: 'rem'
+    -
+        id: margin-items-magazine
+        title: "Inter-Cards Margin — Magazine CSSClass"
+        type: variable-number-slider
+        description: "Use this setting to change the external spacing (margins) between magazine cards."
+        default: 0.25
+        min: 0
+        max: 1.5
+        step: 0.05
+        format: 'rem'
+    -
+        id: padding-items-magazine
+        title: "Card Padding — Magazine CSSClass"
+        type: variable-number-slider
+        description: "Use this setting to change the internal spacing between the card content and card borders"
+        default: 1.25
+        min: 0
+        max: 3
+        step: 0.05
+        format: 'rem'
+    -
+        id: bg-highlight-magazine-first
+        title: "Background (First item) — Magazine CSSClass"
+        description: "Use this to customise the background to the 1st item."
+        type: variable-text
+        default: 'linear-gradient(45deg, hsl(240, 100%, 20%) 0%, hsl(289, 100%, 21%) 11%, hsl(315, 100%, 27%) 22%, hsl(329, 100%, 36%) 33%, hsl(337, 100%, 43%) 44%, hsl(357, 91%, 59%) 56%, hsl(17, 100%, 59%) 67%, hsl(34, 100%, 53%) 78%, hsl(45, 100%, 50%) 89%, hsl(55, 100%, 50%) 100%)'
+    -
+        id: bg-highlight-magazine
+        title: "Background (Wide items) — Magazine CSSClass"
+        description: "Use this to customise the background to every 9n+1 item."
+        type: variable-text
+        default: 'linear-gradient(to right, hsl(215, 65%, 53%), hsl(191, 100%, 50%))'
+    -
+     id: misc
+     title: "Miscellany"
+     type: heading
+     description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width
+     level: 2
+     collapsed: false
+    -
+            id: centre-image
+            title: Centre Image
+            type: class-toggle
+            description: When enabled, this centres embedded images in your notes.
+            default: true
+    -
+            id: image-desaturation
+            title: Image Desaturation
+            description: Choose which images should be desaturated when not hovered.
+            type: class-select
+            allowEmpty: false
+            default: default
+            options:
+                -
+                    label: None
+                    value: default
+                -
+                    label: 'Reading mode'
+                    value: image-desaturation-reading
+                -
+                    label: 'Reading mode + Live Preview'
+                    value: image-desaturation-all
+    -
+            id: fix-mermaid-width
+            title: Fix Mermaid.js Graph Width
+            type: class-toggle
+            description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
+            default: true
+    -
+            id: headers-round
+            title: Rounded Headers and Boxes
+            type: class-toggle
+            description: When enabled, rounded-border headers and boxes (such as Admonition and Callout boxes) will be applied over the standard rectangular ones.
+            default: false
+    -
+*/
+
+/* @settings
+name: "Plugins" 
+id: Willemstad-Plugins
+settings:
     -
      id: plugin-core
      title: Core Plugins
@@ -1295,67 +1414,30 @@ settings:
         description: When enabled, longform & writing notes will be justified.
         default: false
     -
-     id: cssclass-settings
-     title: CSSClass Settings
-     type: heading
-     description: "LaTeX"
-     level: 2
-     collapsed: true
+        id: support-willemstad
+        title: Support the development of Willemstad
+        type: heading
+        level: 2
+        description: 'Hi! I hope you enjoy Willemstad. There are a few ways you can support its continuing development:'
+        collapsed: false
     -
-     id: latex-settings
-     title: LaTeX CSSClass
-     description: "Settings for the 'latex' CSSClass."
-     type: heading
-     level: 3
-     collapsed: false
+        id: support-willemstad-github
+        title: Star the repository on Github!
+        type: class-toggle
+        default: false
+        description: https://github.com/tingmelvin/willemstad-x
     -
-        id: size-cssclass-latex
-        title: "Font Size — LaTeX CSSClass"
-        type: variable-number-slider
-        default: 14
-        min: 8
-        max: 22
-        step: 0.5
-        format: 'pt'
+        id: support-willemstad-issue
+        title: Submit an issue or a feature request on Github!
+        type: class-toggle
+        default: false    
+        description: https://github.com/tingmelvin/willemstad-x/issues
     -
-        id: font-cssclass-latex-source
-        title: "Font Typeface (Source mode) — LaTeX CSSClass"
-        type: variable-text
-        default: '"DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX"'
-    -
-        id: font-cssclass-latex-reading
-        title: "Font Typeface (Reading mode) — LaTeX CSSClass"
-        type: variable-text
-        default: '"MathJax Main", "MJXZERO", "MJXTEX"'
-    -
-        id: textindent-cssclass-latex
-        title: "Text Indent for first paragraph line — LaTeX CSSClass"
-        type: variable-number-slider
-        default: 0
-        min: -0.5
-        max: 4
-        step: 0.05
-        format: 'em'
-    -                   
-        id: size-font-editor-table-latex
-        title: Font Size — Tables (in Editing mode) for LaTeX CSSClass
-        type: variable-number-slider
-        description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview) for the LaTeX CSSClass.
-        format: "em"
-        default: 0.8
-        min: 0.25
-        max: 1.5
-        step: 0.05
-    -
-        id: size-font-preview-table-latex
-        title: Font Size — Tables (in Reading mode) for LaTeX CSSClass
-        type: variable-number-slider
-        description: Use this setting to change the font size of the tables in Reading mode for the LaTeX CSSClass.
-        format: "em"
-        default: 1
-        min: 0.25
-        max: 1.5
-        step: 0.05
+        id: support-willemstad-obsidian
+        title: Purchase a Catalyst license with Obsidian!
+        type: class-toggle
+        default: false
+        description: https://obsidian.md/pricing
 */
 
 

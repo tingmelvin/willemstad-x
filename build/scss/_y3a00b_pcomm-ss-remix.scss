@@ -38,7 +38,7 @@
         display: inline-block;
         height: fit-content;
         margin-right: 0.25rem;
-        color: white;
+        color: var(--background-primary);
         background: linear-gradient(45deg,
         hsl(196, 67%, 45%) 0%,
         hsl(196, 67%, 45%) 25%,
@@ -118,10 +118,60 @@
 
     }
 
+    .setting-item:is([data-id="sb"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\ef95";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
     .setting-item:is([data-id="elements-sd"]) .setting-item-name > span::after {
 
         content: "\f127";
 
+    }
+
+    .setting-item:is([data-id="sd"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\f127 \eeca";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--col-h3);
+
+            background-color: var(--col-h3-bg);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
     }
 
         .setting-item:is([data-id="col-sd"]) .setting-item-name::before {
@@ -192,6 +242,32 @@
 
     }
 
+    .setting-item:is([data-id="size-scrollbar"]) .setting-item-name {
+
+        font-weight: 600;
+        color: var(--text-accent);
+    
+        &::before {
+
+            content: "\ee98";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
 /* typography */
 
     .setting-item:is([data-id="font-pairings"]) .setting-item-name {
@@ -231,7 +307,7 @@
             display: inline-block;
             height: fit-content;
             margin-right: 0.25rem;
-            color: white;
+            color: var(--background-primary);
             background: linear-gradient(45deg,
             hsl(196, 67%, 45%) 0%,
             hsl(196, 67%, 45%) 25%,
@@ -296,7 +372,7 @@
 
         content: "\ee03";
 
-        color: white;
+        color: var(--background-primary);
 
         background: linear-gradient(45deg,
             hsl(196, 67%, 45%) 0%,
@@ -353,7 +429,7 @@
 
         content: "\ede6";
 
-        color: var(--text-normal);
+        color: var(--background-primary);
 
         background: linear-gradient(45deg,
             hsl(196, 67%, 45%) 0%,
@@ -481,6 +557,12 @@
 
     }
 
+    .setting-item:is([data-id="magazine-settings"]) .setting-item-name > span::after {
+
+        content: "\ecfa";
+
+    }
+
     .setting-item:is([data-id="callouts-settings"]) .setting-item-name > span::after {
 
         content: "\eb86";
@@ -576,7 +658,7 @@
         }
     }
 
-    .setting-item:is([data-id="Willemstad-Typography"]) .setting-item-name > span:after {
+    .setting-item:is([data-id="Willemstad-Editor"]) .setting-item-name > span:after {
 
         content: "\ed8d";
         color: var(--col-h2);
@@ -592,10 +674,27 @@
 
     }
 
+    .setting-item:is([data-id="Willemstad-Ancillary"]) .setting-item-name > span:after {
+
+        content: "\ea11";
+        color: var(--col-h3);
+
+        vertical-align: middle;
+        display: inline-block;
+        height: fit-content;
+        font-size: 1rem;
+        margin-right: 0.25rem;
+
+        position: relative;
+        top: -1px;
+        font-size: 100;
+
+    }
+
     .setting-item:is([data-id="Willemstad-Plugins"]) .setting-item-name > span:after {
 
         content: "\f21a";
-        color: var(--col-h3);
+        color: var(--col-h4);
 
         vertical-align: middle;
         display: inline-block;
@@ -611,7 +710,7 @@
     .setting-item:is([data-id="Minimal-Cards"]) .setting-item-name > span:after {
 
         content: "\ee97";
-        color: var(--col-h4);
+        color: var(--col-h5);
 
         vertical-align: middle;
         display: inline-block;
