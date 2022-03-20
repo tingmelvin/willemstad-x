@@ -34,7 +34,7 @@ body.is-mobile {
         bottom: 5px;
     }
 
-    &.modal.modal:is(.mod-settings, .mod-community-plugin, .mod-community-theme) {
+    & .modal.modal:is(.mod-settings, .mod-community-plugin, .mod-community-theme) {
         min-width: unset;
         width: 100%;
     }
