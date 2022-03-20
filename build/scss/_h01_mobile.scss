@@ -13,10 +13,11 @@ body.is-mobile {
 
 .is-mobile {
 
-    .is-mobile :is(.nav-file-title, .nav-folder-title, .outline, .tag-container) {
+    &.is-mobile :is(.nav-file-title, .nav-folder-title, .outline, .tag-container) {
 
-        font-size: 1rem;
-        line-height: 1.35rem;
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+        padding-left: 0.125rem;
 
     }
 
@@ -27,7 +28,7 @@ body.is-mobile {
     .workspace-drawer-header {
         padding: 0.25rem 0.5rem 0 0.5rem;
 
-        > svg.pin {
+        svg.pin {
             position: relative;
             width: 1.25rem;
         }
@@ -37,12 +38,19 @@ body.is-mobile {
         width: fit-content;
         display: inline-flex;
         margin-right: 0.25rem;
+        height: fit-content;
+    }
+
+    .workspace-drawer-header-name-text {
+        height: fit-content;
+        line-height: normal;
     }
 
     .workspace-drawer-header-info {
         margin: 0;
-        font-size: 1rem;
         width: fit-content;
+        height: fit-content;
+        line-height: normal;
         display: inline-flex;
         font-size: 0.75rem;
     }
@@ -53,7 +61,7 @@ body.is-mobile {
     }
 
     .workspace-drawer-active-tab-title {
-        
+
     }
 
     .community-theme {
