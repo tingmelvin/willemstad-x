@@ -1,5 +1,4 @@
-![Willemstad-X](https://user-images.githubusercontent.com/43155211/153649116-51cf06e1-3679-4b9e-b49d-abe3321485f7.png)
-
+![wx-github-2-mini](https://user-images.githubusercontent.com/43155211/159142584-70b88e36-7634-4ddb-9ee1-1a7c11f0b2c9.png)
 
 
 # Willemstad X (Extended)
