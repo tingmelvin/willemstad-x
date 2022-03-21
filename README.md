@@ -78,6 +78,25 @@ Having a theme out within 2.5 weeks of trying to do something with CSS (from the
 That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
 
 ---
+### Note on `snippet.css` file
+
+Currently includes:
+
+## Callouts
+| Title | Image |
+| -- | -- |
+| `kanban` | <img src="https://user-images.githubusercontent.com/43155211/159336761-f44cd2e6-9f37-407b-a4fa-485cce949ed3.png" width="500">
+| `aside` | |
+|`infobox`| |
+
+## CSS Classes
+| Title | Image |
+| -- | -- |
+| `latex` | <img src="https://user-images.githubusercontent.com/43155211/159337451-70b6e80a-16e9-47c1-a2b5-06688aeaeb43.png" width="500"> |
+| `magazine` | <img src="https://user-images.githubusercontent.com/43155211/159337592-5b264de3-fa1c-484d-afc0-4eb69699b5d2.png" width="500"> |
+
+
+---
 ### License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This repository is licensed under the terms of the MIT License.
