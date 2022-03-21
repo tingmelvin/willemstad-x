@@ -62,8 +62,24 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) Δ TABLE FONT SIZE IN PREVIEW MODE
     ──────────────────────────────────────────────────────────────────────────── */
-    :is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(th, td) {
-        font-size: var(--size-font-preview-table);
+    .theme-light, .theme-dark {
+        --weight-font-preview-table-th: 800;
+        --weight-font-preview-table-td: normal;
+    }
+
+    :is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] {
+        
+        th {
+            font-size: var(--size-font-preview-table-th);
+            font-weight: var(--weight-font-preview-table-th);
+
+        }
+
+        td {
+            font-size: var(--size-font-preview-table-td);
+            font-weight: var(--weight-font-preview-table-td);
+        }
+
     }
 
     /* ────────────────────────────────────────────────────────────────────────────

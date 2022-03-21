@@ -323,7 +323,7 @@
         } /* bottom line of the box things */ /* pads left only because the missing checkbox already creates padding */
 
     /* ────────────────────────────────────────────────────────────────────────────
-    >>> CHECKBOX + SETTING ITEM THINGUM LE POOF! (DISAPPEARS CHECKBOXES)
+    >>> CHECKBOX + SETTING ITEM + EXTRANEOUS RESET THINGUM LE POOF! (DISAPPEARS CHECKBOXES)
     ──────────────────────────────────────────────────────────────────────────── */    
     :is(.setting-item.mod-toggle):is([data-id="support-willemstad-github"],
     [data-id="support-willemstad-issue"],
@@ -333,9 +333,11 @@
     [data-id="support-kepano"],
     [data-id="info-re-theme-documentation"],
     [data-id="download-settings-search"],
-    [data-id="warning-cm6-only"]) :is(.setting-item-control, .checkbox-container) {
+    [data-id="warning-cm6-only"]) :is(.setting-item-control, .checkbox-container, .setting-editor-extra-setting-button) {
+
         display: none;
-    }
+
+    } /* removes workspace extraneous reset button */
 
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -360,7 +362,10 @@
         border-radius: calc(var(--shape-roundish) * 1);
     }
 
-
+    .setting-item.mod-toggle:is([data-id=support-kepano]) :is(.setting-item-info) {
+        margin-left: 1rem;
+        margin-right: 1rem
+    }
 
 
 /* general stuff (not the special magic of above) */
@@ -450,7 +455,7 @@
 
         &::after {
 
-            content: "Obsolete for Insiders — as of Obsidian v0.14.0, tables are rendered in Live Preview";
+            content: "Obsolete for Insiders — as of Obsidian v0.14.1, tables are rendered in Live Preview";
             white-space: pre;
             color: var(--background-primary);
             font-size: 0.7rem;

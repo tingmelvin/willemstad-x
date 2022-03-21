@@ -5,6 +5,68 @@
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Style Settings] ONLY FOR WORKSPACE LEAF CONTENT
+\\ (NOMEN | PComm000)
+||
+\\ Most Style Settings customisations can be found in the Y3A documents instead
+──────────────────────────────────────────────────────────────────────────────── */
+.workspace-leaf-content[data-type="style-settings"] {
+
+    font-family: var(--font-ui);
+
+    .setting-item[data-id="info-re-theme-documentation"] {
+
+        display: block;
+
+        .setting-item-info {
+
+            margin-right: 0;
+                    
+        }
+
+    }
+
+    .setting-item[data-level="0"] > .setting-item-info > .setting-item-name {
+
+        margin: 0 0.5rem;
+
+    }
+
+    .setting-item[data-level="0"] > .setting-item-info > .setting-item-name.setting-item-name::before {
+        margin-left: 0;
+    }
+
+    .style-settings-container > .setting-item .setting-item-control {
+
+        display: inline-flex;
+        position: relative;
+        width: auto;
+        margin-left: auto; /* flexs last item to right */
+        margin-bottom: 0.5rem;
+
+        & .themed-color-wrapper {
+            
+            .theme-light {
+
+                margin-right: 0.5rem;
+                background-color: var(--background-secondary);
+
+            }
+
+            .theme-dark {
+
+                margin-top: 0;
+
+            }
+        }
+
+    }
+
+}
+
+/* removal of random reset extra-settings buttons on workspace goes to Y3A */
+
+/* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Calendar]
 \\ (NOMEN | PComm001)
 ───────────────────────────────────────────────────────────────────────────────────
@@ -428,6 +490,84 @@
     }
 
 /* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Excalidraw]
+\\ (NOMEN | PComm010)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it nicer
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    div.excalidraw {
+
+        margin: 0.25rem;
+
+        button {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            color: var(--interactive-bg);
+        }
+
+        .Island {
+
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            background-color: var(--background-primary-alt);
+
+        }
+
+        .color-picker-label-swatch {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            border: 1px solid var(--background-primary-alt);
+
+        }
+
+        .ToolIcon__icon {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            color: var(--interactive-bg);
+        }
+
+        .App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
+            background: var(--interactive-border-color);
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1);
+        }
+
+        .App-toolbar .ToolIcon .ToolIcon_type_radio:checked+.ToolIcon__icon, .App-toolbar .ToolIcon .ToolIcon_type_checkbox:checked+.ToolIcon__icon,
+        .active,
+        .buttonList label.active {
+            background: var(--interactive-bg);
+        }
+
+        .panelColumn h3, .panelColumn legend, .panelColumn .control-label, .reset-zoom-button {
+            color: var(--text-normal);
+        }
+
+        .ToolIcon__icon svg {
+            fill: var(--text-normal);
+            color: var(--text-normal);
+        }
+
+        .excalidraw .ToolIcon_type_button, .Modal .ToolIcon_type_button, .ToolIcon_type_button {
+            background-color: var(--interactive-bg);
+        }
+
+        button.ToolIcon_type_button.ToolIcon_size_small.reset-zoom-button.ToolIcon_type_button--show.ToolIcon {
+            background-color: var(--background-primary-alt);
+        }
+
+        .ToolIcon__keybinding {
+            font-size: 0.75rem;
+        }
+
+        .App-toolbar .ToolIcon .ToolIcon__keybinding {
+            bottom: 0;
+        }
+
+    }
+
+
+
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Get Info]
 \\ (NOMEN | PComm022)
 ───────────────────────────────────────────────────────────────────────────────────
@@ -580,6 +720,17 @@
     }
     .cMenu-statusbar-menu .menu-item {
         font-size: var(--size-font-searchbox)
+    }
+
+    div#cMenuModalBar {
+
+        box-shadow: none;
+        border-radius: calc(var(--shape-roundish) * 1);
+
+        & .cMenuCommandItem {
+
+            border-radius: calc(var(--shape-roundish) * 1);
+        }
     }
 
 /* ────────────────────────────────────────────────────────────────────────────────

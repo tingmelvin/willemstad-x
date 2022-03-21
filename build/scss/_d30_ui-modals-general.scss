@@ -84,3 +84,15 @@
             color: var(--text-accent);
             font-weight: 600; /* aligns to the normal h1-h6 font weight */
         } /* change text-align, bg-color, text-color, resets font-weight */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> General Modal Fixes
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ???
+        ──────────────────────────────────────────────────────────────────────── */
+
+        .modal {
+            box-shadow: none;
+            padding: 1.5rem 2rem;
+            border-radius: calc(var(--shape-roundish) * 2);
+        } /* does this do anything? */

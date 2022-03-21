@@ -898,15 +898,45 @@ settings:
             max: 1.5
             step: 0.05
     -
-            id: size-font-preview-table
-            title: Font Size — Tables (in Reading mode)
+            id: size-font-preview-table-th
+            title: Font Size — Table Headers (in Reading mode)
             type: variable-number-slider
-            description: Use this setting to change the font size of the tables in Reading mode.
+            description: Use this setting to change the font size of the table headers in Reading mode.
             format: "em"
             default: 1
             min: 0.25
             max: 1.5
             step: 0.05
+    -
+            id: size-font-preview-table-td
+            title: Font Size — Table Content (in Reading mode)
+            type: variable-number-slider
+            description: Use this setting to change the font size of the table content in Reading mode.
+            format: "em"
+            default: 1
+            min: 0.25
+            max: 1.5
+            step: 0.05
+    -
+            id: weight-font-preview-table-th
+            title: Font Weight — Table Headers (in Reading mode)
+            type: variable-number-slider
+            description: Use this setting to change the font size of the table content in Reading mode.
+            format: ''
+            default: 800
+            min: 100
+            max: 900
+            step: 50
+    -
+            id: weight-font-preview-table-td
+            title: Font Weight — Table Content (in Reading mode)
+            type: variable-number-slider
+            description: Use this setting to change the font size of the table content in Reading mode.
+            format: ''
+            default: 400
+            min: 100
+            max: 900
+            step: 50
     -
             id: col-bg-table
             title: Background Colour — Table Headings
@@ -1688,6 +1718,14 @@ settings:
             format: hsl
             default-light: rgba(204, 230, 255, 0.99)
             default-dark:  rgba(23, 48, 77, 0.99)
+    -
+            id: text-normal
+            title: text-normal
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: rgba(204, 230, 255, 0.99)
+            default-dark:  rgba(23, 48, 77, 0.99) 
     -
             id: text-on-accent
             title: text-on-accent
