@@ -41,6 +41,31 @@ SOFTWARE.
 ───────────────────────────────────────────────────────────────────────────────────
 */
 /* ────────────────────────────────────────────────────────────────────────────────    
+> [Q31] Styling: Callouts
+\ Introduced in Obsidian 0.14.0
+──────────────────────────────────────────────────────────────────────────────── */
+.callout {
+  overflow-x: hidden;
+  /* ensures that it wouldn't eat into other things as well */
+  margin-top: var(--margin-callout);
+  margin-bottom: var(--margin-callout);
+}
+
+.theme-light, .theme-dark {
+  --margin-callout: 0.5em;
+}
+
+.headers-round .callout {
+  border-radius: calc(var(--shape-roundish) * 1.25);
+}
+
+.theme-light, .theme-dark {
+  --height-callout-kanban: 30rem;
+  --height-header-kanban: 3.5rem;
+}
+
+/* for kanban */
+/* ────────────────────────────────────────────────────────────────────────────────    
 > [W01] Admonition Infobox by SlRvB
 ──────────────────────────────────────────────────────────────────────────────── */
 div:not(.setting-item) > .admonition.admonition-infobox {
@@ -934,6 +959,16 @@ settings:
      level: 2
      collapsed: true
     -
+        id: margin-callout
+        title: Callout Margin Size
+        type: variable-number-slider
+        description: "Change the size of Callout margins."
+        format: em
+        default: 0.5
+        min: 0
+        max: 3
+        step: 0.05
+    -
         id: kanban-callout
         title: "'Kanban' Callout"
         description: "Settings for the 'Kanban' callouts."
@@ -983,7 +1018,7 @@ settings:
     -
      id: latex-settings
      title: LaTeX CSSClass
-     description: "Settings for the 'latex' CSSClass."
+     description:
      type: heading
      level: 3
      collapsed: true
