@@ -20,3 +20,10 @@
 .headers-round .callout {
     border-radius: calc(var(--shape-roundish) * 1.25);
 }
+
+.theme-light, .theme-dark {
+
+    --height-callout-kanban: 30rem;
+    --height-header-kanban: 3.5rem;
+
+} /* for kanban */

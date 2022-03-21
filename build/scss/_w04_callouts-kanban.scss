@@ -8,8 +8,12 @@
 .theme-light, .theme-dark {
 
     --height-ul-kanban: calc(var(--height-callout-kanban) - var(--height-header-kanban) - var(--size-scrollbar) - 1rem); /* change to desired height in ul */
+
+    /*
     --height-callout-kanban: 30rem;
     --height-header-kanban: 3.5rem;
+        - see styling callouts, broke it for the snippets
+    */ 
 
     --width-ul-kanban: 272px; /* change to desired width in ul */
 
@@ -71,7 +75,7 @@ div.callout[data-callout="kanban"] {
 
         margin-left: 0.25rem;
         margin-right: 0.25rem;
-        overflow-x: scroll;
+        overflow-y: hidden;
         white-space: nowrap;
         width: var(--width-ul-kanban);
     
@@ -88,7 +92,7 @@ div.callout[data-callout="kanban"] {
 
         height: var(--height-ul-kanban);
         width: var(--width-ul-kanban);
-        overflow: scroll;
+        overflow-y: scroll;
 
         margin-left: 0.25rem;
         margin-right: 0.25rem;
@@ -160,7 +164,7 @@ div.callout[data-callout="kanban-no-title"] {
 
         margin-left: 0.25rem;
         margin-right: 0.25rem;
-        overflow-x: scroll;
+        overflow-y: hidden;
         white-space: nowrap;
         width: var(--width-ul-kanban);
     
@@ -177,7 +181,7 @@ div.callout[data-callout="kanban-no-title"] {
 
         height: var(--height-ul-kanban);
         width: var(--width-ul-kanban);
-        overflow: scroll;
+        overflow-y: scroll;
 
         margin-left: 0.25rem;
         margin-right: 0.25rem;
