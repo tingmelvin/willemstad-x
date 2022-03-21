@@ -65,7 +65,7 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 Available [here](https://willemstad.cc).
 
 ### Note on `callouts`
-Unfortunately the theme documentations aren't complete, but currently, Willemstad supports `table` (legacy; sherlocked by Licat into Obsidian 0.14.1), `infobox`, `aside`, `aside-no-title`, `kanban` and `kanban-no-title`.
+Unfortunately the theme documentations aren't complete, but currently, Willemstad supports `table` (legacy; sherlocked by Licat into Obsidian 0.14.1), `infobox`, `aside`, `aside-no-title`, `kanban`, `kanban-no-title`, `grid`, `grid-ext` and `masonry` (which is the same as `grid-ext`).
 
 ## Mentions in the Obsidian Roundup
 [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
