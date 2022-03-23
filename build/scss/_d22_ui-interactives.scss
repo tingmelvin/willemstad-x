@@ -140,6 +140,14 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> ROUNDNESS + MARGINS + BORDER + FONT SIZE
         ──────────────────────────────────────────────────────────────────────── */
+        .setting-item-control button {
+            margin-right: 0.5rem;
+            border-radius: calc(var(--shape-roundish) * 3);
+            border: 2px solid var(--interactive-border-color);
+            font-size: 0.95rem;
+    
+        }
+
             button {
                 margin-right: 0.5rem;
                 border-radius: calc(var(--shape-roundish) * 3);
@@ -290,4 +298,14 @@
         textarea {
             border-radius: calc(var(--shape-roundish) * 1.5);
             padding: 0.25rem;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> MENU
+    ───────────────────────────────────────────────────────────────────────────────
+        >> Margins and Paddings
+        ──────────────────────────────────────────────────────────────────────── */
+        .menu {
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1.5);
         }

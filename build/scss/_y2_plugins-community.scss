@@ -284,6 +284,13 @@
         padding: 0.125rem;
         padding-left: 0.3rem;
         padding-bottom: 0.3rem;
+        overflow-x: scroll;
+        
+        &::-webkit-scrollbar {
+            height: var(--size-scrollbar);
+            width: var(--size-scrollbar);
+        }
+
     }
     div.kanban-plugin__lane-header-wrapper {
         padding: 0.15rem 0.1rem;
@@ -611,6 +618,11 @@
         display: none;
     }
 
+    .GetInfo-statusbar-button > svg {
+
+        vertical-align: middle;
+
+    }
 
 
 /* ────────────────────────────────────────────────────────────────────────────────

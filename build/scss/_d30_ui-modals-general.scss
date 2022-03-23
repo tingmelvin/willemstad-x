@@ -91,8 +91,13 @@
         >>> ???
         ──────────────────────────────────────────────────────────────────────── */
 
-        .modal {
+        .modal.modal {
             box-shadow: none;
-            padding: 1.5rem 2rem;
-            border-radius: calc(var(--shape-roundish) * 2);
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            /* padding: 1.5rem 2rem;
+            border-radius: calc(var(--shape-roundish) * 2); */
         } /* does this do anything? */
+
+        div.setting-item {
+            padding: 0.25rem 0 0.25rem 0;
+        }
