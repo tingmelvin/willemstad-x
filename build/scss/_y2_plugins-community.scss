@@ -357,7 +357,7 @@
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Advanced Tables]
 \\ (NOMEN | PComm008)
-\\ for Tables, go to Dataview (NOMEN | PComm 004)
+\\ for Tables, go to Dataview (NOMEN | PComm004)
 ───────────────────────────────────────────────────────────────────────────────────
     >>> make it neat
     ──────────────────────────────────────────────────────────────────────────── */
@@ -570,9 +570,55 @@
 
     }
 
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Hover Editor]
+\\ (NOMEN | PComm011)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it more Willemstad
+    ──────────────────────────────────────────────────────────────────────────── */
+    
+    
+    
+    .popover {
 
+        border: none;
+    
+        &.hover-popover {
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1.5);
 
+            .view-header {
+                    border-top-left-radius: calc(var(--shape-roundish) * 1.5);
+                    border-top-right-radius: calc(var(--shape-roundish) * 1.5);
+                    border-top: none;
+                }
 
+            &.is-minimized .view-header {
+                border-bottom-left-radius: calc(var(--shape-roundish) * 1.5);
+                border-bottom-right-radius: calc(var(--shape-roundish) * 1.5);                
+            }
+
+            .drag-handle.top {
+                /*background-color: var(--background-primary-alt);
+                border-top-left-radius: calc(var(--shape-roundish) * 1.5);
+                border-top-right-radius: calc(var(--shape-roundish) * 1.5);*/
+            }
+
+            .view-content {
+                border: 2px solid var(--background-secondary);
+                border-bottom-left-radius: calc(var(--shape-roundish) * 1.5);
+                border-bottom-right-radius: calc(var(--shape-roundish) * 1.5);
+            }
+
+            /*
+            &.snap-to-viewport {
+                width: 100vw;
+            }
+            */
+
+        }
+
+    }
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Get Info]
@@ -618,9 +664,16 @@
         display: none;
     }
 
+    .GetInfo-statusbar-button {
+
+        position: relative;
+
+    }
+
     .GetInfo-statusbar-button > svg {
 
-        vertical-align: middle;
+        position: relative;
+        height: 100%;
 
     }
 
@@ -912,3 +965,42 @@
         border: none;
     }
 
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Vault Statistics]
+\\ (NOMEN | PComm031)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING PADDINGS AND BORDER RADIUS
+    ──────────────────────────────────────────────────────────────────────────── */
+    span.obsidian-vault-statistics--item--active {
+        display: inline-block;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Theme Picker]
+\\ (NOMEN | PComm032)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING PADDINGS AND BORDER RADIUS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .plugin-theme-picker {
+        position: relative;
+    
+    
+        .theme-picker-color-scheme-icon {
+            position: relative;
+
+            & > svg {
+                position: relative;
+                height: 100%;
+
+                & > * {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .theme-picker-modal.theme-picker-modal {
+        box-shadow: none;
+        border: 2px solid var(--background-secondary);
+    }

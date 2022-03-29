@@ -12,9 +12,6 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> FIX PADDINGS
     ──────────────────────────────────────────────────────────────────────────── */
-   /*  div.setting-item {
-        padding: 0.25rem 0 0 0;
-    } */ /* i'm an idiot */
 
     div.style-settings-heading[data-level="0"] {
         margin-bottom: 0rem;
@@ -251,6 +248,16 @@
             text-transform: uppercase;
             font-weight: 500;
             letter-spacing: 0.01rem;
+        }
+        
+    }
+    
+    :is(.setting-item):is([data-id="Willemstad-Adv-Settings"]) {
+
+        background-color: var(--col-h6-bg);
+
+        .setting-item-name {
+            color: var(--col-h6);
         }
         
     }
@@ -646,7 +653,33 @@
 
     }
 
-    
+    .setting-item:is([data-id="adv-settings-col"]) :is(.setting-item-description) {
+
+        &::after {
+
+            content: "⚠️ PLEASE ONLY USE THIS IF YOU ARE ABSOLUTELY SURE OF WHAT YOU ARE DOING. \a In the event you might have changed something inadvertently, reset to the theme's original colours using the button beside the colour picker.";
+            white-space: initial;
+            color: var(--text-normal);
+            font-size: 0.75rem;
+            font-weight: 500;
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0 0.25rem;
+
+            display: inline-flex;
+
+            line-height: 1.5;
+
+        }
+
+    }    
 
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -691,7 +724,7 @@
     >>> Styling for Willemstad ::before
     ──────────────────────────────────────────────────────────────────────────── */
 
-    :is(.setting-item):is([data-id="Willemstad-Core"], [data-id="Willemstad-Editor"], [data-id="Willemstad-Ancillary"], [data-id="Willemstad-Plugins"]) .setting-item-name {
+    :is(.setting-item):is([data-id="Willemstad-Core"], [data-id="Willemstad-Editor"], [data-id="Willemstad-Ancillary"], [data-id="Willemstad-Plugins"]/*, [data-id="Willemstad-Adv-Settings"]*/) .setting-item-name {
         
         &::before {
             content: "🏘️ Willemstad";

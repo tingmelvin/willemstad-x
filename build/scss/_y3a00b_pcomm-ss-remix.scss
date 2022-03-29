@@ -511,7 +511,7 @@
 
     .setting-item:is([data-id="PComm001-settings"]) .setting-item-name > span::after {
 
-        content: "\eb26";
+        content: "\eb27";
 
     }
 
@@ -535,7 +535,7 @@
 
     .setting-item:is([data-id="PComm009-settings"]) .setting-item-name > span::after {
 
-        content: "\eb27"; /* \ed9c */
+        content: "\eb26"; /* \ed9c */
 
     }
 
@@ -619,7 +619,21 @@
 
     }
 
-    /* headers stuff */
+/* adv settings */
+
+    .setting-item:is([data-id="adv-settings-col"]) .setting-item-name > span::after {
+
+        content: "\ed39 \efc5";
+        /* color: var(--text-normal); */
+        margin-left: 0.25rem;
+
+    }
+
+/*
+⚠️ PLEASE ONLY USE THIS IF YOU ARE ABSOLUTELY SURE OF WHAT YOU ARE DOING. In the event you might have changed something inadvertently, reset to the theme's original colours using the button beside the colour picker.
+*/
+
+/* headers stuff */
 
     .setting-item:is([data-id="Willemstad-Core"]) {
     
@@ -717,6 +731,22 @@
         height: fit-content;
         font-size: 1rem;
         margin-right: 0.15rem;
+
+        position: relative;
+        top: -1px;
+
+    }
+
+    .setting-item:is([data-id="Willemstad-Adv-Settings"]) .setting-item-name > span:after {
+
+        content: "\ed39";
+        color: var(--col-h6);
+
+        vertical-align: middle;
+        display: inline-block;
+        height: fit-content;
+        font-size: 1rem;
+        margin-right: 0.25rem;
 
         position: relative;
         top: -1px;

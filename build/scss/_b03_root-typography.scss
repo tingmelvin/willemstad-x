@@ -4,6 +4,22 @@
     >> [TYPOGRAPHY] (Fonts, Headings)
     ──────────────────────────────────────────────────────────────────────────── */
 
+        /* sigh. breaking changes from Obsidian 0.14.3 */
+        /*
+        --interface-font-override: 'Inter';
+        --editor-font-override: 'Inter';
+        */ /* not my taiji */
+
+
+        :is(.theme-light, .theme-dark) {
+        
+            --interface-font-theme: var(--font-ui); /* my changes */
+            --interface-font: var(--interface-font-override), var(--interface-font-theme), var(--default-font);
+            
+            --editor-font-theme: var(--font-editor); /* my changes */
+            --editor-font: var(--editor-font-override), var(--editor-font-theme), var(--interface-font);
+        
+        }
 
         /* ────────────────────────────────────────────────────────────────────────
         >>> FONT SIZES
@@ -25,31 +41,31 @@
             /* to edit --default-font, edit the mobile/desktop equivalents (--font-editor-m) and (--font-editor) */
 
             --font-monospace:       "DM Mono";
-            --font-heading:         "Inter 3.19", "Manrope", "DM Sans";
+            --font-heading:         "Manrope", "Inter 3.19", "DM Sans";
 
             /* to edit --menu-font, edit the mobile/desktop equivalents (--font-menu-m) and (--font-menu) */
             /* to edit --ui-font, edit the mobile/desktop equivalents (--font-ui-m) and (--font-ui) */
 
-            --smallcap-font:        "Inter 3.19", "DM Sans", "Manrope";   /* what is this for again? */
-            --setting-heading:      "Inter 3.19", "DM Sans", "Manrope";   /* what is this for again? */
-            --mermaid-font:         "Inter 3.19", "DM Sans", "Manrope";   /* for Mermaid.js */
-            --reveal-font:          "Inter 3.19", "DM Sans", "Manrope";   /* for Slides core plugin */
+            --smallcap-font:        "DM Sans", "Inter 3.19", "Manrope";   /* what is this for again? */
+            --setting-heading:      "DM Sans", "Inter 3.19", "Manrope";   /* what is this for again? */
+            --mermaid-font:         "DM Sans", "Inter 3.19", "Manrope";   /* for Mermaid.js */
+            --reveal-font:          "DM Sans", "Inter 3.19", "Manrope";   /* for Slides core plugin */
     
         /* ──────────────────────────────────────────────────────────────────────
         >>> FONT TYPEFACE > Desktop
         ────────────────────────────────────────────────────────────────────── */
 
-            --font-editor:          "Inter 3.19", "DM Sans", "Manrope";
-            --font-menu:            "Inter 3.19", "DM Sans", "Manrope";
-            --font-ui:              "Inter 3.19", "DM Sans", "Manrope";
+            --font-editor:          "DM Sans", "Inter 3.19", "Manrope";
+            --font-menu:            "Manrope", "Inter 3.19", "DM Sans";
+            --font-ui:              "Manrope", "Inter 3.19", "DM Sans";
 
         /* ──────────────────────────────────────────────────────────────────────
         >>> FONT TYPEFACE > Mobile
         ────────────────────────────────────────────────────────────────────── */
 
-            --font-editor-m:        "Inter 3.19", "DM Sans", "Manrope";
-            --font-menu-m:          "Inter 3.19", "DM Sans", "Manrope";
-            --font-ui-m:            "Inter 3.19", "DM Sans", "Manrope";
+            --font-editor-m:        "DM Sans", "Inter 3.19", "Manrope";
+            --font-menu-m:          "Manrope", "Inter 3.19", "DM Sans";
+            --font-ui-m:            "Manrope", "Inter 3.19", "DM Sans";
 
         /* ──────────────────────────────────────────────────────────────────────
         >>> FONT > Additional + Plugins

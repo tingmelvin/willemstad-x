@@ -52,4 +52,6 @@
 /* add separate Licensing software at the back */
 @use 'scss/_x03_cssclass-cards-minimal';
 @use 'scss/_x04_cssclass-imggrid-minimal';
-@use 'scss/_z12_ss-cards-minimal';
+@use 'scss/_z12_ss-minimal';
+/* add Advanced Settings last */
+@use 'scss/_z13_ss-adv-settings';
