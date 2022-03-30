@@ -101,6 +101,16 @@
         }
 
         /* ─────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) NUCLEAR OPTION | NO BAR?!
+        ───────────────────────────────────────────────────────────────────────── */
+
+        .sd-begone-bars .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right) {
+
+            display: none;
+            
+        }
+
+        /* ─────────────────────────────────────────────────────────────────────────
         >>> SD VARIABLES
         ───────────────────────────────────────────────────────────────────────── */
             .theme-light, .theme-dark {
@@ -119,5 +129,7 @@
         .sd-opacity-none.sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left):hover {
             opacity: 100%;
         }
+
+
 
 
