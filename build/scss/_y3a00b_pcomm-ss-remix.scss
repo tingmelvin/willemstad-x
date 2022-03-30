@@ -218,6 +218,12 @@
 
         }
 
+    .setting-item:is([data-id="elements-nav"]) .setting-item-name > span::after {
+
+        content: "\ebbe";
+
+    }
+
     .setting-item:is([data-id="modals"]) .setting-item-name > span::after {
 
         content: "\ef3b";
@@ -444,6 +450,14 @@
 
     }
 
+    .setting-item:is([data-id="typography-h-size-text"]) .setting-item-name > span::after {
+
+        content: "\ed8c";
+
+        color: var(--text-accent);
+
+    }
+
 
 
     .setting-item:is([data-id="typography-undl"]) .setting-item-name > span::after {
@@ -527,7 +541,7 @@
 
     }
 
-    .setting-item:is([data-id="kanban-callout"]) .setting-item-name > span::after {
+    .setting-item:is([data-id="PComm007-settings"]) .setting-item-name > span::after {
 
         content: "\f22c";
 
@@ -571,6 +585,12 @@
 
     }
 
+    .setting-item:is([data-id="kanban-callout"]) .setting-item-name > span::after {
+
+        content: "\f22c";
+
+    }
+    
     
 
     .setting-item:is([data-id="plugin-core"]) .setting-item-name > span::after {
@@ -629,9 +649,30 @@
 
     }
 
-/*
-⚠️ PLEASE ONLY USE THIS IF YOU ARE ABSOLUTELY SURE OF WHAT YOU ARE DOING. In the event you might have changed something inadvertently, reset to the theme's original colours using the button beside the colour picker.
-*/
+    .setting-item:is([data-id="readme-adv-settings"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\eca1";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--background-secondary-alt);
+
+            background-color: var(--background-modifier-error);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: normal;
+
+        }
+    }
 
 /* headers stuff */
 

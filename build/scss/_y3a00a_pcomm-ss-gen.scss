@@ -382,7 +382,7 @@
     >>> add 'experimental' tag
     ──────────────────────────────────────────────────────────────────────────── */
     .setting-item:is([data-id="typography-h-col-text-grad"], [data-id="gradient-headers"], [data-id="table-lp-magic"],
-    [data-id="startup"], [data-id="no-animations"]) :is(.setting-item-name) {
+    [data-id="startup"], [data-id="no-animations"], [data-id="fix-mathjax-width"]) :is(.setting-item-name) {
     
         &::after {
 
@@ -459,6 +459,7 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> obsolete?
     ──────────────────────────────────────────────────────────────────────────── */
+    /*
     .setting-item:is([data-id="placeholder-1"], [data-id="placeholder-co-1"]) :is(.setting-item-name) {
 
         &::after {
@@ -480,6 +481,7 @@
         }
 
     }
+    */
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> warning notes
@@ -680,6 +682,35 @@
         }
 
     }    
+
+    .setting-item:is([data-id="tb-tb-remove"]) :is(.setting-item-description) {
+
+        &::after {
+
+            content: "⚠️ This means that you will not be able to resize your screen, or exit Obsidian with a mouse. These can be done via hotkeys instead.";
+            white-space: initial;
+            color: var(--text-normal);
+            font-size: 0.75rem;
+            font-weight: 500;
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0 0.25rem;
+
+            display: inline-flex;
+
+            line-height: 1.5;
+
+        }
+
+    }    
+
 
 
     /* ────────────────────────────────────────────────────────────────────────────

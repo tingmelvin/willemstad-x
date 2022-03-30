@@ -140,16 +140,16 @@ settings:
         level: 2
         collapsed: true
     -
+            id: tb-tb-remove
+            title: Remove Entire Titlebar
+            type: class-toggle
+            description: When enabled, the entire top titlebar from Obsidian is removed.
+            default: false
+    -
             id: tb-title-remove
             title: Remove Title
             type: class-toggle
             description: When enabled, this removes the title from the titlebar.
-            default: false
-    -
-            id: tb-tb-remove
-            title: Remove Entire Titlebar
-            type: class-toggle
-            description: When enabled, the entire top titlebar from Obsidian is removed. Note! This means that you will not be able to resize your screen, or exit Obsidian with a mouse. These can be done via hotkeys instead.
             default: false
     -
             id: tb-willemstad
@@ -193,43 +193,16 @@ settings:
     -
     -
             id: elements-sd
-            title: Sidebars (Side Docks) and Navigation Pane
-            description: 'Customise the sidebar/side docks and navigation pane elements here.'
+            title: Ribbon
+            description: 'Customise the ribbon/sidebar elements here.'
             type: heading
             level: 2
             collapsed: true
     -
-            id: size-font-nav
-            title: Font Size — Navigation Pane
-            type: variable-number-slider
-            description: Use this setting to change the font size of the navigation pane.
-            format: "em"
-            default: 0.9
-            min: 0.25
-            max: 1.5
-            step: 0.05
-    -
-            id: nav-buttons-align
-            title: Navigation Buttons Alignment
-            type: class-select
-            description: Choose the alignment of your navigation buttons.
-            allowEmpty: false
-            default: nav-buttons-left
-            options:
-                -
-                    label: Left-aligned
-                    value: nav-buttons-left
-                -
-                    label: Centre-aligned
-                    value: nav-buttons-center
-                -
-                    label: Right-aligned
-                    value: nav-buttons-right
-    -
             id: sd
-            title: Display Style
+            title: Ribbon Display Style
             type: class-select
-            description: Choose which sidebars/side docks you would like to use for Obsidian.
+            description: Choose which ribbon/sidebar style you would like to use for Obsidian.
             allowEmpty: false
             default: sd-float-tabs
             options:
@@ -246,7 +219,7 @@ settings:
                 id: col-sd
                 title: 'Colours'
                 type: variable-themed-color
-                description: 'Choose the colour you would like for your sidebars/side docks. This affects the border colours for Styled Bars, and all colours for the Floating Tabs. Does not affect the default bars. [For Yellow — hsl(41, 100%, 55%)]' 
+                description: 'Choose the colour you would like for your ribbons/sidebars. This affects the border colours for Styled Bars, and all colours for the Floating Tabs. Does not affect the default bars. [For Yellow — hsl(41, 100%, 55%)]' 
                 opacity: true
                 format: hsl
                 default-light: hsl(184, 74%, 20%)
@@ -254,7 +227,7 @@ settings:
     -
                 id: custom-ft
                 title: 'Customisation — Floating Tabs'
-                description: 'If you have selected the Floating Tabs option in the Sidebars (Side Docks) style setting, customise the Floating Tabs here.'
+                description: 'If you have selected the Floating Tabs option in the Ribbon style setting, customise the Floating Tabs here.'
                 type: heading
                 level: 3
                 collapsed: false
@@ -268,7 +241,7 @@ settings:
                     id: sd-height-norm
                     title: 'Floating Tab Height, when not hovered'
                     type: variable-number-slider
-                    description: 'Set the height of the tabs for the Floating Tabs sidebars, when not hovered.'
+                    description: 'Set the height of the tabs for the Floating Tabs, when not hovered.'
                     format: 'rem'
                     default: 15
                     min: 5
@@ -278,7 +251,7 @@ settings:
                     id: sd-height-hover
                     title: 'Floating Tab Height, when hovered'
                     type: variable-number-slider
-                    description: 'Set the height of the tabs for the Floating Tabs sidebars, when hovered.'
+                    description: 'Set the height of the tabs for the Floating Tabs, when hovered.'
                     format: '%'
                     default: 50
                     min: 5
@@ -288,12 +261,97 @@ settings:
                     id: sd-width-norm
                     title: 'Floating Tab Width, when not hovered'
                     type: variable-number-slider
-                    description: 'Set the width of the tabs for the Floating Tabs sidebars, when not hovered.'
+                    description: 'Set the width of the tabs for the Floating Tabs, when not hovered.'
                     format: 'rem'
                     default: 1.1
                     min: 0.7
                     max: 2.5
                     step: 0.1
+    -
+            id: elements-nav
+            title: Navigation, Navigation Pane and Sidebar Panes
+            description: 'Customise the abovementioned elements here.'
+            type: heading
+            level: 2
+            collapsed: true
+    -
+            id: size-font-nav
+            title: Font Size — Navigation Pane
+            type: variable-number-slider
+            description: Use this setting to change the font size of the navigation pane.
+            format: "em"
+            default: 0.9
+            min: 0.25
+            max: 1.5
+            step: 0.05
+    -
+            id: nav-buttons-align-L
+            title: Navigation Buttons Alignment — Navigation Pane
+            type: class-select
+            description: "Choose the alignment of your navigation buttons on the navigation pane/left sidebar pane."
+            allowEmpty: false
+            default: nav-buttons-left-L
+            options:
+                -
+                    label: Left-aligned
+                    value: nav-buttons-left-L
+                -
+                    label: Centre-aligned
+                    value: nav-buttons-center-L
+                -
+                    label: Right-aligned
+                    value: nav-buttons-right-L
+    -
+            id: nav-buttons-align-R
+            title: Navigation Buttons Alignment — Right Sidebar Pane
+            type: class-select
+            description: "Choose the alignment of your navigation buttons on the right sidebar pane."
+            allowEmpty: false
+            default: nav-buttons-right-R
+            options:
+                -
+                    label: Left-aligned
+                    value: nav-buttons-left-R
+                -
+                    label: Centre-aligned
+                    value: nav-buttons-center-R
+                -
+                    label: Right-aligned
+                    value: nav-buttons-right-R
+    -
+            id: sb-tabs-align-L
+            title: Sidebar Tabs Alignment — Left Sidebar Pane
+            type: class-select
+            description: "Choose the alignment of your sidebar tabs on the navigation pane/left sidebar pane."
+            allowEmpty: false
+            default: sb-tabs-left-L
+            options:
+                -
+                    label: Left-aligned
+                    value: sb-tabs-left-L
+                -
+                    label: Centre-aligned
+                    value: sb-tabs-center-L
+                -
+                    label: Right-aligned
+                    value: sb-tabs-right-L
+    -
+            id: sb-tabs-align-R
+            title: Sidebar Tabs Alignment — Right Sidebar Pane
+            type: class-select
+            description: "Choose the alignment of your sidebar tabs on the right sidebar pane."
+            allowEmpty: false
+            default: sb-tabs-right-R
+            options:
+                -
+                    label: Left-aligned
+                    value: sb-tabns-left-R
+                -
+                    label: Centre-aligned
+                    value: sb-tabs-center-R
+                -
+                    label: Right-aligned
+                    value: sb-tabs-right-R
     -
             id: modals
             title: Modals
@@ -828,7 +886,7 @@ settings:
             default-dark: hsl(0, 0%, 0%)
     -
             id: col-highlight-0
-            title: 'Highlight Colour (default)'
+            title: 'Highlight Colour — default'
             type: variable-themed-color
             description: 'Default highlight colour (==)'
             opacity: false
@@ -837,7 +895,7 @@ settings:
             default-dark: hsl(60, 100%, 50%)
     -
             id: col-highlight-1
-            title: 'Highlight Colour — #1 (italics + highlight markdown)'
+            title: 'Highlight Colour — additional #1 (italics + highlight markdown)'
             type: variable-themed-color
             description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
             opacity: false
@@ -846,7 +904,7 @@ settings:
             default-dark: hsl(120, 100%, 50%)
     -
             id: col-highlight-2
-            title: 'Highlight Colour — #2 (bold + highlight markdown)'
+            title: 'Highlight Colour — additional #2 (bold + highlight markdown)'
             description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'     
             type: variable-themed-color
             opacity: false
@@ -855,7 +913,7 @@ settings:
             default-dark: hsl(180, 100%, 50%)
     -
             id: col-highlight-3
-            title: 'Highlight Colour — #3 (bold + italics + highlight markdown)'
+            title: 'Highlight Colour — additional #3 (bold + italics + highlight markdown)'
             description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'     
             type: variable-themed-color
             opacity: false
@@ -874,18 +932,6 @@ settings:
             title: "Almost-True Rendering"
             type: class-toggle
             description: "When enabled, this renders Source mode and being-edited Live Preview tables congruently similar to Reading mode and rendered Live Preview tables."
-            default: false
-    -
-            id: placeholder-co-1
-            title: "✨ Callout Reading-Mode Live Preview Tables"
-            type: class-toggle
-            description: "Willemstad comes preset with the [!table] callout syntax (available since Obsidian 0.14), which will render your tables in Live Preview like in Reading Mode."
-            default: false
-    -
-            id: placeholder-1
-            title: "✨ Admonitions Pseudo-Reading-Mode Live Preview Tables"
-            type: class-toggle
-            description: https://willemstad.cc/ext/adm/tables/
             default: false
     -                   
             id: size-font-editor-table
@@ -954,9 +1000,9 @@ settings:
             default: false
     -
             id: table-no-borders-td
-            title: No Borders for Table Body
+            title: No Borders for Table Content
             type: class-toggle
-            description: When enabled, the body of the tables will not display a border.
+            description: "When enabled, the body/content of the tables will not display a border."
             default: false
     -
             id: table-no-borders-th
@@ -976,6 +1022,50 @@ settings:
             type: class-toggle
             description: When enabled, you will gain the ability to set the minimum and maximum widths of your tables.
             default: false
+    -
+                id: table-min-space-settings
+                title: "Additional settings available with 'Space Maximiser' option"
+                description: "Too intense? Use the below options to finetune if you need additional spacing."
+                type: heading
+                level: 3
+                collapsed: false
+    -
+            id: table-td-space-padding-tb
+            title: Table Content — Padding — Top and Bottom
+            type: variable-number-slider
+            format: "px"
+            default: 0
+            min: 0
+            max: 20
+            step: 0.5
+    -
+            id: table-td-space-padding-lr
+            title: Table Content — Padding — Left and Right
+            type: variable-number-slider
+            format: "px"
+            default: 0
+            min: 0
+            max: 20
+            step: 0.5
+    -
+            id: table-th-space-padding-tb
+            title: Table Headers — Padding — Top and Bottom
+            type: variable-number-slider
+            format: "px"
+            default: 0
+            min: 0
+            max: 20
+            step: 0.5
+    -
+            id: table-th-space-padding-lr
+            title: Table Headers — Padding — Left and Right
+            type: variable-number-slider
+            format: "px"
+            default: 0
+            min: 0
+            max: 20
+            step: 0.5
+    -
     -
                 id: table-width-settings
                 title: "Additional settings available with 'Set Minimum and Maximum Table Widths' option"
@@ -1027,8 +1117,8 @@ settings:
         step: 0.05
     -
         id: kanban-callout
-        title: "'Kanban' Callout"
-        description: "Settings for the 'Kanban' callouts."
+        title: "Kanban Callout"
+        description: "Settings for the 'kanban' callouts."
         type: heading
         level: 3
         collapsed: true
@@ -1204,7 +1294,7 @@ settings:
      id: misc
      title: "Miscellany"
      type: heading
-     description: Centre Image, Image Desaturation, Fix Mermaid.js Graph Width
+     description: Centre Image; Image Desaturation; Fix Widths for MathJax equations, Mermaid.js graphs and images; Rounded Headers and Boxes; Hide External Hyperlink URLs in Source Mode
      level: 2
      collapsed: false
     -
@@ -1232,15 +1322,33 @@ settings:
                     value: image-desaturation-all
     -
             id: fix-mermaid-width
+            title: Fix MathJax Equation Width
+            type: class-toggle
+            description: When enabled, this fixes the MathJax equation width to fit the viewpane.
+            default: true
+    -
+            id: fix-mathjax-width
             title: Fix Mermaid.js Graph Width
             type: class-toggle
             description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
+            default: true
+    -
+            id: fix-img-width
+            title: Fix Image Width
+            type: class-toggle
+            description: When enabled, this fixes the image width to fit the viewpane.
             default: true
     -
             id: headers-round
             title: Rounded Headers and Boxes
             type: class-toggle
             description: When enabled, rounded-border headers and boxes (such as Admonition and Callout boxes) will be applied over the standard rectangular ones.
+            default: false
+    -
+            id: source-links-hide
+            title: Shimmering Focus-style Hide External Hyperlink URLs in Source Mode
+            type: class-toggle
+            description: When enabled, this hides external hyperlink URLs in Source mode, similar to Shimmering Focus.
             default: false
     -
 */
@@ -1376,6 +1484,41 @@ settings:
         note: 💯📆 Full Calendar
         type: class-toggle
         description: "When enabled, this removes the half-hour dotted lines from the Full Calendar calendar view."
+        default: false
+    -
+     id: PComm007-settings
+     title: Kanban
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm007-sp-singlelane
+        title: Vertical Scroll Kanbans in Side Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, multiple kanban lanes in the side panes can be navigated via scrolling vertically rather than scrolling horizontally.
+        default: false
+    -
+        id: PComm007-sp-fitwidth
+        title: Fit to Width of Side Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, the kanban lanes in the side panes will fit to the width of the side panes.
+        default: false
+    -
+        id: PComm007-wp-singlelane
+        title: Vertical Scroll Kanbans in Main Workspace Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, multiple kanban lanes in the main workspace panes can be navigated via scrolling vertically rather than scrolling horizontally.
+        default: false
+    -
+        id: PComm007-wp-fitwidth
+        title: Fit to Width of Main Workspace Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, the kanban lanes in the main workspace panes will fit to the width of the pane.
         default: false
     -
      id: PComm002-settings

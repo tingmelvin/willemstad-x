@@ -10,6 +10,33 @@
     }
 
     /* ────────────────────────────────────────────────────────────────────────────
+    >> [SHIMMERING FOCUS | HIDE LINKS IN SOURCE MODE]
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.show-urls).source-links-hide .cm-s-obsidian:not(.is-live-preview) .cm-line:not(.cm-active) .cm-string.cm-url {
+    
+
+        &:is(.cm-formatting) {
+
+            text-decoration: none;
+
+        }
+
+        &:not(.cm-formatting) {
+
+            text-decoration: none;
+            font-size: 0;
+        
+            &::after {
+                content: "\eeb7";
+                font-family: "remixicon";
+                font-size: 1rem;
+                position: relative;
+                top: 0.125rem;
+            }
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
     >> [SANCTUM | COLLAPSE HEADER INDICATOR]
     ───────────────────────────────────────────────────────────────────────────────
         >>> (OPTION) Δ Collapse Header Indicator -> Sanctum-style

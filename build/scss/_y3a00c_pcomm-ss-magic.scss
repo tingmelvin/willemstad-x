@@ -1,0 +1,299 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [Y3A00C]
+>> [COMMUNITY PLUGIN | Style Settings] | MAGIC
+\\ Selective Appearance of certain Style Settings
+───────────────────────────────────────────────────────────────────────────────────
+    >>> 
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> SIDE DOCKS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="custom-ft"] {
+
+        display: none;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+    }
+
+
+    :is(.sd-float-tabs) .style-settings-heading[data-id="custom-ft"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: block;
+            
+        }
+    }
+
+    :is(.sd-float-tabs) .is-collapsed.style-settings-heading[data-id="custom-ft"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+    }
+
+    /* col-sd for colours */
+
+    :not(.sd-float-tabs, .sd-eclipse-bars) .setting-item[data-id="col-sd"] {
+
+        display: none; 
+            
+    } /* extraneous for colours if default */
+
+    :is(.sd-float-tabs, .sd-eclipse-bars) .setting-item[data-id="col-sd"] {
+
+        display: flex;
+    
+    } 
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> STARTUP
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="startup"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="startup-revolution"]) {
+
+                display: none; 
+
+            }
+
+            & > .setting-item:is([data-id="startup-revolution"]) {
+
+                display: flex; /* displays the customise screen option*/
+
+            }
+            
+        }
+    }
+
+
+    :is(.startup-revolution) .style-settings-heading[data-id="startup"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="startup-revolution"]) {
+
+                display: flex; /* displays all options*/
+
+            }
+        }
+    }
+
+    /* nested options */
+    .startup-revolution.startup-revolution.startup-revolution /* ugh my specificity */ {
+
+                /* loading message */
+
+                &:not(.startup-message-before) .setting-item[data-id="message-startup"] {
+
+                    display: none; 
+                        
+                } 
+            
+                &:is(.startup-message-before) .setting-item[data-id="message-startup"] {
+            
+                    display: flex;
+                
+                } 
+        
+                /* gradient startup bar */
+        
+                &:not(.gradient-startup-bar) .setting-item[data-id="col-startup-1"] {
+        
+                    display: none; 
+                        
+                } 
+            
+                &:is(.gradient-startup-bar) .setting-item[data-id="col-startup-1"] {
+            
+                    display: flex;
+                
+                } 
+        
+    }
+
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> TITLEBAR
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    :is(.tb-tb-remove) .style-settings-heading[data-id="tb"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="tb-tb-remove"]) {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    :is(.tb-title-remove) .style-settings-heading[data-id="tb"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id="tb-willemstad"] {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> ADVANCED SETTINGS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="Willemstad-Adv-Settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="readme-adv-settings"]) {
+
+                display: none; 
+
+                & + .style-settings-container {
+
+                    display: none;
+
+                }
+
+            }
+
+            & > .setting-item:is([data-id="readme-adv-settings"]) {
+
+                display: flex; /* displays the readme confirmation*/
+
+            }
+            
+        }
+    }
+
+
+    :is(.readme-adv-settings) .style-settings-heading[data-id="Willemstad-Adv-Settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="readme-adv-settings"]) {
+
+                display: flex; /* displays all options*/
+
+                & + .style-settings-container {
+
+                    display: block;
+                    
+                }
+
+            }
+        }
+    }
+
+    :is(.readme-adv-settings) .is-collapsed.style-settings-heading[data-id="Willemstad-Adv-Settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="readme-adv-settings"]) {
+
+                display: flex; /* displays all options*/
+
+                & + .style-settings-container {
+
+                    display: none;
+                    
+                }
+
+            }
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> TABLES
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="table-min-space-settings"] {
+
+        display: none;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+
+        :is(.table-min-space) & {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: block;
+                
+            }
+
+        }
+
+        :is(.table-min-space) &.is-collapsed {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: none;
+                
+            }
+
+        }
+    }
+
+    .style-settings-heading[data-id="table-width-settings"] {
+
+        display: none;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+
+        :is(.table-set-minmax) & {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: block;
+                
+            }
+        }
+
+        :is(.table-set-minmax) &.is-collapsed {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: none;
+                
+            }
+
+        }
+    }

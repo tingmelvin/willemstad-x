@@ -301,6 +301,7 @@
     }
     div.kanban-plugin__item-form {
         padding: 0.15rem;
+        border: none;
     }
     div.kanban-plugin__lane-items {
         margin: 0 0.3rem 0 0.3rem;
@@ -310,6 +311,131 @@
         padding: 0.1rem;
         border: none;
     }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Single Lane Kanbans in Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-singlelane :is(.mod-left-split, .mod-right-split) {
+
+        .kanban-plugin__placeholder {
+            
+            flex-shrink: 1;
+        }
+
+        div.kanban-plugin__board>div {
+
+            flex-direction: column;
+            flex-grow: 1;
+
+        }
+
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper + .kanban-plugin__lane-wrapper {
+
+            margin-top: 0.25rem;
+            margin-right: 0;
+
+        }
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Fit Width to Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-fitwidth :is(.mod-left-split, .mod-right-split) div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+        width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
+        
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [SUPER-OPTION] Fit Width to Side Panes + Single Lane Kanbans in Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-singlelane.PComm007-sp-fitwidth :is(.mod-left-split, .mod-right-split) {
+    
+        div.kanban-plugin__board>div {
+
+            flex-direction: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+        }
+
+        .kanban-plugin__placeholder[data-axis=horizontal] {
+            
+            height: 0; /* extraneous space */
+            
+        }
+
+    }
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Single Lane Kanbans in Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-singlelane .mod-root {
+
+        .kanban-plugin__placeholder {
+            
+            flex-shrink: 1;
+        }
+
+        
+        div.kanban-plugin__board>div {
+
+            flex-direction: column;
+            flex-grow: 1;
+
+        }
+
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper + .kanban-plugin__lane-wrapper {
+
+            margin-top: 0.25rem;
+            margin-right: 0;
+
+        }
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Fit Width to Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-fitwidth .mod-root div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+        width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
+        
+
+    }
+
+        /* ────────────────────────────────────────────────────────────────────────────
+    >>> [SUPER-OPTION] Fit Width to Main Workspace Panes + Single Lane Kanbans in Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-singlelane.PComm007-wp-fitwidth .mod-root {
+    
+        div.kanban-plugin__board>div {
+
+            flex-direction: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+        }
+
+        .kanban-plugin__placeholder[data-axis=horizontal] {
+            
+            height: 0; /* extraneous space */
+            
+        }
+
+    }
+
     /* ────────────────────────────────────────────────────────────────────────────
     >>> FIX | Global colour settings wrt to borders
     ──────────────────────────────────────────────────────────────────────────── */
@@ -370,15 +496,6 @@
         display: flex;
     }
 
-    /*
-    .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content::before {
-        content: "Advanced Tables \A";
-        display: flex;
-        justify-content: center;
-    }
-    */
-
-
     .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
         content: "Tables \A";
         white-space: pre-wrap;
@@ -386,19 +503,64 @@
     }
 
     /* justify stuff */
-    .nav-buttons-left .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before,
-    .nav-buttons-left .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
-        justify-content: left;
+    .mod-left-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+
+        .nav-buttons-left-L & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-L & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-L & {
+            justify-content: right;
+        }
     }
 
-    .nav-buttons-center .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before,
-    .nav-buttons-center .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
-        justify-content: center;
+    .mod-left-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+
+        .nav-buttons-left-L & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-L & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-L & {
+            justify-content: right;
+        }
     }
 
-    .nav-buttons-right .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before,
-    .nav-buttons-right .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
-        justify-content: right;
+    .mod-right-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+
+        .nav-buttons-left-R & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-R & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-R & {
+            justify-content: right;
+        }
+    }
+
+    .mod-right-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+
+        .nav-buttons-left-R & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-R & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-R & {
+            justify-content: right;
+        }
     }
 
     /* padding + border */

@@ -1,5 +1,7 @@
 /* ────────────────────────────────────────────────────────────────────────────────    
-> [D14] Side Docks and Sidebars
+> [D14] Ribbon (old: Side Docks and Sidebars)
+\ using nomenclature per Obsidian Help
+\ wat only the left one is called a ribbon? help
 ──────────────────────────────────────────────────────────────────────────────── */    
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -93,6 +95,10 @@
         .sd-float-tabs .workspace-ribbon-collapse-btn {
             text-align: center; /* the fact that this works makes me angy */
         } /* ensures that the ribbon collapse button is centred */
+
+        .sd-float-tabs.focus-mode .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
+            visibility: hidden;;
+        }
 
         /* ─────────────────────────────────────────────────────────────────────────
         >>> SD VARIABLES

@@ -94,16 +94,56 @@
     /* ────────────────────────────────────────────────────────────────────────
     >>> NAV
     ──────────────────────────────────────────────────────────────────────── */
-        .nav-buttons-left .nav-buttons-container {
-            justify-content: left;
+        .mod-left-split .nav-buttons-container {
+
+            .nav-buttons-left-L & {
+                justify-content: left;
+
+                &:first-child {
+                    margin-left: 0.1rem;
+                }
+            }
+
+            .nav-buttons-center-L & {
+                justify-content: center;
+            }
+
+            .nav-buttons-right-L & {
+                justify-content: right;
+
+                &:last-child {
+                    margin-right: 0.1rem;
+                }
+
+            }
         }
 
-        .nav-buttons-center .nav-buttons-container {
-            justify-content: center;
+        .mod-right-split .nav-buttons-container {
+
+            .nav-buttons-left-R & {
+                justify-content: left;
+
+                &:first-child {
+                    margin-left: 0.1rem;
+                }
+            }
+
+            .nav-buttons-center-R & {
+                justify-content: center;
+            }
+
+            .nav-buttons-right-R & {
+                justify-content: right;
+
+                &:last-child {
+                    margin-right: 0.1rem;
+                }
+
+            }
         }
 
-        .nav-buttons-right .nav-buttons-container {
-            justify-content: right;
+        .nav-action-button > svg {
+            height: 100%;
         }
 
     /* ────────────────────────────────────────────────────────────────────────

@@ -5,6 +5,12 @@ name: "Advanced Settings"
 id: Willemstad-Adv-Settings
 settings:
     -
+        id: readme-adv-settings
+        title: I declare I am absolutely sure of what I am doing, and I want to access Advanced Settings.
+        type: class-toggle
+        description: 
+        default: false
+    -
      id: adv-settings-col
      title: "Advanced Settings — Colours"
      type: heading

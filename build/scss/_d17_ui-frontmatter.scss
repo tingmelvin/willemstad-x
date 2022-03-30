@@ -1,0 +1,33 @@
+/* ────────────────────────────────────────────────────────────────────────────
+> [D17] FRONTMATTER
+───────────────────────────────────────────────────────────────────────────────
+    >> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
+    ──────────────────────────────────────────────────────────────────────── */
+    .frontmatter-container {
+        padding: 0.35rem 0.5rem 0rem;
+        border-radius: calc(var(--shape-roundish) * 1.25);
+    
+
+        :is(/*.tag,*/ .frontmatter-alias) {
+            white-space: pre-wrap;
+            hyphens: auto;
+            word-wrap: break-word;
+            padding: 0;
+            margin: 0.125rem 0.25rem;
+            line-height: 1rem;
+            background-color: transparent;
+        }
+
+        .tag {
+            margin: 0 0.25rem;
+            padding: 0 0.5rem;
+        }
+
+        .frontmatter-container-header {
+            margin: 0;
+        }
+
+        &.is-collapsed .frontmatter-container-header {
+            margin: 0;
+        }
+    }

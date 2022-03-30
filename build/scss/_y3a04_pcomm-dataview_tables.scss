@@ -105,14 +105,56 @@
     }
     
     /* ────────────────────────────────────────────────────────────────────────────
-    >>> (OPTION) NO EXTRANEOUS SPACE
+    >>> (OPTION) NO EXTRANEOUS SPACE | SPACE MAXIMISER
     ──────────────────────────────────────────────────────────────────────────── */
+
+    .table-min-space {
+        &:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td) {
+
+            padding: var(--table-td-space-padding-tb) var(--table-td-space-padding-lr);
+            margin: var(--table-td-space-margin-tb) var(--table-td-space-margin-lr);
+            border-collapse: collapse;
+
+        } /* table body */
+
+        &:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(th),
+        &:is(body.theme-light, body.theme-dark) .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
+
+            padding: var(--table-th-space-padding-tb) var(--table-th-space-padding-lr);
+            margin: var(--table-th-space-margin-tb) var(--table-th-space-margin-lr);
+            border-collapse: collapse;
+
+        } /* table headers */
+
+    }
+
+    /*
     .table-min-space:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td, th),
     .table-min-space:is(body.theme-light, body.theme-dark) .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
         padding: 0;
         margin: 0;
         border-collapse: collapse;
     }
+    */
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>>> (SUB-OPTION) SET ADDITIONAL TABLE SPACE for NO EXTRANEOUS SPACE
+        ──────────────────────────────────────────────────────────────────────── */
+
+        .theme-dark, .theme-light {
+
+            --table-td-space-padding-tb:    0px;
+            --table-td-space-padding-lr:    0px;
+            --table-td-space-margin-tb:     0px;
+            --table-td-space-margin-lr:     0px;
+
+            --table-th-space-padding-tb:    0px;
+            --table-th-space-padding-lr:    0px;
+            --table-th-space-margin-tb:     0px;
+            --table-th-space-margin-lr:     0px;
+
+        } /* margins no settings since they don't really do anything */
+
     
     /* ────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) SET MIN + MAX WIDTH FOR TABLES

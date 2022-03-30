@@ -17,9 +17,33 @@
             text-decoration: underline overline;
             text-underline-position: under;
         }
-        :not(.is-mobile) {
+
             .community-theme.is-selected .community-theme-info::after {
-                content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \A\A Hover over elements such as the status bar for them to become visible. \A\A Please use the 'Style Settings' plugin to enable this theme's full functionality and to change default options.";
+
+                content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \A\A This theme works without the 'Style Settings' plugin, but will have limited functionality. \A\A Please download and enable the 'Style Settings' plugin via 'Settings > Community Plugins > Browse' to take full advantage of this theme!";
+                white-space: pre-wrap;
+                
+                font-weight: bold;
+                font-size: 0.8rem;
+                line-height: 100%;
+                letter-spacing: -0.01rem;
+                position: absolute;
+                top: 30%;
+                right: 5%;
+                left: 5%;
+
+                padding: 0.3rem 0.25rem 0.3rem 0.25rem;
+                margin: 0.25rem;
+
+                color: var(--text-normal);
+                background-color: var(--background-secondary);
+                border-radius: calc(var(--shape-roundish) * 3);
+                border: 0.125rem solid var(--text-error);
+            }
+
+            :is(.css-settings-manager) .community-theme.is-selected .community-theme-info::after {
+
+                content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \A\A Hover over elements such as the status bar for them to become visible. \A\A Thank you for enabling the 'Style Settings' plugin, please use it to enable this theme's full functionality and to change default options.";
                 white-space: pre-wrap;
                 
                 font-weight: bold;
@@ -39,7 +63,6 @@
                 border-radius: calc(var(--shape-roundish) * 3);
                 border: 0.125rem solid var(--interactive-accent);
             }
-        }
 
         /* ─────────────────────────────────────────────────────────────────────────
         >>> FIXES THE WEIRD BOX THINGUM ALIGNING LEFT
