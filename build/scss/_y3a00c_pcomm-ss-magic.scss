@@ -197,25 +197,13 @@
 
                 display: flex; /* displays all options*/
 
-                & + .style-settings-container {
+                &.setting-item-heading + .style-settings-container {
 
                     display: block;
                     
                 }
 
-            }
-        }
-    }
-
-    :is(.readme-adv-settings) .is-collapsed.style-settings-heading[data-id="Willemstad-Adv-Settings"] {
-
-        & + .style-settings-container {
-            
-            & > .setting-item:not([data-id="readme-adv-settings"]) {
-
-                display: flex; /* displays all options*/
-
-                & + .style-settings-container {
+                &.is-collapsed.setting-item-heading + .style-settings-container {
 
                     display: none;
                     
