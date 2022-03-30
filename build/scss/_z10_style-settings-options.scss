@@ -1321,13 +1321,13 @@ settings:
                     label: 'Reading mode + Live Preview'
                     value: image-desaturation-all
     -
-            id: fix-mermaid-width
+            id: fix-mathjax-width
             title: Fix MathJax Equation Width
             type: class-toggle
             description: When enabled, this fixes the MathJax equation width to fit the viewpane.
-            default: true
+            default: false
     -
-            id: fix-mathjax-width
+            id: fix-mermaid-width
             title: Fix Mermaid.js Graph Width
             type: class-toggle
             description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
@@ -1507,6 +1507,17 @@ settings:
         description: When enabled, the kanban lanes in the side panes will fit to the width of the side panes.
         default: false
     -
+        id: PComm007-sp-maxheight
+        title: Max Height of Vertical Kanban Lane in Side Panes
+        note: Kanban
+        type: variable-number-slider
+        description: "Set the maximum height of each kanban lane in the side panes, when vertical."
+        default: 33
+        min: 5
+        max: 100
+        step: 1
+        format: 'vh'
+    -
         id: PComm007-wp-singlelane
         title: Vertical Scroll Kanbans in Main Workspace Panes
         note: Kanban
@@ -1520,6 +1531,17 @@ settings:
         type: class-toggle
         description: When enabled, the kanban lanes in the main workspace panes will fit to the width of the pane.
         default: false
+    -
+        id: PComm007-wp-maxheight
+        title: Max Height of Vertical Kanban Lane in Main Workspace Panes
+        note: Kanban
+        type: variable-number-slider
+        description: "Set the maximum height of each kanban lane in the main workspace panes, when vertical."
+        default: 33
+        min: 5
+        max: 100
+        step: 1
+        format: 'vh'
     -
      id: PComm002-settings
      title: Sliding Panes

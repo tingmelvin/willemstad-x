@@ -330,13 +330,18 @@
 
         }
 
-        div.kanban-plugin__board .kanban-plugin__lane-wrapper + .kanban-plugin__lane-wrapper {
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper {
 
-            margin-top: 0.25rem;
-            margin-right: 0;
+            max-height: var(--PComm007-sp-maxheight);
+        
+            & + .kanban-plugin__lane-wrapper {
+
+                margin-top: 0.25rem;
+                margin-right: 0;
+
+            }
 
         }
-
     }
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -346,7 +351,6 @@
     .PComm007-sp-fitwidth :is(.mod-left-split, .mod-right-split) div.kanban-plugin__board .kanban-plugin__lane-wrapper {
 
         width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
-        
 
     }
 
@@ -393,10 +397,16 @@
 
         }
 
-        div.kanban-plugin__board .kanban-plugin__lane-wrapper + .kanban-plugin__lane-wrapper {
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+            max-height: var(--PComm007-wp-maxheight);
+            
+            & + .kanban-plugin__lane-wrapper {
 
             margin-top: 0.25rem;
             margin-right: 0;
+
+            }
 
         }
 
@@ -409,11 +419,10 @@
     .PComm007-wp-fitwidth .mod-root div.kanban-plugin__board .kanban-plugin__lane-wrapper {
 
         width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
-        
 
     }
 
-        /* ────────────────────────────────────────────────────────────────────────────
+    /* ────────────────────────────────────────────────────────────────────────────
     >>> [SUPER-OPTION] Fit Width to Main Workspace Panes + Single Lane Kanbans in Main Workspace Panes
     ──────────────────────────────────────────────────────────────────────────── */
 
@@ -434,6 +443,11 @@
             
         }
 
+    }
+
+    .theme-dark, .theme-light {
+        --PComm007-sp-maxheight: 33vh;
+        --PComm007-wp-maxheight: 33vh;
     }
 
     /* ────────────────────────────────────────────────────────────────────────────

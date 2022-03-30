@@ -285,3 +285,40 @@
 
         }
     }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> KANBAN
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="PComm007-settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="PComm007-sp-maxheight"], [data-id="PComm007-wp-maxheight"])  {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    .PComm007-sp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id="PComm007-sp-maxheight"] {
+
+                display: flex;
+            }
+        }
+    }
+
+    .PComm007-wp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id="PComm007-wp-maxheight"] {
+
+                display: flex;
+            }
+        }
+    }
