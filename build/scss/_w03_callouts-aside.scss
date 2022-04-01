@@ -75,6 +75,67 @@ div.callout[data-callout="aside-no-title"] {
 }
 
 /*
+div.callout[data-callout="aside-hide"] {
+
+    &::before {
+
+        display: block;
+        content: "\eb50";
+        font-family: "remixicon";
+        padding-top: 0.1rem;
+        padding-left: 0.3rem;
+        font-size: 1rem;
+        color: var(--interactive-accent);
+    }
+
+    text-decoration: unset;
+    text-align: justify;
+    color: transparent;
+    font-weight: unset;
+    float: right;
+    position: relative;
+    margin-right: -0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    clear: right;
+    overflow: hidden;
+    
+    color: transparent;
+
+  
+    margin-left: 0.5rem;
+    border-left: 2px solid var(--interactive-accent);
+
+    &:hover {
+
+        white-space: normal;
+        text-overflow: unset;
+        color: unset;
+        width: 100%;
+        height: unset;
+        padding: 0.5rem;
+        padding-top: 0;
+        z-index: 3;
+        margin-right: unset;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+div.cm-embed-block[data-callout="aside-hide"] {
+    display: inline-block;
+    align-items: right;
+    width: fit-content;
+}
+*/
+
+
+
+
+
+
+/*
 div.el-div[data-callout|="aside"] {
     display: table;
     position: relative;

@@ -88,17 +88,18 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> SOURCE MODE > Δ TO GREY
         ──────────────────────────────────────────────────────────────────────── */
-            .HyperMD-quote.HyperMD-quote-1.cm-line {
-                background-color: var(--background-primary-alt)
+            .HyperMD-quote-1.cm-line {
+                background-color: var(--background-primary-alt);
             }
 
 
         /* ─────────────────────────────────────────────────────────────────────────
         >>> MORE COLOURS IN CODE
         ───────────────────────────────────────────────────────────────────────── */
-            .cm-s-obsidian .HyperMD-codeblock-begin,
-            .cm-s-obsidian .HyperMD-codeblock-end {
-                color: hsl(345, 69%, 46%);
+            .cm-s-obsidian :is(.HyperMD-codeblock-begin,
+            .HyperMD-codeblock-end,
+            span.cm-hmd-callout) {
+                color: var(--col-code-open);
             }
 
             .theme-light .token.operator,
@@ -111,6 +112,39 @@
             .theme-light .cm-string-2,
             .theme-light .cm-link {
                 color: hsl(33, 45%, 42%);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [CALLOUTS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> 
+        ──────────────────────────────────────────────────────────────────────── */
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> 
+        ───────────────────────────────────────────────────────────────────────── */
+            .HyperMD-callout.HyperMD-callout {
+                background-color: var(--background-secondary); /* was background-secondary-alt-2 - phased out */
+
+               /*  border-radius: calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25) 0 0; */
+            
+                & > :not(.cm-hmd-callout) {
+                    color: var(--text-normal);
+                }
+
+                & > span.cm-hmd-callout {
+
+                    color: var(--col-code-open);
+                    font-family: var(--font-monospace);
+
+                    & + span {
+
+                        font-family: var(--font-monospace);
+                        font-size: 0.9em;
+
+                    }
+
+                }
             }
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -145,3 +179,9 @@
             .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] > hr {
                 color: var(--background-modifier-border);
             } /* ensures it's grey */
+
+
+/* setting stuff */
+.theme-dark, .theme-light {
+    --col-code-open : hsl(345, 69%, 46%);
+}

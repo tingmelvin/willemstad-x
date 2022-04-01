@@ -193,62 +193,6 @@
                 hsl(352deg 100% 85%) 100%
             );
 
-            /* gradient mix */
-
-            /* ugh, gradients still use RGB so it looks bleh - include the explanation somewhere
-
-            - to right
-
-            --col-h1-grad: linear-gradient(to right, var(--col-h1-g1), var(--col-h1-g2), var(--col-h1-g3));
-            --col-h2-grad: linear-gradient(to right, var(--col-h2-g1), var(--col-h2-g2), var(--col-h2-g3));
-            --col-h3-grad: linear-gradient(to right, var(--col-h3-g1), var(--col-h3-g2), var(--col-h3-g3));
-            --col-h4-grad: linear-gradient(to right, var(--col-h4-g1), var(--col-h4-g2), var(--col-h4-g3));
-            --col-h5-grad: linear-gradient(to right, var(--col-h5-g1), var(--col-h5-g2), var(--col-h5-g3));
-            --col-h6-grad: linear-gradient(to right, var(--col-h6-g1), var(--col-h6-g2), var(--col-h6-g3));
-            
-            
-            - 90 deg
-
-            --col-h1-grad: linear-gradient(90deg, var(--col-h1-g1), var(--col-h1-g2) 50%, var(--col-h1-g3));
-            --col-h2-grad: linear-gradient(90deg, var(--col-h2-g1), var(--col-h2-g2) 50%, var(--col-h2-g3));
-            --col-h3-grad: linear-gradient(90deg, var(--col-h3-g1), var(--col-h3-g2));
-            --col-h4-grad: linear-gradient(90deg, var(--col-h4-g1), var(--col-h4-g2));
-            --col-h5-grad: linear-gradient(90deg, var(--col-h5-g1), var(--col-h5-g2));
-            --col-h6-grad: linear-gradient(90deg, var(--col-h6-g1), var(--col-h6-g2));
-
-            */
-
-            /* gradient colours */
-
-            /*
-            --col-h1-g1: hsl(19, 100%, 57%);
-            --col-h1-g2: hsl(155, 100%, 37%);
-            --col-h1-g3: hsl(238, 70%, 39%);
-
-            --col-h2-g1: hsl(184, 74%, 20%);
-            --col-h2-g2: hsl(41, 100%, 55%);
-            --col-h2-g3: hsl(324, 100%, 15%);
-            
-
-            --col-h3-g1: hsl(238, 70%, 39%);
-            --col-h3-g2: hsl(188, 100%, 39%);
-            --col-h3-g3: ;
-
-            --col-h4-g1: hsl(19, 100%, 57%);
-            --col-h4-g2: hsl(41, 100%, 55%);
-            --col-h4-g3: ;
-            
-            --col-h5-g1: hsl(324, 100%, 15%);
-            --col-h5-g2: hsl(349, 100%, 84%);
-            --col-h5-g3: ;
-
-            --col-h6-g1: hsl(184, 74%, 20%);
-            --col-h6-g2: hsl(155, 100%, 37%);
-            --col-h6-g3: ;
-            */
-
-
-
          :is(h1, h2, h3, h4, h5, h6,
          .cm-header-1, .cm-header-2, .cm-header-3,
          .cm-header-4, .cm-header-5, .cm-header-6):not(.cm-formatting) {

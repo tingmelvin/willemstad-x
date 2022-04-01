@@ -39,7 +39,7 @@
     ──────────────────────────────────────────────────────────────────────────── */
     div.style-settings-heading[data-level="0"] + .style-settings-container {
         border-left: 1px solid var(--background-modifier-border);
-        padding-left: 1.5rem;
+        padding-left: var(--padding-left-ss);
     }
     
     .vertical-tab-content > .setting-item.setting-item-heading.style-settings-heading {
@@ -55,13 +55,13 @@
         padding-top: 0;
         margin-left: 0;
         border-left: 1px solid var(--background-modifier-border);
-        padding-left: 1.5rem;
+        padding-left: var(--padding-left-ss);
     }
 
 
     span.style-settings-collapse-indicator {
-        margin-right: 0.25rem;
-        margin-left: 0.25rem;
+        margin-right: var(--margin-ss-collapse-indicator);
+        margin-left: var(--margin-ss-collapse-indicator);
     }
 
     /*
@@ -69,6 +69,13 @@
         margin-left: -21px;
     }
     */
+
+    .theme-light, .theme-dark {
+
+        --padding-left-ss: 1.5rem;
+        --margin-ss-collapse-indicator: 0.25rem;
+
+    }
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> Magic show re: level 1 on Willemstad
@@ -381,8 +388,8 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >>> add 'experimental' tag
     ──────────────────────────────────────────────────────────────────────────── */
-    .setting-item:is([data-id="typography-h-col-text-grad"], [data-id="gradient-headers"], [data-id="table-lp-magic"],
-    [data-id="startup"], [data-id="no-animations"], [data-id="fix-mathjax-width"]) :is(.setting-item-name) {
+    .setting-item:is([data-id="gradient-headers"], [data-id="table-lp-magic"],
+    [data-id="startup"], [data-id="no-animations"], [data-id="fix-mathjax-width"], [data-id="Willemstad-Adv-Settings"]) :is(.setting-item-name) {
     
         &::after {
 
@@ -711,6 +718,33 @@
 
     }    
 
+    .setting-item:is([data-id="gradient-headers"]) :is(.setting-item-description) {
+
+        &::after {
+
+            content: "⚠️ Please note that this will break emojis that are present in your headers. If you have emojis in your headers, DO NOT use this option.";
+            white-space: initial;
+            color: var(--text-normal);
+            font-size: 0.75rem;
+            font-weight: 500;
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0 0.25rem;
+
+            display: inline-flex;
+
+            line-height: 1.5;
+
+        }
+
+    }
 
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -771,4 +805,22 @@
 
     }
 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Double Borders
+    ──────────────────────────────────────────────────────────────────────────── */
 
+    .setting-item-heading[data-id="startup"] {
+        border-top: 3px double var(--background-modifier-border);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Dropdowns - Nuclear Options
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    select.dropdown {
+        option:is([value="sd-begone-bars"], [value="sb-hiding"]) {
+            
+            color: var(--text-on-accent);
+            background-color: var(--background-modifier-error);
+        }
+    }

@@ -7,10 +7,22 @@
     ──────────────────────────────────────────────────────────────────────────── */
 
     /* ────────────────────────────────────────────────────────────────────────────
-    >>> SIDE DOCKS
+    >>> SIDE DOCKS | RIBBON
     ──────────────────────────────────────────────────────────────────────────── */
 
-    .style-settings-heading[data-id="custom-ft"] {
+    .style-settings-heading[data-id="elements-sd"] {
+
+        padding-left: calc(var(--padding-left-ss));
+
+        & + .style-settings-container {
+
+            padding-left: calc(var(--padding-left-ss) / 3 * 4);
+
+        }
+
+    }
+
+    .style-settings-heading:is([data-id="custom-ft"], [data-id="elements-sd"]) {
 
         display: none;
 
@@ -44,6 +56,30 @@
         }
     }
 
+
+    :is(.sd-float-tabs, .sd-eclipse-bars) .style-settings-heading[data-id="elements-sd"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: block;
+            
+        }
+    }
+
+    :is(.sd-float-tabs, .sd-eclipse-bars) .is-collapsed.style-settings-heading[data-id="elements-sd"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+    }
+
+
     /* col-sd for colours */
 
     :not(.sd-float-tabs, .sd-eclipse-bars) .setting-item[data-id="col-sd"] {
@@ -57,6 +93,66 @@
         display: flex;
     
     } 
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> HEADER COLOURS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /* text */
+
+    :not(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id$="-grad"] {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    :is(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="col-h1"], [data-id="col-h2"], [data-id="col-h3"],
+            [data-id="col-h4"], [data-id="col-h5"], [data-id="col-h6"]) {
+
+                display: none; /* extraneous in this case */
+            }
+
+            & > .setting-item[data-id$="-grad"] {
+
+                display: flex;
+            }
+        }
+    }
+
+    /* background */
+
+    :not(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="col-h1-bg"], [data-id="col-h2-bg"], [data-id="col-h3-bg"],
+            [data-id="col-h4-bg"], [data-id="col-h5-bg"], [data-id="col-h6-bg"]) {
+
+                display: flex;
+            }
+        }
+    }
+
+    :is(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="col-h1-bg"], [data-id="col-h2-bg"], [data-id="col-h3-bg"],
+            [data-id="col-h4-bg"], [data-id="col-h5-bg"], [data-id="col-h6-bg"]) {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
 
 
     /* ────────────────────────────────────────────────────────────────────────────

@@ -1,5 +1,7 @@
 /* ────────────────────────────────────────────────────────────────────────────
 > [D17] FRONTMATTER
+\ frontmatter is an editor thing since editor stuff influences it
+\ take this out of 'ui' and into 'editor' for next scss position refactor
 ───────────────────────────────────────────────────────────────────────────────
     >> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
     ──────────────────────────────────────────────────────────────────────── */
@@ -30,4 +32,29 @@
         &.is-collapsed .frontmatter-container-header {
             margin: 0;
         }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> FONT CONTROLS | GRANULAR
+    \\ actively check with help.obsidian.md > Advanced Topics > YAML frontmatter for native keys
+    ──────────────────────────────────────────────────────────────────────── */
+
+    div.frontmatter-container {
+        
+        font-size: var(--editor-font-size);
+
+        .frontmatter-container-header {
+            font-size: var(--size-font-frontmatter-header);
+        }
+
+        .frontmatter-section {
+            font-size: var(--size-font-frontmatter-section);
+        }
+    
+    }
+
+
+    .theme-light, .theme-dark {
+        --size-font-frontmatter-header: 0.9em;
+        --size-font-frontmatter-section: 0.9em;
     }

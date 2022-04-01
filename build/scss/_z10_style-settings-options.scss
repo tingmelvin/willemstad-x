@@ -190,19 +190,15 @@ settings:
                 -
                     label: ☀️ Unchanging — Persistent, full-length (Obsidian default)
                     value: default
+                -
+                    label: ❌ (NUCLEAR OPTION) Hiding — Completely removes bar
+                    value: sb-hiding
     -
-    -
-            id: elements-sd
-            title: Ribbon
-            description: 'Customise the ribbon/sidebar elements here.'
-            type: heading
-            level: 2
-            collapsed: true
     -
             id: sd
-            title: Ribbon Display Style
+            title: Ribbon
             type: class-select
-            description: Choose which ribbon/sidebar style you would like to use for Obsidian.
+            description: Choose which ribbon/sidebar/side docks style you would like to use for Obsidian.
             allowEmpty: false
             default: sd-float-tabs
             options:
@@ -216,8 +212,15 @@ settings:
                     label: Default Bars
                     value: default
                 -
-                    label: NUCLEAR OPTION — turn off all bars
+                    label: (NUCLEAR OPTION) No Bars — turn off all bars
                     value: sd-begone-bars
+    -
+            id: elements-sd
+            title: Ribbon Customisation
+            description: 'Customise the ribbon/sidebar elements here.'
+            type: heading
+            level: 2
+            collapsed: false
     -
                 id: col-sd
                 title: 'Colours'
@@ -484,11 +487,31 @@ id: Willemstad-Editor
 settings:
     -
     -
+        id: frontmatter-options
+        title: Frontmatter
+        type: heading
+        level: 2
+        description: Frontmatter options for Willemstad.
+        collapsed: true
+    -
         id: yaml-coloured
         title: Coloured YAML
         type: class-toggle
         description: When enabled, YAML frontmatter will be coloured selectively to increase readabiity.
         default: true
+    -
+        id: size-font-frontmatter-header
+        title: Font Size — Frontmatter Header
+        description: Accepts any valid CSS units.
+        type: variable-text
+        default: 0.9em
+    -
+        id: size-font-frontmatter-section
+        title: Font Size — Frontmatter Section (Aliases and Tags)
+        description: Accepts any valid CSS units.
+        type: variable-text
+        default: 0.9em
+    -
     -
         id: typography-typeface
         title: Font Typeface
@@ -497,7 +520,7 @@ settings:
         level: 2
         collapsed: true
     -
-            id: font-monospace
+            id: font-monospace-theme
             title: Font Typeface — Monospace
             description:
             type: variable-text
@@ -545,7 +568,7 @@ settings:
             type: variable-text
             default: '"Inter 3.19", "DM Sans", "Roboto"'
     -
-            id: mermaid-font
+            id: font-mermaid
             title: "Font Typeface — Mermaid.js"
             description: Changes font for the in-built Mermaid.js visualisations in the theme.
             type: variable-text
@@ -593,6 +616,13 @@ settings:
         description: Changes the font colours of the headers (H1–H6).
         level: 3
         collapsed: true
+    -
+    -
+            id: gradient-headers
+            title: "Gradient Headers"
+            type: class-toggle
+            description: "When enabled, the headers will have a colour gradient applied to them."
+            default: false
     -
             id: col-h1
             title: Font Colour — H1
@@ -647,19 +677,6 @@ settings:
             format: hsl
             default-light: hsl(184, 74%, 20%)
             default-dark: hsl(155, 100%, 37%)
-    -
-        id: typography-h-col-text-grad
-        title: Gradient Colours
-        type: heading
-        description: 'Changes the gradient colours of the headers (H1–H6). Use the setting "Gradient Headers" within to activate colour gradients.'
-        level: 4
-        collapsed: true
-    -
-            id: gradient-headers
-            title: "Gradient Headers"
-            type: class-toggle
-            description: "When enabled, the headers will have a colour gradient applied to them."
-            default: false
     -
             id: col-h1-grad
             title: Font Colour (Gradient) — H1

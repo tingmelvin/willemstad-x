@@ -13,7 +13,7 @@
             bottom: -0.5rem; /* sets it to bottom-right */
             
             padding: 0;
-            line-height: 1.75rem;
+            line-height: var(--height-line-sb);
             
             border-bottom: 0;
             border-top: 0.125rem solid var(--background-secondary-alt);
@@ -33,7 +33,7 @@
             bottom: 0; /* sets it to bottom-right */
             
             padding: 0;
-            line-height: 1.75rem;
+            line-height: var(--height-line-sb);
             
             border-bottom: 0;
             border-top: 0.125rem solid var(--background-secondary-alt);
@@ -57,7 +57,7 @@
             bottom: 0; /* sets it to bottom-right */
 
             padding: 0;
-            line-height: 1.75rem;
+            line-height: var(--height-line-sb);
 
             border-bottom: 0;
             border-top: 0.125rem solid var(--background-secondary-alt);
@@ -72,10 +72,33 @@
 
         div.status-bar {
             max-height: unset;
-            line-height: 1.75rem;     
+            line-height: var(--height-line-sb);
         }
 
         .status-bar-item {
             padding: 0rem 0.5rem;
         }   /* remove up down padding to make it actually have everything align nicely */
             /* change the height instead? */
+
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) HIDING | Totally Gone
+        ──────────────────────────────────────────────────────────────────────── */ 
+
+        .sb-hiding div.status-bar {
+            display: none;
+        }
+
+        .sb-hiding .status-bar-item {
+            display: none;
+        }
+
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> Variables | Status Bar
+        ──────────────────────────────────────────────────────────────────────── */
+        .theme-light, .theme-dark {
+            
+            --height-line-sb: 1.75rem;
+        
+        }

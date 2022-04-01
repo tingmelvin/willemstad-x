@@ -145,7 +145,11 @@
 
     .setting-item:is([data-id="elements-sd"]) .setting-item-name > span::after {
 
-        content: "\f127";
+        content: "\f127 \eeca";
+
+        color: var(--col-h3);
+
+        background-color: var(--col-h3-bg);
 
     }
 
@@ -155,17 +159,18 @@
     
         &::before {
 
-            content: "\f127 \eeca";
+            content: "\f127";
 
             font-family: "remixicon";
             vertical-align: top;
             display: inline-block;
             height: fit-content;
             margin-right: 0.25rem;
-            color: var(--col-h3);
+            color: var(--text-accent);
 
-            background-color: var(--col-h3-bg);
+            background-color: var(--background-secondary-alt);
             border-radius: calc(var(--shape-roundish) * 1);
+
             
             padding-left: 0.25rem;
             padding-right: 0.25rem;
@@ -300,6 +305,13 @@
         }
     }
 
+    .setting-item:is([data-id="frontmatter-options"]) .setting-item-name > span::after {
+
+        content: "\ed3b";
+
+    }
+
+
     .setting-item:is([data-id="yaml-coloured"]) .setting-item-name {
 
         font-weight: 600;
@@ -378,6 +390,7 @@
 
         content: "\ee03";
 
+        /*
         color: var(--background-primary);
 
         background: linear-gradient(45deg,
@@ -390,6 +403,7 @@
             hsl(0, 80%, 54%) 75%,
             hsl(0, 80%, 54%) 100%
             );
+        */
 
     }
 
@@ -401,13 +415,9 @@
 
     }
 
+    /*
     .setting-item:is([data-id="typography-h-col-text-grad"]) .setting-item-name {
-
-        /*
-        background-color: var(--background-secondary-alt);
-        clip-path: inset(0 0 0 3.25rem round 0.5rem);
-        */
-    
+   
         & > span::after {
 
             content: "\ede7";
@@ -430,6 +440,7 @@
 
         }
     }
+    */
 
     .setting-item:is([data-id="typography-h-col-bg"]) .setting-item-name > span::after {
 
@@ -617,26 +628,33 @@
 
     }
 
+    
+
 /* minimal cards and grids */
 
-    .setting-item:is([data-id="img-grid"]) .setting-item-name::before {
+    .setting-item:is([data-id="img-grid"]) {
 
-        content: "\ee90";
-
-        font-family: "remixicon";
-        vertical-align: top;
-        display: inline-block;
-        height: fit-content;
-        margin-right: 0.25rem;
-        color: var(--text-accent);
-
-        background-color: var(--background-secondary-alt);
-        border-radius: calc(var(--shape-roundish) * 1);
-        
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
         font-weight: 600;
 
+        .setting-item-name::before {
+
+            content: "\ee90";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
     }
 
 /* adv settings */

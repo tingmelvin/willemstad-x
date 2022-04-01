@@ -9,7 +9,7 @@
         >>> INTER 3.19
         ──────────────────────────────────────────────────────────────────────── */
         .fp-inter:is(.theme-light, .theme-dark) {
-            --font-monospace: "DM Mono";
+            --font-monospace-theme: "DM Mono";
 
             --font-heading: "Inter 3.19";
             --font-editor:  "Inter 3.19";
@@ -21,7 +21,7 @@
         >>> MANROPE + DM SANS
         ──────────────────────────────────────────────────────────────────────── */
         .fp-manDM:is(.theme-light, .theme-dark) {
-            --font-monospace: "DM Mono";
+            --font-monospace-theme: "DM Mono";
             
             --font-heading: "Manrope";
             --font-editor:  "DM Sans";
@@ -53,7 +53,8 @@
             .cm-s-obsidian .cm-formatting-code, .cm-s-obsidian .cm-math,
             .cm-s-obsidian span.hmd-fold-math-placeholder,
             .cm-s-obsidian .CodeMirror-linewidget kbd,
-            .cm-s-obsidian .hmd-fold-html kbd {
+            .cm-s-obsidian .hmd-fold-html kbd,
+            .cm-s-obsidian span.cm-hmd-callout {
                 letter-spacing: -0.015rem;
                 font-size: 0.9em;
             }

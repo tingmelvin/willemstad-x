@@ -4,21 +4,23 @@
     >> [TYPOGRAPHY] (Fonts, Headings)
     ──────────────────────────────────────────────────────────────────────────── */
 
-        /* sigh. breaking changes from Obsidian 0.14.3 */
+        /* breaking changes from Obsidian 0.14.3 onwards, variables changed in 0.14.5 */
         /*
         --interface-font-override: 'Inter';
         --editor-font-override: 'Inter';
         */ /* not my taiji */
 
 
-        :is(.theme-light, .theme-dark) {
+        body {
         
-            --interface-font-theme: var(--font-ui); /* my changes */
-            --interface-font: var(--interface-font-override), var(--interface-font-theme), var(--default-font);
+            --font-interface-theme: var(--font-ui); /* my changes to stick */
+            --font-interface: var(--font-interface-override), var(--font-interface-theme), var(--default-font); /* replace this with font-interface in 0.14.5 */
             
-            --editor-font-theme: var(--font-editor); /* my changes */
-            --editor-font: var(--editor-font-override), var(--editor-font-theme), var(--interface-font);
+            --font-text-theme: var(--font-text); /* my changes to stick */
+            --font-text: var(--font-text-override), var(--font-text-theme), var(--font-interface), var(--default-font);  /* change in 0.14.5 */
         
+            /* --font-monospace-theme: see below */
+            --font-monospace: var(--font-monospace-override), var(--font-monospace-theme), "DM Mono";
         }
 
         /* ────────────────────────────────────────────────────────────────────────
@@ -40,7 +42,7 @@
 
             /* to edit --default-font, edit the mobile/desktop equivalents (--font-editor-m) and (--font-editor) */
 
-            --font-monospace:       "DM Mono";
+            --font-monospace-theme: "DM Mono";
             --font-heading:         "Manrope", "Inter 3.19", "DM Sans";
 
             /* to edit --menu-font, edit the mobile/desktop equivalents (--font-menu-m) and (--font-menu) */
@@ -48,7 +50,7 @@
 
             --smallcap-font:        "DM Sans", "Inter 3.19", "Manrope";   /* what is this for again? */
             --setting-heading:      "DM Sans", "Inter 3.19", "Manrope";   /* what is this for again? */
-            --mermaid-font:         "DM Sans", "Inter 3.19", "Manrope";   /* for Mermaid.js */
+            --font-mermaid:         "DM Sans", "Inter 3.19", "Manrope";   /* for Mermaid.js */
             --reveal-font:          "DM Sans", "Inter 3.19", "Manrope";   /* for Slides core plugin */
     
         /* ──────────────────────────────────────────────────────────────────────
