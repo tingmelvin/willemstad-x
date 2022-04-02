@@ -8,7 +8,7 @@
         >>> ADD WILLEMSTAD VERSION NUMBER
         ──────────────────────────────────────────────────────────────────────── */
         div.titlebar-text::after {
-            content: '\ \ /\ \ Willemstad X v0.3.1 Bryggen'; /* CHANGE THIS */
+            content: '\ \ /\ \ Willemstad X v0.3.2 Bryggen'; /* CHANGE THIS */
             white-space: pre;
         }
 
@@ -22,7 +22,7 @@
         >>> ADD TEXT + VERSIONING
         ──────────────────────────────────────────────────────────────────────── */
         .community-theme.is-selected .community-theme-title::after {
-            content: "\A v0.3.1 Bryggen"; /* CHANGE THIS */
+            content: "\A v0.3.2 Bryggen"; /* CHANGE THIS */
             white-space: pre-wrap;
 
             font-size: 0.8rem;

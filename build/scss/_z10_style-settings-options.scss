@@ -527,7 +527,7 @@ settings:
             default: '"DM Mono"'
     -
             id: font-heading
-            title: Font Typeface — Headings
+            title: Font Typeface — Headers
             description:
             type: variable-text
             default: '"Inter 3.19", "Manrope", "DM Sans"'
@@ -782,7 +782,7 @@ settings:
             default-dark: hsla(0, 0%, 100%, 0.0)
     -
         id: typography-h-size-text
-        title: Size — Header Text
+        title: Font Size — Header Text
         type: heading
         description: Changes the font size of the headers (H1–H6).
         level: 3
@@ -847,6 +847,31 @@ settings:
             max: 2.7
             step: 0.05
             format: em
+    -
+        id: typography-h-size-paddings
+        title: Padding Size — Headers
+        type: heading
+        description: Changes the padding size of the headers (H1–H6).
+        level: 3
+        collapsed: true
+    -
+            id: mirror-header-paddings
+            title: Mirror Header Paddings 
+            description: When enabled, this will disable the bottom padding size option, and mirror your top padding size preferences for the bottom padding.
+            type: class-toggle
+            default: false
+    -
+            id: padding-header-t
+            title: Top Padding Size — Headers 
+            description: Accepts any valid CSS units.
+            type: variable-text
+            default: 0.125em
+    -
+            id: padding-header-b
+            title: Bottom Padding Size — Headers 
+            description: Accepts any valid CSS units.
+            type: variable-text
+            default: 0.125em
     -
         id: typography-undl
         title: Underlines
@@ -1005,9 +1030,9 @@ settings:
             step: 50
     -
             id: col-bg-table
-            title: Background Colour — Table Headings
+            title: Background Colour — Table Headers
             type: variable-themed-color
-            description: Change the background colour of the table headings.
+            description: Change the background colour of the table headers.
             opacity: false
             format: hsl
             default-light: hsl(155, 100%, 37%)
@@ -1402,7 +1427,7 @@ settings:
      id: plugin-community
      title: Community Plugins
      type: heading
-     description: "Admonitions, Calendar, Footnotes & Citation Indicator, Sliding Panes, Style Settings"
+     description: "Admonitions, Calendar, Footnotes & Citation Indicator, Full Calendar, Kanban, Sliding Panes, Style Settings, Longform"
      level: 2
      collapsed: false
     -
@@ -1585,10 +1610,10 @@ settings:
      collapsed: false
     -
         id: PComm000-blockdesc-appear
-        title: Keep Heading Block Description visible
+        title: Keep Header Block Description visible
         note: ⚙️ Style Settings
         type: class-toggle
-        description: When enabled, this keeps the heading description in the Style Settings visible when said option is toggled.
+        description: When enabled, this keeps the header description in the Style Settings visible when said option is toggled.
         default: true
     -
      id: longform-settings

@@ -81,7 +81,7 @@ https://github.com/sponsors/kepano
   transition:box-shadow 0.15s linear;
 }
 .cards table.dataview > tbody > tr:hover {
-  border:var(--cards-border-width) solid var(--background-modifier-border-hover);
+  border:var(--cards-border-width) solid var(--background-modifier-border-hover); /* change this */
   box-shadow:0 4px 6px 0px rgba(0,0,0,0.05),0 1px 3px 1px rgba(0,0,0,0.025);
   transition:box-shadow 0.15s linear;
 }
@@ -108,7 +108,7 @@ https://github.com/sponsors/kepano
 }
 
 .cards table.dataview tbody > tr > td:first-child {
-  font-weight:var(--bold-weight);
+  font-weight:var(--bold-weight); /* change this */
 }
 .cards table.dataview tbody > tr > td:first-child a {
   padding:0 0 calc(var(--cards-padding)/3);
@@ -316,9 +316,9 @@ https://github.com/sponsors/kepano
   width:100%;
   font-weight:400;
   color:var(--text-muted);
-  cursor:var(--cursor);
+  /* cursor:var(--cursor); */ 
   border: none;
-  font-size:var(--font-adaptive-small);
+  /* font-size:var(--font-adaptive-small); */
 }
 .cards table.dataview thead > tr > th[sortable-style="sortable-asc"],
 .cards table.dataview thead > tr > th[sortable-style="sortable-desc"] {

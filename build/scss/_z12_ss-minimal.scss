@@ -4,8 +4,8 @@ id: Minimal-Cards
 settings:
     -
         id: img-grid
-        title: Toggle Image Grid
-        description: "When enabled, this toggles the Image Grid extension from Minimal, by @kepano."
+        title: Toggle Image Grid Globally
+        description: "When enabled, this toggles the Image Grid extension from Minimal, by @kepano, globally. If you would like to use Image Grid for specific notes, you can alternatively use 'img-grid' as a CSSClass for your relevant notes."
         type: class-toggle
     -
         id: cards-min-width

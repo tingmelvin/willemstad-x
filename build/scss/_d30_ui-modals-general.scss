@@ -22,11 +22,19 @@
 
             .modal.mod-settings {
                 width: var(--modal-width-settings);
-                height: var(--modal-height-settings) ;
+                height: var(--modal-height-settings);
+
+                .vertical-tab-header {
+                    height: var(--modal-height-settings);
+                }
+
+                .vertical-tab-content-container {
+                    height: var(--modal-height-settings);
+                }
             }
             .modal.mod-community-plugin {
                 width: var(--modal-width-community-plugin);
-                height: var(--modal-height-community-plugin) ;
+                height: var(--modal-height-community-plugin);
             }
             .modal.mod-community-theme {
                 width: var(--modal-width-community-theme);

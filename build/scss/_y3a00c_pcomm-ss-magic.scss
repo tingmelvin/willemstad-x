@@ -154,6 +154,30 @@
         }
     }
 
+    /* header paddings */
+
+    :not(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="padding-header-b"]) {
+
+                display: flex;
+            }
+        }
+    }
+
+    :is(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="padding-header-b"]) {
+
+                display: none;
+            }
+        }
+    }
+
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> STARTUP
@@ -418,3 +442,5 @@
             }
         }
     }
+
+    
