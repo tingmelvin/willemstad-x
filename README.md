@@ -68,7 +68,7 @@ Available [here](https://willemstad.cc).
 Unfortunately the theme documentations aren't complete, but currently, Willemstad supports `table` (legacy; sherlocked by Licat into Obsidian 0.14.1), `infobox`, `aside`, `aside-no-title`, `kanban`, `kanban-no-title`, `grid`, `grid-ext` and `masonry` (which is the same as `grid-ext`).
 
 ## Mentions in the Obsidian Roundup
-[26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
+[04th April](https://www.obsidianroundup.org/2022-04-02/) | [26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
 
 and of the original Willemstad snippet for Shimmering Focus:
 [12th February](https://www.obsidianroundup.org/2022-02-12/) and [5th February](https://www.obsidianroundup.org/2022-02-05/)
