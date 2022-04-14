@@ -1,0 +1,195 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [B01] ROOT | BASE COLOURS
+───────────────────────────────────────────────────────────────────────────────────
+    >> BASE COLOURS
+    ──────────────────────────────────────────────────────────────────────────── */
+    :is(.theme-light, .theme-dark) {
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> ACCENTS
+        ──────────────────────────────────────────────────────────────────── */
+            --accent-light: hsl(41, 100%, 40%);
+            --accent-lighter: hsl(41, 100%, 55%);
+            --accent-lighterer: hsl(41, 100%, 70%);
+            --accent-lightest: hsl(41, 100%, 85%);
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
+        ──────────────────────────────────────────────────────────────────── */
+            --PComm001-col-today: hsl(184, 74%, 20%);
+            --PComm001-col-year: hsl(155, 100%, 37%);
+            --PComm001-col-dot: hsl(184, 74%, 20%);
+    }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> LIGHT THEME
+        ───────────────────────────────────────────────────────────────────────── */
+        .theme-light {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(155, 100%, 37%);
+                --col-h2: hsl(184, 74%, 20%);
+                --col-h3: hsl(238, 70%, 39%);
+                --col-h4: hsl(19, 100%, 57%); /* rgb(254 80 0) rgb(255 125 0);*/
+                --col-h5: hsl(324, 100%, 15%);
+                --col-h6: hsl(184, 74%, 20%); 
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(184, 74%, 20%, 0.08);
+                --col-h2-bg: hsla(155, 100%, 37%, 0.2);
+                --col-h3-bg: hsla(188, 100%, 39%, 0.25);
+                --col-h4-bg: hsla(41, 100%, 55%, 0.2);
+                --col-h5-bg: hsla(352, 100%, 85%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(184, 75%, 20%);
+                --text-accent-hover: hsl(155, 100%, 37%);
+
+                --col-bg-table: hsl(155, 100%, 37%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(184, 74%, 20%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+
+                --scroll-hover: hsl(155, 100%, 48%);            
+                --col-selection: hsl(41, 100%, 55%);
+
+                --text-dark: hsl(184, 74%, 20%);
+                --text-light: hsl(155, 100%, 37%);
+
+                --col-sd: hsl(184, 75%, 20%);
+        } 
+        
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> DARK THEME
+        ───────────────────────────────────────────────────────────────────────── */
+        .theme-dark {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(187, 13%, 87%);
+                --col-h2: hsl(155, 100%, 37%);
+                --col-h3: hsl(188, 100%, 39%);
+                --col-h4: hsl(41, 100%, 55%);
+                --col-h5: hsl(352, 100%, 85%);
+                --col-h6: hsl(155, 100%, 37%);
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(155, 100%, 37%, 0.73);
+                --col-h2-bg: hsla(184, 74%, 20%, 0.2);
+                --col-h3-bg: hsla(238, 70%, 39%, 0.25);
+                --col-h4-bg: hsla(19, 100%, 50%, 0.2);
+                --col-h5-bg: hsla(324, 100%, 15%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(155, 100%, 37%);
+                --text-accent-hover: hsl(184, 74%, 20%);
+
+                --col-bg-table: hsl(184, 74%, 20%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(155, 100%, 37%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+
+                --scroll-hover: hsl(155, 100%, 48%);          
+                --col-selection: hsl(41, 100%, 55%);
+
+                --text-dark: hsl(184, 74%, 20%);
+                --text-light: hsl(155, 100%, 37%);
+
+                --col-sd: hsl(155, 100%, 37%);
+
+        }
+        
+        
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> SETTING BASE COLOURS AND ALL | CODE: HIUMAA
+    ───────────────────────────────────────────────────────────────────────── */
+    .theme-light {
+
+        --background-primary:           hsl(0, 0%, 100%);
+        --background-primary-alt:       hsl(220, 18%, 97%);
+
+        --background-secondary:         hsl(220, 13%, 95%);
+        --background-secondary-alt:     hsl(216, 10%, 90%); /* secondary-alt-2 was hsl(218, 11.5%, 92.5%); tertiary was hsl(212, 9%, 85%); tertiary-alt was hsl(208, 8%, 80%) */
+
+        --text-normal:                  hsl(210, 10%, 20%);
+        --text-muted:                   hsl(0, 0%, 53%);
+        --text-faint:                   hsl(0, 0%, 60%);
+        --text-error:                   hsl(0, 100%, 25%);
+        --text-error-hover:             hsl(0, 100%, 30%);
+        --text-on-accent:               hsl(0, 0%, 95%);
+
+        --background-modifier-border: hsl(0, 0%, 87%);
+        --background-modifier-form-field: hsl(0, 0%, 100%);
+        --background-modifier-form-field-highlighted: hsl(0, 0%, 100%);
+        --background-modifier-box-shadow: hsla(0, 0%, 0%, 0.1);
+        --background-modifier-success: hsl(148, 58%, 77%);
+        --background-modifier-error: hsl(0, 100%, 30%);
+        --background-modifier-error-hover: hsl(0, 100%, 37%);
+        --background-modifier-cover: hsla(0, 0%, 0%, 0.8);
+
+        --highlight-mix-blend-mode: darken;
+
+
+        /* things im not sure what it does, lol */
+        --text-selection:               hsla(209, 100%, 90%, 0.99);
+        --interactive-normal:           hsl(220, 13%, 95%);
+        --interactive-hover:            hsl(0, 0%, 91%);
+        --interactive-success:          hsl(107, 100%, 23%);
+        --scrollbar-active-thumb-bg:    hsla(0, 0%, 0%, 0.2);
+        --scrollbar-bg:                 hsla(0, 0%, 0%, 0.05);
+        --scrollbar-thumb-bg:           hsla(0, 0%, 0%, 0.102);
+
+    }
+
+    .theme-dark {
+        
+        --background-primary:           hsl(0, 0%, 13%);
+        --background-primary-alt:       hsl(0, 0%, 9%);
+
+        --background-secondary:         hsl(0, 0%, 8%);
+        --background-secondary-alt:     hsl(0, 0%, 0%);
+
+        --text-normal:                  hsl(210, 3%, 87%);
+        --text-muted:                   hsl(0, 0%, 60%);
+        --text-faint:                   hsl(0, 0%, 40%);
+        --text-error:                   hsl(0, 100%, 60%);
+        --text-error-hover:             hsl(0, 100%, 30%);
+        --text-on-accent:               hsl(210, 3%, 87%);
+
+        --background-modifier-border: hsl(0, 0%, 20%);
+        --background-modifier-form-field: hsla(0, 0%, 0%, 0.302);
+        --background-modifier-form-field-highlighted: hsla(0, 0%, 0%, 0.22);
+        --background-modifier-box-shadow: hsla(0, 0%, 0%, 0.3);
+        --background-modifier-success: hsl(107, 100%, 23%);
+        --background-modifier-error: hsl(0, 100%, 12%);
+        --background-modifier-error-hover: hsl(0, 100%, 14%);
+        --background-modifier-cover: hsla(0, 0%, 0%, 0.8);
+
+        --highlight-mix-blend-mode: lighten;
+
+
+        /* things im not sure what it does, lol */
+        --text-selection:               hsla(212, 54%, 20%, 0.99);
+        --interactive-normal:           hsl(0, 0%, 16%);
+        --interactive-hover:            hsl(0, 0%, 19%);
+        --interactive-success:          hsl(107, 100%, 23%);
+        --scrollbar-active-thumb-bg:    hsla(0, 0%, 100%, 0.2);
+        --scrollbar-bg:                 hsla(0, 0%, 100%, 0.05);
+        --scrollbar-thumb-bg:           hsla(0, 0%, 100%, 0.1);
+
+    }

@@ -1,0 +1,374 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW14
+\ Admonitions and Callouts 
+\ Kanban
+\ by me!
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+Pseudo-kanban Callouts and Admonitions for Obsidian
+Author: @tingmelvin
+Version: 0.1.0
+
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* kanban with title */
+
+.theme-light, .theme-dark {
+
+    --height-ul-kanban: calc(var(--height-callout-kanban) - var(--height-header-kanban) - var(--size-scrollbar) - 0.5rem); /* change to desired height in ul */
+
+    --height-ul-kanban-norm: 100%;
+
+    --height-callout-kanban: 30rem;
+    --height-header-kanban: 3.5rem;
+
+    --width-ul-kanban: 272px; /* change to desired width in ul - this is Kanban plugin default */
+
+    --padding-content-kanban: 0.25rem;
+
+    --size-font-callout-title: var(--h1);
+
+}
+
+div.callout[data-callout*="kanban"] {
+  
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .callout-title {
+        /* display: none */ /* use if not using a title */
+        border-top-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-top-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        background-color: var(--background-secondary);
+        padding: 0.25rem 1rem;
+
+        font-size: var(--size-font-callout-title);
+
+        .callout-icon {
+            display: none;
+        }
+    }
+
+    .callout-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--padding-content-kanban);
+        /* border-radius: calc(var(--shape-roundish) * 2); */ /* use if not using a title */
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* height: calc(var(--height-header-kanban)); */
+        height: clamp(0, var(--height-ul-kanban));
+        align-content: flex-start;
+    }
+
+
+    :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+        flex-direction: column;
+        height: min(calc(var(--height-ul-kanban) - var(--height-header-kanban)), 0);
+        width: var(--width-ul-kanban);
+        overflow-y: scroll;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+
+    }
+
+    li::marker {
+        content: "";
+    }
+}
+
+/* kanban without title */
+
+div.callout[data-callout="kanban-no-title"] {
+
+    .callout-title {
+        display: none; /* use if not using a title */
+
+    }
+
+    .callout-content {
+
+        border-radius: calc(var(--shape-roundish) * 2); /* use if not using a title */
+
+    }
+
+}
+
+
+
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W04A] Kanban Admonition - needs to be updated
+\ :D by me!
+──────────────────────────────────────────────────────────────────────────────── */
+
+.admonition-kanban {
+  
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .admonition-title {
+        /* display: none */ /* use if not using a title */
+        border-top-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-top-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        background-color: var(--background-secondary);
+        padding-bottom: 0;
+        padding-left: 1rem;
+
+        font-size: var(--size-font-callout-title);
+
+        .admonition-title-icon {
+            display: none;
+        }
+    }
+
+    .admonition-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--padding-content-kanban);
+        /* border-radius: calc(var(--shape-roundish) * 2); */ /* use if not using a title */
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: var(--height-callout-kanban);
+        align-content: flex-start;
+    }
+
+
+    .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+
+        height: var(--height-ul-kanban);
+        width: var(--width-ul-kanban);
+        overflow: scroll;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+    }
+}
+
+/* kanban without title */
+.admonition-kanban-no-title {
+  
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .admonition-title {
+        display: none; /* use if not using a title */
+
+        background-color: var(--background-secondary);
+        padding-bottom: 0;
+
+        .admonition-title-icon {
+            display: none;
+        }
+    }
+
+    .admonition-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--padding-content-kanban);
+        border-radius: calc(var(--shape-roundish) * 2); /* use if not using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: var(--height-callout-kanban);
+        align-content: flex-start;
+    }
+
+
+    .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+
+        height: var(--height-ul-kanban);
+        width: var(--width-ul-kanban);
+        overflow: scroll;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+    }
+}
+
+/* LP fix for admonitions */
+.is-live-preview :is(.admonition-kanban, .admonition-kanban-no-title) .admonition-content > * {
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}

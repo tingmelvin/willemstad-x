@@ -1,0 +1,97 @@
+/* ────────────────────────────────────────────────────────────────────────────
+> [D17] FRONTMATTER
+\ frontmatter is an editor thing since editor stuff influences it
+\ take this out of 'ui' and into 'editor' for next scss position refactor
+───────────────────────────────────────────────────────────────────────────────
+    >> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
+    ──────────────────────────────────────────────────────────────────────── */
+    .frontmatter-container {
+        padding: 0.35rem 0.5rem 0rem;
+        border-radius: calc(var(--shape-roundish) * 1.25);
+    
+
+        :is(/*.tag,*/ .frontmatter-alias) {
+            white-space: pre-wrap;
+            hyphens: auto;
+            word-wrap: break-word;
+            padding: 0;
+            margin: 0.125rem 0.25rem;
+            line-height: 1rem;
+            background-color: transparent;
+        }
+
+        .tag {
+            margin: 0 0.25rem;
+            padding: 0 0.5rem;
+        }
+
+        .frontmatter-container-header {
+            margin: 0;
+        }
+
+        &.is-collapsed .frontmatter-container-header {
+            margin: 0;
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> FONT CONTROLS | GRANULAR
+    \\ actively check with help.obsidian.md > Advanced Topics > YAML frontmatter for native keys
+    ──────────────────────────────────────────────────────────────────────── */
+
+    div.frontmatter-container {
+        
+        font-size: var(--editor-font-size);
+
+        .frontmatter-container-header {
+            font-size: var(--size-font-frontmatter-header);
+        }
+
+        .frontmatter-section {
+            font-size: var(--size-font-frontmatter-section);
+        }
+    
+    }
+
+
+    .theme-light, .theme-dark {
+        --size-font-frontmatter-header: 0.9em;
+        --size-font-frontmatter-section: 0.9em;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> Colours
+    ──────────────────────────────────────────────────────────────────────── */
+    .theme-light, .theme-dark {
+        --col-frontmatter-default: var(--text-accent-hover);
+        --col-frontmatter-atom: var(--text-accent);
+        --col-frontmatter-meta: var(--text-accent-hover);
+        --col-frontmatter-number: var(--text-accent-hover);
+    }
+
+
+
+    body.yaml-coloured .cm-s-obsidian .cm-hmd-frontmatter {
+        color: var(--col-frontmatter-default); /* general frontmatter */
+
+
+        &.cm-atom {
+            color: var(--col-frontmatter-atom);
+            font-weight: bold;
+        }
+
+        &.cm-meta {
+            color: var(--col-frontmatter-meta);
+        }
+
+        &.cm-number {
+            color: var(--col-frontmatter-number);
+        }
+
+    } 
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> [Advanced] Granular Colours
+    ──────────────────────────────────────────────────────────────────────── */

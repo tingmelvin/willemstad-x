@@ -1,0 +1,900 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [Y3A00B]
+>> [COMMUNITY PLUGIN | Style Settings] | REMIXICONS
+\\ 
+───────────────────────────────────────────────────────────────────────────────────
+    >>> 
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .setting-item:is([data-id]) .setting-item-name > span::after {
+
+        font-family: "remixicon";
+        color: var(--text-accent);
+
+        /* vertical-align: middle; */
+
+        vertical-align: top;
+        display: inline-block;
+        height: fit-content;
+
+        font-size: 1rem;
+        margin-left: 0.25rem;
+        /* letter-spacing: 1px; */
+
+        background-color: var(--background-secondary-alt);
+        border-radius: calc(var(--shape-roundish) * 1);
+        
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+
+    } /* sets font size, colour, and alignment for everything */
+
+    .setting-item:is([data-id="col-palette"]) .setting-item-name::before {
+
+        content: "\efc5";
+
+        font-family: "remixicon";
+        vertical-align: top;
+        display: inline-block;
+        height: fit-content;
+        margin-right: 0.25rem;
+        color: var(--background-primary);
+        background: linear-gradient(45deg,
+        hsl(196, 67%, 45%) 0%,
+        hsl(196, 67%, 45%) 25%,
+        hsl(140, 57%, 42%) 25%,
+        hsl(140, 57%, 42%) 50%,
+        hsl(41, 95%, 60%) 50%,
+        hsl(41, 95%, 60%) 75%,
+        hsl(0, 80%, 54%) 75%,
+        hsl(0, 80%, 54%) 100%
+        );
+
+        border-radius: calc(var(--shape-roundish) * 1);
+        
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+
+        font-weight: 100;
+    }
+
+    .setting-item:is([data-id="true-black"]) .setting-item-name {
+
+        font-weight: 600;    
+    
+        &::before {
+
+            content: "\eb7c";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: black;
+
+            background-color: var(--background-primary); /*hsl(216, 10%, 90%);*/ /* use light background-secondary-alt */
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+        }
+    }
+
+    .setting-item:is([data-id="no-animations"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\eb96 \eeea";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+        }
+    }
+
+    .setting-item:is([data-id="startup"]) .setting-item-name > span::after {
+
+        content: "\eeca";
+
+    }
+    
+    .setting-item:is([data-id="tb"]) .setting-item-name > span::after {
+
+        content: "\f2c5";
+
+    }
+
+    .setting-item:is([data-id="sb"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\ef95";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
+    .setting-item:is([data-id="elements-sd"]) .setting-item-name > span::after {
+
+        content: "\f127 \eeca";
+
+        color: var(--col-h3);
+
+        background-color: var(--col-h3-bg);
+
+    }
+
+    .setting-item:is([data-id="sd"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\f127";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
+        .setting-item:is([data-id="col-sd"]) .setting-item-name::before {
+
+            content: "\f127 \eafa";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            /* color: var(--text-accent); */
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+
+        }
+
+        .setting-item:is([data-id="custom-ft"]) .setting-item-name > span::after {
+
+            content: "\f127 \eee9";
+
+        }
+
+        .setting-item:is([data-id="sd-opacity-none"]) .setting-item-name::before {
+
+            content: "\f127 \eacd";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            /* color: var(--text-accent); */
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+
+        }
+
+    .setting-item:is([data-id="elements-nav"]) .setting-item-name > span::after {
+
+        content: "\ebbe";
+
+    }
+
+    .setting-item:is([data-id="modals"]) .setting-item-name > span::after {
+
+        content: "\ef3b";
+
+    }
+    
+    .setting-item:is([data-id="modal-widths"]) .setting-item-name > span::after {
+
+        content: "\ef3b \ea61";
+
+    }
+
+    .setting-item:is([data-id="modal-heights"]) .setting-item-name > span::after {
+
+        content: "\ef3b \ea73";
+
+    }
+
+    .setting-item:is([data-id="misc"]) .setting-item-name > span::after {
+
+        content: "\ee0d";
+
+    }
+
+    .setting-item:is([data-id="size-scrollbar"]) .setting-item-name {
+
+        font-weight: 600;
+        color: var(--text-accent);
+    
+        &::before {
+
+            content: "\ee98";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
+/* typography */
+
+    .setting-item:is([data-id="font-pairings"]) .setting-item-name {
+
+
+        &::before {
+
+            content: "&";
+            font-family: var(--font-ui);
+
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--col-h1);
+
+            background-color: var(--col-h1-bg);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
+    .setting-item:is([data-id="frontmatter-options"]) .setting-item-name > span::after {
+
+        content: "\ed3b";
+
+    }
+
+
+    .setting-item:is([data-id="yaml-coloured"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\f054";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--background-primary);
+            background: linear-gradient(45deg,
+            hsl(196, 67%, 45%) 0%,
+            hsl(196, 67%, 45%) 25%,
+            hsl(140, 57%, 42%) 25%,
+            hsl(140, 57%, 42%) 50%,
+            hsl(41, 95%, 60%) 50%,
+            hsl(41, 95%, 60%) 75%,
+            hsl(0, 80%, 54%) 75%,
+            hsl(0, 80%, 54%) 100%
+            );
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 100;
+
+        }
+    }
+
+    .setting-item:is([data-id="smol-headers"]) .setting-item-name {
+
+        font-weight: 600;
+
+        &::before {
+
+            content: "#";
+            font-family: var(--font-ui);
+
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
+    .setting-item:is([data-id="typography-typeface"]) .setting-item-name > span::after {
+
+        content: "Aa";
+        font-family: var(--font-ui);
+
+    }
+
+    .setting-item:is([data-id="typography-size"]) .setting-item-name > span::after {
+
+        content: "大";
+        font-family: var(--font-ui);
+
+    }
+
+    .setting-item:is([data-id="h-col"]) .setting-item-name > span::after {
+
+        content: "\ee03";
+
+        /*
+        color: var(--background-primary);
+
+        background: linear-gradient(45deg,
+            hsl(196, 67%, 45%) 0%,
+            hsl(196, 67%, 45%) 25%,
+            hsl(140, 57%, 42%) 25%,
+            hsl(140, 57%, 42%) 50%,
+            hsl(41, 95%, 60%) 50%,
+            hsl(41, 95%, 60%) 75%,
+            hsl(0, 80%, 54%) 75%,
+            hsl(0, 80%, 54%) 100%
+            );
+        */
+
+    }
+
+    .setting-item:is([data-id="typography-h-col-text"]) .setting-item-name > span::after {
+
+        content: "\ede6";
+
+        color: var(--text-accent);
+
+    }
+
+    /*
+    .setting-item:is([data-id="typography-h-col-text-grad"]) .setting-item-name {
+   
+        & > span::after {
+
+            content: "\ede7";
+
+            color: transparent;
+
+            background: linear-gradient(45deg,
+            hsl(196, 67%, 45%) 0%,
+            hsl(196, 67%, 45%) 25%,
+            hsl(140, 57%, 42%) 25%,
+            hsl(140, 57%, 42%) 50%,
+            hsl(41, 95%, 60%) 50%,
+            hsl(41, 95%, 60%) 75%,
+            hsl(0, 80%, 54%) 75%,
+            hsl(0, 80%, 54%) 100%
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+        }
+    }
+    */
+
+    .setting-item:is([data-id="typography-h-col-bg"]) .setting-item-name > span::after {
+
+        content: "\ede6";
+
+        color: var(--background-primary);
+
+        background: linear-gradient(45deg,
+            hsl(196, 67%, 45%) 0%,
+            hsl(196, 67%, 45%) 25%,
+            hsl(140, 57%, 42%) 25%,
+            hsl(140, 57%, 42%) 50%,
+            hsl(41, 95%, 60%) 50%,
+            hsl(41, 95%, 60%) 75%,
+            hsl(0, 80%, 54%) 75%,
+            hsl(0, 80%, 54%) 100%
+            );
+
+    }
+
+    .setting-item:is([data-id="typography-h-size-text"]) .setting-item-name > span::after {
+
+        content: "\ed8c";
+
+        color: var(--text-accent);
+
+    }
+
+
+
+    .setting-item:is([data-id="typography-undl"]) .setting-item-name > span::after {
+
+        content: "\f244";
+
+    }
+
+    .setting-item:is([data-id="typography-highlight"]) .setting-item-name {
+ 
+        & > span::after {
+
+            content: "\eb7c";
+
+            color: hsl(46, 100%, 50%);
+            /* background-color: var(--background-primary); */
+        }
+    }
+
+    .setting-item:is([data-id="table-options"]) .setting-item-name > span::after {
+
+        content: "\f1da";
+
+    }
+
+    .setting-item:is([data-id="table-lp-magic"]) .setting-item-name {
+
+        font-weight: 600;
+
+        &::before {
+
+            content: "\f1da \ef25";
+            font-family: "remixicon";
+
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--col-h3);
+
+            background-color: var(--col-h3-bg);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
+
+/* plugins */
+
+    .setting-item:is([data-id="PCore001-settings"]) .setting-item-name > span::after {
+
+        content: "\ebb7 \efc5";
+
+    }
+    
+    .setting-item:is([data-id="PComm000-settings"]) .setting-item-name > span::after {
+
+        content: "\f0e7";
+
+    }
+
+    .setting-item:is([data-id="PComm001-settings"]) .setting-item-name > span::after {
+
+        content: "\eb27";
+
+    }
+
+    .setting-item:is([data-id="PComm002-settings"]) .setting-item-name > span::after {
+
+        content: "\f128";
+
+    }
+
+    .setting-item:is([data-id="PComm003-settings"]) .setting-item-name > span::after {
+
+        content: "\ea16";
+
+    }
+
+    .setting-item:is([data-id="PComm007-settings"]) .setting-item-name > span::after {
+
+        content: "\f22c";
+
+    }
+
+    .setting-item:is([data-id="PComm009-settings"]) .setting-item-name > span::after {
+
+        content: "\eb26"; /* \ed9c */
+
+    }
+
+    .setting-item:is([data-id="PComm027-settings"]) .setting-item-name > span::after {
+
+        content: "\ea81";
+
+    }
+
+        .setting-item:is([data-id="longform-settings"]) .setting-item-name > span::after {
+
+        content: "\f049"; /*  \ead6 */
+
+    }
+
+    .setting-item:is([data-id="latex-settings"]) .setting-item-name > span::after {
+
+        content: "\ec3f";
+
+    }
+
+    .setting-item:is([data-id="magazine-settings"]) .setting-item-name > span::after {
+
+        content: "\ecfa";
+
+    }
+
+    .setting-item:is([data-id="callouts-settings"]) .setting-item-name > span::after {
+
+        content: "\eb86";
+        /* color: var(--text-normal); */
+        margin-left: 0.25rem;
+
+    }
+
+    .setting-item:is([data-id="kanban-callout"]) .setting-item-name > span::after {
+
+        content: "\f22c";
+
+    }
+    
+    
+
+    .setting-item:is([data-id="plugin-core"]) .setting-item-name > span::after {
+
+        content: "\f21a \eec3";
+        /* color: var(--text-normal); */
+        margin-left: 0.25rem;
+
+    }
+
+    .setting-item:is([data-id="plugin-community"]) .setting-item-name > span::after {
+
+        content: "\f21a \ebba";
+        /* color: var(--text-normal); */
+        margin-left: 0.25rem;
+
+    }
+
+    .setting-item:is([data-id="cssclass-settings"]) .setting-item-name > span::after {
+
+        content: "\ec03";
+        /* color: var(--text-normal); */
+        margin-left: 0.25rem;
+
+    }
+
+    .setting-item:is([data-id="hover-editor"]) .setting-item-name > span::after {
+
+        content: "\f2c3";
+        margin-left: 0.25rem;
+        margin-right: 0.25rem; /* needs, since it's in their own level 0 heading */
+
+    }
+
+    
+
+/* minimal cards and grids */
+
+    .setting-item:is([data-id="img-grid"]) {
+
+        font-weight: 600;
+
+        .setting-item-name::before {
+
+            content: "\ee90";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+
+        }
+    }
+
+/* adv settings */
+
+    .setting-item:is([data-id="adv-settings-col"]) .setting-item-name > span::after {
+
+        content: "\ed39 \efc5";
+        /* color: var(--text-normal); */
+        margin-left: 0.25rem;
+
+    }
+
+    .setting-item:is([data-id="readme-adv-settings"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\eca1";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--background-secondary-alt);
+
+            background-color: var(--background-modifier-error);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: normal;
+
+        }
+    }
+
+/* headers stuff */
+
+    .setting-item:is([data-id="Willemstad-Core"]) {
+    
+        &.is-collapsed .setting-item-name > span:after {
+
+            content: "\eec3";
+            color: var(--col-h1);
+
+            vertical-align: middle;
+            display: inline-block;
+            height: fit-content;
+            font-size: 1rem;
+            margin-right: 0.25rem;
+
+            position: relative;
+            top: -1px;
+
+        }
+
+        &:not(.is-collapsed) .setting-item-name > span:after {
+
+            transform: rotate(90deg);
+
+            content: "\eec3";
+            color: var(--col-h1);
+
+            vertical-align: middle;
+            display: inline-block;
+            height: fit-content;
+            font-size: 1rem;
+            margin-right: 0.25rem;
+
+            position: relative;
+            top: -1px;
+
+        }
+    }
+
+    .setting-item:is([data-id="Willemstad-Editor"]) .setting-item-name > span:after {
+
+        content: "\ed8d";
+        color: var(--col-h2);
+
+        vertical-align: middle;
+        display: inline-block;
+        height: fit-content;
+        font-size: 1rem;
+        margin-right: 0.25rem;
+
+        position: relative;
+        top: -1px;
+
+    }
+
+    .setting-item:is([data-id="Willemstad-Ancillary"]) .setting-item-name > span:after {
+
+        content: "\ea11";
+        color: var(--col-h3);
+
+        vertical-align: middle;
+        display: inline-block;
+        height: fit-content;
+        font-size: 1rem;
+        margin-right: 0.25rem;
+
+        position: relative;
+        top: -1px;
+        font-size: 100;
+
+    }
+
+    .setting-item:is([data-id="Willemstad-Plugins"]) .setting-item-name > span:after {
+
+        content: "\f21a";
+        color: var(--col-h4);
+
+        vertical-align: middle;
+        display: inline-block;
+        height: fit-content;
+        font-size: 1rem;
+        margin-right: 0.25rem;
+
+        position: relative;
+        top: -1px;
+
+    }
+
+    .setting-item:is([data-id="Minimal-Cards"]) .setting-item-name > span:after {
+
+        content: "\ee97";
+        color: var(--col-h5);
+
+        vertical-align: middle;
+        display: inline-block;
+        height: fit-content;
+        font-size: 1rem;
+        margin-right: 0.15rem;
+
+        position: relative;
+        top: -1px;
+
+    }
+
+    .setting-item:is([data-id="Willemstad-Adv-Settings"]) .setting-item-name > span:after {
+
+        content: "\ed39";
+        color: var(--col-h6);
+
+        vertical-align: middle;
+        display: inline-block;
+        height: fit-content;
+        font-size: 1rem;
+        margin-right: 0.25rem;
+
+        position: relative;
+        top: -1px;
+
+    }
+
+/* support stuff */
+
+    
+    .setting-item:is([data-id="support-willemstad"]) .setting-item-name::before {
+
+        content: "\edf3";
+
+        font-family: "remixicon";
+        vertical-align: top;
+        display: inline-block;
+        height: fit-content;
+        margin-right: 0.25rem;
+        color: var(--col-h2);
+
+        background-color: var(--col-h2-bg);
+        border-radius: calc(var(--shape-roundish) * 1);
+        
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-weight: 600;
+    }
+
+    .setting-item:is([data-id="support-willemstad-github"]) .setting-item-name::before {
+
+        content: "\edcb \f18b";
+
+        font-family: "remixicon";
+        vertical-align: top;
+        display: inline-block;
+        height: fit-content;
+        margin-right: 0.25rem;
+        color: var(--col-h2);
+
+        background-color: var(--col-h2-bg);
+        border-radius: calc(var(--shape-roundish) * 1);
+        
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-weight: 600;
+    }
+
+    .setting-item:is([data-id="support-willemstad-issue"]) .setting-item-name::before {
+        
+        content: "\edcb \f045";
+
+        font-family: "remixicon";
+        vertical-align: top;
+        display: inline-block;
+        height: fit-content;
+        margin-right: 0.25rem;
+        color: var(--col-h2);
+
+        background-color: var(--col-h2-bg);
+        border-radius: calc(var(--shape-roundish) * 1);
+        
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-weight: 600;
+    }
+
+    .setting-item:is([data-id="support-willemstad-obsidian"]) .setting-item-name::before {
+        
+        content: "\edf1";
+
+        font-family: "remixicon";
+        vertical-align: top;
+        display: inline-block;
+        height: fit-content;
+        margin-right: 0.25rem;
+        color: var(--col-h2);
+
+        background-color: var(--col-h2-bg);
+        border-radius: calc(var(--shape-roundish) * 1);
+        
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-weight: 600;
+    }

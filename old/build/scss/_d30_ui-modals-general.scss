@@ -1,0 +1,111 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D30] MODALS (GENERAL)
+\ CODE: THESSALY
+──────────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL WIDTHS AND HEIGHTS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) Δ Modal Width and Height Sizes
+        ───────────────────────────────────────────────────────────────────────────
+            >>>> for DESKTOP
+            ──────────────────────────────────────────────────────────────────── */
+            .modal.mod-settings:not(.is-mobile),
+            .modal.mod-community-plugin:not(.is-mobile),
+            .modal.mod-community-theme:not(.is-mobile) {
+                min-width: 800px; /* sets minimum width so that it wouldn't turn distorted | not vw since larger screens should be able to take smaller % */
+                min-height: 400px;
+                max-height: unset;
+
+            }
+
+
+            .modal.mod-settings {
+                width: var(--modal-width-settings);
+                height: var(--modal-height-settings);
+
+                .vertical-tab-header {
+                    height: var(--modal-height-settings);
+                }
+
+                .vertical-tab-content-container {
+                    height: var(--modal-height-settings);
+                }
+            }
+            .modal.mod-community-plugin {
+                width: var(--modal-width-community-plugin);
+                height: var(--modal-height-community-plugin);
+            }
+            .modal.mod-community-theme {
+                width: var(--modal-width-community-theme);
+                height: var(--modal-height-community-theme);
+            }
+
+
+        /* HOTFIX for Modal Width variation causing weird dropdowns and input boxes */
+            .theme-light:not(.is-mobile) div.setting-item-control > select.dropdown, .theme-light:not(.is-mobile) .modal div.setting-item-control > select.dropdown,
+            .theme-dark:not(.is-mobile) div.setting-item-control > select.dropdown, .theme-dark:not(.is-mobile) .modal div.setting-item-control > select.dropdown {
+                min-width: 10vw;
+                width: calc(10vw + var(--modal-width-settings) * 0.125);
+                max-width: 25vw
+            }
+            .theme-light:not(.is-mobile) div.setting-item-control > textarea, .theme-light:not(.is-mobile) .modal-container div.setting-item-control > input:not([type="range"]),
+            .theme-dark:not(.is-mobile) div.setting-item-control > textarea, .theme-dark:not(.is-mobile) .modal-container div.setting-item-control > input:not([type="range"]) {
+                min-width: 10vw;
+                width: calc(10vw + var(--modal-width-settings) * 0.125);
+                max-width: 25vw;
+            }
+
+     /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL BORDERS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ROUNDED BOXES
+        ──────────────────────────────────────────────────────────────────────── */
+        .modal.mod-settings:not(.is-mobile),
+        .modal.mod-community-plugin:not(.is-mobile),
+        .modal.mod-community-theme:not(.is-mobile) {
+            border-radius: calc(var(--shape-roundish) * 2);
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [HIDE MODAL EXIT BUTTONS] 
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ???
+        ──────────────────────────────────────────────────────────────────────── */
+        .modal-close-button {
+            opacity: 0%;
+            transition: 100ms ease-in-out;
+        }
+        .modal-close-button:hover {
+            opacity: 100%;
+            transition: 100ms ease-in-out;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL HEADERS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ???
+        ──────────────────────────────────────────────────────────────────────── */
+        .vertical-tab-content :is(h1, h2, h3, h4, h5, h6) {
+            background-color: initial;
+            text-align: left;
+            color: var(--text-accent);
+            font-weight: 600; /* aligns to the normal h1-h6 font weight */
+        } /* change text-align, bg-color, text-color, resets font-weight */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> General Modal Fixes
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ???
+        ──────────────────────────────────────────────────────────────────────── */
+
+        .modal.modal {
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            /* padding: 1.5rem 2rem;
+            border-radius: calc(var(--shape-roundish) * 2); */
+        } /* does this do anything? */
+
+        div.setting-item {
+            padding: 0.25rem 0 0.25rem 0;
+        }

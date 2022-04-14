@@ -1,0 +1,142 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DE12
+\ UI > Main Screen Elements
+\ Titlebar | Title bar
+───────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────── */
+
+.theme-light, .theme-dark {
+    --size-height-titlebar: 1.5rem;
+}
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) REMOVE TITLE
+    ──────────────────────────────────────────────────────────────────────────── */
+        
+    .tb-title-remove {
+
+        & .titlebar-text {
+            display: none;
+        }
+    }
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) REMOVE ENTIRE TITLEBAR
+    ──────────────────────────────────────────────────────────────────────────── */
+        
+        .tb-tb-remove {
+        
+            & .titlebar {
+                display: none;
+            }
+
+            &:is(.theme-dark, .theme-light):not(.is-mobile) {
+                padding: 0 !important;
+            }
+
+            @at-root .titlebar {
+                height: 0;
+            }
+
+            & .app-container {
+                padding: 0;
+            }
+
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> RESPONSIVE TITLEBAR RESIZING
+    ──────────────────────────────────────────────────────────────────────────── */
+        
+        .titlebar, .titlebar-button-container:is(.mod-left, .mod-right){
+            height: var(--size-height-titlebar) !important;
+        }
+        
+        body {
+            padding-top: var(--size-height-titlebar) !important;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> CHANGE COLOURS?
+    ──────────────────────────────────────────────────────────────────────────── */
+        .titlebar {
+            background-color: var(--col-titlebar);
+        }
+        
+        .theme-light, .theme-dark {
+            --col-titlebar: var(--background-modifier-cover);
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) MINIBAR FOR, YOU KNOW, STUFF
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.tb-tb-remove, .tb-default) /*tb-title-minibar*/ {
+
+        & .titlebar-text {
+            display: none;
+        }
+
+        & .app-container {
+            padding: 0;
+        }
+
+        
+        padding-top: 0rem !important;
+
+        & .titlebar {
+            z-index: 40;
+            position: absolute;
+
+            top: -0.5rem; /*calc(-1 * var(--size-height-titlebar));*/
+            right: 0.5rem;
+            left: unset;
+            opacity: 0;
+            width: 110px;
+
+            transition: var(--medium-transition);
+
+
+            border-bottom-left-radius: calc(var(--shape-roundish) * 1.5);
+            border-bottom-right-radius: calc(var(--shape-roundish) * 1.5);
+
+            &:hover {
+
+            top: 0rem;
+            right: 0.5rem;
+            transition: var(--medium-transition);
+            opacity: 1;
+
+            }
+
+            & .titlebar-button-container {
+            
+                &.mod-left {
+
+                    display: none;
+
+                }
+
+                &.mod-right {
+
+                    margin-left: 10px;
+                    margin-right: 10px;
+
+                    transition: var(--medium-transition);
+                    opacity: 0;
+
+                    &:hover {
+
+                        opacity: 1;
+                        transition: var(--medium-transition);
+
+                    }
+
+                }
+
+            }
+        }
+
+
+
+    }

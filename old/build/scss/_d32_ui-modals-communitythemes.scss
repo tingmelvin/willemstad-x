@@ -1,0 +1,61 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D32] MODALS (COMMUNITY THEMES)
+──────────────────────────────────────────────────────────────────────────────── */
+
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY THEMES | BORDER RADIUS
+        ──────────────────────────────────────────────────────────────────────── */
+            .community-theme, .community-theme.is-selected {
+                border-radius: calc(var(--shape-roundish) * 2);
+            }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY THEMES | COLOURS (BORDER)
+        ──────────────────────────────────────────────────────────────────────── */
+            .community-theme.is-selected {
+                background-color: var(--background-secondary-alt);
+                border: 0.125rem solid var(--interactive-accent-hover);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL PADDINGS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY THEMES | PLACEMENTS | Again, playing with margins and paddings
+        ──────────────────────────────────────────────────────────────────────── */
+        :not(.is-mobile) {
+            .community-theme {
+                padding: 0.9rem 0.6rem;
+                margin: 0.5rem 0.5rem;
+            }
+            .modal.mod-community-theme {
+                padding: 0 0;
+            }
+            .community-theme-filters-container {
+                padding: 0 0;
+            }
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL TYPOGRAPHY]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY THEMES | Theme Titles (less bold)
+        ──────────────────────────────────────────────────────────────────────── */
+            div.community-theme-title {
+                font-weight: 600;
+            }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY THEMES | Captalise "Installed/Community Themes"
+        ──────────────────────────────────────────────────────────────────────── */
+            .modal-title {
+                text-transform: capitalize;
+            }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY THEMES | Selected Theme | Δ Font Colours
+        ──────────────────────────────────────────────────────────────────────── */
+        .community-theme.is-selected,
+        .community-theme.is-selected .community-theme-screenshot {
+            color: var(--text-normal);
+        }
+        .community-theme.is-selected .community-theme-info {
+            color: var(--text-muted);
+        }

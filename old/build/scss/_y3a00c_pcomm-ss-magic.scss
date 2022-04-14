@@ -1,0 +1,470 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [Y3A00C]
+>> [COMMUNITY PLUGIN | Style Settings] | MAGIC
+\\ Responsive Style Settings
+───────────────────────────────────────────────────────────────────────────────────
+    >>> 
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> SIDE DOCKS | RIBBON
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="elements-sd"] {
+
+        padding-left: calc(var(--padding-left-ss));
+
+        & + .style-settings-container {
+
+            padding-left: calc(var(--padding-left-ss) / 3 * 4);
+
+        }
+
+    }
+
+    .style-settings-heading:is([data-id="custom-ft"], [data-id="elements-sd"]) {
+
+        display: none;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+    }
+
+
+    :is(.sd-float-tabs) .style-settings-heading[data-id="custom-ft"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: block;
+            
+        }
+    }
+
+    :is(.sd-float-tabs) .is-collapsed.style-settings-heading[data-id="custom-ft"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+    }
+
+
+    :is(.sd-float-tabs, .sd-eclipse-bars) .style-settings-heading[data-id="elements-sd"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: block;
+            
+        }
+    }
+
+    :is(.sd-float-tabs, .sd-eclipse-bars) .is-collapsed.style-settings-heading[data-id="elements-sd"] {
+
+        display: flex;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+    }
+
+
+    /* col-sd for colours */
+
+    :not(.sd-float-tabs, .sd-eclipse-bars) .setting-item[data-id="col-sd"] {
+
+        display: none; 
+            
+    } /* extraneous for colours if default */
+
+    :is(.sd-float-tabs, .sd-eclipse-bars) .setting-item[data-id="col-sd"] {
+
+        display: flex;
+    
+    } 
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> HEADER COLOURS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /* text */
+
+    :not(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id$="-grad"] {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    :is(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="col-h1"], [data-id="col-h2"], [data-id="col-h3"],
+            [data-id="col-h4"], [data-id="col-h5"], [data-id="col-h6"]) {
+
+                display: none; /* extraneous in this case */
+            }
+
+            & > .setting-item[data-id$="-grad"] {
+
+                display: flex;
+            }
+        }
+    }
+
+    /* background */
+
+    :not(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="col-h1-bg"], [data-id="col-h2-bg"], [data-id="col-h3-bg"],
+            [data-id="col-h4-bg"], [data-id="col-h5-bg"], [data-id="col-h6-bg"]) {
+
+                display: flex;
+            }
+        }
+    }
+
+    :is(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="col-h1-bg"], [data-id="col-h2-bg"], [data-id="col-h3-bg"],
+            [data-id="col-h4-bg"], [data-id="col-h5-bg"], [data-id="col-h6-bg"]) {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    /* header paddings */
+
+    :not(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="padding-header-b"]) {
+
+                display: flex;
+            }
+        }
+    }
+
+    :is(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="padding-header-b"]) {
+
+                display: none;
+            }
+        }
+    }
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> STARTUP
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="startup"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="startup-revolution"]) {
+
+                display: none; 
+
+            }
+
+            & > .setting-item:is([data-id="startup-revolution"]) {
+
+                display: flex; /* displays the customise screen option*/
+
+            }
+            
+        }
+    }
+
+
+    :is(.startup-revolution) .style-settings-heading[data-id="startup"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="startup-revolution"]) {
+
+                display: flex; /* displays all options*/
+
+            }
+        }
+    }
+
+    /* nested options */
+    .startup-revolution.startup-revolution.startup-revolution /* ugh my specificity */ {
+
+                /* loading message */
+
+                &:not(.startup-message-before) .setting-item[data-id="message-startup"] {
+
+                    display: none; 
+                        
+                } 
+            
+                &:is(.startup-message-before) .setting-item[data-id="message-startup"] {
+            
+                    display: flex;
+                
+                } 
+        
+                /* gradient startup bar */
+        
+                &:not(.gradient-startup-bar) .setting-item[data-id="col-startup-1"] {
+        
+                    display: none; 
+                        
+                } 
+            
+                &:is(.gradient-startup-bar) .setting-item[data-id="col-startup-1"] {
+            
+                    display: flex;
+                
+                } 
+        
+    }
+
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> TITLEBAR
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    :is(.tb-tb-remove) .style-settings-heading[data-id="tb"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="tb-tb-remove"]) {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    :is(.tb-title-remove) .style-settings-heading[data-id="tb"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id="tb-willemstad"] {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> ADVANCED SETTINGS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="Willemstad-Adv-Settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="readme-adv-settings"]) {
+
+                display: none; 
+
+                & + .style-settings-container {
+
+                    display: none;
+
+                }
+
+            }
+
+            & > .setting-item:is([data-id="readme-adv-settings"]) {
+
+                display: flex; /* displays the readme confirmation*/
+
+            }
+            
+        }
+    }
+
+
+    :is(.readme-adv-settings) .style-settings-heading[data-id="Willemstad-Adv-Settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:not([data-id="readme-adv-settings"]) {
+
+                display: flex; /* displays all options*/
+
+                &.setting-item-heading + .style-settings-container {
+
+                    display: block;
+                    
+                }
+
+                &.is-collapsed.setting-item-heading + .style-settings-container {
+
+                    display: none;
+                    
+                }
+
+            }
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> TABLES
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="table-min-space-settings"] {
+
+        display: none;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+
+        :is(.table-min-space) & {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: block;
+                
+            }
+
+        }
+
+        :is(.table-min-space) &.is-collapsed {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: none;
+                
+            }
+
+        }
+    }
+
+    .style-settings-heading[data-id="table-width-settings"] {
+
+        display: none;
+
+        & + .style-settings-container {
+            
+            display: none;
+            
+        }
+
+        :is(.table-set-minmax) & {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: block;
+                
+            }
+        }
+
+        :is(.table-set-minmax) &.is-collapsed {
+
+            display: flex;
+
+            & + .style-settings-container {
+                
+                display: none;
+                
+            }
+
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> KANBAN
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .style-settings-heading[data-id="PComm007-settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item:is([data-id="PComm007-sp-maxheight"], [data-id="PComm007-wp-maxheight"])  {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    .PComm007-sp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id="PComm007-sp-maxheight"] {
+
+                display: flex;
+            }
+        }
+    }
+
+    .PComm007-wp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item[data-id="PComm007-wp-maxheight"] {
+
+                display: flex;
+            }
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> ADV SETTINGS > FRONTMATTER (COLOURED YAML)
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    :not(.yaml-coloured) .style-settings-heading[data-id="adv-settings-frontmatter-colour"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item {
+
+                display: none; /* extraneous in this case */
+            }
+        }
+    }
+
+    :is(.yaml-coloured.yaml-coloured) .style-settings-heading[data-id="adv-settings-frontmatter-colour"] {
+
+        & + .style-settings-container {
+            
+            & > .setting-item {
+
+                display: flex;
+            }
+        }
+    }

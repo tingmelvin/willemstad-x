@@ -1,0 +1,60 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> WY100X
+\ Plugins > Community > Style Settings
+\ Workspace Leaf Styling Stuff
+    \\ PComm000 | Style Settings
+──────────────────────────────────────────────────────────────────────────────── */
+
+.workspace-leaf-content[data-type="style-settings"] {
+
+    font-family: var(--font-ui);
+
+    .setting-item[data-id="info-re-theme-documentation"] {
+
+        display: block;
+
+        .setting-item-info {
+
+            margin-right: 0;
+                    
+        }
+
+    }
+
+    .setting-item[data-level="0"] > .setting-item-info > .setting-item-name {
+
+        margin: 0 0.5rem;
+
+    }
+
+    .setting-item[data-level="0"] > .setting-item-info > .setting-item-name.setting-item-name::before {
+        margin-left: 0;
+    }
+
+    .style-settings-container > .setting-item .setting-item-control {
+
+        display: inline-flex;
+        position: relative;
+        width: auto;
+        margin-left: auto; /* flexs last item to right */
+        margin-bottom: 0.5rem;
+
+        & .themed-color-wrapper {
+            
+            .theme-light {
+
+                margin-right: 0.5rem;
+                background-color: var(--background-secondary);
+
+            }
+
+            .theme-dark {
+
+                margin-top: 0;
+
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,68 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [Q11] OTHER THEME STYLING INSPIRATIONS + COLLAPSE HEADER INDICATOR IMPROVEMENTS
+──────────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [SHIMMERING FOCUS | BOLD OPTIONS MODAL COMMUNITY PLUGIN]
+    ──────────────────────────────────────────────────────────────────────────── */
+    .modal-cp-options-bold .vertical-tab-header-group:not(:last-child) .vertical-tab-header-group-items .vertical-tab-nav-item:is(:nth-child(3),:nth-child(4),:last-child) {
+        font-weight: bold;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [SHIMMERING FOCUS | HIDE LINKS IN SOURCE MODE]
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.show-urls).source-links-hide .cm-s-obsidian:not(.is-live-preview) .cm-line:not(.cm-active) .cm-string.cm-url {
+    
+
+        &:is(.cm-formatting) {
+
+            text-decoration: none;
+
+        }
+
+        &:not(.cm-formatting) {
+
+            text-decoration: none;
+            font-size: 0;
+        
+            &::after {
+                content: "\eeb7";
+                font-family: "remixicon";
+                font-size: 1rem;
+                position: relative;
+                top: 0.125rem;
+            }
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [SANCTUM | COLLAPSE HEADER INDICATOR]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) Δ Collapse Header Indicator -> Sanctum-style
+        ──────────────────────────────────────────────────────────────────────── */
+            .collapse-header-sanctum svg.right-triangle{
+                height: 0.875rem;
+                width: 0.875rem;
+                vertical-align: middle;
+                -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+            }
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> ENSURE INDICATOR REMAINS LARGE ENOUGH
+        ───────────────────────────────────────────────────────────────────────── */
+            .heading-collapse-indicator.collapse-indicator.collapse-icon svg.right-triangle {
+                height: 0.75rem;
+                width: 0.75rem;
+            }
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> MINIMISE PADDING FOR HEADER COLLAPSE INDICATOR
+        ───────────────────────────────────────────────────────────────────────── */
+            .markdown-preview-view .heading-collapse-indicator {
+                margin-left: -1.75rem;
+                padding: 0 0.5rem;
+            }
+            /*
+            .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+                padding-right: 0.3rem;
+            }
+            */

@@ -1,0 +1,104 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D13] STATUS BAR
+───────────────────────────────────────────────────────────────────────────────────
+    >> JUST MAKE IT SMOL, MERDE
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) CONJURING | HIDES UNTIL HOVERED
+        ──────────────────────────────────────────────────────────────────────── */    
+        .sb-conjuring div.status-bar {
+            position: absolute;
+            max-height: unset;
+            
+            right: 0; /* sets it to bottom-right */
+            bottom: -0.5rem; /* sets it to bottom-right */
+            
+            padding: 0;
+            line-height: var(--height-line-sb);
+            
+            border-bottom: 0;
+            border-top: 0.125rem solid var(--background-secondary-alt);
+            border-right: 0.125rem solid var(--background-secondary-alt);
+            border-left: 0.125rem solid var(--background-secondary-alt);
+            border-radius:  calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+            
+            opacity: 0;
+            
+            transition: var(--medium-transition);
+        }
+        .sb-conjuring div.status-bar:hover {
+            position: absolute;
+            max-height: unset;
+            
+            right: 0; /* sets it to bottom-right */
+            bottom: 0; /* sets it to bottom-right */
+            
+            padding: 0;
+            line-height: var(--height-line-sb);
+            
+            border-bottom: 0;
+            border-top: 0.125rem solid var(--background-secondary-alt);
+            border-right: 0.125rem solid var(--background-secondary-alt);
+            border-left: 0.125rem solid var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+            
+            opacity: 100%;
+            
+            transition: var(--quick-transition);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) ENDURING | PERMANENTLY DISPLAYED
+        ──────────────────────────────────────────────────────────────────────── */    
+        .sb-enduring div.status-bar {
+            position: absolute;
+            max-height: unset;
+
+            right: 0; /* sets it to bottom-right */
+            bottom: 0; /* sets it to bottom-right */
+
+            padding: 0;
+            line-height: var(--height-line-sb);
+
+            border-bottom: 0;
+            border-top: 0.125rem solid var(--background-secondary-alt);
+            border-right: 0.125rem solid var(--background-secondary-alt);
+            border-left: 0.125rem solid var(--background-secondary-alt);
+            border-radius:  calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) UNCHANGING | Standard Obsidian
+        ──────────────────────────────────────────────────────────────────────── */ 
+
+        div.status-bar {
+            max-height: unset;
+            line-height: var(--height-line-sb);
+        }
+
+        .status-bar-item {
+            padding: 0rem 0.5rem;
+        }   /* remove up down padding to make it actually have everything align nicely */
+            /* change the height instead? */
+
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) HIDING | Totally Gone
+        ──────────────────────────────────────────────────────────────────────── */ 
+
+        .sb-hiding div.status-bar {
+            display: none;
+        }
+
+        .sb-hiding .status-bar-item {
+            display: none;
+        }
+
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> Variables | Status Bar
+        ──────────────────────────────────────────────────────────────────────── */
+        .theme-light, .theme-dark {
+            
+            --height-line-sb: 1.75rem;
+        
+        }

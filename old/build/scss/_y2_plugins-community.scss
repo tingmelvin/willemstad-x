@@ -1,0 +1,1186 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+───────────────────────────────────────────────────────────────────────────────────
+> [Y02] COMMUNITY PLUGINS
+───────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Style Settings] ONLY FOR WORKSPACE LEAF CONTENT
+\\ (NOMEN | PComm000)
+||
+\\ Most Style Settings customisations can be found in the Y3A documents instead
+──────────────────────────────────────────────────────────────────────────────── */
+.workspace-leaf-content[data-type="style-settings"] {
+
+    font-family: var(--font-ui);
+
+    .setting-item[data-id="info-re-theme-documentation"] {
+
+        display: block;
+
+        .setting-item-info {
+
+            margin-right: 0;
+                    
+        }
+
+    }
+
+    .setting-item[data-level="0"] > .setting-item-info > .setting-item-name {
+
+        margin: 0 0.5rem;
+
+    }
+
+    .setting-item[data-level="0"] > .setting-item-info > .setting-item-name.setting-item-name::before {
+        margin-left: 0;
+    }
+
+    .style-settings-container > .setting-item .setting-item-control {
+
+        display: inline-flex;
+        position: relative;
+        width: auto;
+        margin-left: auto; /* flexs last item to right */
+        margin-bottom: 0.5rem;
+
+        & .themed-color-wrapper {
+            
+            .theme-light {
+
+                margin-right: 0.5rem;
+                background-color: var(--background-secondary);
+
+            }
+
+            .theme-dark {
+
+                margin-top: 0;
+
+            }
+        }
+
+    }
+
+}
+
+/* removal of random reset extra-settings buttons on workspace goes to Y3A */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Calendar]
+\\ (NOMEN | PComm001)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Colour for today's date
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type="calendar"] .day.today {
+        color: var(--PComm001-col-today);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Colour for calendar year
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .year {
+        color: var(--PComm001-col-year);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Add Colour for dots for writing stuff/completing checkboxes
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] svg.dot.filled {
+        fill: var(--PComm001-col-dot);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Make Year less bold
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .year {
+        font-weight: 600;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Make Month more bold
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .month {
+        font-weight: 600;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Make the year/month slightly smaller
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] :is(.year, .month) {
+        font-size: 1em;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Fix Top Paddings
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .nav {
+        padding: 0.5rem 0.25rem 0 0.25rem;
+    }
+    
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Sliding Panes]
+\\ (NOMEN | PComm002)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) No Shadows
+    \\\ special thanks to @Leah for the idea
+    \\\ special thanks to @damiankorcz for fixing my noob CSS
+    ──────────────────────────────────────────────────────────────────────────── */
+    body.plugin-sliding-panes-stacking.PComm002-noshadow .workspace > .mod-root > .workspace-leaf {
+        box-shadow: 0 0 0 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> MAXIMISED FOCUS MODE - remove the bar for Sliding Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-split.mod-vertical.mod-root.maximised.workspace-split.mod-vertical.mod-root.maximised > * > .workspace-leaf-content {
+        padding-left: 0;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Admonitions]
+\\ (NOMEN | PComm003)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Margins sizes in Admonitions
+    ──────────────────────────────────────────────────────────────────────────── */
+    .admonition .admonition-content-holder .admonition-content {
+        margin-top: var(--PComm003-margin);
+        margin-bottom: var(--PComm003-margin);
+    }
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Padding sizes
+    ──────────────────────────────────────────────────────────────────────────── */
+    .theme-light, .theme-dark {
+        --admonition-margin-top: 0.5em; /* standard admonitions: 1.625em */
+        --admonition-margin-bottom: var(--admonition-margin-top);
+        --admonition-margin-top-lp: 0;
+        --admonition-margin-bottom-lp: calc(var(--admonition-margin-top));
+    }
+
+    .markdown-source-view.mod-cm6 .cm-preview-code-block.cm-embed-block.admonition-parent {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+    } /* removes embed spaces for Admonitions, tries to fit LP with Reading */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> MAKE HEADERS IN ADMONITIONS NICER
+    \\\ pad left
+    ──────────────────────────────────────────────────────────────────────────── */
+    .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+        padding-left: 1.8rem;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> TURNS OFF ADMONITIONS BOX SHADOWS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .admonition {
+        box-shadow: none;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> OPTION for rounded headers
+    ──────────────────────────────────────────────────────────────────────────── */
+    .headers-round .admonition.admonition {
+        border-radius: calc(var(--shape-roundish) * 1.25);
+    } /* makes borders round */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Dataview]
+\\ (NOMEN | PComm004)
+\\ [TABLES] COME HERE TOO | CODE: TARTU
+\\
+\\
+\\ FOR THIS, SEE [Y3A04]
+\\
+\\
+──────────────────────────────────────────────────────────────────────────────── */
+   
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> {UNDER CONSTRUCTION}
+>> [COMMUNITY PLUGIN | Templater]
+\\ (NOMEN | PComm005)
+───────────────────────────────────────────────────────────────────────────────────
+    >>>
+    \\\ Colours are broken at the moment, so nothing done... yet
+    ──────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Breadcrumbs]
+\\ (NOMEN | PComm006)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (for Trail) Δ and shrink Margins and make it neat
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.BC-trail {
+        padding: 0.35rem 0.5rem;
+        border-radius: calc(var(--shape-roundish) * 1.25);
+    }
+    div.BC-trail-grid.BC-trail-grid.BC-trail-grid {
+        border: none;
+    }
+    div.BC-trail-grid-item.BC-trail-grid-item.BC-trail-grid-item {
+        padding: 0.2rem;
+        border: none;
+        border-inline: 1px solid var(--background-modifier-border);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (for Matrix)
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content:is([data-type=BC-matrix]) div.view-content {
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
+    body .BC-Matrix-header.BC-Matrix-header.BC-Matrix-header {
+        margin: 0;
+        padding: 0 0.75rem;
+    }
+    div.BC-matrix-buttons {
+        padding: 0.25rem;
+    }
+    .BC-matrix-hier.BC-matrix-hier.BC-matrix-hier.BC-matrix-hier {
+        border: none;
+        border-radius: calc(var(--shape-roundish) * 1.25);
+    }
+    .BC-Matrix-square.BC-Matrix-square.BC-Matrix-square.BC-Matrix-square {
+        border-radius: calc(var(--shape-roundish) * 1.25);
+        padding: 0.125rem 0 0.125rem 0;
+        margin: 0.5rem 0 0.5rem 0;     
+    }
+
+    .BC-matrixQ-button.BC-matrixQ-button {
+        font: var(--font-editor);
+    }
+
+    .BC-matrixQ-button.BC-matrixQ-button,
+    button.BC-refresh-button.BC-refresh-button, 
+    button.BC-sort-button.BC-sort-button {
+        height: 2rem;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> for BC-stats and BC-tree
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content:is([data-type=BC-stats]) div.view-content {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .workspace-leaf-content:is([data-type=BC-tree]) div.view-content {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+    }    
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> for BC-ducks
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content:is([data-type=BC-ducks]) div.view-content > * > h6 {
+        margin-top: 0;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Kanban]
+\\ (NOMEN | PComm007)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Δ and shrink Margins and make it neat
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.kanban-plugin__board>div {
+        padding: 0.125rem;
+        padding-left: 0.3rem;
+        padding-bottom: 0.3rem;
+        overflow-x: scroll;
+        
+        &::-webkit-scrollbar {
+            height: var(--size-scrollbar);
+            width: var(--size-scrollbar);
+        }
+
+    }
+    div.kanban-plugin__lane-header-wrapper {
+        padding: 0.15rem 0.1rem;
+        border: none;
+    }
+    div.kanban-plugin__lane button {
+        padding: 0.3rem 0.3rem;
+    }
+    div.kanban-plugin__item-form {
+        padding: 0.15rem;
+        border: none;
+    }
+    div.kanban-plugin__lane-items {
+        margin: 0 0.3rem 0 0.3rem;
+        padding: 0;
+    }
+    div.kanban-plugin__item-button-wrapper {
+        padding: 0.1rem;
+        border: none;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Single Lane Kanbans in Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-singlelane :is(.mod-left-split, .mod-right-split) {
+
+        .kanban-plugin__placeholder {
+            
+            flex-shrink: 1;
+        }
+
+        div.kanban-plugin__board>div {
+
+            flex-direction: column;
+            flex-grow: 1;
+
+        }
+
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+            max-height: var(--PComm007-sp-maxheight);
+        
+            & + .kanban-plugin__lane-wrapper {
+
+                margin-top: 0.25rem;
+                margin-right: 0;
+
+            }
+
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Fit Width to Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-fitwidth :is(.mod-left-split, .mod-right-split) div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+        width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [SUPER-OPTION] Fit Width to Side Panes + Single Lane Kanbans in Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-singlelane.PComm007-sp-fitwidth :is(.mod-left-split, .mod-right-split) {
+    
+        div.kanban-plugin__board>div {
+
+            flex-direction: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+        }
+
+        .kanban-plugin__placeholder[data-axis=horizontal] {
+            
+            height: 0; /* extraneous space */
+            
+        }
+
+    }
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Single Lane Kanbans in Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-singlelane .mod-root {
+
+        .kanban-plugin__placeholder {
+            
+            flex-shrink: 1;
+        }
+
+        
+        div.kanban-plugin__board>div {
+
+            flex-direction: column;
+            flex-grow: 1;
+
+        }
+
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+            max-height: var(--PComm007-wp-maxheight);
+            
+            & + .kanban-plugin__lane-wrapper {
+
+            margin-top: 0.25rem;
+            margin-right: 0;
+
+            }
+
+        }
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Fit Width to Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-fitwidth .mod-root div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+        width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [SUPER-OPTION] Fit Width to Main Workspace Panes + Single Lane Kanbans in Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-singlelane.PComm007-wp-fitwidth .mod-root {
+    
+        div.kanban-plugin__board>div {
+
+            flex-direction: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+        }
+
+        .kanban-plugin__placeholder[data-axis=horizontal] {
+            
+            height: 0; /* extraneous space */
+            
+        }
+
+    }
+
+    .theme-dark, .theme-light {
+        --PComm007-sp-maxheight: 33vh;
+        --PComm007-wp-maxheight: 33vh;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIX | Global colour settings wrt to borders
+    ──────────────────────────────────────────────────────────────────────────── */
+    button.kanban-plugin__new-item-button,
+    .kanban-plugin__lane button.kanban-plugin__lane-settings-button,
+    .kanban-plugin__item-prefix-button-wrapper,
+    .kanban-plugin__item-postfix-button-wrapper {
+        border-color: transparent;
+    }
+    .kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
+    .kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
+    .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+        border-color: transparent;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Hide Scrollbars | BE GONE SCROLLBARS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .kanban-plugin .kanban-plugin__lane ::-webkit-scrollbar {
+        height: 0%;
+        display: none;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Border radius
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.kanban-plugin__lane {
+        border-radius: calc( var(--shape-roundish) * 1.5 );
+    }
+    div.kanban-plugin__grow-wrap>textarea,
+    div.kanban-plugin__grow-wrap:after {
+        border-radius: calc( var(--shape-roundish) * 1.5 );
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIX | Font
+    ──────────────────────────────────────────────────────────────────────────── */
+    button.kanban-plugin__new-item-button {
+        font-family: var(--font-editor);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIX | Checkboxes
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+        margin: 0.2rem 0.3rem 0.2rem 0;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Advanced Tables]
+\\ (NOMEN | PComm008)
+\\ for Tables, go to Dataview (NOMEN | PComm004)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it neat
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+        padding-top: 1rem;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: 0;
+        display: flex;
+    }
+
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+        content: "Tables \A";
+        white-space: pre-wrap;
+        display: flex;
+    }
+
+    /* justify stuff */
+    .mod-left-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+
+        .nav-buttons-left-L & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-L & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-L & {
+            justify-content: right;
+        }
+    }
+
+    .mod-left-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+
+        .nav-buttons-left-L & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-L & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-L & {
+            justify-content: right;
+        }
+    }
+
+    .mod-right-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+
+        .nav-buttons-left-R & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-R & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-R & {
+            justify-content: right;
+        }
+    }
+
+    .mod-right-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+
+        .nav-buttons-left-R & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-R & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-R & {
+            justify-content: right;
+        }
+    }
+
+    /* padding + border */
+
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
+        padding: 0;
+        border: 0;
+    }
+
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header .nav-action-button {
+        padding: 0.5rem 0.25rem 0 0.25rem;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Full Calendar]
+\\ (NOMEN | PComm009)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make paddings
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=full-calendar-view] {
+
+        .view-content {
+            padding: 1rem;
+        }
+
+        .fc-timegrid-event {
+            border-radius: calc( var(--shape-roundish) * 1.5 );
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+
+            .fc-event-main {
+                mix-blend-mode: luminosity;
+                filter: contrast(175%);
+            } /* making light text pop up */
+        }
+
+        .fc .fc-toolbar-title {
+            text-align: center;
+        } /* for smaller screens, ensuring centering */
+
+        .fc-button {
+            text-transform: capitalize;
+        } /* Capitalise text */
+
+        .fc-direction-ltr .fc-button-group > .fc-button:is(:first-child) {
+            border-radius:  calc( var(--shape-roundish) * 1.5 ) 0 0 calc( var(--shape-roundish) * 1.5 );
+        } /* round first border */
+
+        .fc-direction-ltr .fc-button-group > .fc-button:is(:last-child) {
+            border-radius: 0 calc( var(--shape-roundish) * 1.5 ) calc( var(--shape-roundish) * 1.5 ) 0;
+        } /* round last border */
+
+        button.fc-today-button.fc-button.fc-button-primary {
+            border-radius: calc( var(--shape-roundish) * 1.5 );
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .fc-v-event .fc-event-title {
+            line-height: 120%;
+        } /* make calendar items line-height better */
+
+        .fc-timegrid-event .fc-event-time {
+            margin-bottom: 0;
+            line-height: 150%;
+
+            display: flex;
+            align-items: center;
+
+
+        } /* makes it neater */ /* for time */
+
+        .fc-timegrid-event-short .fc-event-time::after {
+            content: "\a0\a0\a0";
+        }
+
+        
+        .fc-header-toolbar {
+
+            > div:first-child {
+                margin-right: 1rem;
+            }
+
+            > div:last-child {
+                margin-left: 1rem;
+            }
+        }  /* aye, a fix for .fc-toolbar-chunk */       
+
+    }
+
+    .PComm009-no-halfhour-grid .workspace-leaf-content[data-type=full-calendar-view] {
+        .fc .fc-timegrid-slot-minor {
+            border-top-style: none;
+        } /* removes border top grid */
+
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Excalidraw]
+\\ (NOMEN | PComm010)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it nicer
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    div.excalidraw {
+
+        margin: 0.25rem;
+
+        button {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            color: var(--interactive-bg);
+        }
+
+        .Island {
+
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            background-color: var(--background-primary-alt);
+
+        }
+
+        .color-picker-label-swatch {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            border: 1px solid var(--background-primary-alt);
+
+        }
+
+        .ToolIcon__icon {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+            color: var(--interactive-bg);
+        }
+
+        .App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
+            background: var(--interactive-border-color);
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1);
+        }
+
+        .App-toolbar .ToolIcon .ToolIcon_type_radio:checked+.ToolIcon__icon, .App-toolbar .ToolIcon .ToolIcon_type_checkbox:checked+.ToolIcon__icon,
+        .active,
+        .buttonList label.active {
+            background: var(--interactive-bg);
+        }
+
+        .panelColumn h3, .panelColumn legend, .panelColumn .control-label, .reset-zoom-button {
+            color: var(--text-normal);
+        }
+
+        .ToolIcon__icon svg {
+            fill: var(--text-normal);
+            color: var(--text-normal);
+        }
+
+        .excalidraw .ToolIcon_type_button, .Modal .ToolIcon_type_button, .ToolIcon_type_button {
+            background-color: var(--interactive-bg);
+        }
+
+        button.ToolIcon_type_button.ToolIcon_size_small.reset-zoom-button.ToolIcon_type_button--show.ToolIcon {
+            background-color: var(--background-primary-alt);
+        }
+
+        .ToolIcon__keybinding {
+            font-size: 0.75rem;
+        }
+
+        .App-toolbar .ToolIcon .ToolIcon__keybinding {
+            bottom: 0;
+        }
+
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Hover Editor]
+\\ (NOMEN | PComm011)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it more Willemstad
+    ──────────────────────────────────────────────────────────────────────────── */
+    
+    body:is(.theme-dark, .theme-light) {
+        --he-title-bar-inactive-bg:         var(--interactive-accent-hover);
+        --he-title-bar-inactive-pinned-bg:  var(--interactive-accent-hover);
+    } /* build upon the Hover Editor styles */
+
+    
+    .hover-editor {
+
+        border: none;
+    
+        &.hover-popover {
+            box-shadow: none;
+            border-radius: calc(var(--shape-roundish) * 1.5);
+
+            .view-header {
+                    border-top-left-radius: calc(var(--shape-roundish) * 1.5);
+                    border-top-right-radius: calc(var(--shape-roundish) * 1.5);
+                    border-top: none;
+                }
+
+            &.is-minimized .view-header {
+                border-bottom-left-radius: calc(var(--shape-roundish) * 1.5);
+                border-bottom-right-radius: calc(var(--shape-roundish) * 1.5);                
+            }
+
+            .drag-handle.top {
+                /*background-color: var(--background-primary-alt);
+                border-top-left-radius: calc(var(--shape-roundish) * 1.5);
+                border-top-right-radius: calc(var(--shape-roundish) * 1.5);*/
+            }
+
+            .view-content {
+                /* border: 2px solid var(--background-secondary); */
+                border-bottom-left-radius: calc(var(--shape-roundish) * 1.5);
+                border-bottom-right-radius: calc(var(--shape-roundish) * 1.5);
+            }
+
+            /*
+            &.snap-to-viewport {
+                width: 100vw;
+            }
+            */
+
+        }
+
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Get Info]
+\\ (NOMEN | PComm022)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Rounded Borders + Hide Shadows + Transforming Words
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.menu.get-info-menu {
+        box-shadow: none;
+        border-radius: calc( var(--shape-roundish) * 2 );
+        background-color: var(--background-primary-alt);
+        border: 0.125rem solid var(--interactive-border-color);
+    }
+    div.menu.get-info-menu > div > div:not(:first-child) > span {
+        font-size: var(--size-font-searchbox);
+        line-height: 100%;
+        overflow-x: initial !important;
+        font-weight: 500 !important; /* importants needed */
+        
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Top Words | Break them, vary line height
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.menu.get-info-menu > div > div:first-child > span {
+        font-size: var(--size-font-searchbox);
+        line-height: 110%;
+        word-break: break-all;
+        overflow-x: initial !important;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Perfecting Capitalisation
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.menu.get-info-menu > div > div:not(:first-child) > span:not(:first-child) {
+        text-transform: lowercase !important;
+    }
+    div.menu.get-info-menu > div > div:not(:first-child) > span::first-letter {
+        text-transform: capitalize !important;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Remove Top Icon
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.menu.get-info-menu > div > div:first-child > span:first-child {
+        display: none;
+    }
+
+    .GetInfo-statusbar-button {
+
+        position: relative;
+
+    }
+
+    .GetInfo-statusbar-button > svg {
+
+        position: relative;
+        height: 100%;
+
+    }
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | CookLang Plugin/Editor]
+\\ (NOMEN | PComm023)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Fixing How the CookLang stuff is displayed
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=cook] .view-content {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    .workspace-leaf-content[data-type=cook] ul {
+        padding-inline-start: 1em;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Change accenting of certain things in the CookLang language
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=cook] .cm-measurement,
+    .workspace-leaf-content[data-type=cook] .cm-timer,
+    .workspace-leaf-content[data-type=cook] .cm-unit {
+        color: var(--accent-light);
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Emoji Toolbar]
+\\ (NOMEN | PComm024)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Rounded Borders + Hide Borders
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .emoji-mart-anchors {
+        border-radius: 0 calc(var(--shape-roundish) * 1.5);
+    }
+    body .emoji-mart-preview {
+        border-radius: calc(var(--shape-roundish) * 1.5) 0;
+    }
+    body .emoji-mart {
+        border-radius: calc(var(--shape-roundish) * 1.5);
+    }
+    #emoji-modal {
+        border-radius: calc(var(--shape-roundish) * 1.5);
+        border: 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Hide the weird purple
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .emoji-mart-anchor-bar {
+        height: 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Δ the UGH PURPLE | CAN PEOPLE STOP HARDCODING STUFF INTO ELEMENT.STYLE
+    ──────────────────────────────────────────────────────────────────────────── */
+    button.emoji-mart-anchor.emoji-mart-anchor-selected > div.emoji-mart-anchor-icon {
+        color: var(--text-accent) !important;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Hide Default "Emoji Mart" Text
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .emoji-mart-title-label {
+        font-size: 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Δ Default emoticon to something nicer (yes, it's background position)
+        
+    ──────────────────────────────────────────────────────────────────────────── */        
+    span#emoji-mart-department_store.emoji-mart-emoji > span {
+        background-position: 17.8571% 76.7857% !important /* 53.5714% 64.2857% !important*/;
+    } /* use the houses one for Willemstad */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Δ Emoji Toolbar to default UI font
+    ──────────────────────────────────────────────────────────────────────────── */
+    :is(.emoji-mart, .emoji-mart-search input) .emoji-mart-category-label span {
+        font-family: var(--font-ui);
+        border: 0;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Maps of Content]
+\\ (NOMEN | PComm025)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> HIDE TOP BAR
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content.workspace-leaf-content[data-type="map-of-content"] #top-bar {
+        display: none;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIX PADDINGS
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content.workspace-leaf-content[data-type="map-of-content"] div#main_moc_div {
+        padding: 0.5rem 1rem;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | cMenu]
+\\ (NOMEN | PComm026)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> ROUND BORDERS + REMOVE SHADOWS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .menu.cMenu-statusbar-menu {
+        box-shadow: none;
+        border-radius: calc(var(--shape-roundish) * 1.5);
+        border: none;
+        background-color: var(--background-primary-alt);
+        border: 0.125rem solid var(--interactive-border-color);
+        top: 3rem !important;
+    }
+    .cMenu-statusbar-menu .menu-item {
+        font-size: var(--size-font-searchbox)
+    }
+
+    div#cMenuModalBar {
+
+        box-shadow: none;
+        border-radius: calc(var(--shape-roundish) * 1);
+
+        & .cMenuCommandItem {
+
+            border-radius: calc(var(--shape-roundish) * 1);
+        }
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Footnote & Citation Indicator]
+\\ (NOMEN | PComm027)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) GUTTER INDICATOR
+    ──────────────────────────────────────────────────────────────────────────── */
+    .theme-light, .theme-dark {
+    --PComm027-indicator: '⦿';
+    } /* should just activate only when plugin is activated */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> GUTTER FIXES
+    ──────────────────────────────────────────────────────────────────────────── */
+    .PComm027-active .footnote-link:not(.footnote-backref)::BEFORE,
+    .PComm027-active .cm-s-obsidian span.cm-footref.cm-formatting::BEFORE {
+        content: var(--PComm027-indicator);
+        font-size: 0.7rem;
+        line-height: 1rem;
+        color: var(--text-accent);
+        background-color: var(--background-primary);
+        position: absolute;
+        left: 0rem;
+        padding: 0 0.125rem;
+    }
+
+    .PComm027-active .footnote-link:not(.footnote-backref)::BEFORE {
+        margin-top: 0.3em;
+    }
+    .PComm027-active .cm-s-obsidian span.cm-footref.cm-formatting::BEFORE {
+        margin-top: 0.2em;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> DUPLICATE FOR NOT ACTIVATED SETTINGS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .footnote-link:not(.footnote-backref)::BEFORE,
+    .cm-s-obsidian span.cm-footref.cm-formatting::BEFORE {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        color: var(--text-accent);
+        background-color: var(--background-primary);
+        position: absolute;
+        left: 0rem;
+        padding: 0 0.125rem;
+    }
+
+    .footnote-link:not(.footnote-backref)::BEFORE {
+        margin-top: 0.3em;
+    }
+    .cm-s-obsidian span.cm-footref.cm-formatting::BEFORE {
+        margin-top: 0.2em;
+    }
+
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Settings Search]
+\\ (NOMEN | PComm028)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING PADDINGS AND BORDER RADIUS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .vertical-tab-nav-item.settings-search-input {
+        padding: 0;
+    }
+    .settings-search-input .search-input-container > input[type='text'] {
+        border-radius: calc(var(--shape-roundish) * 3);
+    }
+
+
+    .settings-search-container.vertical-tab-header-group {
+        padding-top: 0.25rem;
+        padding-right: 0.125rem;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Longform Editor]
+\\ [CSSCLASS | Writing]
+\\ (NOMEN | PComm029)
+\\ https://github.com/kevboh/longform#scene-only-styling
+\\ @pseudometa's code | all of Chris' rights reserved per MIT License
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) GUTTER INDICATOR
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FONT SIZE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .writing.markdown-preview-view,
+    .writing.mod-cm6.cm-s-obsidian .cm-contentContainer,
+    .longform-leaf .markdown-preview-view,
+    .longform-leaf .markdown-source-view.mod-cm5,
+    .longform-leaf .mod-cm6.cm-s-obsidian .cm-contentContainer {
+        font-family: var(--font-longform);
+        font-size: var(--size-font-longform);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> LINE HEIGHT
+    ──────────────────────────────────────────────────────────────────────────── */
+    .writing.markdown-preview-view table,
+    .longform-leaf .markdown-preview-view table {
+        line-height: var(--lh-longform);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> DIFFERENT HEADING STYLE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .writing :is(h1, h2, h3, h4, h5, h6),
+    :is(.writing, .longform-leaf) .cm-header.cm-header,
+    .longform-leaf.longform-leaf :is(h1, h2, h3, h4, h5, h6) {
+        font-family: var(--font-longform);
+        line-height: 1em;
+    }
+
+    .PComm029-text-indent.PComm029-text-indent :is(.writing, .longform-leaf) p {
+        text-indent: 2em;
+    }
+
+    .PComm029-justify :is(.writing.markdown-preview-view,
+    .writing.mod-cm6.cm-s-obsidian .cm-contentContainer,
+    .longform-leaf .markdown-preview-view,
+    .longform-leaf .markdown-source-view.mod-cm5,
+    .longform-leaf .mod-cm6.cm-s-obsidian .cm-contentContainer) {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> add longform height variation here
+    ──────────────────────────────────────────────────────────────────────────── */
+    .theme-light, .theme-dark {
+        --lh-longform: 1.3rem;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> makes Longform Explorer fit nicer
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type="VIEW_TYPE_LONGFORM_EXPLORER"] .view-content {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    .workspace-leaf-content[data-type="VIEW_TYPE_LONGFORM_EXPLORER"] ul {
+        padding-inline-start: 1em;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | LanguageTool Integration]
+\\ (NOMEN | PComm030)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING PADDINGS AND BORDER RADIUS
+    ──────────────────────────────────────────────────────────────────────────── */
+    div :is(.lt-predictions-container-glass.cm-tooltip,
+    .lt-predictions-container.cm-tooltip,
+    .lt-predictions-container-glass,
+    .lt-predictions-container) {
+        border-radius: calc(var(--shape-roundish) * 3);
+        box-shadow: none;
+        border: 0.1rem solid var(--background-modifier-border);
+        font-family: var(--font-ui);
+    }
+
+    div .lt-ignore-btn {
+        padding: 0.5rem;
+        border: none;
+    }
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Vault Statistics]
+\\ (NOMEN | PComm031)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING PADDINGS AND BORDER RADIUS
+    ──────────────────────────────────────────────────────────────────────────── */
+    span.obsidian-vault-statistics--item--active {
+        display: inline-block;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Theme Picker]
+\\ (NOMEN | PComm032)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING PADDINGS AND BORDER RADIUS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .plugin-theme-picker {
+        position: relative;
+    
+    
+        .theme-picker-color-scheme-icon {
+            position: relative;
+
+            & > svg {
+                position: relative;
+                height: 100%;
+
+                & > * {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .theme-picker-modal.theme-picker-modal {
+        box-shadow: none;
+        border: 2px solid var(--background-secondary);
+    }

@@ -1,0 +1,19 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D16] BACKLINK PANE
+──────────────────────────────────────────────────────────────────────────────── */
+.style-backlink {
+    :is(.backlink-pane, .outgoing-link-pane) {
+        border: 0.125rem solid var(--interactive-border-color);
+        border-radius: calc(var(--shape-roundish) * 3);
+        margin-top: 1rem;
+        padding: 0.25rem 0;  
+
+    }
+    
+    .workspace-leaf-content > * > :is(.backlink-pane, .outgoing-link-pane) {
+
+        border: initial;
+        margin-top: 0rem;
+
+    } /* ensures it doesnt get shown in workspace leafs */
+}

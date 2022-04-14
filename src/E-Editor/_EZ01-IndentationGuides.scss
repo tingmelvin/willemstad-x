@@ -1,0 +1,24 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EZ01
+\ Other Features
+\ Indentation Guides
+───────────────────────────────────────────────────────────────────────────────────
+    >> READING MODE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
+        left: -0.8rem;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> SOURCE MODE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .markdown-source-view.mod-cm6 {
+
+        & .cm-indent::before {
+            width: 0.375rem;
+        } /* for normal lists */
+
+        & .HyperMD-task-line.cm-line > * > .cm-indent::before {
+            width: 0.65rem;
+        } /* for checkboxes */
+    }

@@ -1,0 +1,79 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DH01
+\ UI > Interactive Elements
+\ Scrollbars
+───────────────────────────────────────────────────────────────────────────────────
+ >> SCROLLBARS > EDITOR
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-split.mod-root ::-webkit-scrollbar {
+        visibility: initial;
+        background-color: transparent;
+        width: var(--size-scrollbar);
+        height: var(--size-scrollbar);
+    }
+    .workspace-split.mod-root ::-webkit-scrollbar-thumb {
+        visibility: initial; 
+        width: var(--size-scrollbar);
+        height: var(--size-scrollbar);
+    }
+    .workspace-split.mod-root ::-webkit-scrollbar:hover {
+        visibility: initial; /* initial */
+        width: var(--size-scrollbar);
+        height: var(--size-scrollbar);
+    }
+    .workspace-split.mod-root ::-webkit-scrollbar-thumb:hover {
+        visibility: initial; /* initial */
+        width: var(--size-scrollbar);
+        height: var(--size-scrollbar);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> SCROLLBARS > ?
+    \\ changed it from hidden so that... people can find their scrollbars
+    ──────────────────────────────────────────────────────────────────────────── */
+        ::-webkit-scrollbar {
+            visibility: initial;
+            background-color: transparent;
+            width: var(--size-scrollbar);
+            height: var(--size-scrollbar);
+        }
+        ::-webkit-scrollbar-thumb {
+            visibility: initial;
+            background-color: transparent;
+            width: var(--size-scrollbar);
+            height: var(--size-scrollbar);
+        }
+        ::-webkit-scrollbar:hover {
+            visibility: initial; /* initial */
+            background-color: transparent;
+            width: var(--size-scrollbar);
+            height: var(--size-scrollbar);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            visibility: initial; /* initial */
+            background-color: transparent;
+            width: var(--size-scrollbar);
+            height: var(--size-scrollbar);
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FIX
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.native-scrollbars) ::-webkit-scrollbar {
+        visibility: initial;
+        background-color: transparent;
+        width: var(--size-scrollbar);
+        height: var(--size-scrollbar);
+    }
+
+    body:not(.native-scrollbars) ::-webkit-scrollbar,
+    body:not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+    body:not(.native-scrollbars) ::-webkit-scrollbar:hover,
+    body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
+        visibility: initial;
+        width: var(--size-scrollbar);
+        height: var(--size-scrollbar);
+    }
+
+    .theme-light, .theme-dark {
+        --size-scrollbar: 0.35rem;
+    }

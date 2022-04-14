@@ -1,0 +1,300 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> WY004
+\ Plugins > Community
+\ Dataview and Tables
+    \\ Tables
+    \\ PComm004 | Dataview
+    \\ PComm008 | Advanced Tables
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Dataview]
+\\ (NOMEN | PComm004)
+\\ [TABLES] COME HERE TOO | CODE: TARTU
+───────────────────────────────────────────────────────────────────────────────────
+    >>> TABLE DON'T U BREAK | thanks loads to @SlRvB for your snippet :P
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
+        white-space: pre;
+    }
+    .workspace-leaf-content[data-type=markdown] table > tbody > tr > td {
+        word-wrap: normal;
+        word-break: normal;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> ADD LINES AND REMOVE PADDING |
+    ──────────────────────────────────────────────────────────────────────────── */
+    th {
+        background-color: var(--col-bg-table);
+    }
+
+
+    .theme-light .workspace-leaf-content[data-type=markdown] :is(th, td) {
+        padding: 0.25rem 0.5rem;
+        border: 0.05rem solid slategrey;
+    }
+    body.theme-light .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
+        border: 0.05rem solid slategrey;
+        background-color: var(--col-bg-table);
+    }
+    body.theme-light :not(.workspace-leaf-content[data-type="calendar"]) > .app-container table > tbody > tr > td {
+        border: 0.05rem solid slategrey;
+        padding: 0.25rem 0.5rem;
+    }
+
+
+    .theme-dark .workspace-leaf-content[data-type=markdown] :is(th, td) {
+        padding: 0.25rem 0.5rem;
+        border: 0.05rem solid slategrey;
+    }
+    body.theme-dark .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
+        border: 0.05rem solid slategrey;
+        background-color: var(--col-bg-table);
+    }
+    body.theme-dark :not(.workspace-leaf-content[data-type="calendar"]) > .app-container table > tbody > tr > td {
+        border: 0.05rem solid slategrey;
+        padding: 0.25rem 0.5rem;
+    }
+
+    body .workspace-leaf-content[data-type=markdown] table {
+        border-spacing: 0;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ TABLE FONT SIZE IN EDITOR MODE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .cm-s-obsidian .HyperMD-table-row {
+        font-size: var(--size-font-editor-table);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ TABLE FONT SIZE IN PREVIEW MODE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .theme-light, .theme-dark {
+        --weight-font-preview-table-th: 800;
+        --weight-font-preview-table-td: normal;
+    }
+
+    :is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] {
+        
+        th {
+            font-size: var(--size-font-preview-table-th);
+            font-weight: var(--weight-font-preview-table-th);
+
+        }
+
+        td {
+            font-size: var(--size-font-preview-table-td);
+            font-weight: var(--weight-font-preview-table-td);
+        }
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) ALT BACKGROUND COLOURS + WHICH BACKGROUND COLOUR
+    ──────────────────────────────────────────────────────────────────────────── */
+    .table-alt-bg table tr:nth-child(2n) {
+        background-color: var(--background-primary-alt);
+      }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) NO BORDERS FOR TABLE BODY
+    ──────────────────────────────────────────────────────────────────────────── */
+    .table-no-borders-td:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td) {
+        border: none;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) NO BORDERS FOR TABLE HEADERS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .table-no-borders-th:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(th),
+    .table-no-borders-th:is(body.theme-light, body.theme-dark) .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
+        border: none;
+    }
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) NO EXTRANEOUS SPACE | SPACE MAXIMISER
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .table-min-space {
+        &:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td) {
+
+            padding: var(--table-td-space-padding-tb) var(--table-td-space-padding-lr);
+            margin: var(--table-td-space-margin-tb) var(--table-td-space-margin-lr);
+            border-collapse: collapse;
+
+        } /* table body */
+
+        &:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(th),
+        &:is(body.theme-light, body.theme-dark) .workspace-leaf-content[data-type=markdown] table > thead > tr > th {
+
+            padding: var(--table-th-space-padding-tb) var(--table-th-space-padding-lr);
+            margin: var(--table-th-space-margin-tb) var(--table-th-space-margin-lr);
+            border-collapse: collapse;
+
+        } /* table headers */
+
+    }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>>> (SUB-OPTION) SET ADDITIONAL TABLE SPACE for NO EXTRANEOUS SPACE
+        ──────────────────────────────────────────────────────────────────────── */
+
+        .theme-dark, .theme-light {
+
+            --table-td-space-padding-tb:    0px;
+            --table-td-space-padding-lr:    0px;
+            --table-td-space-margin-tb:     0px;
+            --table-td-space-margin-lr:     0px;
+
+            --table-th-space-padding-tb:    0px;
+            --table-th-space-padding-lr:    0px;
+            --table-th-space-margin-tb:     0px;
+            --table-th-space-margin-lr:     0px;
+
+        } /* margins no settings since they don't really do anything */
+
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) SET MIN + MAX WIDTH FOR TABLES
+    ──────────────────────────────────────────────────────────────────────────── */
+    .table-set-minmax:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td, th),
+    table.dataview.table-view-table {
+        min-width: var(--width-tables-min);
+        max-width: var(--width-tables-max);
+    }
+
+    :is(.theme-light, .theme-dark) {
+        --width-tables-min: 2.5rem; /* only triggered if the above is enabled */
+        --width-tables-max: 25rem; /* only triggered if the above is enabled */
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) LP table magic? | USE A MONOSPACE FONT
+    ──────────────────────────────────────────────────────────────────────── */
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row {
+        border: 0.05rem solid slategrey;
+        padding: 0.25rem 0.5rem;
+        margin-top: -0.05rem !important; /* overrides obsidian.css, req for non-overlapping borders */
+    } /* makes borders, a la in Preview */
+
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line {
+        background-color: var(--interactive-bg);
+        font-weight: bold;
+    } /* makes first line a certain color */
+
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line > .cm-hmd-table-sep {
+      color: var(--interactive-bg);
+    } /* makes sure the "|" in the first line is the same color */
+
+    .table-lp-magic .cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep {
+        color: var(--background-primary);
+    } /* blends the "|" into the background of the other columns (? columns? rows?) */
+
+    .table-lp-magic .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-1.cm-line {
+        display: none;
+    } /* disappears the divider row */
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> LICAT LP TABLE FIXES
+    \\\ sherlock be here :P
+    ──────────────────────────────────────────────────────────────────────── */
+
+    div.el-table {
+        overflow: scroll;
+        } /* is there a way to fit the div without scroll? */
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Advanced Tables]
+\\ (NOMEN | PComm008)
+\\ for Tables, go to Dataview (NOMEN | PComm004)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it neat
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+        padding-top: 1rem;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: 0;
+        display: flex;
+    }
+
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+        content: "Tables \A";
+        white-space: pre-wrap;
+        display: flex;
+    }
+
+    /* justify stuff */
+    .mod-left-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+
+        .nav-buttons-left-L & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-L & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-L & {
+            justify-content: right;
+        }
+    }
+
+    .mod-left-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+
+        .nav-buttons-left-L & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-L & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-L & {
+            justify-content: right;
+        }
+    }
+
+    .mod-right-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header::before {
+
+        .nav-buttons-left-R & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-R & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-R & {
+            justify-content: right;
+        }
+    }
+
+    .mod-right-split .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+
+        .nav-buttons-left-R & {
+            justify-content: left;
+        }
+
+        .nav-buttons-center-R & {
+            justify-content: center;
+        }
+
+        .nav-buttons-right-R & {
+            justify-content: right;
+        }
+    }
+
+    /* padding + border */
+
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
+        padding: 0;
+        border: 0;
+    }
+
+    .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header .nav-action-button {
+        padding: 0.5rem 0.25rem 0 0.25rem;
+    }

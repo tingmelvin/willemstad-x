@@ -1,0 +1,90 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> WX000
+\ Plugins > Core
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [CORE PLUGIN | Publish]
+\\ (NOMEN | PCore010)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> MODAL STUFF
+    ──────────────────────────────────────────────────────────────────────────── */
+    .modal.mod-publish {
+
+        /* adds the Style Settings options for Modal Widths and Heights*/
+        width: var(--modal-width-publish);
+        height: var(--modal-height-publish);
+        
+        &:not(.is-mobile) {
+
+            /* sets minimum width so that it wouldn't turn distorted
+            not vw since larger screens should be able to take smaller % */
+            min-width: 800px; 
+            min-height: 400px;
+            max-height: unset;
+
+            /* rounded boxes modal borders */
+            border-radius: calc(var(--shape-roundish) * 2); 
+
+        }
+    }
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [CORE PLUGIN | Command Palette] (alias: hotkeys + Ctrl + P)
+\\ (NOMEN | PCore011)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Things to the right
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.is-mobile, .normal-command-palette) {
+
+        & .suggestion-item {
+            padding-left: 1.5rem;
+        }
+            
+        & span.suggestion-content {
+            letter-spacing: -0.01rem;
+            font-size: 0.95rem;
+        }
+        
+        & span.suggestion-prefix {
+            background-color: transparent;
+            color: var(--text-accent);
+            position: absolute;
+            right: 25%;
+            padding-left: 0.125rem;
+            padding-right: 0.125rem;
+            font-size: 0.7rem;
+            letter-spacing: -0.01rem;
+
+            &::after {
+                display: none;
+            }
+
+        }
+
+        & kbd.suggestion-hotkey {
+            font-size: 0.6rem;
+            letter-spacing: -0.01rem;
+        }
+
+        & .suggestion-flair {
+            left: 0.25rem;
+        }
+        
+        & div.prompt-instructions {
+            padding: 0.25rem 0 0 0;
+        }
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [CORE PLUGIN | File Explorer]
+\\ (NOMEN | PCore012)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> PADDINGS STUFF
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .workspace-leaf-content[data-type=file-explorer] .nav-header {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }

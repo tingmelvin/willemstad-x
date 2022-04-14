@@ -1,0 +1,133 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [Q21] Other Improvements
+───────────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) ANIMATIONS! | from Shimmering Focus | thanks to @pseudometa
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.no-animations) {
+        --quicker-transition: 100ms ease-in-out;
+        --quick-transition: 200ms ease-in-out;
+        --medium-transition: 350ms ease-in-out;
+        --slow-transition: 550ms ease-in-out;
+    }
+    
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> BOX SHADOWS BE GONE
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Checkbox containers
+        \\\ & Community theme (Light/Dark themes only button)
+        ──────────────────────────────────────────────────────────────────────── */
+        .checkbox-container {
+            box-shadow: none;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) CENTRE IMAGES
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (includes Emoji fix)
+        ──────────────────────────────────────────────────────────────────────── */
+        body.centre-image .view-content img[src]:not(.emoji) {
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> DON'T CENTRE IN A LIST + EMOJI FIX
+        ───────────────────────────────────────────────────────────────────────── */
+
+        body.centre-image .view-content ul > li > * > img[src]:not(.emoji) {
+            margin-left: 0;
+        }
+        body:not(.centre-image) .view-content ul > li > * > img[src]:not(.emoji) {
+            display: block;
+            margin-left: 0;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) IMAGE DESATURATION
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) desaturate images when not hovered
+        \\\ AND ALLOW PEOPLE TO CHOOSE HOW MUCH
+        ──────────────────────────────────────────────────────────────────────── */
+        .image-desaturation-reading .markdown-preview-view img[src]:not(:hover) {
+            filter: grayscale(40%);
+            transition: var(--quick-transition);
+        } /* can't var filter I believe */
+
+        .image-desaturation-reading .markdown-preview-view img[src]:hover {
+            filter: grayscale(0%);
+            transition: var(--quick-transition);
+        }
+
+        .image-desaturation-all img[src]:not(:hover) {
+            filter: grayscale(40%);
+            transition: var(--quick-transition);
+        } /* can't var filter I believe */
+        
+        .image-desaturation-all img[src]:hover {
+            filter: grayscale(0%);
+            transition: var(--quick-transition);
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) MERMAID.JS GRAPH WIDTH FIX
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ WIDTH TO FIT
+        ──────────────────────────────────────────────────────────────────────── */
+            .fix-mermaid-width .mermaid svg {
+                width: 100%;
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) IMG WIDTH FIX
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ WIDTH TO FIT
+        ──────────────────────────────────────────────────────────────────────── */
+        .fix-img-width img[src] {
+            max-width: 100%;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> MATHJAX IMPROVEMENTS
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ FONT SIZE
+        ──────────────────────────────────────────────────────────────────────── */
+            div mjx-math {
+                font-size: 1.1em;
+            }
+
+
+            /* test */
+            /*body {
+                counter-reset: maths;
+            }
+
+            .math-block {
+                font-family: "MathJax Main";
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .el-div > .math-block {
+                counter-increment: maths;
+            }    
+            
+            .math-block::before {
+                content: "(" counter(maths) ")";
+                visibility: hidden;
+            }
+            
+            .math-block::after {
+                content: "(" counter(maths) ")";
+            }
+            */
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) Δ WIDTH TO FIT
+        ──────────────────────────────────────────────────────────────────────── */
+            .fix-mathjax-width mjx-math.MJX-TEX {
+                max-width: 100%;
+            }

@@ -1,0 +1,174 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CA02
+\ Colour Palettes
+\ Noord | Nord
+───────────────────────────────────────────────────────────────────────────────────
+> [BEYOND OBSIDIAN | WILLEMSTAD-STYLE NORD | NOORD]
+──────────────────────────────────────────────────────────────────────────── */
+    .cp-exobs-nord:is(.theme-light, .theme-dark) {
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> ACCENTS
+        ──────────────────────────────────────────────────────────────────── */
+            
+            --accent-light: hsl(193, 43%, 67%);
+            --accent-lighter: hsl(193, 43%, 72%);
+            --accent-lighterer: hsl(193, 43%, 77%);
+            --accent-lightest: hsl(193, 43%, 82%);
+    }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> LIGHT THEME
+        ───────────────────────────────────────────────────────────────────────── */
+            .cp-exobs-nord.theme-light {
+
+                --background-primary:           hsl(218, 27%, 94%);
+                --background-primary-alt:       hsl(218, 24%, 96%);
+
+                --background-primary-contra:    hsl(220, 16%, 22%);
+
+                --background-secondary:         hsl(218, 27%, 92%);
+                --background-secondary-alt:     hsl(219, 28%, 88%);
+
+                /* ─────────────────────────────────────────────────────────────────
+                >>>> HEADINGS > Colours > Text
+                ───────────────────────────────────────────────────────────────── */
+                    --col-h1: hsl(193, 43%, 62%);
+                    --col-h2: hsl(213, 32%, 32%);
+                    --col-h3: hsl(213, 32%, 37%);
+                    --col-h4: hsl(213, 32%, 42%);
+                    --col-h5: hsl(213, 32%, 47%);
+                    --col-h6: hsl(213, 32%, 52%);
+                /* ─────────────────────────────────────────────────────────────────
+                >>>> HEADINGS > Colours > Background
+                ───────────────────────────────────────────────────────────────── */
+                    --col-h1-bg: transparent;
+                    --col-h2-bg: hsla(193, 43%, 67%, 0.4);
+                    --col-h3-bg: hsla(179, 25%, 65%, 0.3);
+                    --col-h4-bg: hsla(210, 34%, 63%, 0.2);
+                    --col-h5-bg: hsla(213, 32%, 52%, 0.1);
+                    --col-h6-bg: transparent;
+                /* ─────────────────────────────────────────────────────────────────
+                >>>> COLOURS > Miscellany
+                ───────────────────────────────────────────────────────────────── */
+                    --text-accent: hsl(213, 32%, 52%);
+                    --text-accent-hover: hsl(193, 43%, 63%);
+                    --col-bg-table: hsl(210, 34%, 73%);
+                    --col-header-title-active: hsl(179, 25%, 45%);
+                    --col-header-title-dormant: hsl(193, 43%, 67%);
+                    --interactive-bg: hsl(179, 25%, 65%);
+                    --interactive-border-color: hsl(193, 43%, 63%);
+                    --interactive-accent: hsl(179, 25%, 65%);
+                    --interactive-accent-hover: hsl(193, 43%, 67%);
+                    --scroll-hover: hsl(213, 32%, 52%);                
+                    --col-selection: var(--accent-lighterer);
+
+                    --col-sd: hsl(193, 43%, 73%);
+
+                    --text-on-accent: hsl(218, 24%, 96%);
+                    --text-faint:     hsl(213, 32%, 32%);
+                    --text-muted:     hsl(213, 32%, 47%);
+
+                /* ─────────────────────────────────────────────────────────────────
+                >>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
+                ───────────────────────────────────────────────────────────────── */
+                --PComm001-col-today:   hsl(193, 43%, 67%);
+                --PComm001-col-year:    hsl(179, 25%, 45%);
+                --PComm001-col-dot:     hsl(213, 32%, 52%);
+
+            }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> DARK THEME
+        ───────────────────────────────────────────────────────────────────────── */
+            .cp-exobs-nord.theme-dark {
+
+                --background-primary:           hsl(220, 16%, 22%);
+                --background-primary-alt:       hsl(222, 16%, 28%);
+
+                --background-primary-contra:    hsl(218, 27%, 94%);
+
+                --background-secondary:         hsl(220, 17%, 32%);
+                --background-secondary-alt:     hsl(220, 16%, 36%);
+
+                /* ─────────────────────────────────────────────────────────────────
+                >>>> HEADINGS > Colours > Text
+                ───────────────────────────────────────────────────────────────── */
+                    --col-h1: hsl(193, 43%, 57%);
+                    --col-h2: hsl(219, 28%, 88%);
+                    --col-h3: hsl(218, 27%, 92%);
+                    --col-h4: hsl(218, 27%, 94%);
+                    --col-h5: hsl(217, 26%, 96%);
+                    --col-h6: hsl(193, 43%, 67%);
+                /* ─────────────────────────────────────────────────────────────────
+                >>>> HEADINGS > Colours > Background
+                ───────────────────────────────────────────────────────────────── */
+                    --col-h1-bg: hsla(218, 27%, 94%, 0.8);
+                    --col-h2-bg: hsla(193, 43%, 67%, 0.8);
+                    --col-h3-bg: hsla(179, 25%, 65%, 0.8);
+                    --col-h4-bg: hsla(210, 34%, 63%, 0.8);
+                    --col-h5-bg: hsla(213, 32%, 52%, 0.8);
+                    --col-h6-bg: transparent;
+                /* ─────────────────────────────────────────────────────────────────
+                >>>> COLOURS > Miscellany
+                ───────────────────────────────────────────────────────────────── */
+                    --text-accent: hsl(193, 43%, 57%);
+                    --text-accent-hover: hsl(219, 28%, 88%);
+                    --col-bg-table: hsl(220, 16%, 36%);
+                    --col-header-title-active: hsl(193, 43%, 57%);
+                    --col-header-title-dormant: hsl(219, 28%, 88%);
+                    --interactive-bg: hsl(193, 43%, 57%);
+                    --interactive-border-color: hsl(193, 43%, 57%);
+                    --interactive-accent: hsl(193, 43%, 57%);
+                    --interactive-accent-hover: hsl(219, 28%, 88%);
+                    --scroll-hover: hsl(193, 43%, 57%); 
+                    --col-selection: var(--accent-lighterer);
+
+                    --col-sd: hsl(213, 32%, 42%);
+
+                    --text-on-accent: hsl(218, 24%, 96%);
+                    --text-faint:     hsl(193, 43%, 67%);
+                    --text-muted:     hsl(193, 43%, 53%);
+
+                /* ─────────────────────────────────────────────────────────────────
+                >>>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
+                ───────────────────────────────────────────────────────────────── */
+                --PComm001-col-today:   hsl(193, 43%, 77%);
+                --PComm001-col-year:    hsl(179, 25%, 65%);
+                --PComm001-col-dot:     hsl(213, 32%, 62%);
+
+            }   
+
+            /* ────────────────────────────────────────────────────────────────────────
+            >>> NORD-SPECIFIC THEMING
+            ───────────────────────────────────────────────────────────────────────── */
+            .cp-exobs-nord:is(.theme-light, .theme-dark) :is(select.dropdown,
+            .settings-search-input .search-input-container > input[type='text']) {
+
+                background-color: var(--background-primary-alt);
+                color: var(--background-primary-contra);
+
+            }
+
+            .cp-exobs-nord :is(.titlebar,
+            .titlebar-text,
+            .titlebar-button) {
+
+                color: var(--text-faint);
+                background-color: var(--col-sd);
+
+            }
+
+            .cp-exobs-nord :is(.nav-folder-title,
+            .nav-file-title,
+            .nav-folder-title-content) {
+                color: var(--background-primary-contra);
+            }
+
+            .cp-exobs-nord.theme-dark .cm-s-obsidian span.cm-inline-code {
+                color: hsl(40, 71%, 73%); /* nord13, yellow */
+            }
+
+            .cp-exobs-nord.theme-light .cm-s-obsidian span.cm-inline-code {
+                color: hsl(354, 42%, 56%); /* nord11, red */
+            }

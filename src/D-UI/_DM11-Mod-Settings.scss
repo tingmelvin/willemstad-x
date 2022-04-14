@@ -1,0 +1,103 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DM11
+\ UI > Modals
+\ Settings Modal
+───────────────────────────────────────────────────────────────────────────────────
+    >> 
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> SETTINGS
+        ──────────────────────────────────────────────────────────────────────── */
+        :not(.is-mobile) {
+            .modal.mod-settings .vertical-tab-header {
+                padding: 0;
+            }
+            .vertical-tab-header-group-title {
+                padding: 0.25rem 0.75rem;
+            }
+
+            .vertical-tab-header-group {
+                padding: 0 0;
+            }
+        }
+        
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> SETTINGS > COMMUNITY PLUGINS > INSTALLED PLUGINS
+        ──────────────────────────────────────────────────────────────────────── */
+        :not(.is-mobile) {
+            .installed-plugins-container {
+                padding: 0;
+
+                .setting-item:first-child {
+                    padding-top: 0.25rem;
+                }
+
+                .setting-item-description {
+
+                    display: inline-block;
+
+                    > div:nth-child(1) {
+                        display: inline-block;
+                        background-color: var(--background-secondary-alt);
+                        clip-path: inset(0 0 0 3.25rem round 0.5rem);
+                        width: fit-content;
+                        padding-right: 0.2rem;
+                        margin-left: -3.25rem;
+
+                        /*
+                        text-indent: 0rem;
+                        margin-left: 15rem;
+                        overflow-x: hidden;
+                        margin-top: -1.5rem;
+                        background-color: var(--background-secondary-alt);
+                        clip-path: inset(0 0 0 3.25rem round 0.5rem);
+                        color: var(--text-muted);
+                        width: fit-content;
+                        padding-right: 0.2rem;
+                        position: relative;
+                        */
+                    }
+
+                    > div:nth-child(2) {
+
+                        display: inline-block;
+                        margin-left: 0.35rem;
+                        /*
+                        position: relative;
+                        margin-left: 21.5rem;
+                        margin-top: -1.5rem;
+                        float: left;
+                        */
+
+                        &::first-letter {
+                            text-transform: lowercase;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL TYPOGRAPHY]
+    ───────────────────────────────────────────────────────────────────────────────
+           >>> SETTINGS | Options
+        ──────────────────────────────────────────────────────────────────────── */
+        .horizontal-tab-nav-item,
+        .vertical-tab-nav-item {
+            font-size: var(--size-font-mod-settings-navitem);
+        }
+        .vertical-tab-header-group-title {
+            font-size: var(--size-font-mod-settings-grptitle);
+        }
+
+        .theme-light, .theme-dark {
+            --size-font-mod-settings-navitem: calc(var(--size-font-searchbox) * 1.1);
+            --size-font-mod-settings-grptitle: var(--size-font-searchbox);
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [SHIMMERING FOCUS | BOLD OPTIONS MODAL]
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.remove-modal-cp-options-bold) .vertical-tab-header-group:not(:last-child) .vertical-tab-header-group-items .vertical-tab-nav-item:is(:nth-child(3),:nth-child(4),:last-child) {
+        font-weight: bold;
+    }

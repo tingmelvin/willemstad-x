@@ -1,0 +1,333 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [E03] Header `var` Settings
+───────────────────────────────────────────────────────────────────────────────────
+    >> [HEADINGS > Colours > Background]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (OPTIONS) Δ Heading Background Colours
+        ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-section :is(h1),
+        .admonition-content > h1,
+        .callout-content h1,
+        .HyperMD-header-1.cm-line{
+            background-color: var(--col-h1-bg);
+        }
+        .markdown-preview-section :is(h2),
+        .admonition-content > h2,
+        .callout-content h2,
+        .HyperMD-header-2.cm-line{
+            background-color: var(--col-h2-bg);
+        }
+        .markdown-preview-section :is(h3),
+        .admonition-content > h3,
+        .callout-content h3,
+        .HyperMD-header-3.cm-line{
+            background-color: var(--col-h3-bg);
+        }
+        .markdown-preview-section :is(h4),
+        .admonition-content > h4,
+        .callout-content h4,
+        .HyperMD-header-4.cm-line{
+            background-color: var(--col-h4-bg);
+        }
+        .markdown-preview-section :is(h5),
+        .admonition-content > h5,
+        .callout-content h5,
+        .HyperMD-header-5.cm-line{
+            background-color: var(--col-h5-bg);
+        }
+        .markdown-preview-section :is(h6),
+        .admonition-content > h6,
+        .callout-content h6,
+        .HyperMD-header-6.cm-line{
+            background-color: var(--col-h6-bg);
+        }
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> [HEADINGS > Colours > Text/Font]
+───────────────────────────────────────────────────────────────────────────────
+    >>> (OPTIONS) Δ Heading Font Colours
+    ───────────────────────────────────────────────────────────────────────────
+    >>>> for READING MODE (and some editing mode for adm/callouts, lol, xD)
+    \\\\ more specificity better
+    \\\\ else Calendars etc. get affected with global H changes
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-view h1,
+        .admonition-content > h1,
+        .callout-content h1 {
+            color: var(--col-h1);
+        }
+        .markdown-preview-view h2,
+        .admonition-content > h2,
+        .callout-content h2 {
+            color: var(--col-h2);
+        }
+        .markdown-preview-view h3,
+        .admonition-content > h3,
+        .callout-content h3 {
+            color: var(--col-h3);
+        }
+        .markdown-preview-view h4,
+        .admonition-content > h4,
+        .callout-content h4 {
+            color: var(--col-h4);
+        }
+        .markdown-preview-view h5,
+        .admonition-content > h5,
+        .callout-content h5 {
+            color: var(--col-h5);
+        }
+        .markdown-preview-view h6,
+        .admonition-content > h6,
+        .callout-content h6 {
+            color: var(--col-h6);
+        }
+    /* ─────────────────────────────────────────────────────────────────────────
+    >>>> for EDITING MODE | Source View + Live Preview
+    ───────────────────────────────────────────────────────────────────────── */
+        .cm-header-1 {
+            color: var(--col-h1);
+        }
+        .cm-header-2 {
+            color: var(--col-h2);
+        }
+        .cm-header-3 {
+            color: var(--col-h3);
+        }
+        .cm-header-4 {
+            color: var(--col-h4);
+        }
+        .cm-header-5 {
+            color: var(--col-h5);
+        }
+        .cm-header-6 {
+            color: var(--col-h6);
+        }
+
+    /* ─────────────────────────────────────────────────────────────────────────
+    >>>> for GRADIENT HEADERS
+    ───────────────────────────────────────────────────────────────────────── */
+        .gradient-headers:is(.theme-dark, .theme-light) {
+
+            --col-h1-grad: linear-gradient(
+                160deg,
+                hsl(184deg 75% 20%) 0%,
+                hsl(182deg 100% 19%) 21%,
+                hsl(179deg 100% 21%) 30%,
+                hsl(176deg 100% 23%) 39%,
+                hsl(173deg 100% 26%) 46%,
+                hsl(170deg 100% 28%) 54%,
+                hsl(166deg 100% 30%) 61%,
+                hsl(162deg 100% 33%) 69%,
+                hsl(159deg 100% 35%) 79%,
+                hsl(155deg 100% 37%) 100%
+            );
+
+            --col-h2-grad: linear-gradient(
+                160deg,
+                hsl(155deg 100% 37%) 0%,
+                hsl(164deg 100% 35%) 21%,
+                hsl(175deg 100% 33%) 30%,
+                hsl(187deg 100% 34%) 39%,
+                hsl(197deg 100% 38%) 46%,
+                hsl(204deg 100% 41%) 54%,
+                hsl(210deg 100% 42%) 61%,
+                hsl(214deg 100% 41%) 69%,
+                hsl(219deg 100% 38%) 79%,
+                hsl(238deg 70% 39%) 100%
+            );
+
+            --col-h3-grad: linear-gradient(
+                160deg,
+                hsl(238deg 70% 39%) 0%,
+                hsl(221deg 100% 36%) 21%,
+                hsl(216deg 100% 38%) 30%,
+                hsl(212deg 100% 40%) 39%,
+                hsl(208deg 100% 40%) 46%,
+                hsl(204deg 100% 40%) 54%,
+                hsl(200deg 100% 40%) 61%,
+                hsl(196deg 100% 40%) 69%,
+                hsl(192deg 100% 39%) 79%,
+                hsl(188deg 100% 39%) 100%
+            );
+
+            --col-h4-grad: linear-gradient(
+                160deg,
+                hsl(19deg 100% 57%) 0%,
+                hsl(22deg 100% 56%) 21%,
+                hsl(25deg 100% 56%) 30%,
+                hsl(28deg 100% 55%) 39%,
+                hsl(30deg 100% 55%) 46%,
+                hsl(33deg 100% 54%) 54%,
+                hsl(35deg 100% 54%) 61%,
+                hsl(37deg 100% 54%) 69%,
+                hsl(39deg 100% 54%) 79%,
+                hsl(41deg 100% 55%) 100%
+            );
+
+            --col-h5-grad: linear-gradient(
+                160deg,
+                hsl(41deg 100% 55%) 0%,
+                hsl(34deg 93% 55%) 21%,
+                hsl(27deg 83% 55%) 30%,
+                hsl(19deg 70% 53%) 39%,
+                hsl(11deg 58% 50%) 46%,
+                hsl(2deg 52% 46%) 54%,
+                hsl(352deg 58% 38%) 61%,
+                hsl(343deg 68% 30%) 69%,
+                hsl(334deg 83% 22%) 79%,
+                hsl(326deg 100% 15%) 100%
+            );
+
+
+            --col-h6-grad: linear-gradient(
+                160deg,
+                hsl(324deg 100% 15%) 0%,
+                hsl(330deg 62% 23%) 12%,
+                hsl(334deg 46% 31%) 26%,
+                hsl(337deg 38% 38%) 40%,
+                hsl(340deg 32% 46%) 53%,
+                hsl(343deg 32% 53%) 65%,
+                hsl(345deg 38% 61%) 76%,
+                hsl(348deg 48% 69%) 85%,
+                hsl(350deg 65% 77%) 93%,
+                hsl(352deg 100% 85%) 100%
+            );
+
+         :is(h1, h2, h3, h4, h5, h6,
+         .cm-header-1, .cm-header-2, .cm-header-3,
+         .cm-header-4, .cm-header-5, .cm-header-6):not(.cm-formatting) {
+
+             color: transparent;
+
+         }
+
+            h1,
+            .cm-header-1 {
+                 -webkit-background-clip: text;
+                 background-clip: text;
+                 background-image: var(--col-h1-grad);
+
+            }
+
+             h2,
+             .cm-header-2 {
+                 -webkit-background-clip: text;
+                 background-clip: text;
+                 background-image: var(--col-h2-grad);
+
+             }
+
+             h3,
+             .cm-header-3 {
+                 -webkit-background-clip: text;
+                 background-clip: text;
+                 background-image: var(--col-h3-grad);
+
+             }
+
+             h4,
+             .cm-header-4 {
+                 -webkit-background-clip: text;
+                 background-clip: text;
+                 background-image: var(--col-h4-grad);
+
+             }
+
+             h5,
+             .cm-header-5 {
+                 -webkit-background-clip: text;
+                 background-clip: text;
+                 background-image: var(--col-h5-grad);                
+
+             }
+
+             h6,
+             .cm-header-6 {
+                 -webkit-background-clip: text;
+                 background-clip: text;
+                 background-image: var(--col-h6-grad);                
+
+             }
+
+
+             /* for Reading mode backgrounds */
+             div.el-h1 {
+                 background-color: var(--col-h1-bg);
+             }
+
+             div.el-h2 {
+                 background-color: var(--col-h2-bg);
+             }
+
+             div.el-h3 {
+                 background-color: var(--col-h3-bg);
+             }
+
+             div.el-h4 {
+                 background-color: var(--col-h4-bg);
+             }
+
+             div.el-h5 {
+                 background-color: var(--col-h5-bg);
+             }
+
+             div.el-h6 {
+                 background-color: var(--col-h6-bg);
+             }
+     
+
+         }
+
+    /* ─────────────────────────────────────────────────────────────────────────
+    >>>> for NO HEADER BACKGROUND
+    ───────────────────────────────────────────────────────────────────────── */
+
+        .no-header-bg:is(.theme-dark, .theme-light) {
+            --col-h1-bg: transparent;
+            --col-h2-bg: transparent;
+            --col-h3-bg: transparent;
+            --col-h4-bg: transparent;
+            --col-h5-bg: transparent;
+            --col-h6-bg: transparent;
+        }
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> [HEADINGS > Typography and Display of Text]
+───────────────────────────────────────────────────────────────────────────────
+    >>> FONT > to var --font heading + LINE HEIGHT
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+        .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
+            font-family: var(--font-heading);
+        }
+        body .cm-s-obsidian .cm-header, body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+            line-height: 125%
+        }
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> [HEADINGS > Editing mode > Paddings]
+───────────────────────────────────────────────────────────────────────────────
+    >>> var paddings
+    ──────────────────────────────────────────────────────────────────────── */
+
+    .cm-s-obsidian .HyperMD-header.HyperMD-header {
+
+        padding-bottom: var(--padding-header-b);
+        padding-top: var(--padding-header-t);
+
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────────
+    >>>> (OPTION) mirror padding
+    ───────────────────────────────────────────────────────────────────────── */
+
+    .mirror-header-paddings .cm-s-obsidian .HyperMD-header.HyperMD-header {
+        
+        padding-bottom: var(--padding-header-t);
+
+    } /* overrides bottom padding option */
+
+    .theme-light, .theme-dark {
+        --padding-header-b: 0.125em;
+        --padding-header-t: 0.125em;
+    }

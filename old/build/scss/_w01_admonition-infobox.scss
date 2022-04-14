@@ -1,0 +1,139 @@
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W01] Admonition Infobox by SlRvB
+──────────────────────────────────────────────────────────────────────────────── */
+
+div:not(.setting-item) > .admonition.admonition-infobox {
+    float: right;
+    max-width: 50%;
+
+    border: 0;
+    box-shadow: none;
+
+    margin-left: 0.5rem;
+}
+
+/*
+div:not(.setting-item) > .admonition-infobox .admonition-title {
+    display: none;
+}
+*/
+
+.admonition-infobox table {
+    width: 100%;
+}
+
+.admonition-infobox .admonition-content {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+.admonition-infobox .admonition-content-holder {
+    margin: 0.5rem;
+}
+
+.admonition-infobox .admonition-content p,
+.admonition-infobox table {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+}
+
+.admonition-infobox :is(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--editor-font-size);
+    text-align: center;
+    margin: 0;
+    padding: 0.125rem;
+}
+
+/* no need for these, perhaps?
+
+.admonition-infobox h1 {
+    background-color: var(--interactive-accent);
+    color: var(--interactive-normal);
+}
+
+
+.admonition-infobox h6 {
+    background-color: var(--interactive-normal);
+}
+*/
+
+.admonition-infobox .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+}
+
+.admonition-infobox .admonition-title {
+
+    background-color: var(--col-bg-table);
+
+}
+
+.admonition-infobox .admonition-title-icon {
+
+    display: none;
+
+} /* removes the admonition-infobox icons */
+
+.admonition-infobox .admonition-title-content {
+
+    justify-content: center;
+    text-align: center;
+
+} /* centers the title */
+
+div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
+.el-hr) + * > div.admonition-infobox {
+    margin-top: calc(var(--admonition-margin-top) - 0.5em);
+} /* ensures non-excessive margin-top if infobox comes after headings */ /* 0.5em since that's the default spacing*/
+
+
+
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W01A] Callout Infobox
+\ adapted from the original Admonition Infobox by SlRvB for the Admonition Plugin
+──────────────────────────────────────────────────────────────────────────────── */
+
+.callout[data-callout="infobox"] {
+    float: right;
+    max-width: 50%;
+
+    border: 0;
+    margin-left: 0.5rem;
+
+    .callout-title {
+
+        background-color: var(--col-bg-table);
+        justify-content: center;
+        text-align: center;
+
+        .callout-icon {
+            display: none;
+        }
+
+    }
+
+    .callout-content {
+        padding: 0;
+        border: none;
+        margin: 0.5rem;
+        justify-content: center;
+        text-align: center;
+
+        :is(h1, h2, h3, h4, h5, h6) {
+
+            font-size: var(--editor-font-size);
+            text-align: center;
+            padding-left: 0.15rem;
+            padding-right: 0.15rem;
+        }
+
+    }
+}
+
+div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
+.el-hr) + * > div.callout[data-callout="infobox"] {
+    margin-top: calc(var(--margin-callout) - 0.5em);
+} /* ensures non-excessive margin-top if infobox comes after headings */ /* 0.5em since that's the default spacing*/

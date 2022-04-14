@@ -1,0 +1,94 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [C80] TRUE BLACK DARK MODE
+──────────────────────────────────────────────────────────────────────────────── */
+    .true-black.true-black.theme-dark {
+        --background-primary: hsl(0, 0%, 0%);
+    }
+
+    .true-black.true-black.theme-dark .workspace-leaf-content {
+        background-color: hsl(0, 0%, 0%);
+    }
+
+    .true-black.true-black.theme-dark :is(.modal.mod-settings,
+    .modal.mod-community-plugin,
+    .modal.mod-community-theme,
+    .modal.mod-publish,
+    .horizontal-tab-content,
+    .vertical-tab-content,
+    .titlebar,
+    .titlebar-text,
+    .titlebar-button,
+    div.status-bar,
+    div.kanban-plugin,
+    div.kanban-plugin__lane,
+    div.kanban-plugin__board>div,
+    .view-header,
+    .vertical-tab-header,
+    .horizontal-tab-header,
+    .vertical-tab-header-group,
+    .workspace-tab-header-container,
+    div.workspace,
+    .horizontal-main-container,
+    .workspace-ribbon.mod-right,
+    .workspace-ribbon.mod-left,
+    .horizontal-tab-nav-item,
+    .vertical-tab-nav-item) {
+        background-color: hsl(0, 0%, 0%);
+    }
+
+    .true-black.true-black.theme-dark :is(.workspace-tab-container-before.is-before-active .workspace-tab-header-inner, .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+    .workspace-tab-header.is-before-active .workspace-tab-header-inner,
+    .workspace-tab-header.is-after-active .workspace-tab-header-inner) {
+        background-color: hsl(0, 0%, 0%);
+    }
+
+    .true-black.true-black.theme-dark .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+        background-color: hsl(0, 0%, 0%);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> SIDEDOCK NOT HOVERED = BLACK
+    ───────────────────────────────────────────────────────────────────────── */
+    .true-black.true-black.theme-dark.sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right):not(:hover) :is(.side-dock-actions, .side-dock-ribbon-action) {
+        color: hsl(0, 0%, 0%);
+    }
+
+    .true-black.true-black.theme-dark.sd-float-tabs :is(.workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right).is-collapsed, .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right)) {
+        background-color: hsl(0, 0%, 0%);
+    }
+    
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> SLIDING PANES BEING A PAIN
+    ───────────────────────────────────────────────────────────────────────── */
+    body.plugin-sliding-panes-rotate-header.true-black.true-black.theme-dark  .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+    body.plugin-sliding-panes-rotate-header.true-black.true-black.theme-dark  .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+    body.plugin-sliding-panes-rotate-header.true-black.true-black.theme-dark .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after,
+    body.plugin-sliding-panes-rotate-header.true-black.true-black.theme-dark  .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+        background: hsl(0, 0%, 0%);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> DELINEATING BLACK STATUS BAR
+    ───────────────────────────────────────────────────────────────────────── */
+    .true-black.true-black.theme-dark  div.status-bar {
+        border-color: hsl(0, 0%, 23.5%);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >> FIXES FOR NORD
+    \\ PROBABLY NEEDS REWORKING -> move to a H/S/L separate model?
+    ───────────────────────────────────────────────────────────────────────── */
+    .true-black.true-black.theme-dark.cp-exobs-nord {
+        --background-primary-alt:       hsl(222, 16%, 5%);
+        --background-secondary:         hsl(220, 17%, 10%);
+        --background-secondary-alt:     hsl(220, 16%, 12%);
+    }
+
+    .true-black.true-black.theme-dark.cp-exobs-nord {
+        --col-h1-bg: hsla(218, 27%, 94%, 0.4);
+        --col-h2-bg: hsla(193, 43%, 67%, 0.4);
+        --col-h3-bg: hsla(179, 25%, 65%, 0.4);
+        --col-h4-bg: hsla(210, 34%, 63%, 0.4);
+        --col-h5-bg: hsla(213, 32%, 52%, 0.4);
+    }

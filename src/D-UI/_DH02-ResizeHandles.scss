@@ -1,0 +1,19 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DH02
+\ UI > Interactive Elements
+\ Resize Handles
+───────────────────────────────────────────────────────────────────────────────────
+    >> RESIZE HANDLES
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-resize-handle:hover {
+        background-color: var(--scroll-hover);
+    }
+    .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+    .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+    .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+        width: 0.2rem;
+        height: 100%
+    }
+    .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+        height: 0.2rem;
+    }

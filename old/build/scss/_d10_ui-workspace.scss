@@ -1,0 +1,160 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> [D10] WORKSPACE
+───────────────────────────────────────────────────────────────────────────────────
+    >> MARGINS | Rationalise them, with rem too
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> READING MODE
+        ──────────────────────────────────────────────────────────────────────── */
+        .markdown-preview-view {
+            padding: 0.75rem 1rem;
+        }
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> EDITING MODE (Live Preview and Source Mode)
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-source-view.mod-cm6 .cm-scroller {
+            padding: 0.75rem 1rem;
+        }
+        .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+            padding: 0;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>>> FIX PADDINGS FOR EDITING MODE
+        ──────────────────────────────────────────────────────────────────────── */         
+            :is(.HyperMD-header-1.cm-line, .HyperMD-header-2.cm-line, .HyperMD-header-3.cm-line, .HyperMD-header-4.cm-line, .HyperMD-header-5.cm-line, .HyperMD-header-6.cm-line) {
+                padding-left: 1.8rem;
+            }
+            .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+                padding-right: -1.3rem;
+            }
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> LOL I THOUGHT IT WAS AN ITALIC
+    \\\ making them # (the header markdown syntax) nice
+    ──────────────────────────────────────────────────────────────────────── */
+        .smol-headers span.cm-formatting.cm-formatting-header:is(.cm-formatting-header-1, .cm-formatting-header-2, .cm-formatting-header-3, .cm-formatting-header-4, .cm-formatting-header-5, .cm-formatting-header-6).cm-header {
+            font-style: normal;
+            /*
+            font-weight: lighter;
+            */
+            font-size: 0.8rem !important; /* needs an important since v0.13.27 */
+            font-stretch: condensed;
+            
+        } /* for smaller # */
+
+        span.cm-formatting.cm-formatting-header:is(.cm-formatting-header-1, .cm-formatting-header-2, .cm-formatting-header-3, .cm-formatting-header-4, .cm-formatting-header-5, .cm-formatting-header-6).cm-header {
+            font-style: normal;
+            /*
+            font-weight: lighter;
+            */
+            font-stretch: condensed;
+            
+        } /* for normal # */
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> HOTFIX FOR BROKEN TOO-MUCH-PADDING EMBEDS (since v0.13.25)
+    \\\ provided by @SlRvB
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-embed div.markdown-preview-section {
+            padding-bottom: unset !important;
+        } 
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> FIX ugliness caused by a random top-left-radius
+    ──────────────────────────────────────────────────────────────────────── */
+        .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+            border-top-left-radius: 0;
+          }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> FIX HR (again, for LP and Preview)
+    ──────────────────────────────────────────────────────────────────────── */
+          
+          .markdown-preview-view hr {
+
+            border: none;
+            border-top: 2px solid var(--background-modifier-border);
+            border-color: var(--background-modifier-border);
+
+          } /* Preview */
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> FIX QUOTES
+    \\\ in LP mode
+    ──────────────────────────────────────────────────────────────────────── */
+          .HyperMD-quote.cm-line {
+              background-color: var(--background-primary-alt);
+          }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> NAV
+    ──────────────────────────────────────────────────────────────────────── */
+        .mod-left-split .nav-buttons-container {
+
+            .nav-buttons-left-L & {
+                justify-content: left;
+
+                &:first-child {
+                    margin-left: 0.1rem;
+                }
+            }
+
+            .nav-buttons-center-L & {
+                justify-content: center;
+            }
+
+            .nav-buttons-right-L & {
+                justify-content: right;
+
+                &:last-child {
+                    margin-right: 0.1rem;
+                }
+
+            }
+        }
+
+        .mod-right-split .nav-buttons-container {
+
+            .nav-buttons-left-R & {
+                justify-content: left;
+
+                &:first-child {
+                    margin-left: 0.1rem;
+                }
+            }
+
+            .nav-buttons-center-R & {
+                justify-content: center;
+            }
+
+            .nav-buttons-right-R & {
+                justify-content: right;
+
+                &:last-child {
+                    margin-right: 0.1rem;
+                }
+
+            }
+        }
+
+        .nav-action-button > svg {
+            height: 100%;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> BUILT IN INDENTATION GUIDES
+    ──────────────────────────────────────────────────────────────────────── */
+        .markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
+            left: -0.75rem;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> FIX: OVERFLOW
+    ──────────────────────────────────────────────────────────────────────── */
+    /* move this away from infobox, but this really makes this look PERFECT. NO MORE OVERLAPPING STUFF! */
+
+    .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+    p, kbd, hr, ol,
+    blockquote,
+    .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6,
+    div.suggestion-item > :is(span.suggestion-prefix, span.suggestion-content, span.suggestion-hotkey) /*test this*/  {
+        overflow: hidden;
+    }

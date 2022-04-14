@@ -1,0 +1,217 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DE14
+\ UI > Main Screen Elements
+\ Ribbon (old: Side Docks and Sidebars)
+
+\ using nomenclature per Obsidian Help
+\ wat only the left one is called a ribbon? help
+──────────────────────────────────────────────────────────────────────────────── */    
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> SIDE DOCK (SIDEBARS) RIBBONS | CODE: SPARTA
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> ADD A TOUCH OF COLOUR + BORDER RADIUS
+        \\\ (NOT FOR ECLIPSE TABS, for that, see below)
+        \\\ (OPTION) ECLIPSE BARS
+        ──────────────────────────────────────────────────────────────────────── */ 
+        .sd-eclipse-bars .workspace-ribbon.side-dock-ribbon.mod-left {
+            border-radius: 0 calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25) 0;
+            border-right: 0.125rem solid var(--col-sd);
+            border-top: 0.125rem solid var(--col-sd);
+            border-bottom: 0.125rem solid var(--col-sd);
+        }
+        .sd-eclipse-bars .workspace-ribbon.side-dock-ribbon.mod-right {
+            border-radius: calc(var(--shape-roundish) * 1.25) 0 0 calc(var(--shape-roundish) * 1.25);
+            border-left: 0.125rem solid var(--col-sd);
+            border-top: 0.125rem solid var(--col-sd);
+            border-bottom: 0.125rem solid var(--col-sd);
+        }
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) FLOATING TABS | HIDE STUFF! LEFT RIGHT GO HIDEEEEE
+        /// can think about something where the opacity is zero first
+        /// and that everything is hidden until hovering
+        ───────────────────────────────────────────────────────────────────────── */
+
+        body:not(.sd-begone-bars, .sd-eclipse-bars, .sd-default-bars) {
+
+            & .workspace-ribbon:hover .workspace-ribbon-collapse-btn {
+                visibility: visible;
+                transition: 150ms ease-in-out;
+                margin: 0;
+                
+            }
+            
+            & .workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
+                visibility: hidden;
+                transition: var(--medium-transition);
+                margin: 0;
+            }   /* transition and add colour before hover */
+            
+            & .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right):not(:hover) :is(.side-dock-actions, .side-dock-ribbon-action) {
+                color: var(--col-sd);
+                transition: var(--slow-transition);
+            }   /* transition and add colour before hover */ /* COLOURS: --col-sd */
+
+            & .workspace-ribbon.side-dock-ribbon.mod-left {
+                border-radius: 0 calc(var(--shape-roundish) * 3) calc(var(--shape-roundish) * 3) 0;
+                border-right: 0.125rem solid var(--col-sd);
+                border-top: 0.125rem solid var(--col-sd);
+                border-bottom: 0.125rem solid var(--col-sd);
+            }   /* border colours */
+            
+            & .workspace-ribbon.side-dock-ribbon.mod-right {
+                border-radius: calc(var(--shape-roundish) * 3) 0 0 calc(var(--shape-roundish) * 3);
+                border-left: 0.125rem solid var(--col-sd);
+                border-top: 0.125rem solid var(--col-sd);
+                border-bottom: 0.125rem solid var(--col-sd);
+            }   /* border colours */
+
+            & .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left) {
+                opacity: 100%;
+                transition: var(--medium-transition);
+
+                position: absolute;
+                top: calc((100% - var(--sd-height-norm)) / 2 ) ;
+                width: var(--sd-width-norm);
+                height: var(--sd-height-norm);      /* --sd-height-norm */
+
+            }
+
+            & .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left):hover {
+                opacity: 100%;
+                background-color: var(--background-secondary);
+
+                position: absolute;
+                top: calc((100% - var(--sd-height-hover)) / 2 );
+                transition: var(--quick-transition);
+                width: 2.5rem;
+                height: var(--sd-height-hover);     /* --sd-height-hover */
+            }
+
+            & .side-dock-ribbon {
+                background-color: var(--col-sd);
+            }
+
+            & .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-left:hover) {
+                left: 0;
+            }
+            & .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-right:hover) {
+                right: 0;
+            } /* LEFT/RIGHT */
+
+            & .workspace-ribbon-collapse-btn {
+                text-align: center; /* the fact that this works makes me angy */
+            } /* ensures that the ribbon collapse button is centred */
+
+            &.focus-mode .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
+                visibility: hidden;;
+            }
+
+        }
+
+
+
+        .sd-float-tabs .workspace-ribbon:hover .workspace-ribbon-collapse-btn {
+            visibility: visible;
+            transition: 150ms ease-in-out;
+            margin: 0;
+            
+        }
+        .sd-float-tabs .workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
+            visibility: hidden;
+            transition: var(--medium-transition);
+            margin: 0;
+        }   /* transition and add colour before hover */
+        .sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right):not(:hover) :is(.side-dock-actions, .side-dock-ribbon-action) {
+            color: var(--col-sd);
+            transition: var(--slow-transition);
+        }   /* transition and add colour before hover */ /* COLOURS: --col-sd */
+
+        .sd-float-tabs .workspace-ribbon.side-dock-ribbon.mod-left {
+            border-radius: 0 calc(var(--shape-roundish) * 3) calc(var(--shape-roundish) * 3) 0;
+            border-right: 0.125rem solid var(--col-sd);
+            border-top: 0.125rem solid var(--col-sd);
+            border-bottom: 0.125rem solid var(--col-sd);
+        }   /* border colours */
+        .sd-float-tabs .workspace-ribbon.side-dock-ribbon.mod-right {
+            border-radius: calc(var(--shape-roundish) * 3) 0 0 calc(var(--shape-roundish) * 3);
+            border-left: 0.125rem solid var(--col-sd);
+            border-top: 0.125rem solid var(--col-sd);
+            border-bottom: 0.125rem solid var(--col-sd);
+        }   /* border colours */
+
+        .sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left) {
+            opacity: 100%;
+            transition: var(--medium-transition);
+
+            position: absolute;
+            top: calc((100% - var(--sd-height-norm)) / 2 ) ;
+            width: var(--sd-width-norm);
+            height: var(--sd-height-norm);      /* --sd-height-norm */
+
+        }
+
+        .sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left):hover {
+            opacity: 100%;
+            background-color: var(--background-secondary);
+
+            position: absolute;
+            top: calc((100% - var(--sd-height-hover)) / 2 );
+            transition: var(--quick-transition);
+            width: 2.5rem;
+            height: var(--sd-height-hover);     /* --sd-height-hover */
+        }
+
+        .sd-float-tabs .side-dock-ribbon {
+            background-color: var(--col-sd);
+        }
+
+        .sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-left:hover) {
+            left: 0;
+        }
+        .sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-right:hover) {
+            right: 0;
+        } /* LEFT/RIGHT */
+
+        .sd-float-tabs .workspace-ribbon-collapse-btn {
+            text-align: center; /* the fact that this works makes me angy */
+        } /* ensures that the ribbon collapse button is centred */
+
+        .sd-float-tabs.focus-mode .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
+            visibility: hidden;;
+        }
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) NUCLEAR OPTION | NO BAR?!
+        ───────────────────────────────────────────────────────────────────────── */
+
+        .sd-begone-bars .workspace-ribbon.side-dock-ribbon:is(.mod-left, .mod-right) {
+
+            display: none;
+            
+        }
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> SD VARIABLES
+        ───────────────────────────────────────────────────────────────────────── */
+            .theme-light, .theme-dark {
+                --sd-width-norm:    1.1rem;
+                --sd-opacity:       100%;
+                --sd-height-hover:  50%;
+                --sd-height-norm:   15%;
+            }
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> DISAPPEARING TABS
+        ───────────────────────────────────────────────────────────────────────── */
+        .sd-opacity-none.sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left) {
+            opacity: 0%;
+        }
+        .sd-opacity-none.sd-float-tabs .workspace-ribbon.side-dock-ribbon:is(.mod-right, .mod-left):hover {
+            opacity: 100%;
+        }
+
+
+
+

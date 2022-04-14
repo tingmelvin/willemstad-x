@@ -1,0 +1,370 @@
+/* Advanced Settings */
+
+/* @settings
+name: "Advanced Settings" 
+id: Willemstad-Adv-Settings
+settings:
+    -
+        id: readme-adv-settings
+        title: I declare I am absolutely sure of what I am doing, and I want to access Advanced Settings.
+        type: class-toggle
+        description: 
+        default: false
+    -
+     id: adv-settings-frontmatter
+     title: "Advanced Settings — Frontmatter"
+     type: heading
+     level: 2
+     collapsed: false
+    -
+        id: adv-settings-frontmatter-colour
+        title: "Coloured YAML Options"
+        description: "The advanced options here are only available and displayed when the Coloured YAML option is checked."
+        type: heading
+        level: 3
+        collapsed: false
+    -
+            id: col-frontmatter-default
+            title: col-frontmatter-default
+            description: "Default Frontmatter Colour. Typically controlled via text-accent-hover's colour."
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark:  hsl(184, 74%, 20%)
+    -
+            id: col-frontmatter-atom
+            title: col-frontmatter-atom
+            description: "Atom Frontmatter Colour. Typically controlled via text-accent's colour."
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(184, 75%, 20%)
+            default-dark:  hsl(155, 100%, 37%)
+    -
+            id: col-frontmatter-meta
+            title: col-frontmatter-meta
+            description: "Meta Frontmatter Colour. Typically controlled via text-accent-hover's colour."
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark:  hsl(184, 74%, 20%)
+    -
+            id: col-frontmatter-number
+            title: col-frontmatter-number
+            description: "Number Frontmatter Colour. Typically controlled via text-accent-hover's colour."
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark:  hsl(184, 74%, 20%)
+    -
+     id: adv-settings-col
+     title: "Advanced Settings — Colours"
+     type: heading
+     description: "Ever wanted to change every single element's colour? Here's your chance to do so!"
+     level: 2
+     collapsed: false
+    -
+     id: adv-settings-col-bg
+     title: "Background"
+     type: heading
+     description:
+     level: 3
+     collapsed: true
+    -
+            id: background-primary
+            title: background-primary
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 100%)
+            default-dark:  hsl(0, 0%, 13%)
+    -
+            id: background-primary-alt
+            title: background-primary-alt
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(220, 18%, 97%)
+            default-dark:  hsl(0, 0%, 9%)
+    -
+            id: background-secondary
+            title: background-secondary
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(220, 13%, 95%)
+            default-dark:  hsl(0, 0%, 8%)
+    -
+            id: background-secondary-alt
+            title: background-secondary-alt
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(216, 10%, 90%)
+            default-dark:  hsl(0, 0%, 0%)
+    -
+            id: background-primary-contra
+            title: background-primary-contra
+            type: variable-themed-color
+            description: 'Applies only for Nord palette.'
+            opacity: false
+            format: hsl
+            default-light: hsl(220, 16%, 22%)
+            default-dark: hsl(218, 27%, 94%)
+    -
+            id: background-modifier-border
+            title: background-modifier-border
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 87%)
+            default-dark:  hsl(0, 0%, 20%)
+    -
+            id: background-modifier-form-field
+            title: background-modifier-form-field
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 100%, 1)
+            default-dark:  hsla(0, 0%, 0%, 0.302)
+    -
+            id: background-modifier-form-field-highlighted
+            title: background-modifier-form-field-highlighted
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 100%, 1)
+            default-dark:  hsla(0, 0%, 0%, 0.22)
+    -
+            id: background-modifier-box-shadow
+            title: background-modifier-box-shadow
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 0%, 0.1)
+            default-dark:  hsla(0, 0%, 0%, 0.3)
+    -
+            id: background-modifier-success
+            title: background-modifier-success
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(148, 58%, 77%)
+            default-dark:  hsl(107, 100%, 23%)
+    -
+            id: background-modifier-error
+            title: background-modifier-error
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 100%, 30%)
+            default-dark:  hsl(0, 100%, 12%)
+    -
+            id: background-modifier-error-hover
+            title: background-modifier-error-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 100%, 37%)
+            default-dark:  hsl(0, 100%, 14%)
+    -
+            id: background-modifier-cover
+            title: background-modifier-cover
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 0%, 0.8)
+            default-dark:  hsla(0, 0%, 0%, 0.8)
+    -
+     id: adv-settings-col-text
+     title: "Text"
+     type: heading
+     description:
+     level: 3
+     collapsed: true
+    -
+            id: text-accent
+            title: text-accent
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(184, 75%, 20%)
+            default-dark:  hsl(155, 100%, 37%)
+    -
+            id: text-accent-hover
+            title: text-accent-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark:  hsl(184, 74%, 20%)
+    -
+            id: text-normal
+            title: text-normal
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(210, 10%, 20%)
+            default-dark:  hsl(210, 3%, 87%)
+    -
+            id: text-muted
+            title: text-muted
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 53%)
+            default-dark:  hsl(0, 0%, 60%)
+    -
+            id: text-faint
+            title: text-faint
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 60%)
+            default-dark:  hsl(0, 0%, 40%)
+    -
+            id: text-error
+            title: text-error
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 100%, 25%)
+            default-dark:  hsl(0, 100%, 60%)
+    -
+            id: text-error-hover
+            title: text-error-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 100%, 30%)
+            default-dark:  hsl(0, 100%, 30%)
+    -
+            id: text-selection
+            title: text-selection
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(209, 100%, 90%, 0.99)
+            default-dark:  hsla(212, 54%, 20%, 0.99)
+    -
+            id: text-on-accent
+            title: text-on-accent
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 95%)
+            default-dark:  hsl(210, 3%, 87%)
+    -
+     id: adv-settings-col-interactive
+     title: "Interactives"
+     type: heading
+     description:
+     level: 3
+     collapsed: true
+    -
+            id: interactive-bg
+            title: interactive-bg
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark:  hsl(155, 100%, 37%)
+    -
+            id: interactive-border-color
+            title: interactive-border-color
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(184, 74%, 20%)
+            default-dark:  hsl(155, 100%, 37%)
+    -
+            id: interactive-normal
+            title: interactive-normal
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: '#f2f3f5'
+            default-dark:  hsl(0, 0%, 16%)
+    -
+            id: interactive-hover
+            title: interactive-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 91%)
+            default-dark:  hsl(0, 0%, 19%)
+    -
+            id: interactive-accent
+            title: interactive-accent
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 37%)
+            default-dark:  hsl(155, 100%, 37%)
+    -
+            id: interactive-accent-hover
+            title: interactive-accent-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(184, 74%, 20%)
+            default-dark:  hsl(184, 74%, 20%)
+    -
+            id: interactive-success
+            title: interactive-success
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(107, 100%, 23%)
+            default-dark:  hsl(107, 100%, 23%)
+    -
+     id: adv-settings-col-others
+     title: "Others"
+     type: heading
+     description:
+     level: 3
+     collapsed: true
+    -
+            id: scrollbar-active-thumb-bg
+            title: scrollbar-active-thumb-bg
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 0%, 0.2)
+            default-dark:  hsla(0, 0%, 100%, 0.2)
+    -
+            id: scrollbar-bg
+            title: scrollbar-bg
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 0%, 0.05)
+            default-dark:  hsla(0, 0%, 100%, 0.05)
+    -
+            id: scrollbar-thumb-bg
+            title: scrollbar-thumb-bg
+            type: variable-themed-color
+            opacity: true
+            format: hsl
+            default-light: hsla(0, 0%, 0%, 0.102)
+            default-dark:  hsla(0, 0%, 100%, 0.1)     
+    -
+            id: scroll-hover
+            title: scroll-hover
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(155, 100%, 48%)
+            default-dark:  hsl(155, 100%, 48%)   
+    -
+            id: col-selection
+            title: col-selection
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(41, 100%, 55%)
+            default-dark:  hsl(41, 100%, 55%)                                                                                                                                                                                                                                                                                                                                                                            
+*/
