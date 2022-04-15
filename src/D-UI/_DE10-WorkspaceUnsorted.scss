@@ -136,13 +136,6 @@
         }
 
     /* ────────────────────────────────────────────────────────────────────────
-    >>> BUILT IN INDENTATION GUIDES
-    ──────────────────────────────────────────────────────────────────────── */
-        .markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
-            left: -0.75rem;
-        }
-
-    /* ────────────────────────────────────────────────────────────────────────
     >>> FIX: OVERFLOW
     ──────────────────────────────────────────────────────────────────────── */
     /* move this away from infobox, but this really makes this look PERFECT. NO MORE OVERLAPPING STUFF! */

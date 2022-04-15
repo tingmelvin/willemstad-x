@@ -6,7 +6,7 @@
     >> READING MODE
     ──────────────────────────────────────────────────────────────────────────── */
     .markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
-        left: -0.8rem;
+        left: -0.75em; /* seems to work better than -0.8rem */
     }
 
     /* ────────────────────────────────────────────────────────────────────────────

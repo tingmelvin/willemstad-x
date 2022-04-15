@@ -9,7 +9,7 @@
             --font-interface-theme: var(--font-ui); /* my changes to stick */
             --font-interface: var(--font-interface-override), var(--font-interface-theme), var(--default-font); /* replace this with font-interface in 0.14.5 */
             
-            --font-text-theme: var(--font-text); /* my changes to stick */
+            --font-text-theme: var(--font-editor); /* my changes to stick */
             --font-text: var(--font-text-override), var(--font-text-theme), var(--font-interface), var(--default-font);  /* change in 0.14.5 */
         
             /* --font-monospace-theme: see below */
