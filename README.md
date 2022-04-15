@@ -98,5 +98,5 @@ Currently includes:
 
 ---
 ### License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-This repository is licensed under the terms of the MIT License.
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+This repository is licensed under the terms of Mozilla Public License version 2.0. Most of its constituent snippets (callouts, CSSClass, etc.) are licensed under the terms of the MIT license, either by myself or its respective authors.
