@@ -266,7 +266,7 @@
     ──────────────────────────────────────────────────────────────────────────── */
 
     select.dropdown {
-        option:is([value="sd-begone-bars"], [value="sb-hiding"], [value="tb-tb-remove"]) {
+        option:is([value="sd-begone-bars"], [value="sb-hiding"], [value="tb-tb-remove"], [value="metadata-container-none"]) {
             
             color: var(--text-on-accent);
             background-color: var(--background-modifier-error);

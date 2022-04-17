@@ -133,7 +133,7 @@
             &::after {
                 content: "\eeb7";
                 font-family: "remixicon";
-                font-size: 1rem;
+                font-size: var(--font-text-size);
                 position: relative;
                 top: 0.125rem;
             }

@@ -150,7 +150,7 @@ settings:
                     label: 🌥️ Default Bar
                     value: tb-default
                 -
-                    label: ❌ (NUCLEAR OPTION) No Bar — Completely removes bar
+                    label: ❌ No Bar — Completely removes bar
                     value: tb-tb-remove
     -
         id: elements-tb
@@ -205,7 +205,7 @@ settings:
                     label: ☀️ Unchanging — Persistent, full-length (Obsidian default)
                     value: sb-unchanging
                 -
-                    label: ❌ (NUCLEAR OPTION) Hiding — Completely removes bar
+                    label: ❌ Hiding — Completely removes bar
                     value: sb-hiding
     -
     -
@@ -507,8 +507,8 @@ settings:
         default: false
     -
             id: width-vll
-            title: Line Length 
-            description: "Set the maximum line length. Accepts most valid CSS units, except percentages."
+            title: Custom Maximum Line Length 
+            description: "Set the maximum line length. Accepts all valid CSS units."
             type: variable-text
             default: 700px
     -
@@ -535,8 +535,28 @@ settings:
             id: size-font-frontmatter-section
             title: Font Size — Frontmatter Section (Aliases and Tags)
             description: Accepts any valid CSS units.
-            type: variable-text
+            type: variable-texts
             default: 0.9em
+    -
+            id: frontmatter-display
+            title: Frontmatter Display Options
+            description: "Choose how (and whether) you want the frontmatter displayed. Works only for Reading mode."
+            type: class-select
+            allowEmpty: false
+            default: default
+            options:
+                -
+                    label: 🟢 Standard
+                    value: default
+                -
+                    label: 🟡 Blank Line (Shows when hovered)
+                    value: metadata-container-blankline
+                -
+                    label: 🔴 Dot (Shows when hovered)
+                    value: metadata-container-dot
+                -
+                    label: ❌ None
+                    value: metadata-container-none
     -
     -
         id: typography-typeface

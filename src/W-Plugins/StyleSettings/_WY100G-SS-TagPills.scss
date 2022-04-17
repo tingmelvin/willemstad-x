@@ -9,7 +9,8 @@
     >>> add 'experimental' tag
     ──────────────────────────────────────────────────────────────────────────── */
     .setting-item:is([data-id="gradient-headers"], [data-id="table-lp-magic"],
-    [data-id="startup"], [data-id="no-animations"], [data-id="fix-mathjax-width"], [data-id="Willemstad-Adv-Settings"]) :is(.setting-item-name) {
+    [data-id="startup"], [data-id="no-animations"], [data-id="fix-mathjax-width"],
+    [data-id="Willemstad-Adv-Settings"], [data-id="frontmatter-display"]) :is(.setting-item-name) {
     
         &::after {
 

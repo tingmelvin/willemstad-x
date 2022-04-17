@@ -159,7 +159,7 @@
     >>> (OPTION) SET MIN + MAX WIDTH FOR TABLES
     ──────────────────────────────────────────────────────────────────────────── */
     .table-set-minmax:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type=markdown] :is(td, th),
-    table.dataview.table-view-table {
+    .table-set-minmax table.dataview.table-view-table {
         min-width: var(--width-tables-min);
         max-width: var(--width-tables-max);
     }
