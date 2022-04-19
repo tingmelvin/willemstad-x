@@ -23,6 +23,7 @@
 @use 'E-Editor/_EB-Blocks_Callouts';
 @use 'E-Editor/_ED-DocTitles';
 @use 'E-Editor/_EF-Frontmatter';
+@use 'E-Editor/_EL-VarLineLength';
 @use 'E-Editor/_ET01-ETyp-HeaderVar';
 @use 'E-Editor/_ET11-ETyp-Highlights';
 @use 'E-Editor/_ET12-ETyp-Underlines';
@@ -55,6 +56,7 @@
 @use 'W-Plugins/StyleSettings/_WY100F-SS-Warnings';
 @use 'W-Plugins/StyleSettings/_WY100G-SS-TagPills';
 @use 'W-Plugins/StyleSettings/_WY100X-SS-WorkspaceLeaf';
+@use 'X-Others/_XP-Print.scss';
 @use 'X-Others/_XY-FontEncoding-Base64';
 @use 'X-Others/_XZ-HubCompatibilityInfo';
 /* add separate licensing software (Minimal) at the back */

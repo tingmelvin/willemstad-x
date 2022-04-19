@@ -148,37 +148,7 @@
             overflow: hidden;
         }
 
-    /* ────────────────────────────────────────────────────────────────────────
-    Variable Line Length
-    ──────────────────────────────────────────────────────────────────────── */
-
-    .length-line-var {
-    
-        .markdown-source-view.markdown-source-view.markdown-source-view.mod-cm6 {
-            
-            & .cm-contentContainer {
-                max-width: unset;
-            }
-            
-            :is(.cm-content,
-            .cm-line:not(.HyperMD-table-row)) {
-                max-width: var(--width-vll);
-                margin: auto;
-            }
-        }
-
-        .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
-            max-width: var(--width-vll);
-            margin: auto;
-        }
-    }
-
-    .theme-dark, .theme-light {
-
-        --width-vll: 700px;
-
-    }
-
+    /**/
     .workspace-tabs {
         padding-right: 3.25px; /* solves some weirdness with weird right borders appearing when being bigger */
     }

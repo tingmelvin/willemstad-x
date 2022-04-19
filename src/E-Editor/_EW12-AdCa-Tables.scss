@@ -65,11 +65,11 @@ div.el-div[data-callout="table"] + * > div.callout[data-callout="table"] {
     border-left: 0;
     background-color: var(--background-primary);
 
-    .callout-title {
+    & > .callout-title {
         display: none;
     }
 
-    .callout-content {
+    & > .callout-content {
         background-color: var(--background-primary);
         border-left: 0;
         margin-left: 0;

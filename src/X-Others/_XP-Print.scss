@@ -1,0 +1,40 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> XP
+\ Print Stylesheet
+
+\\ partially based on Hartija by Vladimir Carrer
+\\ https://github.com/vladocar/Hartija---CSS-Print-Framework
+\\ MIT License - associated rights of Vladimir Carrer preserved
+
+\\ MIT License
+──────────────────────────────────────────────────────────────────────────────── */
+
+@media print {
+
+    body {
+        /* width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important; */
+        /* let Obs deal with it */
+
+        background: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    .image-embed, img, .callout, .callout-content,
+    blockquote, table, pre {
+        page-break-inside: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+
+
+
+
+}

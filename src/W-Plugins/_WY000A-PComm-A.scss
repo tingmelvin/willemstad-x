@@ -54,7 +54,7 @@
         padding: 0;
         border: 0;
         border-radius: 0;
-    } /* removes embed spaces for Admonitions, tries to fit LP with Reading */
+    }  /* removes embed spaces for Admonitions, tries to fit LP with Reading */
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> MAKE HEADERS IN ADMONITIONS NICER
@@ -77,6 +77,18 @@
     .headers-round .admonition.admonition {
         border-radius: calc(var(--shape-roundish) * 1.25);
     } /* makes borders round */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (TEMP) FIX for Admonitions
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .callout.callout:not(.admonition) .no-title {
+        display: block;
+    }
+
+    .callout-title.callout-title.admonition-title.no-title {
+        display: none;
+    }
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> {UNDER CONSTRUCTION}
