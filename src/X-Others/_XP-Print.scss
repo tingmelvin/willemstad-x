@@ -18,10 +18,19 @@
         /* let Obs deal with it */
 
         background: none;
+
     }
 
     h1, h2, h3, h4, h5, h6 {
         page-break-after: avoid;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6,
+    .el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) {
+        /*
+        display: unset !important;
+        -webkit-print-color-adjust: exact !important;
+        */
     }
 
     .image-embed, img, .callout, .callout-content,
@@ -33,6 +42,22 @@
         orphans: 3;
         widows: 3;
     }
+
+
+    *::-webkit-scrollbar {
+        width: 0 !important
+    } /* bye bye scrollbars */
+
+    /* callouts stuff */
+
+    /* kanban */
+
+    /* issues to resolve:
+
+    kanban callout
+    how to deal with the headers background-color going poof
+
+    */
 
 
 

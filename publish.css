@@ -1,0 +1,945 @@
+body {
+
+--font-interface-override: 'Manrope' !important;
+--font-monospace-override: 'DM Mono' !important;
+--font-text-override: 'DM Sans' !important;
+--font-default: 'DM Sans' !important;
+
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> BC
+\ Root
+\ Colours
+───────────────────────────────────────────────────────────────────────────────────
+    >> BASE COLOURS
+    ──────────────────────────────────────────────────────────────────────────── */
+    :is(.theme-light, .theme-dark) {
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> ACCENTS
+        ──────────────────────────────────────────────────────────────────── */
+            --accent-light: hsl(41, 100%, 40%);
+            --accent-lighter: hsl(41, 100%, 55%);
+            --accent-lighterer: hsl(41, 100%, 70%);
+            --accent-lightest: hsl(41, 100%, 85%);
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
+        ──────────────────────────────────────────────────────────────────── */
+            --PComm001-col-today: hsl(184, 74%, 20%);
+            --PComm001-col-year: hsl(155, 100%, 37%);
+            --PComm001-col-dot: hsl(184, 74%, 20%);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> LIGHT THEME
+    ───────────────────────────────────────────────────────────────────────── */
+    .theme-light {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(155, 100%, 37%);
+                --col-h2: hsl(184, 74%, 20%);
+                --col-h3: hsl(238, 70%, 39%);
+                --col-h4: hsl(19, 100%, 57%); /* rgb(254 80 0) rgb(255 125 0);*/
+                --col-h5: hsl(324, 100%, 15%);
+                --col-h6: hsl(184, 74%, 20%); 
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(184, 74%, 20%, 0.08);
+                --col-h2-bg: hsla(155, 100%, 37%, 0.2);
+                --col-h3-bg: hsla(188, 100%, 39%, 0.25);
+                --col-h4-bg: hsla(41, 100%, 55%, 0.2);
+                --col-h5-bg: hsla(352, 100%, 85%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(184, 75%, 20%);
+                --text-accent-hover: hsl(155, 100%, 37%);
+
+                --col-bg-table: hsl(155, 100%, 37%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(184, 74%, 20%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+
+                --scroll-hover: hsl(155, 100%, 48%);            
+                --col-selection: hsl(41, 100%, 55%);
+
+                --text-dark: hsl(184, 74%, 20%);
+                --text-light: hsl(155, 100%, 37%);
+
+                --col-sd: hsl(184, 75%, 20%);
+        } 
+    
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> DARK THEME
+    ───────────────────────────────────────────────────────────────────────── */
+    .theme-dark {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(187, 13%, 87%);
+                --col-h2: hsl(155, 100%, 37%);
+                --col-h3: hsl(188, 100%, 39%);
+                --col-h4: hsl(41, 100%, 55%);
+                --col-h5: hsl(352, 100%, 85%);
+                --col-h6: hsl(155, 100%, 37%);
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(155, 100%, 37%, 0.73);
+                --col-h2-bg: hsla(184, 74%, 20%, 0.2);
+                --col-h3-bg: hsla(238, 70%, 39%, 0.25);
+                --col-h4-bg: hsla(19, 100%, 50%, 0.2);
+                --col-h5-bg: hsla(324, 100%, 15%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(155, 100%, 37%);
+                --text-accent-hover: hsl(184, 74%, 20%);
+
+                --col-bg-table: hsl(184, 74%, 20%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(155, 100%, 37%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+
+                --scroll-hover: hsl(155, 100%, 48%);          
+                --col-selection: hsl(41, 100%, 55%);
+
+                --text-dark: hsl(184, 74%, 20%);
+                --text-light: hsl(155, 100%, 37%);
+
+                --col-sd: hsl(155, 100%, 37%);
+
+        }
+    
+    
+/* ────────────────────────────────────────────────────────────────────────
+>>> SETTING BASE COLOURS AND ALL | CODE: HIUMAA
+───────────────────────────────────────────────────────────────────────── */
+.theme-light {
+
+    --background-primary:           hsl(0, 0%, 100%);
+    --background-primary-alt:       hsl(220, 18%, 97%);
+
+    --background-secondary:         hsl(220, 13%, 95%);
+    --background-secondary-alt:     hsl(216, 10%, 90%); /* secondary-alt-2 was hsl(218, 11.5%, 92.5%); tertiary was hsl(212, 9%, 85%); tertiary-alt was hsl(208, 8%, 80%) */
+
+    --text-normal:                  hsl(210, 10%, 20%);
+    --text-muted:                   hsl(0, 0%, 53%);
+    --text-faint:                   hsl(0, 0%, 60%);
+    --text-error:                   hsl(0, 100%, 25%);
+    --text-error-hover:             hsl(0, 100%, 30%);
+    --text-on-accent:               hsl(0, 0%, 95%);
+
+    --background-modifier-border: hsl(0, 0%, 87%);
+    --background-modifier-form-field: hsl(0, 0%, 100%);
+    --background-modifier-form-field-highlighted: hsl(0, 0%, 100%);
+    --background-modifier-box-shadow: hsla(0, 0%, 0%, 0.1);
+    --background-modifier-success: hsl(148, 58%, 77%);
+    --background-modifier-error: hsl(0, 100%, 30%);
+    --background-modifier-error-hover: hsl(0, 100%, 37%);
+    --background-modifier-cover: hsla(0, 0%, 0%, 0.8);
+
+    --highlight-mix-blend-mode: darken;
+
+
+    /* things im not sure what it does, lol */
+    --text-selection:               hsla(209, 100%, 90%, 0.99);
+    --interactive-normal:           hsl(220, 13%, 95%);
+    --interactive-hover:            hsl(0, 0%, 91%);
+    --interactive-success:          hsl(107, 100%, 23%);
+    --scrollbar-active-thumb-bg:    hsla(0, 0%, 0%, 0.2);
+    --scrollbar-bg:                 hsla(0, 0%, 0%, 0.05);
+    --scrollbar-thumb-bg:           hsla(0, 0%, 0%, 0.102);
+
+}
+
+.theme-dark {
+    
+    --background-primary:           hsl(0, 0%, 13%);
+    --background-primary-alt:       hsl(0, 0%, 9%);
+
+    --background-secondary:         hsl(0, 0%, 8%);
+    --background-secondary-alt:     hsl(0, 0%, 0%);
+
+    --text-normal:                  hsl(210, 3%, 87%);
+    --text-muted:                   hsl(0, 0%, 60%);
+    --text-faint:                   hsl(0, 0%, 40%);
+    --text-error:                   hsl(0, 100%, 60%);
+    --text-error-hover:             hsl(0, 100%, 30%);
+    --text-on-accent:               hsl(210, 3%, 87%);
+
+    --background-modifier-border: hsl(0, 0%, 20%);
+    --background-modifier-form-field: hsla(0, 0%, 0%, 0.302);
+    --background-modifier-form-field-highlighted: hsla(0, 0%, 0%, 0.22);
+    --background-modifier-box-shadow: hsla(0, 0%, 0%, 0.3);
+    --background-modifier-success: hsl(107, 100%, 23%);
+    --background-modifier-error: hsl(0, 100%, 12%);
+    --background-modifier-error-hover: hsl(0, 100%, 14%);
+    --background-modifier-cover: hsla(0, 0%, 0%, 0.8);
+
+    --highlight-mix-blend-mode: lighten;
+
+
+    /* things im not sure what it does, lol */
+    --text-selection:               hsla(212, 54%, 20%, 0.99);
+    --interactive-normal:           hsl(0, 0%, 16%);
+    --interactive-hover:            hsl(0, 0%, 19%);
+    --interactive-success:          hsl(107, 100%, 23%);
+    --scrollbar-active-thumb-bg:    hsla(0, 0%, 100%, 0.2);
+    --scrollbar-bg:                 hsla(0, 0%, 100%, 0.05);
+    --scrollbar-thumb-bg:           hsla(0, 0%, 100%, 0.1);
+
+}
+
+h1 {
+    color: var(--col-h1);
+    background-color: var(--col-h1-bg);
+    font-size: 1.8em !important;
+}
+
+h2 {
+    color: var(--col-h2);
+    background-color: var(--col-h2-bg);
+    font-size: 1.6em !important;
+}
+
+h3 {
+    color: var(--col-h3);
+    background-color: var(--col-h3-bg);
+    font-size: 1.45em !important;
+}
+
+h4 {
+    color: var(--col-h4);
+    background-color: var(--col-h4-bg);
+    font-size: 1.3em !important;
+}
+
+h5 {
+    color: var(--col-h5);
+    background-color: var(--col-h5-bg);
+    font-size: 1.15em !important;
+}
+
+h6 {
+    color: var(--col-h6);
+    background-color: var(--col-h6-bg);
+    font-size: 1.05em !important;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    padding: 0.25rem 0.5rem 0.25rem 2rem;
+    margin: 0.5rem 0 !important;
+    line-height: 125%;
+    letter-spacing: -0.015rem;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Manrope" !important;
+}
+
+div.site-footer {
+    display: none; /* remove powered by Obsidian Publish text */
+}
+
+input.search-bar {
+    border-radius: 50px; /* makes it curved */
+}
+
+/* move site name from left to the centre */
+.published-container.has-navigation .site-header {
+    display: flex !important;
+}
+
+.site-body-left-column-site-name {
+    display: none;
+}
+
+div.outline-view-outer {
+    margin-top: 10px; /* squeezes the margin */
+}
+
+/* let it load first? */
+body {
+    opacity: 0;
+            animation: cssAnimation 2.75s;
+            animation-fill-mode: forwards;
+}
+
+    @keyframes cssAnimation {
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        99% {
+            opacity: 0.99;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes cssAnimation {
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        99% {
+            opacity: 0.99;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+/* top border */
+body {
+    border-top: 4px solid;
+    border-image-source: linear-gradient(90deg,hsl(155, 100%, 37%), hsl(200, 93%, 77%) 50%, hsl(320, 65%, 50%));
+    border-image-slice: 1;
+}
+
+
+div.site-header {
+    border-bottom: none;
+    background-color: hsl(180, 80%, 98%);
+    margin-top: 0;
+    padding: 10px;
+}
+
+/* Site Header make it nice */
+.site-header-text {
+    font-weight: 600;
+    color: hsl(155, 100%, 37%);
+}
+
+.site-header-text::after {
+    color: hsl(155, 100%, 37%);
+}
+
+.site-header-text::before {
+}
+
+/* remove paddings */
+.site-body-left-column, .site-body-right-column {
+    padding-top: 0;
+}
+
+/* needed to make sure em-s work properly, even if it is overriden */
+.markdown-rendered {
+    font-size: 16px;
+}
+
+/* fonts */
+/* latin-ext */
+@font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-orYadYY35Zlk.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-orYadb435.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTW7PB1QTsUX8KYth-gCKSIUKw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTW7PB1QTsUX8KYth-gBqSI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-o9YedYY35Zlk.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-o9Yedb435.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvrGyEY2tbZX9.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvrGyEYOtbQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTU7PB1QTsUX8KYthSQBLyM.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTU7PB1QTsUX8KYthqQBA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvumzEY2tbZX9.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvumzEYOtbQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Fp2ywxg089UriCZa4ET-DNl0.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Fp2ywxg089UriCZa4Hz-D.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZaw7ByWB3wTyCg.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZaw7ByWCXwT.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZawpBqWB3wTyCg.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZawpBqWCXwT.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriAWCrCBamC2QX.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriAWCrCBimCw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBamC2QX.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBimCw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
