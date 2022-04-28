@@ -1,5 +1,5 @@
 old/** linguist-vendored
 build/remixicon.css linguist-vendored
 src/Z-NonTheme/** linguist-vendored
-snippet.css
-publish.css
+snippet.css linguist-vendored
+publish.css linguist-vendored
