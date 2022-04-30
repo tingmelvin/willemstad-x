@@ -313,3 +313,93 @@
     .setting-item-heading[data-id="startup"] {
         border-top: 3px double var(--background-modifier-border);
     }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Styling for Highlights
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    body.theme-light.css-settings-manager,
+    body.theme-dark.css-settings-manager {
+        --col-highlight-text-pickr: var(--col-highlight-text);
+    } /* to define colours for the text bit */
+
+    .pickr .pcr-button {
+
+        :is(.setting-item[data-id="col-highlight-0"],
+            .setting-item[data-id="col-highlight-1"],
+            .setting-item[data-id="col-highlight-2"],
+            .setting-item[data-id="col-highlight-3"]) & {
+
+                /* width: calc(0.15 * var(--modal-width-settings)); */
+                width: 12em;
+                color: var(--col-highlight-text);
+
+                &, &::before, &::after {
+
+                    border-radius: calc(var(--shape-roundish) * 3);
+
+                }
+                
+        }
+
+        /* color var stuff */
+
+        :is(.setting-item[data-id="col-highlight-0"],
+            .setting-item[data-id="col-highlight-1"],
+            .setting-item[data-id="col-highlight-2"],
+            .setting-item[data-id="col-highlight-3"]) .theme-light & {
+
+            body.theme-light.css-settings-manager & {
+                color: var(--col-highlight-text-pickr);
+            }
+
+            body.theme-dark.css-settings-manager & {
+                color: transparent;
+                height: 0.25em;
+            }
+        }
+
+        :is(.setting-item[data-id="col-highlight-0"],
+            .setting-item[data-id="col-highlight-1"],
+            .setting-item[data-id="col-highlight-2"],
+            .setting-item[data-id="col-highlight-3"]) .theme-dark & {
+
+            body.theme-light.css-settings-manager & {
+                color: transparent;
+                height: 0.25em;
+            }
+
+            body.theme-dark.css-settings-manager & {
+                color: var(--col-highlight-text-pickr);
+            }
+        } 
+
+        &::after {
+
+            font-family: var(--font-ui);
+
+            .setting-item[data-id="col-highlight-0"] & {
+
+                content: "==highlight==";
+
+            }
+
+            .setting-item[data-id="col-highlight-1"] & {
+
+                content: "*==highlight==*";
+
+            }
+
+            .setting-item[data-id="col-highlight-2"] & {
+
+                content: "**==highlight==**";
+
+            }
+
+            .setting-item[data-id="col-highlight-3"] & {
+
+                content: "***==highlight==***";
+
+            }
+        }
+    }

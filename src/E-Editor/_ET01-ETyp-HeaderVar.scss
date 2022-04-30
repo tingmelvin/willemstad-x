@@ -317,6 +317,38 @@
                     --col-h6-bg: transparent;
                 }
 
+            /* ─────────────────────────────────────────────────────────────────────
+            >>>> FORCE font size
+            ───────────────────────────────────────────────────────────────────── */
+
+            .markdown-rendered {
+
+                & h1 {
+                    font-size: var(--h1);
+                }
+
+                & h2 {
+                    font-size: var(--h2);
+                }
+
+                & h3 {
+                    font-size: var(--h3);
+                }
+
+                & h4 {
+                    font-size: var(--h4);
+                }
+
+                & h5 {
+                    font-size: var(--h5);
+                }
+
+                & h6 {
+                    font-size: var(--h6);
+                }
+
+            }
+
     /* ────────────────────────────────────────────────────────────────────────────
     >> [HEADINGS > Typography and Display of Text]
     ───────────────────────────────────────────────────────────────────────────────
@@ -328,8 +360,8 @@
                 font-family: var(--font-heading);
             }
             body .cm-s-obsidian .cm-header, body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
-                line-height: 125%
-            }
+                /* line-height: */
+            } /* changed from 125% to make sure it is the same as the editor font size changes */
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> [HEADINGS > Editing mode > Paddings]
@@ -377,6 +409,6 @@
             makes sure they are nice and tidy
         ──────────────────────────────────────────────────────────────────────── */
         .markdown-preview-section :is(h1, h2, h3, h4, h5, h6) {
-            padding: 0.25rem 0.5rem 0.25rem 2rem;
+            padding: var(--padding-header-t) 0.5rem var(--padding-header-b) 1.8rem;
             margin: 0.5rem 0;
         }

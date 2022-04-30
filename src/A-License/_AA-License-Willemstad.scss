@@ -1,4 +1,4 @@
-$WillemstadVersionNumber: "v0.4.3 Nyhavn"; /* this ensures that the Version Number is printed */
+$WillemstadVersionNumber: "v0.5.0 Jordaan"; /* this ensures that the Version Number is printed */
 
 /* ────────────────────────────────────────────────────────────────────────────────
 > AA
@@ -453,9 +453,39 @@ Willemstad trademark without the author’s prior written consent.
     >> Infobox, in Community Theme Modal
     ───────────────────────────────────────────────────────────────────────────────
         >>> Add Text and Versioning
-        ──────────────────────────────────────────────────────────────────────── */        
+        ──────────────────────────────────────────────────────────────────────── */
+        
+        :not(.is-mobile) .community-theme.is-selected {
+
+            max-width: calc(2 * var(--width-max-modal-theme) + 1rem);
+            width: 100%;
+
+            padding: 1rem 1rem;
+
+            & .community-theme-title {
+                font-size: 2rem;
+            }
+
+            & .community-theme-title::after {
+                font-size: 1rem;
+            }
+
+            & .community-theme-info:after {
+                left: 55%;
+
+            }
+
+            & img[src] {
+                max-width: 50%;
+            }
+
+        } /* needed to prevent changes in mobile */
         
         .community-theme.is-selected {
+
+            & .community-theme-title:before {
+                content: "🏘️";
+            }
         
             & .community-theme-title::after {
                 content: "\A #{$WillemstadVersionNumber}";
@@ -470,7 +500,7 @@ Willemstad trademark without the author’s prior written consent.
 
             } /* for community theme title */
 
-            & .community-theme-info::after {
+            & .community-theme-info:after {
 
                 /* general stuff */
                 white-space: pre-wrap;
@@ -480,7 +510,7 @@ Willemstad trademark without the author’s prior written consent.
                 line-height: 100%;
                 letter-spacing: -0.01rem;
                 position: absolute;
-                top: 30%;
+                top: 35%;
                 right: 5%;
                 left: 5%;
 
@@ -502,7 +532,6 @@ Willemstad trademark without the author’s prior written consent.
                     border: 0.125rem solid var(--interactive-accent);
 
                 }
-
 
             }
 

@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────────────
-> EX13
+> EX11
 \ CSSClass
 \ LaTeX
 ──────────────────────────────────────────────────────────────────────────────── */
@@ -97,7 +97,7 @@ Version: 0.1.0
     /* ────────────────────────────────────────────────────────────────────────────
     >> CODEBLOCKS
     ──────────────────────────────────────────────────────────────────────────── */
-    .latex .theme-light :not(pre) > code[class*="language-"], .theme-light pre[class*="language-"] {
+    .latex :is(.theme-light :not(pre) > code[class*="language-"], .theme-light pre[class*="language-"]) {
         background-color: transparent;
         border-top: 0.1rem solid black;
         border-bottom: 0.1rem solid black;

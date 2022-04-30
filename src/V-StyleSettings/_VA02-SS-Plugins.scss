@@ -202,10 +202,17 @@ settings:
      collapsed: false
     -
         id: PComm002-shadow
-        title: Re-enable shadows between two panes
+        title: Re-enable Shadows between Two Panes
         note: Sliding Panes
         type: class-toggle
         description: "By default, Willemstad removes Sliding Panes' shadows. This toggle re-enables the shadows between two sliding panes when using the Sliding Panes plugin."
+        default: false
+    -
+        id: PComm002-rotate-title
+        title: Rotate Document Title
+        note: Sliding Panes
+        type: class-toggle
+        description: "When enabled, the document title will rotate 180 degrees when using the Sliding Panes plugin. This is useful for right-aligned document titles. Title alignments can be changed in the Editor settings."
         default: false
     -
      id: PComm000-settings

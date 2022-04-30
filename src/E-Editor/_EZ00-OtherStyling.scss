@@ -171,3 +171,13 @@
                 padding-right: 0.3rem;
             }
             */
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> ENSURES HEADER COLLAPSE INDICATOR ALIGNS PROPERLY
+        ───────────────────────────────────────────────────────────────────────── */
+
+            .heading-collapse-indicator.collapse-indicator.collapse-icon {
+                display: inline-block;
+                align-items: center;        
+            }
+

@@ -44,7 +44,7 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
 }
 
 .admonition-infobox :is(h1, h2, h3, h4, h5, h6) {
-    font-size: var(--editor-font-size);
+    font-size: var(--font-text-size);
     text-align: center;
     margin: 0;
     padding: 0.125rem;
@@ -128,7 +128,7 @@ div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
 
         :is(h1, h2, h3, h4, h5, h6) {
 
-            font-size: var(--editor-font-size);
+            font-size: var(--font-text-size);
             text-align: center;
             padding-left: 0.15rem;
             padding-right: 0.15rem;

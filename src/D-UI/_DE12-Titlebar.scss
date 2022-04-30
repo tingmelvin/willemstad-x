@@ -67,7 +67,7 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >> (OPTION) MINIBAR FOR, YOU KNOW, STUFF
     ──────────────────────────────────────────────────────────────────────────── */
-    body:not(.tb-tb-remove, .tb-default) /*tb-title-minibar*/ {
+    /* body:not(.tb-tb-remove, .tb-default) */ .tb-title-minibar {
 
         & .titlebar-text {
             display: none;

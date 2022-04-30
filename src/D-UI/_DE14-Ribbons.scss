@@ -212,6 +212,81 @@
             opacity: 100%;
         }
 
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> HOVER COLOURS
+        ───────────────────────────────────────────────────────────────────────── */
 
+        .workspace-ribbon-collapse-btn, .side-dock-ribbon-action {
 
+            transition: var(--quicker-transition);
 
+            &:hover {
+                color: var(--interactive-accent-hover);
+                transition: var(--quicker-transition);
+            }
+        }
+
+        .theme-dark.cp-classic-lshtm :is(.workspace-ribbon-collapse-btn, .side-dock-ribbon-action) {
+
+            transition: var(--quicker-transition);
+
+            &:hover {
+                color: var(--interactive-accent);
+                transition: var(--quicker-transition);
+            }
+        }
+
+        .workspace-ribbon-collapse-btn {
+            stroke-width: 6px;
+        } /* make it darker */
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> PADDINGS TO GAP
+        ───────────────────────────────────────────────────────────────────────── */
+        .side-dock-ribbon, .side-dock-actions, .side-dock-settings {
+            gap: 12px; /* 0.75rem */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-dock-ribbon-action {
+            padding: 0px;
+        } /* moved to gap */
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> MORE PADDINGS
+        ───────────────────────────────────────────────────────────────────────── */
+        body {
+            
+            .workspace-ribbon-collapse-btn {
+                display: flex;
+                justify-content: center;
+
+                margin-top: 0px;
+                padding: 14px 6px 14px 6px; /* try to find a more elegant solution */
+            }
+
+            &.ribbon-action-align-centre .workspace-ribbon-collapse-btn {
+                margin-bottom: auto;
+            } /* aligns ribbon action buttons to centre if they want to */
+
+            .side-dock-settings {
+                margin-bottom: 14px;
+            }
+
+        }
+
+        body:not(.sd-begone-bars, .sd-eclipse-bars, .sd-default-bars) {
+
+            .side-dock-ribbon:hover .side-dock-actions {
+                /* border-top: 1px solid var(--background-modifier-border); */
+                /* nope. need transitions */
+            }
+
+            .side-dock-settings {
+                /* border-top: 1px solid var(--background-modifier-border); */
+                /* nope. need transitions */
+                
+            }
+
+        }

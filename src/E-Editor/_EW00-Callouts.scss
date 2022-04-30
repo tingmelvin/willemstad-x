@@ -1,0 +1,415 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW00
+\ Callouts Visual Surroundings
+───────────────────────────────────────────────────────────────────────────────────
+    >> [CALLOUTS]
+    \\ \ Introduced in Obsidian 0.14.0
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> 
+        ──────────────────────────────────────────────────────────────────────── */
+        .theme-light, .theme-dark {
+            --margin-callout: 0.5em;
+        }
+
+        .callout {
+
+            overflow-x: hidden; /* ensures that it wouldn't eat into other things as well */
+        
+            margin-top: var(--margin-callout);
+            margin-bottom: var(--margin-callout);
+               
+        }
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> 
+        ───────────────────────────────────────────────────────────────────────── */
+            .HyperMD-callout.HyperMD-callout {
+                background-color: var(--background-secondary); /* was background-secondary-alt-2 - phased out */
+
+               /*  border-radius: calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25) 0 0; */
+            
+                & > :not(.cm-hmd-callout) {
+                    color: var(--text-normal);
+                }
+
+                & > span.cm-hmd-callout {
+
+                    color: var(--col-code-open);
+                    font-family: var(--font-monospace);
+
+                    & + span {
+
+                        font-family: var(--font-monospace);
+                        font-size: 0.9em;
+
+                    }
+
+                }
+            }
+
+
+        /* key fixes */
+
+            .callout-title {
+
+                & .callout-title-inner {
+                    word-break: break-all; /* ensure that it doesn't break callouts */
+                }
+
+                & .callout-fold, & .callout-icon {
+                    display: flex;
+                    align-items: center; /* ensures that the svg is centered */
+                }
+            }
+
+        /* opinionated stuff */
+
+        body:not(.callout-standard) {
+
+            .callout {
+                border-radius: calc(var(--shape-roundish) * 1.25);
+                border-left: 0rem solid rgb(var(--callout-color));
+
+                transition: var(--quick-transition);
+
+                &:hover {
+                    border-left: 0.3rem solid rgb(var(--callout-color));
+                    transition: var(--quick-transition);
+                }
+            }
+
+            .callout-title {
+                padding: 0.35em 1em; /* make it thinner */
+                font-family: var(--font-heading);
+
+                & .callout-title-inner {
+                    word-break: break-word; /* ensure that it doesn't break callouts */
+                    order: -2;
+
+                    font-weight: 600;
+                } /* ensures this appears first */
+
+                & .callout-fold {
+                    order: -1; /* ensures this appears before all the svg */
+
+                    opacity: 0.3;
+                    transition: var(--quicker-transition);
+    
+                }
+
+                &:hover .callout-fold {
+
+                    opacity: 1;
+                    transition: var(--quicker-transition);
+
+                }
+
+                & .callout-fold, & .callout-icon {
+                    display: flex;
+                    align-items: center; /* ensures that the svg is centered */
+                } 
+            }
+
+            .callout-content {
+                padding: 0 1em;
+
+                p {
+                    margin-block-start: 0.5em;
+                    margin-block-end: 0.5em;
+                }
+
+            }
+
+            svg.ChevronDown {
+                mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+                -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+            }
+
+            
+        }
+
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> BRIGHTER ICONS
+        \\\ thanks to @pseudometa! :carrrl:
+        ───────────────────────────────────────────────────────────────────────── */
+
+        .callout-icon svg {
+            
+            .theme-light & {
+                filter: brightness(95%);
+            }
+            
+        }
+
+
+        :not(.callout-standard) .callout-title-inner {
+            .theme-light & {
+                filter: brightness(75%) contrast(2.25) hue-rotate(-5deg);                
+            }
+            .theme-dark & {
+                filter: contrast(2.5) hue-rotate(-5deg);
+            }
+        }
+        
+
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> CALLOUT COLOURS
+        ───────────────────────────────────────────────────────────────────────── */
+
+        body:not(.callout-standard) {
+
+
+            .callout {
+
+                & .callout-title {
+
+                    background-color: rgba(var(--callout-color), 0.125);
+                }
+
+                & .callout-title-inner {
+                    /* opacity: 0.9; */
+                    color: rgb(var(--callout-color));
+                    -webkit-font-smoothing: antialiased;
+
+                }
+            }
+
+            & .callout:is([data-callout="note"]) {
+                --callout-color: 0, 191, 111;
+
+                /*
+                & .callout-title-inner {
+
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-light")} {
+                        color: hsl(170, 100%, 15%);
+                    }
+                    
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(170, 100%, 15%);
+                    }
+
+                }
+                */
+            }
+
+
+            & .callout:is([data-callout="abstract"],
+                        [data-callout="summary"],
+                        [data-callout="tldr"]) {
+                --callout-color: 91, 197, 219;
+                --callout-icon: loader;
+            }
+
+            & .callout:is([data-callout="info"],
+                        [data-callout="todo"]) {
+                --callout-color: 0, 170, 199;
+            }
+
+            & .callout:is([data-callout="tip"],
+                        [data-callout="hint"]) {
+                --callout-color: 34, 148, 1;
+                --callout-icon: asterisk;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(107, 99%, 40%);
+                    }
+
+                }
+            }            
+
+            & .callout:is([data-callout="check"],
+                        [data-callout="done"]) {
+                --callout-color: 0, 158, 76;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(149, 100%, 40%);
+                    }
+
+                }
+            }
+
+            & .callout:is([data-callout="question"],
+                        [data-callout="help"],
+                        [data-callout="faq"]) {
+                --callout-color: 160, 199, 92;
+            }
+
+            & .callout:is([data-callout="warning"],
+                        [data-callout="caution"],
+                        [data-callout="attention"]) {
+                /* --callout-color: 237, 183, 50; */
+                --callout-color: 255, 182, 26;
+            }
+
+            & .callout:is([data-callout="failure"],
+                        [data-callout="fail"],
+                        [data-callout="missing"]) {
+                --callout-color: 161, 40, 100;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(330, 60%, 65%);
+                    }
+
+                }
+            }
+
+            & .callout:is([data-callout="danger"],
+                        [data-callout="error"]) {
+                --callout-color: 241, 0, 34;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(352, 100%, 60%);
+                    }
+
+                }
+            }
+
+            & .callout:is([data-callout="bug"]) {
+                --callout-color: 164, 103, 80;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(16, 34%, 60%);
+                    }
+
+                }
+            }
+
+            & .callout:is([data-callout="example"]) {
+                --callout-color: 125, 84, 178;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(266, 38%, 65%);
+                    }
+
+                }
+            }
+
+            & .callout:is([data-callout="quote"],
+                        [data-callout="cite"]) {
+                --callout-color: 161, 169, 173;
+            }
+
+
+            /* add Chris's stuff - from Shimmering Focus */
+
+            & .callout:is([data-callout^=attachment],
+                        [data-callout^=file]) {
+                --callout-color: 197, 101, 199;
+                --callout-icon: paperclip;
+            }
+
+            
+            & .callout:is([data-callout="link"],
+                        [data-callout="url"]) {
+                --callout-color: 127, 127, 127;
+                --callout-icon: link;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: var(--text-normal);
+                    }
+
+                }                
+            }
+
+            & .callout:is([data-callout="phone"]) {
+                --callout-color: 250, 121, 33;
+                --callout-icon: phone;
+            }
+
+            & .callout:is([data-callout="email"],
+                        [data-callout="mail"]) {
+                --callout-color: 250, 121, 33;
+                --callout-icon: at-sign;
+            }
+
+
+            & .callout:is([data-callout="goal"]) {
+                --callout-color: 140, 102, 255;
+                --callout-icon: flag;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(255, 100%, 75%);
+                    }
+
+                }
+            }
+
+            /* more extras */
+
+            /* code */
+            & .callout:is([data-callout="code"]) {
+                --callout-color: 0, 0, 0;
+                --callout-icon: code-2;
+
+                @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                    border-left-color: var(--text-normal);
+                }
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: var(--text-normal);
+                    }
+
+                }
+
+                & .callout-content {
+                    font-family: var(--font-monospace);
+
+                    & pre[class*=language-] {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            /* success */
+            & .callout:is([data-callout="success"]) {
+                --callout-color: 0, 158, 76;
+                --callout-icon: star;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(149, 100%, 40%);
+                    }
+
+                }
+            }
+
+            /* important */
+            & .callout:is([data-callout="important"]) {
+                --callout-color: 34, 148, 1;
+                --callout-icon: flag-triangle-right;
+
+                & :is(.callout-title-inner, .callout-icon svg) {                 
+                    
+                    @at-root #{selector-replace(&, "body:not(.callout-standard)", "body:not(.callout-standard).theme-dark")} {
+                        color: hsl(107, 99%, 40%);
+                    }
+
+                }
+
+            }
+            
+        }
+
+

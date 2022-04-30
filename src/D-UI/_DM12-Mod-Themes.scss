@@ -59,3 +59,18 @@
         .community-theme.is-selected .community-theme-info {
             color: var(--text-muted);
         }
+
+        .theme-light, .theme-dark {
+            --width-max-modal-theme: 260px;
+        }
+
+        .community-theme {
+
+            width: 50%;
+            max-width: var(--width-max-modal-theme);
+
+            &.is-selected {
+                order: -1;
+            }
+
+        }

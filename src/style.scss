@@ -11,6 +11,7 @@
 @use 'D-UI/_DE12-Titlebar';
 @use 'D-UI/_DE13-StatusBar';
 @use 'D-UI/_DE14-Ribbons';
+@use 'D-UI/_DE15-RibbonIcons';
 @use 'D-UI/_DF11-Startup';
 @use 'D-UI/_DF12-BacklinksPane';
 @use 'D-UI/_DH00-Interactives';
@@ -20,7 +21,7 @@
 @use 'D-UI/_DM11-Mod-Settings';
 @use 'D-UI/_DM12-Mod-Themes';
 @use 'D-UI/_DM13-Mod-Plugins';
-@use 'E-Editor/_EB-Blocks_Callouts';
+@use 'E-Editor/_EB-Blocks';
 @use 'E-Editor/_ED-DocTitles';
 @use 'E-Editor/_EF-Frontmatter';
 @use 'E-Editor/_EL-VarLineLength';
@@ -28,6 +29,7 @@
 @use 'E-Editor/_ET11-ETyp-Highlights';
 @use 'E-Editor/_ET12-ETyp-Underlines';
 @use 'E-Editor/_ET21-ETyp-OtherSpacing';
+@use 'E-Editor/_EW00-Callouts';
 @use 'E-Editor/_EW01-AdCa-ALL';
 @use 'E-Editor/_EW11-AdCa-Infobox-ITS';
 @use 'E-Editor/_EW12-AdCa-Tables';

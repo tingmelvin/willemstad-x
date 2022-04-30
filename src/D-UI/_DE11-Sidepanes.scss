@@ -17,10 +17,30 @@
                 padding: 0.3rem 0 0.3rem 0;
                 border-bottom: 0.125rem solid var(--background-secondary-alt);
             }
+
+            .nav-buttons-container {
+                display: flex;
+                gap: 1rem;
+            }
+
             .nav-action-button {
+                /*
                 padding: 0rem 0.4rem;
                 margin: 0 0.1rem 0 0.1rem;
+                */
                 border-radius: 0.25rem;
+
+                padding: 0rem;
+                margin: 0rem;
+
+                .nav-buttons-left-L &:first-child {
+                    padding-left: 0.4rem;
+                }
+
+                .nav-buttons-right-L &:last-child {
+                    padding-right: 0.4rem;
+                }
+                
             }
 
             /* ────────────────────────────────────────────────────────────────────
@@ -42,6 +62,62 @@
             .nav-folder-title-content {
                 word-break: break-all;
             }
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> HOVER COLOURS + OTHER PADDING STUFF
+        ───────────────────────────────────────────────────────────────────────── */
+        .is-active .workspace-tab-header-inner {
+
+            & .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent-hover);
+                transition: var(--quicker-transition);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent);
+                transition: var(--quicker-transition);
+            }
+        }
+
+        .workspace-tab-header-inner {
+
+            & .workspace-tab-header-inner-icon {
+                transition: var(--quicker-transition);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent-hover);
+                transition: var(--quicker-transition);
+            }
+        }
+
+        /* classic dark theme stuff */
+
+        .theme-dark.cp-classic-lshtm .is-active :is(.workspace-tab-header-inner) {
+
+            & .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent-hover);
+                transition: var(--quicker-transition);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent);
+                transition: var(--quicker-transition);
+            }
+        }
+
+        .theme-dark.cp-classic-lshtm :is(.workspace-tab-header-inner) {
+
+            & .workspace-tab-header-inner-icon {
+                transition: var(--quicker-transition);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent);
+                transition: var(--quicker-transition);
+            }
+        }
+
     /* ────────────────────────────────────────────────────────────────────────────
     >> LEFT SIDE PANE > NAVIGATION FONTS
     ───────────────────────────────────────────────────────────────────────────────

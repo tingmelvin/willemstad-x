@@ -145,10 +145,10 @@ settings:
         options:
                 -
                     label: 💫 Mini-sized Bar
-                    value: default
+                    value: tb-title-minibar
                 -
                     label: 🌥️ Default Bar
-                    value: tb-default
+                    value: default
                 -
                     label: ❌ No Bar — Completely removes bar
                     value: tb-tb-remove
@@ -244,6 +244,12 @@ settings:
                 format: hsl
                 default-light: hsl(184, 74%, 20%)
                 default-dark: hsl(41, 100%, 55%)
+    -
+                id: ribbon-action-align-centre
+                title: Centre Ribbon Action Buttons
+                type: class-toggle
+                description: "When enabled, the Ribbon Action buttons (on the left ribbon/sidebar) will be vertically centered."
+                default: false
     -
                 id: custom-ft
                 title: 'Customisation — Floating Tabs'
@@ -512,6 +518,28 @@ settings:
             type: variable-text
             default: 700px
     -
+            id: fit-titles-vll
+            title: Fit Titles to Line Length
+            description: "When enabled, this will fit titles to the editor line length."
+            type: class-toggle
+            default: false
+    -
+            id: document-title-display
+            title: Document Title Display Options
+            description: "Choose how (and whether) you want the document title displayed."
+            type: class-select
+            allowEmpty: false
+            default: doc-title-align-l
+            options:
+                -
+                    label: Standard (Left-aligned)
+                    value: doc-title-align-l
+                -
+                    label: Centered
+                    value: doc-title-align-c
+                -
+                    label: Right-aligned
+                    value: doc-title-align-r
     -
         id: frontmatter-options
         title: Frontmatter
@@ -1179,6 +1207,12 @@ settings:
      description: "Customise your Callouts here! Current available classes: 'table', 'infobox', 'aside', 'kanban', 'kanban-no-title'"
      level: 2
      collapsed: false
+    -
+        id: callout-standard
+        title: Standard Obsidian Callouts
+        type: class-toggle
+        description: When enabled, the standard Obsidian Callouts styling will be applied instead.
+        default: false
     -
         id: margin-callout
         title: Callout Margin Size

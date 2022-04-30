@@ -29,6 +29,46 @@
         padding-left: 0;
     }
 
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Rotate Title 
+    ──────────────────────────────────────────────────────────────────────────── */
+    body.plugin-sliding-panes-rotate-header.PComm002-rotate-title .view-header-title {
+        transform: rotate(180deg);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIXING Sliding Panes
+    \\\ works with the standard stuff
+    ──────────────────────────────────────────────────────────────────────────── */
+    body.plugin-sliding-panes-rotate-header .mod-root .workspace-leaf-content {
+        .view-header {
+            display: flex;
+            gap: max(0.5vh, 0.25rem);
+
+            .view-header-title.view-header-title.view-header-title.view-header-title.view-header-title.view-header-title {
+                padding: 0rem;
+            } /* this feels like burning a spider with gasoline */
+
+        }
+
+
+
+        .view-header-icon {
+            display: flex;
+        }
+        
+        .view-actions {
+            display: flex;
+            & > a {
+                display: flex;
+            }
+        }
+    }
+
+    body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+        display: none;
+    } /* removes shadows, also, seriously Sliding Panes */
+
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Admonitions]
 \\ (NOMEN | PComm003)

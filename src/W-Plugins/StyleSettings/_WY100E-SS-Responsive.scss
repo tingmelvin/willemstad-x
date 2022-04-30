@@ -33,7 +33,7 @@
     }
 
 
-    :not(.sd-eclipse-bars, .sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs)*/ .style-settings-heading[data-id="custom-ft"] {
+    body:not(.sd-eclipse-bars, .sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs)*/ .style-settings-heading[data-id="custom-ft"] {
 
         display: flex;
 
@@ -44,7 +44,7 @@
         }
     }
 
-    :not(.sd-eclipse-bars, .sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs)*/ .is-collapsed.style-settings-heading[data-id="custom-ft"] {
+    body:not(.sd-eclipse-bars, .sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs)*/ .is-collapsed.style-settings-heading[data-id="custom-ft"] {
 
         display: flex;
 
@@ -56,7 +56,7 @@
     }
 
 
-    :not(.sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs, .sd-eclipse-bars)*/ .style-settings-heading[data-id="elements-sd"] {
+    body:not(.sd-begone-bars)/*:is(.sd-float-tabs, .sd-eclipse-bars)*/ .style-settings-heading[data-id="elements-sd"] {
 
         display: flex;
 
@@ -67,7 +67,7 @@
         }
     }
 
-    :not(.sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs, .sd-eclipse-bars)*/ .is-collapsed.style-settings-heading[data-id="elements-sd"] {
+    body:not(.sd-begone-bars)/*:is(.sd-float-tabs, .sd-eclipse-bars)*/ .is-collapsed.style-settings-heading[data-id="elements-sd"] {
 
         display: flex;
 
@@ -81,17 +81,32 @@
 
     /* col-sd for colours */
 
-    :is(.sd-default-bars, .sd-begone-bars) .setting-item[data-id="col-sd"] {
+    body:is(.sd-default-bars, .sd-begone-bars) .setting-item[data-id="col-sd"] {
 
         display: none; 
             
     } /* extraneous for colours if default */
 
-    :not(.sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs, .sd-eclipse-bars)*/ .setting-item[data-id="col-sd"] {
+    body:not(.sd-default-bars, .sd-begone-bars)/*:is(.sd-float-tabs, .sd-eclipse-bars)*/ .setting-item[data-id="col-sd"] {
 
         display: flex;
     
+    }
+
+    /* ribbon-action-align-centre */
+
+    body:not(.sd-default-bars, .sd-eclipse-bars) .setting-item[data-id="ribbon-action-align-centre"] {
+
+        display: none;
+            
     } 
+
+    body:is(.sd-default-bars, .sd-eclipse-bars) .setting-item[data-id="ribbon-action-align-centre"] {
+
+        display: flex;
+            
+    }
+    
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> HEADER COLOURS
@@ -99,7 +114,7 @@
 
     /* text */
 
-    :not(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
+    body:not(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
 
         & + .style-settings-container {
             
@@ -110,7 +125,7 @@
         }
     }
 
-    :is(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
+    body:is(.gradient-headers) .style-settings-heading[data-id="typography-h-col-text"] {
 
         & + .style-settings-container {
             
@@ -129,7 +144,7 @@
 
     /* background */
 
-    :not(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
+    body:not(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
 
         & + .style-settings-container {
             
@@ -141,7 +156,7 @@
         }
     }
 
-    :is(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
+    body:is(.no-header-bg) .style-settings-heading[data-id="typography-h-col-bg"] {
 
         & + .style-settings-container {
             
@@ -155,7 +170,7 @@
 
     /* header paddings */
 
-    :not(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
+    body:not(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
 
         & + .style-settings-container {
             
@@ -166,7 +181,7 @@
         }
     }
 
-    :is(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
+    body:is(.mirror-header-paddings) .style-settings-heading[data-id="typography-h-size-paddings"] {
 
         & + .style-settings-container {
             
@@ -182,7 +197,7 @@
     >>> STARTUP
     ──────────────────────────────────────────────────────────────────────────── */
 
-    :not(.startup-devolution) .style-settings-heading[data-id="startup"] {
+    body:not(.startup-devolution) .style-settings-heading[data-id="startup"] {
 
         & + .style-settings-container {
             
@@ -195,7 +210,7 @@
         }
     }
 
-    .startup-devolution.startup-devolution .style-settings-heading[data-id="startup"] {
+    body.startup-devolution.startup-devolution .style-settings-heading[data-id="startup"] {
 
         & + .style-settings-container {
             
@@ -216,7 +231,7 @@
 
 
     /* nested options */
-    :not(.startup-devolution.startup-devolution.startup-devolution) /* ugh my specificity */ {
+    body:not(.startup-devolution.startup-devolution.startup-devolution) /* ugh my specificity */ {
 
                 /* loading message */
 
@@ -267,7 +282,7 @@
 
     }
 
-    :is(.tb-tb-remove) .style-settings-heading[data-id="elements-tb"] {
+    body:is(.tb-tb-remove) .style-settings-heading[data-id="elements-tb"] {
 
         display: none;
 
@@ -280,7 +295,7 @@
         }
     }
 
-    :is(.tb-title-remove) .style-settings-heading[data-id="elements-tb"] {
+    body:is(.tb-title-remove) .style-settings-heading[data-id="elements-tb"] {
 
         & + .style-settings-container {
             
@@ -291,7 +306,7 @@
         }
     }
 
-    :is(.tb-title-minibar) .style-settings-heading[data-id="elements-tb"] {
+    body:is(.tb-title-minibar) .style-settings-heading[data-id="elements-tb"] {
 
         & + .style-settings-container {
             
@@ -335,7 +350,7 @@
     }
 
 
-    :is(.readme-adv-settings) .style-settings-heading[data-id="Willemstad-Adv-Settings"] {
+    body:is(.readme-adv-settings) .style-settings-heading[data-id="Willemstad-Adv-Settings"] {
 
         & + .style-settings-container {
             
@@ -373,7 +388,7 @@
             
         }
 
-        :is(.table-min-space) & {
+        body:is(.table-min-space) & {
 
             display: flex;
 
@@ -385,7 +400,7 @@
 
         }
 
-        :is(.table-min-space) &.is-collapsed {
+        body:is(.table-min-space) &.is-collapsed {
 
             display: flex;
 
@@ -408,7 +423,7 @@
             
         }
 
-        :is(.table-set-minmax) & {
+        body:is(.table-set-minmax) & {
 
             display: flex;
 
@@ -419,7 +434,7 @@
             }
         }
 
-        :is(.table-set-minmax) &.is-collapsed {
+        body:is(.table-set-minmax) &.is-collapsed {
 
             display: flex;
 
@@ -447,7 +462,7 @@
         }
     }
 
-    .PComm007-sp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
+    body.PComm007-sp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
 
         & + .style-settings-container {
             
@@ -458,7 +473,7 @@
         }
     }
 
-    .PComm007-wp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
+    body.PComm007-wp-singlelane .style-settings-heading[data-id="PComm007-settings"] {
 
         & + .style-settings-container {
             
@@ -473,7 +488,7 @@
     >>> ADV SETTINGS > FRONTMATTER (COLOURED YAML)
     ──────────────────────────────────────────────────────────────────────────── */
 
-    :not(.yaml-no-colour) .style-settings-heading[data-id="adv-settings-frontmatter-colour"] {
+    body:not(.yaml-no-colour) .style-settings-heading[data-id="adv-settings-frontmatter-colour"] {
 
         & + .style-settings-container {
             
@@ -484,7 +499,7 @@
         }
     }
 
-    :is(.yaml-no-colour) .style-settings-heading[data-id="adv-settings-frontmatter-colour"] {
+    body:is(.yaml-no-colour) .style-settings-heading[data-id="adv-settings-frontmatter-colour"] {
 
         & + .style-settings-container {
             
@@ -499,13 +514,13 @@
     >>> Variable Line Lengths
     ──────────────────────────────────────────────────────────────────────────── */
 
-    :not(.length-line-var) .setting-item[data-id="width-vll"] {
+    body:not(.length-line-var) .setting-item:is([data-id="width-vll"], [data-id="fit-titles-vll"]) {
 
         display: none; 
             
     } /* extraneous for colours if default */
 
-    :is(.length-line-var) .setting-item[data-id="width-vll"] {
+    body:is(.length-line-var) .setting-item:is([data-id="width-vll"], [data-id="fit-titles-vll"]) {
 
         display: flex;
     

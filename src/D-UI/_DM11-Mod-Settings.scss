@@ -55,6 +55,16 @@
                         padding-right: 0.2rem;
                         position: relative;
                         */
+
+                        /* animation */
+                        transition: var(--quick-transition);
+
+                        &:hover {
+
+                            color: var(--text-normal);
+                            transition: var(--quick-transition);
+
+                        }
                     }
 
                     > div:nth-child(2) {
@@ -70,6 +80,16 @@
 
                         &::first-letter {
                             text-transform: lowercase;
+                        }
+
+                        /* animation */
+                        transition: var(--quick-transition);
+
+                        &:hover {
+
+                            color: var(--text-normal);
+                            transition: var(--quick-transition);
+
                         }
                     }
                 }

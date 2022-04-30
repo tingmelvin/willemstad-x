@@ -35,7 +35,7 @@
     }
 
     /* ────────────────────────────────────────────────────────────────────────────
-    >>> MAKING STYLE SETTINGS PWETTY
+    >>> ADD LINES TO STYLE SETTINGS
     \\\ thanks to Cecilia May for the idea
     ──────────────────────────────────────────────────────────────────────────── */
     div.style-settings-heading[data-level="0"] + .style-settings-container {
@@ -77,6 +77,7 @@
         --margin-ss-collapse-indicator: 0.25rem;
 
     }
+
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> Hides Header/Heading Level 1
@@ -137,4 +138,23 @@
         }
         */
 
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Animations?
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .setting-item.setting-item-heading.style-settings-heading {
+        transition: var(--medium-transition);
+
+        .style-settings-collapse-indicator {
+            opacity: 0.85;
+            transition: var(--quicker-transition);
+        }
+
+        &:hover .style-settings-collapse-indicator {
+            opacity: 1;
+            transition: var(--quicker-transition);
+
+        }
     }

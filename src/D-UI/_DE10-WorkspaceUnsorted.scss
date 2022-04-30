@@ -5,14 +5,20 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> READING MODE
         ──────────────────────────────────────────────────────────────────────── */
+        .theme-light, .theme-dark {
+            --padding-content-tb: 0.75rem;
+            --padding-content-lr: 1rem;
+        } /* sets it for the doc titles stuff as well - make sure you SPECIFY units here*/
+        
         .markdown-preview-view {
-            padding: 0.75rem 1rem;
+            padding: var(--padding-content-tb) var(--padding-content-lr);
         }
+
     /* ────────────────────────────────────────────────────────────────────────
     >>> EDITING MODE (Live Preview and Source Mode)
     ──────────────────────────────────────────────────────────────────────── */
         .markdown-source-view.mod-cm6 .cm-scroller {
-            padding: 0.75rem 1rem;
+            padding: var(--padding-content-tb) var(--padding-content-lr);
         }
         .markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
             padding: 0;
@@ -23,6 +29,7 @@
         ──────────────────────────────────────────────────────────────────────── */         
             :is(.HyperMD-header-1.cm-line, .HyperMD-header-2.cm-line, .HyperMD-header-3.cm-line, .HyperMD-header-4.cm-line, .HyperMD-header-5.cm-line, .HyperMD-header-6.cm-line) {
                 padding-left: 1.8rem;
+                padding-right: 0.5rem;
             }
             .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
                 padding-right: -1.3rem;

@@ -100,8 +100,28 @@ input.document-replace-input {
         width: 1.25rem;
         border: 0.125rem solid var(--interactive-border-color);
         border-radius: 50rem;
-        transition: var(--medium-transition);
+        transition: var(--quick-transition);
+
+        &:not(.is-enabled) {
+            transition: var(--quick-transition);
+
+            &:hover {
+                background-color: var(--background-primary-alt);
+                transition: var(--quick-transition);
+            }
+        }
+        
+        &.is-enabled {
+            transition: var(--quick-transition);
+
+            &:hover {
+                background-color: var(--interactive-accent-hover);
+                transition: var(--quick-transition);
+            }
+        }
+
     }
+
     .checkbox-container:after {
         display: none;
     }
@@ -143,7 +163,7 @@ input.document-replace-input {
         background-repeat: no-repeat;
         padding: 0;
         opacity: 100%;
-}
+    }
 
 /* ────────────────────────────────────────────────────────────────────────────
 >> BUTTONS

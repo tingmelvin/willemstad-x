@@ -194,4 +194,8 @@
         --scrollbar-bg:                 hsla(0, 0%, 100%, 0.05);
         --scrollbar-thumb-bg:           hsla(0, 0%, 100%, 0.1);
 
+        & ::selection {
+            color: var(--background-primary);
+        }
+
     }

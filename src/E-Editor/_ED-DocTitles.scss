@@ -24,3 +24,66 @@
             .view-header-title {
                 color: var(--col-header-title-dormant);
             }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> Paddings for Doc Titles fix
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .workspace-leaf-content[data-type=markdown] {
+        .view-header {
+
+            display: flex;
+            align-items: center; /* ensures center alignment */
+
+            /* oh the lords this is buggy */
+
+
+            padding: 0 var(--padding-content-lr); /* to make up for the other paddings removed */
+
+            gap: 0.25rem;
+
+        }
+
+        .view-header-icon {
+            padding: 0;
+        }
+
+        .view-actions {
+            padding: 0;
+        }
+
+        .view-header-title-container {
+            display: flex;
+            align-items: center; /* ensures center alignment */
+
+            /* time to make some alignments! */
+
+            .doc-title-align-l & {
+                /* justify-content: flex-start; */
+            }
+
+            .doc-title-align-c & {
+                justify-content: center;
+            }
+
+            .doc-title-align-r & {
+                justify-content: flex-end;
+                
+                
+                & .view-header-title {
+                    padding-right: 0px; 
+                    /* kinda follows Obsidian core stuff - which is 30px but gradient to "disappear" title */
+                     /* do I need this, actually */
+                } 
+
+                &:after {
+                    display: none;
+                }
+            }
+
+
+        }
+        .view-header-title {
+            padding-right: 0rem;
+        }
+    }
