@@ -541,8 +541,10 @@
 
         .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split,
         .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
-            position:absolute;
+            position: absolute;
             z-index: 1;
+
+            
         }
         .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split {
             left: 0px;
@@ -562,6 +564,24 @@
         }
     }
 
+    body:not(.is-mobile):is(.mobile-style-sidepanes):is(.sd-eclipse-bars, .sd-default-bars) {
+
+        .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split,
+        .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+            position: absolute;
+            z-index: 1;
+
+            
+        }
+
+        .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split {
+            left: 30px;
+        }
+        .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+            right: 30px;
+        }
+    }
+    
     .theme-light, .theme-dark {
         --opacity-mobile-style: 0;
         --transition-mobile-style: var(--medium-transition);
