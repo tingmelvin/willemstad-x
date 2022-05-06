@@ -317,7 +317,33 @@
         }
     }
     
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> HIGHLIGHTS
+    ──────────────────────────────────────────────────────────────────────────── */
 
+    body:is(.highlight-col-original) .setting-item:is([data-id="col-highlight-0"], [data-id="col-highlight-1"], [data-id="col-highlight-2"], [data-id="col-highlight-3"])  {
+
+        display: none;
+            
+    }
+
+    body:not(.highlight-col-original) .setting-item:is([data-id="col-highlight-0"], [data-id="col-highlight-1"], [data-id="col-highlight-2"], [data-id="col-highlight-3"])  {
+
+        display: flex;
+            
+    }
+
+    body:is(.highlight-col-original) .setting-item:is([data-id="col-highlight-0-org"], [data-id="col-highlight-1-org"], [data-id="col-highlight-2-org"], [data-id="col-highlight-3-org"])  {
+
+        display: flex;
+            
+    } 
+
+    body:not(.highlight-col-original) .setting-item:is([data-id="col-highlight-0-org"], [data-id="col-highlight-1-org"], [data-id="col-highlight-2-org"], [data-id="col-highlight-3-org"])  {
+
+        display: none;
+            
+    } 
 
 
     /* ────────────────────────────────────────────────────────────────────────────

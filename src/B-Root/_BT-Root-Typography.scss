@@ -5,6 +5,8 @@
 ──────────────────────────────────────────────────────────────────────────────── */
 
        body {
+
+            text-rendering: optimizeLegibility;
         
             --font-interface-theme: var(--font-ui); /* my changes to stick */
             --font-interface: var(--font-interface-override), var(--font-interface-theme), var(--default-font); /* replace this with font-interface in 0.14.5 */

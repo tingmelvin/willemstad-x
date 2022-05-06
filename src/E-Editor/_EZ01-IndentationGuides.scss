@@ -2,6 +2,7 @@
 > EZ01
 \ Other Features
 \ Indentation Guides
+\ List Collapse Indicator + Custom Margins
 ───────────────────────────────────────────────────────────────────────────────────
     >> READING MODE
     ──────────────────────────────────────────────────────────────────────────── */
@@ -22,3 +23,9 @@
             width: 0.65rem;
         } /* for checkboxes */
     }
+
+    /* added the custom list paddings here since the variables go along with indentation guides */
+
+    /* source mode, LP mode, reading mode */
+
+    

@@ -90,11 +90,11 @@
         ──────────────────────────────────────────────────────────────────────── */
         .modal-close-button {
             opacity: 0%;
-            transition: 100ms ease-in-out;
+            transition: var(--quicker-transition);
         }
         .modal-close-button:hover {
             opacity: 100%;
-            transition: 100ms ease-in-out;
+            transition: var(--quicker-transition);
         }
 
     /* ────────────────────────────────────────────────────────────────────────────

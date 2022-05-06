@@ -32,14 +32,20 @@ input.document-replace-input {
     margin: 0 0.5rem;
 }
 
+.search-input-container {
+    margin: 0 0.25rem;
+}
+
 /* ────────────────────────────────────────────────────────────────────────
 >>> COMMUNITY PLUGIN MODAL SEARCH BUTTONS | FIX
 ──────────────────────────────────────────────────────────────────────── */
     .community-plugin-search button.clickable-icon {
+        /*
         position: absolute;
 
-        left: 0.25rem;
-        top: 0.3rem;
+        left: 0rem;
+        top: 0rem;
+        */
         margin: 0;
 
         padding: 0.25rem 0.675rem;
@@ -50,14 +56,44 @@ input.document-replace-input {
         background-color: var(--interactive-bg);
     }
 
+    .community-plugin-search button {
+        .setting-item-control {
+            width: 100%;
+            flex: 0 0;
+        }
+        
+        transform: scale(90%);
+        
+    }
 
+    div.community-plugin-search {
+        padding-top: 0rem;
+        padding-right: 0.25rem;
+    }
+
+    .community-plugin-search .setting-item {
+        padding-bottom: 0rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .community-plugin-search .community-plugin-search-summary {
+        padding: 0rem 0.5rem 0.25rem 1rem;
+
+    }
 
     .community-plugin-search .search-input-container {
         margin: 0;
+        order: 2;
+        flex: 1 0;
 
+        /*
         position: absolute;
         left: 3.25rem;
         top: 0.25rem;
+        */
         width: clamp(calc(800px * 0.25), calc(var(--modal-width-community-plugin) * 0.25), calc(23% + 1.25rem));
 
     }
@@ -85,9 +121,11 @@ input.document-replace-input {
     }  
     */     
 
+    /*
     .community-plugin-search-summary {
         padding: 1.75rem 1.25rem 0.25rem 1rem;
     }
+    */
 
 /* ────────────────────────────────────────────────────────────────────────────
 >> CHECKBOXES
@@ -183,7 +221,20 @@ input.document-replace-input {
             border-radius: calc(var(--shape-roundish) * 3);
             border: 2px solid var(--interactive-border-color);
             font-size: 0.95rem;
+
+            display: flex;
         }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> SVG
+    ──────────────────────────────────────────────────────────────────────── */   
+    /*
+    button svg {
+        width: 20px;
+        height: 20px;
+    }
+    */
+
     /* ────────────────────────────────────────────────────────────────────────
     >>> MOAR BUTTON SHENANIGANS | STREAMLINING BUTTONS
     \\\ MIGHT NEED SOME REWORKING?
@@ -220,6 +271,10 @@ input.document-replace-input {
         body .community-plugin-search button.clickable-icon.clickable-icon.clickable-icon.clickable-icon:hover {
             background-color: var(--interactive-accent-hover);
             color: var(--text-on-accent);
+        }
+
+        button.clickable-icon {
+            display: flex;
         }
             
 
@@ -309,7 +364,32 @@ input.document-replace-input {
         .prompt {
             border-radius: calc(var(--shape-roundish) * 3);
             width: 60vw;
+
+            & .suggestion-item {
+
+                padding: 0.25rem 0.25rem 0.25rem 1rem;
+
+                &.is-selected {
+                    border-radius: calc(var(--shape-roundish) * 1.5);
+                }
+
+            }
+
+            row-gap: 0.5rem;
+
+            & .prompt-instructions {
+                padding: 2px;
+            }
+
+            & .prompt-results {
+                padding: 0;
+            }
         }
+
+        input.prompt-input {
+            padding: 0.5rem 1rem 0.5rem 1rem;
+        }
+
 
 /* ────────────────────────────────────────────────────────────────────────────
 >> SELECT
@@ -355,3 +435,105 @@ input.document-replace-input {
         box-shadow: none;
         border-radius: calc(var(--shape-roundish) * 1.5);
     }
+
+    .menu {
+        padding: 0.25rem 0.25rem;
+    }
+    
+    .menu-item {
+        padding: 0 0.25rem;
+        display: flex;
+        align-items: center;
+    
+        line-height: 200%;
+    
+        column-gap: 0.5rem;
+
+        border-radius: calc(var(--shape-roundish) * 1.5);
+
+        &:not(.is-disabled).selected .menu-item-icon {
+
+            color: var(--interactive-accent-hover);
+
+        } /* adds hovered icon colours */
+    }
+    
+    .menu-item-icon {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        top: 0px;
+    
+        /*
+        & > svg {
+            width: 20px;
+            height: 20px;
+        }
+        */
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> SUGGESTION CONTAINER
+\\ needs fixing later on
+───────────────────────────────────────────────────────────────────────────────
+    >>> Margins and Paddings
+    ──────────────────────────────────────────────────────────────────────── */
+    .suggestion-container {
+        box-shadow: none;
+        
+       /* .suggestion-item, .suggestion-empty {
+            padding: 0;
+        }
+        */
+      
+        & .search-suggest-item {
+
+        }
+        
+    }
+
+    
+/* Shadow Eradicator */
+    .tooltip, .menu, .popover, .drag-ghost, .follow-link-popover, .pdf-controls, .notice, .pull-down-action {
+        box-shadow: none;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> DRAG GHOST
+\\\ when you drag something
+\\\ thing to think about: can't take on specific non-global icons
+──────────────────────────────────────────────────────────────────────────── */
+.drag-ghost.drag-ghost {
+    gap: 0.25rem;
+    padding: 0.25rem;
+    line-height: 1.25rem;
+}
+
+.drag-ghost-icon {
+
+    width: auto;
+
+    svg {
+        width: auto;
+        height: 100%;
+
+        max-width: 20px;
+        max-height: 20px;
+    }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> NOTICE
+──────────────────────────────────────────────────────────────────────────── */
+
+.notice-container {
+    top: 1vh;
+    padding: 0 0.5rem 0 0;
+}
+
+.notice {
+    background-color: rgba(0, 0, 0, 0.82);
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 5px;
+    line-height: 100%;
+}

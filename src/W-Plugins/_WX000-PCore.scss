@@ -36,36 +36,46 @@
 ───────────────────────────────────────────────────────────────────────────────────
     >>> (OPTION) Δ Things to the right
     ──────────────────────────────────────────────────────────────────────────── */
-    body:not(.is-mobile, .normal-command-palette) {
 
-        & .suggestion-item {
-            padding-left: 1.5rem;
-        }
-            
+    /*
+    body:not(.is-mobile, .normal-command-palette) {
+          
         & span.suggestion-content {
+            display: inline-block;
             letter-spacing: -0.01rem;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+
+            flex-basis: 55%;
         }
         
         & span.suggestion-prefix {
+            display: inline-block;
             background-color: transparent;
             color: var(--text-accent);
-            position: absolute;
-            right: 25%;
-            padding-left: 0.125rem;
-            padding-right: 0.125rem;
             font-size: 0.7rem;
             letter-spacing: -0.01rem;
+            order: 2;
 
             &::after {
                 display: none;
             }
 
+            flex-basis: 45%;
+
         }
 
         & kbd.suggestion-hotkey {
+            position: absolute;
+            right: 0.25rem;
+
+            display: flex;
+            align-items: center;
+            height: 70%;
+
             font-size: 0.6rem;
             letter-spacing: -0.01rem;
+
+            
         }
 
         & .suggestion-flair {
@@ -75,6 +85,97 @@
         & div.prompt-instructions {
             padding: 0.25rem 0 0 0;
         }
+
+        & .suggestion-item {
+            padding: 0 0.25rem 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 175%;
+        
+            row-gap: 0;
+            column-gap: 0.5rem;
+    
+            border-radius: calc(var(--shape-roundish) * 1.5);
+    
+            > span {
+                display: inline-block;
+            }
+        }
+
+        & .suggestion-container {
+            border-radius: calc(var(--shape-roundish) * 1.5);
+
+            &.mod-search-suggestion {
+                padding: 0;
+            }
+        }
+
+        & .prompt {
+            padding: 0.25rem;
+        }
+
+        & .prompt-results {
+            padding: 0.25rem 0 0 0;
+        }
+    }
+    */
+
+    body:not(.is-mobile, .normal-command-palette) {
+
+        & .suggestion-item {
+            display: table;
+            width: 100%;
+
+        }
+
+        & span.suggestion-prefix {
+            background-color: transparent;
+            color: var(--text-accent);
+            font-size: 0.7em;
+            letter-spacing: -0.01rem;
+            padding: /*0rem 0.5rem*/ 0;
+
+            &::after {
+                display: none;
+            }
+
+            position: absolute;
+            
+            left: 55%;
+
+            vertical-align: middle;
+
+
+
+        }
+
+        & span.suggestion-content {
+            letter-spacing: -0.01rem;
+            font-size: 0.9em;
+
+            max-width: 50%;
+
+            vertical-align: middle;
+            display: inline-flex;
+        }
+
+        & kbd.suggestion-hotkey {
+            letter-spacing: -0.01rem;
+            font-size: 0.7em;
+            padding: 0 0.5em;
+
+            max-width: 20%;
+            vertical-align: middle;
+        }
+
+        & .suggestion-flair {
+            left: 0.05rem;
+            transform: scale(80%);
+        }
+        
+
+
     }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -84,7 +185,18 @@
     >>> PADDINGS STUFF
     ──────────────────────────────────────────────────────────────────────────── */
 
+    /*
     .workspace-leaf-content[data-type=file-explorer] .nav-header {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+    }
+    */ /* superseded */
+
+    span.status-bar-item-icon.sync-status-icon {
+        display: flex;
+        align-items: center;
+
+        svg {
+            transform: scale(115%);
+        }
     }

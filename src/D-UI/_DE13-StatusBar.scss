@@ -129,7 +129,7 @@
         }
 
         .sb-unchanging .status-bar-item {
-            padding: 0rem 0.5rem;
+            padding: 0rem 0rem;
         }   /* remove up down padding to make it actually have everything align nicely */
             /* change the height instead? */
 
@@ -161,6 +161,22 @@
         ──────────────────────────────────────────────────────────────────────── */
 
         .status-bar-item {
-            padding: 0rem 0.5rem;
+            padding: 0rem 0rem;
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+                padding-left: 0.5rem;
+            }
+
+            &:last-child {
+                padding-right: 0.5rem;
+            }
+        
         }   /* remove up down padding to make it actually have everything align nicely */
             /* change the height instead? */
+
+        .status-bar {
+            gap: 0.75rem;
+        }
+

@@ -69,6 +69,17 @@
         display: none;
     } /* removes shadows, also, seriously Sliding Panes */
 
+    body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-action.view-action {
+        margin: 0;
+        &:last-child {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    body.plugin-sliding-panes-rotate-header .mod-root .workspace-leaf-content .view-actions > a {
+        align-items: center;
+    }
+
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Admonitions]
 \\ (NOMEN | PComm003)
@@ -130,6 +141,21 @@
         display: none;
     }
 
+    .admonitions-nested-settings .setting-item-control  {
+
+        & .setting-editor-extra-setting-button svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (TEMP) FIX for Admonition Convert text
+    ──────────────────────────────────────────────────────────────────────────── */
+    .admonition-convert {
+        align-items: flex-start;
+    }
+
 /* ────────────────────────────────────────────────────────────────────────────────
 >> {UNDER CONSTRUCTION}
 >> [COMMUNITY PLUGIN | Templater]
@@ -189,7 +215,7 @@
     .BC-matrixQ-button.BC-matrixQ-button,
     button.BC-refresh-button.BC-refresh-button, 
     button.BC-sort-button.BC-sort-button {
-        height: 2rem;
+        /* height: 2rem; */
     }
     /* ────────────────────────────────────────────────────────────────────────────
     >>> for BC-stats and BC-tree
@@ -210,6 +236,18 @@
     ──────────────────────────────────────────────────────────────────────────── */
     .workspace-leaf-content:is([data-type=BC-ducks]) div.view-content > * > h6 {
         margin-top: 0;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Icons
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .BC-Buttons {
+        display: flex;
+    }
+
+    .BC-Buttons .icon.icon.icon {
+        padding-top: 0;
     }
 
 /* ────────────────────────────────────────────────────────────────────────────────

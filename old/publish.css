@@ -1,0 +1,1346 @@
+/*!
+Apps > Obsidian.md > Theme
+───────────────────────────────────────────────────────────────────────────────────
+
+Willemstad Publish | v0.1.0 Nyhavn
+by @tingmelvin
+https://github.com/tingmelvin/willemstad-x
+
+───────────────────────────────────────────────────────────────────────────────────
+> Approximate congruency with this version of Willemstad X:
+───────────────────────────────────────────────────────────────────────────────────
+
+Willemstad X | v0.4.3 Nyhavn
+https://github.com/tingmelvin/willemstad-x/
+
+───────────────────────────────────────────────────────────────────────────────────
+> Approximate congruency with this version of Willemstad for Shimmering Focus:
+───────────────────────────────────────────────────────────────────────────────────
+
+Willemstad for Shimmering Focus | v0.1.7h7
+https://github.com/tingmelvin/willemstad/
+
+───────────────────────────────────────────────────────────────────────────────────
+> Mozilla Public License Version 2.0
+───────────────────────────────────────────────────────────────────────────────────
+
+Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Mozilla Public License Version 2.0
+==================================
+
+1. Definitions
+--------------
+
+1.1. "Contributor"
+    means each individual or legal entity that creates, contributes to
+    the creation of, or owns Covered Software.
+
+1.2. "Contributor Version"
+    means the combination of the Contributions of others (if any) used
+    by a Contributor and that particular Contributor's Contribution.
+
+1.3. "Contribution"
+    means Covered Software of a particular Contributor.
+
+1.4. "Covered Software"
+    means Source Code Form to which the initial Contributor has attached
+    the notice in Exhibit A, the Executable Form of such Source Code
+    Form, and Modifications of such Source Code Form, in each case
+    including portions thereof.
+
+1.5. "Incompatible With Secondary Licenses"
+    means
+
+    (a) that the initial Contributor has attached the notice described
+        in Exhibit B to the Covered Software; or
+
+    (b) that the Covered Software was made available under the terms of
+        version 1.1 or earlier of the License, but not also under the
+        terms of a Secondary License.
+
+1.6. "Executable Form"
+    means any form of the work other than Source Code Form.
+
+1.7. "Larger Work"
+    means a work that combines Covered Software with other material, in
+    a separate file or files, that is not Covered Software.
+
+1.8. "License"
+    means this document.
+
+1.9. "Licensable"
+    means having the right to grant, to the maximum extent possible,
+    whether at the time of the initial grant or subsequently, any and
+    all of the rights conveyed by this License.
+
+1.10. "Modifications"
+    means any of the following:
+
+    (a) any file in Source Code Form that results from an addition to,
+        deletion from, or modification of the contents of Covered
+        Software; or
+
+    (b) any new file in Source Code Form that contains any Covered
+        Software.
+
+1.11. "Patent Claims" of a Contributor
+    means any patent claim(s), including without limitation, method,
+    process, and apparatus claims, in any patent Licensable by such
+    Contributor that would be infringed, but for the grant of the
+    License, by the making, using, selling, offering for sale, having
+    made, import, or transfer of either its Contributions or its
+    Contributor Version.
+
+1.12. "Secondary License"
+    means either the GNU General Public License, Version 2.0, the GNU
+    Lesser General Public License, Version 2.1, the GNU Affero General
+    Public License, Version 3.0, or any later versions of those
+    licenses.
+
+1.13. "Source Code Form"
+    means the form of the work preferred for making modifications.
+
+1.14. "You" (or "Your")
+    means an individual or a legal entity exercising rights under this
+    License. For legal entities, "You" includes any entity that
+    controls, is controlled by, or is under common control with You. For
+    purposes of this definition, "control" means (a) the power, direct
+    or indirect, to cause the direction or management of such entity,
+    whether by contract or otherwise, or (b) ownership of more than
+    fifty percent (50%) of the outstanding shares or beneficial
+    ownership of such entity.
+
+2. License Grants and Conditions
+--------------------------------
+
+2.1. Grants
+
+Each Contributor hereby grants You a world-wide, royalty-free,
+non-exclusive license:
+
+(a) under intellectual property rights (other than patent or trademark)
+    Licensable by such Contributor to use, reproduce, make available,
+    modify, display, perform, distribute, and otherwise exploit its
+    Contributions, either on an unmodified basis, with Modifications, or
+    as part of a Larger Work; and
+
+(b) under Patent Claims of such Contributor to make, use, sell, offer
+    for sale, have made, import, and otherwise transfer either its
+    Contributions or its Contributor Version.
+
+2.2. Effective Date
+
+The licenses granted in Section 2.1 with respect to any Contribution
+become effective for each Contribution on the date the Contributor first
+distributes such Contribution.
+
+2.3. Limitations on Grant Scope
+
+The licenses granted in this Section 2 are the only rights granted under
+this License. No additional rights or licenses will be implied from the
+distribution or licensing of Covered Software under this License.
+Notwithstanding Section 2.1(b) above, no patent license is granted by a
+Contributor:
+
+(a) for any code that a Contributor has removed from Covered Software;
+    or
+
+(b) for infringements caused by: (i) Your and any other third party's
+    modifications of Covered Software, or (ii) the combination of its
+    Contributions with other software (except as part of its Contributor
+    Version); or
+
+(c) under Patent Claims infringed by Covered Software in the absence of
+    its Contributions.
+
+This License does not grant any rights in the trademarks, service marks,
+or logos of any Contributor (except as may be necessary to comply with
+the notice requirements in Section 3.4).
+
+2.4. Subsequent Licenses
+
+No Contributor makes additional grants as a result of Your choice to
+distribute the Covered Software under a subsequent version of this
+License (see Section 10.2) or under the terms of a Secondary License (if
+permitted under the terms of Section 3.3).
+
+2.5. Representation
+
+Each Contributor represents that the Contributor believes its
+Contributions are its original creation(s) or it has sufficient rights
+to grant the rights to its Contributions conveyed by this License.
+
+2.6. Fair Use
+
+This License is not intended to limit any rights You have under
+applicable copyright doctrines of fair use, fair dealing, or other
+equivalents.
+
+2.7. Conditions
+
+Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted
+in Section 2.1.
+
+3. Responsibilities
+-------------------
+
+3.1. Distribution of Source Form
+
+All distribution of Covered Software in Source Code Form, including any
+Modifications that You create or to which You contribute, must be under
+the terms of this License. You must inform recipients that the Source
+Code Form of the Covered Software is governed by the terms of this
+License, and how they can obtain a copy of this License. You may not
+attempt to alter or restrict the recipients' rights in the Source Code
+Form.
+
+3.2. Distribution of Executable Form
+
+If You distribute Covered Software in Executable Form then:
+
+(a) such Covered Software must also be made available in Source Code
+    Form, as described in Section 3.1, and You must inform recipients of
+    the Executable Form how they can obtain a copy of such Source Code
+    Form by reasonable means in a timely manner, at a charge no more
+    than the cost of distribution to the recipient; and
+
+(b) You may distribute such Executable Form under the terms of this
+    License, or sublicense it under different terms, provided that the
+    license for the Executable Form does not attempt to limit or alter
+    the recipients' rights in the Source Code Form under this License.
+
+3.3. Distribution of a Larger Work
+
+You may create and distribute a Larger Work under terms of Your choice,
+provided that You also comply with the requirements of this License for
+the Covered Software. If the Larger Work is a combination of Covered
+Software with a work governed by one or more Secondary Licenses, and the
+Covered Software is not Incompatible With Secondary Licenses, this
+License permits You to additionally distribute such Covered Software
+under the terms of such Secondary License(s), so that the recipient of
+the Larger Work may, at their option, further distribute the Covered
+Software under the terms of either this License or such Secondary
+License(s).
+
+3.4. Notices
+
+You may not remove or alter the substance of any license notices
+(including copyright notices, patent notices, disclaimers of warranty,
+or limitations of liability) contained within the Source Code Form of
+the Covered Software, except that You may alter any license notices to
+the extent required to remedy known factual inaccuracies.
+
+3.5. Application of Additional Terms
+
+You may choose to offer, and to charge a fee for, warranty, support,
+indemnity or liability obligations to one or more recipients of Covered
+Software. However, You may do so only on Your own behalf, and not on
+behalf of any Contributor. You must make it absolutely clear that any
+such warranty, support, indemnity, or liability obligation is offered by
+You alone, and You hereby agree to indemnify every Contributor for any
+liability incurred by such Contributor as a result of warranty, support,
+indemnity or liability terms You offer. You may include additional
+disclaimers of warranty and limitations of liability specific to any
+jurisdiction.
+
+4. Inability to Comply Due to Statute or Regulation
+---------------------------------------------------
+
+If it is impossible for You to comply with any of the terms of this
+License with respect to some or all of the Covered Software due to
+statute, judicial order, or regulation then You must: (a) comply with
+the terms of this License to the maximum extent possible; and (b)
+describe the limitations and the code they affect. Such description must
+be placed in a text file included with all distributions of the Covered
+Software under this License. Except to the extent prohibited by statute
+or regulation, such description must be sufficiently detailed for a
+recipient of ordinary skill to be able to understand it.
+
+5. Termination
+--------------
+
+5.1. The rights granted under this License will terminate automatically
+if You fail to comply with any of its terms. However, if You become
+compliant, then the rights granted under this License from a particular
+Contributor are reinstated (a) provisionally, unless and until such
+Contributor explicitly and finally terminates Your grants, and (b) on an
+ongoing basis, if such Contributor fails to notify You of the
+non-compliance by some reasonable means prior to 60 days after You have
+come back into compliance. Moreover, Your grants from a particular
+Contributor are reinstated on an ongoing basis if such Contributor
+notifies You of the non-compliance by some reasonable means, this is the
+first time You have received notice of non-compliance with this License
+from such Contributor, and You become compliant prior to 30 days after
+Your receipt of the notice.
+
+5.2. If You initiate litigation against any entity by asserting a patent
+infringement claim (excluding declaratory judgment actions,
+counter-claims, and cross-claims) alleging that a Contributor Version
+directly or indirectly infringes any patent, then the rights granted to
+You by any and all Contributors for the Covered Software under Section
+2.1 of this License shall terminate.
+
+5.3. In the event of termination under Sections 5.1 or 5.2 above, all
+end user license agreements (excluding distributors and resellers) which
+have been validly granted by You or Your distributors under this License
+prior to termination shall survive termination.
+
+************************************************************************
+*                                                                      *
+*  6. Disclaimer of Warranty                                           *
+*  -------------------------                                           *
+*                                                                      *
+*  Covered Software is provided under this License on an "as is"       *
+*  basis, without warranty of any kind, either expressed, implied, or  *
+*  statutory, including, without limitation, warranties that the       *
+*  Covered Software is free of defects, merchantable, fit for a        *
+*  particular purpose or non-infringing. The entire risk as to the     *
+*  quality and performance of the Covered Software is with You.        *
+*  Should any Covered Software prove defective in any respect, You     *
+*  (not any Contributor) assume the cost of any necessary servicing,   *
+*  repair, or correction. This disclaimer of warranty constitutes an   *
+*  essential part of this License. No use of any Covered Software is   *
+*  authorized under this License except under this disclaimer.         *
+*                                                                      *
+************************************************************************
+
+************************************************************************
+*                                                                      *
+*  7. Limitation of Liability                                          *
+*  --------------------------                                          *
+*                                                                      *
+*  Under no circumstances and under no legal theory, whether tort      *
+*  (including negligence), contract, or otherwise, shall any           *
+*  Contributor, or anyone who distributes Covered Software as          *
+*  permitted above, be liable to You for any direct, indirect,         *
+*  special, incidental, or consequential damages of any character      *
+*  including, without limitation, damages for lost profits, loss of    *
+*  goodwill, work stoppage, computer failure or malfunction, or any    *
+*  and all other commercial damages or losses, even if such party      *
+*  shall have been informed of the possibility of such damages. This   *
+*  limitation of liability shall not apply to liability for death or   *
+*  personal injury resulting from such party's negligence to the       *
+*  extent applicable law prohibits such limitation. Some               *
+*  jurisdictions do not allow the exclusion or limitation of           *
+*  incidental or consequential damages, so this exclusion and          *
+*  limitation may not apply to You.                                    *
+*                                                                      *
+************************************************************************
+
+8. Litigation
+-------------
+
+Any litigation relating to this License may be brought only in the
+courts of a jurisdiction where the defendant maintains its principal
+place of business and such litigation shall be governed by laws of that
+jurisdiction, without reference to its conflict-of-law provisions.
+Nothing in this Section shall prevent a party's ability to bring
+cross-claims or counter-claims.
+
+9. Miscellaneous
+----------------
+
+This License represents the complete agreement concerning the subject
+matter hereof. If any provision of this License is held to be
+unenforceable, such provision shall be reformed only to the extent
+necessary to make it enforceable. Any law or regulation which provides
+that the language of a contract shall be construed against the drafter
+shall not be used to construe this License against a Contributor.
+
+10. Versions of the License
+---------------------------
+
+10.1. New Versions
+
+Mozilla Foundation is the license steward. Except as provided in Section
+10.3, no one other than the license steward has the right to modify or
+publish new versions of this License. Each version will be given a
+distinguishing version number.
+
+10.2. Effect of New Versions
+
+You may distribute the Covered Software under the terms of the version
+of the License under which You originally received the Covered Software,
+or under the terms of any subsequent version published by the license
+steward.
+
+10.3. Modified Versions
+
+If you create software not governed by this License, and you want to
+create a new license for such software, you may create and use a
+modified version of this License if you rename the license and remove
+any references to the name of the license steward (except to note that
+such modified license differs from this License).
+
+10.4. Distributing Source Code Form that is Incompatible With Secondary
+Licenses
+
+If You choose to distribute Source Code Form that is Incompatible With
+Secondary Licenses under the terms of this version of the License, the
+notice described in Exhibit B of this License must be attached.
+
+Exhibit A - Source Code Form License Notice
+-------------------------------------------
+
+  This Source Code Form is subject to the terms of the Mozilla Public
+  License, v. 2.0. If a copy of the MPL was not distributed with this
+  file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+If it is not possible or desirable to put the notice in a particular
+file, then You may include the notice in a location (such as a LICENSE
+file in a relevant directory) where a recipient would be likely to look
+for such a notice.
+
+You may add additional accurate notices of copyright ownership.
+
+
+───────────────────────────────────────────────────────────────────────────────────
+*/
+
+
+body {
+
+--font-interface-override: 'Manrope' !important;
+--font-monospace-override: 'DM Mono' !important;
+--font-text-override: 'DM Sans' !important;
+--font-default: 'DM Sans' !important;
+
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> BC
+\ Root
+\ Colours
+───────────────────────────────────────────────────────────────────────────────────
+    >> BASE COLOURS
+    ──────────────────────────────────────────────────────────────────────────── */
+    :is(.theme-light, .theme-dark) {
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> ACCENTS
+        ──────────────────────────────────────────────────────────────────── */
+            --accent-light: hsl(41, 100%, 40%);
+            --accent-lighter: hsl(41, 100%, 55%);
+            --accent-lighterer: hsl(41, 100%, 70%);
+            --accent-lightest: hsl(41, 100%, 85%);
+
+        /* ────────────────────────────────────────────────────────────────────
+        >>> [COMMUNITY PLUGIN | Calendar] SET TODAY'S AND YEAR's COLOURS
+        ──────────────────────────────────────────────────────────────────── */
+            --PComm001-col-today: hsl(184, 74%, 20%);
+            --PComm001-col-year: hsl(155, 100%, 37%);
+            --PComm001-col-dot: hsl(184, 74%, 20%);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> LIGHT THEME
+    ───────────────────────────────────────────────────────────────────────── */
+    .theme-light {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(155, 100%, 37%);
+                --col-h2: hsl(184, 74%, 20%);
+                --col-h3: hsl(238, 70%, 39%);
+                --col-h4: hsl(19, 100%, 57%); /* rgb(254 80 0) rgb(255 125 0);*/
+                --col-h5: hsl(324, 100%, 15%);
+                --col-h6: hsl(184, 74%, 20%); 
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(184, 74%, 20%, 0.08);
+                --col-h2-bg: hsla(155, 100%, 37%, 0.2);
+                --col-h3-bg: hsla(188, 100%, 39%, 0.25);
+                --col-h4-bg: hsla(41, 100%, 55%, 0.2);
+                --col-h5-bg: hsla(352, 100%, 85%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(184, 75%, 20%);
+                --text-accent-hover: hsl(155, 100%, 37%);
+
+                --col-bg-table: hsl(155, 100%, 37%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(184, 74%, 20%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+
+                --scroll-hover: hsl(155, 100%, 48%);            
+                --col-selection: hsl(41, 100%, 55%);
+
+                --text-dark: hsl(184, 74%, 20%);
+                --text-light: hsl(155, 100%, 37%);
+
+                --col-sd: hsl(184, 75%, 20%);
+        } 
+    
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> DARK THEME
+    ───────────────────────────────────────────────────────────────────────── */
+    .theme-dark {
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Text
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1: hsl(187, 13%, 87%);
+                --col-h2: hsl(155, 100%, 37%);
+                --col-h3: hsl(188, 100%, 39%);
+                --col-h4: hsl(41, 100%, 55%);
+                --col-h5: hsl(352, 100%, 85%);
+                --col-h6: hsl(155, 100%, 37%);
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> HEADINGS > Colours > Background
+            ───────────────────────────────────────────────────────────────── */
+                --col-h1-bg: hsla(155, 100%, 37%, 0.73);
+                --col-h2-bg: hsla(184, 74%, 20%, 0.2);
+                --col-h3-bg: hsla(238, 70%, 39%, 0.25);
+                --col-h4-bg: hsla(19, 100%, 50%, 0.2);
+                --col-h5-bg: hsla(324, 100%, 15%, 0.2);
+                --col-h6-bg: transparent;
+            /* ─────────────────────────────────────────────────────────────────
+            >>>> COLOURS > Miscellany
+            ───────────────────────────────────────────────────────────────── */
+                --text-accent: hsl(155, 100%, 37%);
+                --text-accent-hover: hsl(184, 74%, 20%);
+
+                --col-bg-table: hsl(184, 74%, 20%);
+                --col-header-title-active: hsl(155, 100%, 37%);
+                --col-header-title-dormant: hsl(184, 74%, 20%);
+
+                --interactive-bg: hsl(155, 100%, 37%);
+                --interactive-border-color: hsl(155, 100%, 37%);
+                --interactive-accent: hsl(155, 100%, 37%);
+                --interactive-accent-hover: hsl(184, 74%, 20%);
+
+                --scroll-hover: hsl(155, 100%, 48%);          
+                --col-selection: hsl(41, 100%, 55%);
+
+                --text-dark: hsl(184, 74%, 20%);
+                --text-light: hsl(155, 100%, 37%);
+
+                --col-sd: hsl(155, 100%, 37%);
+
+        }
+    
+    
+/* ────────────────────────────────────────────────────────────────────────
+>>> SETTING BASE COLOURS AND ALL | CODE: HIUMAA
+───────────────────────────────────────────────────────────────────────── */
+.theme-light {
+
+    --background-primary:           hsl(0, 0%, 100%);
+    --background-primary-alt:       hsl(220, 18%, 97%);
+
+    --background-secondary:         hsl(220, 13%, 95%);
+    --background-secondary-alt:     hsl(216, 10%, 90%); /* secondary-alt-2 was hsl(218, 11.5%, 92.5%); tertiary was hsl(212, 9%, 85%); tertiary-alt was hsl(208, 8%, 80%) */
+
+    --text-normal:                  hsl(210, 10%, 20%);
+    --text-muted:                   hsl(0, 0%, 53%);
+    --text-faint:                   hsl(0, 0%, 60%);
+    --text-error:                   hsl(0, 100%, 25%);
+    --text-error-hover:             hsl(0, 100%, 30%);
+    --text-on-accent:               hsl(0, 0%, 95%);
+
+    --background-modifier-border: hsl(0, 0%, 87%);
+    --background-modifier-form-field: hsl(0, 0%, 100%);
+    --background-modifier-form-field-highlighted: hsl(0, 0%, 100%);
+    --background-modifier-box-shadow: hsla(0, 0%, 0%, 0.1);
+    --background-modifier-success: hsl(148, 58%, 77%);
+    --background-modifier-error: hsl(0, 100%, 30%);
+    --background-modifier-error-hover: hsl(0, 100%, 37%);
+    --background-modifier-cover: hsla(0, 0%, 0%, 0.8);
+
+    --highlight-mix-blend-mode: darken;
+
+
+    /* things im not sure what it does, lol */
+    --text-selection:               hsla(209, 100%, 90%, 0.99);
+    --interactive-normal:           hsl(220, 13%, 95%);
+    --interactive-hover:            hsl(0, 0%, 91%);
+    --interactive-success:          hsl(107, 100%, 23%);
+    --scrollbar-active-thumb-bg:    hsla(0, 0%, 0%, 0.2);
+    --scrollbar-bg:                 hsla(0, 0%, 0%, 0.05);
+    --scrollbar-thumb-bg:           hsla(0, 0%, 0%, 0.102);
+
+}
+
+.theme-dark {
+    
+    --background-primary:           hsl(0, 0%, 13%);
+    --background-primary-alt:       hsl(0, 0%, 9%);
+
+    --background-secondary:         hsl(0, 0%, 8%);
+    --background-secondary-alt:     hsl(0, 0%, 0%);
+
+    --text-normal:                  hsl(210, 3%, 87%);
+    --text-muted:                   hsl(0, 0%, 60%);
+    --text-faint:                   hsl(0, 0%, 40%);
+    --text-error:                   hsl(0, 100%, 60%);
+    --text-error-hover:             hsl(0, 100%, 30%);
+    --text-on-accent:               hsl(210, 3%, 87%);
+
+    --background-modifier-border: hsl(0, 0%, 20%);
+    --background-modifier-form-field: hsla(0, 0%, 0%, 0.302);
+    --background-modifier-form-field-highlighted: hsla(0, 0%, 0%, 0.22);
+    --background-modifier-box-shadow: hsla(0, 0%, 0%, 0.3);
+    --background-modifier-success: hsl(107, 100%, 23%);
+    --background-modifier-error: hsl(0, 100%, 12%);
+    --background-modifier-error-hover: hsl(0, 100%, 14%);
+    --background-modifier-cover: hsla(0, 0%, 0%, 0.8);
+
+    --highlight-mix-blend-mode: lighten;
+
+
+    /* things im not sure what it does, lol */
+    --text-selection:               hsla(212, 54%, 20%, 0.99);
+    --interactive-normal:           hsl(0, 0%, 16%);
+    --interactive-hover:            hsl(0, 0%, 19%);
+    --interactive-success:          hsl(107, 100%, 23%);
+    --scrollbar-active-thumb-bg:    hsla(0, 0%, 100%, 0.2);
+    --scrollbar-bg:                 hsla(0, 0%, 100%, 0.05);
+    --scrollbar-thumb-bg:           hsla(0, 0%, 100%, 0.1);
+
+}
+
+h1 {
+    color: var(--col-h1);
+    background-color: var(--col-h1-bg);
+    font-size: 1.8em !important;
+}
+
+h2 {
+    color: var(--col-h2);
+    background-color: var(--col-h2-bg);
+    font-size: 1.6em !important;
+}
+
+h3 {
+    color: var(--col-h3);
+    background-color: var(--col-h3-bg);
+    font-size: 1.45em !important;
+}
+
+h4 {
+    color: var(--col-h4);
+    background-color: var(--col-h4-bg);
+    font-size: 1.3em !important;
+}
+
+h5 {
+    color: var(--col-h5);
+    background-color: var(--col-h5-bg);
+    font-size: 1.15em !important;
+}
+
+h6 {
+    color: var(--col-h6);
+    background-color: var(--col-h6-bg);
+    font-size: 1.05em !important;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    padding: 0.25rem 0.5rem 0.25rem 2rem;
+    margin: 0.5rem 0 !important;
+    line-height: 125%;
+    letter-spacing: -0.015rem;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Manrope" !important;
+}
+
+div.site-footer {
+    display: none; /* remove powered by Obsidian Publish text */
+}
+
+input.search-bar {
+    border-radius: 50px; /* makes it curved */
+}
+
+/* move site name from left to the centre */
+.published-container.has-navigation .site-header {
+    display: flex !important;
+}
+
+.site-body-left-column-site-name {
+    display: none;
+}
+
+div.outline-view-outer {
+    margin-top: 10px; /* squeezes the margin */
+}
+
+/* let it load first? */
+body {
+    opacity: 0;
+            animation: cssAnimation 2.75s;
+            animation-fill-mode: forwards;
+}
+
+    @keyframes cssAnimation {
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        99% {
+            opacity: 0.99;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes cssAnimation {
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        99% {
+            opacity: 0.99;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+/* top border */
+body {
+    border-top: 4px solid;
+    border-image-source: linear-gradient(90deg,hsl(155, 100%, 37%), hsl(200, 93%, 77%) 50%, hsl(320, 65%, 50%));
+    border-image-slice: 1;
+}
+
+
+div.site-header {
+    border-bottom: none;
+    background-color: hsl(180, 80%, 98%);
+    margin-top: 0;
+    padding: 10px;
+}
+
+/* Site Header make it nice */
+.site-header-text {
+    font-weight: 600;
+    color: hsl(155, 100%, 37%);
+}
+
+.site-header-text::after {
+    color: hsl(155, 100%, 37%);
+}
+
+.site-header-text::before {
+}
+
+/* remove paddings */
+.site-body-left-column, .site-body-right-column {
+    padding-top: 0;
+}
+
+/* needed to make sure em-s work properly, even if it is overriden */
+.markdown-rendered {
+    font-size: 16px;
+}
+
+/* fonts */
+/* latin-ext */
+@font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-orYadYY35Zlk.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-orYadb435.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTW7PB1QTsUX8KYth-gCKSIUKw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTW7PB1QTsUX8KYth-gBqSI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-o9YedYY35Zlk.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-o9Yedb435.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvrGyEY2tbZX9.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvrGyEYOtbQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTU7PB1QTsUX8KYthSQBLyM.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTU7PB1QTsUX8KYthqQBA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvumzEY2tbZX9.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvumzEYOtbQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Fp2ywxg089UriCZa4ET-DNl0.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Fp2ywxg089UriCZa4Hz-D.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZaw7ByWB3wTyCg.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZaw7ByWCXwT.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZawpBqWB3wTyCg.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZawpBqWCXwT.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriAWCrCBamC2QX.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriAWCrCBimCw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBamC2QX.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBimCw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_P-bnBeA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_G-bnBeA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_B-bnBeA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_N-bnBeA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_M-bnBeA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_C-bk.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+

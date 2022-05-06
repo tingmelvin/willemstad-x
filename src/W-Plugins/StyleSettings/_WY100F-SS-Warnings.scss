@@ -121,6 +121,34 @@
 
     }
 
+    .setting-item:is([data-id="PComm033-standard-focus"]) :is(.setting-item-description) {
+
+        &::after {
+
+            content: "⚠️ Please note that this option has no effect when the Floating Tabs ribbon option is enabled.";
+            white-space: initial;
+            color: var(--text-normal);
+            font-size: 0.75rem;
+            font-weight: 500;
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0 0.25rem;
+
+            display: inline-flex;
+
+            line-height: 1.5;
+
+        }
+
+    }
+
     .setting-item:is([data-id="img-grid"]) :is(.setting-item-description) {
 
         &::after {
@@ -266,7 +294,7 @@
     ──────────────────────────────────────────────────────────────────────────── */
 
     select.dropdown {
-        option:is([value="sd-begone-bars"], [value="sb-hiding"], [value="tb-tb-remove"], [value="metadata-container-none"]) {
+        option:is([value="doc-title-gone"],[value="sd-begone-bars"], [value="sb-hiding"], [value="tb-tb-remove"], [value="metadata-container-none"]) {
             
             color: var(--text-on-accent);
             background-color: var(--background-modifier-error);

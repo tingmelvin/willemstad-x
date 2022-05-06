@@ -1,0 +1,148 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> YA
+\ Publish > Core
+──────────────────────────────────────────────────────────────────────────────── */
+
+.markdown-rendered {
+    h1 {
+        color: var(--col-h1);
+        background-color: var(--col-h1-bg);
+        font-size: 1.8em !important;
+    }
+
+    h2 {
+        color: var(--col-h2);
+        background-color: var(--col-h2-bg);
+        font-size: 1.6em !important;
+    }
+
+    h3 {
+        color: var(--col-h3);
+        background-color: var(--col-h3-bg);
+        font-size: 1.45em !important;
+    }
+
+    h4 {
+        color: var(--col-h4);
+        background-color: var(--col-h4-bg);
+        font-size: 1.3em !important;
+    }
+
+    h5 {
+        color: var(--col-h5);
+        background-color: var(--col-h5-bg);
+        font-size: 1.15em !important;
+    }
+
+    h6 {
+        color: var(--col-h6);
+        background-color: var(--col-h6-bg);
+        font-size: 1.05em !important;
+    }
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    padding: 0.25rem 0.5rem 0.25rem 2rem;
+    margin: 0.5rem 0 !important;
+    line-height: 125%;
+    letter-spacing: -0.015rem;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Manrope" !important;
+}
+
+div.site-footer {
+    display: none; /* remove powered by Obsidian Publish text */
+}
+
+input.search-bar {
+    border-radius: 50px; /* makes it curved */
+}
+
+/* move site name from left to the centre */
+.published-container.has-navigation .site-header {
+    display: flex !important;
+}
+
+.site-body-left-column-site-name {
+    display: none;
+}
+
+div.outline-view-outer {
+    margin-top: 10px; /* squeezes the margin */
+}
+
+/* let it load first? */
+body {
+    opacity: 0;
+            animation: cssAnimation 2.75s;
+            animation-fill-mode: forwards;
+}
+
+    @keyframes cssAnimation {
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        99% {
+            opacity: 0.99;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes cssAnimation {
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        99% {
+            opacity: 0.99;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+/* top border */
+body {
+    border-top: 4px solid;
+    border-image-source: linear-gradient(90deg,hsl(155, 100%, 37%), hsl(200, 93%, 77%) 50%, hsl(320, 65%, 50%));
+    border-image-slice: 1;
+}
+
+
+div.site-header {
+    border-bottom: none;
+    background-color: hsl(180, 80%, 98%);
+    margin-top: 0;
+    padding: 10px;
+}
+
+/* Site Header make it nice */
+.site-header-text {
+    font-weight: 600;
+    color: hsl(155, 100%, 37%);
+}
+
+.site-header-text::after {
+    color: hsl(155, 100%, 37%);
+}
+
+.site-header-text::before {
+}
+
+/* remove paddings */
+.site-body-left-column, .site-body-right-column {
+    padding-top: 0;
+}
+
+/* needed to make sure em-s work properly, even if it is overriden */
+.markdown-rendered {
+    font-size: 16px;
+}

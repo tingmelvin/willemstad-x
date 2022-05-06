@@ -13,14 +13,20 @@
     ───────────────────────────────────────────────────────────────────────────────
             >>> REMOVE EXCESS MARGIN AND PADDINGS
             ──────────────────────────────────────────────────────────────────── */
+            .theme-light, .theme-dark {
+                --padding-header-nav : 0.3rem;
+                --border-b-header-nav: 0.125rem;
+                --padding-actionbtn-nav: 2px;
+            }
+
             .nav-header {
-                padding: 0.3rem 0 0.3rem 0;
-                border-bottom: 0.125rem solid var(--background-secondary-alt);
+                padding: var(--padding-header-nav) 0 var(--padding-header-nav) 0;
+                border-bottom: var(--border-b-header-nav) solid var(--background-secondary-alt);
             }
 
             .nav-buttons-container {
                 display: flex;
-                gap: 1rem;
+                gap: calc(1rem - 2 * var(--padding-actionbtn-nav));
             }
 
             .nav-action-button {
@@ -30,7 +36,7 @@
                 */
                 border-radius: 0.25rem;
 
-                padding: 0rem;
+                padding: var(--padding-actionbtn-nav);
                 margin: 0rem;
 
                 .nav-buttons-left-L &:first-child {
@@ -38,6 +44,14 @@
                 }
 
                 .nav-buttons-right-L &:last-child {
+                    padding-right: 0.4rem;
+                }
+
+                .nav-buttons-left-R &:first-child {
+                    padding-left: 0.4rem;
+                }
+
+                .nav-buttons-right-R &:last-child {
                     padding-right: 0.4rem;
                 }
                 
@@ -53,8 +67,6 @@
             
                 width: 100%;
             
-                color: var(--extra-contrast);
-            
                 padding-top: 0;
                 padding-bottom: 0;
             }
@@ -66,6 +78,8 @@
         /* ─────────────────────────────────────────────────────────────────────────
         >>> HOVER COLOURS + OTHER PADDING STUFF
         ───────────────────────────────────────────────────────────────────────── */
+
+        /*
         .is-active .workspace-tab-header-inner {
 
             & .workspace-tab-header-inner-icon {
@@ -90,9 +104,11 @@
                 transition: var(--quicker-transition);
             }
         }
+        */
 
         /* classic dark theme stuff */
 
+        /*
         .theme-dark.cp-classic-lshtm .is-active :is(.workspace-tab-header-inner) {
 
             & .workspace-tab-header-inner-icon {
@@ -115,6 +131,55 @@
             &:hover .workspace-tab-header-inner-icon {
                 color: var(--interactive-accent);
                 transition: var(--quicker-transition);
+            }
+        }
+        */
+
+        /* DO NOT SET TRANSITIONS
+        \\ screws up with transition on the tab header hover */
+
+        .is-active .workspace-tab-header-inner {
+
+            & .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent-hover);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent);
+            }
+        }
+
+        .workspace-tab-header-inner {
+
+            & .workspace-tab-header-inner-icon {
+                transition: var(--quicker-transition);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent-hover);
+            }
+        }
+
+        /* classic dark theme stuff */
+        .theme-dark.cp-classic-lshtm .is-active :is(.workspace-tab-header-inner) {
+
+            & .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent-hover);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent);
+            }
+        }
+
+        .theme-dark.cp-classic-lshtm :is(.workspace-tab-header-inner) {
+
+            & .workspace-tab-header-inner-icon {
+                transition: var(--quicker-transition);
+            }
+
+            &:hover .workspace-tab-header-inner-icon {
+                color: var(--interactive-accent);
             }
         }
 
@@ -191,49 +256,313 @@
     .theme-light, .theme-dark {
         --height-sidebar-tabs: clamp(2.5px, 0.3rem, 7px);
     }
-/* ────────────────────────────────────────────────────────────────────────────
->> SIDEBAR TABS > Make Tabs Pretty Again (Margins + Paddings etc.)
-──────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> SIDEBAR TABS > Make Tabs Pretty Again (Margins + Paddings etc.)
+    ──────────────────────────────────────────────────────────────────────────── */
+        .workspace-tab-header-inner {
+            padding: 0rem 0.5rem; /* remvoe up down padding so it's centred */
+            align-items: normal;
+
+
+        }
+
+        .workspace-tab-header-container {
+
+            .workspace-tab-header-inner-icon {
+
+                display: flex;
+                align-items: center;
+
+                opacity: 0;
+                transition: opacity var(--medium-transition);
+
+            }
+
+
+        }
+
+        .workspace-tab-header-container:hover {
+
+            .workspace-tab-header-inner-icon {
+
+                opacity: 1;
+                transition: opacity var(--medium-transition);
+
+            }
+
+
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> SIDEBAR TABS > Orientation Options
+    ──────────────────────────────────────────────────────────────────────────── */
+
+        .mod-left-split .workspace-tab-header-container {
+
+            justify-content: left; /* default */
+
+            .sb-tabs-left-L & {
+                justify-content: left;
+
+                & .workspace-tab-container-before {
+                    display: none;
+                }
+            }
+
+            .sb-tabs-center-L & {
+                justify-content: center;
+            }
+
+            .sb-tabs-right-L & {
+                justify-content: right;
+
+                direction: rtl; /* very hacky. see https://stackoverflow.com/questions/218065/overflow-to-left-instead-of-right for possible issues */
+                flex-direction: row-reverse;
+
+                & .workspace-tab-container-inner {
+                    flex-direction: row-reverse;
+                }
+
+                & .workspace-tab-container-after {
+                    display: none;
+                }
+            }
+        }
+
+
+
+        .mod-right-split .workspace-tab-header-container {
+
+            justify-content: right; /* default */
+
+            direction: rtl;
+            flex-direction: row-reverse;
+
+            & .workspace-tab-container-inner {
+                flex-direction: row-reverse;
+            }
+
+            .sb-tabs-left-R & {
+                justify-content: left;
+
+                & .workspace-tab-container-before {
+                    display: none;
+                }
+            }
+
+            .sb-tabs-center-R & {
+                justify-content: center;
+            }
+
+            .sb-tabs-right-R & {
+                justify-content: right;
+
+                direction: rtl;
+                flex-direction: row-reverse;
+
+                & .workspace-tab-container-inner {
+                    flex-direction: row-reverse;
+                }
+
+                & .workspace-tab-container-after {
+                    display: none;
+                }
+            }
+        }
+
+
+    /* navigation file tag */
+
+    .no-nav-file-tag .nav-file-tag {
+        display: none
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> NAV > SEARCH
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .workspace-leaf-content[data-type="search"] {
+        .search-input-container {
+            margin: 0.25rem;
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> NAV > STARRED
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .workspace-leaf-content[data-type="starred"] {
+        .nav-file-icon {
+            display: flex;
+            top: 0px;
+            align-items: center;
+        }
+
+        .nav-file-title {
+            padding: 0 0.5rem;
+            display: flex;
+        }
+
+        .nav-file-title-content {
+            display: flex;
+
+        }
+    }
+
+
     .workspace-tab-header-inner {
-        padding: 0.3rem 0.5rem;
-    }
-
-/* ────────────────────────────────────────────────────────────────────────────
->> SIDEBAR TABS > Orientation Options
-──────────────────────────────────────────────────────────────────────────── */
-
-    .mod-left-split .workspace-tab-header-container {
-
-        justify-content: left; /* default */
-
-        .sb-tabs-left-L & {
-            justify-content: left;
-        }
-
-        .sb-tabs-center-L & {
-            justify-content: center;
-        }
-
-        .sb-tabs-right-L & {
-            justify-content: right;
+        display: flex;
+        transition: var(--quicker-transition);
+        
+        &:hover {
+            align-items: center;
+            transition: var(--quicker-transition);
         }
     }
 
+    .nav-action-button {
+        display: flex;
+        justify-content: center;
+    }
 
+    .workspace-tab-header, .workspace-tab-header-inner, .workspace-tab-container-before, .workspace-tab-container-after {
+        transition: var(--quicker-transition);
+    } /* ensures total transition is smooth */
 
-    .mod-right-split .workspace-tab-header-container {
+    /* see rationale for max-height: https://stackoverflow.com/questions/20136336/css-flex-basis-not-working-when-flex-direction-is-column */
 
-        justify-content: right; /* default */
+    .workspace-tab-header-container {
 
-        .sb-tabs-left-R & {
-            justify-content: left;
+        display: flex;
+        position: relative;
+        flex-basis: 100%;
+        flex-direction: row;
+
+        max-height: 0.3rem;
+
+        &:hover {
+            max-height: calc(1.9rem + 0.3rem);
         }
 
-        .sb-tabs-center-R & {
-            justify-content: center;
+        & .workspace-tab-container-before {
+            
         }
 
-        .sb-tabs-right-R & {
-            justify-content: right;
+        & .workspace-tab-container-after {
+            
         }
+
+
+    }
+
+    .workspace-tab-header-container {
+        max-width: 100%; /* ensures it's inside the width of the sidepanes */
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) NAV > Sort Files first
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /*
+    body:is(.nav-files-first) .nav-folder-children {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    body:is(.nav-files-first) .nav-file {
+        order: -1
+    }
+    */
+    /* very unstable, seems to make the entire nav pane go wonky. need to think of another solution */
+
+    /*
+    body:is(.nav-files-first) {
+
+        .nav-folder-children {
+            display: grid;
+            grid-auto-rows: auto;
+        }
+
+        .nav-folder {
+            order: 2;
+        }
+
+        .nav-file {
+            order: 0;
+        }
+    }
+    */
+    /* this bugs Obsidian up. nav files go missing */
+
+
+    .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header-container {
+        width: 100%;
+        & .workspace-tab-container-inner {
+            
+        }
+    }
+
+    .workspace-tab-header-container:not(:hover)::-webkit-scrollbar {
+        height: 0px;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────────
+    >> MOBILE STYLE FLOATING
+    ───────────────────────────────────────────────────────────────────────── */
+
+    body:not(.is-mobile):is(.mobile-style-sidepanes) {
+        .workspace-ribbon.is-collapsed {
+
+            /*
+            &.mod-left {
+                position: absolute;
+                left: 0;
+                height: auto;
+            }
+
+            &.mod-right {
+                position: absolute;
+                right: 0;
+                height: auto;
+            }
+
+            & .side-dock-actions {
+                display: none;
+            }
+
+            & .side-dock-settings {
+                display: none;
+            }
+            */
+        }
+
+        /* gotta work on this later on */
+
+        .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split,
+        .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+            position:absolute;
+            z-index: 1;
+        }
+        .app-container.is-left-sidedock-collapsed .workspace-split.mod-left-split {
+            left: 0px;
+        }
+        .app-container.is-right-sidedock-collapsed .workspace-split.mod-right-split {
+            right: 0px;
+        }
+
+        & .workspace-split:is(.mod-left-split, .mod-right-split) {
+            opacity: var(--opacity-mobile-style);
+            transition: var(--transition-mobile-style);
+
+            &:hover {
+                opacity: 1;
+                transition: var(--transition-mobile-style);
+            }
+        }
+    }
+
+    .theme-light, .theme-dark {
+        --opacity-mobile-style: 0;
+        --transition-mobile-style: var(--medium-transition);
     }

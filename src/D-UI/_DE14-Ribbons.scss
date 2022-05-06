@@ -37,8 +37,11 @@
 
             & .workspace-ribbon:hover .workspace-ribbon-collapse-btn {
                 visibility: visible;
-                transition: 150ms ease-in-out;
                 margin: 0;
+
+                @at-root body:not(.no-animations):not(.sd-begone-bars, .sd-eclipse-bars, .sd-default-bars) & {
+                        transition: 150ms ease-in-out;
+                }
                 
             }
             
@@ -104,20 +107,20 @@
                 text-align: center; /* the fact that this works makes me angy */
             } /* ensures that the ribbon collapse button is centred */
 
-            &.focus-mode .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
-                visibility: hidden;;
-            }
-
         }
 
 
 
         .sd-float-tabs .workspace-ribbon:hover .workspace-ribbon-collapse-btn {
             visibility: visible;
-            transition: 150ms ease-in-out;
             margin: 0;
             
         }
+
+        body:not(.no-animations):is(.sd-float-tabs) .workspace-ribbon:hover .workspace-ribbon-collapse-btn {
+            transition: 150ms ease-in-out;
+        }
+
         .sd-float-tabs .workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn {
             visibility: hidden;
             transition: var(--medium-transition);
@@ -177,10 +180,6 @@
         .sd-float-tabs .workspace-ribbon-collapse-btn {
             text-align: center; /* the fact that this works makes me angy */
         } /* ensures that the ribbon collapse button is centred */
-
-        .sd-float-tabs.focus-mode .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
-            visibility: hidden;;
-        }
 
         /* ─────────────────────────────────────────────────────────────────────────
         >>> (OPTION) NUCLEAR OPTION | NO BAR?!
@@ -244,7 +243,7 @@
         >>> PADDINGS TO GAP
         ───────────────────────────────────────────────────────────────────────── */
         .side-dock-ribbon, .side-dock-actions, .side-dock-settings {
-            gap: 12px; /* 0.75rem */
+            gap: 12px; /* there must be a better implementation */ /* 12px; */ /* 0.75rem */
             display: flex;
             flex-direction: column;
         }
@@ -263,7 +262,18 @@
                 justify-content: center;
 
                 margin-top: 0px;
-                padding: 14px 6px 14px 6px; /* try to find a more elegant solution */
+                padding-bottom: calc(var(--padding-header-nav) + var(--padding-actionbtn-nav));
+                padding-top: calc(var(--height-sidebar-tabs) + var(--padding-header-nav) + var(--padding-actionbtn-nav));
+                margin-bottom: var(--border-b-header-nav);
+
+                /* calculates these stuff from DE11 Sidepanes */
+
+                    & svg {
+                        width: 16px; /* don't adjust */
+                        height: 20px; /* don't adjust */
+                    }
+
+
             }
 
             &.ribbon-action-align-centre .workspace-ribbon-collapse-btn {
@@ -290,3 +300,14 @@
             }
 
         }
+    
+        /* nav folder display, make it an option
+        .nav-folder-children {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .nav-file {
+            order: -1
+        }
+        */

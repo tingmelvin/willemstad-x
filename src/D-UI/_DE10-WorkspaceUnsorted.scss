@@ -62,10 +62,27 @@
 
     /* ────────────────────────────────────────────────────────────────────────
     >>> FIX ugliness caused by a random top-left-radius
+    \\\ (update 03 May) AND ALSO TOP RIGHT UGH
     ──────────────────────────────────────────────────────────────────────── */
-        .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+        .workspace-split:is(.mod-left-split) .workspace-tabs .workspace-leaf {
             border-top-left-radius: 0;
-          }
+        }
+
+        .workspace-split:is(.mod-right-split) .workspace-tabs .workspace-leaf {
+            border-top-right-radius: 0;
+        }
+
+        .workspace-split.mod-root > .workspace-leaf {
+        
+            &:first-of-type .workspace-leaf-content {
+                border-top-left-radius: 0;
+            }
+
+            &:last-of-type .workspace-leaf-content {
+                border-top-right-radius: 0;
+            }
+
+        }
 
     /* ────────────────────────────────────────────────────────────────────────
     >>> FIX HR (again, for LP and Preview)
@@ -89,6 +106,7 @@
 
     /* ────────────────────────────────────────────────────────────────────────
     >>> NAV
+    \\\ this goes into sidepanes when I have the time
     ──────────────────────────────────────────────────────────────────────── */
         .mod-left-split .nav-buttons-container {
 
@@ -138,8 +156,15 @@
             }
         }
 
+        /*
         .nav-action-button > svg {
             height: 100%;
+        }
+        */
+
+        .nav-file-icon > svg {
+            width: auto;
+            height: 20px;
         }
 
     /* ────────────────────────────────────────────────────────────────────────
@@ -161,11 +186,34 @@
     }
 
     .workspace > .mod-vertical {
-        border-top: calc(var(--height-sidebar-tabs) - 1px) solid var(--background-secondary-alt); /* minus the .view-header border-top */
+        border-top: calc(var(--height-sidebar-tabs) /*- 1px*/) /* removes 1px since now no border */ solid var(--background-secondary-alt); /* minus the .view-header border-top */
     }
 
-    /* navigation file tag */
 
-    .no-nav-file-tag .nav-file-tag {
-        display: none
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> GUTTER ELEMENT FONT 
+    ──────────────────────────────────────────────────────────────────────── */
+    .cm-gutterElement {
+        font-family: var(--font-monospace);
     }
+
+
+
+    .setting-item-control {
+        /*column-gap: 0.5rem;*/
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & .setting-editor-extra-setting-button[aria-label="Open snippets folder"] {
+            margin-right: 3px;
+        }
+    }
+
+    /*
+    .clickable-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    */

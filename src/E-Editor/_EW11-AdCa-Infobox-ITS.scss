@@ -117,12 +117,17 @@ div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
             display: none;
         }
 
+        .callout-title-inner {
+            padding-top: 0.5rem;
+        }
+
     }
 
     .callout-content {
         padding: 0;
         border: none;
         margin: 0.5rem;
+        margin-top: 0rem;
         justify-content: center;
         text-align: center;
 

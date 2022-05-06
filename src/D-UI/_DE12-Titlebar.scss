@@ -81,7 +81,7 @@
         padding-top: 0rem !important;
 
         & .titlebar {
-            z-index: 40;
+            z-index: 1000;
             position: absolute;
 
             top: -0.5rem; /*calc(-1 * var(--size-height-titlebar));*/

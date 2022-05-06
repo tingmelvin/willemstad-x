@@ -328,7 +328,11 @@
         :is(.setting-item[data-id="col-highlight-0"],
             .setting-item[data-id="col-highlight-1"],
             .setting-item[data-id="col-highlight-2"],
-            .setting-item[data-id="col-highlight-3"]) & {
+            .setting-item[data-id="col-highlight-3"],
+            .setting-item[data-id="col-highlight-0-org"],
+            .setting-item[data-id="col-highlight-1-org"],
+            .setting-item[data-id="col-highlight-2-org"],
+            .setting-item[data-id="col-highlight-3-org"]) & {
 
                 /* width: calc(0.15 * var(--modal-width-settings)); */
                 width: 12em;
@@ -347,7 +351,11 @@
         :is(.setting-item[data-id="col-highlight-0"],
             .setting-item[data-id="col-highlight-1"],
             .setting-item[data-id="col-highlight-2"],
-            .setting-item[data-id="col-highlight-3"]) .theme-light & {
+            .setting-item[data-id="col-highlight-3"],
+            .setting-item[data-id="col-highlight-0-org"],
+            .setting-item[data-id="col-highlight-1-org"],
+            .setting-item[data-id="col-highlight-2-org"],
+            .setting-item[data-id="col-highlight-3-org"]) .theme-light & {
 
             body.theme-light.css-settings-manager & {
                 color: var(--col-highlight-text-pickr);
@@ -362,7 +370,11 @@
         :is(.setting-item[data-id="col-highlight-0"],
             .setting-item[data-id="col-highlight-1"],
             .setting-item[data-id="col-highlight-2"],
-            .setting-item[data-id="col-highlight-3"]) .theme-dark & {
+            .setting-item[data-id="col-highlight-3"],
+            .setting-item[data-id="col-highlight-0-org"],
+            .setting-item[data-id="col-highlight-1-org"],
+            .setting-item[data-id="col-highlight-2-org"],
+            .setting-item[data-id="col-highlight-3-org"]) .theme-dark & {
 
             body.theme-light.css-settings-manager & {
                 color: transparent;
@@ -378,25 +390,29 @@
 
             font-family: var(--font-ui);
 
-            .setting-item[data-id="col-highlight-0"] & {
+            :is(.setting-item[data-id="col-highlight-0"],
+            .setting-item[data-id="col-highlight-0-org"]) & {
 
                 content: "==highlight==";
 
             }
 
-            .setting-item[data-id="col-highlight-1"] & {
+            :is(.setting-item[data-id="col-highlight-1"],
+            .setting-item[data-id="col-highlight-1-org"]) & {
 
                 content: "*==highlight==*";
 
             }
 
-            .setting-item[data-id="col-highlight-2"] & {
+            :is(.setting-item[data-id="col-highlight-2"],
+            .setting-item[data-id="col-highlight-2-org"]) & {
 
                 content: "**==highlight==**";
 
             }
 
-            .setting-item[data-id="col-highlight-3"] & {
+            :is(.setting-item[data-id="col-highlight-3"],
+            .setting-item[data-id="col-highlight-3-org"]) & {
 
                 content: "***==highlight==***";
 

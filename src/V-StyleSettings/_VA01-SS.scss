@@ -72,6 +72,12 @@ settings:
         description: "When enabled, this disables all animations in this theme."
         default: false
     -
+        id: icons-obsidian-standard
+        title: Use Standard Obsidian Icons
+        type: class-toggle
+        description: "When enabled, this replaces the custom Willemstad icon set with the standard Obsidian icons."
+        default: false
+    -
     -
         id: startup
         title: Startup Screen
@@ -226,7 +232,7 @@ settings:
                     label: Default Bars
                     value: sd-default-bars
                 -
-                    label: (NUCLEAR OPTION) No Bars — hide all bars
+                    label: No Bars — hide all bars
                     value: sd-begone-bars
     -
             id: elements-sd
@@ -300,6 +306,34 @@ settings:
             type: heading
             level: 2
             collapsed: true
+    -
+            id: mobile-style-sidepanes
+            title: Mobile-Style Floating Sidebar Panes
+            type: class-toggle
+            description: "When enabled, the workspace pane will not move to acommodate the sidepanes; instead, the sidepanes will be displayed on top of the workspace pane."
+            default: false
+    -
+            id: opacity-mobile-style
+            title: 'Opacity (Unhovered) — Mobile-Style Sidepanes'
+            type: variable-number-slider
+            description: Use this setting to change the opacity of the sidepanes, when unhovered.
+            format: ''
+            default: 0
+            min: 0
+            max: 1
+            step: 0.05
+    -
+            id: transition-mobile-style
+            title: 'Transition — Mobile-Style Sidepanes'
+            description: "Use this setting to change the transition of the sidepanes from unhovered to hovered. Accepts any valid CSS transition units."
+            type: variable-text
+            default: var(--medium-transition)
+    -
+            id: no-nav-file-tag
+            title: Remove Navigation File Tags
+            type: class-toggle
+            description: When enabled, this removes the file tags from the navigation bar.
+            default: false
     -
             id: size-font-nav
             title: Font Size — Navigation Pane
@@ -540,6 +574,9 @@ settings:
                 -
                     label: Right-aligned
                     value: doc-title-align-r
+                -
+                    label: Hidden
+                    value: doc-title-gone
     -
         id: frontmatter-options
         title: Frontmatter
@@ -590,7 +627,7 @@ settings:
         id: typography-typeface
         title: Font Typeface
         type: heading
-        description: Typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel.
+        description: Typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel. Font settings set in core Obsidian will override the settings set here.
         level: 2
         collapsed: true
     -
@@ -978,6 +1015,12 @@ settings:
         level: 2
         collapsed: true
     -
+            id: highlight-col-original
+            title: 'Use Standard Highlight Colours'
+            type: class-toggle
+            description: When enabled, this will disable the custom Willemstad highlight colours and use the standard colours used for highlighting.
+            default: false
+    -
             id: col-highlight-text
             title: 'Highlighted Text Colour'
             type: variable-themed-color
@@ -988,7 +1031,43 @@ settings:
             default-dark: hsl(0, 0%, 0%)
     -
             id: col-highlight-0
-            title: 'Highlight Colour — default'
+            title: 'Highlight Colour (Willemstad) — default'
+            type: variable-themed-color
+            description: 'Default highlight colour (==)'
+            opacity: false
+            format: hsl
+            default-light: hsl(46, 100%, 50%)
+            default-dark: hsl(46, 100%, 50%)
+    -
+            id: col-highlight-1
+            title: 'Highlight Colour (Willemstad) — additional #1 (italics + highlight markdown)'
+            type: variable-themed-color
+            description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(76, 100%, 50%)
+            default-dark: hsl(76, 100%, 50%)
+    -
+            id: col-highlight-2
+            title: 'Highlight Colour (Willemstad) — additional #2 (bold + highlight markdown)'
+            description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'     
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(166, 100%, 50%)
+            default-dark: hsl(166, 100%, 50%)
+    -
+            id: col-highlight-3
+            title: 'Highlight Colour (Willemstad) — additional #3 (bold + italics + highlight markdown)'
+            description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'     
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(262, 44%, 82%)
+            default-dark: hsl(262, 44%, 82%)
+    -
+            id: col-highlight-0-org
+            title: 'Highlight Colour (Standard) — default'
             type: variable-themed-color
             description: 'Default highlight colour (==)'
             opacity: false
@@ -996,8 +1075,8 @@ settings:
             default-light: hsl(60, 100%, 50%)
             default-dark: hsl(60, 100%, 50%)
     -
-            id: col-highlight-1
-            title: 'Highlight Colour — additional #1 (italics + highlight markdown)'
+            id: col-highlight-1-org
+            title: 'Highlight Colour (Standard) — additional #1 (italics + highlight markdown)'
             type: variable-themed-color
             description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
             opacity: false
@@ -1005,8 +1084,8 @@ settings:
             default-light: hsl(120, 100%, 50%)
             default-dark: hsl(120, 100%, 50%)
     -
-            id: col-highlight-2
-            title: 'Highlight Colour — additional #2 (bold + highlight markdown)'
+            id: col-highlight-2-org
+            title: 'Highlight Colour (Standard) — additional #2 (bold + highlight markdown)'
             description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'     
             type: variable-themed-color
             opacity: false
@@ -1014,8 +1093,8 @@ settings:
             default-light: hsl(180, 100%, 50%)
             default-dark: hsl(180, 100%, 50%)
     -
-            id: col-highlight-3
-            title: 'Highlight Colour — additional #3 (bold + italics + highlight markdown)'
+            id: col-highlight-3-org
+            title: 'Highlight Colour (Standard) — additional #3 (bold + italics + highlight markdown)'
             description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'     
             type: variable-themed-color
             opacity: false
@@ -1204,7 +1283,7 @@ settings:
      id: callouts-settings
      title: Callouts
      type: heading
-     description: "Customise your Callouts here! Current available classes: 'table', 'infobox', 'aside', 'kanban', 'kanban-no-title'"
+     description: "Customise your Callouts here! Special callout classes currently: 'table', 'infobox', 'aside', 'kanban', 'kanban-no-title'"
      level: 2
      collapsed: false
     -
@@ -1270,7 +1349,7 @@ settings:
         type: variable-number-slider
         description: "Set the font size of the Kanban callout title. The default is H1's original size."
         format: em
-        default: 1.8
+        default: 1
         min: 0.5
         max: 3.5
         step: 0.05
@@ -1468,12 +1547,6 @@ settings:
             title: Shimmering Focus-style Hide External Hyperlink URLs in Source Mode
             type: class-toggle
             description: When enabled, this hides external hyperlink URLs in Source mode, similar to Shimmering Focus.
-            default: false
-    -
-            id: no-nav-file-tag
-            title: Remove Navigation File Tags
-            type: class-toggle
-            description: When enabled, this removes the file tags from the navigation bar.
             default: false
     -
 */

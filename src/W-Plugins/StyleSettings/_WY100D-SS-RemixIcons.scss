@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────────────
-> WY100E
+> WY100D
 \ Plugins > Community > Style Settings
 \ RemixIcons
     \\ PComm000 | Style Settings
@@ -94,6 +94,30 @@
         &::before {
 
             content: "\eb96 \eeea";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+        }
+    }
+
+    .setting-item:is([data-id="icons-obsidian-standard"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "\f068";
 
             font-family: "remixicon";
             vertical-align: top;
@@ -261,6 +285,30 @@
 
         content: "\ebbe";
 
+    }
+
+    .setting-item:is([data-id="mobile-style-sidepanes"]) .setting-item-name {
+
+        font-weight: 600;
+    
+        &::before {
+
+            content: "";
+
+            font-family: "remixicon";
+            vertical-align: top;
+            display: inline-block;
+            height: fit-content;
+            margin-right: 0.25rem;
+            color: var(--text-accent);
+
+            background-color: var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1);
+            
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            font-weight: 600;
+        }
     }
 
     .setting-item:is([data-id="modals"]) .setting-item-name > span::after {

@@ -29,6 +29,50 @@
     >> Paddings for Doc Titles fix
     ──────────────────────────────────────────────────────────────────────────── */
 
+    .view-header {
+
+        display: flex;
+        align-items: center; /* ensures center alignment */
+
+        /* oh the lords this is buggy */
+
+
+        padding: 0 var(--padding-content-lr); /* to make up for the other paddings removed */
+
+        gap: 0.25rem;
+
+        border-top: 0px;
+
+    }
+
+    .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+        top: 0px; /* parallels with the 0 border-top on .view-header */
+    }
+
+    .view-header-icon {
+        padding: 0;
+    }
+
+    .view-actions {
+        padding: 0;
+        gap: 0.75rem;
+    }
+
+    a.view-action {
+        margin: 0;
+    }
+
+    .view-header-title-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .view-header-title {
+        padding-right: 0rem;
+    }
+
+
+
     .workspace-leaf-content[data-type=markdown] {
         .view-header {
 
@@ -41,6 +85,18 @@
             padding: 0 var(--padding-content-lr); /* to make up for the other paddings removed */
 
             gap: 0.25rem;
+
+        }
+
+        .doc-title-gone & {
+
+            .view-header {
+                display: none;
+            }
+
+            .view-content {
+                height: 100%;
+            }
 
         }
 
@@ -86,4 +142,13 @@
         .view-header-title {
             padding-right: 0rem;
         }
+
+    }
+
+    /* view header icon */
+
+    .view-header-icon {
+        display: flex;
+        top: 0px;
+        align-items: center;
     }

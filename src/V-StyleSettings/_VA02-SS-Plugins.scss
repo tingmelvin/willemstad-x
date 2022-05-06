@@ -102,6 +102,28 @@ settings:
         default-light: hsl(155, 100%, 37%)
         default-dark: hsl(155, 100%, 37%)
     -
+     id: PComm033-settings
+     title: Focus Mode
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm033-standard-focus
+        title: Disable True Focus Mode
+        note: Focus Mode
+        type: class-toggle
+        description: "By default, Willemstad removes the exit button in Focus Mode. This toggle re-enables the ribbon and its accompanying exit button."
+        default: false
+    -
+        id: PComm033-transparent-header
+        title: Make Un-Hovered Title Headers Transparent in Focus Mode
+        note: Focus Mode
+        type: class-toggle
+        description: "When enabled, this toggle makes title headers transparent when un-hovered. Hover over for title headers to reappear."
+        default: false
+    -
+    -
      id: PComm027-settings
      title: Footnotes & Citation Indicator
      description: 
