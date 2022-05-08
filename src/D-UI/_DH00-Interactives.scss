@@ -526,14 +526,37 @@ input.document-replace-input {
 >>> NOTICE
 ──────────────────────────────────────────────────────────────────────────── */
 
-.notice-container {
-    top: 1vh;
-    padding: 0 0.5rem 0 0;
+body:not(.is-mobile) {
+    .notice-container {
+        top: 1vh;
+        padding: 0 0.5rem 0 0;
+    }
+
+    .notice {
+        background-color: rgba(0, 0, 0, 0.82);
+        padding: 0.5rem 0.5rem;
+        margin-bottom: 5px;
+        line-height: 100%;
+    }
 }
 
-.notice {
-    background-color: rgba(0, 0, 0, 0.82);
-    padding: 0.5rem 0.5rem;
-    margin-bottom: 5px;
-    line-height: 100%;
+body.is-mobile {
+    & ::webkit-scroller {
+        display: none !important;
+    }
+}
+
+/* search, again */
+.document-search-buttons, .document-replace-buttons {
+    display: inherit;
+}
+
+.document-search, .document-replace {
+    height: auto;
+    margin: auto;
+    align-items: center;
+}
+
+button.document-search-button {
+    display: inline-block;
 }
