@@ -49,9 +49,9 @@
 @use 'M-Mobile/_M-Mobile';
 @use 'V-StyleSettings/_VA01-SS';
 @use 'V-StyleSettings/_VA02-SS-Plugins';
-@use 'W-Plugins/_WX000-PCore';
-@use 'W-Plugins/_WY000A-PComm-A';
-@use 'W-Plugins/_WY000B-PComm-B';
+@use 'W-Plugins/_WX000-Plugins-Core';
+@use 'W-Plugins/_WY000A-Plugins-Comm-A';
+@use 'W-Plugins/_WY000B-Plugins-Comm-B';
 @use 'W-Plugins/_WY001-Calendars';
 @use 'W-Plugins/_WY004-Dataview-Tables';
 @use 'W-Plugins/_WY007-Kanban';

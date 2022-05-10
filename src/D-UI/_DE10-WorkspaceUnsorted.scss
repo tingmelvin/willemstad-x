@@ -105,69 +105,6 @@
           }
 
     /* ────────────────────────────────────────────────────────────────────────
-    >>> NAV
-    \\\ this goes into sidepanes when I have the time
-    ──────────────────────────────────────────────────────────────────────── */
-        .mod-left-split .nav-buttons-container {
-
-            .nav-buttons-left-L & {
-                justify-content: left;
-
-                &:first-child {
-                    margin-left: 0.1rem;
-                }
-            }
-
-            .nav-buttons-center-L & {
-                justify-content: center;
-            }
-
-            .nav-buttons-right-L & {
-                justify-content: right;
-
-                &:last-child {
-                    margin-right: 0.1rem;
-                }
-
-            }
-        }
-
-        .mod-right-split .nav-buttons-container {
-
-            .nav-buttons-left-R & {
-                justify-content: left;
-
-                &:first-child {
-                    margin-left: 0.1rem;
-                }
-            }
-
-            .nav-buttons-center-R & {
-                justify-content: center;
-            }
-
-            .nav-buttons-right-R & {
-                justify-content: right;
-
-                &:last-child {
-                    margin-right: 0.1rem;
-                }
-
-            }
-        }
-
-        /*
-        .nav-action-button > svg {
-            height: 100%;
-        }
-        */
-
-        .nav-file-icon > svg {
-            width: auto;
-            height: 20px;
-        }
-
-    /* ────────────────────────────────────────────────────────────────────────
     >>> FIX: OVERFLOW
     ──────────────────────────────────────────────────────────────────────── */
     /* move this away from infobox, but this really makes this look PERFECT. NO MORE OVERLAPPING STUFF! */

@@ -121,3 +121,11 @@ body.is-mobile {
     }
 
 }
+
+/* does't work, but needs to fix
+body.is-mobile {
+    & ::webkit-scroller {
+        display: none !important;
+    }
+}
+*/

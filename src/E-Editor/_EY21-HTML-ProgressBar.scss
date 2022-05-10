@@ -30,19 +30,6 @@ progress {
         vertical-align: middle;
     }
 
-    &[value='0']::-webkit-progress-value,
-    &[value='1']::-webkit-progress-value,
-    &[value='2']::-webkit-progress-value,
-    &[value='3']::-webkit-progress-value,
-    &[value='4']::-webkit-progress-value,
-    &[value='5']::-webkit-progress-value,
-    &[value='6']::-webkit-progress-value,
-    &[value='7']::-webkit-progress-value,
-    &[value='8']::-webkit-progress-value,
-    &[value='9']::-webkit-progress-value {
-        background-color: var(--col-progress-0);
-    }
-
     &[value^="1"]::-webkit-progress-value {
         background-color: var(--col-progress-1);
     }
@@ -81,5 +68,18 @@ progress {
 
     &[value="100"]::-webkit-progress-value {
         background-color: var(--col-progress-10);
+    }
+
+    &[value='0']::-webkit-progress-value,
+    &[value='1']::-webkit-progress-value,
+    &[value='2']::-webkit-progress-value,
+    &[value='3']::-webkit-progress-value,
+    &[value='4']::-webkit-progress-value,
+    &[value='5']::-webkit-progress-value,
+    &[value='6']::-webkit-progress-value,
+    &[value='7']::-webkit-progress-value,
+    &[value='8']::-webkit-progress-value,
+    &[value='9']::-webkit-progress-value {
+        background-color: var(--col-progress-0);
     }
 }

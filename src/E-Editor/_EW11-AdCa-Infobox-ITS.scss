@@ -100,45 +100,48 @@ div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
 \ adapted from the original Admonition Infobox by SlRvB for the Admonition Plugin
 ──────────────────────────────────────────────────────────────────────────────── */
 
-.callout[data-callout="infobox"] {
-    float: right;
-    max-width: 50%;
+body {
+    .callout[data-callout="infobox"] {
+        float: right;
+        max-width: 50%;
 
-    border: 0;
-    margin-left: 0.5rem;
+        border: 0;
+        margin-left: 0.5rem;
 
-    .callout-title {
+        --callout-color: var(--col-bg-table);
 
-        background-color: var(--col-bg-table);
-        justify-content: center;
-        text-align: center;
+        .callout-title {
 
-        .callout-icon {
-            display: none;
-        }
-
-        .callout-title-inner {
-            padding-top: 0.5rem;
-        }
-
-    }
-
-    .callout-content {
-        padding: 0;
-        border: none;
-        margin: 0.5rem;
-        margin-top: 0rem;
-        justify-content: center;
-        text-align: center;
-
-        :is(h1, h2, h3, h4, h5, h6) {
-
-            font-size: var(--font-text-size);
+            background-color: var(--col-bg-table);
+            justify-content: center;
             text-align: center;
-            padding-left: 0.15rem;
-            padding-right: 0.15rem;
+
+            .callout-icon {
+                display: none;
+            }
+
+            .callout-title-inner {
+            }
+
         }
 
+        .callout-content {
+            padding: 0;
+            border: none;
+            margin: 0.5rem;
+            margin-top: 0rem;
+            justify-content: center;
+            text-align: center;
+
+            :is(h1, h2, h3, h4, h5, h6) {
+
+                font-size: var(--font-text-size);
+                text-align: center;
+                padding-left: 0.15rem;
+                padding-right: 0.15rem;
+            }
+
+        }
     }
 }
 

@@ -541,10 +541,18 @@ body:not(.is-mobile) {
 }
 
 body.is-mobile {
-    & ::webkit-scroller {
-        display: none !important;
+    .notice-container {
+        padding: 0 0.5rem;
+    }
+
+    .notice {
+        padding: 0.5rem 0.5rem;
+        margin-bottom: 5px;
+        line-height: 100%;        
     }
 }
+
+
 
 /* search, again */
 .document-search-buttons, .document-replace-buttons {
@@ -559,4 +567,12 @@ body.is-mobile {
 
 button.document-search-button {
     display: inline-block;
+}
+
+/* fix backlinks panes buttons */
+
+.embedded-backlinks {
+    .nav-action-button.nav-action-button {
+        padding: var(--padding-actionbtn-nav);
+    }
 }

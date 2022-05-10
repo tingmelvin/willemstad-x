@@ -40,19 +40,19 @@
                 margin: 0rem;
 
                 .nav-buttons-left-L &:first-child {
-                    padding-left: 0.4rem;
+                    margin-left: calc(0.4rem - var(--padding-actionbtn-nav));
                 }
 
                 .nav-buttons-right-L &:last-child {
-                    padding-right: 0.4rem;
+                    margin-right: calc(0.4rem - var(--padding-actionbtn-nav));
                 }
 
                 .nav-buttons-left-R &:first-child {
-                    padding-left: 0.4rem;
+                    margin-left: calc(0.4rem - var(--padding-actionbtn-nav));
                 }
 
                 .nav-buttons-right-R &:last-child {
-                    padding-right: 0.4rem;
+                    margin-right: calc(0.4rem - var(--padding-actionbtn-nav));
                 }
                 
             }
@@ -74,6 +74,69 @@
             .nav-folder-title-content {
                 word-break: break-all;
             }
+
+    /* ────────────────────────────────────────────────────────────────────────
+    >>> NAV
+    \\\ this goes into sidepanes when I have the time
+    ──────────────────────────────────────────────────────────────────────── */
+        .mod-left-split .nav-buttons-container {
+
+            .nav-buttons-left-L & {
+                justify-content: left;
+
+                &:first-child {
+                    margin-left: 0.1rem;
+                }
+            }
+
+            .nav-buttons-center-L & {
+                justify-content: center;
+            }
+
+            .nav-buttons-right-L & {
+                justify-content: right;
+
+                &:last-child {
+                    margin-right: 0.1rem;
+                }
+
+            }
+        }
+
+        .mod-right-split .nav-buttons-container {
+
+            .nav-buttons-left-R & {
+                justify-content: left;
+
+                &:first-child {
+                    margin-left: 0.1rem;
+                }
+            }
+
+            .nav-buttons-center-R & {
+                justify-content: center;
+            }
+
+            .nav-buttons-right-R & {
+                justify-content: right;
+
+                &:last-child {
+                    margin-right: 0.1rem;
+                }
+
+            }
+        }
+
+        /*
+        .nav-action-button > svg {
+            height: 100%;
+        }
+        */
+
+        .nav-file-icon > svg {
+            width: auto;
+            height: 20px;
+        }
 
         /* ─────────────────────────────────────────────────────────────────────────
         >>> HOVER COLOURS + OTHER PADDING STUFF

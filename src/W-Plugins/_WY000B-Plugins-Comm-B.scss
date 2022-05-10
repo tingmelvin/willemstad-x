@@ -379,6 +379,10 @@
         display: none;
     }
 
+    body:not(.PComm033-standard-focus).focus-mode .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
+        visibility: hidden;
+    }
+
     body.super-focus-mode.plugin-sliding-panes-rotate-header:not(.PComm033-transparent-header) .mod-root.mod-root.mod-root.mod-root.mod-root .workspace-leaf-content {
         padding-left: var(--header-width); /* fixes header eating into workspace when in super-focus-mode */
     }
