@@ -8,16 +8,11 @@ Named after the capital of Curaçao (which is known for its colourful houses), t
 
 **To use**:
 
-For the most current version, use the Community Theme store in Obsidian. __(preferred/highly recommended method!)__ 
+For the most current version, use the Community Theme store in Obsidian. __(this is the preferred and recommended method!)__ 
 
 Alternatively, download the release, and drop `obsidian.css` into your `.obsidian\themes` folder in the vault you wish to have the theme in.
 
 ---
-
-### Should I use this or Willemstad for Shimmering Focus?
-It's up to you! I intend to maintain Willemstad for SF _without too much effort (read: not minimally, but almost minimally)_, since I don't think there are too many more features I'd like to add, or can add without conflicting with Shimmering Focus' base options. I don't want to conflict too many changes with Shimmering Focus as well! But if you are a power user and use most of Shimmering Focus's stuff, I'd suggest you stay with Shimmering Focus. Chris is way better/faster at doing CSS stuff than I am, too!
-
-⚠️ Almost all UI styling (sans modals) that are present in Willemstad X, are not in Willemstad for SF. Willemstad X also encodes the DM family of fonts and Manrope, but this is not included in the Willemstad for SF files.
 
 ### Why is Inter embedded into Willemstad X, isn't that included in Obsidian proper?
 Yes, it is. Inter is included in Obsidian proper. However, most people will download Inter onto their computers, and Obsidian [will use the font with the name that is present in your computer](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/Best+Practices+and+Tips+for+Theme+Development). Moreover, most people (**including myself**) download/-s/-ed Inter from Google Fonts, [which is probably the most outdated version you can get of the font](https://github.com/rsms/inter#alternate-distributions). (No proper _italics_, need I say more?!) By embedding Inter, alongside the other fonts, allows me to quality control and ensure the quality of your experience.
@@ -48,6 +43,9 @@ Like Primary, Willemstad aims to get the core features right before delving into
 16. Longform
 17. Settings Search
 18. LanguageTool Integration
+and more.
+
+The full list of supported community plugins can be found [here](https://willemstad.cc/Development+Docs/Coding+Nomenclatures).
 
 ## Attribution
 As is with most theme codes in Obsidian, many pieces/snippets of code have been cobbled together from whatever the hive mind has created. It is therefore not possible to accurately and fully attribute everyone's efforts, which might have come into and been adopted by this theme. That being said, there are multiple pieces of instrumental code that I can attribute to, which I do so here:
@@ -61,6 +59,7 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
 - Minimal Cards and Image Grids, from [Stephan Ango](https://github.com/kepano)
 
+
 ## Theme Documentation (currently a work in progress)
 Available [here](https://willemstad.cc).
 
@@ -68,7 +67,7 @@ Available [here](https://willemstad.cc).
 Unfortunately the theme documentations aren't complete, but currently, Willemstad supports `table` (legacy; sherlocked by Licat into Obsidian 0.14.1), `infobox`, `aside`, `aside-no-title`, `kanban`, `kanban-no-title`, `grid`, `grid-ext` and `masonry` (which is the same as `grid-ext`).
 
 ## Mentions in the Obsidian Roundup
-[16th April](https://www.obsidianroundup.org/2022-04-16/) | [04th April](https://www.obsidianroundup.org/2022-04-02/) | [26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
+[14th May](https://www.obsidianroundup.org/2022-05-14/) | [23rd April](https://www.obsidianroundup.org/2022-04-23/) | [16th April](https://www.obsidianroundup.org/2022-04-16/) | [04th April](https://www.obsidianroundup.org/2022-04-02/) | [26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
 
 and of the original Willemstad snippet for Shimmering Focus:
 [12th February](https://www.obsidianroundup.org/2022-02-12/) and [5th February](https://www.obsidianroundup.org/2022-02-05/)
@@ -79,6 +78,7 @@ That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus]
 
 ---
 ### Note on `snippet.css` file
+(this file will be updated again once some issues are ironed out)
 
 Currently includes:
 
