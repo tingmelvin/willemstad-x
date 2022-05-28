@@ -1381,7 +1381,7 @@ settings:
      id: cssclass-settings
      title: CSSClass
      type: heading
-     description: "LaTeX, Magazine"
+     description: "LaTeX, Magazine, Cornell Notes"
      level: 2
      collapsed: false
     -
@@ -1512,6 +1512,38 @@ settings:
         description: "Use this to customise the background to every 9n+1 item."
         type: variable-text
         default: 'linear-gradient(to right, hsl(215, 65%, 53%), hsl(191, 100%, 50%))'
+    -
+     id: cornell-settings
+     title: Cornell Notes CSSClass
+     description: "Settings for the 'cornell' CSSClass."
+     type: heading
+     level: 3
+     collapsed: true
+    -
+        id: cornell-cssclass-see-syntax
+        title: "See an example of how to make your own Cornell Notes CSSClass."
+        description: 
+    -
+        id: left-align-cornell-cssclass
+        title: "Left Margin — Cornell Notes CSSClass"
+        type: variable-number-slider
+        description: "Use this setting to change the left margin of the Cornell Notes CSSClass."
+        default: 30
+        min: 10
+        max: 50
+        step: 0.5
+        format: '%'
+    -
+        id: gap-cornell-cssclass
+        title: "Gap Between Left and Right Content — Cornell Notes CSSClass"
+        type: variable-number-slider
+        description: "Use this setting to change the gap between the left and right content of the Cornell Notes CSSClass."
+        default: 2.5
+        min: 0
+        max: 10
+        step: 0.5
+        format: '%'
+    -
     -
      id: misc
      title: "Miscellany"
