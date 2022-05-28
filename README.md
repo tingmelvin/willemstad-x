@@ -20,7 +20,7 @@ Yes, it is. Inter is included in Obsidian proper. However, most people will down
 ### I'd like to change something or propose something. What's the easiest way to do so?
 If it's something you reckon people would need/want as well, the easiest way to request changes is to use the Issues tab here on GitHub. If you would like to change something that you can reckon you rather do it yourself, the best way would be to use a snippet. I recommend the [snippets](https://github.com/Mara-Li/Obsidian-Snippet-collection) by Mara Li, and the theme overlay [Absolve by mulfok](https://github.com/mulfok/obsidian-absolve).
 
-Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemstad yourself via the files in the `build` folder, and fork the repo and edit the relevant files you want to. To understand what each specific SCSS file consists of, consult [here](https://notes.tingmelvin.com/ER-Resources/ER2OWS/ER2OWS-12-CodingNomenclature_WillemstadX#SCSS%20Compile%20Order). This might be outdated.
+Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemstad yourself via the files in the `build` folder, and fork the repo and edit the relevant files you want to. To understand what each specific SCSS file consists of, consult [here](https://willemstad.cc/Development+Docs/Revamp+v0.4). This might be slightly outdated.
 
 ---
 
@@ -61,10 +61,7 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 
 
 ## Theme Documentation (currently a work in progress)
-Available [here](https://willemstad.cc).
-
-### Note on `callouts`
-Unfortunately the theme documentations aren't complete, but currently, Willemstad supports `table` (legacy; sherlocked by Licat into Obsidian 0.14.1), `infobox`, `aside`, `aside-no-title`, `kanban`, `kanban-no-title`, `grid`, `grid-ext` and `masonry` (which is the same as `grid-ext`).
+Available [here](https://willemstad.cc), includes information on [callouts](https://willemstad.cc/Theme+Extensions/Callouts).
 
 ## Mentions in the Obsidian Roundup
 [14th May](https://www.obsidianroundup.org/2022-05-14/) | [23rd April](https://www.obsidianroundup.org/2022-04-23/) | [16th April](https://www.obsidianroundup.org/2022-04-16/) | [04th April](https://www.obsidianroundup.org/2022-04-02/) | [26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
