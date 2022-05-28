@@ -52,6 +52,11 @@
         padding: 0.5rem 0.25rem 0 0.25rem;
     }
 
+    .workspace-leaf-content[data-type="calendar"] {
+        .dot-container {
+            flex-wrap: nowrap; /* ensures they don't warp */
+        }
+    }
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Full Calendar]

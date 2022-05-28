@@ -49,7 +49,7 @@
                     color: var(--col-code-open);
                     font-family: var(--font-monospace);
 
-                    & + span {
+                    & ~ span {
 
                         font-family: var(--font-monospace);
                         font-size: 0.9em;

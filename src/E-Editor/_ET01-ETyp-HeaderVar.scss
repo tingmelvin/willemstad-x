@@ -7,42 +7,43 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> (OPTIONS) Δ Heading Background Colours
         ──────────────────────────────────────────────────────────────────────── */
-        .markdown-preview-section :is(h1),
+        :is(.markdown-preview-section, .markdown-preview-view) :is(h1),
         .admonition-content > h1,
         .callout-content h1,
         .HyperMD-header-1.cm-line{
             background-color: var(--col-h1-bg);
         }
-        .markdown-preview-section :is(h2),
+        :is(.markdown-preview-section, .markdown-preview-view) :is(h2),
         .admonition-content > h2,
         .callout-content h2,
         .HyperMD-header-2.cm-line{
             background-color: var(--col-h2-bg);
         }
-        .markdown-preview-section :is(h3),
+        :is(.markdown-preview-section, .markdown-preview-view) :is(h3),
         .admonition-content > h3,
         .callout-content h3,
         .HyperMD-header-3.cm-line{
             background-color: var(--col-h3-bg);
         }
-        .markdown-preview-section :is(h4),
+        :is(.markdown-preview-section, .markdown-preview-view) :is(h4),
         .admonition-content > h4,
         .callout-content h4,
         .HyperMD-header-4.cm-line{
             background-color: var(--col-h4-bg);
         }
-        .markdown-preview-section :is(h5),
+        :is(.markdown-preview-section, .markdown-preview-view) :is(h5),
         .admonition-content > h5,
         .callout-content h5,
         .HyperMD-header-5.cm-line{
             background-color: var(--col-h5-bg);
         }
-        .markdown-preview-section :is(h6),
+        :is(.markdown-preview-section, .markdown-preview-view) :is(h6),
         .admonition-content > h6,
         .callout-content h6,
         .HyperMD-header-6.cm-line{
             background-color: var(--col-h6-bg);
         }
+
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> [HEADINGS > Colours > Text/Font]
@@ -411,4 +412,17 @@
         .markdown-preview-section :is(h1, h2, h3, h4, h5, h6) {
             padding: var(--padding-header-t) 0.5rem var(--padding-header-b) 1.8rem;
             margin: 0.5rem 0;
+        }
+
+        @media print {
+
+            .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                width: 100%;
+            }
+
+            .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                padding: var(--padding-header-t) 0 var(--padding-header-b) 0;
+                margin: 0.5rem 0;
+            }
+            
         }

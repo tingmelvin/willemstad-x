@@ -40,20 +40,20 @@
                 margin: 0rem;
 
                 .nav-buttons-left-L &:first-child {
-                    margin-left: calc(0.4rem - var(--padding-actionbtn-nav));
+                    margin-left: calc(0.5rem - var(--padding-actionbtn-nav));
                 }
 
                 .nav-buttons-right-L &:last-child {
-                    margin-right: calc(0.4rem - var(--padding-actionbtn-nav));
+                    margin-right: calc(0.5rem - var(--padding-actionbtn-nav));
                 }
 
                 .nav-buttons-left-R &:first-child {
-                    margin-left: calc(0.4rem - var(--padding-actionbtn-nav));
+                    margin-left: calc(0.5rem - var(--padding-actionbtn-nav));
                 }
 
                 .nav-buttons-right-R &:last-child {
-                    margin-right: calc(0.4rem - var(--padding-actionbtn-nav));
-                }
+                    margin-right: calc(0.5rem - var(--padding-actionbtn-nav));
+                } /* changed in 0.5.1, check */
                 
             }
 
@@ -85,8 +85,8 @@
                 justify-content: left;
 
                 &:first-child {
-                    margin-left: 0.1rem;
-                }
+                    margin-left: 0rem;
+                } /* margin-right: 0.1rem; */
             }
 
             .nav-buttons-center-L & {
@@ -97,7 +97,7 @@
                 justify-content: right;
 
                 &:last-child {
-                    margin-right: 0.1rem;
+                    margin-right: 0rem;
                 }
 
             }
@@ -109,7 +109,7 @@
                 justify-content: left;
 
                 &:first-child {
-                    margin-left: 0.1rem;
+                    margin-left: 0rem;
                 }
             }
 
@@ -121,7 +121,7 @@
                 justify-content: right;
 
                 &:last-child {
-                    margin-right: 0.1rem;
+                    margin-right: 0rem;
                 }
 
             }
@@ -329,6 +329,7 @@
 
 
         }
+        
 
         .workspace-tab-header-container {
 
@@ -357,9 +358,52 @@
 
         }
 
+        /* for scroll */
+        /*
+        .workspace-tab-header-container {
+            overflow: scroll;
+
+            &::-webkit-scrollbar {
+                height: 1px;
+                opacity: 0;
+                transition: var(--quicker-transition);
+            }
+        }
+        */
+
+        /*
+        .workspace-tab-container {
+
+            & ::-webkit-scrollbar {
+                height: 1px;
+                opacity: 0;
+                transition: var(--quicker-transition);
+            }
+        }
+        */
+
+        /*
+        for possible future use
+
+        H1
+
+        .HyperMD-header-1:before {
+            content: "H1";
+            font-size: 0.5em;
+            position: absolute;
+            right: 1rem;
+            bottom: 1em;
+            color: var(--text-muted);
+            border: 1px solid var(--text-muted);
+            padding: 0 2px;
+        }
+        */
+
     /* ────────────────────────────────────────────────────────────────────────────
     >> SIDEBAR TABS > Orientation Options
     ──────────────────────────────────────────────────────────────────────────── */
+
+    //
 
         .mod-left-split .workspace-tab-header-container {
 
@@ -649,3 +693,37 @@
         --opacity-mobile-style: 0;
         --transition-mobile-style: var(--medium-transition);
     }
+
+    /* trying a marquee */
+
+    /*
+    .nav-folder-children {
+        overflow: hidden !important;
+    }
+
+    .nav-file-title, .nav-folder-title {
+        width: max-content !important;
+    }
+
+    .nav-folder-title:hover,
+    .nav-file-title:hover {
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+            
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        animation: marquee 5s linear infinite;
+
+        .nav-folder-title-content::after,
+        .nav-file-title-content::after {
+            content: " " attr(data-path);
+        }
+
+    }
+    */

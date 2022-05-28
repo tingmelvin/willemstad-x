@@ -7,7 +7,7 @@
 .style-backlink {
     :is(.backlink-pane, .outgoing-link-pane) {
         border: 0.125rem solid var(--interactive-border-color);
-        border-radius: calc(var(--shape-roundish) * 3);
+        border-radius: calc(var(--shape-roundish) * 1.25); /* parallel to callouts/blocks */
         margin-top: 1rem;
         padding: 0.25rem 0;  
 

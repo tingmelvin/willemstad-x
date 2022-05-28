@@ -311,3 +311,16 @@
             order: -1
         }
         */
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> ADD DRAGGABLE ELEMENT FOR DEFAULT AND ECLIPSE BARS
+        ───────────────────────────────────────────────────────────────────────── */
+
+        body:is(.sd-eclipse-bars, .sd-default-bars) .workspace-ribbon {
+
+            -webkit-app-region: drag;
+
+            & * {
+                -webkit-app-region: no-drag;
+            }
+        }

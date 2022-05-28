@@ -11,8 +11,8 @@
             >>>> (0) STANDARD (==)
             ──────────────────────────────────────────────────────────────────── */
 
-            .markdown-preview-view mark,
-            .markdown-preview-view mark .internal-link, /* override specificity for links */
+            :is(.markdown-preview-view, .markdown-rendered) mark,
+            :is(.markdown-preview-view, .markdown-rendered) mark .internal-link, /* override specificity for links */
             .cm-s-obsidian span.cm-highlight {
                 background-color: var(--col-highlight-0);
                 color: var(--col-highlight-text);
@@ -22,8 +22,8 @@
             >>>> (1) HIGHLIGHT 1 | WITH ITALICS (*==)
             ──────────────────────────────────────────────────────────────────── */
 
-            .markdown-preview-view em > mark,
-            .markdown-preview-view em > mark .internal-link, /* override specificity for links */
+            :is(.markdown-preview-view, .markdown-rendered) em > mark,
+            :is(.markdown-preview-view, .markdown-rendered) em > mark .internal-link, /* override specificity for links */
             span.cm-em.cm-highlight {
                 font-style: normal;
                 text-decoration: unset;
@@ -36,8 +36,8 @@
             >>>> (2) HIGHLIGHT 2 | WITH BOLD (**==)
             ──────────────────────────────────────────────────────────────────── */
         
-            .markdown-preview-view strong > mark,
-            .markdown-preview-view strong > mark .internal-link, /* override specificity for links */
+            :is(.markdown-preview-view, .markdown-rendered) strong > mark,
+            :is(.markdown-preview-view, .markdown-rendered) strong > mark .internal-link, /* override specificity for links */
             span.cm-strong.cm-highlight {
                 font-weight: normal;
                 text-decoration: unset;
@@ -50,8 +50,8 @@
             >>>> (3) HIGHLIGHT 3 | WITH BOLD + ITALICS (***==)
             ──────────────────────────────────────────────────────────────────── */
 
-            .markdown-preview-view strong > em > mark,
-            .markdown-preview-view strong > em > mark .internal-link, /* override specificity for links */
+            :is(.markdown-preview-view, .markdown-rendered) strong > em > mark,
+            :is(.markdown-preview-view, .markdown-rendered) strong > em > mark .internal-link, /* override specificity for links */
             span.cm-strong.cm-em.cm-highlight {
                 font-weight: normal;
                 text-decoration: unset;

@@ -15,7 +15,7 @@
             word-wrap: break-word;
             padding: 0;
             margin: 0.125rem 0.25rem;
-            line-height: 1rem;
+            line-height: 1em; /* needs to be 1em so the line height won't eat */
             background-color: transparent;
         }
 
@@ -115,6 +115,10 @@
     /* ─────────────────────────────────────────────────────────────────────────────
     >> Frontmatter Container Appearance Options
     ───────────────────────────────────────────────────────────────────────────── */
+
+    div.frontmatter-container {
+        overflow: auto; /* let it scroll */
+    }
 
     /* none at all*/
     .metadata-container-none div.frontmatter-container {

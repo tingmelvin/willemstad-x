@@ -65,6 +65,15 @@ body div {
         }
 
     }
+
+    &.callout:is([data-callout-metadata*="monospace"]) {
+        
+        .callout-content {
+
+            font-family: var(--font-monospace);
+
+        }
+    }
 }
 
     /*

@@ -9,6 +9,7 @@ name: "Core"
 id: Willemstad-Core
 settings:
     -
+    -
         id: info-re-theme-documentation
         title: Theme Documentation
         description: willemstad.cc
@@ -77,6 +78,13 @@ settings:
         type: class-toggle
         description: "When enabled, this replaces the custom Willemstad icon set with the standard Obsidian icons."
         default: false
+    -
+    -
+        id: theme-willemstad
+        title: Willemstad-Specific Class
+        description: willemstad.cc (should not be visible)
+        type: class-toggle
+        default: true
     -
     -
         id: startup
@@ -324,10 +332,26 @@ settings:
             step: 0.05
     -
             id: transition-mobile-style
-            title: 'Transition — Mobile-Style Sidepanes'
-            description: "Use this setting to change the transition of the sidepanes from unhovered to hovered. Accepts any valid CSS transition units."
-            type: variable-text
+            title: 'Transition Speed — Mobile-Style Sidepanes'
+            description: "Use this setting to change the transition speed of the sidepanes from unhovered to hovered."
+            type: variable-select
             default: var(--medium-transition)
+            options:
+                -
+                    label: 'Slow'
+                    value: var(--slow-transition)
+                -
+                    label: 'Medium'
+                    value: var(--medium-transition)
+                -
+                    label: 'Quick'
+                    value: var(--quick-transition)
+                -
+                    label: 'Quicker'
+                    value: var(--quicker-transition)                
+                -
+                    label: 'No Transition'
+                    value: var(--no-transition)
     -
             id: no-nav-file-tag
             title: Remove Navigation File Tags
@@ -701,7 +725,7 @@ settings:
             id: remove-collapse-header-sanctum
             title: Disable Sanctum-style Header Collapse Indicator
             type: class-toggle
-            description: Sanctum's more minimalist header collapse indicator are used in Willemstad by Default. Toggle this to disable this feature and to use the original Obsidian indicator.
+            description: Sanctum's more minimalist header collapse indicator are used in Willemstad by default. Toggle this to disable this feature and to use the original Obsidian indicator.
             default: false
     -
         id: typography-h-col-text

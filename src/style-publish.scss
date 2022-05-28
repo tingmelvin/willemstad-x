@@ -1,3 +1,12 @@
+body {
+
+    --font-interface-override: 'Manrope' !important;
+    --font-monospace-override: 'DM Mono' !important;
+    --font-text-override: 'DM Sans' !important;
+    --font-default: 'DM Sans' !important;
+    
+    }
+
 @use 'A-License/_AA-License-Willemstad';
 @use 'B-Root/_BC-Root-Colours';
 @use 'B-Root/_BT-Root-Typography';

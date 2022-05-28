@@ -29,6 +29,10 @@
         }
     }
 
+    .publish-changes-switch-site {
+        display: flex; /* i have no idea why it broke LOL */
+    }
+
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [CORE PLUGIN | Command Palette] (alias: hotkeys + Ctrl + P)
@@ -136,6 +140,9 @@
             letter-spacing: -0.01rem;
             padding: /*0rem 0.5rem*/ 0;
 
+            display: flex;
+            align-items: center;
+
             &::after {
                 display: none;
             }
@@ -146,7 +153,9 @@
 
             vertical-align: middle;
 
-
+            & > * {
+                display: contents;
+            }
 
         }
 
@@ -158,6 +167,10 @@
 
             vertical-align: middle;
             display: inline-flex;
+
+            & > * {
+                display: contents;
+            }
         }
 
         & kbd.suggestion-hotkey {

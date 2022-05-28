@@ -375,12 +375,19 @@
     >>> (OPTION) TRUE FOCUS MODE
     ──────────────────────────────────────────────────────────────────────────── */
 
-    body:not(.PComm033-standard-focus).focus-mode.plugin-sliding-panes-rotate-header .workspace-ribbon.mod-left.is-collapsed {
-        display: none;
-    }
+    body:not(.PComm033-standard-focus).focus-mode {
+        &.plugin-sliding-panes-rotate-header .workspace-ribbon.mod-left.is-collapsed {
+            display: none;
+        }
 
-    body:not(.PComm033-standard-focus).focus-mode .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
-        visibility: hidden;
+        & .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
+            visibility: hidden;
+        }
+
+        .workspace-ribbon.side-dock-ribbon.mod-left {
+            display: none;
+        }
+
     }
 
     body.super-focus-mode.plugin-sliding-panes-rotate-header:not(.PComm033-transparent-header) .mod-root.mod-root.mod-root.mod-root.mod-root .workspace-leaf-content {

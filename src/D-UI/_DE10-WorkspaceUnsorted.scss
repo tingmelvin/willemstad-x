@@ -110,7 +110,7 @@
     /* move this away from infobox, but this really makes this look PERFECT. NO MORE OVERLAPPING STUFF! */
 
         .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
-        p, kbd, hr, ol,
+        p, kbd, hr, /*ol,*/ /*ol interferes with indent guides */
         blockquote,
         .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6,
         div.suggestion-item > :is(span.suggestion-prefix, span.suggestion-content, span.suggestion-hotkey) /*test this*/  {
@@ -122,9 +122,9 @@
         padding-right: 3.25px; /* solves some weirdness with weird right borders appearing when being bigger */
     }
 
-    .workspace > .mod-vertical {
+    .workspace > .mod-root {
         border-top: calc(var(--height-sidebar-tabs) /*- 1px*/) /* removes 1px since now no border */ solid var(--background-secondary-alt); /* minus the .view-header border-top */
-    }
+    } /* should be better than .mod-vertical */
 
 
     /* ────────────────────────────────────────────────────────────────────────

@@ -223,7 +223,14 @@ input.document-replace-input {
             font-size: 0.95rem;
 
             display: flex;
+
+            transition: var(--quick-transition);
+
+            &:hover {
+                transition: var(--quick-transition);
+            }
         }
+
 
     /* ────────────────────────────────────────────────────────────────────────
     >>> SVG
@@ -492,6 +499,19 @@ input.document-replace-input {
         
     }
 
+    .suggestion {
+        .list-item-part.search-suggest-icon.clickable-icon {
+            display: table-cell;
+            float: right;
+        } /* for search icons */
+
+        span.search-suggest-name.list-item-part.mod-extended {
+            height: fit-content;
+            display: table-cell;
+            vertical-align: middle;
+        } /* for the search names */
+    }
+
     
 /* Shadow Eradicator */
     .tooltip, .menu, .popover, .drag-ghost, .follow-link-popover, .pdf-controls, .notice, .pull-down-action {
@@ -575,4 +595,10 @@ button.document-search-button {
     .nav-action-button.nav-action-button {
         padding: var(--padding-actionbtn-nav);
     }
+}
+
+/* flex the modal button container */
+
+.modal-button-container {
+    display: flex;
 }
