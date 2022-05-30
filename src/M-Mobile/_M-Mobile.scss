@@ -3,10 +3,6 @@
 \ Mobile
 ──────────────────────────────────────────────────────────────────────────────── */
 
-.callout:not(.admonition).drop-shadow {
-    box-shadow: none;
-}
-
 body.is-mobile {
 
     padding-top: 0 !important; /* needs an important */
@@ -17,6 +13,26 @@ body.is-mobile {
         line-height: 1.2rem;
         padding-left: 0.125rem;
 
+    }
+
+    .installed-plugins-container .setting-item-control {
+
+        gap: 10px;
+
+        & > div {
+            margin: 0;
+        }
+    
+        & > button.mod-cta {
+            order: -1;
+            width: 20vw;
+            position: relative;
+        }
+
+    }
+
+    .view-header-title {
+        width: 100%;
     }
 
     .installed-plugins-container {

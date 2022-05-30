@@ -21,6 +21,10 @@
             & .callout .callout-content {
                 border: none;
             }
+
+            & .callout:not(.admonition).drop-shadow {
+                box-shadow: none;
+            } /* wth is there even this */
                
         }
 
