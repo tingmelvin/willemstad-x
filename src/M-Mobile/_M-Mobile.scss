@@ -19,6 +19,10 @@ body.is-mobile {
 
     }
 
+    .installed-plugins-container {
+        padding-top: 0px;
+    }
+
     & ::webkit-scrollbar {
         display: none;
     }
