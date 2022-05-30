@@ -4,10 +4,8 @@
 ──────────────────────────────────────────────────────────────────────────────── */
 
 body.is-mobile {
-    padding-top: 0 !important; /* needs an important */
-}
 
-.is-mobile {
+    padding-top: 0 !important; /* needs an important */
 
     &.is-mobile :is(.nav-file-title, .nav-folder-title, .outline, .tag-container) {
 
@@ -15,6 +13,20 @@ body.is-mobile {
         line-height: 1.2rem;
         padding-left: 0.125rem;
 
+    }
+
+    .side-dock-ribbon {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .nav-files-container {
+        overflow-x: hidden;
+    }
+
+    & button.mod-cta {
+        display: flex;
+        justify-content: center;
     }
 
     .workspace-drawer-header-left {
