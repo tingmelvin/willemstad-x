@@ -181,6 +181,7 @@
                     text-align: end;
                     float: right;
 
+
                     a {
                         text-decoration: none;
                     }
@@ -203,6 +204,7 @@
                         background-color: var(--interactive-bg);
                         transition: var(--medium-transition);
                     }
+
                 }
                 
             }
@@ -217,6 +219,14 @@
                 > button {
                     margin-top: 0.25rem;
                     margin-bottom: 0.25rem;
+                    display: inline-flex;
+
+                    transition: var(--medium-transition);
+
+                    &:not(.mod-cta):not(.mod-warning):hover {
+                        background-color: var(--interactive-bg);
+                        transition: var(--medium-transition);
+                    }
                 }
             }
         }
@@ -224,4 +234,3 @@
         .community-plugin-version, .community-plugin-author {
             line-height: unset;
         }
-

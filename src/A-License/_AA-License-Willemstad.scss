@@ -1,4 +1,4 @@
-$WillemstadVersionNumber: "v0.5.1h1 Jordaan"; /* this ensures that the Version Number is printed */
+$WillemstadVersionNumber: "v0.5.1h2 Jordaan"; /* this ensures that the Version Number is printed */
 
 /* ────────────────────────────────────────────────────────────────────────────────
 > AA
@@ -455,7 +455,7 @@ Willemstad trademark without the author’s prior written consent.
         >>> Add Text and Versioning
         ──────────────────────────────────────────────────────────────────────── */
         
-        :not(.is-mobile) .community-theme.is-selected {
+        body:not(.is-mobile) .community-theme.is-selected {
 
             max-width: calc(2 * var(--width-max-modal-theme) + 1rem);
             width: 100%;

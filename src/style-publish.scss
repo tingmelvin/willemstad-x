@@ -1,12 +1,3 @@
-body {
-
-    --font-interface-override: 'Manrope' !important;
-    --font-monospace-override: 'DM Mono' !important;
-    --font-text-override: 'DM Sans' !important;
-    --font-default: 'DM Sans' !important;
-    
-    }
-
 @use 'A-License/_AA-License-Willemstad';
 @use 'B-Root/_BC-Root-Colours';
 @use 'B-Root/_BT-Root-Typography';
@@ -32,9 +23,19 @@ body {
 @use 'E-Editor/_EX11-CSSC-Latex';
 @use 'E-Editor/_EX12-CSSC-Writing-SFX';
 @use 'E-Editor/_EX13-CSSC-Magazine';
+@use 'E-Editor/_EX16-CSSC-CornellNotes';
 @use 'E-Editor/_EY13-HTML-Aside';
 @use 'E-Editor/_EY21-HTML-ProgressBar';
 @use 'E-Editor/_EZ00-OtherStyling';
 @use 'E-Editor/_EZ01-IndentationGuides';
 @use 'Y-PublishSpecific/_YA-Publish-Core';
 @use 'Y-PublishSpecific/_YF-Publish-Font';
+
+body {
+
+    --font-interface-override: 'Manrope' !important;
+    --font-monospace-override: 'DM Mono' !important;
+    --font-text-override: 'DM Sans' !important;
+    --font-default: 'DM Sans' !important;
+    
+    }
