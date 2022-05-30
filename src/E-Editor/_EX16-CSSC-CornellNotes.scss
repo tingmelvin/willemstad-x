@@ -37,26 +37,30 @@ Last Updated: 2022-05-22
 .theme-light, .theme-dark {
     --left-align-cornell-cssclass: 30%;
     --gap-cornell-cssclass: 2.5%;
+
+    --text-align-cornell-cssclass: justify;
+    --text-align-last-cornell-cssclass: right;
 }
 
 .cornell {
-    p {
+    div.el-p {
         margin-left: var(--left-align-cornell-cssclass);
-        text-align: justify;
+        text-align: var(--text-align-cornell-cssclass);
     }
 
     aside {
         float: left;
         max-width: calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
-        text-align: justify;
-        text-align-last: right;
+        min-width: unset; /* since I made it 125px elsewhere for Willemstad */
+        text-align: var(--text-align-cornell-cssclass);
+        text-align-last: var(--text-align-last-cornell-cssclass);
         margin-left: 0;
     }
 
     .callout {
         p {
             margin-left: unset;
-            text-align: justify;
+            text-align: var(--text-align-cornell-cssclass);
         }
     }
 
@@ -103,8 +107,8 @@ Last Updated: 2022-05-22
             font-weight: bold;
             font-size: 1.5em;
 
-            text-align: justify;
-            text-align-last: right;
+            text-align: var(--text-align-cornell-cssclass);
+            text-align-last: var(--text-align-last-cornell-cssclass);
         }
 
     }

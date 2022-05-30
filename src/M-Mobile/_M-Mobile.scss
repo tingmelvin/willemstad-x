@@ -15,38 +15,44 @@ body.is-mobile {
 
     }
 
-    .installed-plugins-container .setting-item-control {
+    .installed-plugins-container {
 
-        gap: 10px;
+        padding-top: 0px;
 
-        & > div {
-            margin: 0;
+        .setting-item-control {
+
+                column-gap: 10px;
+
+                & > div {
+                    margin: 0;
+                }
+            
+                & > button.mod-cta {
+                    order: -1;
+                    width: 20vw;
+                    position: relative;
+                }
+
+            }
         }
-    
-        & > button.mod-cta {
-            order: -1;
-            width: 20vw;
-            position: relative;
-        }
 
+    .community-plugin-item {
+        margin: 0;
     }
 
     .view-header-title {
         width: 100%;
     }
 
-    .installed-plugins-container {
-        padding-top: 0px;
-    }
-
-    & ::webkit-scrollbar {
+    & ::-webkit-scrollbar {
         display: none;
     }
 
     .community-theme .modal-button-container {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        row-gap: 0.25rem;
+        column-gap: 1rem;
     }
 
     .nav-header {
@@ -65,7 +71,8 @@ body.is-mobile {
 
     .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
         margin: 0.25rem;
-        gap: 1rem;
+        row-gap: 0.25rem;
+        column-gap: 1rem;
     }
 
     .community-plugin-search .setting-item {

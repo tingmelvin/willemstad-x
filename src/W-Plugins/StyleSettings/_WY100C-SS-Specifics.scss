@@ -15,6 +15,7 @@
     .setting-item.mod-toggle[data-id="support-willemstad-github"] .setting-item-description,
     .setting-item.mod-toggle[data-id="support-willemstad-issue"] .setting-item-description,
     .setting-item.mod-toggle[data-id="support-willemstad-obsidian"] .setting-item-description,
+    .setting-item.mod-toggle[data-id="cornell-cssclass-see-syntax"] .setting-item-description,
     .setting-item.mod-toggle[data-id="placeholder-1"] .setting-item-description,
     .setting-item.mod-toggle:is([data-id="support-kepano"], [data-id="info-re-theme-documentation"]) .setting-item-description {
         cursor: text;
@@ -218,7 +219,8 @@
     [data-id="support-kepano"],
     [data-id="info-re-theme-documentation"],
     [data-id="download-settings-search"],
-    [data-id="warning-cm6-only"]) :is(.setting-item-control, .checkbox-container, .setting-editor-extra-setting-button) {
+    [data-id="warning-cm6-only"],
+    [data-id="cornell-cssclass-see-syntax"]) :is(.setting-item-control, .checkbox-container, .setting-editor-extra-setting-button) {
 
         display: none;
 

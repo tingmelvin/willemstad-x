@@ -1447,6 +1447,11 @@ settings:
      level: 3
      collapsed: true
     -
+        id: magazine-cssclass-see-syntax
+        title: "See an example of how to make your own Magazine CSSClass:"
+        description: https://willemstad.cc/Examples/CSSClass-Magazine
+        type: class-toggle
+    -
         id: size-cssclass-magazine
         title: "Font Size — Magazine CSSClass"
         type: variable-number-slider
@@ -1521,8 +1526,9 @@ settings:
      collapsed: true
     -
         id: cornell-cssclass-see-syntax
-        title: "See an example of how to make your own Cornell Notes CSSClass."
-        description: 
+        title: "See an example of how to make your own Cornell Notes CSSClass:"
+        description: https://willemstad.cc/Examples/CSSClass-Cornell
+        type: class-toggle
     -
         id: left-align-cornell-cssclass
         title: "Left Margin — Cornell Notes CSSClass"
@@ -1544,6 +1550,41 @@ settings:
         step: 0.5
         format: '%'
     -
+        id: text-align-cornell-cssclass
+        title: "Text Alignment — Cornell Notes CSSClass"
+        type: variable-select
+        default: justify
+        options:
+            -
+                label: 'Justify'
+                value: justify
+            -
+                label: 'Left'
+                value: left
+            -
+                label: 'Right'
+                value: right
+            -
+                label: 'Centre'
+                value: center            
+    -
+        id: text-align-last-cornell-cssclass
+        title: "Text Alignment (Last Line) — Cornell Notes CSSClass"
+        type: variable-select
+        default: right
+        options:
+            -
+                label: 'Justify'
+                value: justify
+            -
+                label: 'Left'
+                value: left
+            -
+                label: 'Right'
+                value: right
+            -
+                label: 'Centre'
+                value: center
     -
      id: misc
      title: "Miscellany"

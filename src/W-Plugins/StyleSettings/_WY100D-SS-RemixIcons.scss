@@ -640,7 +640,7 @@
 
     }
 
-    .setting-item:is([data-id="PComm009-settings"]) .setting-item-name > span::after {
+        .setting-item:is([data-id="PComm009-settings"]) .setting-item-name > span::after {
 
         content: "\eb26"; /* \ed9c */
 
@@ -652,7 +652,13 @@
 
     }
 
-        .setting-item:is([data-id="longform-settings"]) .setting-item-name > span::after {
+    .setting-item:is([data-id="PComm033-settings"]) .setting-item-name > span::after {
+
+        content: "\ed4a";
+
+    }
+
+    .setting-item:is([data-id="longform-settings"]) .setting-item-name > span::after {
 
         content: "\f049"; /*  \ead6 */
 
@@ -667,6 +673,12 @@
     .setting-item:is([data-id="magazine-settings"]) .setting-item-name > span::after {
 
         content: "\ecfa";
+
+    }
+
+    .setting-item:is([data-id="cornell-settings"]) .setting-item-name > span::after {
+
+        content: "\eadf";
 
     }
 

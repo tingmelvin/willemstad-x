@@ -1,0 +1,94 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DF13
+\ UI > Non-Main Screen Elements
+\ Empty State Screen (No Files opened)
+──────────────────────────────────────────────────────────────────────────────── */
+
+.empty-state {
+
+    background-color: var(--background-primary-alt);
+
+}
+
+.empty-state-action {
+
+    padding-right: 0.5rem;
+    /* border: 1px solid var(--background-secondary-alt); */
+    border-radius: calc(var(--shape-roundish) * 1);
+    border-left: 0;
+
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+
+    &::before {
+
+        font-family: "remixicon";
+        color: var(--text-accent);
+
+        /* vertical-align: middle; */
+
+        vertical-align: top;
+        display: inline-block;
+        height: fit-content;
+        width: fit-content;
+
+        font-size: 1rem;
+        margin-right: 0.25rem;
+        /* letter-spacing: 1px; */
+
+        background-color: var(--background-secondary-alt);
+        border-radius: calc(var(--shape-roundish) * 1);
+        opacity: 0.8;
+        
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+
+
+    }
+
+    &:hover::before {
+
+        color: var(--text-accent-hover);
+        opacity: 1;
+
+    }
+
+    &:first-of-type::before {
+
+        content: "\ea11";
+
+    } // new file
+
+    &:nth-of-type(2)::before {
+
+        content: "\ea70";
+
+    } // go to file
+
+    &:nth-of-type(3)::before {
+
+        content: "\ecb4";
+        
+    } // see recent files
+
+    &:nth-of-type(4)::before {
+
+        content: "\eb97";
+        color: var(--text-error);
+
+    } // close
+
+    &:nth-of-type(4):hover {
+
+        
+        color: var(--text-error-hover);
+
+        &::before {
+
+            color: var(--text-error-hover);
+
+        }
+
+    } // close
+}
