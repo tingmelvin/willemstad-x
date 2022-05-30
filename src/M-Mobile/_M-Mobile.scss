@@ -37,6 +37,7 @@ body.is-mobile {
 
     .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
         margin: 0.25rem;
+        gap: 1rem;
     }
 
     .community-plugin-search .setting-item {
@@ -156,8 +157,17 @@ body.is-mobile {
     }
 
     .modal {
-        max-width: calc(100% - 10px);
-        bottom: 5px;
+        /* max-width: calc(100% - 10px);
+        bottom: 5px; */
+        width: 100%;
+        bottom: 0px;
+        height: 100%;
+        max-width: 100%;
+
+        &.modal {
+            border-radius: 0;
+        }
+        
     }
 
     & .modal.modal:is(.mod-settings, .mod-community-plugin, .mod-community-theme) {
