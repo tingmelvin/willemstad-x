@@ -3,6 +3,10 @@
 \ Mobile
 ──────────────────────────────────────────────────────────────────────────────── */
 
+.callout:not(.admonition).drop-shadow {
+    box-shadow: none;
+}
+
 body.is-mobile {
 
     padding-top: 0 !important; /* needs an important */
@@ -13,6 +17,10 @@ body.is-mobile {
         line-height: 1.2rem;
         padding-left: 0.125rem;
 
+    }
+
+    & ::webkit-scrollbar {
+        display: none;
     }
 
     .community-theme .modal-button-container {
@@ -104,6 +112,10 @@ body.is-mobile {
 
     .community-theme {
         width: 100%;
+    }
+
+    .vertical-tab-header-group {
+        padding: 0;
     }
 
     .setting-item-control {
