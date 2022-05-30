@@ -15,6 +15,38 @@ body.is-mobile {
 
     }
 
+    .community-theme .modal-button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-header {
+        border-bottom: none;
+    }
+
+    .nav-buttons-container svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .workspace-drawer-header-icon svg {
+        width: 20px;
+        height: 20px;        
+    }
+
+    .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
+        margin: 0.25rem;
+    }
+
+    .community-plugin-search .setting-item {
+        padding: 0 10px 0 10px;
+
+        .search-input-container {
+            margin: 0;
+        }
+    }
+
     .side-dock-ribbon {
         overflow: hidden;
         height: 100%;
@@ -30,7 +62,9 @@ body.is-mobile {
     }
 
     .workspace-drawer-header-left {
-        display: inline;
+        /* display: inline; */
+        display: inline-flex;
+        align-items: center;
     }
 
     .workspace-drawer-header {
@@ -38,7 +72,6 @@ body.is-mobile {
 
         svg.pin {
             position: relative;
-            width: 1.25rem;
         }
     }
 
@@ -77,7 +110,7 @@ body.is-mobile {
         input, button {
 
             width: 100%;
-            margin: 0 0 0.5rem 0;
+            margin: 0;
 
         }
 

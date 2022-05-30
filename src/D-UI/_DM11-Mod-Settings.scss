@@ -7,7 +7,7 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> SETTINGS
         ──────────────────────────────────────────────────────────────────────── */
-        :not(.is-mobile) {
+        body:not(.is-mobile) {
             .modal.mod-settings .vertical-tab-header {
                 padding: 0;
             }
@@ -23,7 +23,7 @@
         /* ────────────────────────────────────────────────────────────────────────
         >>> SETTINGS > COMMUNITY PLUGINS > INSTALLED PLUGINS
         ──────────────────────────────────────────────────────────────────────── */
-        :not(.is-mobile) {
+        body:not(.is-mobile) {
             .installed-plugins-container {
                 padding: 0;
 
