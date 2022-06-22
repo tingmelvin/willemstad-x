@@ -20,7 +20,7 @@ Steps to reproduce the behavior:
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**Which OS (operating system do you use?**
+**Which OS (operating system do you use?)**
 - [ ] Windows
 - [ ] macOS
 - [ ] Linux
@@ -34,6 +34,12 @@ _Please note, Willemstad does not support the old editor_**
 - [ ] Source mode (full Markdown edit)
 - [ ] Live Preview
 - [ ] Reading mode (Preview)
+
+**What is your Obsidian version?**
+<!--- Go to App > About. Paste the number appended to "Current version" below this line. --->
+
+**What is your installer version?**
+<!--- Go to App > About. Paste the number appended to "Installer version" below this line. --->
 
 **Checklist**
 - [ ] In case I am missing an UI element, I have checked that it cannot be re-enabled with the Style Settings plugin. *
