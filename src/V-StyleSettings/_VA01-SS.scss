@@ -309,7 +309,7 @@ settings:
                     step: 0.1
     -
             id: elements-nav
-            title: Navigation, Navigation Pane and Sidebar Panes
+            title: Navigation, Navigation Pane, Sidebar Panes and Sidebar Tabs
             description: 'Customise the abovementioned elements here.'
             type: heading
             level: 2
@@ -402,6 +402,12 @@ settings:
                 -
                     label: Right-aligned
                     value: nav-buttons-right-R
+    -
+            id: show-sidebar-tabs
+            title: "Show Sidebar Tabs"
+            type: class-toggle
+            description: "When enabled, the sidebar tabs will be displayed."
+            default: false
     -
             id: sb-tabs-align-L
             title: Sidebar Tabs Alignment — Left Sidebar Pane
@@ -1392,6 +1398,12 @@ settings:
      level: 3
      collapsed: true
     -
+        id: eq-num-latex
+        title: "Equation Numbering"
+        type: class-toggle
+        description: When enabled, the equations will be numbered incrementally throughout the document.
+        default: false
+    -
         id: size-cssclass-latex
         title: "Font Size — LaTeX CSSClass"
         type: variable-number-slider
@@ -1585,6 +1597,26 @@ settings:
             -
                 label: 'Centre'
                 value: center
+    -
+     id: html-settings
+     title: HTML Styling
+     type: heading
+     description: "LaTeX, Magazine, Cornell Notes"
+     level: 2
+     collapsed: false
+    -
+        id: progressbar-settings
+        title: Progress Bar
+        type: heading
+        description: "Settings for the Progress Bar"
+        level: 3
+        collapsed: true
+    -
+            id: percentage-progressbar
+            title: "Append Percentage to Progress Bar"
+            type: class-toggle
+            description: "When enabled, this will append the progress bar percentage to the right end of the progress bar."
+            default: false 
     -
      id: misc
      title: "Miscellany"

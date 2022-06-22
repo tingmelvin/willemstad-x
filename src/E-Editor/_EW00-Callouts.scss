@@ -25,6 +25,16 @@
             & .callout:not(.admonition).drop-shadow {
                 box-shadow: none;
             } /* wth is there even this */
+
+            & .callout-content {
+                table {
+                    margin-bottom: 0.75rem;
+                }
+
+                table:first-child {
+                    margin-top: 0.75rem;
+                }
+            }
                
         }
 

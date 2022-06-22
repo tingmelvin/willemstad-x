@@ -5,6 +5,8 @@
 ──────────────────────────────────────────────────────────────────────────────── */
 
 progress {
+    display: inline-flex;
+
     -webkit-appearance: none;
 
     --col-progress-0: hsl(0, 100%, 52.55%);
@@ -82,4 +84,15 @@ progress {
     &[value='9']::-webkit-progress-value {
         background-color: var(--col-progress-0);
     }
+
+}
+
+body.percentage-progressbar progress::after {
+    content: attr(value) '%';
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    left: 5px;
+
+    width: 0px;
 }

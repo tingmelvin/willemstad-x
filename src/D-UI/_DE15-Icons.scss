@@ -36,6 +36,10 @@
     }
 }
 
+@supports not (-webkit-touch-callout: none) {
+    /* CSS for other than iOS devices */ 
+    /* thanks Damian! */
+
 body:not(.icons-obsidian-standard) {
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -868,6 +872,16 @@ body:not(.icons-obsidian-standard) {
 
             }
         }
+
+        @at-root body:is(.icons-obsidian-standard) .workspace-tab-header {
+
+            & svg {
+
+                height: 17px;
+                width: 17px;
+
+            } /* decide if I want to rationalise it to 20px */
+        }
     
 
     /* ────────────────────────────────────────────────────────────────────────────
@@ -1214,4 +1228,5 @@ body:not(.icons-obsidian-standard) {
 
     
 
+}
 }

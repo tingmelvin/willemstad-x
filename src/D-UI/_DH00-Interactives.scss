@@ -67,7 +67,7 @@ input.document-replace-input {
     }
 
     div.community-plugin-search {
-        padding-top: 0rem;
+        /* padding-top: 0rem; */
         padding-right: 0.25rem;
     }
 
@@ -216,20 +216,31 @@ input.document-replace-input {
 
     }
 
-        button {
-            margin-right: 0.5rem;
-            border-radius: calc(var(--shape-roundish) * 3);
-            border: 2px solid var(--interactive-border-color);
-            font-size: 0.95rem;
+    button {
+        /* margin-right: 0.5rem; */
+        margin-right: 0;
+        border-radius: calc(var(--shape-roundish) * 3);
+        border: 2px solid var(--interactive-border-color);
+        font-size: 0.95rem;
 
-            display: flex;
+        display: flex;
 
+        transition: var(--quick-transition);
+
+        &:hover {
             transition: var(--quick-transition);
-
-            &:hover {
-                transition: var(--quick-transition);
-            }
         }
+    }
+
+    button ~ button {
+        /* margin-left: 0.5rem; */
+    } /* I absolutely detest this */
+
+    .modal-button-container {
+        display: flex;
+        justify-content: center;
+    }
+    
 
 
     /* ────────────────────────────────────────────────────────────────────────
@@ -572,6 +583,39 @@ body.is-mobile {
     }
 }
 
+/* ────────────────────────────────────────────────────────────────────────────
+>>> HOVER POPOVER
+──────────────────────────────────────────────────────────────────────────── */
+
+.theme-light, .theme-dark {
+    --height-hover-popover: 400px;
+    --padding-hover-popover: 0.5rem;
+}
+
+.popover.hover-popover {
+    border: 1px solid var(--background-modifier-border);
+
+    padding: var(--padding-hover-popover);
+    max-height: var(--height-hover-popover);
+
+    & .markdown-embed {
+        height: calc(var(--height-hover-popover) - 2 * var(--padding-hover-popover));
+    }
+    
+}
+
+.popover {
+    border-radius: calc(var(--shape-roundish) * 1.25);
+    
+}
+
+
+
+
+
+
+/* ───────────────────────────────────────────────────────────────────────── */
+
 
 
 /* search, again */
@@ -595,10 +639,4 @@ button.document-search-button {
     .nav-action-button.nav-action-button {
         padding: var(--padding-actionbtn-nav);
     }
-}
-
-/* flex the modal button container */
-
-.modal-button-container {
-    display: flex;
 }

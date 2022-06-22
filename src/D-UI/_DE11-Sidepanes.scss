@@ -309,11 +309,19 @@
         height: 1.9rem;
         transition: var(--medium-transition);
     }
-    body .workspace-tab-header-container {
+    body:not(.show-sidebar-tabs) .workspace-tab-header-container {
         padding-top: var(--height-sidebar-tabs);
     }
-    body .workspace-tab-header-container:hover {
+    body:not(.show-sidebar-tabs) .workspace-tab-header-container:hover {
         padding-top: 0.2rem;
+    }
+
+    body:is(.show-sidebar-tabs) .workspace-tabs.workspace-tabs.workspace-tabs.workspace-tabs .workspace-tab-header-container {
+        height: 1.9rem;
+        transition: var(--medium-transition);
+    }
+    body:is(.show-sidebar-tabs) .workspace-tab-header-container {
+        padding-top: var(--height-sidebar-tabs);
     }
 
     .theme-light, .theme-dark {
@@ -356,6 +364,14 @@
             }
 
 
+        }
+
+        body:is(.show-sidebar-tabs) .workspace-tab-header-container {
+
+            .workspace-tab-header-inner-icon {
+
+                opacity: 1;
+            }
         }
 
         /* for scroll */
@@ -563,6 +579,10 @@
 
     }
 
+    body:is(.show-sidebar-tabs) .workspace-tab-header-container {
+        max-height: calc(1.9rem + 0.3rem);
+    } /* permanent max-height */
+
     .workspace-tab-header-container {
         max-width: 100%; /* ensures it's inside the width of the sidepanes */
     }
@@ -727,3 +747,36 @@
 
     }
     */
+
+    // nuking stuff in v0.15
+
+    .workspace-tabs .workspace-leaf {
+        border: none;
+    }
+
+    .workspace-tabs .workspace-leaf.mod-active {
+        border-color: unset;
+    }
+
+    /* border on workspace ribbons */
+    .workspace-ribbon.mod-left.is-collapsed {
+        border-right-color: transparent;
+    }
+
+    .workspace-ribbon.mod-right.is-collapsed {
+        border-left-color: transparent;
+    }
+
+    /* keyboard nav focus */
+    .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+    .workspace-leaf.mod-active .nav-file.has-focus {
+        border: none;
+        background-color: hsla(var(--interactive-accent-hsl), 0.3);
+        
+    }
+
+    .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title,
+    .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
+        color: var(--text-normal);
+    }
+

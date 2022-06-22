@@ -58,6 +58,7 @@
     ──────────────────────────────────────────────────────────────────────────── */
         .titlebar {
             background-color: var(--col-titlebar);
+            border-bottom: none;
         }
         
         .theme-light, .theme-dark {

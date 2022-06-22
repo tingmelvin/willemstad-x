@@ -246,6 +246,35 @@ Version: 0.1.0
     */
 
     /* ────────────────────────────────────────────────────────────────────────────
+    >> {to fix} EQUATION NUMBERS | INCREMENTAL
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    body.eq-num-latex {
+        .latex {
+
+            counter-reset: math-block;
+            
+            .math-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            counter-increment: math-block;
+            }
+        
+            .math-block::before {
+            content: "(" counter(math-block) ")";
+            visibility: hidden;
+            } /* to center */
+        
+            .math-block::after {
+            content: "(" counter(math-block) ")";
+            }
+        }
+    }
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
     >> FIX PADDINGS
     ──────────────────────────────────────────────────────────────────────────── */
 

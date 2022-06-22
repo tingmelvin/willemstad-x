@@ -118,6 +118,16 @@
     /* ────────────────────────────────────────────────────────────────────────────
     >> [SHIMMERING FOCUS | BOLD OPTIONS MODAL]
     ──────────────────────────────────────────────────────────────────────────── */
-    body:not(.remove-modal-cp-options-bold) .vertical-tab-header-group:not(:last-child) .vertical-tab-header-group-items .vertical-tab-nav-item:is(:nth-child(3),:nth-child(4),:last-child) {
+    body:not(.remove-modal-cp-options-bold) .vertical-tab-header-group:nth-last-of-type(3) .vertical-tab-header-group-items .vertical-tab-nav-item:is(:nth-child(3),:nth-child(4),:last-child) {
         font-weight: bold;
+    }
+
+    /* HOTKEY SEARCH CONTAINER (should this be in DH00?) */
+    .hotkey-search-container {
+        padding: 0;
+        padding-bottom: 5px;
+    } /* uhhh I hope this doesn't break */
+
+    .hotkey-settings-container {
+        /* padding-top: 20px; */
     }

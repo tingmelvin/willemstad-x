@@ -68,6 +68,9 @@
     body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before {
         display: none;
     } /* removes shadows, also, seriously Sliding Panes */
+    body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+        display: none;
+    } /* BYE SHADOWS */
 
     body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-action.view-action {
         margin: 0;
@@ -79,6 +82,7 @@
     body.plugin-sliding-panes-rotate-header .mod-root .workspace-leaf-content .view-actions > a {
         align-items: center;
     }
+
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [COMMUNITY PLUGIN | Admonitions]

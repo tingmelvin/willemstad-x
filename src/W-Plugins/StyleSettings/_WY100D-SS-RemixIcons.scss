@@ -695,7 +695,18 @@
         content: "\f22c";
 
     }
-    
+
+    .setting-item:is([data-id="html-settings"]) .setting-item-name > span::after {
+
+        content: "\ee40";
+
+    }
+
+    .setting-item:is([data-id="progressbar-settings"]) .setting-item-name > span::after {
+
+        content: "\ea9c";
+
+    }
     
 
     .setting-item:is([data-id="plugin-core"]) .setting-item-name > span::after {

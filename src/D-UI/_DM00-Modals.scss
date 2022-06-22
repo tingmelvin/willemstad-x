@@ -128,8 +128,13 @@
 
         .modal {
             h1, h2, h3, h4, h5, h6 {
-                padding: 0 0.5rem;
-            }
+                padding: 0 0;
+
+                &:first-child {
+                    margin-block-start: 0em;
+                } /* usually plugin devs use heading blocks (eg H1) for the plugin name, so we don't want the extra starting space*/
+
+            } /* why did I set it to 0 0.5rem? */
         }
 
         .community-plugin-readme.markdown-preview-view.markdown-rendered {

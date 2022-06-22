@@ -142,8 +142,17 @@ body {
             }
 
         }
+
+        table {
+
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
     }
 }
+
+
 
 div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
 .el-hr) + * > div.callout[data-callout="infobox"] {

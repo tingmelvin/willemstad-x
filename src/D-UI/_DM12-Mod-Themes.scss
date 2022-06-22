@@ -75,6 +75,20 @@
 
             & .modal-button-container {
                 display: flex;
+                column-gap: 0.5rem;
             }
 
         }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [CHECK FOR UPDATES BUTTON]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> 
+        ──────────────────────────────────────────────────────────────────────── */
+
+        .modal.mod-community-theme .community-theme-container .community-theme-mode-toggle-container {
+            & > button {
+                background-color: var(--interactive-accent);
+                color: var(--text-on-accent);
+            }
+        } /* sync with mod.cta "check for updates" for comm plugins */

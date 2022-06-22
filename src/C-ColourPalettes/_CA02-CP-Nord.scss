@@ -58,7 +58,8 @@
                     --col-header-title-dormant: hsl(193, 43%, 67%);
                     --interactive-bg: hsl(179, 25%, 65%);
                     --interactive-border-color: hsl(193, 43%, 63%);
-                    --interactive-accent: hsl(179, 25%, 65%);
+                    --interactive-accent: hsl(var(--interactive-accent-hsl));
+                    --interactive-accent-hsl: 179, 25%, 65%;
                     --interactive-accent-hover: hsl(193, 43%, 67%);
                     --scroll-hover: hsl(213, 32%, 52%);                
                     --col-selection: var(--accent-lighterer);
@@ -119,7 +120,8 @@
                     --col-header-title-dormant: hsl(219, 28%, 88%);
                     --interactive-bg: hsl(193, 43%, 57%);
                     --interactive-border-color: hsl(193, 43%, 57%);
-                    --interactive-accent: hsl(193, 43%, 57%);
+                    --interactive-accent: hsl(var(--interactive-accent-hsl));
+                    --interactive-accent-hsl: 193, 43%, 57%;
                     --interactive-accent-hover: hsl(219, 28%, 88%);
                     --scroll-hover: hsl(193, 43%, 57%); 
                     --col-selection: var(--accent-lighterer);

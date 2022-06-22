@@ -9,7 +9,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.5.1h1 Jordaan
+Willemstad X | v0.5.3 Jordaan
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -434,7 +434,7 @@ Willemstad trademark without the author’s prior written consent.
         ──────────────────────────────────────────────────────────────────────── */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad X v0.5.1h1 Jordaan";
+  content: "  /  Willemstad X v0.5.3 Jordaan";
   /* for title bar */
 }
 .tb-willemstad div.titlebar-text::after {
@@ -447,21 +447,21 @@ div.titlebar-text::after {
 ───────────────────────────────────────────────────────────────────────────────
     >>> Add Text and Versioning
     ──────────────────────────────────────────────────────────────────────── */
-:not(.is-mobile) .community-theme.is-selected {
+body:not(.is-mobile) .community-theme.is-selected {
   max-width: calc(2 * var(--width-max-modal-theme) + 1rem);
   width: 100%;
   padding: 1rem 1rem;
 }
-:not(.is-mobile) .community-theme.is-selected .community-theme-title {
+body:not(.is-mobile) .community-theme.is-selected .community-theme-title {
   font-size: 2rem;
 }
-:not(.is-mobile) .community-theme.is-selected .community-theme-title::after {
+body:not(.is-mobile) .community-theme.is-selected .community-theme-title::after {
   font-size: 1rem;
 }
-:not(.is-mobile) .community-theme.is-selected .community-theme-info:after {
+body:not(.is-mobile) .community-theme.is-selected .community-theme-info:after {
   left: 55%;
 }
-:not(.is-mobile) .community-theme.is-selected img[src] {
+body:not(.is-mobile) .community-theme.is-selected img[src] {
   max-width: 50%;
 }
 
@@ -480,7 +480,7 @@ div.titlebar-text::after {
   content: "🏘️";
 }
 .community-theme.is-selected .community-theme-title::after {
-  content: "\av0.5.1h1 Jordaan";
+  content: "\av0.5.3 Jordaan";
   white-space: pre-wrap;
   font-size: 0.8rem;
   letter-spacing: -0.02rem;
@@ -601,7 +601,8 @@ div.titlebar-text::after {
   --col-header-title-dormant: hsl(184, 74%, 20%);
   --interactive-bg: hsl(155, 100%, 37%);
   --interactive-border-color: hsl(184, 74%, 20%);
-  --interactive-accent: hsl(155, 100%, 37%);
+  --interactive-accent: hsl(var(--interactive-accent-hsl));
+  --interactive-accent-hsl: 155, 100%, 37%;
   --interactive-accent-hover: hsl(184, 74%, 20%);
   --scroll-hover: hsl(155, 100%, 48%);
   --col-selection: hsl(41, 100%, 55%);
@@ -642,7 +643,8 @@ div.titlebar-text::after {
   --col-header-title-dormant: hsl(184, 74%, 20%);
   --interactive-bg: hsl(155, 100%, 37%);
   --interactive-border-color: hsl(155, 100%, 37%);
-  --interactive-accent: hsl(155, 100%, 37%);
+  --interactive-accent: hsl(var(--interactive-accent-hsl));
+  --interactive-accent-hsl: 155, 100%, 37%;
   --interactive-accent-hover: hsl(184, 74%, 20%);
   --scroll-hover: hsl(155, 100%, 48%);
   --col-selection: hsl(41, 100%, 55%);
@@ -978,6 +980,30 @@ body:not(.no-animations) {
 
 .markdown-embed .markdown-preview-view {
   padding: 0 0 0 0;
+}
+
+/*
+.markdown-embed-content, .markdown-embed-block {
+    padding: 0 0;
+    margin: 0 0;
+}
+*/
+.file-embed {
+  border: none;
+  border-radius: calc(var(--shape-roundish) * 1.25);
+}
+
+/* ────────────────────────────────────────────────────────────────────
+>>>> EMBED FILE LINK ICON PLACEMENTS
+──────────────────────────────────────────────────────────────────── */
+.markdown-embed-link, .file-embed-link {
+  top: 0.25rem;
+  right: 0.25rem;
+  transition: var(--quicker-transition);
+}
+.markdown-embed-link:hover, .file-embed-link:hover {
+  color: var(--text-faint);
+  transition: var(--quicker-transition);
 }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -1601,42 +1627,42 @@ body:not(.plugin-sliding-panes-rotate-header).fit-titles-vll.length-line-var .wo
     ───────────────────────────────────────────────────────────────────────────────
         >>> (OPTIONS) Δ Heading Background Colours
         ──────────────────────────────────────────────────────────────────────── */
-:is(.markdown-preview-section, .markdown-preview-view) :is(h1),
+:is(.markdown-preview-section) :is(h1),
 .admonition-content > h1,
 .callout-content h1,
 .HyperMD-header-1.cm-line {
   background-color: var(--col-h1-bg);
 }
 
-:is(.markdown-preview-section, .markdown-preview-view) :is(h2),
+:is(.markdown-preview-section) :is(h2),
 .admonition-content > h2,
 .callout-content h2,
 .HyperMD-header-2.cm-line {
   background-color: var(--col-h2-bg);
 }
 
-:is(.markdown-preview-section, .markdown-preview-view) :is(h3),
+:is(.markdown-preview-section) :is(h3),
 .admonition-content > h3,
 .callout-content h3,
 .HyperMD-header-3.cm-line {
   background-color: var(--col-h3-bg);
 }
 
-:is(.markdown-preview-section, .markdown-preview-view) :is(h4),
+:is(.markdown-preview-section) :is(h4),
 .admonition-content > h4,
 .callout-content h4,
 .HyperMD-header-4.cm-line {
   background-color: var(--col-h4-bg);
 }
 
-:is(.markdown-preview-section, .markdown-preview-view) :is(h5),
+:is(.markdown-preview-section) :is(h5),
 .admonition-content > h5,
 .callout-content h5,
 .HyperMD-header-5.cm-line {
   background-color: var(--col-h5-bg);
 }
 
-:is(.markdown-preview-section, .markdown-preview-view) :is(h6),
+:is(.markdown-preview-section) :is(h6),
 .admonition-content > h6,
 .callout-content h6,
 .HyperMD-header-6.cm-line {
@@ -1974,16 +2000,6 @@ body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
   margin: 0.5rem 0;
 }
 
-@media print {
-  .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
-    width: 100%;
-  }
-
-  .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
-    padding: var(--padding-header-t) 0 var(--padding-header-b) 0;
-    margin: 0.5rem 0;
-  }
-}
 /* ────────────────────────────────────────────────────────────────────────────────
 > ET11
 \ Editor > Typography
@@ -2223,9 +2239,19 @@ span.cm-strong.cm-em.cm-highlight {
   /* ensures that it wouldn't eat into other things as well */
   margin-top: var(--margin-callout);
   margin-bottom: var(--margin-callout);
+  /* wth is there even this */
 }
 .callout .callout .callout-content {
   border: none;
+}
+.callout .callout:not(.admonition).drop-shadow {
+  box-shadow: none;
+}
+.callout .callout-content table {
+  margin-bottom: 0.75rem;
+}
+.callout .callout-content table:first-child {
+  margin-top: 0.75rem;
 }
 
 .callout-icon svg {
@@ -2885,6 +2911,10 @@ body .callout[data-callout=infobox] .callout-content :is(h1, h2, h3, h4, h5, h6)
   text-align: center;
   padding-left: 0.15rem;
   padding-right: 0.15rem;
+}
+body .callout[data-callout=infobox] table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
@@ -3698,6 +3728,27 @@ Version: 0.1.0
 }
 */
 /* ────────────────────────────────────────────────────────────────────────────
+>> {to fix} EQUATION NUMBERS | INCREMENTAL
+──────────────────────────────────────────────────────────────────────────── */
+body.eq-num-latex .latex {
+  counter-reset: math-block;
+  /* to center */
+}
+body.eq-num-latex .latex .math-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  counter-increment: math-block;
+}
+body.eq-num-latex .latex .math-block::before {
+  content: "(" counter(math-block) ")";
+  visibility: hidden;
+}
+body.eq-num-latex .latex .math-block::after {
+  content: "(" counter(math-block) ")";
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
 >> FIX PADDINGS
 ──────────────────────────────────────────────────────────────────────────── */
 .latex .markdown-preview-section h1,
@@ -3945,22 +3996,26 @@ Last Updated: 2022-05-22
 .theme-light, .theme-dark {
   --left-align-cornell-cssclass: 30%;
   --gap-cornell-cssclass: 2.5%;
+  --text-align-cornell-cssclass: justify;
+  --text-align-last-cornell-cssclass: right;
 }
 
-.cornell p {
+.cornell div.el-p {
   margin-left: var(--left-align-cornell-cssclass);
-  text-align: justify;
+  text-align: var(--text-align-cornell-cssclass);
 }
 .cornell aside {
   float: left;
   max-width: calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
-  text-align: justify;
-  text-align-last: right;
+  min-width: unset;
+  /* since I made it 125px elsewhere for Willemstad */
+  text-align: var(--text-align-cornell-cssclass);
+  text-align-last: var(--text-align-last-cornell-cssclass);
   margin-left: 0;
 }
 .cornell .callout p {
   margin-left: unset;
-  text-align: justify;
+  text-align: var(--text-align-cornell-cssclass);
 }
 .cornell .callout[data-callout^=cornell] {
   display: flex;
@@ -3995,8 +4050,8 @@ Last Updated: 2022-05-22
 .cornell .callout[data-callout=cornell-title] .callout-content {
   font-weight: bold;
   font-size: 1.5em;
-  text-align: justify;
-  text-align-last: right;
+  text-align: var(--text-align-cornell-cssclass);
+  text-align-last: var(--text-align-last-cornell-cssclass);
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -4027,6 +4082,7 @@ aside {
 \ Progress Bar
 ──────────────────────────────────────────────────────────────────────────────── */
 progress {
+  display: inline-flex;
   -webkit-appearance: none;
   --col-progress-0: hsl(0, 100%, 52.55%);
   --col-progress-1: hsl(13.39, 100%, 49.22%);
@@ -4079,6 +4135,15 @@ progress[value="100"]::-webkit-progress-value {
 }
 progress[value="0"]::-webkit-progress-value, progress[value="1"]::-webkit-progress-value, progress[value="2"]::-webkit-progress-value, progress[value="3"]::-webkit-progress-value, progress[value="4"]::-webkit-progress-value, progress[value="5"]::-webkit-progress-value, progress[value="6"]::-webkit-progress-value, progress[value="7"]::-webkit-progress-value, progress[value="8"]::-webkit-progress-value, progress[value="9"]::-webkit-progress-value {
   background-color: var(--col-progress-0);
+}
+
+body.percentage-progressbar progress::after {
+  content: attr(value) "%";
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  left: 5px;
+  width: 0px;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
