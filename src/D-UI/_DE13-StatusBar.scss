@@ -159,22 +159,30 @@
         /* ────────────────────────────────────────────────────────────────────────
         >>> Defaults?
         ──────────────────────────────────────────────────────────────────────── */
+        .status-bar-item-icon {
+            display: flex;
+        }
 
         .status-bar-item {
             padding: 0rem 0rem;
             display: flex;
             align-items: center;
-
-            &:first-child {
-                padding-left: 0.5rem;
-            }
-
-            &:last-child {
-                padding-right: 0.5rem;
-            }
         
         }   /* remove up down padding to make it actually have everything align nicely */
             /* change the height instead? */
+
+        .status-bar {
+            & > .status-bar-item {
+
+                &:first-child {
+                    padding-left: 0.5rem;
+                }
+
+                &:last-child {
+                    padding-right: 0.5rem;
+                }
+            }
+        } /* have to use > else some weird shenanigans will go on */
 
         .status-bar {
             gap: 0.75rem;

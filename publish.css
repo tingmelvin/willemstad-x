@@ -9,7 +9,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad X | v0.5.3 Jordaan
+Willemstad X | v0.5.4 Jordaan
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -433,8 +433,8 @@ Willemstad trademark without the author’s prior written consent.
         >>> add Willemstad Version Number
         ──────────────────────────────────────────────────────────────────────── */
 div.titlebar-text::after {
+  content: "  /  Willemstad X v0.5.4 Jordaan";
   white-space: pre;
-  content: "  /  Willemstad X v0.5.3 Jordaan";
   /* for title bar */
 }
 .tb-willemstad div.titlebar-text::after {
@@ -448,8 +448,8 @@ div.titlebar-text::after {
     >>> Add Text and Versioning
     ──────────────────────────────────────────────────────────────────────── */
 body:not(.is-mobile) .community-theme.is-selected {
-  max-width: calc(2 * var(--width-max-modal-theme) + 1rem);
   width: 100%;
+  max-width: calc(2 * var(--width-max-modal-theme) + 1rem);
   padding: 1rem 1rem;
 }
 body:not(.is-mobile) .community-theme.is-selected .community-theme-title {
@@ -480,34 +480,40 @@ body:not(.is-mobile) .community-theme.is-selected img[src] {
   content: "🏘️";
 }
 .community-theme.is-selected .community-theme-title::after {
-  content: "\av0.5.3 Jordaan";
-  white-space: pre-wrap;
+  content: "\av0.5.4 Jordaan";
+
   font-size: 0.8rem;
-  letter-spacing: -0.02rem;
   font-weight: normal;
+  letter-spacing: -0.02rem;
   text-decoration: underline overline;
+  white-space: pre-wrap;
   /* allows Version Number to fit nicely */
   text-underline-position: under;
 }
 .community-theme.is-selected .community-theme-info:after {
-  /* general stuff */
-  white-space: pre-wrap;
-  font-weight: bold;
+  /* for Style Settings not downloaded and/or enabled */
+  content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \a\aThis theme works without the 'Style Settings' plugin, but will have limited functionality. \a\aPlease download and enable the 'Style Settings' plugin via 'Settings > Community Plugins > Browse' to take full advantage of this theme!";
+
   font-size: 0.8rem;
+  font-weight: bold;
   line-height: 100%;
   letter-spacing: -0.01rem;
+  /* general stuff */
+  white-space: pre-wrap;
+
+  color: var(--text-normal);
+  background-color: var(--background-secondary);
+
   position: absolute;
   top: 35%;
   right: 5%;
   left: 5%;
+
   padding: 0.3rem 0.25rem 0.3rem 0.25rem;
   margin: 0.25rem;
-  color: var(--text-normal);
-  background-color: var(--background-secondary);
-  border-radius: calc(var(--shape-roundish) * 3);
-  /* for Style Settings not downloaded and/or enabled */
-  content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \a\aThis theme works without the 'Style Settings' plugin, but will have limited functionality. \a\aPlease download and enable the 'Style Settings' plugin via 'Settings > Community Plugins > Browse' to take full advantage of this theme!";
+
   border: 0.125rem solid var(--text-error);
+  border-radius: calc(var(--shape-roundish) * 3);
 }
 .css-settings-manager .community-theme.is-selected .community-theme-info:after {
   /* for Style Settings being enabled */
@@ -515,14 +521,14 @@ body:not(.is-mobile) .community-theme.is-selected img[src] {
   border: 0.125rem solid var(--interactive-accent);
 }
 .community-theme.is-selected span.community-theme-downloads {
-  position: relative;
   color: var(--text-accent);
+  position: relative;
   padding: 0 0 0.25rem 0;
 }
 .community-theme.is-selected .community-theme-info {
   color: var(--text-accent);
-  justify-content: center;
   padding: 0 0 0.75rem 0;
+  justify-content: center;
 }
 .community-theme-info {
   justify-content: flex-start;
@@ -530,18 +536,23 @@ body:not(.is-mobile) .community-theme.is-selected img[src] {
 }
 
 .community-theme.is-selected .community-theme-info .clickable-icon {
-  width: 100%;
-  background-color: var(--background-secondary);
-  border: 0.125rem solid var(--interactive-accent);
-  color: var(--text-accent);
-  cursor: pointer;
   display: block;
+
   text-align: center;
+
+  width: 100%;
+
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+
+  border: 0.125rem solid var(--interactive-accent);
   border-radius: calc(var(--shape-roundish) * 1.25);
+
+  cursor: pointer;
 }
 .community-theme.is-selected .community-theme-info .clickable-icon::after {
-  color: var(--text-accent);
   content: "Repository";
+  color: var(--text-accent);
   padding-left: 0.25rem;
 }
 
@@ -859,15 +870,15 @@ body.is-mobile {
 .cm-s-obsidian .CodeMirror-linewidget kbd,
 .cm-s-obsidian .hmd-fold-html kbd,
 .cm-s-obsidian span.cm-hmd-callout {
-  letter-spacing: -0.015rem;
   font-size: 0.9em;
+  letter-spacing: -0.015rem;
 }
 
 .setting-hotkey {
   font-family: var(--font-monospace);
   font-size: 0.8em;
-  border-radius: calc(var(--shape-roundish) * 1.25);
   padding: 0 0.6rem 0 0.6rem;
+  border-radius: calc(var(--shape-roundish) * 1.25);
 }
 
 /* ────────────────────────────────────────────────────────────────────────
@@ -993,6 +1004,12 @@ body:not(.no-animations) {
   border-radius: calc(var(--shape-roundish) * 1.25);
 }
 
+.markdown-source-view.mod-cm6 .cm-embed-block {
+  padding: 0;
+  border: 0px;
+}
+
+/* remove LP view border */
 /* ────────────────────────────────────────────────────────────────────
 >>>> EMBED FILE LINK ICON PLACEMENTS
 ──────────────────────────────────────────────────────────────────── */
@@ -1023,8 +1040,8 @@ body:not(.no-animations) {
 ──────────────────────────────────────────────────────────────────── */
 .markdown-source-view .markdown-embed,
 .markdown-source-view .file-embed {
-  border: 0;
   padding: 0;
+  border: 0;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -1040,11 +1057,11 @@ body:not(.no-animations) {
     >>> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
     ──────────────────────────────────────────────────────────────────────── */
 .markdown-preview-view blockquote {
-  margin: 0.5rem 0;
-  border-left-width: 0.3rem;
-  padding: 0.35rem 0.5rem;
-  border-radius: calc(var(--shape-roundish) * 1.25);
   background-color: var(--background-primary-alt);
+  padding: 0.35rem 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: calc(var(--shape-roundish) * 1.25);
+  border-left-width: 0.3rem;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -1091,11 +1108,13 @@ pre[class*=language-] {
 .markdown-reading-view pre[class*=language-]::before {
   display: block;
   content: attr(class) " ";
-  line-height: 1.5em;
+
   font-size: 0.9em;
-  background-color: var(--background-secondary);
-  color: var(--col-code-open);
+  line-height: 1.5em;
   text-align: right;
+
+  color: var(--col-code-open);
+  background-color: var(--background-secondary);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -1124,9 +1143,9 @@ pre[class*=language-]) {
   transition: var(--quicker-transition);
 }
 .markdown-rendered button.copy-code-button::after {
-  font-size: var(--font-text-size);
-  font-family: remixicon;
   content: "\ecd5";
+  font-family: remixicon;
+  font-size: var(--font-text-size);
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -1184,8 +1203,8 @@ hr {
 ───────────────────────────────────────────────────────────────────────── */
 .hr.cm-line > hr {
   border: none;
-  border-top: 2px solid;
   border-color: var(--background-modifier-border);
+  border-top: 2px solid;
 }
 
 .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] > hr {
@@ -1232,13 +1251,13 @@ hr {
 ──────────────────────────────────────────────────────────────────────────── */
 .view-header {
   display: flex;
-  align-items: center;
   /* ensures center alignment */
   /* oh the lords this is buggy */
   padding: 0 var(--padding-content-lr);
+  border-top: 0px;
+  align-items: center;
   /* to make up for the other paddings removed */
   gap: 0.25rem;
-  border-top: 0px;
 }
 
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
@@ -1270,10 +1289,10 @@ a.view-action {
 
 .workspace-leaf-content[data-type=markdown] .view-header {
   display: flex;
-  align-items: center;
   /* ensures center alignment */
   /* oh the lords this is buggy */
   padding: 0 var(--padding-content-lr);
+  align-items: center;
   /* to make up for the other paddings removed */
   gap: 0.25rem;
 }
@@ -1334,18 +1353,20 @@ a.view-action {
   border-radius: calc(var(--shape-roundish) * 1.25);
 }
 .frontmatter-container :is(.frontmatter-alias) {
-  white-space: pre-wrap;
-  hyphens: auto;
-  word-wrap: break-word;
-  padding: 0;
-  margin: 0.125rem 0.25rem;
   line-height: 1em;
+  hyphens: auto;
+  white-space: pre-wrap;
   /* needs to be 1em so the line height won't eat */
   background-color: transparent;
+
+  padding: 0;
+  margin: 0.125rem 0.25rem;
+
+  word-wrap: break-word;
 }
 .frontmatter-container .tag {
-  margin: 0 0.25rem;
   padding: 0 0.5rem;
+  margin: 0 0.25rem;
 }
 .frontmatter-container .frontmatter-container-header {
   margin: 0;
@@ -1391,8 +1412,8 @@ body.yaml-coloured .cm-s-obsidian .cm-hmd-frontmatter {
   /* general frontmatter */
 }
 body.yaml-coloured .cm-s-obsidian .cm-hmd-frontmatter.cm-atom {
-  color: var(--col-frontmatter-atom);
   font-weight: bold;
+  color: var(--col-frontmatter-atom);
 }
 body.yaml-coloured .cm-s-obsidian .cm-hmd-frontmatter.cm-meta {
   color: var(--col-frontmatter-meta);
@@ -1406,8 +1427,8 @@ body:not(.yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter {
   /* general frontmatter */
 }
 body:not(.yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter.cm-atom {
-  color: var(--col-frontmatter-atom);
   font-weight: bold;
+  color: var(--col-frontmatter-atom);
 }
 body:not(.yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter.cm-meta {
   color: var(--col-frontmatter-meta);
@@ -1437,15 +1458,19 @@ div.frontmatter-container {
   display: block;
 }
 .metadata-container-blankline div.frontmatter-container.frontmatter-container::before {
-  content: "";
   display: block;
-  width: 100%;
+  content: "";
+
   height: 100%;
-  border-radius: calc(var(--shape-roundish) * 1.25);
+  width: 100%;
+
   opacity: 0.1;
+
   position: absolute;
   top: 0;
   left: 0;
+
+  border-radius: calc(var(--shape-roundish) * 1.25);
 }
 
 /*
@@ -1537,24 +1562,31 @@ div.frontmatter-container.frontmatter-container {
 */
 /* single dot */
 .metadata-container-dot div.frontmatter-container.frontmatter-container {
+  /* max(100%, calc(50% + calc(0.5 * var(--width-vll)))); */
+  display: inline-block;
+
+  height: 1em;
+  width: 1em;
+
+  background-color: var(--col-frontmatter-hide);
+
   position: absolute;
   top: 0.25em;
   left: 1rem;
-  /* max(100%, calc(50% + calc(0.5 * var(--width-vll)))); */
-  display: inline-block;
-  background-color: var(--col-frontmatter-hide);
+
   border: none;
-  height: 1em;
-  width: 1em;
   border-radius: var(--shape-round);
 }
 .metadata-container-dot div.frontmatter-container.frontmatter-container:hover {
   display: block;
-  background-color: unset;
-  border: 1px solid var(--background-modifier-border);
-  background-color: var(--background-primary-alt);
+
   height: unset;
   width: unset;
+
+  background-color: unset;
+  background-color: var(--background-primary-alt);
+
+  border: 1px solid var(--background-modifier-border);
   border-radius: calc(var(--shape-roundish) * 1.25);
 }
 .metadata-container-dot div.frontmatter-container.frontmatter-container > * {
@@ -1602,7 +1634,6 @@ body:not(.plugin-sliding-panes-rotate-header).fit-titles-vll.length-line-var .wo
   */
 }
 body:not(.plugin-sliding-panes-rotate-header).fit-titles-vll.length-line-var .workspace-leaf-content[data-type=markdown] div.view-header {
-  box-sizing: border-box;
   /*
   max-width: calc(100% - 2rem);
 
@@ -1610,9 +1641,10 @@ body:not(.plugin-sliding-panes-rotate-header).fit-titles-vll.length-line-var .wo
   */
   /* was for content-box, but didn't take into account borders */
   max-width: 100%;
-  padding-left: max(50% - 0.5 * var(--width-vll), var(--padding-content-lr));
   /* thank the lords that negative padding is not a thing */
   padding-right: max(50% - 0.5 * var(--width-vll), var(--padding-content-lr));
+  padding-left: max(50% - 0.5 * var(--width-vll), var(--padding-content-lr));
+  box-sizing: border-box;
   /* calc(50% - (0.5 * var(--width-vll)));*/
   /* 1rem comes from the markdown-preview-view padding */
   /* see ED for more changes */
@@ -1851,39 +1883,39 @@ body:not(.plugin-sliding-panes-rotate-header).fit-titles-vll.length-line-var .wo
 }
 .gradient-headers:is(.theme-dark, .theme-light) h1,
 .gradient-headers:is(.theme-dark, .theme-light) .cm-header-1 {
+  background-image: var(--col-h1-grad);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--col-h1-grad);
 }
 .gradient-headers:is(.theme-dark, .theme-light) h2,
 .gradient-headers:is(.theme-dark, .theme-light) .cm-header-2 {
+  background-image: var(--col-h2-grad);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--col-h2-grad);
 }
 .gradient-headers:is(.theme-dark, .theme-light) h3,
 .gradient-headers:is(.theme-dark, .theme-light) .cm-header-3 {
+  background-image: var(--col-h3-grad);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--col-h3-grad);
 }
 .gradient-headers:is(.theme-dark, .theme-light) h4,
 .gradient-headers:is(.theme-dark, .theme-light) .cm-header-4 {
+  background-image: var(--col-h4-grad);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--col-h4-grad);
 }
 .gradient-headers:is(.theme-dark, .theme-light) h5,
 .gradient-headers:is(.theme-dark, .theme-light) .cm-header-5 {
+  background-image: var(--col-h5-grad);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--col-h5-grad);
 }
 .gradient-headers:is(.theme-dark, .theme-light) h6,
 .gradient-headers:is(.theme-dark, .theme-light) .cm-header-6 {
+  background-image: var(--col-h6-grad);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--col-h6-grad);
 }
 .gradient-headers:is(.theme-dark, .theme-light) div.el-h1 {
   background-color: var(--col-h1-bg);
@@ -1959,8 +1991,8 @@ body .cm-s-obsidian .cm-header, body .markdown-preview-view :is(h1, h2, h3, h4, 
     >>> var paddings
     ──────────────────────────────────────────────────────────────────────── */
 .cm-s-obsidian .HyperMD-header.HyperMD-header {
-  padding-bottom: var(--padding-header-b);
   padding-top: var(--padding-header-t);
+  padding-bottom: var(--padding-header-b);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -1982,11 +2014,11 @@ body .cm-s-obsidian .cm-header, body .markdown-preview-view :is(h1, h2, h3, h4, 
 body .cm-s-obsidian .cm-header, body .cm-s-obsidian .cm-header ~ span,
 body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
 :is(h1, h2, h3, h4, h5, h6) {
-  letter-spacing: -0.015rem;
-  /* FORCES LESS HEADER SPACING */
-  font-style: normal;
   /* FORCES NORMAL */
   font-weight: 600;
+  /* FORCES LESS HEADER SPACING */
+  font-style: normal;
+  letter-spacing: -0.015rem;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -2015,8 +2047,8 @@ body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
 :is(.markdown-preview-view, .markdown-rendered) mark,
 :is(.markdown-preview-view, .markdown-rendered) mark .internal-link,
 .cm-s-obsidian span.cm-highlight {
-  background-color: var(--col-highlight-0);
   color: var(--col-highlight-text);
+  background-color: var(--col-highlight-0);
 }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -2027,9 +2059,9 @@ body .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
 span.cm-em.cm-highlight {
   font-style: normal;
   text-decoration: unset;
+  color: var(--col-highlight-text);
   background: none;
   background-color: var(--col-highlight-1);
-  color: var(--col-highlight-text);
 }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -2040,9 +2072,9 @@ span.cm-em.cm-highlight {
 span.cm-strong.cm-highlight {
   font-weight: normal;
   text-decoration: unset;
+  color: var(--col-highlight-text);
   background: none;
   background-color: var(--col-highlight-2);
-  color: var(--col-highlight-text);
 }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -2053,9 +2085,9 @@ span.cm-strong.cm-highlight {
 span.cm-strong.cm-em.cm-highlight {
   font-weight: normal;
   text-decoration: unset;
+  color: var(--col-highlight-text);
   background: none;
   background-color: var(--col-highlight-3);
-  color: var(--col-highlight-text);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -2235,10 +2267,10 @@ span.cm-strong.cm-em.cm-highlight {
 }
 
 .callout {
-  overflow-x: hidden;
   /* ensures that it wouldn't eat into other things as well */
   margin-top: var(--margin-callout);
   margin-bottom: var(--margin-callout);
+  overflow-x: hidden;
   /* wth is there even this */
 }
 .callout .callout .callout-content {
@@ -2256,8 +2288,8 @@ span.cm-strong.cm-em.cm-highlight {
 
 .callout-icon svg {
   display: inline-block;
-  width: 1em;
   height: 1em;
+  width: 1em;
   /* font-size: inherit; */
 }
 
@@ -2274,8 +2306,8 @@ span.cm-strong.cm-em.cm-highlight {
   color: var(--text-normal);
 }
 .HyperMD-callout.HyperMD-callout > span.cm-hmd-callout {
-  color: var(--col-code-open);
   font-family: var(--font-monospace);
+  color: var(--col-code-open);
 }
 .HyperMD-callout.HyperMD-callout > span.cm-hmd-callout ~ span {
   font-family: var(--font-monospace);
@@ -2297,15 +2329,15 @@ span.cm-strong.cm-em.cm-highlight {
   /* ensures that the svg is centered */
 }
 .callout-title .callout-fold svg {
-  width: 1em;
   height: 1em;
+  width: 1em;
   /* fix tp custom size, follows admonitions */
 }
 
 /* opinionated stuff */
 body:not(.callout-standard) .callout {
-  border-radius: calc(var(--shape-roundish) * 1.25);
   border-left: 0rem solid rgb(var(--callout-color));
+  border-radius: calc(var(--shape-roundish) * 1.25);
   transition: var(--quick-transition);
 }
 body:not(.callout-standard) .callout:hover {
@@ -2313,22 +2345,22 @@ body:not(.callout-standard) .callout:hover {
   transition: var(--quick-transition);
 }
 body:not(.callout-standard) .callout-title {
-  padding: 0.35em 1em;
   /* make it thinner */
   font-family: var(--font-heading);
+  padding: 0.35em 1em;
   /* ensures this appears first */
 }
 body:not(.callout-standard) .callout-title .callout-title-inner {
+  font-weight: 600;
   word-break: break-word;
   /* ensure that it doesn't break callouts */
   order: -2;
-  font-weight: 600;
 }
 body:not(.callout-standard) .callout-title .callout-fold {
-  order: -1;
   /* ensures this appears before all the svg */
   opacity: 0.3;
   transition: var(--quicker-transition);
+  order: -1;
 }
 body:not(.callout-standard) .callout-title:hover .callout-fold {
   opacity: 1;
@@ -2347,9 +2379,9 @@ body:not(.callout-standard) .callout-content p {
   margin-block-end: 0.5em;
 }
 body:not(.callout-standard) svg.ChevronDown {
-  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
   background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
 }
@@ -2366,9 +2398,9 @@ body:not(.callout-standard) svg.ChevronDown > * {
   /* transform: scale(calc(var(-font-text-size) * 0.8)); */
 }
 .callout-icon.callout-icon svg {
-  width: 1em;
   /* admonitions is 1em */
   height: 1em;
+  width: 1em;
 }
 .theme-light .callout-icon.callout-icon svg {
   filter: brightness(95%);
@@ -2448,6 +2480,8 @@ body div.callout:is([data-callout-metadata*=monospace]) .callout-content {
 body:not(.callout-standard) {
   /* add Chris's stuff - from Shimmering Focus */
   /* more extras */
+  /* plus */
+  /* minus */
   /* code */
   /* success */
   /*
@@ -2616,6 +2650,16 @@ body:not(.callout-standard).theme-dark .callout:is([data-callout=goal]) :is(.cal
   color: #9f80ff;
 }
 
+body:not(.callout-standard) .callout:is([data-callout=plus],
+[data-callout=positive]) {
+  --callout-color: 50, 205, 50;
+  --callout-icon: plus;
+}
+body:not(.callout-standard) .callout:is([data-callout=minus],
+[data-callout=negative]) {
+  --callout-color: 124, 13, 14;
+  --callout-icon: minus;
+}
 body:not(.callout-standard) .callout:is([data-callout=code]) {
   --callout-color: 0, 0, 0;
   --callout-icon: code-2;
@@ -2733,11 +2777,11 @@ body:not(.callout-standard):not(.no-animations) .callout:is([data-callout=import
 >> CUSTOM CALLOUT ICONS
 ──────────────────────────────────────────────────────────────────────────── */
 body:not(.icons-obsidian-standard) .callout[data-callout=success] svg.star {
-  -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.587 8.236l2.598-5.232a.911.911 0 0 1 1.63 0l2.598 5.232l5.808.844a.902.902 0 0 1 .503 1.542l-4.202 4.07l.992 5.75c.127.738-.653 1.3-1.32.952L12 18.678l-5.195 2.716c-.666.349-1.446-.214-1.319-.953l.992-5.75l-4.202-4.07a.902.902 0 0 1 .503-1.54l5.808-.845Z"%2F%3E%3C%2Fsvg%3E');
-  transform: rotate(45deg);
   /* background-color: rgb(0, 158, 76); */
   /* sama-sama */
   background-color: #009e4c;
+  transform: rotate(45deg);
+  -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.587 8.236l2.598-5.232a.911.911 0 0 1 1.63 0l2.598 5.232l5.808.844a.902.902 0 0 1 .503 1.542l-4.202 4.07l.992 5.75c.127.738-.653 1.3-1.32.952L12 18.678l-5.195 2.716c-.666.349-1.446-.214-1.319-.953l.992-5.75l-4.202-4.07a.902.902 0 0 1 .503-1.54l5.808-.845Z"%2F%3E%3C%2Fsvg%3E');
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
 }
@@ -2750,11 +2794,11 @@ body:not(.icons-obsidian-standard) .callout[data-callout=success] svg.star > * {
 \ Callouts (Columns)
 ──────────────────────────────────────────────────────────────────────────────── */
 body .callout:is([data-callout=columns]) {
-  --callout-color: 150, 150, 150;
-  --callout-icon: columns;
   /* fallback option: grid */
   background-color: unset;
   margin-bottom: 0;
+  --callout-color: 150, 150, 150;
+  --callout-icon: columns;
 }
 body .callout:is([data-callout=columns]):hover {
   border-left: 0rem solid rgb(var(--callout-color));
@@ -2767,11 +2811,11 @@ body .callout:is([data-callout=columns]) > .callout-title:hover {
   transition: var(--quick-transition);
 }
 body .callout:is([data-callout=columns]) > .callout-content {
-  padding: 0;
   display: flex;
+  max-width: 100%;
+  padding: 0;
   flex-direction: row;
   gap: 0.5em;
-  max-width: 100%;
   /* padding: 0 0.5em; */
 }
 body .callout:is([data-callout=columns]) > .callout-content > .callout {
@@ -2799,11 +2843,11 @@ to relook at later */
 \ SlRvb's rights reserved per MIT License
 ──────────────────────────────────────────────────────────────────────────────── */
 div:not(.setting-item) > .admonition.admonition-infobox {
-  float: right;
   max-width: 50%;
-  border: 0;
   box-shadow: none;
   margin-left: 0.5rem;
+  border: 0;
+  float: right;
 }
 
 /*
@@ -2817,8 +2861,8 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
 
 .admonition-infobox .admonition-content {
   padding: 0;
-  border: none;
   margin: 0;
+  border: none;
 }
 
 .admonition-infobox .admonition-content-holder {
@@ -2827,16 +2871,16 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
 
 .admonition-infobox .admonition-content p,
 .admonition-infobox table {
+  margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin: 0;
 }
 
 .admonition-infobox :is(h1, h2, h3, h4, h5, h6) {
   font-size: var(--font-text-size);
   text-align: center;
-  margin: 0;
   padding: 0.125rem;
+  margin: 0;
 }
 
 /* no need for these, perhaps?
@@ -2852,8 +2896,8 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
 }
 */
 .admonition-infobox .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
   justify-content: center;
 }
 
@@ -2867,8 +2911,8 @@ div:not(.setting-item) > .admonition-infobox .admonition-title {
 
 /* removes the admonition-infobox icons */
 .admonition-infobox .admonition-title-content {
-  justify-content: center;
   text-align: center;
+  justify-content: center;
 }
 
 /* centers the title */
@@ -2884,37 +2928,40 @@ div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
 \ adapted from the original Admonition Infobox by SlRvB for the Admonition Plugin
 ──────────────────────────────────────────────────────────────────────────────── */
 body .callout[data-callout=infobox] {
-  float: right;
   max-width: 50%;
-  border: 0;
   margin-left: 0.5rem;
+  border: 0;
+  float: right;
   --callout-color: var(--col-bg-table);
 }
 body .callout[data-callout=infobox] .callout-title {
+  text-align: center;
   background-color: var(--col-bg-table);
   justify-content: center;
-  text-align: center;
 }
 body .callout[data-callout=infobox] .callout-title .callout-icon {
   display: none;
 }
 body .callout[data-callout=infobox] .callout-content {
+  text-align: center;
+
   padding: 0;
-  border: none;
   margin: 0.5rem;
   margin-top: 0rem;
+
+  border: none;
+
   justify-content: center;
-  text-align: center;
 }
 body .callout[data-callout=infobox] .callout-content :is(h1, h2, h3, h4, h5, h6) {
   font-size: var(--font-text-size);
   text-align: center;
-  padding-left: 0.15rem;
   padding-right: 0.15rem;
+  padding-left: 0.15rem;
 }
 body .callout[data-callout=infobox] table {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6,
@@ -2966,9 +3013,9 @@ Version: 0.1.0
 ──────────────────────────────────────────────────────────────────────────────── */
 /* also for callouts */
 div.callout[data-callout=table] {
-  margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 div.el-div[data-callout=table] {
@@ -2982,18 +3029,18 @@ div.el-div[data-callout=table] + * > div.callout[data-callout=table] {
 }
 
 .callout[data-callout=table] {
-  border-left: 0;
   background-color: var(--background-primary);
+  border-left: 0;
 }
 .callout[data-callout=table] > .callout-title {
   display: none;
 }
 .callout[data-callout=table] > .callout-content {
   background-color: var(--background-primary);
-  border-left: 0;
-  margin-left: 0;
-  margin-right: 0;
   padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border-left: 0;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────    
@@ -3008,9 +3055,9 @@ div.el-div[data-callout=table] + * > div.callout[data-callout=table] {
 .admonition-table.admonition,
 .admonition-table > .admonition-content-holder > .admonition-content {
   background-color: var(--background-primary);
-  border-left: 0;
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
+  border-left: 0;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -3047,14 +3094,19 @@ Version: 0.1.0
 
 ──────────────────────────────────────────────────────────────────────────────── */
 div.callout[data-callout=aside] {
-  position: relative;
-  float: right;
   /* text-align: justify; */
   max-width: 25%;
   min-width: 125px;
+
   background-color: var(--background-primary-alt);
+
+  position: relative;
+
   margin-left: 0.5rem;
+
   border-left: 4px solid var(--interactive-accent);
+
+  float: right;
   word-break: break-word;
 }
 div.callout[data-callout=aside]:hover {
@@ -3141,69 +3193,83 @@ div.callout[data-callout*=kanban] .callout-title .callout-icon {
   /* display: none; */
 }
 div.callout[data-callout*=kanban] .callout-content {
-  background-color: var(--background-secondary);
-  border-left: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: var(--padding-content-kanban);
   /* border-radius: calc(var(--shape-roundish) * 2); */
   /* use if not using a title */
   /* border-bottom-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
   /* border-bottom-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
   display: flex;
+
+  height: var(--height-callout-kanban);
+
+  background-color: var(--background-secondary);
+
+  padding: var(--padding-content-kanban);
+  margin-right: 0;
+  margin-left: 0;
+
+  border-left: 0;
+
   flex-direction: column;
   flex-wrap: wrap;
-  height: var(--height-callout-kanban);
   align-content: flex-start;
   column-gap: 0.25rem;
 }
 div.callout[data-callout*=kanban] .callout-icon svg {
+  height: var(--size-font-callout-title);
+  width: var(--size-font-callout-title);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' stroke-width='1.5'  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19,3l-14,0c-1.105,0,-2,0.895,-2,2l0,14c0,1.105,0.895,2,2,2h14c1.105,0,2,-0.895,2,-2v-14c0,-1.105,-0.895,-2,-2,-2z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.4,6h-3.8c-0.331,0,-0.6,0.269,-0.6,0.6l0,10.8c0,0.331,0.269,0.6,0.6,0.6h3.8c0.331,0,0.6,-0.269,0.6,-0.6v-10.8c0,-0.331,-0.269,-0.6,-0.6,-0.6z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4,6h-3.8c-0.331,0,-0.6,0.269,-0.6,0.6v6.8c0,0.331,0.269,0.6,0.6,0.6h3.8c0.331,0,0.6,-0.269,0.6,-0.6v-6.8c0,-0.331,-0.269,-0.6,-0.6,-0.6z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
-  width: var(--size-font-callout-title);
-  height: var(--size-font-callout-title);
 }
 div.callout[data-callout*=kanban] .callout-icon svg path {
   d: var(--icon-box-path);
 }
 div.callout[data-callout*=kanban] :is(h1, h2, h3, h4, h5, h6) {
-  margin-bottom: 0;
-  margin-top: 0;
+  display: flex;
+
+  white-space: nowrap;
+
+  height: var(--height-header-kanban);
+  width: var(--width-ul-kanban);
+
   background-color: transparent;
-  border-top-right-radius: calc(var(--shape-roundish) * 2);
-  border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
   border: 1px solid var(--background-modifier-border);
   border-bottom: none;
-  padding: 0.5rem;
-  height: var(--height-header-kanban);
-  display: flex;
+  border-top-right-radius: calc(var(--shape-roundish) * 2);
+  border-top-left-radius: calc(var(--shape-roundish) * 2);
+
   flex-direction: column;
   align-items: flex-start;
   /* aligns left. for center, use "center". for right, use "flex-end" */
   justify-content: center;
   overflow-y: hidden;
   overflow-x: auto;
-  white-space: nowrap;
-  width: var(--width-ul-kanban);
 }
 div.callout[data-callout*=kanban] ul {
+  height: var(--height-ul-kanban);
+  width: var(--width-ul-kanban);
+
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
   border: 1px solid var(--background-modifier-border);
   border-top: none;
   border-bottom-right-radius: calc(var(--shape-roundish) * 2);
   border-bottom-left-radius: calc(var(--shape-roundish) * 2);
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0.5rem;
-  height: var(--height-ul-kanban);
-  width: var(--width-ul-kanban);
+
   overflow-y: scroll;
 }
 div.callout[data-callout*=kanban] ul > li {
-  padding: 0.25rem;
-  border-radius: calc(var(--shape-roundish) * 1);
   background-color: var(--background-primary);
+  padding: 0.25rem;
   border: 1px solid var(--background-modifier-border);
+  border-radius: calc(var(--shape-roundish) * 1);
 }
 div.callout[data-callout*=kanban] ul > li + li {
   margin-top: 0.25rem;
@@ -3228,83 +3294,98 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 \ NEEDS UPDATING
 ──────────────────────────────────────────────────────────────────────────────── */
 .admonition-kanban {
-  border-left: 0;
   background-color: var(--background-primary);
+  border-left: 0;
 }
 .admonition-kanban .admonition-title {
+  font-size: var(--size-font-callout-title);
+  /* use if using a title */
+  background-color: var(--background-secondary);
+
+  padding-bottom: 0;
+  padding-left: 1rem;
   /* display: none */
   /* use if not using a title */
   border-top-right-radius: calc(var(--shape-roundish) * 2);
   /* use if using a title */
   border-top-left-radius: calc(var(--shape-roundish) * 2);
-  /* use if using a title */
-  background-color: var(--background-secondary);
-  padding-bottom: 0;
-  padding-left: 1rem;
-  font-size: var(--size-font-callout-title);
 }
 .admonition-kanban .admonition-title .admonition-title-icon {
   display: none;
 }
 .admonition-kanban .admonition-content {
+  /* use if using a title */
+  display: flex;
+
+  height: var(--height-callout-kanban);
+
   background-color: var(--background-secondary);
-  border-left: 0;
-  margin-left: 0;
-  margin-right: 0;
+
   padding: var(--padding-content-kanban);
+  margin-right: 0;
+  margin-left: 0;
+
+  border-left: 0;
   /* border-radius: calc(var(--shape-roundish) * 2); */
   /* use if not using a title */
   border-bottom-right-radius: calc(var(--shape-roundish) * 2);
   /* use if using a title */
   border-bottom-left-radius: calc(var(--shape-roundish) * 2);
-  /* use if using a title */
-  display: flex;
+
   flex-direction: column;
   flex-wrap: wrap;
-  height: var(--height-callout-kanban);
   align-content: flex-start;
 }
 .admonition-kanban .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
-  margin-bottom: 0;
-  margin-top: 0;
+  display: flex;
+
+  white-space: nowrap;
+
+  height: var(--height-header-kanban);
+  width: var(--width-ul-kanban);
+
   background-color: transparent;
-  border-top-right-radius: calc(var(--shape-roundish) * 2);
-  border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-right: 0.25rem;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+
   border: 1px solid var(--background-modifier-border);
   border-bottom: none;
-  padding: 0.5rem;
-  height: var(--height-header-kanban);
-  display: flex;
+  border-top-right-radius: calc(var(--shape-roundish) * 2);
+  border-top-left-radius: calc(var(--shape-roundish) * 2);
+
   flex-direction: column;
   align-items: flex-start;
   /* aligns left. for center, use "center". for right, use "flex-end" */
   justify-content: center;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
   overflow-y: hidden;
   overflow-x: auto;
-  white-space: nowrap;
-  width: var(--width-ul-kanban);
 }
 .admonition-kanban ul {
+  height: var(--height-ul-kanban);
+  width: var(--width-ul-kanban);
+
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-right: 0.25rem;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+
   border: 1px solid var(--background-modifier-border);
   border-top: none;
   border-bottom-right-radius: calc(var(--shape-roundish) * 2);
   border-bottom-left-radius: calc(var(--shape-roundish) * 2);
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0.5rem;
-  height: var(--height-ul-kanban);
-  width: var(--width-ul-kanban);
+
   overflow: scroll;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
 }
 .admonition-kanban ul > li {
-  padding: 0.25rem;
-  border-radius: calc(var(--shape-roundish) * 1);
   background-color: var(--background-primary);
+  padding: 0.25rem;
   border: 1px solid var(--background-modifier-border);
+  border-radius: calc(var(--shape-roundish) * 1);
 }
 .admonition-kanban ul > li + li {
   margin-top: 0.25rem;
@@ -3312,8 +3393,8 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 
 /* kanban without title */
 .admonition-kanban-no-title {
-  border-left: 0;
   background-color: var(--background-primary);
+  border-left: 0;
 }
 .admonition-kanban-no-title .admonition-title {
   display: none;
@@ -3325,59 +3406,73 @@ div.callout[data-callout=kanban-no-title] .callout-content {
   display: none;
 }
 .admonition-kanban-no-title .admonition-content {
-  background-color: var(--background-secondary);
-  border-left: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: var(--padding-content-kanban);
-  border-radius: calc(var(--shape-roundish) * 2);
   /* use if not using a title */
   display: flex;
+
+  height: var(--height-callout-kanban);
+
+  background-color: var(--background-secondary);
+
+  padding: var(--padding-content-kanban);
+  margin-right: 0;
+  margin-left: 0;
+
+  border-left: 0;
+  border-radius: calc(var(--shape-roundish) * 2);
+
   flex-direction: column;
   flex-wrap: wrap;
-  height: var(--height-callout-kanban);
   align-content: flex-start;
 }
 .admonition-kanban-no-title .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
-  margin-bottom: 0;
-  margin-top: 0;
+  display: flex;
+
+  white-space: nowrap;
+
+  height: var(--height-header-kanban);
+  width: var(--width-ul-kanban);
+
   background-color: transparent;
-  border-top-right-radius: calc(var(--shape-roundish) * 2);
-  border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-right: 0.25rem;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+
   border: 1px solid var(--background-modifier-border);
   border-bottom: none;
-  padding: 0.5rem;
-  height: var(--height-header-kanban);
-  display: flex;
+  border-top-right-radius: calc(var(--shape-roundish) * 2);
+  border-top-left-radius: calc(var(--shape-roundish) * 2);
+
   flex-direction: column;
   align-items: flex-start;
   /* aligns left. for center, use "center". for right, use "flex-end" */
   justify-content: center;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
   overflow-x: scroll;
-  white-space: nowrap;
-  width: var(--width-ul-kanban);
 }
 .admonition-kanban-no-title ul {
+  height: var(--height-ul-kanban);
+  width: var(--width-ul-kanban);
+
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-right: 0.25rem;
+  margin-bottom: 0;
+  margin-left: 0.25rem;
+
   border: 1px solid var(--background-modifier-border);
   border-top: none;
   border-bottom-right-radius: calc(var(--shape-roundish) * 2);
   border-bottom-left-radius: calc(var(--shape-roundish) * 2);
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0.5rem;
-  height: var(--height-ul-kanban);
-  width: var(--width-ul-kanban);
+
   overflow: scroll;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
 }
 .admonition-kanban-no-title ul > li {
-  padding: 0.25rem;
-  border-radius: calc(var(--shape-roundish) * 1);
   background-color: var(--background-primary);
+  padding: 0.25rem;
   border: 1px solid var(--background-modifier-border);
+  border-radius: calc(var(--shape-roundish) * 1);
 }
 .admonition-kanban-no-title ul > li + li {
   margin-top: 0.25rem;
@@ -3404,9 +3499,9 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 .callout:is([data-callout=grid], [data-callout=masonry], [data-callout=grid-ext]) .callout-content {
   display: block;
   width: 100%;
-  border: 0;
   box-shadow: unset;
   padding: 0;
+  border: 0;
 }
 
 .callout:is([data-callout=grid], [data-callout=masonry], [data-callout=grid-ext]) .callout-title {
@@ -3415,10 +3510,10 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 
 .callout:is([data-callout=masonry], [data-callout=grid-ext]) .callout-content p {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, auto));
-  grid-gap: 2px;
   margin: 0;
   margin-top: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  grid-gap: 2px;
 }
 .callout:is([data-callout=masonry], [data-callout=grid-ext]) .callout-content img {
   display: flex;
@@ -3435,9 +3530,9 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 }
 .callout[data-callout=grid] .callout-content img {
   display: table-cell;
-  vertical-align: middle;
-  padding: 1px;
   max-height: 30vh;
+  padding: 1px;
+  vertical-align: middle;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────    
@@ -3448,9 +3543,9 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 .admonition-grid-ext {
   display: block;
   width: 100%;
-  border: 0;
   box-shadow: unset;
   padding: 0;
+  border: 0;
 }
 
 :is(.admonition-grid,
@@ -3462,10 +3557,10 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 :is(.admonition-masonry,
 .admonition-grid-ext) .admonition-content p {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, auto));
-  grid-gap: 2px;
   margin: 0;
   margin-top: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  grid-gap: 2px;
 }
 
 :is(.admonition-masonry,
@@ -3485,9 +3580,9 @@ div.callout[data-callout=kanban-no-title] .callout-content {
 
 .admonition-grid .admonition-content img {
   display: table-cell;
-  vertical-align: middle;
-  padding: 1px;
   max-height: 30vh;
+  padding: 1px;
+  vertical-align: middle;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -3577,11 +3672,11 @@ Version: 0.1.0
 >> BLOCKQUOTES
 ──────────────────────────────────────────────────────────────────────────── */
 .latex blockquote {
-  border: none;
   background-color: transparent;
-  border-radius: 0;
-  padding-left: 2rem;
   padding-right: 2rem;
+  padding-left: 2rem;
+  border: none;
+  border-radius: 0;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -3606,8 +3701,8 @@ Version: 0.1.0
 .HyperMD-header-5.cm-line,
 .HyperMD-header-6.cm-line),
 .latex .cm-header.cm-header {
-  background-color: transparent;
   color: var(--text-normal);
+  background-color: transparent;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -3629,15 +3724,15 @@ Version: 0.1.0
   border-bottom: 0.1rem solid black;
 }
 .latex table, .latex th, .latex td {
-  border-left: none !important;
-  border-right: none !important;
-  margin-left: auto;
-  margin-right: auto;
   font-size: var(--size-font-preview-table-latex) !important;
+  margin-right: auto;
+  margin-left: auto;
+  border-right: none !important;
+  border-left: none !important;
 }
 .latex th {
-  background-color: transparent !important;
   text-align: center;
+  background-color: transparent !important;
 }
 
 .theme-light, .theme-dark {
@@ -3662,12 +3757,12 @@ Version: 0.1.0
   /* disappears the divider row */
 }
 .latex.latex .HyperMD-table-2.HyperMD-table-row {
-  border: initial;
   padding: initial;
+  border: initial;
 }
 .latex.latex .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line {
-  background-color: initial;
   font-weight: initial;
+  background-color: initial;
 }
 .latex.latex .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line > .cm-hmd-table-sep {
   color: initial;
@@ -3876,11 +3971,11 @@ Version: 0.1.0
 .theme-dark, .theme-light {
   /* change these to what you use! */
   --font-cssclass-magazine: var(--font-ui);
-  --size-cssclass-magazine: 1.5rem;
+  --size-cssclass-magazine: 1.5em;
   --weight-cssclass-magazine: 500;
-  --margin-items-magazine: 0.25rem;
-  --padding-items-magazine: 1.25rem;
-  --height-items-magazine: 10rem;
+  --margin-items-magazine: 0.25em;
+  --padding-items-magazine: 0.75em;
+  --height-items-magazine: 10em;
   --bg-highlight-magazine: linear-gradient(to right, hsl(215, 65%, 53%), hsl(191, 100%, 50%));
   --bg-highlight-magazine-first: linear-gradient(45deg,
       hsl(240, 100%, 20%) 0%,
@@ -3897,9 +3992,9 @@ Version: 0.1.0
 }
 
 .magazine ul {
+  display: flex;
   list-style-type: none;
   padding-inline-start: 0;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -3917,43 +4012,48 @@ Version: 0.1.0
 }
 .magazine ul > * > a {
   display: flex;
+  color: var(--text-normal);
   /* width: fit-content; */
   flex: 1 1 0;
-  color: var(--text-normal);
 }
 .magazine ul > * > a.internal-link.internal-link.internal-link, .magazine ul > * > a.external-link {
   /* specificity can be lowered I think, but Willemstad needs this */
   text-decoration: none;
-  margin: calc(-1 * var(--padding-items-magazine));
   /* omg it works */
   padding: var(--padding-items-magazine);
+  margin: calc(-1 * var(--padding-items-magazine));
 }
 .magazine ul > * > * > a {
   display: flex;
+  color: var(--text-normal);
   /* width: fit-content; */
   flex: 1 1 0;
-  color: var(--text-normal);
 }
 .magazine ul > * > * > a.internal-link.internal-link.internal-link, .magazine ul > * > * > a.external-link {
   /* specificity can be lowered I think, but Willemstad needs this */
   text-decoration: none;
-  margin: calc(-1 * var(--padding-items-magazine));
   /* omg it works */
   padding: var(--padding-items-magazine);
+  margin: calc(-1 * var(--padding-items-magazine));
 }
 .magazine li {
-  padding: var(--padding-items-magazine);
-  border-radius: calc(var(--shape-roundish) * 1);
   /* border: 1px solid var(--background-modifier-border); */
   /* unless you need a border */
   font-family: var(--font-cssclass-magazine);
   font-size: var(--size-cssclass-magazine);
   font-weight: var(--weight-cssclass-magazine);
-  margin: var(--margin-items-magazine);
-  background-color: var(--background-secondary-alt);
-  height: var(--height-items-magazine);
-  overflow: scroll;
   overflow-wrap: break-word;
+
+  height: var(--height-items-magazine);
+
+  background-color: var(--background-secondary-alt);
+
+  padding: var(--padding-items-magazine);
+  margin: var(--margin-items-magazine);
+
+  border-radius: calc(var(--shape-roundish) * 1);
+
+  overflow: scroll;
 }
 .magazine li + li {
   margin-top: 0.25rem;
@@ -4001,21 +4101,24 @@ Last Updated: 2022-05-22
 }
 
 .cornell div.el-p {
-  margin-left: var(--left-align-cornell-cssclass);
   text-align: var(--text-align-cornell-cssclass);
+  margin-left: var(--left-align-cornell-cssclass);
 }
 .cornell aside {
-  float: left;
-  max-width: calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
-  min-width: unset;
   /* since I made it 125px elsewhere for Willemstad */
   text-align: var(--text-align-cornell-cssclass);
-  text-align-last: var(--text-align-last-cornell-cssclass);
+
+  max-width: calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
+  min-width: unset;
+
   margin-left: 0;
+
+  float: left;
+  text-align-last: var(--text-align-last-cornell-cssclass);
 }
 .cornell .callout p {
-  margin-left: unset;
   text-align: var(--text-align-cornell-cssclass);
+  margin-left: unset;
 }
 .cornell .callout[data-callout^=cornell] {
   display: flex;
@@ -4028,28 +4131,28 @@ Last Updated: 2022-05-22
 }
 .cornell .callout[data-callout^=cornell] .callout-title {
   display: flex;
-  flex: 0 0 calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
   border-radius: calc(var(--shape-roundish) * 1.25);
+  flex: 0 0 calc(var(--left-align-cornell-cssclass) - var(--gap-cornell-cssclass));
 }
 .cornell .callout[data-callout^=cornell] .callout-title .callout-title-inner {
   display: flex;
-  align-items: center;
   /* justify-content: center; */
   font-size: 1.5em;
+  align-items: center;
 }
 .cornell .callout[data-callout^=cornell] .callout-content {
   display: flex;
-  flex: 0 0 calc(100% - var(--left-align-cornell-cssclass));
-  justify-content: flex-end;
   background-color: transparent;
   padding: 0;
+  flex: 0 0 calc(100% - var(--left-align-cornell-cssclass));
+  justify-content: flex-end;
 }
 .cornell .callout[data-callout^=cornell] .callout-icon {
   display: none;
 }
 .cornell .callout[data-callout=cornell-title] .callout-content {
-  font-weight: bold;
   font-size: 1.5em;
+  font-weight: bold;
   text-align: var(--text-align-cornell-cssclass);
   text-align-last: var(--text-align-last-cornell-cssclass);
 }
@@ -4064,16 +4167,19 @@ div.cm-html-embed.cm-embed-block > aside {
 }
 
 aside {
+  max-width: 25%;
+  min-width: 125px;
+
+  background-color: var(--background-primary-alt);
+  box-shadow: none;
+
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+
+  border-left: 2px solid var(--interactive-accent);
   /* text-align: justify; */
   word-break: break-word;
   float: right;
-  min-width: 125px;
-  max-width: 25%;
-  background-color: var(--background-primary-alt);
-  border-left: 2px solid var(--interactive-accent);
-  box-shadow: none;
-  margin-left: 0.5rem;
-  padding: 0.5rem;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -4083,7 +4189,9 @@ aside {
 ──────────────────────────────────────────────────────────────────────────────── */
 progress {
   display: inline-flex;
+  height: 0.5em;
   -webkit-appearance: none;
+  vertical-align: middle;
   --col-progress-0: hsl(0, 100%, 52.55%);
   --col-progress-1: hsl(13.39, 100%, 49.22%);
   --col-progress-2: hsl(26.78, 100%, 45.69%);
@@ -4095,12 +4203,10 @@ progress {
   --col-progress-8: hsl(106.51, 100%, 25.29%);
   --col-progress-9: hsl(120, 100%, 21.96%);
   --col-progress-10: hsl(133.49, 100%, 18.63%);
-  height: 0.5em;
-  vertical-align: middle;
 }
 progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value {
-  border-radius: calc(var(--shape-roundish) * 2);
   height: 0.5em;
+  border-radius: calc(var(--shape-roundish) * 2);
   vertical-align: middle;
 }
 progress[value^="1"]::-webkit-progress-value {
@@ -4138,12 +4244,15 @@ progress[value="0"]::-webkit-progress-value, progress[value="1"]::-webkit-progre
 }
 
 body.percentage-progressbar progress::after {
-  content: attr(value) "%";
   display: inline-flex;
-  align-items: center;
+  content: attr(value) "%";
+
+  width: 0px;
+
   position: relative;
   left: 5px;
-  width: 0px;
+
+  align-items: center;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -4156,9 +4265,9 @@ body.percentage-progressbar progress::after {
         >>> (includes Emoji fix)
         ──────────────────────────────────────────────────────────────────────── */
 body.centre-image .view-content img[src]:not(.emoji) {
+  display: block;
   margin-right: auto;
   margin-left: auto;
-  display: block;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -4180,25 +4289,25 @@ body:not(.centre-image) .view-content ul > li > * > img[src]:not(.emoji) {
     \\\ AND ALLOW PEOPLE TO CHOOSE HOW MUCH
     ──────────────────────────────────────────────────────────────────────── */
 .image-desaturation-reading .markdown-preview-view img[src]:not(:hover) {
-  filter: grayscale(40%);
   transition: var(--quick-transition);
+  filter: grayscale(40%);
 }
 
 /* can't var filter I believe */
 .image-desaturation-reading .markdown-preview-view img[src]:hover {
-  filter: grayscale(0%);
   transition: var(--quick-transition);
+  filter: grayscale(0%);
 }
 
 .image-desaturation-all img[src]:not(:hover) {
-  filter: grayscale(40%);
   transition: var(--quick-transition);
+  filter: grayscale(40%);
 }
 
 /* can't var filter I believe */
 .image-desaturation-all img[src]:hover {
-  filter: grayscale(0%);
   transition: var(--quick-transition);
+  filter: grayscale(0%);
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -4267,8 +4376,8 @@ body:not(.show-urls).source-links-hide .cm-s-obsidian:not(.is-live-preview) .cm-
   text-decoration: none;
 }
 body:not(.show-urls).source-links-hide .cm-s-obsidian:not(.is-live-preview) .cm-line:not(.cm-active) .cm-string.cm-url:not(.cm-formatting) {
-  text-decoration: none;
   font-size: 0;
+  text-decoration: none;
 }
 body:not(.show-urls).source-links-hide .cm-s-obsidian:not(.is-live-preview) .cm-line:not(.cm-active) .cm-string.cm-url:not(.cm-formatting)::after {
   content: "\eeb7";
@@ -4309,8 +4418,8 @@ body:not(.remove-collapse-header-sanctum) svg.right-triangle {
   height: 0.875rem;
   width: 0.875rem;
   vertical-align: middle;
-  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -4325,8 +4434,8 @@ body:not(.remove-collapse-header-sanctum) svg.right-triangle {
 >>> MINIMISE PADDING FOR HEADER COLLAPSE INDICATOR
 ───────────────────────────────────────────────────────────────────────── */
 .markdown-preview-view .heading-collapse-indicator {
-  margin-left: -1.75rem;
   padding: 0 0.5rem;
+  margin-left: -1.75rem;
 }
 
 /*
@@ -4412,8 +4521,8 @@ body:is(.indentation-guide-experimental) .HyperMD-list-line {
 }
 body:is(.indentation-guide-experimental) .HyperMD-list-line > * {
   display: contents;
-  vertical-align: top;
   white-space: pre-wrap;
+  vertical-align: top;
 }
 body:is(.indentation-guide-experimental) .markdown-source-view.mod-cm6 {
   /* collapse indicators */
@@ -4434,9 +4543,9 @@ body:not(.remove-collapse-header-sanctum) body:is(.indentation-guide-experimenta
   /* size of the sanctum one */
 }
 body:is(.indentation-guide-experimental) .markdown-source-view.mod-cm6 .HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-  padding-right: 0;
   position: absolute;
   right: calc(-0.5 * var(--indent-indentation-guide-minus));
+  padding-right: 0;
   /* remove above offset so it can close properly FOR FIRST/PRIMATE LIST ITEMS */
 }
 body:is(.indentation-guide-experimental) .markdown-source-view.mod-cm6 .cm-hmd-list-indent {
@@ -4529,44 +4638,45 @@ body:is(.indentation-guide-experimental) div:is(.el-ul, .el-ol)::before {
 \ Publish > Core
 ──────────────────────────────────────────────────────────────────────────────── */
 .markdown-rendered h1 {
+  font-size: 1.8em !important;
   color: var(--col-h1);
   background-color: var(--col-h1-bg);
-  font-size: 1.8em !important;
 }
 .markdown-rendered h2 {
+  font-size: 1.6em !important;
   color: var(--col-h2);
   background-color: var(--col-h2-bg);
-  font-size: 1.6em !important;
 }
 .markdown-rendered h3 {
+  font-size: 1.45em !important;
   color: var(--col-h3);
   background-color: var(--col-h3-bg);
-  font-size: 1.45em !important;
 }
 .markdown-rendered h4 {
+  font-size: 1.3em !important;
   color: var(--col-h4);
   background-color: var(--col-h4-bg);
-  font-size: 1.3em !important;
 }
 .markdown-rendered h5 {
+  font-size: 1.15em !important;
   color: var(--col-h5);
   background-color: var(--col-h5-bg);
-  font-size: 1.15em !important;
 }
 .markdown-rendered h6 {
+  font-size: 1.05em !important;
   color: var(--col-h6);
   background-color: var(--col-h6-bg);
-  font-size: 1.05em !important;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  padding: 0.25rem 0.5rem 0.25rem 2rem;
-  margin: 0.5rem 0 !important;
+  font-family: "Manrope" !important;
+  font-weight: 600;
+  font-style: normal;
   line-height: 125%;
   letter-spacing: -0.015rem;
-  font-style: normal;
-  font-weight: 600;
-  font-family: "Manrope" !important;
+
+  padding: 0.25rem 0.5rem 0.25rem 2rem;
+  margin: 0.5rem 0 !important;
 }
 
 div.site-footer {
@@ -4636,10 +4746,10 @@ body {
 }
 
 div.site-header {
-  border-bottom: none;
   background-color: #f6fefe;
-  margin-top: 0;
   padding: 10px;
+  margin-top: 0;
+  border-bottom: none;
 }
 
 /* Site Header make it nice */
@@ -4670,595 +4780,661 @@ div.site-header {
 /* latin-ext */
 @font-face {
   font-family: "DM Mono";
-  font-style: italic;
   font-weight: 300;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-orYadYY35Zlk.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Mono";
-  font-style: italic;
   font-weight: 300;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-orYadb435.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Mono";
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTW7PB1QTsUX8KYth-gCKSIUKw.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Mono";
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTW7PB1QTsUX8KYth-gBqSI.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Mono";
-  font-style: italic;
   font-weight: 500;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-o9YedYY35Zlk.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Mono";
-  font-style: italic;
   font-weight: 500;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTT7PB1QTsUX8KYth-o9Yedb435.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Mono";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvrGyEY2tbZX9.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Mono";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvrGyEYOtbQ.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Mono";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTU7PB1QTsUX8KYthSQBLyM.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Mono";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTU7PB1QTsUX8KYthqQBA.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Mono";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvumzEY2tbZX9.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Mono";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmmono/v8/aFTR7PB1QTsUX8KYvumzEYOtbQ.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Sans";
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Fp2ywxg089UriCZa4ET-DNl0.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Sans";
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Fp2ywxg089UriCZa4Hz-D.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Sans";
-  font-style: italic;
   font-weight: 500;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZaw7ByWB3wTyCg.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Sans";
-  font-style: italic;
   font-weight: 500;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZaw7ByWCXwT.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Sans";
-  font-style: italic;
   font-weight: 700;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZawpBqWB3wTyCg.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Sans";
-  font-style: italic;
   font-weight: 700;
+  font-style: italic;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Ap2ywxg089UriCZawpBqWCXwT.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Sans";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Sans";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Hp2ywxg089UriCZOIHQ.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Sans";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriAWCrCBamC2QX.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Sans";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriAWCrCBimCw.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
   font-family: "DM Sans";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBamC2QX.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "DM Sans";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/dmsans/v10/rP2Cp2ywxg089UriASitCBimCw.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 200;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_P-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 200;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_G-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 200;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_B-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 200;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_N-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 200;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_M-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 200;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59FN_C-bk.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_P-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_G-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_B-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_N-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_M-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 300;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk6jFN_C-bk.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_P-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_G-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_B-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_N-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_M-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bk.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_P-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_G-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_B-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_N-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_M-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_C-bk.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_P-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_G-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_B-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_N-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_M-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE9_C-bk.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_P-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_G-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_B-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_N-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_M-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_C-bk.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 800;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_P-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 800;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_G-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 800;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_B-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0370-03FF;
 }
 /* vietnamese */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 800;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_N-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 800;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_M-bnBeA.woff2) format("woff2");
+
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
   font-family: "Manrope";
-  font-style: normal;
   font-weight: 800;
+  font-style: normal;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/manrope/v11/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_C-bk.woff2) format("woff2");
+
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 body {
@@ -5267,5 +5443,3 @@ body {
   --font-text-override: "DM Sans" !important;
   --font-default: "DM Sans" !important;
 }
-
-/*# sourceMappingURL=publish.css.map */

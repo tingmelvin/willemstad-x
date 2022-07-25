@@ -72,7 +72,7 @@
 
     span.style-settings-collapse-indicator {
         margin-right: var(--margin-ss-collapse-indicator);
-        margin-left: var(--margin-ss-collapse-indicator);
+        /* margin-left: var(--margin-ss-collapse-indicator); */ /* not needed atm */
     }
 
     /*

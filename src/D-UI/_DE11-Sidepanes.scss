@@ -497,9 +497,23 @@
 
     /* navigation file tag */
 
-    .no-nav-file-tag .nav-file-tag {
-        display: none
+    .nav-file-tag {
+
+        order: 2;
+
+        .no-nav-file-tag & {
+            display: none;
+        }
+        .default-order-nav-file-tag & {
+            order: 0;
+        }
+
+        .nav-file-title:not(.is-unsupported) > & {
+            background-color: var(--background-primary-alt);
+        } /* changes colour of tags for supported files */
     }
+
+
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> NAV > SEARCH

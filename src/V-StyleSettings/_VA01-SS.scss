@@ -657,7 +657,7 @@ settings:
         id: typography-typeface
         title: Font Typeface
         type: heading
-        description: Typeface options for Willemstad. For Longform and Writing cssclass settings, please use the Longform-specific options in the Plugin Settings panel. Font settings set in core Obsidian will override the settings set here.
+        description: Typeface options for Willemstad. For Longform and Writing CSSClass settings, please use the Longform-specific options in the Plugin Settings panel. Font settings set in core Obsidian will override the settings set here.
         level: 2
         collapsed: true
     -
@@ -1460,7 +1460,7 @@ settings:
      collapsed: true
     -
         id: magazine-cssclass-see-syntax
-        title: "See an example of how to make your own Magazine CSSClass:"
+        title: "See an example of how to make your own Magazine"
         description: https://willemstad.cc/Examples/CSSClass-Magazine
         type: class-toggle
     -
@@ -1471,7 +1471,7 @@ settings:
         min: 0.75
         max: 3
         step: 0.05
-        format: 'rem'
+        format: 'em'
     -
         id: font-cssclass-magazine
         title: "Font Typeface — Magazine CSSClass"
@@ -1496,7 +1496,7 @@ settings:
         min: 3
         max: 50
         step: 0.5
-        format: 'rem'
+        format: 'em'
     -
         id: margin-items-magazine
         title: "Inter-Cards Margin — Magazine CSSClass"
@@ -1506,17 +1506,17 @@ settings:
         min: 0
         max: 1.5
         step: 0.05
-        format: 'rem'
+        format: 'em'
     -
         id: padding-items-magazine
         title: "Card Padding — Magazine CSSClass"
         type: variable-number-slider
         description: "Use this setting to change the internal spacing between the card content and card borders"
-        default: 1.25
+        default: 0.75
         min: 0
         max: 3
         step: 0.05
-        format: 'rem'
+        format: 'em'
     -
         id: bg-highlight-magazine-first
         title: "Background (First item) — Magazine CSSClass"
@@ -1538,7 +1538,7 @@ settings:
      collapsed: true
     -
         id: cornell-cssclass-see-syntax
-        title: "See an example of how to make your own Cornell Notes CSSClass:"
+        title: "See an example of how to make your own Cornell Notes"
         description: https://willemstad.cc/Examples/CSSClass-Cornell
         type: class-toggle
     -

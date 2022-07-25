@@ -203,6 +203,20 @@
 
             /* more extras */
 
+            /* plus */
+            & .callout:is([data-callout="plus"],
+                        [data-callout="positive"]) {
+                --callout-color: 50, 205, 50;
+                --callout-icon: plus;
+            }
+
+            /* minus */
+            & .callout:is([data-callout="minus"],
+                        [data-callout="negative"]) {
+                --callout-color: 124, 13, 14;
+                --callout-icon: minus;
+            }
+
             /* code */
             & .callout:is([data-callout="code"]) {
                 --callout-color: 0, 0, 0;

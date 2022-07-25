@@ -260,6 +260,6 @@
         }
 
         .community-plugin-readme :is(h1, h2, h3, h4, h5, h6) {
-            padding: var(--padding-header-t) 0.5rem var(--padding-header-b) 1.8rem;
+            padding: var(--padding-header-t) 0.5rem var(--padding-header-b) 0rem; /* deviation from 1.8rem since it's for the readme */
             margin: 0.5rem 0;
         } /* readme headings */

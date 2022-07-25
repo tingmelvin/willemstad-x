@@ -16,6 +16,7 @@
     .setting-item.mod-toggle[data-id="support-willemstad-issue"] .setting-item-description,
     .setting-item.mod-toggle[data-id="support-willemstad-obsidian"] .setting-item-description,
     .setting-item.mod-toggle[data-id="cornell-cssclass-see-syntax"] .setting-item-description,
+    .setting-item.mod-toggle[data-id="magazine-cssclass-see-syntax"] .setting-item-description,
     .setting-item.mod-toggle[data-id="placeholder-1"] .setting-item-description,
     .setting-item.mod-toggle:is([data-id="support-kepano"], [data-id="info-re-theme-documentation"]) .setting-item-description {
         cursor: text;
@@ -219,8 +220,7 @@
     [data-id="support-kepano"],
     [data-id="info-re-theme-documentation"],
     [data-id="download-settings-search"],
-    [data-id="warning-cm6-only"],
-    [data-id="cornell-cssclass-see-syntax"]) :is(.setting-item-control, .checkbox-container, .setting-editor-extra-setting-button) {
+    [data-id="warning-cm6-only"]) :is(.setting-item-control, .checkbox-container, .setting-editor-extra-setting-button) {
 
         display: none;
 
@@ -303,7 +303,7 @@
             border-radius: calc(var(--shape-roundish) * 1.5);
             padding-left: 0.35rem;
             padding-right: 0.35rem;
-            margin-left: 0.25rem;
+            /* margin-left: 0.25rem; */ /* removed to set left padding on the entire level-0 setting item name so 2-line things look fine */
             margin-right: 0.25rem;
             border: 2px solid var(--interactive-border-color);
             background-color: var(--interactive-accent);
@@ -311,6 +311,10 @@
         }
 
     }
+
+    :is(.setting-item)[data-level="0"] .setting-item-name {
+        padding-left: 0.25rem;
+    } /* sets left padding to ensure 2-line things look fine */
 
     /* ────────────────────────────────────────────────────────────────────────────
     >>> Double Borders
@@ -425,3 +429,34 @@
             }
         }
     }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Styling for Examples (CSSClass, Callouts)
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    /* ALWAYS USE MOD-TOGGLE - or "class-toggle" for Style Settings */
+
+    :is(.setting-item.mod-toggle):is(
+    [data-id="cornell-cssclass-see-syntax"],
+    [data-id="magazine-cssclass-see-syntax"]) {
+
+        background-color: var(--background-primary-alt);
+        text-align: right;
+
+        :is(.setting-item-control, .checkbox-container, .setting-editor-extra-setting-button) {
+
+            display: none;
+
+        } /* removes workspace extraneous reset button */
+
+        .setting-item-description {
+            cursor: text;
+            user-select: all;
+            color: var(--text-accent-hover);
+        } /* makes it selectable to copy */
+
+        .setting-item-name {
+            font-style: italic;
+        }
+
+    } 

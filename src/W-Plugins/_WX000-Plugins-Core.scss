@@ -128,9 +128,38 @@
     body:not(.is-mobile, .normal-command-palette) {
 
         & .suggestion-item {
-            display: table;
-            width: 100%;
+            display: flex;
+            flex: 0 0 100%;
 
+            /* display: table;
+            width: 100%; */
+
+            & kbd.suggestion-hotkey {
+                letter-spacing: -0.01rem;
+                font-size: 0.7em;
+                padding: 0 0.5em;
+                /* line-height: 1.5em; */
+    
+                vertical-align: middle;
+            }
+
+        }
+
+        & .suggestion-content {
+            display: flex;
+            flex: 0 0 80%;
+        }
+
+        & .suggestion-title {
+            display: flex;
+            /* column-gap: 5%; */ /* covered by padding-right in span:not(.suggestion-prefix) + affects other prompts */
+        }
+
+        & .suggestion-aux {
+            display: flex;
+            flex: 0 0 20%;
+            justify-content: flex-end;
+            column-gap: 5%;
         }
 
         & span.suggestion-prefix {
@@ -146,10 +175,8 @@
             &::after {
                 display: none;
             }
-
-            position: absolute;
             
-            left: 55%;
+            /* left: 55%; */
 
             vertical-align: middle;
 
@@ -173,15 +200,6 @@
             }
         }
 
-        & kbd.suggestion-hotkey {
-            letter-spacing: -0.01rem;
-            font-size: 0.7em;
-            padding: 0 0.5em;
-
-            max-width: 20%;
-            vertical-align: middle;
-        }
-
         & .suggestion-flair {
             left: 0.05rem;
             transform: scale(80%);
@@ -189,7 +207,71 @@
         
 
 
-    }
+
+
+        & .suggestion-title {
+            
+
+            & > span:not(.suggestion-prefix, .suggestion-highlight) {
+                
+                display: flex;
+                order: 1;
+                flex:  0 0 65%;
+                padding-right: 5%;
+
+                & > span {
+                    display: contents;
+                }
+
+            }
+
+            & > span:is(.suggestion-prefix) {
+
+                display: flex;
+                order: 2;
+                flex: 0 0 35%;
+
+            }
+
+            .suggestion {
+                .list-item-part.search-suggest-icon.clickable-icon {
+                    display: table-cell;
+                    float: right;
+                } /* for search icons */
+        
+                span.search-suggest-name.list-item-part.mod-extended {
+                    height: fit-content;
+                    display: table-cell;
+                    vertical-align: middle;
+                } /* for the search names */
+            }
+        
+            :is(.suggestion-item.mod-complex, .prompt-results) {
+                .suggestion-aux {
+                    display: table-cell;
+                    text-align: right;
+        
+                    .suggestion-flair {
+        
+                        margin: 0;
+                        margin-right: 4px;
+        
+                        align-self: stretch;
+                        height: 100%;
+        
+                        svg {
+                            height: auto;
+                            width: auto;
+                            vertical-align: middle;
+                        }
+                    }
+        
+                }
+            } /* ugh this needs further resolving */
+        
+        }
+}
+
 
 /* ────────────────────────────────────────────────────────────────────────────────
 >> [CORE PLUGIN | File Explorer]
