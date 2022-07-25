@@ -64,7 +64,7 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 Available [here](https://willemstad.cc), includes information on [callouts](https://willemstad.cc/Theme+Extensions/Callouts).
 
 ## Mentions in the Obsidian Roundup
-[14th May](https://www.obsidianroundup.org/2022-05-14/) | [23rd April](https://www.obsidianroundup.org/2022-04-23/) | [16th April](https://www.obsidianroundup.org/2022-04-16/) | [04th April](https://www.obsidianroundup.org/2022-04-02/) | [26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
+[4th June](https://www.obsidianroundup.org/2022-06-04/) | [14th May](https://www.obsidianroundup.org/2022-05-14/) | [23rd April](https://www.obsidianroundup.org/2022-04-23/) | [16th April](https://www.obsidianroundup.org/2022-04-16/) | [04th April](https://www.obsidianroundup.org/2022-04-02/) | [26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
 
 and of the original Willemstad snippet for Shimmering Focus:
 [12th February](https://www.obsidianroundup.org/2022-02-12/) and [5th February](https://www.obsidianroundup.org/2022-02-05/)
