@@ -1,5 +1,6 @@
 ![wx-github-2-mini](https://user-images.githubusercontent.com/43155211/159142584-70b88e36-7634-4ddb-9ee1-1a7c11f0b2c9.png)
 
+Please note: Willemstad is currently undergoing a rewrite, and the look and feel might be somewhat materially different from now. 
 
 # Willemstad X (Extended)
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
@@ -25,25 +26,7 @@ Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemsta
 ---
 
 ## Supported Community Plugins
-Like Primary, Willemstad aims to get the core features right before delving into plugins. However, I totally agree that some plugins are almost essential to the Obsidian experience, and they were my daily drivers too, so they did get a bit of work done to it.
-1. Style Settings
-2. Calendar
-3. Sliding Panes
-4. Admonitions
-5. Dataview
-7. Breadcrumbs
-8. Advanced Tables
-9. Full Calendar
-10. Get Info
-11. CookLang Plugin
-12. Emoji Toolbar
-13. Maps of Content
-14. cMenu
-15. Footnote & Citation Indicator
-16. Longform
-17. Settings Search
-18. LanguageTool Integration
-and more.
+Please refer to the [Willemstad theme documentation](https://willemstad.cc).
 
 The full list of supported community plugins can be found [here](https://willemstad.cc/Development+Docs/Coding+Nomenclatures).
 
@@ -72,26 +55,6 @@ and of the original Willemstad snippet for Shimmering Focus:
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
 That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
-
----
-### Note on `snippet.css` file
-(this file will be updated again once some issues are ironed out)
-
-Currently includes:
-
-## Callouts
-| Title | Image |
-| -- | -- |
-| `kanban` | <img src="https://user-images.githubusercontent.com/43155211/159336761-f44cd2e6-9f37-407b-a4fa-485cce949ed3.png" width="500">
-| `aside` | |
-|`infobox`| |
-
-## CSS Classes
-| Title | Image |
-| -- | -- |
-| `latex` | <img src="https://user-images.githubusercontent.com/43155211/159337451-70b6e80a-16e9-47c1-a2b5-06688aeaeb43.png" width="500"> |
-| `magazine` | <img src="https://user-images.githubusercontent.com/43155211/159337592-5b264de3-fa1c-484d-afc0-4eb69699b5d2.png" width="500"> |
-
 
 ---
 ### License
