@@ -88,13 +88,18 @@
     >>> FIX HR (again, for LP and Preview)
     ──────────────────────────────────────────────────────────────────────── */
           
-          .markdown-preview-view hr {
+          .markdown-rendered hr {
 
             border: none;
             border-top: 2px solid var(--background-modifier-border);
             border-color: var(--background-modifier-border);
 
-          } /* Preview */
+          } /* Preview and LP */
+
+          /*
+          .markdown-source-view.mod-cm6 hr {
+            margin: 1rem 0;
+          } */ /* slecht idee - focus seems a bit off*/ /* follows hr and overrides Obs*/ 
 
     /* ────────────────────────────────────────────────────────────────────────
     >>> FIX QUOTES

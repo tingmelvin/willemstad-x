@@ -30,7 +30,7 @@
 
                 padding: 0;
                 border: 0px;
-                
+
             } /* remove LP view border */
 
             /* ────────────────────────────────────────────────────────────────────
@@ -82,13 +82,13 @@
     ───────────────────────────────────────────────────────────────────────────────
         >>> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
         ──────────────────────────────────────────────────────────────────────── */
-            .markdown-preview-view blockquote {
+            .markdown-rendered blockquote {
                 margin: 0.5rem 0;
                 border-left-width: 0.3rem;
                 padding: 0.35rem 0.5rem;
                 border-radius: calc(var(--shape-roundish) * 1.25);
                 background-color: var(--background-primary-alt);
-            }
+            } /* changed from preview-view to rendered */
 
     /* ────────────────────────────────────────────────────────────────────────────
     >> [CODEBLOCKS]

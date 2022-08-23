@@ -359,6 +359,12 @@ settings:
             description: When enabled, this removes the file tags from the navigation bar.
             default: false
     -
+            id: default-order-nav-file-tag
+            title: Revert to Default Navigation File Tags Order
+            type: class-toggle
+            description: By default, Willemstad sorts the file tags after the file name. When enabled, this reverts the file tags order in front of the file name, as is with default Obsidian.
+            default: false
+    -
             id: size-font-nav
             title: Font Size — Navigation Pane
             type: variable-number-slider

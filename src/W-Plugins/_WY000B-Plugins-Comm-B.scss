@@ -162,7 +162,7 @@
     >>> Δ Emoji Toolbar to default UI font
     ──────────────────────────────────────────────────────────────────────────── */
     :is(.emoji-mart, .emoji-mart-search input) .emoji-mart-category-label span {
-        font-family: var(--font-ui);
+        font-family: var(--font-interface);
         border: 0;
     }
 
