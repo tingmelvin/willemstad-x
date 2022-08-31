@@ -1,0 +1,74 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DH02
+\ UI > Interactive Elements
+\ Resize Handles
+───────────────────────────────────────────────────────────────────────────────────
+    >> RESIZE HANDLES
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .theme-light, .theme-dark {
+        --size-resize-handle: 0.2rem;
+    }
+
+    .workspace-leaf-resize-handle:hover {
+        background-color: var(--scroll-hover);
+    }
+    .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+    .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+    .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+        width: var(--size-resize-handle);
+        height: 100%;
+
+        /*
+        opacity: 0.5;
+        background-color: var(--background-secondary-alt);
+        
+
+        &:hover {
+            background-color: var(--scroll-hover);
+            opacity: 1;
+        }
+        */
+    }
+    .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+        height: var(--size-resize-handle);
+
+        opacity: 0.5;
+        background-color: var(--background-secondary-alt);
+
+        &:hover {
+            background-color: var(--scroll-hover);
+            opacity: 1;
+        }
+    }
+
+    /* Ob v0.15 shenanigans */
+    /* resize handles between sidepanes UI and editor space */
+
+
+    .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+    .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+        border-right-style: none;
+        /* border-right-width: 0; */
+    }
+    .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+        border-left-style: none;
+        /* border-left-width: 0; */
+    }
+
+    .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+        border-bottom-style: none;
+        /* border-bottom-width: 0; */
+    }
+
+    
+
+    .workspace-leaf-resize-handle {
+        border-width: 0;
+    }
+
+    /* fix hr in mod-left-split and mod-right-split */
+
+    .workspace-split.mod-horizontal .workspace-tabs:not(:last-of-type) .workspace-leaf-content {
+        margin-bottom: var(--size-resize-handle);
+    }

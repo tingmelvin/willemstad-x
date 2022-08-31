@@ -1,0 +1,5 @@
+
+.markdown-preview-view img,
+.markdown-rendered img {
+  image-rendering: -webkit-optimize-contrast;
+} /* clearer image rendering by Damian */

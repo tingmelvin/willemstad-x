@@ -1,0 +1,216 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW00
+\ Callouts Visual Surroundings
+───────────────────────────────────────────────────────────────────────────────────
+    >> [CALLOUTS]
+    \\ \ Introduced in Obsidian 0.14.0
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> 
+        ──────────────────────────────────────────────────────────────────────── */
+        .theme-light, .theme-dark {
+            --margin-callout: 0.5em;
+        }
+
+        .callout {
+
+            overflow-x: hidden; /* ensures that it wouldn't eat into other things as well */
+        
+            margin-top: var(--margin-callout);
+            margin-bottom: var(--margin-callout);
+            
+            & .callout .callout-content {
+                border: none;
+            }
+
+            & .callout:not(.admonition).drop-shadow {
+                box-shadow: none;
+            } /* wth is there even this */
+
+            & .callout-content {
+                table {
+                    margin-bottom: 0.75rem;
+                }
+
+                table:first-child {
+                    margin-top: 0.75rem;
+                }
+            }
+               
+        }
+
+        .callout-icon svg {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            /* font-size: inherit; */
+        } /* to make sure they scale properly - bug fix */
+
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> 
+        ───────────────────────────────────────────────────────────────────────── */
+            .HyperMD-callout.HyperMD-callout {
+                background-color: var(--background-secondary); /* was background-secondary-alt-2 - phased out */
+
+               /*  border-radius: calc(var(--shape-roundish) * 1.25) calc(var(--shape-roundish) * 1.25) 0 0; */
+            
+                & > :not(.cm-hmd-callout) {
+                    color: var(--text-normal);
+                }
+
+                & > span.cm-hmd-callout {
+
+                    color: var(--col-code-open);
+                    font-family: var(--font-monospace);
+
+                    & ~ span {
+
+                        font-family: var(--font-monospace);
+                        font-size: 0.9em;
+
+                    }
+
+                }
+            }
+
+
+        /* key fixes */
+
+            .callout-title {
+
+                gap: 0.5em; /* should it be 5? */
+
+                & .callout-title-inner {
+                    word-break: break-all; /* ensure that it doesn't break callouts */
+                }
+
+                & .callout-fold, & .callout-icon {
+                    display: flex;
+                    align-items: center; /* ensures that the svg is centered */
+                }
+
+                & .callout-fold svg {
+                    width: 1em;
+                    height: 1em; /* fix tp custom size, follows admonitions */
+                }
+            }
+
+        /* opinionated stuff */
+
+        body:not(.callout-standard) {
+
+            .callout {
+                border-radius: calc(var(--shape-roundish) * 1.25);
+                border-left: 0rem solid rgb(var(--callout-color));
+
+                transition: var(--quick-transition);
+
+                &:hover {
+                    border-left: 0.3rem solid rgb(var(--callout-color));
+                    transition: var(--quick-transition);
+                }
+            }
+
+            .callout-title {
+                padding: 0.35em 1em; /* make it thinner */
+                font-family: var(--font-heading);
+
+                & .callout-title-inner {
+                    word-break: break-word; /* ensure that it doesn't break callouts */
+                    order: -2;
+
+                    font-weight: 600;
+                } /* ensures this appears first */
+
+                & .callout-fold {
+                    order: -1; /* ensures this appears before all the svg */
+
+                    opacity: 0.3;
+                    transition: var(--quicker-transition);
+    
+                }
+
+                &:hover .callout-fold {
+
+                    opacity: 1;
+                    transition: var(--quicker-transition);
+
+                }
+
+                & .callout-fold, & .callout-icon {
+                    display: flex;
+                    align-items: center; /* ensures that the svg is centered */
+                } 
+            }
+
+            .callout-content {
+                padding: 0 1em;
+
+                p {
+                    margin-block-start: 0.5em;
+                    margin-block-end: 0.5em;
+                }
+
+            }
+
+            svg.ChevronDown {
+                mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+                -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+
+                background-color: var(--text-muted);
+                -webkit-mask-position: center;
+                -webkit-mask-repeat: no-repeat;
+
+                & > * {
+
+                    display: none;
+
+                }
+            }
+
+            
+        }
+
+
+        /* ─────────────────────────────────────────────────────────────────────────
+        >>> BRIGHTER ICONS
+        \\\ thanks to @pseudometa! :carrrl:
+        >>> incl. svg fixes
+        ───────────────────────────────────────────────────────────────────────── */
+
+        .callout-icon.callout-icon {
+
+            /* transform: scale(calc(var(-font-text-size) * 0.8)); */
+
+            svg {
+
+                width: 1em; /* admonitions is 1em */
+                height: 1em;
+                
+                .theme-light & {
+                    filter: brightness(95%);
+                }
+                
+            }
+        }
+
+
+        :not(.callout-standard) .callout-title-inner {
+            .theme-light & {
+                filter: brightness(75%) contrast(2.25) hue-rotate(-5deg);                
+            }
+            .theme-dark & {
+                filter: contrast(1.75) hue-rotate(-5deg);
+            }
+        }
+
+        /* fixed svg, no use now?
+        .theme-light, .theme-dark {
+            --callout-svg-dimensions: max(var(--callout-svg-dimensions-clamp), var(--callout-svg-dimensions-min));
+            --callout-svg-dimensions-min: 18px;
+            --callout-svg-dimensions-clamp: 1em;
+        }
+        */
+        
+
+

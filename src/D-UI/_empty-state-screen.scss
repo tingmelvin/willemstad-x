@@ -1,0 +1,202 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DF13
+\ UI > Non-Main Screen Elements
+\ Empty State Screen (No Files opened)
+──────────────────────────────────────────────────────────────────────────────── */
+
+.empty-state {
+    background-color: var(--color-base-10);
+    --margin-inter-empty-state: var(--size-4-1);
+
+    font-size: var(--font-text-size); /* need to set this for it to work */
+}
+
+.empty-state-container {
+    text-align: left;
+}
+
+.empty-state-title {
+    margin-bottom: var(--margin-inter-empty-state);
+    /* font-size: calc(var(--h2-size) * var(--font-text-size));*/ /* somehow h2 doesn't work */ /* see above in font-size for my soln */
+}
+
+.empty-state-action-list {
+    margin-top: var(--margin-inter-empty-state); /* linked to above */
+    padding-right: 0 var(--size-4-2); /* left zero for icons */
+}
+
+/*
+indicative buttons on ::before
+*/
+
+.empty-state-action {
+
+    line-height: calc(1.5 * var(--font-text-size));
+
+    
+    margin-top: var(--size-4-1);
+    margin-bottom: var(--size-4-1);
+
+    color: var(--color-base-60);
+
+    &::before {
+        display: inline-block;
+
+       color: var(--text-accent);
+
+        /* vertical-align: middle; */
+
+        vertical-align: top; /* make sure it's aligned to the words */
+        display: inline-flex;
+        justify-content: center; /* centers the icons horizontally */
+
+        margin-right: var(--size-4-1);
+
+        background-color: var(--color-base-30);
+        border-radius: var(--radius-s);
+
+        opacity: 0.85;
+        
+        /*
+        padding-left: var(--size-4-1);
+        padding-right: var(--size-4-1);
+        */
+
+        font-family: 'remixicon';
+        width: calc(1.5 * var(--font-text-size)); /* aligns to height */
+    }
+
+    &:hover {
+
+        /* color: var(--color-base-100); */
+        .theme-light & {
+            color: var(--color-accent-2);
+
+        }
+        .theme-dark & {
+            color: var(--color-accent-1);
+        }
+    
+        &::before {
+
+            color: var(--text-accent-hover);
+            opacity: 1;
+
+        }
+    }
+
+    &:first-of-type {
+
+        &::before {
+
+            .theme-light & {
+            }
+
+            .theme-dark & {
+            }
+
+            content: "\ea11";
+
+
+        } // new file
+
+        &:hover::before {
+            opacity: 1;
+
+        }
+    }
+
+
+
+    &:nth-of-type(2)::before {
+
+        content: "\ea70";
+
+    } // go to file
+
+    &:nth-of-type(3)::before {
+
+        content: "\ecb4";
+        
+    } // see recent files
+
+    &:nth-of-type(4)::before {
+
+        content: "\eb97";
+        color: var(--text-error);
+
+        :hover {
+            color: var(--text-error-hover);
+        }
+
+    } // close
+
+}
+
+/*
+close button special red colour
+*/
+
+.empty-state-action.mod-close {
+
+    color: var(--text-error);
+
+    &:hover {
+
+    color: var(--text-error-hover);
+
+    }
+
+}
+
+/* add icon for NO FILE IS OPEN */
+
+.empty-state-title {
+
+    & {
+
+        /* display: flex; */
+
+        display: grid;
+        grid-template-columns: 5fr auto; /* not sure why this works better than flex, it makes sure that the Ob logo doesn't get cut off */
+
+        align-items: center;
+        justify-content: space-between;
+        /* forces icon as second */
+
+        /* hovering colours and radiuses */
+
+        background-color: var(--color-base-30);
+        border-radius: var(--radius-m);
+        padding: var(--size-4-2);
+
+        &:hover {
+            background-color: var(--color-base-40);
+        }
+
+        gap: var(--size-4-1); /* gap between Ob logo and text */
+
+    }
+
+    &::after {
+
+        display: inline-block;
+
+        .theme-light & {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='black' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+        }
+        .theme-dark & {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M 30.91 17.52 L 34.43 35.7 M 61.44 14.41 L 62.61 0 M 34.43 35.7 L 37.57 90.47 M 81 26.39 L 61.44 14.41 L 34.43 35.7 L 65.35 100 M 62.61 0 L 30.91 17.52 L 18 45.45 L 37.57 90.47 L 65.35 100 L 70.44 89.8 L 81 26.39 L 62.61 0 Z'%3E%3C/path%3E%3C/svg%3E");
+        }
+
+        width: calc(2 * var(--font-text-size)); /* forces the Ob logo to scale with text when Ctrl-mousewheel scroll is used */
+        height: calc(2 * var(--font-text-size));
+
+    } /* wireframe */
+
+    &:hover::after {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'  class='logo-full'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='82.85' y1='30.41' x2='51.26' y2='105.9' gradientTransform='matrix(1, 0, 0, -1, -22.41, 110.97)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236c56cc'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%239785e5'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='62.61,0 30.91,17.52 18,45.45 37.57,90.47 65.35,100 70.44,89.8 81,26.39 62.61,0' fill='%2334208c'%3E%3C/polygon%3E%3Cpolygon points='81,26.39 61.44,14.41 34.43,35.7 65.35,100 70.44,89.8 81,26.39' fill='url(%23a)'%3E%3C/polygon%3E%3Cpolygon points='81,26.39 81,26.39 62.61,0 61.44,14.41 81,26.39' fill='%23af9ff4'%3E%3C/polygon%3E%3Cpolygon points='61.44,14.41 62.61,0 30.91,17.52 34.43,35.7 61.44,14.41' fill='%234a37a0'%3E%3C/polygon%3E%3Cpolygon points='34.43,35.7 37.57,90.47 65.35,100 34.43,35.7' fill='%234a37a0'%3E%3C/polygon%3E%3C/svg%3E");
+
+    } /* polygon */
+    /* change width and height from within */
+}

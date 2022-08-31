@@ -1,0 +1,81 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW01
+\ Callouts 
+\ Global Classes + Metadata
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* no title */
+
+body div {
+    &.callout:is([data-callout-metadata*="no-t"], 
+        [data-callout-metadata*="no-title"]) {
+
+        & > .callout-title {
+            display: none;
+        }
+
+        &:is([data-callout="kanban"]) /* for kanban */ {
+
+            border-radius: var(--callout-radius);
+
+        }
+
+    }
+
+    &.callout:is([data-callout-metadata*="opp"],
+        [data-callout-metadata*="opposite"]) {
+
+            display: flex;
+            flex-direction: column;
+
+        .callout-content {
+            order: -1;
+        
+        }
+
+        /*
+        &.is-collapsed .callout-fold svg {
+            transform: rotate(-90deg);
+        }
+        */
+
+        &:not(.is-collapsed) {
+            .callout-fold svg {
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+
+    &.callout:is([data-callout-metadata*="no-s"], 
+    [data-callout-metadata*="no-style"]) {
+
+        background-color: transparent;
+
+        > .callout-content {
+
+            background-color: transparent;
+        
+        }
+
+        > .callout-title {
+
+            background-color: transparent;
+
+        }
+
+    }
+
+    &.callout:is([data-callout-metadata*="monospace"]) {
+        
+        .callout-content {
+
+            font-family: var(--font-monospace);
+
+        }
+    }
+}
+
+    /*
+
+    */

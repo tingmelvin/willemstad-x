@@ -1,0 +1,218 @@
+.theme-light, .theme-dark {
+
+    /* kanban */
+    --height-ul-kanban: calc(var(--height-callout-kanban) - var(--height-header-kanban) - 2rem);
+    --height-callout-kanban: 29rem;
+    --height-header-kanban: 4rem;
+
+    /* magazine */
+    --font-cssclass-magazine: var(--font-editor); 
+
+}
+
+/* additions for kanban */
+div.callout[data-callout*=kanban] ul {
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.admonition-kanban ul {
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+
+
+/* @settings
+name: "Melvin's Obsidian Snippets" 
+id: Willemstad-Snippets
+settings:
+    -
+    -
+     id: callouts-settings
+     title: Callouts and Admonitions
+     type: heading
+     description: "Customise your Callouts here! Current available classes: 'infobox', 'aside', 'aside-no-title', 'kanban', 'kanban-no-title'"
+     level: 2
+     collapsed: true
+    -
+        id: margin-callout
+        title: Callout Margin Size
+        type: variable-number-slider
+        description: "Change the size of Callout margins."
+        format: em
+        default: 0.5
+        min: 0
+        max: 3
+        step: 0.05
+    -
+        id: kanban-callout
+        title: "'Kanban' Callout"
+        description: "Settings for the 'Kanban' callouts."
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: height-callout-kanban
+        title: "Callout Height"
+        note: "'Kanban' Callout"
+        type: variable-number-slider
+        description: "Set the callout height of the Kanban callouts."
+        format: rem
+        default: 30
+        min: 8
+        max: 120
+        step: 0.5
+    -
+        id: height-header-kanban
+        title: "Header Height"
+        note: "'Kanban' Callout"
+        type: variable-number-slider
+        description: "Set the header height of the Kanban callouts."
+        format: rem
+        default: 3.5
+        min: 1
+        max: 5
+        step: 0.1
+    -
+        id: width-ul-kanban
+        title: "Lane Width"
+        note: "'Kanban' Callout"
+        type: variable-number-slider
+        description: "Set the kanban lane width of the Kanban callouts."
+        format: px
+        default: 272
+        min: 80
+        max: 1000
+        step: 1
+    -
+     id: cssclass-settings
+     title: CSSClass
+     type: heading
+     description: "LaTeX, Magazine"
+     level: 2
+     collapsed: false
+    -
+     id: latex-settings
+     title: LaTeX CSSClass
+     description:
+     type: heading
+     level: 3
+     collapsed: true
+    -
+        id: size-cssclass-latex
+        title: "Font Size"
+        type: variable-number-slider
+        default: 14
+        min: 8
+        max: 22
+        step: 0.5
+        format: 'pt'
+    -
+        id: font-cssclass-latex-source
+        title: "Font Typeface (Source mode)"
+        type: variable-text
+        default: '"DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: font-cssclass-latex-reading
+        title: "Font Typeface (Reading mode)"
+        type: variable-text
+        default: '"MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: textindent-cssclass-latex
+        title: "Text Indent for first paragraph line"
+        type: variable-number-slider
+        default: 0
+        min: -0.5
+        max: 4
+        step: 0.05
+        format: 'em'
+    -                   
+        id: size-font-editor-table-latex
+        title: Font Size — Tables (in Editing mode)
+        type: variable-number-slider
+        description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview) for the LaTeX CSSClass.
+        format: "em"
+        default: 0.8
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
+        id: size-font-preview-table-latex
+        title: Font Size — Tables (in Reading mode)
+        description: Use this setting to change the font size of the tables in Reading mode for the LaTeX CSSClass.
+        format: "em"
+        default: 1
+        min: 0.25
+        max: 1.5
+        step: 0.05
+    -
+        id: Willemstad-Magazine
+        title: "Magazine CSSClass"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: size-cssclass-magazine
+        title: "Font Size"
+        type: variable-number-slider
+        default: 1.5
+        min: 0.75
+        max: 3
+        step: 0.05
+        format: 'rem'
+    -
+        id: font-cssclass-magazine
+        title: "Font Typeface"
+        type: variable-text
+        default: '"Inter"'
+    -
+        id: weight-cssclass-magazine
+        title: "Font Weight"
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 800
+        step: 100
+        format: ''
+    -
+        id: height-items-magazine
+        title: "Card Height"
+        type: variable-number-slider
+        description: "Use this setting to change height of the magazine cards."
+        default: 10
+        min: 3
+        max: 50
+        step: 0.5
+        format: 'rem'
+    -
+        id: margin-items-magazine
+        title: "Inter-Cards Margin"
+        type: variable-number-slider
+        description: "Use this setting to change the external spacing (margins) between magazine cards."
+        default: 0.25
+        min: 0
+        max: 1.5
+        step: 0.05
+        format: 'rem'
+    -
+        id: padding-items-magazine
+        title: "Card Padding"
+        type: variable-number-slider
+        description: "Use this setting to change the internal spacing between the card content and card borders"
+        default: 1.25
+        min: 0
+        max: 3
+        step: 0.05
+        format: 'rem'
+    -
+        id: bg-highlight-magazine-first
+        title: "Background (First item)"
+        description: "Use this to customise the background to the 1st item."
+        type: variable-text
+        default: 'linear-gradient(45deg, hsl(240, 100%, 20%) 0%, hsl(289, 100%, 21%) 11%, hsl(315, 100%, 27%) 22%, hsl(329, 100%, 36%) 33%, hsl(337, 100%, 43%) 44%, hsl(357, 91%, 59%) 56%, hsl(17, 100%, 59%) 67%, hsl(34, 100%, 53%) 78%, hsl(45, 100%, 50%) 89%, hsl(55, 100%, 50%) 100%)'
+    -
+        id: bg-highlight-magazine
+        title: "Background (Wide items)"
+        description: "Use this to customise the background to every wide item."
+        type: variable-text
+        default: 'linear-gradient(to right, hsl(215, 65%, 53%), hsl(191, 100%, 50%))'
+*/

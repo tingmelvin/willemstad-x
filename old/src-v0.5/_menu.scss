@@ -1,0 +1,44 @@
+/* MENU */
+
+.menu-item {
+    
+    &.is-warning {
+
+        &, & .menu-item-icon {
+
+            color: var(--text-error);
+
+        }
+
+        &.selected, &:hover {
+
+            &, & .menu-item-icon, & .menu-item-title {
+
+                .theme-light & {
+                    color: var(--text-error-hover);
+                } /* light mode */
+            
+                .theme-dark & {
+                    color: var(--text-error-hover);
+                } /* dark mode */
+
+            }
+
+        }
+
+    } /* for delete buttons, add colour */
+
+}
+
+.menu-item:hover {
+    .menu-item-icon, .menu-item-title {
+
+        .theme-light & {
+            color: var(--color-accent);
+        } /* light mode */
+    
+        .theme-dark & {
+            color: var(--color-accent);
+        } /* dark mode */
+    }
+}

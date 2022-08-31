@@ -1,0 +1,64 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DE13
+\ UI > Main Screen Elements
+\ Status Bar
+───────────────────────────────────────────────────────────────────────────────────
+    >> JUST MAKE IT SMOL, MERDE
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .theme-light, .theme-dark {
+        --gap-status-bar: var(--size-2-1);
+        --height-status-bar-item: 20px;
+        --leap-status-bar-item: 4px;
+    } /* set gap so it can be manipulated for wonky plugins too */
+
+    .status-bar {
+        /* padding: var(--size-2-1) var(--size-2-2); */
+        padding: 0;
+        gap: var(--gap-status-bar);
+
+        height: calc(var(--height-status-bar-item) + var(--leap-status-bar-item)); /*24px*/
+
+        align-items: center; /* force things to be aligned vertically */
+
+        & .status-bar-item {
+            height: var(--height-status-bar-item); /* force it */
+            padding: calc(0.5 * var(--leap-status-bar-item)) calc(0.5 * var(--leap-status-bar-item));
+        }
+        
+
+        & > .status-bar-item {
+            display: flex;
+            align-items: center;
+
+        }  /* remove up down padding to make it actually have everything align nicely */
+            /* change the height instead? */
+
+        & > .status-bar-item:first-of-type {
+            margin-left: var(--gap-status-bar);
+        }
+    }
+
+    .status-bar-item-icon {
+        display: flex;
+    }
+
+    .status-bar-item svg {
+        display: flex;
+        align-items: center;
+
+        height: calc(var(--height-status-bar-item) - var(--leap-status-bar-item)); /*16px*/
+        width: calc(var(--height-status-bar-item) - var(--leap-status-bar-item)); /*16px*/
+    }
+
+    /* COLOURS */
+
+    .status-bar-item:hover {
+        .theme-light & {
+            color: var(--color-accent);
+        } /* light mode */
+    
+        .theme-dark & {
+            color: var(--color-accent);
+        } /* dark mode */
+    } /* link to theme picker plugin, see plugin file */

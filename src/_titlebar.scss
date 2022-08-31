@@ -1,0 +1,11 @@
+/* titlebar similar to macOS
+removes the three buttons */
+
+:is(.is-hidden-frameless.mod-windows, .is-hidden-frameless.mod-linux) .titlebar {
+    display: none;
+}
+
+/* empty space rightwards is removed for ALL options */
+.theme-light, .theme-dark {
+    --frame-right-space: 0;
+}

@@ -1,0 +1,354 @@
+/*
+FOR COMM PLUGINS
+*/
+
+.modal.mod-community-plugin {
+
+    & .community-item {
+        /* background-color: var(--background-primary-alt); */
+        gap: var(--size-4-1); /* smaller gap */
+        border-width: 0px;
+
+        &:not(.is-selected):hover {
+            background-color: var(--interactive-hover);
+        }
+
+        &:is(.is-selected):hover {
+            background-color: var(--interactive-accent-hover);
+        }
+    }
+    
+    & .community-item.mod-active {
+        grid-column: 1 / -1; /* full width */
+
+        order: -1; /* brings it in front */
+
+        & .community-plugin-title {
+            font-size: calc(2 * var(--font-text-size));
+
+            &::after {
+                /* content: ""; */ /* see file A */
+                font-weight: normal;
+
+                display: grid;
+
+                border-top: 1px solid var(--background-modifier-border);
+                padding-top: var(--size-4-1);
+                /* text-align: right; */
+            }
+        }
+
+        &:hover .community-plugin-title::after {
+            border-top: 1px solid var(--text-faint);
+        }
+    }
+
+    & .community-modal-search-results {
+
+        padding: var(--padding-modal-side);
+        gap: var(--padding-modal-side);
+        
+    } /* for search results */
+
+
+
+    /* TOP BIT */
+
+    & .search-input-container > input {
+        border: 0;
+    }
+
+    & .community-modal-search-summary {
+        display: none; /* extraneous! */
+    }
+
+    /*
+    & .community-modal-controls {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        & .setting-item:not(.mod-toggle) {
+
+        }
+
+        & .setting-item:is(.mod-toggle) {
+
+            text-align: right;
+            
+        }
+
+    }
+    */ /* NO NEED, also breaks stuff */
+
+    /* GRID STUFF */
+
+
+    & .community-item {
+
+        & {
+            display: grid;
+            grid-template-columns: 1.75fr 0.5fr;
+            grid-template-rows: auto auto 5fr;
+            row-gap: var(--size-4-1); /* gap? */
+            column-gap: var(--size-4-2); /* gap? */
+            /* grid-template-rows:  ; */
+
+            padding: var(--size-4-1) var(--size-2-3) var(--size-2-3) var(--size-2-3); /* 4-3 is too big */
+        }
+
+        & .community-item-name {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+
+            border-bottom: 1px solid var(--background-modifier-border); /* else var(--background-modifier-border) too light */
+            padding-bottom: var(--size-4-1); /* add margins to aid reading? */
+
+            display: grid;
+            /* grid-template-columns: 1.75fr 0.5fr; */ /* removes so there's no grid if there is no span.flair */
+
+
+            & span.flair {
+
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                margin: auto 0 auto auto; /* aligns to the right */
+
+            }
+
+            & span.suggestion-highlight {
+                display: contents; /* ensures it doesn't conform to some weird gridding or flex-ing */
+            }
+        }
+
+        &:hover .community-item-name {
+            border-bottom: 1px solid var(--text-faint);
+        }
+
+        & .community-item-author {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+
+            /* color: var(--text-faint); */
+        }
+
+        & .community-item-downloads {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+
+            text-align: right;
+
+            margin-bottom: 0; /* no margin! */
+
+            & > span {
+            }
+
+            & > span > .svg-icon {
+                display: none;
+            }
+
+            & > span.community-item-downloads-text {
+                display: contents; /* move up */ /* upstreams the span to the parent span */
+            }
+        }
+
+        & .community-item-desc {
+            grid-column: 1 / -1;
+            grid-row: 3 / 4;
+
+            color: var(--text-muted);
+        }
+
+
+
+        & .community-item-author::first-letter {
+            text-transform: lowercase;
+        }
+    }
+
+
+
+
+
+    /* README */
+
+    & .community-modal-info {
+        display: grid;
+        grid-template-columns: 2.5fr 0.5fr 1fr;
+        grid-template-rows: auto auto auto auto auto 10fr;
+        row-gap: var(--size-2-1);
+
+        padding-left: var(--padding-tab-content-L);
+        padding-right: var(--padding-tab-content-R);
+        padding-top: var(--padding-tab-content-T);
+        padding-bottom: var(--padding-tab-content-B);
+
+        & .community-modal-info-name {
+            grid-column: 1/4;
+            grid-row: 1/2;
+            
+            margin-bottom: 0; /* why is there a margin? */
+
+            font-size: var(--h1-size); /* why h2 when you can h1? */
+
+            & {
+                display: grid; /* GRID IT */
+                grid-template-columns: 2.5fr 0.5fr 1fr; /* follow top */ /* 1 to 3 merged since that makes the title fit in 1 to 3 */
+                grid-template-rows: auto;
+
+            }
+
+            & span.flair.mod-pop {
+                grid-column: 2 / 3; /* latter column */
+                grid-row: 1/2;
+
+                margin: auto 0 auto auto; /*top, bottom and left margins are autoed */ /* makes sure it wraps to text */
+                text-align: center; /* centers text */
+            }
+        }
+
+        & .community-modal-info-downloads {
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+            font-size: var(--font-ui-medium); /* similar to author */
+            text-align: right;
+
+            margin: auto 28px auto 0; /* top bottom auto margins */ /* right margin a bit hacky */
+
+            /* display: none; */ /* is this really needed? */
+
+            .community-modal-info-downloads-text {
+                display: contents; /* take the downloads space */
+                top: 0px; /* what is with thisss */
+
+            }
+
+            & .svg-icon {
+                display: none; /* this gives so much problems */
+            }
+        }
+
+        & .community-modal-info-version {
+            grid-column: 3/4;
+            grid-row: 1/2;
+
+            font-size: 10px;
+            text-transform: uppercase;
+            text-align: right;
+            letter-spacing: 0.05em;
+            white-space: pre-wrap;
+
+            margin-top: auto;
+            margin-bottom: auto;
+             /* top bottom margins */
+
+            margin-left: var(--size-2-2);
+            margin-right: var(--size-2-2); /* follows github button spacing? */
+
+            color: var(--text-muted); /* similar to the list on the left */
+        }
+
+        & .community-modal-info-author {
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            font-size: var(--font-ui-medium); /* align? */
+            padding-bottom: var(--size-2-2); /* follows a:before */
+
+            &:first-letter {
+                text-transform: lowercase; /* lowercases the 'by' */
+            }
+
+            margin: auto 0 auto 0; /* top and bottom margin to push up */
+
+            color: var(--text-faint); /* similar to the list on the left */
+        } 
+
+        & .community-modal-info-repo {
+
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+            font-size: 0; /* hides! */
+            text-align: right;
+            margin: auto 0 auto 0;
+
+            /* GITHUB BUTTON */
+
+            & > a {
+            }
+
+            & > a::before {
+                content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%235a5a5a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-file-code'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3Cpath d='m9 18 3-3-3-3'%3E%3C/path%3E%3Cpath d='m5 12-3 3 3 3'%3E%3C/path%3E%3C/svg%3E"); /* stroke color is manual */
+                width: 18px;
+                height: 18px;
+                display: inline-flex; /* how tf does this even work omg */
+                padding: var(--size-2-2) var(--size-2-2); /* same as the LR/TD but yeah */
+
+            }
+
+            & > a:hover:before {
+                transition: opacity 0.15s ease-in-out;
+                opacity: var(--icon-opacity-hover);
+                color: var(--icon-color-hover);
+                background-color: var(--background-modifier-hover);
+                border-radius: var(--clickable-icon-radius);
+
+            }
+        }
+
+        & .community-modal-info-desc {
+            grid-column: 1/-1;
+            grid-row: 3/4;
+
+            border-top: 1px solid var(--background-modifier-border);
+            /*
+            padding-top: var(--size-4-1);*/
+            margin-top: 0; /* 8 in app.css is huge */
+
+            
+            border-bottom: 1px solid var(--background-modifier-border);
+            /*padding-bottom: var(--size-4-1);*/
+            /* margin-bottom: var(--size-4-1);*/ /* 8 in app.css is huge */
+
+            color: var(--text-muted);
+
+            padding: var(--size-4-1) 0; /* top and bottom padding */
+        }
+
+        & .community-modal-button-container {
+            grid-column: 1/-1; /* full width */
+            grid-row: 4/5;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* for the buttons */ /* are there more than 3? */
+            gap: var(--size-4-1);
+
+            & > button {
+                margin-right: 0; /* use grid, save margins! */
+            }
+
+            margin-top: 1em;
+
+            margin-bottom: 1em; /* 1.5em is HUGE */
+        }
+
+        & hr {
+            display: none;
+
+            grid-column: 1/-1; /* full width */
+            grid-row: 5/6;
+        }
+
+        & .community-modal-readme {
+            grid-column: 1/-1; /* full width */
+            grid-row: 6/7;
+
+            border-top: 1px solid var(--background-modifier-border); /* replaces hr? */
+            padding: 0; /* do we really need padding */
+
+        }
+
+    }
+
+}

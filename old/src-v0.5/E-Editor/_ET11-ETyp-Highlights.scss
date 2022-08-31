@@ -1,0 +1,143 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ET11
+\ Editor > Typography
+\ Multi-Colour Highlights
+
+\\ thanks @pseudometa, from Shimmering Focus;
+    \\ and also thanks to @Atlas
+───────────────────────────────────────────────────────────────────────────────────
+        >>> HIGHLIGHTS
+        ───────────────────────────────────────────────────────────────────────────
+            >>>> (0) STANDARD (==)
+            ──────────────────────────────────────────────────────────────────── */
+
+            :is(.markdown-preview-view, .markdown-rendered) mark,
+            :is(.markdown-preview-view, .markdown-rendered) mark .internal-link, /* override specificity for links */
+            .cm-s-obsidian span.cm-highlight {
+                background-color: var(--col-highlight-0);
+                color: var(--col-highlight-text);
+            }
+
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> (1) HIGHLIGHT 1 | WITH ITALICS (*==)
+            ──────────────────────────────────────────────────────────────────── */
+
+            :is(.markdown-preview-view, .markdown-rendered) em > mark,
+            :is(.markdown-preview-view, .markdown-rendered) em > mark .internal-link, /* override specificity for links */
+            span.cm-em.cm-highlight {
+                font-style: normal;
+                text-decoration: unset;
+                background: none;
+                background-color: var(--col-highlight-1);
+                color: var(--col-highlight-text);
+            }
+
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> (2) HIGHLIGHT 2 | WITH BOLD (**==)
+            ──────────────────────────────────────────────────────────────────── */
+        
+            :is(.markdown-preview-view, .markdown-rendered) strong > mark,
+            :is(.markdown-preview-view, .markdown-rendered) strong > mark .internal-link, /* override specificity for links */
+            span.cm-strong.cm-highlight {
+                font-weight: normal;
+                text-decoration: unset;
+                background: none;
+                background-color: var(--col-highlight-2);
+                color: var(--col-highlight-text);
+            }
+
+            /* ────────────────────────────────────────────────────────────────────
+            >>>> (3) HIGHLIGHT 3 | WITH BOLD + ITALICS (***==)
+            ──────────────────────────────────────────────────────────────────── */
+
+            :is(.markdown-preview-view, .markdown-rendered) strong > em > mark,
+            :is(.markdown-preview-view, .markdown-rendered) strong > em > mark .internal-link, /* override specificity for links */
+            span.cm-strong.cm-em.cm-highlight {
+                font-weight: normal;
+                text-decoration: unset;
+                background: none;
+                background-color: var(--col-highlight-3);
+                color: var(--col-highlight-text);
+            }
+            
+    /* ─────────────────────────────────────────────────────────────────────────
+    >>> SELECTION (SELECTED TEXT COLOUR)
+    ───────────────────────────────────────────────────────────────────────── */
+    :is(.theme-light, .theme-dark) {
+            --text-selection: var(--col-selection);
+
+            /* original colors */
+            
+            /*
+            --col-highlight-0: hsl(60, 100%, 50%);
+            --col-highlight-1: hsl(120, 100%, 50%);
+            --col-highlight-2: hsl(180, 100%, 50%); 
+            --col-highlight-3: hsl(300, 100%, 50%);
+            --col-highlight-4: hsl(30, 100%, 50%);
+            */
+
+            --col-highlight-0-org: hsl(60, 100%, 50%);
+            --col-highlight-1-org: hsl(120, 100%, 50%);
+            --col-highlight-2-org: hsl(180, 100%, 50%); 
+            --col-highlight-3-org: hsl(300, 100%, 50%);
+
+            /* yellow, lime, cyan */
+
+            
+            --col-highlight-0: hsl(46, 100%, 50%);
+            --col-highlight-1: hsl(76, 100%, 50%);
+            --col-highlight-2: hsl(166, 100%, 50%); 
+            --col-highlight-3: hsl(262, 44%, 82%);
+             /* should I make this default now */
+
+
+            --col-highlight-text: hsl(0, 0%, 0%);   /* black */
+
+        }
+    
+    .highlight-col-original:is(.theme-light, .theme-dark) {
+
+        --col-highlight-0: var(--col-highlight-0-org);
+        --col-highlight-1: var(--col-highlight-1-org);
+        --col-highlight-2: var(--col-highlight-2-org);
+        --col-highlight-3: var(--col-highlight-3-org);
+
+    }
+
+    /* FOR POSTERITY
+            id: col-highlight-0
+            title: 'Highlight Colour — default'
+            type: variable-themed-color
+            description: 'Default highlight colour (==)'
+            opacity: false
+            format: hsl
+            default-light: hsl(60, 100%, 50%)
+            default-dark: hsl(60, 100%, 50%)
+    -
+            id: col-highlight-1
+            title: 'Highlight Colour — additional #1 (italics + highlight markdown)'
+            type: variable-themed-color
+            description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(120, 100%, 50%)
+            default-dark: hsl(120, 100%, 50%)
+    -
+            id: col-highlight-2
+            title: 'Highlight Colour — additional #2 (bold + highlight markdown)'
+            description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'     
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(180, 100%, 50%)
+            default-dark: hsl(180, 100%, 50%)
+    -
+            id: col-highlight-3
+            title: 'Highlight Colour — additional #3 (bold + italics + highlight markdown)'
+            description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'     
+            type: variable-themed-color
+            opacity: false
+            format: hsl
+            default-light: hsl(300, 100%, 50%)
+            default-dark: hsl(300, 100%, 50%)    
+    */

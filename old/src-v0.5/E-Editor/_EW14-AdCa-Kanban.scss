@@ -1,0 +1,400 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW14
+\ Admonitions and Callouts 
+\ Kanban
+\ by me!
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+Pseudo-kanban Callouts and Admonitions for Obsidian
+Author: @tingmelvin
+Version: 0.1.0
+
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* kanban with title */
+
+.theme-light, .theme-dark {
+
+    --height-ul-kanban: calc(var(--height-callout-kanban) - var(--height-header-kanban) - var(--size-scrollbar) - 0.5rem); /* change to desired height in ul */
+
+    --height-ul-kanban-norm: 100%;
+
+    --height-callout-kanban: 30rem;
+    --height-header-kanban: 3.5rem;
+
+    --width-ul-kanban: 272px; /* change to desired width in ul - this is Kanban plugin default */
+
+    --padding-content-kanban: 0.25rem;
+
+    --size-font-callout-title: 1em;
+
+}
+
+div.callout[data-callout*="kanban"] {
+  
+    border-left: 0;
+    /* background-color: var(--background-primary); */
+
+    --callout-color: 100, 100, 100;
+    --callout-icon: star; /* not table, it uses rect instead of path */
+
+    .callout-title {
+        /* display: none */ /* use if not using a title */
+        
+        /* border-top-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        /* border-top-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        /* background-color: var(--background-secondary); */
+        /* padding: 0.25rem 1rem; */
+
+        font-size: var(--size-font-callout-title);
+
+        .callout-icon {
+            /* display: none; */
+        }
+    }
+
+    .callout-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--padding-content-kanban);
+        /* border-radius: calc(var(--shape-roundish) * 2); */ /* use if not using a title */
+        /* border-bottom-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        /* border-bottom-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        height: var(--height-callout-kanban);
+        align-content: flex-start;
+
+        column-gap: 0.25rem;
+    }
+
+    /* Willemstad specific? */
+    .callout-icon {
+
+        & svg {        
+            
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' stroke-width='1.5'  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19,3l-14,0c-1.105,0,-2,0.895,-2,2l0,14c0,1.105,0.895,2,2,2h14c1.105,0,2,-0.895,2,-2v-14c0,-1.105,-0.895,-2,-2,-2z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.4,6h-3.8c-0.331,0,-0.6,0.269,-0.6,0.6l0,10.8c0,0.331,0.269,0.6,0.6,0.6h3.8c0.331,0,0.6,-0.269,0.6,-0.6v-10.8c0,-0.331,-0.269,-0.6,-0.6,-0.6z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4,6h-3.8c-0.331,0,-0.6,0.269,-0.6,0.6v6.8c0,0.331,0.269,0.6,0.6,0.6h3.8c0.331,0,0.6,-0.269,0.6,-0.6v-6.8c0,-0.331,-0.269,-0.6,-0.6,-0.6z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            
+    
+            -webkit-mask-position: center;
+            -webkit-mask-repeat: no-repeat;
+            width: var(--size-font-callout-title);
+            height: var(--size-font-callout-title);
+    
+            & path {
+                d: var(--icon-box-path);
+                
+            }
+    
+        }
+
+    }
+
+
+    :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+
+        height: var(--height-ul-kanban);
+        width: var(--width-ul-kanban);
+        overflow-y: scroll;
+
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+    }
+
+    li::marker {
+        content: "";
+    }
+}
+
+/* kanban without title */
+
+div.callout[data-callout="kanban-no-title"] {
+
+    .callout-title {
+        display: none; /* use if not using a title */
+
+    }
+
+    .callout-content {
+
+        border-radius: calc(var(--shape-roundish) * 2); /* use if not using a title */
+
+    }
+
+}
+
+
+
+/* ────────────────────────────────────────────────────────────────────────────────    
+> [W04A] Kanban Admonition - needs to be updated
+\ :D by me!
+\ NEEDS UPDATING
+──────────────────────────────────────────────────────────────────────────────── */
+
+.admonition-kanban {
+  
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .admonition-title {
+        /* display: none */ /* use if not using a title */
+        border-top-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-top-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        background-color: var(--background-secondary);
+        padding-bottom: 0;
+        padding-left: 1rem;
+
+        font-size: var(--size-font-callout-title);
+
+        .admonition-title-icon {
+            display: none;
+        }
+    }
+
+    .admonition-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--padding-content-kanban);
+        /* border-radius: calc(var(--shape-roundish) * 2); */ /* use if not using a title */
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2); /* use if using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: var(--height-callout-kanban);
+        align-content: flex-start;
+    }
+
+
+    .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+
+        height: var(--height-ul-kanban);
+        width: var(--width-ul-kanban);
+        overflow: scroll;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+    }
+}
+
+/* kanban without title */
+.admonition-kanban-no-title {
+  
+    border-left: 0;
+    background-color: var(--background-primary);
+
+    .admonition-title {
+        display: none; /* use if not using a title */
+
+        background-color: var(--background-secondary);
+        padding-bottom: 0;
+
+        .admonition-title-icon {
+            display: none;
+        }
+    }
+
+    .admonition-content {
+        background-color: var(--background-secondary);
+        border-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--padding-content-kanban);
+        border-radius: calc(var(--shape-roundish) * 2); /* use if not using a title */
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: var(--height-callout-kanban);
+        align-content: flex-start;
+    }
+
+
+    .admonition-content-holder > * > :is(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 0;
+        margin-top: 0;
+        background-color: transparent;
+        border-top-right-radius: calc(var(--shape-roundish) * 2);
+        border-top-left-radius: calc(var(--shape-roundish) * 2);
+
+        border: 1px solid var(--background-modifier-border);
+        border-bottom: none;
+        padding: 0.5rem;
+
+        height: var(--height-header-kanban);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* aligns left. for center, use "center". for right, use "flex-end" */
+        justify-content: center;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: var(--width-ul-kanban);
+    
+    }
+
+    ul {
+        border: 1px solid var(--background-modifier-border);
+        border-top: none;
+        border-bottom-right-radius: calc(var(--shape-roundish) * 2);
+        border-bottom-left-radius: calc(var(--shape-roundish) * 2);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5rem;
+
+        height: var(--height-ul-kanban);
+        width: var(--width-ul-kanban);
+        overflow: scroll;
+
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+
+        & > li {
+
+            padding: 0.25rem;
+            border-radius: calc(var(--shape-roundish) * 1);
+            background-color: var(--background-primary);
+            border: 1px solid var(--background-modifier-border);
+
+            & + li {
+                margin-top: 0.25rem;
+            }
+        }
+
+    }
+}
+
+/* LP fix for admonitions */
+.is-live-preview :is(.admonition-kanban, .admonition-kanban-no-title) .admonition-content > * {
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}

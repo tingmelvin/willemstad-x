@@ -1,0 +1,13 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> BV01
+\ Root > Smaller Global Variables
+\ Animations
+───────────────────────────────────────────────────────────────────────────────────
+    >> (OPTION) ANIMATIONS! | from Shimmering Focus | thanks to @pseudometa
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.no-animations) {
+        --quicker-transition: 100ms ease-in-out;
+        --quick-transition: 200ms ease-in-out;
+        --medium-transition: 350ms ease-in-out;
+        --slow-transition: 550ms ease-in-out;
+    }

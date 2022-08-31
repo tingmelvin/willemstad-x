@@ -1,0 +1,296 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EF
+\ Editor > Frontmatter
+───────────────────────────────────────────────────────────────────────────────────
+    >> Δ MARGINS + PADDING + ADD ROUNDER SHAPES
+    ──────────────────────────────────────────────────────────────────────────── */
+    .frontmatter-container {
+        padding: 0.35rem 0.5rem 0rem;
+        border-radius: calc(var(--shape-roundish) * 1.25);
+    
+
+        :is(/*.tag,*/ .frontmatter-alias) {
+            white-space: pre-wrap;
+            hyphens: auto;
+            word-wrap: break-word;
+            padding: 0;
+            margin: 0.125rem 0.25rem;
+            line-height: 1em; /* needs to be 1em so the line height won't eat */
+            background-color: transparent;
+        }
+
+        .tag {
+            margin: 0 0.25rem;
+            padding: 0 0.5rem;
+        }
+
+        .frontmatter-container-header {
+            margin: 0;
+        }
+
+        &.is-collapsed .frontmatter-container-header {
+            margin: 0;
+        }
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────────────
+    >> Font Controls
+    \\ actively check with help.obsidian.md > Advanced Topics > YAML frontmatter for native keys
+    ───────────────────────────────────────────────────────────────────────────── */
+
+    /* default frontmatter font size */
+    .theme-light, .theme-dark {
+        --size-font-frontmatter-header: 0.9em;
+        --size-font-frontmatter-section: 0.9em;
+    }
+
+
+    div.frontmatter-container {
+        
+        font-size: var(--font-text-size);
+
+        .frontmatter-container-header {
+            font-size: var(--size-font-frontmatter-header);
+        }
+
+        .frontmatter-section {
+            font-size: var(--size-font-frontmatter-section);
+        }
+    
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────────────
+    >> Colours
+    ───────────────────────────────────────────────────────────────────────────── */
+    
+    /* default Coloured YAML colours */
+    .theme-light, .theme-dark {
+        --col-frontmatter-default: var(--text-accent-hover);
+        --col-frontmatter-atom: var(--text-accent);
+        --col-frontmatter-meta: var(--text-accent-hover);
+        --col-frontmatter-number: var(--text-accent-hover);
+    }
+
+
+
+    /* if Coloured YAML turned on */
+    body.yaml-coloured .cm-s-obsidian .cm-hmd-frontmatter {
+        color: var(--col-frontmatter-default); /* general frontmatter */
+
+
+        &.cm-atom {
+            color: var(--col-frontmatter-atom);
+            font-weight: bold;
+        }
+
+        &.cm-meta {
+            color: var(--col-frontmatter-meta);
+        }
+
+        &.cm-number {
+            color: var(--col-frontmatter-number);
+        }
+
+    } 
+
+    body:not(.yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter {
+        color: var(--col-frontmatter-default); /* general frontmatter */
+
+
+        &.cm-atom {
+            color: var(--col-frontmatter-atom);
+            font-weight: bold;
+        }
+
+        &.cm-meta {
+            color: var(--col-frontmatter-meta);
+        }
+
+        &.cm-number {
+            color: var(--col-frontmatter-number);
+        }
+
+    } 
+
+    /* ─────────────────────────────────────────────────────────────────────────────
+    >> Frontmatter Container Appearance Options
+    ───────────────────────────────────────────────────────────────────────────── */
+
+    div.frontmatter-container {
+        overflow: auto; /* let it scroll */
+    }
+
+    /* none at all*/
+    .metadata-container-none div.frontmatter-container {
+        display: none;
+      }
+
+    /* single line */
+
+    .metadata-container-blankline {
+        div.frontmatter-container.frontmatter-container {
+
+            & > * {
+                display: none;
+            }
+
+            &:hover > * {
+                display: block;
+            }
+            
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: calc(var(--shape-roundish) * 1.25);
+                opacity: 0.1;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+    }
+
+    /*
+
+    div.frontmatter-container.frontmatter-container { 
+
+        display: inline-block;
+
+        height: var(--font-text-size);
+        width: var(--font-text-size);
+
+        &:hover {
+            display: block;
+
+            height: unset;
+            width: unset;
+        }
+
+        & > * {
+            display: none;
+        }
+
+        &:hover > * {
+            display: block;
+        }
+        
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-radius: calc(var(--shape-roundish) * 1.25);
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+    }
+
+    */
+
+    /*
+    div.frontmatter-container.frontmatter-container { 
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+
+        display: inline-block;        
+        background-color: yellow;
+        border: none;
+
+        height: var(--font-text-size);
+        width: var(--font-text-size);
+
+        &:hover {
+            display: block;
+            background-color: unset;
+            border: 1px solid var(--background-modifier-border);
+
+            height: unset;
+            width: unset;
+        }
+
+        & > * {
+            display: none;
+        }
+
+        &:hover > * {
+            display: block;
+        }
+        
+        &::before {
+            content: "M";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-radius: calc(var(--shape-roundish) * 1.25);
+            opacity: 1;
+
+        }
+
+        &:hover::before {
+            display: none;
+        }
+        
+    }
+    */
+
+    /* single dot */
+
+    .metadata-container-dot {
+        div.frontmatter-container.frontmatter-container { 
+
+            position: absolute;
+            top: 0.25em;
+            left: 1rem; /* max(100%, calc(50% + calc(0.5 * var(--width-vll)))); */
+
+
+            display: inline-block;        
+            background-color: var(--col-frontmatter-hide);
+            border: none;
+
+            height: 1em;
+            width: 1em;
+
+            border-radius: var(--shape-round);
+
+            &:hover {
+                display: block;
+                background-color: unset;
+                border: 1px solid var(--background-modifier-border);
+                background-color: var(--background-primary-alt);
+
+                height: unset;
+                width: unset;
+
+                border-radius: calc(var(--shape-roundish) * 1.25);
+            }
+
+            & > * {
+                display: none;
+            }
+
+            &:hover > * {
+                display: block;
+            }
+
+        }
+    }
+
+    /* variables */
+
+    .theme-light, .theme-dark {
+
+        --col-frontmatter-hide: var(--interactive-accent);
+
+    }
+
+
+      

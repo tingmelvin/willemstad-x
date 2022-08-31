@@ -1,0 +1,9 @@
+/* removing extraneous lines */
+.workspace-leaf-resize-handle:first-of-type {
+    .workspace-split.mod-right-split > & {
+        border-left-style: none;
+    }
+    .workspace-split.mod-left-split > & {
+        border-right-style: none;
+    }
+} /* left and right split no border */

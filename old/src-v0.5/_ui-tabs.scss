@@ -1,0 +1,374 @@
+.theme-light, .theme-dark {
+    /* ICON SIZE */
+    --sidebar-icon-size: 18px;
+    --header-icon-size: 16px;
+    --tab-icon-size: 14px;
+
+    --icon-diff-sidebar: calc(var(--sidebar-icon-size) - var(--header-icon-size)); /* MATH, DO NOT TOUCH */
+    --icon-diff: calc(var(--header-icon-size) - var(--tab-icon-size)); /* MATH, DO NOT TOUCH */
+
+    /* PADDING */
+    --header-padding: var(--size-2-3);
+    --tab-padding: calc(var(--header-padding) + 0.5 * var(--icon-diff)); /* 0.5 since icon diff have to be split half */
+    --ribbon-padding: var(--header-margin); 
+
+    /* HEIGHTS/WIDTH */
+    --ribbon-width: var(--header-height);
+    --header-height: calc(var(--header-icon-size) + var(--header-padding) * 2 + var(--header-margin) * 2); /* 1 + 2 */ /* MATH, DO NOT TOUCH */
+
+    /* MARGIN */
+    --header-margin: var(--size-4-1);
+    --header-margin-half: calc(0.5 * var(--header-margin)); /* because of neighbouring elements */
+
+    /* TAB OUTLINE WIDTH BORDER */
+    --tab-outline-width: 0px; /* NO TO BORDER BOXES */
+}
+
+
+
+/*
+LE MAP
+
+
+SB TH TH TH <TAB CB><TAB CB><NT>       TL   SB
+SR NV NV NV ----------------------------------
+SR          TITLE
+SR          ----------------------------------
+
+SR
+
+SR
+
+SR
+
+
+
+*/
+
+
+/* SB   Sidebar Toggle Button */
+.sidebar-toggle-button {
+    --icon-size: var(--header-icon-size); /* GRRRR WHO thought about this */
+
+    & .clickable-icon {
+        padding: var(--header-padding);
+    }
+
+    & {
+        height: calc(var(--header-icon-size) + var(--header-padding) * 2); /* needs a margin */ /* 1 */
+        padding: 0; /* gives off control to the icon */
+        margin: var(--header-margin) var(--header-margin); /* 2 */
+
+    } /* HEIGHT CONTROL */
+
+    &.mod-right {
+        --icon-size: var(--sidebar-icon-size);
+        margin-left: var(--header-margin-half);
+
+        & .clickable-icon {
+            padding: calc(var(--header-padding) - 0.5 * var(--icon-diff-sidebar));
+        }
+    }
+
+    &.mod-left {
+        --icon-size: var(--sidebar-icon-size);
+        margin: var(--header-margin) 0;
+        margin-right: var(--header-margin-half);
+
+        & .clickable-icon {
+            padding: calc(var(--header-padding) - 0.5 * var(--icon-diff-sidebar));
+        }
+    }
+}
+
+
+/* SR   Side Dock Ribbon */
+.clickable-icon.side-dock-ribbon-action,
+.mod-left-split .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header-inner-icon {
+
+    & .svg-icon {
+        --icon-size: var(--header-icon-size); 
+    }
+    & {
+        padding: var(--header-padding);
+    }
+}
+
+
+
+    .workspace-tab-header-tab-list, .workspace-tab-header-new-tab,
+    .workspace-tab-header-inner-close-button {
+        & .clickable-icon {
+            --icon-size: var(--tab-icon-size);
+            padding: var(--tab-padding);
+        }
+    }
+
+/* TL   Workspace Tab List Button */
+.workspace-tab-header-tab-list {
+    margin: var(--header-margin) var(--header-margin-half); /* follows 2 */
+    padding: 0; /* removes padding */
+}
+
+/* NT   Workspace New Tab Button */
+.workspace-tab-header-new-tab {
+    margin: var(--header-margin) var(--header-margin-half); /* follows 2 */
+    padding: 0; /* removes padding */
+}
+
+/* CB   Workspace Tab Close Button */
+.workspace-tab-header-inner-close-button {
+    margin: var(--header-margin) var(--header-margin-half); /* follows 2 */
+    padding: 0; /* removes padding */
+}
+
+/* TH   Workspace Tab Header */
+.workspace-tab-header {
+
+    &-inner {
+        padding: 0;
+    }
+
+    &-container-inner {
+
+        :is(.mod-left-split, .mod-right-split) & {
+            padding: 0;
+            margin: var(--header-margin); /* 5 */
+        }
+    }
+
+}
+
+/* NV   Nav Button */
+.nav-header {
+    padding: var(--header-margin); /* 5 */
+
+    & .nav-buttons-container {
+        justify-content: left;
+        gap: var(--header-margin); /* 4 */
+
+        & .nav-action-button {
+            & .svg-icon {
+                --icon-size: var(--header-icon-size); 
+            }
+        }
+
+        & .clickable-icon {
+            padding: var(--header-padding);
+        }
+    }
+}
+
+/* CL   Close Button within Tab 
+   PN   Pinned Icon */
+.mod-root .mod-pinned,
+.mod-root .workspace-tab-header-inner-close-button {
+    --icon-size: var(--tab-icon-size); 
+    /* padding: var(--tab-padding); */ /* what padding do I put here? */
+    padding: calc(0.5 * var(--tab-padding)); 
+
+    & .svg-icon {
+
+    }
+
+}
+
+
+
+
+.workspace-ribbon {
+
+    & .side-dock-actions,
+    & .side-dock-settings {
+        gap: var(--header-margin);
+    }
+
+}
+
+.mod-left-split .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container-inner {
+
+    gap: var(--header-margin); /* 4 */ /* gap for top */
+
+}
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/* COLOURS */
+/* hover colours */
+
+:is(.workspace-tab-header-new-tab,
+.workspace-tab-header-tab-list,
+.sidebar-toggle-button) .clickable-icon:hover,
+.workspace-tab-header-inner:hover .workspace-tab-header-inner-icon {
+
+    .theme-light & {
+        color: var(--color-accent-2);
+    } /* light mode */
+
+    .theme-dark & {
+        color: var(--color-accent-1);
+    } /* dark mode */
+    
+}
+
+/* add colour */
+
+.theme-light, .theme-dark {
+    --icon-color-focused: var(--color-accent); /* for icons */
+    /* --tab-text-color-focused-active: var(--color-accent); */ /* for titles */
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-icon {
+
+    .theme-light & {
+        color: var(--color-accent);
+    } /* light mode */
+
+    .theme-dark & {
+        color: var(--color-accent);
+    } /* dark mode */
+
+} /* central colour, then branched out */
+
+.workspace-ribbon:not(.is-collapsed) .sidebar-toggle-button .clickable-icon {
+    color: var(--color-accent);
+
+    &:hover {
+        .theme-light & {
+            color: var(--color-accent-2);
+        } /* light mode */
+    
+        .theme-dark & {
+            color: var(--color-accent-1);
+        } /* dark mode */
+    }
+} /* highlights the LEFT ribbon button if it isn't collapsed */
+
+/* DOM issues, can't do the same to the right */
+
+/* side dock ribbon hover colours */
+
+.workspace-ribbon {
+    & .side-dock-ribbon-action {
+        &:hover {
+
+            .theme-light & {
+                color: var(--color-accent-2);
+            } /* light mode */
+
+            .theme-dark & {
+                color: var(--color-accent-1);
+            } /* dark mode */
+            
+        }
+    }
+}
+
+
+
+
+/* MAIN TABS */
+/* turning them into Firefox-ish tabs/containers */
+
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::before,
+.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::after,
+.workspace-split.mod-root .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tab-header.is-active::after {
+
+    box-shadow: none;
+
+} /* removes the curve for before and after */
+
+.mod-root .workspace-tab-header {
+
+    & {
+        --tab-divider-color: transparent;
+        margin: 0;
+    } /* no tab dividers */
+
+    /* CLOSE BUTTON */
+
+    &:not(.is-active) .workspace-tab-header-inner-close-button {
+        display: none; /* hides the close button for non-active */
+    }
+
+    &-inner {
+        padding: 0 var(--size-2-2); /* fix the paddings since close button for all non-active is hidden now */
+    }
+
+    &-container {
+        padding-right: var(--header-margin-half); /* removes weird right padding */
+        padding-left: var(--header-margin-half); /* removes weird right padding */
+    } 
+
+    &-container-inner {
+        margin: 0; /* removes the TOP MARGIN */ 
+    }
+
+    &.is-active {
+        background-color: unset; /* sama sama with the rest. don't need background color */
+
+        & .workspace-tab-header-inner {
+
+            /*
+            &.workspace-tab-header-inner:hover {
+                background-color: var(--background-secondary-alt);
+                transition: var(--quicker-transition);
+            }
+
+            .theme-light & {
+                box-shadow: inset 1px 1px 1px var(--background-modifier-border-focus);
+                background-color: var(--background-primary);
+            } 
+
+            .theme-dark & {
+                box-shadow: inset 1px 1px 1px var(--background-modifier-border-focus);
+                background-color: var(--background-primary);
+            } 
+            */
+
+            &.workspace-tab-header-inner:hover {
+                background-color: var(--background-secondary-alt);
+                transition: var(--quicker-transition);
+            }
+
+            .theme-light & {
+                box-shadow: 0 0 0 1px var(--background-modifier-border-focus);
+                background-color: var(--background-primary);
+            } 
+
+            .theme-dark & {
+                box-shadow: 0 0 0 1px var(--background-modifier-border-focus);
+                background-color: var(--background-primary);
+            } 
+
+        }
+    }
+    &::after {
+        right: 0; /* removes the flexing, but some people might want it? */
+    }
+    &::before {
+        left: 0;
+    }
+
+}
+
+
+/* TAB  */
+.mod-root .workspace-tab-header-container-inner {
+    padding: 0; /* no need for the padding */
+}
+
+.workspace .mod-root .workspace-tab-header {
+    margin: var(--header-margin) var(--header-margin-half); /* follows 2 */
+    padding: 0; /* ah, there we go! */
+}

@@ -1,0 +1,45 @@
+/* Document Title */
+
+.mod-root .workspace-tabs > .workspace-leaf .view-header-title {
+    position: absolute;
+    height: fit-content;
+    white-space: nowrap;
+    word-break: break-all;
+    width: 100%; /* forces it to take the whole width so it can be easily editable */
+
+    &-container::after {
+        display: none;
+    }
+
+} /* ensures it remains on a single straight line */
+
+
+/*
+hide inline-title on editor
+*/
+
+.inline-title {
+    display: none;
+}
+
+.theme-light, .theme-dark {
+    --file-margins: 22px;
+}
+
+.workspace-tabs .workspace-leaf-content[data-type="markdown"] .view-header {
+    margin: 0 var(--file-margins); /* force the header to adopt same file-margins */
+}
+
+
+
+/* embeds */
+
+    /* clean - no borders */
+        .theme-light, .theme-dark {
+            --embed-border-left: none;
+        }
+
+    /* no scroll - no max height */
+        .markdown-embed-content {
+            max-height: none;
+        }

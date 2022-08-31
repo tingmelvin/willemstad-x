@@ -1,0 +1,95 @@
+/*
+dropdown borders
+1px when not focused
+2px when focused
+*/
+
+
+:is(select, .dropdown) {
+    box-shadow: 0 0 0 0px var(--background-modifier-border-focus);
+
+    &:hover {
+        box-shadow: 0 0 0 1px var(--background-modifier-border-focus);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px var(--background-modifier-border-focus);
+        background-color: var(--interactive-focus);
+    }
+}
+
+/*
+checkbox-container
+change shape
+*/
+
+.checkbox-container {
+    height: 1.25rem;
+    width: 1.25rem;
+    /* border: 0.125rem solid var(--interactive-border-color);
+    border-radius: 50rem;*/
+    transition: var(--quicker-transition);
+    background-color: var(--color-base-30);
+
+    &:after {
+        display: none;
+    }
+
+    &, &:hover, &:focus {
+        box-shadow: 0 0 0 0px var(--background-modifier-border-focus);
+    }
+
+    &:hover {
+        background-color: var(--color-base-50);
+    }
+
+    &.is-enabled:hover {
+        background-color: var(--color-accent-2);
+    }
+
+    &:focus {
+        background-color: var(--interactive-focus);
+    }
+}
+
+.checkbox-container.mod-small {
+    width: calc(var(--toggle-s-thumb-height) + var(--toggle-s-border-width) * 2); /* sama sama */
+}
+
+
+/*
+get rid of toggle borders. UGH
+*/
+.theme-light, .theme-dark {
+    --toggle-border-width: 0;
+}
+
+/* test */
+
+textarea,
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+
+    /* border: 0; */
+
+}
+
+/* for PLUGIN setting search */
+
+:is(.community-plugin-search, .settings-search-container) .search-input-container > input {
+    border: 0;
+}
+
+/* animations for buttons */
+
+button {
+    transition: var(--quicker-transition);
+}
+
+kbd {
+    padding: 2px 3px;
+    border-radius: var(--radius-m);
+}

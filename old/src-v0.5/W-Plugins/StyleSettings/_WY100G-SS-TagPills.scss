@@ -1,0 +1,112 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> WY100G
+\ Plugins > Community > Style Settings
+\ Tag Pills | Experimental, Wiki, Obsolete
+    \\ PComm000 | Style Settings
+──────────────────────────────────────────────────────────────────────────────── */    
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> add 'experimental' tag
+    ──────────────────────────────────────────────────────────────────────────── */
+    .setting-item:is([data-id="gradient-headers"], [data-id="table-lp-magic"],
+    [data-id="startup"], [data-id="fix-mathjax-width"],
+    [data-id="Willemstad-Adv-Settings"], [data-id="frontmatter-display"]) :is(.setting-item-name) {
+    
+        &::after {
+
+            content: "Experimental";
+            white-space: pre;
+            color: var(--background-primary); /* should provide contrast */
+            font-size: 0.7rem;
+            font-weight: 500;
+
+            background-color: var(--accent-lighter);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0.3rem;
+            padding: 0 0.25rem;
+
+            text-transform: uppercase;
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> for wiki stuff - add 'follow instructions on link' tag
+    ──────────────────────────────────────────────────────────────────────────── */
+    
+    /*
+    .setting-item:is([data-id="placeholder-1"]) :is(.setting-item-name) {
+    
+        &::after {
+
+            content: "follow instructions on the link below";
+            white-space: pre;
+            color: var(--background-primary);
+            font-size: 0.7rem;
+            font-weight: 500;
+
+            background-color: var(--interactive-bg);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0.3rem;
+            padding: 0 0.25rem;
+        }
+    }
+    */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> for non wiki stuff - add 'follow instructions below' tag
+    ──────────────────────────────────────────────────────────────────────────── */
+    /*
+    .setting-item:is([data-id="placeholder-co-1"]) :is(.setting-item-name) {
+    
+        &::after {
+
+            content: "follow instructions written in the description below";
+            white-space: pre;
+            color: var(--background-primary);
+            font-size: 0.7rem;
+            font-weight: 500;
+
+            background-color: var(--interactive-bg);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0.3rem;
+            padding: 0 0.25rem;
+        }
+    }
+    */
+
+    
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> obsolete tag
+    ──────────────────────────────────────────────────────────────────────────── */
+    /*
+    .setting-item:is([data-id="placeholder-1"], [data-id="placeholder-co-1"]) :is(.setting-item-name) {
+
+        &::after {
+
+            content: "Obsolete for Insiders — as of Obsidian v0.14.1, tables are rendered in Live Preview";
+            white-space: pre;
+            color: var(--background-primary);
+            font-size: 0.7rem;
+            font-weight: 500;
+
+            background-color: var(--text-error-hover);
+            border-radius: calc(var(--shape-roundish) * 1);
+
+            position: relative;
+            top: -0.05rem;
+            margin-left: 0.3rem;
+            padding: 0 0.25rem;
+
+        }
+
+    }
+    */

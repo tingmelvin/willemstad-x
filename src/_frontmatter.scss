@@ -1,0 +1,35 @@
+.frontmatter-container {
+    & .frontmatter-container-header {
+        font-family: var(--font-heading); /* uses heading font */
+        text-transform: uppercase;
+        font-weight: var(--font-semibold);
+        color: var(--text-faint); /* similar to comm options */
+
+        padding-bottom: var(--size-4-1);
+        margin-bottom: var(--size-4-1); /* change the bottom padding and margin */
+        
+    }
+
+    /*
+    &:hover .frontmatter-container-header {
+
+        background-color: var(--background-secondary);
+
+    }*/ /* add a bit of a hover? */ /* doesn't work well */
+
+    & {
+        padding: var(--size-4-1) 0; /* move half of the bottom padding from app.css to margin, for a bottom border */ /* actually let's do 4-1 instead of 4-2? to align to the top margin above as seen a few lines earlier */
+        margin-bottom: var(--size-4-1); 
+    }
+
+    &:not(.is-collapsed) {
+        border-bottom: 1px solid var(--background-modifier-border);
+
+    }
+
+    & .frontmatter-section {
+        /* inter-aliases-tag bit! */
+        margin-bottom: var(--size-2-1); /* thin it down */
+    }
+
+}

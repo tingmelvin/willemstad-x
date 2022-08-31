@@ -1,0 +1,69 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EL
+\ Editor
+───────────────────────────────────────────────────────────────────────────────────
+        Variable Line Length
+        ──────────────────────────────────────────────────────────────────────── */
+
+    .length-line-var {
+    
+        .markdown-source-view.markdown-source-view.markdown-source-view.mod-cm6 {
+            
+            & .cm-contentContainer {
+                max-width: unset;
+            }
+            
+            :is(.cm-content,
+            .cm-line:not(.HyperMD-table-row)) {
+                max-width: var(--width-vll);
+                margin: auto;
+            }
+        }
+
+        .markdown-preview-view.markdown-preview-view .markdown-preview-sizer {
+            max-width: var(--width-vll);
+            margin: auto;
+        }
+    }
+
+    .theme-dark, .theme-light {
+
+        --width-vll: 700px;
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> Document Titles fitted to Varying Line Length
+    ──────────────────────────────────────────────────────────────────────────── */
+    body:not(.plugin-sliding-panes-rotate-header).fit-titles-vll.length-line-var {
+        .workspace-leaf-content[data-type="markdown"] {
+
+            /*
+            max-width: var(--width-vll);
+            margin: auto;
+            */
+
+            div.view-header {
+
+                box-sizing: border-box;
+
+                /*
+                max-width: calc(100% - 2rem);
+
+                width: var(--width-vll);
+                */ /* was for content-box, but didn't take into account borders */
+
+                max-width: 100%;
+
+                padding-left: max(calc(50% - (0.5 * var(--width-vll))), var(--padding-content-lr)); /* thank the lords that negative padding is not a thing */
+                padding-right: max(calc(50% - (0.5 * var(--width-vll))), var(--padding-content-lr)); /* calc(50% - (0.5 * var(--width-vll)));*/
+            
+                /* 1rem comes from the markdown-preview-view padding */
+                /* see ED for more changes */
+
+
+            }
+
+        }
+
+    }

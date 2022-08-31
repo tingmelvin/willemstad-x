@@ -1,0 +1,39 @@
+.nav-file-title, .nav-folder-title {
+    padding: var(--size-2-1) var(--size-2-2);
+} /* navigation title padding */
+
+.nav-files-container {
+    padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-2);
+} /* padding for entire container */
+
+
+/* NAV HEADER */
+
+.nav-header {
+
+    padding: var(--header-margin-td) var(--header-padding-inner-lr); /* similar as margin for upper buttons, and the left/right padding for those too */
+    border-bottom: var(--divider-width) solid var(--divider-color); /* adds a border delineating from the file navs */
+
+    & .nav-buttons-container {
+
+        --columns-nav-buttons: 5;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--size-4-2), 1fr)); /* this is if I want it to fill the whole row */
+        grid-template-columns: repeat(var(--columns-nav-buttons), auto); /* this is if I want to dictate the number of columns */ /* standard is 8 */
+        /* should do some math magic */
+        /* needs some working on */
+
+        justify-content: start; /* for left */
+
+
+        grid-template-rows: auto;
+
+        &::after {
+
+
+        }
+    }
+}
+
+/* NAV TAB BUTTONS? SEE UI-TABS */

@@ -1,0 +1,190 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DE13
+\ UI > Main Screen Elements
+\ Status Bar
+───────────────────────────────────────────────────────────────────────────────────
+    >> JUST MAKE IT SMOL, MERDE
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) CONJURING | HIDES UNTIL HOVERED
+        ──────────────────────────────────────────────────────────────────────── */  
+        
+        :is(body:not(.sb-unchanging, .sb-hiding, .sb-enduring) /*, .sb-conjuring*/) {
+        
+            & div.status-bar {
+                position: absolute;
+                max-height: unset;
+                
+                right: 0; /* sets it to bottom-right */
+                bottom: -0.5rem; /* sets it to bottom-right */
+                
+                padding: 0;
+                line-height: var(--height-line-sb);
+                
+                border-bottom: 0;
+                border-top: 0.125rem solid var(--background-secondary-alt);
+                border-right: 0.125rem solid var(--background-secondary-alt);
+                border-left: 0.125rem solid var(--background-secondary-alt);
+                border-radius:  calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+                
+                opacity: 0;
+                
+                transition: var(--medium-transition);
+            }
+
+            & div.status-bar:hover {
+                position: absolute;
+                max-height: unset;
+                
+                right: 0; /* sets it to bottom-right */
+                bottom: 0; /* sets it to bottom-right */
+                
+                padding: 0;
+                line-height: var(--height-line-sb);
+                
+                border-bottom: 0;
+                border-top: 0.125rem solid var(--background-secondary-alt);
+                border-right: 0.125rem solid var(--background-secondary-alt);
+                border-left: 0.125rem solid var(--background-secondary-alt);
+                border-radius: calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+                
+                opacity: 100%;
+                
+                transition: var(--quick-transition);
+            }
+
+        }
+
+
+        
+    
+
+        .sb-conjuring div.status-bar {
+            position: absolute;
+            max-height: unset;
+            
+            right: 0; /* sets it to bottom-right */
+            bottom: -0.5rem; /* sets it to bottom-right */
+            
+            padding: 0;
+            line-height: var(--height-line-sb);
+            
+            border-bottom: 0;
+            border-top: 0.125rem solid var(--background-secondary-alt);
+            border-right: 0.125rem solid var(--background-secondary-alt);
+            border-left: 0.125rem solid var(--background-secondary-alt);
+            border-radius:  calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+            
+            opacity: 0;
+            
+            transition: var(--medium-transition);
+        }
+        .sb-conjuring div.status-bar:hover {
+            position: absolute;
+            max-height: unset;
+            
+            right: 0; /* sets it to bottom-right */
+            bottom: 0; /* sets it to bottom-right */
+            
+            padding: 0;
+            line-height: var(--height-line-sb);
+            
+            border-bottom: 0;
+            border-top: 0.125rem solid var(--background-secondary-alt);
+            border-right: 0.125rem solid var(--background-secondary-alt);
+            border-left: 0.125rem solid var(--background-secondary-alt);
+            border-radius: calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+            
+            opacity: 100%;
+            
+            transition: var(--quick-transition);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) ENDURING | PERMANENTLY DISPLAYED
+        ──────────────────────────────────────────────────────────────────────── */    
+        .sb-enduring div.status-bar {
+            position: absolute;
+            max-height: unset;
+
+            right: 0; /* sets it to bottom-right */
+            bottom: 0; /* sets it to bottom-right */
+
+            padding: 0;
+            line-height: var(--height-line-sb);
+
+            border-bottom: 0;
+            border-top: 0.125rem solid var(--background-secondary-alt);
+            border-right: 0.125rem solid var(--background-secondary-alt);
+            border-left: 0.125rem solid var(--background-secondary-alt);
+            border-radius:  calc(var(--shape-roundish) * 1.5) calc(var(--shape-roundish) * 1.5) 0 0;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) UNCHANGING | Standard Obsidian
+        ──────────────────────────────────────────────────────────────────────── */ 
+
+        .sb-unchanging div.status-bar {
+            max-height: unset;
+            line-height: var(--height-line-sb);
+        }
+
+        .sb-unchanging .status-bar-item {
+            padding: 0rem 0rem;
+        }   /* remove up down padding to make it actually have everything align nicely */
+            /* change the height instead? */
+
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> (OPTION) HIDING | Totally Gone
+        ──────────────────────────────────────────────────────────────────────── */ 
+
+        .sb-hiding div.status-bar {
+            display: none;
+        }
+
+        .sb-hiding .status-bar-item {
+            display: none;
+        }
+
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> Variables | Status Bar
+        ──────────────────────────────────────────────────────────────────────── */
+        .theme-light, .theme-dark {
+            
+            --height-line-sb: 1.75rem;
+        
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> Defaults?
+        ──────────────────────────────────────────────────────────────────────── */
+        .status-bar-item-icon {
+            display: flex;
+        }
+
+        .status-bar-item {
+            padding: 0rem 0rem;
+            display: flex;
+            align-items: center;
+        
+        }   /* remove up down padding to make it actually have everything align nicely */
+            /* change the height instead? */
+
+        .status-bar {
+            & > .status-bar-item {
+
+                &:first-child {
+                    padding-left: 0.5rem;
+                }
+
+                &:last-child {
+                    padding-right: 0.5rem;
+                }
+            }
+        } /* have to use > else some weird shenanigans will go on */
+
+        .status-bar {
+            gap: 0.75rem;
+        }
+

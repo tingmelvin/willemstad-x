@@ -1,0 +1,246 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> WY007
+\ Plugins > Community
+\ Kanban
+    \\ PComm007 | Kanban
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Kanban]
+\\ (NOMEN | PComm007)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Δ and shrink Margins and make it neat
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.kanban-plugin__board>div {
+        padding: 0.125rem;
+        padding-left: 0.3rem;
+        padding-bottom: 0.3rem;
+        overflow-x: scroll;
+        
+        &::-webkit-scrollbar {
+            height: var(--size-scrollbar);
+            width: var(--size-scrollbar);
+        }
+
+    }
+    div.kanban-plugin__lane-header-wrapper {
+        padding: 0.15rem 0.1rem;
+        border: none;
+    }
+    div.kanban-plugin__lane button {
+        padding: 0.3rem 0.3rem;
+    }
+    div.kanban-plugin__item-form {
+        padding: 0.15rem;
+        border: none;
+    }
+    div.kanban-plugin__lane-items {
+        margin: 0 0.3rem 0 0.3rem;
+        padding: 0;
+    }
+    div.kanban-plugin__item-button-wrapper {
+        padding: 0.1rem;
+        border: none;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Single Lane Kanbans in Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-singlelane :is(.mod-left-split, .mod-right-split) {
+
+        .kanban-plugin__placeholder {
+            
+            flex-shrink: 1;
+        }
+
+        div.kanban-plugin__board>div {
+
+            flex-direction: column;
+            flex-grow: 1;
+
+        }
+
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+            max-height: var(--PComm007-sp-maxheight);
+        
+            & + .kanban-plugin__lane-wrapper {
+
+                margin-top: 0.25rem;
+                margin-right: 0;
+
+            }
+
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Fit Width to Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-fitwidth :is(.mod-left-split, .mod-right-split) div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+        width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [SUPER-OPTION] Fit Width to Side Panes + Single Lane Kanbans in Side Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-sp-singlelane.PComm007-sp-fitwidth :is(.mod-left-split, .mod-right-split) {
+    
+        div.kanban-plugin__board>div {
+
+            flex-direction: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+        }
+
+        .kanban-plugin__placeholder[data-axis=horizontal] {
+            
+            height: 0; /* extraneous space */
+            
+        }
+
+    }
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Single Lane Kanbans in Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-singlelane .mod-root {
+
+        .kanban-plugin__placeholder {
+            
+            flex-shrink: 1;
+        }
+
+        
+        div.kanban-plugin__board>div {
+
+            flex-direction: column;
+            flex-grow: 1;
+
+        }
+
+        div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+            max-height: var(--PComm007-wp-maxheight);
+            
+            & + .kanban-plugin__lane-wrapper {
+
+            margin-top: 0.25rem;
+            margin-right: 0;
+
+            }
+
+        }
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [OPTION] Fit Width to Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-fitwidth .mod-root div.kanban-plugin__board .kanban-plugin__lane-wrapper {
+
+        width: 100% !important; /* needs an important to override user commands as well for normal kanban lanes in workspace leaf */
+
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> [SUPER-OPTION] Fit Width to Main Workspace Panes + Single Lane Kanbans in Main Workspace Panes
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .PComm007-wp-singlelane.PComm007-wp-fitwidth .mod-root {
+    
+        div.kanban-plugin__board>div {
+
+            flex-direction: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+        }
+
+        .kanban-plugin__placeholder[data-axis=horizontal] {
+            
+            height: 0; /* extraneous space */
+            
+        }
+
+    }
+
+    .theme-dark, .theme-light {
+        --PComm007-sp-maxheight: 33vh;
+        --PComm007-wp-maxheight: 33vh;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIX | Global colour settings wrt to borders
+    ──────────────────────────────────────────────────────────────────────────── */
+    button.kanban-plugin__new-item-button,
+    .kanban-plugin__lane button.kanban-plugin__lane-settings-button,
+    .kanban-plugin__item-prefix-button-wrapper,
+    .kanban-plugin__item-postfix-button-wrapper {
+        border-color: transparent;
+    }
+    .kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
+    .kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
+    .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+        border-color: transparent;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Hide Scrollbars | BE GONE SCROLLBARS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .kanban-plugin .kanban-plugin__lane ::-webkit-scrollbar {
+        height: 0%;
+        display: none;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Border radius
+    ──────────────────────────────────────────────────────────────────────────── */
+    div.kanban-plugin__lane {
+        border-radius: calc( var(--shape-roundish) * 1.5 );
+    }
+    div.kanban-plugin__grow-wrap>textarea,
+    div.kanban-plugin__grow-wrap:after {
+        border-radius: calc( var(--shape-roundish) * 1.5 );
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIX | Font
+    ──────────────────────────────────────────────────────────────────────────── */
+    button.kanban-plugin__new-item-button {
+        font-family: var(--font-editor);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> FIX | Checkboxes
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+        margin: 0.2rem 0.3rem 0.2rem 0;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> ICON | Kanban
+    ──────────────────────────────────────────────────────────────────────────── */
+    .workspace-leaf-content[data-type=kanban] .view-header-icon,
+    .workspace-tab-header[data-type=kanban] .workspace-tab-header-inner-icon {
+
+            & svg.blocks {
+
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' stroke-width='1.5' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 3L5 3C3.89543 3 3 3.89543 3 5L3 19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.4 6H6.6C6.26863 6 6 6.26863 6 6.6L6 17.4C6 17.7314 6.26863 18 6.6 18H10.4C10.7314 18 11 17.7314 11 17.4V6.6C11 6.26863 10.7314 6 10.4 6Z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4 6H13.6C13.2686 6 13 6.26863 13 6.6V13.4C13 13.7314 13.2686 14 13.6 14H17.4C17.7314 14 18 13.7314 18 13.4V6.6C18 6.26863 17.7314 6 17.4 6Z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        
+                -webkit-mask-position: center;
+                -webkit-mask-repeat: no-repeat;
+        
+                & path {
+                    d: var(--icon-box-path);
+                }
+        
+            }
+    }

@@ -1,0 +1,31 @@
+/* root transitions and animations */
+
+body:not(.no-animations) {
+    --quicker-transition: var(--anim-duration-superfast) ease-in-out;
+    --quick-transition: var(--anim-duration-fast) ease-in-out;
+    --medium-transition: var(--anim-duration-moderate) ease-in-out;
+    --slow-transition: var(--anim-duration-slow) ease-in-out;
+}
+
+/* root backdrop-filter */
+
+body:not(.no-backdrop-filter) {
+    --blur-2: blur(2px);
+    --blur-4: blur(4px);
+    --blur-8: blur(8px); 
+}
+
+/*
+animation speed
+
+    --anim-duration-none: 0;
+    --anim-duration-superfast: 70ms;
+    --anim-duration-fast: 140ms;
+    --anim-duration-moderate: 300ms;
+    --anim-duration-slow: 560ms;
+
+    quicker - 100ms
+    quick - 200ms
+    medium - 350ms
+    slow - 550ms
+*/

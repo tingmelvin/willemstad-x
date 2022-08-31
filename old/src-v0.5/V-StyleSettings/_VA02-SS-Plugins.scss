@@ -1,0 +1,316 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> VA02
+\ Style Settings
+\ Plugins
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* @settings
+name: "Plugins" 
+id: Willemstad-Plugins
+settings:
+    -
+     id: plugin-core
+     title: Core Plugins
+     type: heading
+     description: "Command Palette"
+     level: 2
+     collapsed: false
+    -
+     id: PCore001-settings
+     title: Command Palette
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+            id: normal-command-palette
+            title: Revert back to standard Obsidian style
+            note: Command Palette
+            type: class-toggle
+            description: When enabled, this moves the plugin name back to the left. Use when the Command Palette looks wonky.
+            default: false
+    -
+     id: plugin-community
+     title: Community Plugins
+     type: heading
+     description: "Admonitions, Calendar, Footnotes & Citation Indicator, Full Calendar, Kanban, Sliding Panes, Style Settings, Longform"
+     level: 2
+     collapsed: false
+    -
+     id: PComm003-settings
+     title: Admonitions
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm003-margin
+        title: Change the size of the margins
+        note: Admonitions
+        type: variable-number-slider
+        format: px
+        default: 0
+        min: 0
+        max: 25
+        step: 0.5
+    -
+        id: admonition-margin-top
+        title: Change size of padding
+        note: Admonitions
+        type: variable-number-slider
+        description: "Admonition's original settings are 1.625."
+        format: em
+        default: 0.5
+        min: 0
+        max: 3
+        step: 0.05
+    -
+     id: PComm001-settings
+     title: Calendar
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm001-col-today
+        title: Change colour, Font of today's date
+        note: 📆 Calendar
+        type: variable-themed-color
+        description: Change the font colour for today's date in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: hsl(155, 100%, 37%)
+        default-dark: hsl(155, 100%, 37%)
+    -
+        id: PComm001-col-year
+        title: Change colour, Font of the year
+        note: 📆 Calendar
+        type: variable-themed-color
+        description: Change the font colour for the year in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: hsl(155, 100%, 37%)
+        default-dark: hsl(155, 100%, 37%)
+    -
+        id: PComm001-col-dot
+        title: Change colour, Filled dot
+        note: 📆 Calendar
+        type: variable-themed-color
+        description: Change the colour of the dot in the Calendar plugin.
+        opacity: false
+        format: hsl
+        default-light: hsl(155, 100%, 37%)
+        default-dark: hsl(155, 100%, 37%)
+    -
+     id: PComm033-settings
+     title: Focus Mode
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm033-standard-focus
+        title: Disable True Focus Mode
+        note: Focus Mode
+        type: class-toggle
+        description: "By default, Willemstad removes the exit button in Focus Mode. This toggle re-enables the ribbon and its accompanying exit button."
+        default: false
+    -
+        id: PComm033-transparent-header
+        title: Make Un-Hovered Title Headers Transparent in Focus Mode
+        note: Focus Mode
+        type: class-toggle
+        description: "When enabled, this toggle makes title headers transparent when un-hovered. Hover over for title headers to reappear."
+        default: false
+    -
+    -
+     id: PComm027-settings
+     title: Footnotes & Citation Indicator
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm027-active
+        title: Activate Footnotes and Citation Indicator and Relevant Settings
+        note: 🦶📝 Footnotes & Citation Indicator
+        type: class-toggle
+        description: "Toggle to make Style Settings changes to the Footnotes and Citation Indicator. When enabled, this can also be used independently of the plugin."
+        default: false
+    -
+        id: PComm027-indicator
+        title: Change Gutter Indicator
+        note: 🦶📝 Footnotes & Citation Indicator
+        type: variable-text
+        description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin."
+        default: '⦿'
+    -
+     id: PComm009-settings
+     title: Full Calendar
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm009-no-halfhour-grid
+        title: Remove Half-hour Dotted Lines
+        note: 💯📆 Full Calendar
+        type: class-toggle
+        description: "When enabled, this removes the half-hour dotted lines from the Full Calendar calendar view."
+        default: false
+    -
+     id: PComm007-settings
+     title: Kanban
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm007-sp-singlelane
+        title: Vertical Scroll Kanbans in Side Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, multiple kanban lanes in the side panes can be navigated via scrolling vertically rather than scrolling horizontally.
+        default: false
+    -
+        id: PComm007-sp-fitwidth
+        title: Fit to Width of Side Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, the kanban lanes in the side panes will fit to the width of the side panes.
+        default: false
+    -
+        id: PComm007-sp-maxheight
+        title: Max Height of Vertical Kanban Lane in Side Panes
+        note: Kanban
+        type: variable-number-slider
+        description: "Set the maximum height of each kanban lane in the side panes, when vertical."
+        default: 33
+        min: 5
+        max: 100
+        step: 1
+        format: 'vh'
+    -
+        id: PComm007-wp-singlelane
+        title: Vertical Scroll Kanbans in Main Workspace Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, multiple kanban lanes in the main workspace panes can be navigated via scrolling vertically rather than scrolling horizontally.
+        default: false
+    -
+        id: PComm007-wp-fitwidth
+        title: Fit to Width of Main Workspace Panes
+        note: Kanban
+        type: class-toggle
+        description: When enabled, the kanban lanes in the main workspace panes will fit to the width of the pane.
+        default: false
+    -
+        id: PComm007-wp-maxheight
+        title: Max Height of Vertical Kanban Lane in Main Workspace Panes
+        note: Kanban
+        type: variable-number-slider
+        description: "Set the maximum height of each kanban lane in the main workspace panes, when vertical."
+        default: 33
+        min: 5
+        max: 100
+        step: 1
+        format: 'vh'
+    -
+     id: PComm002-settings
+     title: Sliding Panes
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm002-shadow
+        title: Re-enable Shadows between Two Panes
+        note: Sliding Panes
+        type: class-toggle
+        description: "By default, Willemstad removes Sliding Panes' shadows. This toggle re-enables the shadows between two sliding panes when using the Sliding Panes plugin."
+        default: false
+    -
+        id: PComm002-rotate-title
+        title: Rotate Document Title
+        note: Sliding Panes
+        type: class-toggle
+        description: "When enabled, the document title will rotate 180 degrees when using the Sliding Panes plugin. This is useful for right-aligned document titles. Title alignments can be changed in the Editor settings."
+        default: false
+    -
+     id: PComm000-settings
+     title: Style Settings
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -
+        id: PComm000-blockdesc-appear
+        title: Keep Header Block Description visible
+        note: ⚙️ Style Settings
+        type: class-toggle
+        description: When enabled, this keeps the header description in the Style Settings visible when said option is toggled.
+        default: true
+    -
+     id: longform-settings
+     title: Longform plugin & Writing CSSClass
+     description: 
+     type: heading
+     level: 3
+     collapsed: false
+    -    
+        id: font-longform
+        title: Font Typeface — Longform & Writing notes
+        description: "Globally overrides all font typefaces for specific use with longform & writing notes, except for code, which still uses the monospace font."
+        note: ✍️📕 Longform plugin & Writing CSSClass
+        type: variable-text
+        default: '"Crimson Pro"'
+    -
+        id: size-font-longform
+        title: Font Size — Longform & Writing notes
+        note: ✍️📕 Longform plugin & Writing CSSClass
+        type: variable-number-slider
+        default: 1.2
+        min: 0.7
+        max: 2
+        step: 0.05
+        format: 'rem'
+    -
+        id: PComm029-text-indent
+        title: Text Indentation — Longform & Writing notes
+        note: ✍️📕 Longform plugin & Writing CSSClass
+        type: class-toggle
+        description: When enabled, longform & writing notes will be indented.
+        default: false
+    -
+        id: PComm029-justify
+        title: Text Justification — Longform & Writing notes
+        note: ✍️📕 Longform plugin & Writing CSSClass
+        type: class-toggle
+        description: When enabled, longform & writing notes will be justified.
+        default: false
+    -
+        id: support-willemstad
+        title: Support the development of Willemstad
+        type: heading
+        level: 2
+        description: 'Hi! I hope you enjoy Willemstad. There are a few ways you can support its continuing development:'
+        collapsed: false
+    -
+        id: support-willemstad-github
+        title: Star the repository on Github!
+        type: class-toggle
+        default: false
+        description: https://github.com/tingmelvin/willemstad-x
+    -
+        id: support-willemstad-issue
+        title: Submit an issue or a feature request on Github!
+        type: class-toggle
+        default: false    
+        description: https://github.com/tingmelvin/willemstad-x/issues
+    -
+        id: support-willemstad-obsidian
+        title: Purchase a Catalyst license with Obsidian!
+        type: class-toggle
+        default: false
+        description: https://obsidian.md/pricing
+*/

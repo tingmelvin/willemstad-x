@@ -1,0 +1,154 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ED
+\ Document Titles
+───────────────────────────────────────────────────────────────────────────────────
+    >> Nicer Document Titles
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> Δ FONT WEIGHT and make them slightly less intrusive and smaller
+        >>> Δ COLOURS too!
+        ──────────────────────────────────────────────────────────────────────── */
+            .view-header-title {
+                font-size: 1em;
+                font-weight: 600;
+                color: var(--text-accent);
+            }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> Δ ACTIVE TITLE COLOUR
+        ──────────────────────────────────────────────────────────────────────── */
+            .workspace-leaf.mod-active .view-header-title {
+                color: var(--col-header-title-active);
+            }
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> Δ DORMANT TITLE COLOUR
+        ──────────────────────────────────────────────────────────────────────── */
+            .view-header-title {
+                color: var(--col-header-title-dormant);
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> Paddings for Doc Titles fix
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .view-header {
+
+        display: flex;
+        align-items: center; /* ensures center alignment */
+
+        /* oh the lords this is buggy */
+
+
+        padding: 0 var(--padding-content-lr); /* to make up for the other paddings removed */
+
+        gap: 0.25rem;
+
+        border-top: 0px;
+
+    }
+
+    .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+        top: 0px; /* parallels with the 0 border-top on .view-header */
+    }
+
+    .view-header-icon {
+        padding: 0;
+    }
+
+    .view-actions {
+        padding: 0;
+        gap: 0.75rem;
+    }
+
+    a.view-action {
+        margin: 0;
+    }
+
+    .view-header-title-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .view-header-title {
+        padding-right: 0rem;
+    }
+
+
+
+    .workspace-leaf-content[data-type=markdown] {
+        .view-header {
+
+            display: flex;
+            align-items: center; /* ensures center alignment */
+
+            /* oh the lords this is buggy */
+
+
+            padding: 0 var(--padding-content-lr); /* to make up for the other paddings removed */
+
+            gap: 0.25rem;
+
+        }
+
+        .doc-title-gone & {
+
+            .view-header {
+                display: none;
+            }
+
+            .view-content {
+                height: 100%;
+            }
+
+        }
+
+        .view-header-icon {
+            padding: 0;
+        }
+
+        .view-actions {
+            padding: 0;
+        }
+
+        .view-header-title-container {
+            display: flex;
+            align-items: center; /* ensures center alignment */
+
+            /* time to make some alignments! */
+
+            .doc-title-align-l & {
+                /* justify-content: flex-start; */
+            }
+
+            .doc-title-align-c & {
+                justify-content: center;
+            }
+
+            .doc-title-align-r & {
+                justify-content: flex-end;
+                
+                
+                & .view-header-title {
+                    padding-right: 0px; 
+                    /* kinda follows Obsidian core stuff - which is 30px but gradient to "disappear" title */
+                     /* do I need this, actually */
+                } 
+
+                &:after {
+                    display: none;
+                }
+            }
+
+
+        }
+        .view-header-title {
+            padding-right: 0rem;
+        }
+
+    }
+
+    /* view header icon */
+
+    .view-header-icon {
+        display: flex;
+        top: 0px;
+        align-items: center;
+    }

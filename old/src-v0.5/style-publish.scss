@@ -1,0 +1,41 @@
+@use 'A-License/_AA-License-Willemstad';
+@use 'B-Root/_BC-Root-Colours';
+@use 'B-Root/_BT-Root-Typography';
+@use 'B-Root/_BV01-SGV-Round';
+@use 'B-Root/_BV02-SGV-Animations';
+@use 'E-Editor/_EB-Blocks';
+@use 'E-Editor/_ED-DocTitles';
+@use 'E-Editor/_EF-Frontmatter';
+@use 'E-Editor/_EL-VarLineLength';
+@use 'E-Editor/_ET01-ETyp-HeaderVar';
+@use 'E-Editor/_ET11-ETyp-Highlights';
+@use 'E-Editor/_ET12-ETyp-Underlines';
+@use 'E-Editor/_ET21-ETyp-OtherSpacing';
+@use 'E-Editor/_EW00-Callouts';
+@use 'E-Editor/_EW01-Callouts-Metadata';
+@use 'E-Editor/_EW02-Callouts-Standard';
+@use 'E-Editor/_EW03-Callouts-Columns';
+@use 'E-Editor/_EW11-AdCa-Infobox-ITS';
+@use 'E-Editor/_EW12-AdCa-Tables';
+@use 'E-Editor/_EW13-AdCa-Aside';
+@use 'E-Editor/_EW14-AdCa-Kanban';
+@use 'E-Editor/_EW15-AdCa-ImgGrid-ITS';
+@use 'E-Editor/_EX11-CSSC-Latex';
+@use 'E-Editor/_EX12-CSSC-Writing-SFX';
+@use 'E-Editor/_EX13-CSSC-Magazine';
+@use 'E-Editor/_EX16-CSSC-CornellNotes';
+@use 'E-Editor/_EY13-HTML-Aside';
+@use 'E-Editor/_EY21-HTML-ProgressBar';
+@use 'E-Editor/_EZ00-OtherStyling';
+@use 'E-Editor/_EZ01-IndentationGuides';
+@use 'Y-PublishSpecific/_YA-Publish-Core';
+@use 'Y-PublishSpecific/_YF-Publish-Font';
+
+body {
+
+    --font-interface-override: 'Manrope' !important;
+    --font-monospace-override: 'DM Mono' !important;
+    --font-text-override: 'DM Sans' !important;
+    --font-default: 'DM Sans' !important;
+    
+    }

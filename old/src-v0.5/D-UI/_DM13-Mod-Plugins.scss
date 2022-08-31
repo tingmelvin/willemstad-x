@@ -1,0 +1,265 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DM13
+\ UI > Modals
+\ Community Plugins Modal
+───────────────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | BORDER RADIUS FOR LEFT PANE
+        ──────────────────────────────────────────────────────────────────────── */
+        .community-plugin-search {
+            border-radius: calc(var(--shape-roundish) * 2) 0 0 calc(var(--shape-roundish) * 2);
+        }
+        .search-result-container {
+            padding: 0;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | AUTHOR NAME INLINE
+        ──────────────────────────────────────────────────────────────────────── */
+        .community-plugin-item {
+
+            .community-plugin-author {
+                font-size: 0.85rem;
+                display: inline-block;
+                position: relative;
+                color: var(--text-muted);
+                top: -1px;
+
+                &::first-letter {
+                    text-transform: lowercase;
+                }
+
+            }
+
+            .community-plugin-downloads,
+            .community-plugin-downloads > span {
+                font-size: 0.85rem;
+                height: fit-content;
+                line-height: 100%;
+
+            }
+
+            .community-plugin-downloads {
+                margin-right: 0.35rem;
+            }
+        }
+
+        .community-plugin-downloads {
+            margin-right: 0.5rem;
+            margin-top: 0;
+        }
+
+        .community-plugin-downloads-text {
+            display: inline-block;
+        }
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL PADDINGS]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | ITEM DISPLAY 
+        ──────────────────────────────────────────────────────────────────────── */
+
+            /* new in v0.15? */
+            .modal-content.community-plugin {
+                margin-top: 0;                
+            }
+
+
+
+            .community-plugin-item {
+                margin: 0 0;
+                padding: 0.25rem 0.5rem 0.25rem 1rem;
+            }
+            .theme-light .community-plugin-item {
+                border-top: 1px solid slategrey; /* should change this to a theme variable */
+            }
+            .theme-dark .community-plugin-item {
+                border-top: 1px solid darkslategrey; /* should change this to a theme variable */
+            }
+            .community-plugin-search {
+                padding-top: 0.25rem;
+
+                .setting-item-control {
+                    margin-left: 0.25rem;
+                }
+
+                button.clickable-icon {
+                    & > svg {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+            .community-plugin-search > .setting-item > .setting-item-info > .setting-item-control > .search-input-container > input[type='text'] {
+                border-radius: calc(var(--shape-roundish) * 1.5)
+
+            }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> [MODAL TYPOGRAPHY]
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | Changing the Message for Installed Plugins
+        \\\ ✓ instead of Installed
+        \\\ taken from Shimmering Focus, thanks @pseudometa!
+        ──────────────────────────────────────────────────────────────────────── */   
+        .flair.mod-pop {
+            font-size: 0;
+            top: 0;
+            padding: 0.5rem;
+            border-radius: 5rem;
+            border: 0.125rem solid var(--text-accent);
+        }
+
+        .flair.mod-pop::before {
+            content: "✓";
+            position: relative;
+            top: 0.2rem;
+            font-family: var(--original-font);
+            font-size: 0.65rem;
+            line-height: 0.8rem;
+            color: var(--interactive-normal);
+            background-color: var(--interactive-accent);
+            padding-right: 0.2rem;
+            padding-left: 0.2rem;
+
+            border-radius: 5rem;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────────
+        >>> COMMUNITY PLUGINS | PLUGIN NAMES increase font weight
+        ──────────────────────────────────────────────────────────────────────── */
+        .community-plugin-name {
+            font-weight: 600;
+        }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> OVERHAUL OF THE PANE WITH THE COMM PLUGINS INFO
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> 
+        ──────────────────────────────────────────────────────────────────────── */
+
+        .community-plugin-info {
+            padding: 1rem;
+    
+            div.community-plugin-name {
+                margin-right: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+    
+            div.community-plugin-author {
+                display: block;
+                position: relative;
+                /* vertical-align: top; */
+                margin-bottom: 0.25rem;
+            }
+
+            div.community-plugin-version {
+                display: inline-block;
+                position: relative;
+                vertical-align: top;
+                /* margin-bottom: 0.25rem; */
+            }
+
+            > .community-plugin-name {
+                font-size: 2.5rem;
+                display: inline-block;
+                line-height: 0.85;
+                margin-bottom: 0.75rem;
+            }
+
+            > .community-plugin-downloads {
+                align-content: center;
+                position: relative;
+                float: right;
+                font-size: 2rem;
+                line-height: 0.85;
+
+                > span > svg.install {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+
+            > .community-plugin-version {
+                width: fit-content;
+                padding-right: 0.2rem;
+                clip-path: inset(0 0 0 3.75rem round 1rem);
+                margin-left: -3.75rem;
+                background-color: var(--background-secondary-alt);
+            }
+
+            > .community-plugin-author {
+                
+
+                &::first-letter {
+                    text-transform: lowercase;
+                }
+
+                +.community-plugin-author {
+                    font-size: 0;
+                    text-align: end;
+                    float: right;
+
+
+                    a {
+                        text-decoration: none;
+                    }
+                    a::after {
+                        content: "\ecaf";
+                        font-family: "remixicon";
+                        font-size: 1.25rem;
+                        color: var(--text-normal);
+                        background-color: var(--background-secondary-alt);
+                        border-radius: 5rem;
+                        padding: 0.3rem;
+                        border: 2px solid var(--text-accent);
+                        text-decoration: none;
+                        top: calc(2.5rem - 1px);
+                        position: relative;
+
+                    }
+
+                    a:hover::after {
+                        background-color: var(--interactive-bg);
+                        transition: var(--medium-transition);
+                    }
+
+                }
+                
+            }
+
+            > .community-plugin-desc {
+                margin-top: 0;
+            }
+
+            p {
+                /* display: grid; 
+                column-gap: 0.5rem; 
+                grid-auto-rows: auto;
+                grid-auto-columns: auto;
+                */
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+
+
+                > button {
+                    display: inline-flex;
+                    margin: 0.25rem;
+                    transition: var(--medium-transition);
+
+                    &:not(.mod-cta):not(.mod-warning):hover {
+                        background-color: var(--interactive-bg);
+                        transition: var(--medium-transition);
+                    }
+                }
+            }
+        }
+
+        .community-plugin-version, .community-plugin-author {
+            line-height: unset;
+        }
+
+        .community-plugin-readme :is(h1, h2, h3, h4, h5, h6) {
+            padding: var(--padding-header-t) 0.5rem var(--padding-header-b) 0rem; /* deviation from 1.8rem since it's for the readme */
+            margin: 0.5rem 0;
+        } /* readme headings */

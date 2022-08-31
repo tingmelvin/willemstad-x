@@ -1,76 +1,50 @@
-@use 'A-License/_AA-License-Willemstad';
-@use 'B-Root/_BC-Root-Colours';
-@use 'B-Root/_BT-Root-Typography';
-@use 'B-Root/_BV01-SGV-Round';
-@use 'B-Root/_BV02-SGV-Animations';
-@use 'C-ColourPalettes/_CA01-CP-LSHTM';
-@use 'C-ColourPalettes/_CA02-CP-Nord';
-@use 'C-ColourPalettes/_CD-CP-TrueBlack';
-@use 'D-UI/_DE10-WorkspaceUnsorted';
-@use 'D-UI/_DE11-Sidepanes';
-@use 'D-UI/_DE12-Titlebar';
-@use 'D-UI/_DE13-StatusBar';
-@use 'D-UI/_DE14-Ribbons';
-@use 'D-UI/_DE15-Icons';
-@use 'D-UI/_DE15a-Icons-PluginsMod';
-@use 'D-UI/_DF11-Startup';
-@use 'D-UI/_DF12-BacklinksPane';
-@use 'D-UI/_DF13-EmptyState';
-@use 'D-UI/_DH00-Interactives';
-@use 'D-UI/_DH01-Scrollbars';
-@use 'D-UI/_DH02-ResizeHandles';
-@use 'D-UI/_DM00-Modals';
-@use 'D-UI/_DM11-Mod-Settings';
-@use 'D-UI/_DM12-Mod-Themes';
-@use 'D-UI/_DM13-Mod-Plugins';
-@use 'E-Editor/_EB-Blocks';
-@use 'E-Editor/_ED-DocTitles';
-@use 'E-Editor/_EF-Frontmatter';
-@use 'E-Editor/_EL-VarLineLength';
-@use 'E-Editor/_ET01-ETyp-HeaderVar';
-@use 'E-Editor/_ET11-ETyp-Highlights';
-@use 'E-Editor/_ET12-ETyp-Underlines';
-@use 'E-Editor/_ET21-ETyp-OtherSpacing';
-@use 'E-Editor/_EW00-Callouts';
-@use 'E-Editor/_EW01-Callouts-Metadata';
-@use 'E-Editor/_EW02-Callouts-Standard';
-@use 'E-Editor/_EW03-Callouts-Columns';
-@use 'E-Editor/_EW11-AdCa-Infobox-ITS';
-@use 'E-Editor/_EW12-AdCa-Tables';
-@use 'E-Editor/_EW13-AdCa-Aside';
-@use 'E-Editor/_EW14-AdCa-Kanban';
-@use 'E-Editor/_EW15-AdCa-ImgGrid-ITS';
-@use 'E-Editor/_EX11-CSSC-Latex';
-@use 'E-Editor/_EX12-CSSC-Writing-SFX';
-@use 'E-Editor/_EX13-CSSC-Magazine';
-@use 'E-Editor/_EX16-CSSC-CornellNotes';
-@use 'E-Editor/_EY11-HTML-Infobox';
-@use 'E-Editor/_EY13-HTML-Aside';
-@use 'E-Editor/_EY21-HTML-ProgressBar';
-@use 'E-Editor/_EZ00-OtherStyling';
-@use 'E-Editor/_EZ01-IndentationGuides';
-@use 'M-Mobile/_M-Mobile';
-@use 'V-StyleSettings/_VA01-SS';
-@use 'V-StyleSettings/_VA02-SS-Plugins';
-@use 'W-Plugins/_WX000-Plugins-Core';
-@use 'W-Plugins/_WY000A-Plugins-Comm-A';
-@use 'W-Plugins/_WY000B-Plugins-Comm-B';
-@use 'W-Plugins/_WY001-Calendars';
-@use 'W-Plugins/_WY004-Dataview-Tables';
-@use 'W-Plugins/_WY007-Kanban';
-@use 'W-Plugins/StyleSettings/_WY100A-SS-General';
-@use 'W-Plugins/StyleSettings/_WY100C-SS-Specifics';
-@use 'W-Plugins/StyleSettings/_WY100D-SS-RemixIcons';
-@use 'W-Plugins/StyleSettings/_WY100E-SS-Responsive';
-@use 'W-Plugins/StyleSettings/_WY100F-SS-Warnings';
-@use 'W-Plugins/StyleSettings/_WY100G-SS-TagPills';
-@use 'W-Plugins/StyleSettings/_WY100X-SS-WorkspaceLeaf';
-@use 'X-Others/_XP-Print.scss';
-@use 'X-Others/_XY-FontEncoding-Base64';
-@use 'X-Others/_XZ-HubCompatibilityInfo';
-/* add separate licensing software (Minimal) at the back */
-@use 'E-Editor/_EX14-CSSC-Cards-MIN';
-@use 'E-Editor/_EX15-CSSC-ImgGrid-MIN';
-@use 'V-StyleSettings/_VB10-SS-MIN';
-/* add Advanced Settings last */
-@use 'V-StyleSettings/_VB20-SS-Adv';
+@use 'a-license.scss';
+@use 'root-opt-animations.scss';
+
+@use 'B-Root/_BT-Typography';
+
+@use 'Colours/_colours';
+
+@use '_titlebar';
+
+@use 'EDITOR/_editor';
+@use 'EDITOR/_var-line-length';
+
+@use 'EDITOR/Callouts/_callouts';
+@use 'EDITOR/Callouts/_callouts-standard'; /* icons and colors for standard */
+@use 'EDITOR/Callouts/_callouts-metadata'; /* metadata for callouts */
+@use 'EDITOR/Callouts/_callouts-x-columns'; /* callouts columns */
+
+@use 'Modal/_modal'; /* general modal stuff */
+@use 'Modal/_modal_new-comm-themes'; /* community themes modal */
+@use 'Modal/_modal_new-comm-plugins'; /* community plugins modal */
+@use 'Modal/_modal_installed-plugins'; /* installed plugins container */
+
+@use '_radius';
+@use '_statusbar';
+@use '_scrollbar';
+@use '_typ-highlights';
+@use '_typ-underlines';
+@use '_frontmatter';
+@use '_icons';
+@use '_ui-tabs'; /* ribbon is here too */ /* the entire button controls are here */
+
+@use 'interactives';
+@use '_menu';
+@use '_nav';
+@use '_notice';
+@use '_split-resize';
+@use '_tooltip';
+@use '_prompt';
+@use 'D-UI/_empty-state-screen';
+
+@use '_z-plugins';
+@use '_z-small-fixes';
+
+@use '_zz-base64-icons';
+
+@use 'style-settings';
+
+@use '_XY-FontEncoding-Base64';
+
+@use '_print';

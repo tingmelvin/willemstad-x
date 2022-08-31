@@ -1,0 +1,454 @@
+/*
+FOR COMM THEMES
+*/
+
+.modal.mod-community-theme {
+    & .community-item {
+        /* background-color: var(--background-primary-alt); */
+        gap: var(--size-4-1); /* smaller gap */
+        border-width: 0px;
+
+        & .suggestion-highlight {
+            display: contents;
+        }
+
+        &:not(.is-selected):hover {
+            background-color: var(--interactive-hover);
+        }
+
+        &:is(.is-selected):hover {
+            background-color: var(--interactive-accent-hover);
+        }
+
+        transition: var(--quicker-transition);
+    }
+    
+    & .community-item.mod-active {
+        grid-column: 1 / 2; /* not full width */
+
+        order: -1; /* brings it in front */
+
+        border: 1px solid var(--interactive-accent);
+        transition: var(--quicker-transition);
+
+        &:hover {
+            border: 1px solid var(--interactive-accent-hover);
+        }
+
+        & .community-item-name {
+    
+            padding-bottom: 0; /* unset the one for non mod active */
+
+            &::after {
+                grid-column: 1/-1; /* full width */
+                /* content: ""; */ /* see file A */
+                font-weight: normal;
+
+                display: grid;
+
+                /* border-top: 1px solid var(--background-modifier-border); */
+                /* padding-top: var(--size-4-1); */
+                /* text-align: right; */
+            }
+
+
+        }
+
+        &:hover .community-theme-title::after {
+            border-top: 1px solid var(--text-faint);
+
+            grid-column: 1/-1;
+        }
+    }
+
+    & .community-modal-search-results {
+
+        padding: var(--padding-modal-side);
+        gap: var(--padding-modal-side);
+        
+    } /* for search results */
+
+
+
+    /* TOP BIT */
+
+    & .search-input-container > input {
+        border: 0;
+    }
+
+    & .community-modal-search-summary {
+        display: none; /* extraneous! */
+    }
+
+    /*
+    & .community-modal-controls {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        & .setting-item:not(.mod-toggle) {
+
+        }
+
+        & .setting-item:is(.mod-toggle) {
+
+            text-align: right;
+            
+        }
+
+    }
+    */ /* NO NEED, also breaks stuff */
+
+    /* GRID STUFF */
+
+
+    & .community-item {
+
+        & {
+            display: grid;
+            grid-template-columns: 1.75fr 0.5fr;
+            grid-template-rows: auto auto 5fr;
+            row-gap: var(--size-4-1); /* gap? */
+            column-gap: var(--size-4-2); /* gap? */
+            /* grid-template-rows:  ; */
+
+            padding: var(--size-4-1) var(--size-2-3) var(--size-2-3) var(--size-2-3); /* 4-3 is too big */
+        }
+
+        & .community-item-name {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+
+            border-bottom: 1px solid var(--background-modifier-border); /* else var(--background-modifier-border) too light */
+            padding-bottom: var(--size-4-1); /* add margins to aid reading? */
+
+            display: grid;
+            grid-template-columns: 1.75fr 0.5fr;
+
+            & span.flair {
+
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                margin: auto 0 auto auto; /* aligns to the right */
+
+            }
+        }
+
+        &:hover .community-item-name {
+            border-bottom: 1px solid var(--text-faint);
+        }
+
+        & .community-item-author {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+
+            /* color: var(--text-faint); */ /* no need as I don't have to differentiate from desc as there is no desc */
+        }
+
+        & .community-item-downloads {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+
+            text-align: right;
+
+            margin-bottom: 0; /* no margin! */
+
+            & > span {
+            }
+
+            & > span > .svg-icon {
+                display: none;
+            }
+
+            & > span.community-item-downloads-text {
+                display: contents; /* move up */ /* upstreams the span to the parent span */
+            }
+        }
+
+        & .community-item-screenshot {
+            grid-column: 1 / -1;
+            grid-row: 3 / 4;
+        }
+
+
+
+        & .community-item-author::first-letter {
+            text-transform: lowercase;
+        }
+    }
+
+
+    /* GRID STUFF FOR SELECTED */
+
+    & .community-item.mod-active {
+
+        & {
+
+            display: grid;
+            grid-template-columns: 1.75fr 0.5fr 1.75fr 0.5fr;
+            grid-template-rows: auto auto auto 5fr;
+
+            row-gap: var(--size-4-1);
+
+            &::before {
+
+                grid-column: 1/-1;
+                grid-row: 1/2;
+
+                /* no width 100% since that expands */
+                height: fit-content; /* shrinks to the line */
+
+                border-radius: var(--radius-m);
+
+                padding: var(--size-4-1);
+
+                white-space: pre-wrap; /* cannot use pre, else it goes out */
+                font-size: var(--font-ui-small);
+
+                text-align: justify;
+
+                & {
+                    content: "The Style Settings plugin is disabled.";
+                    border-color: var(--text-error);
+                    border: 1px solid var(--text-error);
+                    border-left: 5px solid var(--text-error);
+                }
+
+                .css-settings-manager & {
+                    content: "The Style Settings plugin is enabled.";
+                    border-color: var(--interactive-accent);
+                    border: 1px solid var(--interactive-accent);
+                    border-left: 5px solid var(--interactive-accent);
+                }
+
+            }
+
+/*
+            &::after {
+
+                grid-column: 1/3;
+                grid-row: 4/5;
+
+                border-radius: var(--radius-m);
+
+                padding: var(--size-4-1);
+
+                white-space: pre-wrap;
+                font-size: var(--font-ui-small);
+
+                text-align: justify;
+                text-justify: auto;
+
+                
+                & {
+                    content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \A\A This theme works without the 'Style Settings' plugin, but will have more limited functionality. \A\A Please download the 'Style Settings' plugin via 'Settings > Community Plugins > Browse' and enable it to take full advantage of this theme! \A\A The theme's documentation can be found at willemstad.cc, and you should be able to find useful information on how to use the theme to the fullest from there.";
+                }
+
+                .css-settings-manager & {
+
+                    content: "👋 Hi! Welcome to Willemstad. I hope you enjoy this theme! \A\A Thank you for enabling the 'Style Settings' plugin, please use it to enable this theme's full functionality and to change default options. \A\A The theme's documentation can be found at willemstad.cc, and you should be able to find useful information on how to use the theme to the fullest from there.";
+
+                }
+
+            }
+*/
+        }
+
+
+        & .community-item-name {
+            grid-column: 1 / -1;
+            grid-row: 2 / 3;
+
+            border-top: 1px solid var(--background-modifier-border); /* else var(--background-modifier-border) too light */
+            /* padding-top: var(--size-4-1); */
+        }
+
+        &:hover .community-item-name {
+            border-top: 1px solid var(--text-faint);
+        }
+
+        & .community-item-author {
+            grid-column: 1/4;
+            grid-row: 3/4;
+        }
+
+        & .community-item-downloads {
+            grid-column: 4/5;
+            grid-row: 3/4;
+        }
+
+        & .community-item-screenshot {
+            grid-column: 1/5;
+            grid-row: 4/5;
+        }
+
+
+   
+    }
+
+
+    /* README */
+
+    & .community-modal-info {
+        display: grid;
+        grid-template-columns: 2.5fr 0.5fr 1fr;
+        grid-template-rows: auto auto auto auto 10fr;
+        row-gap: var(--size-2-1);
+
+        padding-left: var(--padding-tab-content-L);
+        padding-right: var(--padding-tab-content-R);
+        padding-top: var(--padding-tab-content-T);
+        padding-bottom: var(--padding-tab-content-B);
+
+        & .community-modal-info-name {
+            grid-column: 1/4;
+            grid-row: 1/2;
+            
+            margin-bottom: 0; /* why is there a margin? */
+
+            font-size: var(--h1-size); /* why h2 when you can h1? */
+
+            & {
+                display: grid; /* GRID IT */
+                grid-template-columns: 2.5fr 0.5fr 1fr; /* follow top */ /* 1 to 3 merged since that makes the title fit in 1 to 3 */
+                grid-template-rows: auto;
+
+            }
+
+            & span.flair.mod-pop {
+                grid-column: 2 / 3; /* latter column */
+                grid-row: 1/2;
+
+                margin: auto 0 auto auto; /*top, bottom and left margins are autoed */ /* makes sure it wraps to text */
+                text-align: center; /* centers text */
+            }
+        }
+
+        & .community-modal-info-downloads {
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+            font-size: var(--font-ui-medium); /* similar to author */
+            text-align: right;
+
+            margin: auto 28px auto 0; /* top bottom auto margins */ /* right margin a bit hacky */
+
+            /* display: none; */ /* is this really needed? */
+
+            .community-modal-info-downloads-text {
+                display: contents; /* take the downloads space */
+                top: 0px; /* what is with thisss */
+
+            }
+
+            & .svg-icon {
+                display: none; /* this gives so much problems */
+            }
+        }
+
+        & .community-modal-info-version {
+            grid-column: 3/4;
+            grid-row: 1/2;
+
+            font-size: 10px;
+            text-transform: uppercase;
+            text-align: right;
+            letter-spacing: 0.05em;
+            white-space: pre-wrap;
+
+            margin-top: auto;
+            margin-bottom: auto;
+             /* top bottom margins */
+
+            margin-left: var(--size-2-2); /* space against the installed button */
+            margin-right: var(--size-2-2); /* follows github button spacing? */
+
+            color: var(--text-muted); /* similar to the list on the left */
+        }
+
+        & .community-modal-info-author {
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            font-size: var(--font-ui-medium); /* align? */
+            padding-bottom: var(--size-2-2); /* follows a:before */
+
+            &:first-letter {
+                text-transform: lowercase; /* lowercases the 'by' */
+            }
+
+            margin: auto 0 auto 0; /* top and bottom margin to push up */
+
+            color: var(--text-faint); /* similar to the list on the left */
+        } 
+
+        & .community-modal-info-repo {
+
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+            font-size: 0; /* hides! */
+            text-align: right;
+            margin: auto 0 auto 0;
+
+            /* GITHUB BUTTON */
+
+            & > a {
+            }
+
+            & > a::before {
+                content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%235a5a5a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-file-code'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3Cpath d='m9 18 3-3-3-3'%3E%3C/path%3E%3Cpath d='m5 12-3 3 3 3'%3E%3C/path%3E%3C/svg%3E"); /* stroke color is manual */
+                width: 18px;
+                height: 18px;
+                display: inline-flex; /* how tf does this even work omg */
+                padding: var(--size-2-2) var(--size-2-2); /* same as the LR/TD but yeah */
+
+            }
+
+            & > a:hover:before {
+                transition: opacity 0.15s ease-in-out;
+                opacity: var(--icon-opacity-hover);
+                color: var(--icon-color-hover);
+                background-color: var(--background-modifier-hover);
+                border-radius: var(--clickable-icon-radius);
+
+            }
+        }
+
+        & .community-modal-button-container {
+            grid-column: 1/-1; /* full width */
+            grid-row: 3/4;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* for the buttons */ /* are there more than 3? */
+            gap: var(--size-4-1);
+
+            & > button {
+                margin-right: 0; /* use grid, save margins! */
+            }
+
+            margin-top: 0em;
+            padding-top: 1em; /* switch margin to padding for the border */
+            border-top: 1px solid var(--background-modifier-border);
+
+            margin-bottom: 1em; /* 1.5em is HUGE */
+        }
+
+        & hr {
+            display: none;
+
+            grid-column: 1/-1; /* full width */
+            grid-row: 4/5;
+        }
+
+        & .community-modal-readme {
+            grid-column: 1/-1; /* full width */
+            grid-row: 5/6;
+
+            border-top: 1px solid var(--background-modifier-border); /* replaces hr? */
+            padding: 0; /* do we really need padding */
+
+        }
+
+    }
+
+}

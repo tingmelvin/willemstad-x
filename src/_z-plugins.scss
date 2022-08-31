@@ -1,0 +1,329 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> WY001
+\ Plugins > Community
+\ Smaller General
+    \\ PComm022 | Get Info
+    \\ PComm023 | CookLang Plugin
+    \\ PComm024 | Emoji Toolbar
+    \\ PComm025 | Maps of Content
+    \\ PComm026 | cMenu
+    \\ PComm027 | Footnote & Citation Indicator
+    \\ PComm028 | Settings Search
+    \\ PComm030 | LanguageTool Integration
+    \\ PComm031 | Vault Statistics
+    \\ PComm032 | Theme Picker
+    \\ PComm033 | Focus Mode
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Calendar]
+\\ (NOMEN | PComm001)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Colour for today's date
+    ──────────────────────────────────────────────────────────────────────────── */
+    .theme-light {
+        --PComm001-col-today: var(--color-accent-1);
+        --PComm001-col-year: var(--color-accent-1);
+        --PComm001-col-dot: var(--color-accent-1);
+    } /* BRIGHT STILL */
+
+    .theme-dark {
+        --PComm001-col-today: var(--color-accent-1);
+        --PComm001-col-year: var(--color-accent-1);
+        --PComm001-col-dot: var(--color-accent-1);
+    } /* BRIGHT! */
+    
+    
+    .workspace-leaf-content[data-type="calendar"] .day.today {
+        color: var(--PComm001-col-today);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> (OPTION) Δ Colour for calendar year
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .year {
+        color: var(--PComm001-col-year);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Add Colour for dots for writing stuff/completing checkboxes
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] svg.dot.filled {
+        fill: var(--PComm001-col-dot);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Make Year less bold
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .year {
+        font-weight: 600;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Make Month more bold
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .month {
+        font-weight: 600;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Make the year/month slightly smaller
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] :is(.year, .month) {
+        font-size: var(--h5-size);
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Fix Top Paddings
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .nav {
+        padding: 0.5rem 0.25rem 0 0.25rem;
+    }
+
+    .workspace-leaf-content[data-type="calendar"] {
+        .dot-container {
+            flex-wrap: nowrap; /* ensures they don't warp */
+        }
+    }
+
+
+
+
+/* ADVANCED TABLES
+GRID THOSE PESKY SIDE ICONS 
+TOOLBAR */
+
+.workspace-leaf-content[data-type="advanced-tables-toolbar"] {
+
+    & .nav-header {
+        /*
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+        & .nav-buttons-container {
+        }
+        */
+    }
+}
+
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Kanban]
+\\ (NOMEN | PComm007)
+───────────────────────────────────────────────────────────────────────────────────
+    >>>
+    ──────────────────────────────────────────────────────────────────────────── */
+
+.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+    filter: none;
+    border-radius: var(--radius-l); /* turns it into a circle */
+} /* display hue rotate for checkbox */
+
+
+.kanban-plugin__markdown-preview-view.kanban-plugin__markdown-preview-view {
+
+    padding: unset; /* overrides padding stuff from v0.16 */
+
+}
+
+    /* REMOVE BORDERS */
+    .kanban-plugin__lane-header-wrapper {
+        /* border-bottom: 0; */
+    }
+    .kanban-plugin__item-button-wrapper {
+        border-top: 0; /* removes border between add and content */
+        /* margin-top: var(--size-2-1); */
+    }
+
+.kanban-plugin__lane-header-wrapper,
+.kanban-plugin__item-button-wrapper,
+.kanban-plugin__lane-items {
+    padding: 0; /* removes padding, more sleek? */
+}
+
+.kanban-plugin__board>div {
+    padding: var(--size-4-1);
+}
+
+.kanban-plugin__lane-wrapper:nth-last-child(-n+2) {
+    margin-right: 0px;
+}  /* remove margin before placeholder */
+
+.kanban-plugin__grow-wrap>textarea, .kanban-plugin__grow-wrap:after {
+    line-height: 1.5; /* vertical centering of text in textarea */
+    padding: var(--size-4-1); /* removes some wonkiness when new title is added and textbox */
+}
+
+.kanban-plugin__item {
+    border: 0; /* remove border on the plugin item */
+    
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Emoji Toolbar]
+\\ (NOMEN | PComm024)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Rounded Borders + Hide Borders
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .emoji-mart-anchors {
+        border-radius: 0 var(--radius-m);
+    }
+    body .emoji-mart-preview {
+        border-radius: var(--radius-m) 0;
+    }
+    body .emoji-mart {
+        border-radius: var(--radius-m);
+
+        border: var(--modal-border-width) solid var(--modal-border-color); /* unify borders */
+    }
+    #emoji-modal {
+        border-radius: var(--radius-m);
+        border: 0;
+    }
+    
+    body .emoji-mart-bar:first-child {
+        /* border-bottom-width: var(--modal-border-width); */
+    }
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Hide the weird purple
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .emoji-mart-anchor-bar {
+        height: 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Δ the UGH PURPLE | CAN PEOPLE STOP HARDCODING STUFF INTO ELEMENT.STYLE
+    ──────────────────────────────────────────────────────────────────────────── */
+    button.emoji-mart-anchor.emoji-mart-anchor-selected > div.emoji-mart-anchor-icon {
+        color: var(--text-accent) !important;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Hide Default "Emoji Mart" Text
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .emoji-mart-title-label {
+        font-size: 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Δ Default emoticon to something nicer (yes, it's background position)
+        
+    ──────────────────────────────────────────────────────────────────────────── */        
+    span#emoji-mart-department_store.emoji-mart-emoji > span {
+        background-position: 17.8571% 76.7857% !important /* 53.5714% 64.2857% !important*/;
+    } /* use the houses one for Willemstad */ /* what freaking era is this - sprites?! */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Δ Emoji Toolbar to default UI font
+    ──────────────────────────────────────────────────────────────────────────── */
+    :is(.emoji-mart, .emoji-mart-search input) .emoji-mart-category-label span {
+        font-family: var(--font-interface);
+        border: 0;
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> Δ Search Bar to grid layout
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .emoji-mart-search {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr;
+
+        & > button {
+            display: none; /* get rid of it, what a nuisance */
+
+            grid-column: 2 / 3; /* latter bit */
+
+            & > svg {
+                width: var(--tab-list-icon-size);
+                height: var(--tab-list-icon-size);
+            }
+        } /* align the search icon */
+    }
+
+    body .emoji-mart-anchors {
+
+            padding: 0 1px; /* removes side extraneous padding */
+
+        & > button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: var(--size-2-1) 1px !important; /* sides to half of 2 since they kinda "overlap" */
+            padding: 0 !important; /* needs it to override */
+
+            &:hover {
+                transition: opacity 0.15s ease-in-out;
+                opacity: var(--icon-opacity-hover);
+                color: var(--icon-color-hover);
+                background-color: var(--background-modifier-hover) !important; /* needs the impt */
+                border-radius: var(--clickable-icon-radius);    /* copied from the comm plugin button */ /* gives look and feel of other buttons */
+            }
+        } /* align the top buttons */
+    }
+
+    /* change the category list/icon list to the same icon hovers */
+    body .emoji-mart-category-list {
+        tr {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr); /* there are 9 items */
+            grid-template-rows: 1fr;
+            column-gap: 0px;
+        }
+    }
+
+    body button.emoji-mart-emoji.emoji-mart-emoji {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: var(--size-2-1) 1px !important; /* sides to half of 2 since they kinda "overlap" */
+        padding: 5px !important; /* needs it to override */ /* this is such janky stuff that I want to barf. can someone rewrite it as a proper grid??? */
+
+        &:hover {
+            transition: opacity 0.15s ease-in-out;
+            opacity: var(--icon-opacity-hover);
+            color: var(--icon-color-hover);
+            background-color: var(--background-modifier-hover) !important; /* needs the impt */
+            border-radius: var(--clickable-icon-radius);    /* copied from the comm plugin button */ /* gives look and feel of other buttons */
+        }
+
+        &:before {
+            display: none; /* get rid of it, what a nuisance */
+        }
+    }
+
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | cMenu]
+\\ (NOMEN | PComm026)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> ROUND BORDERS + REMOVE SHADOWS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .menu.cMenu-statusbar-menu {
+        box-shadow: none;
+        border-radius: var(--radius-m);
+    }
+
+    #cMenuModalBar {
+        box-shadow: none;
+    }
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Theme Picker]
+\\ (NOMEN | PComm032)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING PADDINGS AND BORDER RADIUS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .plugin-theme-picker {
+        display: flex;
+        gap: var(--gap-status-bar);
+    }
+
+    .theme-picker-color-scheme-icon:hover > svg {
+        .theme-light & {
+            fill: var(--color-accent);
+        } /* light mode */
+    
+        .theme-dark & {
+            fill: var(--color-accent);
+        } /* dark mode */
+    }

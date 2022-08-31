@@ -1,0 +1,291 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EX11
+\ CSSClass
+\ LaTeX
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+LaTeX CSSClass for Obsidian
+Author: @tingmelvin
+Version: 0.1.0
+
+──────────────────────────────────────────────────────────────────────────────── */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FONT SIZE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex.markdown-preview-view {
+        font-family: var(--font-cssclass-latex-reading);
+        font-size: var(--size-cssclass-latex);
+        letter-spacing: 0.01rem;
+    }
+
+    .latex.mod-cm6.cm-s-obsidian .cm-contentContainer,
+    .latex .cm-header.cm-header {
+        font-family: var(--font-cssclass-latex-source); 
+        font-size: var(--size-cssclass-latex);
+        letter-spacing: 0.01rem;
+    }
+
+    .theme-light, .theme-dark {
+        --size-cssclass-latex: 14pt;
+        --font-cssclass-latex-reading: "MathJax Main", "MJXZERO", "MJXTEX";
+        --font-cssclass-latex-source: "DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX";
+        --textindent-cssclass-latex: 0em;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> LINE HEIGHT
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex.markdown-preview-view table {
+        line-height: 100%;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> DIFFERENT HEADING STYLE
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex :is(h1, h2, h3, h4, h5, h6) {
+        font-family: "MathJax Main", "MJXZERO", "MJXTEX";
+        line-height: 1em;
+    }
+
+    :is(.latex.markdown-preview-view,
+    .latex.mod-cm6.cm-s-obsidian .cm-contentContainer) {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> P
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex p {
+        text-indent: var(--textindent-cssclass-latex);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> BLOCKQUOTES
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex blockquote {
+        border: none;
+        background-color: transparent;
+        border-radius: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> CODEBLOCKS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex :is(.theme-light :not(pre) > code[class*="language-"], .theme-light pre[class*="language-"]) {
+        background-color: transparent;
+        border-top: 0.1rem solid black;
+        border-bottom: 0.1rem solid black;
+        border-radius: 0;
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> HEADERS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex .cm-s-obsidian .cm-header,
+    .latex :is(h1, h2, h3, h4, h5, h6),
+    .latex :is(.HyperMD-header-1.cm-line,
+    .HyperMD-header-2.cm-line,
+    .HyperMD-header-3.cm-line,
+    .HyperMD-header-4.cm-line,
+    .HyperMD-header-5.cm-line,
+    .HyperMD-header-6.cm-line),
+    .latex .cm-header.cm-header {
+        background-color: transparent;
+        color: var(--text-normal);
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FIX FOR BREADCRUMB TRAIL GRID 
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex div.BC-trail-grid.BC-trail-grid.BC-trail-grid {
+        text-align: initial;
+    }
+
+    .latex .cm-cursor { 
+        height: 10px;
+      }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> TABLES (READING MODE) | I HAVE NO PATIENCE FOR A CSSCLASS, !IMPORTANT IT IS
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex  {
+        table {
+            border-top: 0.1rem solid black;
+            border-bottom: 0.1rem solid black;
+        }
+
+        table, th, td {
+            border-left: none !important;
+            border-right: none !important;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: var(--size-font-preview-table-latex) !important;
+        }
+
+        th {
+            background-color: transparent !important;
+            text-align: center;
+        }
+
+      
+    }
+
+    .theme-light, .theme-dark {
+        --size-font-preview-table-latex: 1em;
+        --size-font-editor-table-latex: 0.8em;
+    }
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> TABLES (LIVE PREVIEW) | RESET ".table-lp-magic" for latex cssclass 
+    ──────────────────────────────────────────────────────────────────────────── */
+    .latex.latex.latex .HyperMD-table-row span.cm-hmd-table-sep {
+        color: var(--text-faint);
+    }   /* blends the "|" into the background of the other columns (? columns? rows?) */
+        /* why you no work?? */
+        /* note to self, cannot put .latex in front of .cm-s-obsidian */
+
+    .latex.latex {
+
+        .HyperMD-table-2.HyperMD-table-row {
+            border: initial;
+            padding: initial;
+        } /* makes borders, a la in Preview */
+
+        .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line {
+            background-color: initial;
+            font-weight: initial;
+        } /* makes first line a certain color */
+
+        .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-0.cm-line > .cm-hmd-table-sep {
+            color: initial;
+        } /* makes sure the "|" in the first line is the same color */
+      
+        .HyperMD-table-2.HyperMD-table-row.HyperMD-table-row-1.cm-line {
+            display: initial;
+        } /* disappears the divider row */
+
+        .HyperMD-table-row {
+            font-size: var(--size-font-editor-table-latex);
+        }
+    }
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> {to fix} HEADER NUMBERS | INCREMENTAL
+    ──────────────────────────────────────────────────────────────────────────── */
+    /*
+    .latex {
+        body {
+            counter-reset: latex-h1;
+        }
+    
+        h2 {
+            counter-reset: latex-h2;
+            counter-increment: latex-h1;
+    
+            &::before {
+                content: counter(latex-h1) ". ";
+        }
+        }
+    
+        h3 {
+            counter-reset: latex-h3;
+            counter-increment: latex-h2;
+    
+            &::before {
+                content: counter(latex-h1) "." counter(latex-h2) " ";
+        }
+        }
+    
+        h4 {
+            counter-reset: latex-h4;
+            counter-increment: latex-h3;
+    
+            &::before {
+                content: counter(latex-h1) "." counter(latex-h2) "." counter(latex-h3)
+            " ";
+        }
+        }
+    
+        h5 {
+            counter-reset: latex-h5;
+            counter-increment: latex-h4;
+    
+            &::before {
+                content: counter(latex-h1) "." counter(latex-h2) "." counter(latex-h3)
+                "." counter(detail) " ";
+        }
+        }
+    }
+    */
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> {to fix} EQUATION NUMBERS | INCREMENTAL
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    body.eq-num-latex {
+        .latex {
+
+            counter-reset: math-block;
+            
+            .math-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            counter-increment: math-block;
+            }
+        
+            .math-block::before {
+            content: "(" counter(math-block) ")";
+            visibility: hidden;
+            } /* to center */
+        
+            .math-block::after {
+            content: "(" counter(math-block) ")";
+            }
+        }
+    }
+
+
+
+    /* ────────────────────────────────────────────────────────────────────────────
+    >> FIX PADDINGS
+    ──────────────────────────────────────────────────────────────────────────── */
+
+    .latex {
+        .markdown-preview-section h1,
+        .markdown-preview-section h2,
+        .markdown-preview-section h3,
+        .markdown-preview-section h4,
+        .markdown-preview-section h5,
+        .markdown-preview-section h6 {
+            padding-left: 0;
+        }
+
+    }

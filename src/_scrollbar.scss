@@ -1,0 +1,17 @@
+/* ────────────────────────────────────────────────────────────────────────────
+>> SCROLLBARS > ?
+\\
+──────────────────────────────────────────────────────────────────────────── */
+
+/*
+::-webkit-scrollbar {
+    &, &-thumb {
+        &:hover {
+            height: var(--size-scrollbar);
+            width: var(--size-scrollbar);
+            background-color: transparent;
+            visibility: initial;
+        }
+    }
+}
+*/

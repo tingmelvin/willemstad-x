@@ -1,0 +1,144 @@
+.theme-light, .theme-dark {
+    --padding-modal-side: var(--size-4-1);
+    --padding-modal-side-2: calc(var(--padding-modal-side) * 2); /* not really used now */
+}
+
+/*
+backdrop background
+*/
+
+.modal-bg {
+    backdrop-filter: var(--blur-8);
+}
+
+/*
+modal tabs
+remove margin-bottom
+*/
+.modal {
+    .vertical-tab-nav-item {
+        margin-bottom: 1px;
+    }
+
+    /*
+    remove paddings
+    */
+
+    .vertical-tab-nav-item {
+        padding: var(--size-2-1) var(--size-4-3);
+    }
+
+    .vertical-tab-header-group-title {
+        padding: var(--size-4-2) var(--size-2-3) var(--size-4-1) var(--size-2-3);
+    }
+
+    .vertical-tab-header {
+        padding: var(--padding-modal-side);
+    }
+}
+
+
+/*
+background for container
+*/
+
+
+
+/*
+modal borders
+*/
+
+.theme-light, .theme-dark {
+    --modal-border-width: 0;
+} /* outer border */
+
+.modal.mod-settings .vertical-tab-header,
+.community-plugin-search {
+    border-right: 0px;
+} /* inner border */
+
+/* modal title */
+
+/*
+.modal-title {
+    text-align: center;
+}
+*/
+
+/* modal close button POOF */
+
+.modal-close-button {
+
+    transition: var(--anim-motion-smooth); /* to display */
+    z-index: var(--layer-modal);
+
+    &:not(:hover):before {
+        color: transparent;
+    }
+}
+
+/* modal tab content padding */
+
+.modal {
+
+    --padding-tab-content-L: var(--size-4-4);
+    --padding-tab-content-R: var(--size-4-4);
+    --padding-tab-content-T: var(--size-4-4);
+    --padding-tab-content-B: var(--size-4-8);
+
+    & .horizontal-tab-content, .vertical-tab-content {
+        padding-left: var(--padding-tab-content-L);
+        padding-right: var(--padding-tab-content-R);
+
+    }
+
+    & .vertical-tab-content {
+        padding-top: var(--padding-tab-content-T);
+        padding-bottom: var(--padding-tab-content-B);
+    }
+}
+
+
+/*
+
+FOR MOD-SETTINGS
+
+*/
+
+/* NO PADDINGS */
+
+.vertical-tab-header-group {
+    padding: 0;
+}
+
+/*
+UPPERCASE modal headers
+*/
+
+.vertical-tab-header-group-title {
+    text-transform: uppercase;
+}
+
+/* settings search */
+
+.vertical-tab-nav-item.settings-search-input {
+    padding: 0;
+}
+
+/* setting items on sidebars */
+.community-modal-sidebar {
+
+    padding: var(--padding-modal-side) 0 0 0;
+
+    & .setting-item {
+        padding: 0 var(--padding-modal-side) var(--padding-modal-side);
+    }
+
+    & .setting-item.mod-toggle {
+        padding-left: var(--padding-modal-side-2);
+    }
+
+    & .setting-item:first-child {
+        margin-bottom: 0; /* remove margin! */
+    }
+}
