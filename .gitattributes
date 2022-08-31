@@ -3,3 +3,5 @@ build/remixicon.css linguist-vendored
 src/Z-NonTheme/** linguist-vendored
 snippet.css linguist-vendored
 publish.css linguist-vendored
+theme.css linguist-vendored
+obsidian.css linguist-vendored
