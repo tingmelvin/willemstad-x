@@ -3,3 +3,8 @@
 .markdown-rendered img {
   image-rendering: -webkit-optimize-contrast;
 } /* clearer image rendering by Damian */
+
+
+.community-item .flair {
+    top: 0; /* app.css sets to -1px */
+} /* for modals flair mostly, not sure why it's set down by 1px */

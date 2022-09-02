@@ -175,7 +175,7 @@ SR
 }
 
 
-
+/* Ribbon */
 
 .workspace-ribbon {
 
@@ -312,6 +312,7 @@ SR
 
     &-container-inner {
         margin: 0; /* removes the TOP MARGIN */ 
+        padding: 0; /* no need for the padding */
     }
 
     &.is-active {
@@ -360,15 +361,79 @@ SR
         left: 0;
     }
 
+    &:not(.is-active) {
+        background-color: unset; /* sama sama with the rest. don't need background color */
+
+        & .workspace-tab-header-inner {
+
+            /*
+            &.workspace-tab-header-inner:hover {
+                background-color: var(--background-secondary-alt);
+                transition: var(--quicker-transition);
+            }
+
+            .theme-light & {
+                box-shadow: inset 1px 1px 1px var(--background-modifier-border-focus);
+                background-color: var(--background-primary);
+            } 
+
+            .theme-dark & {
+                box-shadow: inset 1px 1px 1px var(--background-modifier-border-focus);
+                background-color: var(--background-primary);
+            } 
+            */
+
+            &.workspace-tab-header-inner:hover {
+                transition: var(--quicker-transition);
+            }
+
+            .theme-light & {
+                /* box-shadow: 0 0 0 1px var(--background-modifier-border); */
+            } 
+
+            .theme-dark & {
+                /* box-shadow: 0 0 0 1px var(--background-modifier-border); */
+            } 
+
+        }
+    }
+
 }
 
-
-/* TAB  */
-.mod-root .workspace-tab-header-container-inner {
-    padding: 0; /* no need for the padding */
-}
-
-.workspace .mod-root .workspace-tab-header {
+.mod-root .workspace-tabs .workspace-tab-header {
     margin: var(--header-margin) var(--header-margin-half); /* follows 2 */
     padding: 0; /* ah, there we go! */
+}
+
+
+/* SLIDING */
+
+/* NEEDS WORK */
+
+.workspace-tabs.mod-stacked {
+
+    & .workspace-tab-container {
+        border-top: var(--divider-width) solid var(--divider-color); /* we don't need to care about spacing here I think */
+        
+    }
+
+    & .workspace-tab-header {
+
+        & {
+            margin: 0; /* NONE */
+        }
+
+        &-inner {
+            background-color: var(--titlebar-background); /* tab-container-background */
+        }
+
+        &-inner::before {
+            content: ""; /* to force a gap as my margin */
+        }
+
+        &-inner-close-button {
+            margin: auto;
+            /* var(--header-margin-half) var(--header-margin); */
+        }
+    }
 }

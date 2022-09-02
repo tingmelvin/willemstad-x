@@ -11,9 +11,6 @@
 
 .nav-header {
 
-    padding: var(--header-margin-td) var(--header-padding-inner-lr); /* similar as margin for upper buttons, and the left/right padding for those too */
-    border-bottom: var(--divider-width) solid var(--divider-color); /* adds a border delineating from the file navs */
-
     & .nav-buttons-container {
 
         --columns-nav-buttons: 5;

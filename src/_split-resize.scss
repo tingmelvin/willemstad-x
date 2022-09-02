@@ -1,4 +1,6 @@
 /* removing extraneous lines */
+
+/*
 .workspace-leaf-resize-handle:first-of-type {
     .workspace-split.mod-right-split > & {
         border-left-style: none;
@@ -6,4 +8,108 @@
     .workspace-split.mod-left-split > & {
         border-right-style: none;
     }
-} /* left and right split no border */
+} */
+ /* left and right split no border */
+
+
+ /* current logic is:
+ all panes have only one unifying border. so no border between tabs and the pane, but inter pane, borders.
+ No borders between ribbon and whatnot. so I gotta find another colour. but borders between side dock to pane.
+*/
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+/* GETTING RID OF THE WEIRD IS-FOCUSED EFFECT ON TOP BAR */
+
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+    --tab-container-background: var(--titlebar-background); /* yes, no --titlebar-background-focused */
+}
+
+body.is-focused .workspace-ribbon.mod-left {
+    --titlebar-background: var(--titlebar-background); /* yes, no --titlebar-background-focused */
+
+} /* this is for the little notch on the left */
+
+/* getting borders on ribbon only when not-is-collapsed since workspace-leaf-resize-handles others */
+
+.workspace-ribbon.mod-left {
+
+    & {
+        border-right: none;
+        /* transition: var(--quicker-transition); */ /* check effect on performance */
+    }
+
+    &  {
+        transition: background-color 150ms 25ms ease-in-out; /* unity with Obs */@each $var in list {
+            
+        }
+        background-color: var(--ribbon-background);
+
+        &::before {
+            box-shadow: var(--divider-width) 0px var(--divider-color); /* REF R1 */
+        }
+
+        & {
+            box-shadow: var(--divider-width) 0px var(--divider-color); /* REF R1 */
+        }
+
+    } /* only ensures border between the dividing line between the panes and whatnot is on the left */
+
+    &.is-collapsed {
+
+        &::before {
+
+            transition: background-color 150ms 25ms ease-in-out; /* unity with Obs */
+
+            box-shadow: /* var(--divider-width) */ 0px var(--divider-color); /* REF R1 */ /* this gives contiguous mod-top */
+            box-shadow: var(--divider-width) 0px var(--divider-color); /* REF R1 */
+
+            background-color: var(--ribbon-background-collapsed); /* unity with the color if it's collapsed */
+
+        }
+    }
+}
+
+.workspace-leaf-resize-handle:first-of-type {
+    /*
+    .workspace-split.mod-right-split > & {
+        transition: var(--slow-transition);
+    }
+    .workspace-split.mod-left-split > & {
+        transition: var(--slow-transition);
+    }
+    */ /* check effect on performance */
+}
+
+.mod-vertical.mod-root {
+    left: var(--divider-width); /* REF R1 */ /* to offset the box-shadow border of the ribbon */
+}
+
+.workspace-split {
+
+    &.mod-left-split {
+        left: var(--divider-width); /* REF R1 */ /* to offset the box-shadow border of the ribbon */ 
+    }
+}
+
+
+
+
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+    padding-left: calc(var(--frame-left-space) + var(--header-margin-half)); /* incorporate the additional header margin */
+}
+

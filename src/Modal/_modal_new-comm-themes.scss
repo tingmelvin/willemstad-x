@@ -105,7 +105,7 @@ FOR COMM THEMES
 
         & {
             display: grid;
-            grid-template-columns: 1.75fr 0.5fr;
+            grid-template-columns: 4fr 1.5fr;
             grid-template-rows: auto auto 5fr;
             row-gap: var(--size-4-1); /* gap? */
             column-gap: var(--size-4-2); /* gap? */
@@ -119,10 +119,12 @@ FOR COMM THEMES
             grid-row: 1 / 2;
 
             border-bottom: 1px solid var(--background-modifier-border); /* else var(--background-modifier-border) too light */
-            padding-bottom: var(--size-4-1); /* add margins to aid reading? */
+            padding-bottom: var(--size-4-1); /* add margins to aid reading? */ /* follows the first property in & {} main padding a few lines above */
 
             display: grid;
-            grid-template-columns: 1.75fr 0.5fr;
+            grid-template-columns: 4fr 1.5fr;
+            column-gap: var(--size-4-2); /* gap? */
+            
 
             & span.flair {
 
@@ -132,6 +134,22 @@ FOR COMM THEMES
 
             }
         }
+
+        & .community-item-badge.mod-update {
+
+            position: unset; /* no absolutes */
+            top: unset;
+            right: unset;
+
+            grid-column: 2 / 3;
+            grid-row: 2 / 3; /* yes, same as names */
+            text-align: left; /* align to the right */
+
+            & .svg-icon {
+
+            }
+
+        } /* for updating themes */
 
         &:hover .community-item-name {
             border-bottom: 1px solid var(--text-faint);

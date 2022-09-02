@@ -57,7 +57,7 @@ color-accent - affects hovers too
 
 .theme-light, .theme-dark {
     --padding-icon-clickable-TD: var(--size-2-2);
-    --padding-icon-clickable-LR: var(--size-2-3);
+    --padding-icon-clickable-LR: var(--size-2-2); /* standard is --size-2-3 */
 
     --object-border-width: 0;
     --object-border-color: var(--modal-border-color);

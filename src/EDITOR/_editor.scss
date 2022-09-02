@@ -23,7 +23,7 @@ hide inline-title on editor
 }
 
 .theme-light, .theme-dark {
-    --file-margins: 22px;
+    /* --file-margins: 22px; */ /* changing file margins breaks the line numbering feature */
 }
 
 .workspace-tabs .workspace-leaf-content[data-type="markdown"] .view-header {
