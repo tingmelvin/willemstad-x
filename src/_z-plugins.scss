@@ -71,13 +71,22 @@
     >>> Fix Top Paddings
     ──────────────────────────────────────────────────────────────────────────── */
     body .workspace-leaf-content[data-type="calendar"] .nav {
-        padding: 0.5rem 0.25rem 0 0.25rem;
+        padding: 0;
+        margin: 0;
+
+        column-gap: var(--size-4-1);
     }
 
     .workspace-leaf-content[data-type="calendar"] {
         .dot-container {
             flex-wrap: nowrap; /* ensures they don't warp */
         }
+    }
+    /* ────────────────────────────────────────────────────────────────────────────
+    >>> File Margins of Calendar
+    ──────────────────────────────────────────────────────────────────────────── */
+    body .workspace-leaf-content[data-type="calendar"] .view-content {
+        padding: calc(var(--file-margins) / 2); /* half of standard */
     }
 
 

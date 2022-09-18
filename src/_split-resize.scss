@@ -110,6 +110,6 @@ body.is-focused .workspace-ribbon.mod-left {
 
 
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    padding-left: calc(var(--frame-left-space) + var(--header-margin-half)); /* incorporate the additional header margin */
+    /* padding-left: calc(var(--frame-left-space) + var(--header-margin-half)); */ /* incorporate the additional header margin */
 }
 
