@@ -1,6 +1,8 @@
 ![wx-github-2-mini](https://user-images.githubusercontent.com/43155211/159142584-70b88e36-7634-4ddb-9ee1-1a7c11f0b2c9.png)
 
-Please note: Willemstad is currently undergoing a rewrite, and the look and feel might be somewhat materially different from now. 
+> Please note: Willemstad is currently undergoing a rewrite (from ground-up) for Obsidian 1.0, and the look and feel might be somewhat materially different from now. The UI from current alpha-version available in the Community Store right now will remain.
+
+The theme documentation is available [here](https://willemstad.cc/). 
 
 # Willemstad X (Extended)
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
