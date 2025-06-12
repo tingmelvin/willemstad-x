@@ -1,13 +1,12 @@
 ![wx-github-2-mini](https://user-images.githubusercontent.com/43155211/159142584-70b88e36-7634-4ddb-9ee1-1a7c11f0b2c9.png)
 
+> Note 2 (2025-06-12): The rewrite is ongoing as a byproduct of another work I'm doing that necessitates the use of Obsidian. Once this is done, this will be uploaded here. 
 > Please note: Willemstad is currently undergoing a rewrite (from ground-up) for Obsidian 1.0, and the look and feel might be somewhat materially different from now. The UI from current alpha-version available in the Community Store right now will remain.
 
 The theme documentation is available [here](https://willemstad.cc/). 
 
-# Willemstad X (Extended)
+# Willemstad
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
-
-**NOTE!** Willemstad X is not supported for the legacy editor (CodeMirror 5), or for mobile. While mobile support might be coming in the longer future, you are advised only to use Willemstad X on desktop, and in the current default editor.
 
 **To use**:
 
@@ -47,12 +46,6 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 
 ## Theme Documentation (currently a work in progress)
 Available [here](https://willemstad.cc), includes information on [callouts](https://willemstad.cc/Theme+Extensions/Callouts).
-
-## Mentions in the Obsidian Roundup
-[4th June](https://www.obsidianroundup.org/2022-06-04/) | [14th May](https://www.obsidianroundup.org/2022-05-14/) | [23rd April](https://www.obsidianroundup.org/2022-04-23/) | [16th April](https://www.obsidianroundup.org/2022-04-16/) | [04th April](https://www.obsidianroundup.org/2022-04-02/) | [26th March](https://www.obsidianroundup.org/differentiate-versions-embed-web-apps/) | [12th March](https://www.obsidianroundup.org/2022-03-12/) | [5th March](https://www.obsidianroundup.org/2022-03-05/) | [26th February](https://www.obsidianroundup.org/2022-02-26/) | [19th February](https://www.obsidianroundup.org/2022-02-19/)
-
-and of the original Willemstad snippet for Shimmering Focus:
-[12th February](https://www.obsidianroundup.org/2022-02-12/) and [5th February](https://www.obsidianroundup.org/2022-02-05/)
 
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
