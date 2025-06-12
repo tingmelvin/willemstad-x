@@ -49,6 +49,8 @@ That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus]
 
 ---
 ### License
-Previous versions of Willemstad was licensed under MPL 2.0. From version 1.0 onwards this is licensed under GPL 3.0.
-[![License: GPL 3.0](https://img.shields.io/badge/license-%20%20GNU%20GPLv3%20-green?style=plastic)](https://opensource.org/license/GPL-3.0)
-This repository is licensed under the terms of GNU Public License version 3.0. Most of its constituent snippets (callouts, CSSClass, etc.) are licensed under the terms of the MIT license, either by myself or its respective authors.
+Previous versions of Willemstad was licensed under the Mozilla Public License 2.0. From version 1.1 onwards this is licensed under an adapted version of [Obsidian's Terms of Service](https://obsidian.md/terms).
+
+As is permissible under the original TOS as is the case with Obsidian, most of its constituent snippets (CSSClass, code written in conjunction with, or by other developers) and components that are licensed under the terms of the MIT license or another license, either by myself or its respective authors remain as is, and you will obtain a source copy of the full code in the GitHub repository. However, all rights are reserved to prevent further misuse of Willemstad which has occured pre-1.0.
+
+Willemstad remains forever free (free as in free beer, not free libre/free will), but cannot be considered open-source in the strictest definition of the term.
