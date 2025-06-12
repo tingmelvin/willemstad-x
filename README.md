@@ -22,14 +22,10 @@ Yes, it is. Inter is included in Obsidian proper. However, most people will down
 ### I'd like to change something or propose something. What's the easiest way to do so?
 If it's something you reckon people would need/want as well, the easiest way to request changes is to use the Issues tab here on GitHub. If you would like to change something that you can reckon you rather do it yourself, the best way would be to use a snippet.
 
-Alternatively, and if you are familiar with Sass/SCSS, you can compile Willemstad yourself via the files in the `build` folder, and fork the repo and edit the relevant files you want to. To understand what each specific SCSS file consists of, consult [here](https://willemstad.cc/Development+Docs/Revamp+v0.4). This might be slightly outdated.
-
 ---
 
 ## Supported Community Plugins
 Please refer to the [Willemstad theme documentation](https://willemstad.cc).
-
-The full list of supported community plugins can be found [here](https://willemstad.cc/Development+Docs/Coding+Nomenclatures).
 
 ## Attribution
 As is with most theme codes in Obsidian, many pieces/snippets of code have been cobbled together from whatever the hive mind has created. It is therefore not possible to accurately and fully attribute everyone's efforts, which might have come into and been adopted by this theme. That being said, there are multiple pieces of instrumental code that I can attribute to, which I do so here:
@@ -53,5 +49,6 @@ That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus]
 
 ---
 ### License
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-This repository is licensed under the terms of Mozilla Public License version 2.0. Most of its constituent snippets (callouts, CSSClass, etc.) are licensed under the terms of the MIT license, either by myself or its respective authors.
+Previous versions of Willemstad was licensed under MPL 2.0. From version 1.0 onwards this is licensed under GPL 3.0.
+[![License: GPL 3.0](https://img.shields.io/badge/license-%20%20GNU%20GPLv3%20-green?style=plastic)](https://opensource.org/license/GPL-3.0)
+This repository is licensed under the terms of GNU Public License version 3.0. Most of its constituent snippets (callouts, CSSClass, etc.) are licensed under the terms of the MIT license, either by myself or its respective authors.
