@@ -49,8 +49,8 @@ That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus]
 
 ---
 ### License
-Previous versions of Willemstad was licensed under the Mozilla Public License 2.0. From version 1.1 onwards this is licensed under an adapted version of [Obsidian's Terms of Service](https://obsidian.md/terms).
+Previous versions of Willemstad was licensed under the Mozilla Public License 2.0. From version 1.1 onwards this is licensed under GNU Public License 3.0 (GPL 3.0)
 
-As is permissible under the original TOS as is the case with Obsidian, most of its constituent snippets (CSSClass, code written in conjunction with, or by other developers) and components that are licensed under the terms of the MIT license or another license, either by myself or its respective authors remain as is, and you will obtain a source copy of the full code in the GitHub repository. However, all rights are reserved to prevent further misuse of Willemstad which has occured pre-1.0.
+As is permissible under the original TOS as is the case with Obsidian, most of its constituent snippets (CSSClass, code written in conjunction with, or by other developers) and components that are licensed under the terms of the MIT license or another license, either by myself or its respective authors remain as is.
 
-Willemstad remains forever free (free as in free beer, not free libre/free will), but cannot be considered open-source in the strictest definition of the term.
+You will obtain a compiled copy of the CSS code, which includes the snippets as well (as these do not require compiling). However, since version 1.1 the uncompiled SASS/SCSS source code will no longer be available on GitHub.
