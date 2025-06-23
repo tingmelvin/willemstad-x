@@ -156,5 +156,11 @@ Version: 0.1.0
             & + li {
                 margin-top: 0.25rem;
             }
+
+            &.list-bullet {
+                &::before, &::after {
+                    display: none;
+                }
+            }
         }
 }
