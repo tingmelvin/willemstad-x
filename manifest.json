@@ -1,7 +1,7 @@
 {  
    "name": "Willemstad",  
-   "version": "1.0.0-alpha-8",  
-   "minAppVersion": "0.16.0",  
+   "version": "1.9.0",  
+   "minAppVersion": "1.6.5",  
    "author": "tingmelvin",  
-   "authorUrl": "https://notes.tingmelvin.com/ER-Resources/ER2PUB/ER2PUB-01-AboutMe"  
+   "authorUrl": "" 
 }
