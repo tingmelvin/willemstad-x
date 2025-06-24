@@ -41,8 +41,8 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - Minimal Cards and Image Grids, from [Stephan Ango](https://github.com/kepano)
 
 
-## Theme Documentation (currently a work in progress)
-Available [here](https://willemstad.cc), includes information on [callouts](https://willemstad.cc/Theme+Extensions/Callouts).
+## Theme Documentation
+Available [here](https://willemstad.cc).
 
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
