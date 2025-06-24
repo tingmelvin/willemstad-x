@@ -1,9 +1,7 @@
 ![wx-github-2-mini](https://user-images.githubusercontent.com/43155211/159142584-70b88e36-7634-4ddb-9ee1-1a7c11f0b2c9.png)
 
-> Note 2 (2025-06-12): The rewrite is ongoing as a byproduct of another work I'm doing that necessitates the use of Obsidian. Once this is done, this will be uploaded here. 
-> Please note: Willemstad is currently undergoing a rewrite (from ground-up) for Obsidian 1.0, and the look and feel might be somewhat materially different from now. The UI from current alpha-version available in the Community Store right now will remain.
-
 The theme documentation is available [here](https://willemstad.cc/). 
+If you need examples on what colour palettes to use from Willemstad, see [here](https://willemstad.cc/Showcase).
 
 # Willemstad
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
@@ -46,6 +44,7 @@ Available [here](https://willemstad.cc), includes information on [callouts](http
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
 That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
+
 
 ---
 ### License
