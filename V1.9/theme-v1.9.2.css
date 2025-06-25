@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.3 Newfoundland
+Willemstad | v1.9.2 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.3 Newfoundland";
+  content: "  /  Willemstad v1.9.2 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.3 Newfoundland"; /* prints version number */
+  content: "\av1.9.2 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -16819,29 +16819,19 @@ body:where(.ssopt-editor-vll) .markdown-preview-view.markdown-preview-view .mark
 > ED03
 \ Editor > Document Display
 \ Active Line Highlight
-\ v2
 ──────────────────────────────────────────────────────────────────────────────── */
 body {
   --col-background-activeline: oklch(from var(--color-base-50) l c h / calc(alpha - 0.75));
 }
 
-.ͼ1 .cm-scroller.cm-scroller {
-  overflow-x: hidden;
-}
-
-body:not(.ssopt-disable-alh) .workspace-leaf {
-  overflow-x: hidden;
-}
-
 body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
-body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote, .HyperMD-header) {
-  position: relative;
+body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote) {
   background-color: var(--col-background-activeline);
 }
 
 body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line::before, body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line::after,
-body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote, .HyperMD-header)::before,
-body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote, .HyperMD-header)::after {
+body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote)::before,
+body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote)::after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -16852,23 +16842,48 @@ body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .Hype
 }
 
 body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line::before,
-body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote, .HyperMD-header)::before {
+body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote)::before {
   right: 100%;
 }
 
 body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line::after,
-body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote, .HyperMD-header)::after {
+body:not(.ssopt-disable-alh) .mod-active .cm-active:not(.cm-gutterElement, .HyperMD-quote)::after {
   left: 100%;
 }
 
-body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-quote,
-body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-header {
-  position: relative;
-  background-color: transparent;
+body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-quote {
+  /*
+  & > * {
+      // padding-left: 5px;
+
+      &::before,
+      &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 50vw;
+          background-color: var(--col-background-activeline);
+          z-index: -1;
+      }
+
+      &::before {
+          right: 100%;
+      }
+
+      &::after {
+          left: 100%;
+      }
+
+  }
+      */
 }
 
-body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-quote::after,
-body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-header::after {
+body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-quote {
+  background-color: transparent; /* so it doesn't take preceding colour */
+}
+
+body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-quote::after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -16881,7 +16896,7 @@ body:not(.ssopt-disable-alh) .mod-active .cm-active.HyperMD-header::after {
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before {
   z-index: -1;
-}
+} /* prevents it from hiding stuff in front */
 
 /* Active Line Highlight */
 
@@ -20311,138 +20326,68 @@ body {
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* EH01-1 |  Δ Heading Background and Text Colours */
-body {
-  /* for colour contrast - credits to Lea Verou */
-  --l-threshold: 0.7;
-  --l: clamp(0.3, (l / var(--l-threshold) - 1) * -infinity, 0.975);
-
-  /* we use 0.3 and 0.975 since we don't want to go full white or full black */
+body:not(.ssopt-no-coloured-headers) {
+  /* EH01-1B | for link colors in headers */
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 {
-  color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 {
+  color: var(--col-h1);
   background-color: var(--col-h1-bg);
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 a {
-  --link-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
-  --link-color-hover: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 a:hover {
-  color: var(--link-color-hover);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 {
-  color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 {
+  color: var(--col-h2);
   background-color: var(--col-h2-bg);
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 a {
-  --link-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
-  --link-color-hover: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 a:hover {
-  color: var(--link-color-hover);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 {
-  color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 {
+  color: var(--col-h3);
   background-color: var(--col-h3-bg);
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 a {
-  --link-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
-  --link-color-hover: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 a:hover {
-  color: var(--link-color-hover);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 {
-  color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 {
+  color: var(--col-h4);
   background-color: var(--col-h4-bg);
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 a {
-  --link-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
-  --link-color-hover: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 a:hover {
-  color: var(--link-color-hover);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 {
-  color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 {
+  color: var(--col-h5);
   background-color: var(--col-h5-bg);
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 a {
-  --link-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
-  --link-color-hover: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 a:hover {
-  color: var(--link-color-hover);
-}
-
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 {
-  color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6,
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 {
+  color: var(--col-h6);
   background-color: var(--col-h6-bg);
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 a {
-  --link-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
-  --link-color-hover: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+body:not(.ssopt-no-coloured-headers) h1 a, body:not(.ssopt-no-coloured-headers) h1 a:hover, body:not(.ssopt-no-coloured-headers) h2 a, body:not(.ssopt-no-coloured-headers) h2 a:hover, body:not(.ssopt-no-coloured-headers) h3 a, body:not(.ssopt-no-coloured-headers) h3 a:hover, body:not(.ssopt-no-coloured-headers) h4 a, body:not(.ssopt-no-coloured-headers) h4 a:hover, body:not(.ssopt-no-coloured-headers) h5 a, body:not(.ssopt-no-coloured-headers) h5 a:hover, body:not(.ssopt-no-coloured-headers) h6 a, body:not(.ssopt-no-coloured-headers) h6 a:hover,
+body:not(.ssopt-no-coloured-headers) .markdown-rendered :where(h1, h2, h3, h4, h5, h6) a,
+body:not(.ssopt-no-coloured-headers) .markdown-rendered :where(h1, h2, h3, h4, h5, h6) a:hover,
+body:not(.ssopt-no-coloured-headers) .HyperMD-header-1 a,
+body:not(.ssopt-no-coloured-headers) .HyperMD-header-1 a:hover, body:not(.ssopt-no-coloured-headers) .HyperMD-header-2 a, body:not(.ssopt-no-coloured-headers) .HyperMD-header-2 a:hover,
+body:not(.ssopt-no-coloured-headers) .HyperMD-header-3 a,
+body:not(.ssopt-no-coloured-headers) .HyperMD-header-3 a:hover, body:not(.ssopt-no-coloured-headers) .HyperMD-header-4 a, body:not(.ssopt-no-coloured-headers) .HyperMD-header-4 a:hover,
+body:not(.ssopt-no-coloured-headers) .HyperMD-header-5 a,
+body:not(.ssopt-no-coloured-headers) .HyperMD-header-5 a:hover, body:not(.ssopt-no-coloured-headers) .HyperMD-header-6 a, body:not(.ssopt-no-coloured-headers) .HyperMD-header-6 a:hover {
+  --link-color: var(--text-on-accent);
+  --link-color-hover: var(--text-on-accent);
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 a:hover {
-  color: var(--link-color-hover);
-}
-
-.cm-s-obsidian span.cm-header-1.cm-link, .cm-s-obsidian span.cm-header-1.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-1.cm-url {
-  --link-color: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-color-hover: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-}
-
-.cm-s-obsidian span.cm-header-2.cm-link, .cm-s-obsidian span.cm-header-2.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-2.cm-url {
-  --link-color: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-color-hover: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-}
-
-.cm-s-obsidian span.cm-header-3.cm-link, .cm-s-obsidian span.cm-header-3.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-3.cm-url {
-  --link-color: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-color-hover: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-}
-
-.cm-s-obsidian span.cm-header-4.cm-link, .cm-s-obsidian span.cm-header-4.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-4.cm-url {
-  --link-color: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-color-hover: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-}
-
-.cm-s-obsidian span.cm-header-5.cm-link, .cm-s-obsidian span.cm-header-5.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-5.cm-url {
-  --link-color: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-color-hover: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-}
-
-.cm-s-obsidian span.cm-header-6.cm-link, .cm-s-obsidian span.cm-header-6.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-6.cm-url {
-  --link-color: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-color-hover: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-external-color: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header.cm-hmd-internal-link {
+  --link-color: var(--text-on-accent);
+  --link-color-hover: var(--text-on-accent);
 }
 
 /* EH01-2 | Δ Heading Padding */
@@ -20754,35 +20699,14 @@ body:is(.ssopt-smaller-header-hexes) .HyperMD-header :where(.cm-header-1,
 
 /* EH91-2 | Change Header Hexes Colours */
 body {
-  --col-header-hex: var(--col-header-hex-special);
+  --col-header-hex: var(--text-faint);
 }
 
 body:not(.ssopt-no-coloured-headers) .cm-formatting-header {
   color: var(--col-header-hex);
-} /* already is the case, text-faint but have to give them other options */
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-1 {
-  --col-header-hex-special: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
 }
 
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-2 {
-  --col-header-hex-special: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-3 {
-  --col-header-hex-special: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-4 {
-  --col-header-hex-special: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-5 {
-  --col-header-hex-special: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-6 {
-  --col-header-hex-special: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
-}
+/* already is the case, text-faint but have to give them other options */
 
 /* EH91-3 | Add Header Number (like H1) at the side? */
 body:is(.ssopt-add-header-number) h1::before, body:is(.ssopt-add-header-number) h2::before, body:is(.ssopt-add-header-number) h3::before, body:is(.ssopt-add-header-number) h4::before, body:is(.ssopt-add-header-number) h5::before, body:is(.ssopt-add-header-number) h6::before {
@@ -23001,10 +22925,6 @@ body:not(.native-scrollbars) :where(.mod-community-plugin, .mod-community-theme)
 > MB01
 \ Modals \ Settings Modal \ Settings Modal-specific Fixes and Customisation
 ──────────────────────────────────────────────────────────────────────────────── */
-body {
-  --mod-settings-left-column-spacing: 0px;
-}
-
 .modal.mod-settings {
   /* NO PADDINGS */
 
@@ -23012,11 +22932,7 @@ body {
 }
 
 .modal.mod-settings .vertical-tab-header-group {
-  padding: 0 0 var(--mod-settings-left-column-spacing) 0;
-}
-
-:where(.ssopt-add-mod-settings-left-column-border) .modal.mod-settings .vertical-tab-header-group-title {
-  border-bottom: 1px solid var(--background-modifier-border);
+  padding: 0;
 }
 
 .modal.mod-settings .vertical-tab-header-group-title {
@@ -26767,37 +26683,37 @@ mixins or deep nesting, while still reducing code duplication.
 @keyframes changeHeaderNum {
   0%, 100% {
     content: "H1";
-    color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
+    color: var(--col-h1);
     background-color: var(--col-h1-bg);
   }
 
   16.67% {
     content: "H2";
-    color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
+    color: var(--col-h2);
     background-color: var(--col-h2-bg);
   }
 
   33.33% {
     content: "H3";
-    color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
+    color: var(--col-h3);
     background-color: var(--col-h3-bg);
   }
 
   50% {
     content: "H4";
-    color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
+    color: var(--col-h4);
     background-color: var(--col-h4-bg);
   }
 
   66.67% {
     content: "H5";
-    color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
+    color: var(--col-h5);
     background-color: var(--col-h5-bg);
   }
 
   83.33% {
     content: "H6";
-    color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+    color: var(--col-h6);
     background-color: var(--col-h6-bg);
   }
 }
@@ -27131,76 +27047,15 @@ body:not(.ssopt-no-coloured-headers) .setting-item[data-id="coloured-headers"] .
   animation: changeHeaderNum 9s infinite steps(1, end);
 }
 
-/*
 .setting-item[data-id="col-header-hex"] .setting-item-control::before {
-  content: "#";
   padding: 4px 8px;
-  border-radius: var(--radius-s);
   color: var(--col-header-hex);
-  body:not(.ssopt-no-coloured-headers) & {
-    animation: header-hex-color-snap 9s infinite steps(1, end);
-  }
-}
-*/
-@keyframes header-hex-special-cycle {
-  0%, 100% {
-    --col-header-hex-special: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
-  }
-
-  16.67% {
-    --col-header-hex-special: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
-  }
-
-  33.33% {
-    --col-header-hex-special: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
-  }
-
-  50% {
-    --col-header-hex-special: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
-  }
-
-  66.67% {
-    --col-header-hex-special: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
-  }
-
-  83.33% {
-    --col-header-hex-special: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
-  }
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-1 {
-  color: var(--col-header-hex, oklch(from var(--col-h1-bg) var(--l) 0.03 h));
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-2 {
-  color: var(--col-header-hex, oklch(from var(--col-h2-bg) var(--l) 0.03 h));
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-3 {
-  color: var(--col-header-hex, oklch(from var(--col-h3-bg) var(--l) 0.03 h));
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-4 {
-  color: var(--col-header-hex, oklch(from var(--col-h4-bg) var(--l) 0.03 h));
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-5 {
-  color: var(--col-header-hex, oklch(from var(--col-h5-bg) var(--l) 0.03 h));
-}
-
-body:not(.ssopt-no-coloured-headers) .cm-formatting-header-6 {
-  color: var(--col-header-hex, oklch(from var(--col-h6-bg) var(--l) 0.03 h));
-}
-
-.setting-item[data-id="col-header-hex"] .setting-item-control::before {
-  padding: 4px 8px;
-  color: var(--col-header-hex, var(--col-header-hex-special));
   border-radius: var(--radius-s);
   content: "#";
 }
 
 body:not(.ssopt-no-coloured-headers) .setting-item[data-id="col-header-hex"] .setting-item-control::before {
-  animation: header-hex-special-cycle 9s infinite steps(1, end), header-hex-color-snap 9s infinite steps(1, end);
+  animation: header-hex-color-snap 9s infinite steps(1, end);
 }
 
 .setting-item[data-id="infobox-title-font-size"] .setting-item-info {
@@ -27539,9 +27394,7 @@ body:not(.ssopt-sidebar-toggle-button-no-colour) .setting-item[data-id="ssopt-si
   padding: var(--size-4-1) 0 var(--size-4-1) var(--size-4-2);
   font-family: var(--font-monospace);
   color: var(--col-frontmatter-atom);
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  border-right: none;
+  background-color: var(--background-secondary);
   content: "aliases";
   order: -2;
   font-weight: bold;
@@ -27558,9 +27411,7 @@ body:not(.ssopt-sidebar-toggle-button-no-colour) .setting-item[data-id="ssopt-si
   padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) 0;
   font-family: var(--font-monospace);
   color: var(--col-frontmatter-default);
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  border-left: none;
+  background-color: var(--background-secondary);
   content: ": brinjal";
   order: -1;
 }
@@ -29941,7 +29792,6 @@ body:not(.pane-relief-disable-counts) .view-header-nav-buttons button:last-child
     \\ PComm131 | Vault Statistics
     \\ PComm132 | Theme Picker
     \\ PComm133 | Focus Mode
-    \\ PComm134 | CSS Editor
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -29981,16 +29831,6 @@ body:not(.pane-relief-disable-counts) .view-header-nav-buttons button:last-child
 ──────────────────────────────────────────────────────────────────────────── */
 .theme-picker-modal {
   box-shadow: none;
-}
-
-/* ────────────────────────────────────────────────────────────────────────────────
->> [COMMUNITY PLUGIN | ]
-\\ (NOMEN | PComm134)
-───────────────────────────────────────────────────────────────────────────────────
-    >>> FIXING View Content
-    ──────────────────────────────────────────────────────────────────────────── */
-.workspace-leaf-content[data-type="css-editor-view"] .view-content {
-  padding: 0;
 }
 
 /* PComm130-series */
@@ -34866,25 +34706,6 @@ settings:
             min: 1
             max: 7
     -
-            id: settings-modal
-            title: Settings Modal
-            type: heading
-            description:
-            level: 3
-            collapsed: false
-    -
-                id: mod-settings-left-column-spacing
-                title: 'Spacing between Settings Left Column Navigation Items'
-                type: variable-text
-                default: '0px'
-                description: "Adjusts the spacing of the settings left column sections, in between 'Options', 'Core Plugins' and 'Community Plugins' segments. Accepts any valid CSS unit (px, em, rem, %, etc.)."
-    -
-                id: ssopt-add-mod-settings-left-column-border
-                title: "Add Border for Settings Left Column Navigation Items"
-                type: class-toggle
-                description: "Adds a bottom border to the settings left column section titles (Options, Core Plugins, Community Plugins)."
-                default: false
-    -
             id: modal-widths
             title: Modal Widths
             type: heading
@@ -34961,7 +34782,7 @@ settings:
                 step: 1
     -
                 id: modal-height-community-theme
-                title: Modal Heights — Community Theme Store
+                title: Modal Heights — Community  Theme Store
                 type: variable-number-slider
                 document: MA11-ModalSizingControls
                 format: 'vh'
@@ -35353,13 +35174,10 @@ settings:
             title: Colour of Header Hexes
             type: variable-select
             document: EH91-HAdditions
-            description: "Use the dropdown to choose the colour of the header hexes. While text-faint is the default in Obsidian, this is harder to discern with coloured headers. Willemstad matches the header hexes colours to that of the header text."
+            description: "Use the dropdown to choose the colour of the header hexes. While text-faint is the default in Obsidian, this is harder to discern with coloured headers."
             allowEmpty: false
-            default: var(--col-header-hex-special)
+            default: var(--text-faint)
             options:
-                -
-                    label: "Match Colour of Header Hexes to Header Text"
-                    value: var(--col-header-hex-special)
                 -
                     label: text-on-accent
                     value: var(--text-on-accent)
