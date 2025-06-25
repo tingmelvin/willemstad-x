@@ -7,42 +7,59 @@ assignees: tingmelvin
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Bug Report
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Before submitting:** Search existing issues to avoid duplicates. Ensure you've tested with only this theme active.
 
-**To Reproduce**
-Steps to reproduce the behavior:
+### Bug Description
+Provide a clear, concise description of the issue.
 
+### Steps to Reproduce
+1. 
+2. 
+3. 
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### Expected Behavior
+What you expected to happen.
 
-**Which OS (operating system do you use?)**
+### Actual Behavior
+What actually happened instead.
+
+### Screenshots
+If applicable, add screenshots or screen recordings.
+
+---
+
+### Environment
+**Operating System:**
 - [ ] Windows
-- [ ] macOS
+- [ ] macOS  
 - [ ] Linux
-_Please note: Willemstad X does not officially support mobile Obsidian at the moment. However, please leave a message still so I can file it to review later on._
 
-**In which editor does this happen?
-_Please note, Willemstad does not support the old editor_**
+**Editor Mode:** *(Willemstad does not support the legacy editor)*
 - [ ] New Editor (CodeMirror 6)
 
-**In which mode does this issue happen?**
-- [ ] Source mode (full Markdown edit)
+**View Mode:**
+- [ ] Source mode
 - [ ] Live Preview
-- [ ] Reading mode (Preview)
+- [ ] Reading mode
 
-**What is your Obsidian version?**
-<!--- Go to App > About. Paste the number appended to "Current version" below this line. --->
+**Obsidian Version:** 
+<!-- Go to Settings > About and paste the "Current version" number -->
 
-**What is your installer version?**
-<!--- Go to App > About. Paste the number appended to "Installer version" below this line. --->
+**Installer Version:**
+<!-- Go to Settings > About and paste the "Installer version" number -->
 
-**Checklist**
-- [ ] In case I am missing an UI element, I have checked that it cannot be re-enabled with the Style Settings plugin. *
+---
 
-**Additional context**
-Add any other context about the problem here.
+### Checklist
+- [ ] I have searched existing issues to ensure this is not a duplicate
+- [ ] I have tested with only Willemstad theme active (no other themes/CSS)
+- [ ] For missing UI elements: I have verified this cannot be restored via Style Settings
+- [ ] I have included reproduction steps and system information
+
+### Additional Context
+Any other relevant information, console errors, or related issues.
+
+---
+**Note:** Mobile Obsidian is not officially supported but reports are welcome for future consideration.
