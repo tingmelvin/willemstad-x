@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.1 Newfoundland
+Willemstad | v1.9.0 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.1 Newfoundland";
+  content: "  /  Willemstad v1.9.0 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.1 Newfoundland"; /* prints version number */
+  content: "\av1.9.0 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -21743,62 +21743,62 @@ body {
 }
 
 /* opinionated stuff */
-body:not(.ssopt-callout-standard) .callout {
+body:not(.callout-standard) .callout {
   --callout-padding: 0 /* var(--size-2-3) var(--size-4-2) */; /* relegate it down DOM */
 
   transition: var(--quick-transition);
 }
 
-body:not(.ssopt-callout-standard) .callout:hover {
+body:not(.callout-standard) .callout:hover {
   border-left: 5px solid rgb(var(--callout-color));
   transition: var(--quick-transition);
 }
 
-body:not(.ssopt-callout-standard) .callout-title {
+body:not(.callout-standard) .callout-title {
   font-family: var(--font-heading);
 
   /* ensures this appears first */
 }
 
-body:not(.ssopt-callout-standard) .callout-title .callout-title-inner {
+body:not(.callout-standard) .callout-title .callout-title-inner {
   order: -2;
   flex-grow: 1; /* forces the stuff to to be right-aligned */
 }
 
-body:not(.ssopt-callout-standard) .callout-title .callout-fold {
+body:not(.callout-standard) .callout-title .callout-fold {
   order: -1; /* ensures this appears before all the svg */
   opacity: 0.3;
   transition: var(--quicker-transition);
   padding-right: 0; /* removes weird padding */
 }
 
-body:not(.ssopt-callout-standard) .callout-title:hover .callout-fold {
+body:not(.callout-standard) .callout-title:hover .callout-fold {
   opacity: 1;
   transition: var(--quicker-transition);
 }
 
-body:not(.ssopt-callout-standard) .callout-title .callout-fold, body:not(.ssopt-callout-standard) .callout-title .callout-icon {
+body:not(.callout-standard) .callout-title .callout-fold, body:not(.callout-standard) .callout-title .callout-icon {
   display: flex;
   align-items: center; /* ensures that the svg is centered */
 }
 
-body:not(.ssopt-callout-standard) .callout-content {
+body:not(.callout-standard) .callout-content {
   padding: 0 1em;
   background-color: var(--background-primary-alt);
 }
 
-body:not(.ssopt-callout-standard) .callout-content p {
+body:not(.callout-standard) .callout-content p {
   margin-block: 0.5em;
 }
 
-body:not(.ssopt-callout-standard) svg.ChevronDown {
+body:not(.callout-standard) svg.ChevronDown {
   background-color: var(--text-muted);
   mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
   mask-position: center;
   mask-repeat: no-repeat;
 }
 
-body:not(.ssopt-callout-standard) svg.ChevronDown > * {
+body:not(.callout-standard) svg.ChevronDown > * {
   display: none;
 }
 
@@ -21809,25 +21809,25 @@ body:not(.ssopt-callout-standard) svg.ChevronDown > * {
 
 originally by Chris - replaced filters with oklch in 2025.
 ───────────────────────────────────────────────────────────────────────── */
-:not(.ssopt-callout-standard) .callout-icon.callout-icon {
+.callout-icon.callout-icon {
   /* transform: scale(calc(var(-font-text-size) * 0.8)); */
 }
 
-:not(.ssopt-callout-standard) .callout-icon.callout-icon svg {
+.callout-icon.callout-icon svg {
   width: 1em; /* admonitions is 1em */
   height: 1em;
 }
 
-.theme-light :not(.ssopt-callout-standard) .callout-icon.callout-icon svg {
+.theme-light .callout-icon.callout-icon svg {
   color: oklch(from rgb(var(--callout-color)) calc(l - 0.05) c h);
 }
 
 /* we need to come out with better colouring */
-body.theme-light :not(.ssopt-callout-standard) .callout .callout-title-inner {
+body.theme-light :not(.callout-standard) .callout .callout-title-inner {
   color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
 }
 
-body.theme-dark :not(.ssopt-callout-standard) .callout .callout-title-inner {
+body.theme-dark :not(.callout-standard) .callout .callout-title-inner {
   color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
 }
 
@@ -25266,6 +25266,8 @@ body.css-settings-manager.theme-dark .setting-item[data-id^="col-highlight-"] .t
 
 /* set the font and stuff */
 .setting-item:where([data-id^="col-highlight-0"]) {
+  /* set font */
+
   /* set highlight text and colour */
 }
 
@@ -25294,6 +25296,8 @@ body.theme-dark .setting-item:where([data-id^="col-highlight-0"]) .theme-dark .p
 }
 
 .setting-item:where([data-id^="col-highlight-1"]) {
+  /* set font */
+
   /* set highlight text and colour */
 }
 
@@ -25322,6 +25326,8 @@ body.theme-dark .setting-item:where([data-id^="col-highlight-1"]) .theme-dark .p
 }
 
 .setting-item:where([data-id^="col-highlight-2"]) {
+  /* set font */
+
   /* set highlight text and colour */
 }
 
@@ -25350,6 +25356,8 @@ body.theme-dark .setting-item:where([data-id^="col-highlight-2"]) .theme-dark .p
 }
 
 .setting-item:where([data-id^="col-highlight-3"]) {
+  /* set font */
+
   /* set highlight text and colour */
 }
 
@@ -28859,10 +28867,6 @@ CSS-ing the Credits section
 
 .workspace-leaf-content[data-type="calendar"].workspace-leaf-content[data-type="calendar"] .container .year {
   color: var(--PComm001-col-year);
-}
-
-.workspace-leaf-content[data-type="calendar"].workspace-leaf-content[data-type="calendar"] .title::before {
-  display: none;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -35560,13 +35564,6 @@ settings:
                 type: class-toggle
                 document: EW12-C-Standard
                 description: note; abstract, summary, tldr; info, todo; tip, hint; check, done; question, help, faq; warning, caution, attention; failure, fail, missing; danger, error; bug; example; quote, cite; file, attachment; phone; email, mail; goal; success; important; code; positive, plus; negative, minus
-                default: false
-    -
-                id: ssopt-callout-standard
-                title: Disable Styling on Standard Callouts
-                type: class-toggle
-                document: EW01-CFixes
-                description: "Willemstad by default styles the callouts, toggle this in order to disable this and return to Obsidian's standard callouts appearance."
                 default: false
     -
             id: callouts-infobox
