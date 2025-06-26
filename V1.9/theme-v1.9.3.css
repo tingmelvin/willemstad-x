@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.4 Newfoundland
+Willemstad | v1.9.3 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.4 Newfoundland";
+  content: "  /  Willemstad v1.9.3 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.4 Newfoundland"; /* prints version number */
+  content: "\av1.9.3 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -20328,7 +20328,6 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
   --link-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
   --link-color-hover: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
-  --link-unresolved-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 a:hover {
@@ -20344,7 +20343,6 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
   --link-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
   --link-color-hover: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
-  --link-unresolved-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 a:hover {
@@ -20360,7 +20358,6 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
   --link-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
   --link-color-hover: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
-  --link-unresolved-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 a:hover {
@@ -20376,7 +20373,6 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
   --link-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
   --link-color-hover: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
-  --link-unresolved-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 a:hover {
@@ -20392,7 +20388,6 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
   --link-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
   --link-color-hover: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
-  --link-unresolved-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 a:hover {
@@ -20408,53 +20403,46 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
   --link-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
   --link-color-hover: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
-  --link-unresolved-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 a:hover {
   color: var(--link-color-hover);
 }
 
-body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-1.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-1.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-1.cm-url {
+.cm-s-obsidian span.cm-header-1.cm-link, .cm-s-obsidian span.cm-header-1.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-1.cm-url {
   --link-color: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-color-hover: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-unresolved-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
-body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-2.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-2.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-2.cm-url {
+.cm-s-obsidian span.cm-header-2.cm-link, .cm-s-obsidian span.cm-header-2.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-2.cm-url {
   --link-color: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-color-hover: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-unresolved-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
-body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-3.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-3.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-3.cm-url {
+.cm-s-obsidian span.cm-header-3.cm-link, .cm-s-obsidian span.cm-header-3.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-3.cm-url {
   --link-color: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-color-hover: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-unresolved-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
-body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-4.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-4.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-4.cm-url {
+.cm-s-obsidian span.cm-header-4.cm-link, .cm-s-obsidian span.cm-header-4.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-4.cm-url {
   --link-color: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-color-hover: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-unresolved-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
-body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-5.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-5.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-5.cm-url {
+.cm-s-obsidian span.cm-header-5.cm-link, .cm-s-obsidian span.cm-header-5.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-5.cm-url {
   --link-color: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-color-hover: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-unresolved-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
-body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-6.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-6.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-6.cm-url {
+.cm-s-obsidian span.cm-header-6.cm-link, .cm-s-obsidian span.cm-header-6.cm-hmd-internal-link, .cm-s-obsidian span.cm-header-6.cm-url {
   --link-color: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-color-hover: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
-  --link-unresolved-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h / calc(alpha - 0.1));
 }
 
 /* EH01-2 | Δ Heading Padding */
@@ -20482,7 +20470,8 @@ body:not(.ssopt-no-coloured-headers) .metadata-properties-heading .collapse-indi
   inset-inline-start: calc(-28px + var(--padding-headers-lr));
 }
 
-body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] :where(h1, h2, h3, h4, h5, h6),
+body:not(.ssopt-no-coloured-headers) h1, body:not(.ssopt-no-coloured-headers) h2, body:not(.ssopt-no-coloured-headers) h3,
+body:not(.ssopt-no-coloured-headers) h4, body:not(.ssopt-no-coloured-headers) h5, body:not(.ssopt-no-coloured-headers) h6,
 body:not(.ssopt-no-coloured-headers) .markdown-source-view.mod-cm6 :is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3,
 .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) {
   padding: var(--padding-headers);
@@ -20796,7 +20785,7 @@ body:not(.ssopt-no-coloured-headers) .cm-formatting-header-6 {
 }
 
 /* EH91-3 | Add Header Number (like H1) at the side? */
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h1::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h2::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h3::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h4::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h5::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h6::before {
+body:is(.ssopt-add-header-number) h1::before, body:is(.ssopt-add-header-number) h2::before, body:is(.ssopt-add-header-number) h3::before, body:is(.ssopt-add-header-number) h4::before, body:is(.ssopt-add-header-number) h5::before, body:is(.ssopt-add-header-number) h6::before {
   position: absolute;
   left: 12px;
   font-size: var(--font-ui-smaller);
@@ -20804,9 +20793,9 @@ body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] 
   color: var(--text-faint);
 }
 
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6::before {
+body:is(.ssopt-add-header-number) .HyperMD-header-1::before, body:is(.ssopt-add-header-number) .HyperMD-header-2::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-3::before, body:is(.ssopt-add-header-number) .HyperMD-header-4::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-5::before, body:is(.ssopt-add-header-number) .HyperMD-header-6::before {
   position: absolute;
   left: -20px;
   font-size: var(--font-ui-smaller);
@@ -20814,33 +20803,33 @@ body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] 
   color: var(--text-faint);
 }
 
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h1::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1::before {
+body:is(.ssopt-add-header-number) h1::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-1::before {
   content: "H1";
 }
 
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h2::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2::before {
+body:is(.ssopt-add-header-number) h2::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-2::before {
   content: "H2";
 }
 
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h3::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3::before {
+body:is(.ssopt-add-header-number) h3::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-3::before {
   content: "H3";
 }
 
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h4::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4::before {
+body:is(.ssopt-add-header-number) h4::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-4::before {
   content: "H4";
 }
 
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h5::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5::before {
+body:is(.ssopt-add-header-number) h5::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-5::before {
   content: "H5";
 }
 
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h6::before,
-body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6::before {
+body:is(.ssopt-add-header-number) h6::before,
+body:is(.ssopt-add-header-number) .HyperMD-header-6::before {
   content: "H6";
 }
 
@@ -21091,21 +21080,8 @@ body {
     Custom Default Variables - Reduces repetition and simplifies the implementation above.
     If you want different defaults for all Alternative Checkboxes you can change them here. 
 */
-body:is(.ssopt-acrs-enable) {
-  /* Swapping margin for padding to allow background color to apply in Reading view the same
-  as in Live Preview */
-
-  /*
-  .task-list-item.is-checked {
-      margin-inline-start: unset;
-      padding-inline-start: var(--list-indent);
-  } */
-
-  /* based on app.css */
-}
-
-body:is(.ssopt-acrs-enable) .HyperMD-task-line:not([data-task="x"], [data-task="X"], [data-task=" "]),
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) {
+.HyperMD-task-line:not([data-task="x"], [data-task=" "]),
+li:not([data-task="x"], [data-task=" "]) {
   --icon-mask-image: unset;
   --icon-mask-color: var(--text-normal);
   --icon-content: "";
@@ -21122,22 +21098,24 @@ body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=
   --line-border-radius: unset;
 }
 
-body:is(.ssopt-acrs-enable) .HyperMD-task-line:not([data-task="x"], [data-task="X"], [data-task=" "]),
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]).is-checked {
+.HyperMD-task-line:not([data-task="x"], [data-task=" "]),
+li:not([data-task="x"], [data-task=" "]).is-checked {
   color: var(--line-text-color);
   background: var(--line-background);
   border: var(--line-border);
   border-radius: var(--line-border-radius);
 }
 
-body:is(.ssopt-acrs-enable) .markdown-rendered .task-list-item.is-checked :where(ol ol > li, ul ul > li) {
+/* Swapping margin for padding to allow background color to apply in Reading view the same
+as in Live Preview */
+.task-list-item.is-checked {
   margin-inline-start: unset;
-  padding-inline-start: var(--list-indent);
+  padding-inline-start: 3ch;
 }
 
-body:is(.ssopt-acrs-enable) div.is-live-preview label > input[type="checkbox"]:not([data-task="x"], [data-task="X"], [data-task=" "]):checked,
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > input[type="checkbox"]:checked,
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > p > input[type="checkbox"]:checked {
+div.is-live-preview input[type="checkbox"]:not([data-task="x"], [data-task=" "]):checked,
+li:not([data-task="x"], [data-task=" "]) > input[type="checkbox"]:checked,
+li:not([data-task="x"], [data-task=" "]) > p > input[type="checkbox"]:checked {
   --checkbox-marker-color: transparent;
 
   border: var(--icon-border);
@@ -21145,15 +21123,15 @@ body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=
   background: var(--icon-background);
 }
 
-body:is(.ssopt-acrs-enable) div.is-live-preview label > input[type="checkbox"]:not([data-task="x"], [data-task="X"], [data-task=" "]):checked:hover,
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > input[type="checkbox"]:checked:hover,
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > p > input[type="checkbox"]:checked:hover {
+div.is-live-preview input[type="checkbox"]:not([data-task="x"], [data-task=" "]):checked:hover,
+li:not([data-task="x"], [data-task=" "]) > input[type="checkbox"]:checked:hover,
+li:not([data-task="x"], [data-task=" "]) > p > input[type="checkbox"]:checked:hover {
   background: var(--icon-background-hover);
 }
 
-body:is(.ssopt-acrs-enable) div.is-live-preview label > input[type="checkbox"]:not([data-task="x"], [data-task="X"], [data-task=" "]):checked::after,
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > input[type="checkbox"]:checked::after,
-body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > p > input[type="checkbox"]:checked::after {
+div.is-live-preview input[type="checkbox"]:not([data-task="x"], [data-task=" "]):checked::after,
+li:not([data-task="x"], [data-task=" "]) > input[type="checkbox"]:checked::after,
+li:not([data-task="x"], [data-task=" "]) > p > input[type="checkbox"]:checked::after {
   display: flex;
   justify-content: center;
 
@@ -24429,7 +24407,7 @@ body:is(.ssopt-bases-no-edit) .bases-td .multi-select-container, body:is(.ssopt-
   grid-template-columns: 1fr max-content;
 }
 
-:where(.style-settings-container) .setting-item:not(.setting-item-heading), .vertical-tab-content:has(.installed-plugins-container) .setting-item:not(.setting-item-heading) {
+.setting-item:not(.setting-item-heading) {
   display: grid;
   grid-template-columns: 1fr max-content;
 }
