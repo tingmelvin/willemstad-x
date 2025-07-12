@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.8 Newfoundland
+Willemstad | v1.9.7 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.8 Newfoundland";
+  content: "  /  Willemstad v1.9.7 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.8 Newfoundland"; /* prints version number */
+  content: "\av1.9.7 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -21704,7 +21704,7 @@ body:not(.ssopt-no-pin-tab-front) .workspace-tab-header-container-inner .workspa
   left: 0;
 }
 
-:where(.mod-windows, .mod-linux) .is-hidden-frameless:not(.is-fullscreen) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container {
+.is-hidden-frameless:not(.is-fullscreen) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container {
   padding-left: var(--header-margin-half);
 }
 
@@ -23136,86 +23136,6 @@ body.ssopt-no-status-bar .status-bar {
   display: flex;
 }
 
-/* FULL STATUS BAR extensions */
-body {
-  --ssopt-status-bar-full-style: 1;
-}
-
-body.ssopt-status-bar-full {
-  /*
-  @container style(--ssopt-status-bar-full-style: 2) {
-      .horizontal-main-container {
-          display: grid;
-          grid-template-columns: subgrid;
-          grid-column: 1/-1;
-          grid-row: 1;
-
-          &::before {
-              content: '';
-              grid-column: 1/3;
-              grid-row: 1;
-          }
-      }
-
-      .workspace {
-          display: grid;
-          grid-auto-flow: column;
-      grid-template-areas: "left-bar nav-pane content right-bar";
-      grid-template-columns: max-content max-content 1fr max-content;
-
-
-          :where(.workspace-ribbon) {
-              grid-column: 1/2;
-              grid-row: 1;
-          }
-          :where(.mod-left-split) {
-              grid-column: 2/3;
-              grid-row: 1;
-          }
-          :where(.mod-root) {
-              grid-column: 3/4;
-              grid-row: 1;
-          }
-          :where(.mod-right-split) {
-              grid-column: 4/5;
-              grid-row: 1;
-          }
-
-          &::before {
-              grid-column: 1/3;
-              grid-row: 1;
-              content: '';
-              background-color: red;
-
-          }
-
-
-          .workspace-split {
-              display: flex;
-          }
-
-      }
-  }
-  */
-}
-
-@container style(--ssopt-status-bar-full-style: 1) {
-  body.ssopt-status-bar-full .horizontal-main-container, body.ssopt-status-bar-full .horizontal-main-container .workspace {
-    overflow: visible;
-  }
-
-  body.ssopt-status-bar-full .status-bar {
-    max-width: calc(var(--status-bar-max-width) - var(--ribbon-width));
-    margin-right: 0;
-    box-shadow: inset var(--divider-width) 0 0 0 var(--divider-color);
-  }
-
-  body.ssopt-status-bar-full .side-dock-ribbon.mod-left {
-    height: calc-size(auto, size * 2);
-    max-height: calc(100vh - var(--header-height)); /* OMG THIS IS SO MUCH EASIER */
-  }
-}
-
 /* Status Bar (Extended Controls) | 2025 */
 
 /* EDITOR */
@@ -23529,9 +23449,7 @@ body:where(.ssopt-editor-vll) .markdown-preview-view.markdown-preview-view .mark
 \ v2
 ──────────────────────────────────────────────────────────────────────────────── */
 body {
-  --col-background-activeline: oklch(from var(--col-base-bg-alh) l c h / calc(alpha - calc(1 - var(--col-base-alpha-alh))));
-  --col-base-bg-alh: var(--color-base-50);
-  --col-base-alpha-alh: 0.25;
+  --col-background-activeline: oklch(from var(--color-base-50) l c h / calc(alpha - 0.75));
 }
 
 /*
@@ -23675,81 +23593,6 @@ body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-activ
 }
 
 /* Active Line Highlight */
-
-/* ────────────────────────────────────────────────────────────────────────────────
-> ED04
-\ Editor > Document Display
-\ Focused Mode and Super Focused Mode
-\ v2
-──────────────────────────────────────────────────────────────────────────────── */
-body {
-  --distant-opacity: 0.2;
-  --near-fade-factor: 0.15;
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-sidedock,
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .side-dock-ribbon,
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .workspace-leaf-content .view-header,
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .titlebar,
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .status-bar,
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .markdown-source-view.is-live-preview.show-properties .metadata-container.metadata-container {
-  display: none;
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
-  padding-right: 0;
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container::after {
-  display: none;
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .sidebar-toggle-button.mod-right .clickable-icon {
-  display: none;
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-embed-block, .cm-gutterElement) {
-  opacity: var(--distant-opacity);
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement):is(:has(+ .cm-line.cm-active), .cm-active + .cm-line,
-:has(+ .cm-gutterElement.cm-active), .cm-active + .cm-gutterElement) {
-  --distance: 1;
-
-  opacity: max(1 - var(--distance) * var(--near-fade-factor), var(--distant-opacity));
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement):is(:has(+ .cm-line + .cm-line.cm-active), .cm-active + .cm-line + .cm-line,
-:has(+ .cm-gutterElement + .cm-gutterElement.cm-active), .cm-active + .cm-gutterElement + .cm-gutterElement) {
-  --distance: 2;
-
-  opacity: max(1 - var(--distance) * var(--near-fade-factor), var(--distant-opacity));
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement):is(:has(+ .cm-line + .cm-line + .cm-line.cm-active), .cm-active + .cm-line + .cm-line + .cm-line,
-:has(+ .cm-gutterElement + .cm-gutterElement + .cm-gutterElement.cm-active), .cm-active + .cm-gutterElement + .cm-gutterElement + .cm-gutterElement) {
-  --distance: 3;
-
-  opacity: max(1 - var(--distance) * var(--near-fade-factor), var(--distant-opacity));
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement).cm-active {
-  opacity: 1;
-}
-
-body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) :not(.mod-active) > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-embed-block, .cm-gutterElement) {
-  opacity: var(--distant-opacity);
-}
-
-body.ssopt-super-focused-mode .workspace-tabs:not(.mod-active) {
-  display: none;
-}
-
-body.ssopt-super-focused-mode .workspace-tab-header-container {
-  display: none;
-}
-
-/* Focused Mode and Super Focused Mode */
 
 /* ────────────────────────────────────────────────────────────────────────────────
 > ED90
@@ -27070,17 +26913,11 @@ body {
 
   /* hide Properties (full) in Reading Mode */
 
-  /* hide Properties (full) in Reading Mode */
-
   /* hide Properties name in Reading and Live Preview mode */
 }
 
 body:is(.ssopt-hide-metadata-container) {
   --metadata-display-reading: none;
-}
-
-body:is(.ssopt-hide-metadata-container-lp) {
-  --metadata-display-editing: none;
 }
 
 body:is(.ssopt-hide-properties-title) .metadata-properties-heading {
@@ -27134,10 +26971,6 @@ body:not(.ssopt-properties-aliases-original) .multi-select-pill-content {
   margin-inline-start: 0;
 }
 
-body:not(.ssopt-properties-aliases-original) .metadata-property-value .external-link.multi-select-pill-content {
-  padding-right: calc(1.125 * var(--font-text-size));
-}
-
 /* ────────────────────────────────────────────────────────────────────────────
 >> Y
 ──────────────────────────────────────────────────────────────────────────── */
@@ -27145,29 +26978,6 @@ body {
   --metadata-property-radius: var(--radius-s);
   --metadata-property-radius-focus: var(--radius-s);
   --metadata-property-radius-hover: var(--radius-s);
-}
-
-/* ────────────────────────────────────────────────────────────────────────────
->>  MOVE PROPERTIES TO THE FRONT
-──────────────────────────────────────────────────────────────────────────── */
-.ssopt-frontmatter-in-front .markdown-reading-view .markdown-preview-section .mod-header.mod-ui {
-  display: grid;
-}
-
-.ssopt-frontmatter-in-front .markdown-reading-view .metadata-container {
-  order: -1;
-}
-
-.ssopt-frontmatter-in-front:not(.ssopt-hide-metadata-container) .markdown-reading-view .inline-title {
-  margin-block-start: var(--inline-title-margin-bottom);
-}
-
-.ssopt-frontmatter-in-front-lp .markdown-source-view .metadata-container {
-  order: -1;
-}
-
-.ssopt-frontmatter-in-front-lp:not(.ssopt-hide-metadata-container-lp) .markdown-source-view .inline-title {
-  margin-block-start: var(--inline-title-margin-bottom);
 }
 
 /* Frontmatter, Properties and Metadata Container (New) */
@@ -28290,6 +28100,7 @@ span.cm-em.cm-highlight {
   color: var(--col-highlight-text);
   background-color: var(--col-highlight-1);
   font-style: normal;
+  background: none;
   box-decoration-break: clone;
 
   --col-highlight-col: var(--col-highlight-1);
@@ -28303,6 +28114,7 @@ span.cm-strong.cm-highlight {
   color: var(--col-highlight-text);
   background-color: var(--col-highlight-2);
   font-weight: normal;
+  background: none;
   box-decoration-break: clone;
 
   --col-highlight-col: var(--col-highlight-2);
@@ -28316,6 +28128,7 @@ span.cm-strong.cm-em.cm-highlight {
   color: var(--col-highlight-text);
   background-color: var(--col-highlight-3);
   font-weight: normal;
+  background: none;
   box-decoration-break: clone;
 
   --col-highlight-col: var(--col-highlight-3);
@@ -28602,11 +28415,6 @@ a:not(.tag),
   padding: var(--header-padding);
 
   --icon-size: var(--header-icon-size);
-}
-
-/* PDF dark mode invert manipulation */
-.theme-dark.ssopt-invert-pdf-dark .pdfViewer {
-  filter: invert(1) hue-rotate(180deg) brightness(1.1);
 }
 
 /* PDF Viewer */
@@ -31048,38 +30856,6 @@ body .canvas-menu, body .canvas-submenu, body .canvas-card-menu {
   stroke: none; /* remove weird extra shadow */
 }
 
-/* -----------------------------------------------------------------
-   Canvas Settings
------------------------------------------------------------------ */
-body {
-  --canvas-dot-size: 0.7;
-  --canvas-group-font-size: 1.5em;
-  --canvas-node-font-size: 1em;
-}
-
-.ssopt-canvas-hide-node-labels .canvas-node-label {
-  display: none;
-}
-
-.ssopt-canvas-hide-group-labels .canvas-group-label {
-  display: none;
-}
-
-.canvas-group-label {
-  font-size: var(--canvas-group-font-size);
-}
-
-.canvas-node-label {
-  font-size: var(--canvas-node-font-size);
-}
-
-.canvas-background > pattern > circle {
-  r: var(--canvas-dot-size);
-  cx: var(--canvas-dot-size);
-  cy: var(--canvas-dot-size);
-  fill: var(--canvas-dot-pattern);
-}
-
 /* Canvas */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -31557,11 +31333,7 @@ Style Settings only appear when the right options are being selected!
 
   /* 13. TABS STUFF */
 
-  /* 14. PROPERTIES/FRONTMATTER STUFF */
-
-  /* 15. ACTIVE LINE HIGHLIGHT STUFF */
-
-  /* 20. COLOURS STUFF */
+  /* 14. COLOURS STUFF */
 }
 
 body:is(.ssopt-typ-highlight-col-original) .setting-item.setting-item:where([data-id="col-highlight-0"], [data-id="col-highlight-1"], [data-id="col-highlight-2"], [data-id="col-highlight-3"]) {
@@ -31600,11 +31372,11 @@ body:is(.ssopt-status-bar-full) .setting-item.setting-item:where([data-id="statu
   display: none;
 }
 
-.setting-item.setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+.setting-item.setting-item:where([data-id="status-bar-full-justify-content"]) {
   display: none;
 }
 
-body:is(.ssopt-status-bar-full) .setting-item.setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+body:is(.ssopt-status-bar-full) .setting-item.setting-item:where([data-id="status-bar-full-justify-content"]) {
   display: grid;
 }
 
@@ -31749,18 +31521,6 @@ body:not(.PComm002-wp-singlelane) .setting-item.setting-item:where([data-id="PCo
 }
 
 body:is(.ssopt-tabs-square, .ssopt-tabs-underline, .ssopt-tabs-index-box, .ssopt-tabs-index-old) .setting-item.setting-item:where([data-id="ssopt-tabs-modern-borderless"]) {
-  display: none;
-}
-
-body:is(.ssopt-hide-metadata-container) .setting-item.setting-item:where([data-id="ssopt-frontmatter-in-front"]) {
-  display: none;
-}
-
-body:is(.ssopt-hide-metadata-container-lp) .setting-item.setting-item:where([data-id="ssopt-frontmatter-in-front-lp"]) {
-  display: none;
-}
-
-body:is(.ssopt-disable-alh) .setting-item.setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
   display: none;
 }
 
@@ -31934,11 +31694,7 @@ body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-sd-float-ribb
 
   /* 13. TABS STUFF */
 
-  /* 14. PROPERTIES/FRONTMATTER STUFF */
-
-  /* 15. ACTIVE LINE HIGHLIGHT STUFF */
-
-  /* 20. COLOURS STUFF */
+  /* 14. COLOURS STUFF */
 }
 
 body:is(.ssopt-typ-highlight-col-original) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-highlight-0"], [data-id="col-highlight-1"], [data-id="col-highlight-2"], [data-id="col-highlight-3"]) {
@@ -31977,11 +31733,11 @@ body:is(.ssopt-status-bar-full) .view-content .style-settings-container.style-se
   display: none;
 }
 
-.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-full-justify-content"]) {
   display: none;
 }
 
-body:is(.ssopt-status-bar-full) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+body:is(.ssopt-status-bar-full) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-full-justify-content"]) {
   display: grid;
 }
 
@@ -32126,18 +31882,6 @@ body:not(.PComm002-wp-singlelane) .view-content .style-settings-container.style-
 }
 
 body:is(.ssopt-tabs-square, .ssopt-tabs-underline, .ssopt-tabs-index-box, .ssopt-tabs-index-old) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tabs-modern-borderless"]) {
-  display: none;
-}
-
-body:is(.ssopt-hide-metadata-container) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-frontmatter-in-front"]) {
-  display: none;
-}
-
-body:is(.ssopt-hide-metadata-container-lp) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-frontmatter-in-front-lp"]) {
-  display: none;
-}
-
-body:is(.ssopt-disable-alh) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
   display: none;
 }
 
@@ -32510,7 +32254,7 @@ body.theme-dark .themed-color-wrapper > div.theme-light {
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
-PC000D-2 | Underline Customisations + TWO LINE DISPLAY
+PC000D-2 | Underline Customisations 
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* TEST for Grid for long name dropdowns */
@@ -32525,20 +32269,6 @@ PC000D-2 | Underline Customisations + TWO LINE DISPLAY
 }
 
 .style-settings-heading[data-id="typography-underlines"] + .style-settings-container .setting-item-control {
-  grid-area: btm;
-}
-
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] {
-  display: grid;
-  gap: var(--size-4-2);
-  grid-template-areas: "top top" "btm btm";
-}
-
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-info {
-  grid-area: top;
-}
-
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-control {
   grid-area: btm;
 }
 
@@ -32624,7 +32354,7 @@ PC000D-3 | Willemstad Theme Information Customisations
   font-size: var(--font-ui-smaller);
   color: var(--text-accent);
   font-weight: var(--font-normal);
-  white-space: pre-wrap;
+  white-space: pre;
   line-height: initial;
 }
 
@@ -32688,47 +32418,47 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   /* inject the selector and yield */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"]) {
   /* overrides whatever first child settings there is */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-control {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"]) .setting-item-control {
   display: none;
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"]) {
   overflow: auto;
   overflow-wrap: anywhere;
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"]) {
   padding: 0.75em; /* used to be 0.75em and 0 */
   background-color: var(--background-secondary);
   border-left: 1px solid var(--background-modifier-border);
   border-right: 1px solid var(--background-modifier-border);
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-description {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"]) .setting-item-description {
   color: var(--text-accent);
   text-align: justify;
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]):first-child {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"]):first-child {
   border-top: 1px solid var(--background-modifier-border);
   padding-top: var(--padding-ss);
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"]) {
   /* INFO ICON */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"]) {
   /* add icon? */
 
   /* add hover color change */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"])::after {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"])::after {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22lucide%20lucide-info-icon%20lucide-info%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M12%2016v-4%22/%3E%3Cpath%20d%3D%22M12%208h.01%22/%3E%3C/svg%3E");
@@ -32740,7 +32470,7 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   justify-self: right;
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"]):hover::after {
   filter: contrast(180%);
 }
 
@@ -32872,24 +32602,6 @@ Here, Style Settings coding to add Notes is done.
   background-color: var(--background-secondary);
   border-radius: var(--radius-s);
   content: "For Reading Mode only";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "For Live Preview only";
   font-weight: var(--font-normal);
   white-space: pre-wrap;
   max-width: 100%;
@@ -33453,24 +33165,6 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Experimental; \aRequires 'Style of Status Bar' set to 'Full'";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
 .setting-item[data-id="status-bar-full-justify-content"] .setting-item-description {
   position: relative;
 }
@@ -33628,78 +33322,6 @@ Here, Style Settings coding to add Notes is done.
   background-color: var(--background-secondary);
   border-radius: var(--radius-s);
   content: "This option is generally not recommended except for advanced users.";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Hide Properties in Reading Mode' disabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Hide Properties in Live Preview' disabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="col-base-bg-alh"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="col-base-bg-alh"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Disable Active Line Highlight' disabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="col-base-alpha-alh"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="col-base-alpha-alh"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Disable Active Line Highlight' disabled";
   font-weight: var(--font-normal);
   white-space: pre-wrap;
   max-width: 100%;
@@ -34151,7 +33773,7 @@ body:is(.ssopt-status-bar-glass):not(.no-blur) .setting-item[data-id="ssopt-stat
 .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::after {
   position: absolute;
   bottom: 3px;
-  left: 50%;
+  left: 75%;
   z-index: 1;
   display: flex;
   padding: var(--size-2-2);
@@ -34901,7 +34523,7 @@ body:is(.ssopt-acrs-enable) .setting-item[data-id="ssopt-acrs-enable"] .setting-
 /* --------------------------------------------------------------------------------
    [13] Rainbow Colours RealDisplay
 ----------------------------------------------------------------------------------- */
-.setting-item:is([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"], [data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"], [data-id="color-pax-l-accent-textfield"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"], [data-id="color-pax-d-accent-textfield"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"], [data-id="canvas-background"]) .setting-item-control::before {
+.setting-item:is([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"], [data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"], [data-id="color-pax-l-accent-textfield"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"], [data-id="color-pax-d-accent-textfield"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"]) .setting-item-control::before {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   padding: var(--size-2-3);
@@ -34998,109 +34620,6 @@ body:is(.ssopt-acrs-enable) .setting-item[data-id="ssopt-acrs-enable"] .setting-
   background-color: var(--color-pax-d-accent-2-textfield);
 }
 
-.setting-item[data-id="canvas-background"] .setting-item-control::before {
-  background-color: var(--canvas-background);
-}
-
-.setting-item:is([data-id="canvas-dot-pattern"]) .setting-item-control::before {
-  width: 30%;
-  height: var(--header-icon-size);
-  padding: var(--size-2-3);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-  content: "";
-  flex-shrink: 0;
-}
-
-.setting-item:is([data-id="canvas-dot-pattern"])[data-id="canvas-dot-pattern"] .setting-item-control::before {
-  background-image: radial-gradient(circle, var(--canvas-dot-pattern) calc(var(--canvas-dot-size) * 0.1rem), transparent calc(var(--canvas-dot-size) * 0.1rem));
-  background-size: 10px 10px;
-  background-color: var(--canvas-background);
-  background-position: center center;
-}
-
-.setting-item:is([data-id="col-base-bg-alh"]) {
-  /*
-  & .setting-item-control::before {
-      content: "Eyes here!";
-      white-space: pre;
-      height: var(--header-icon-size);
-      width: 30%;
-      padding: var(--size-2-3);
-      flex-shrink: 0;
-      box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-      background-color: var(--col-background-activeline);
-      align-items: center;
-      display: inline-flex;
-
-  }
-      */
-}
-
-.setting-item:is([data-id="col-base-bg-alh"]) .setting-item-control input {
-  background-color: var(--col-background-activeline);
-}
-
-.setting-item:is([data-id="col-base-bg-alh"]) .setting-item-control input:focus {
-  box-shadow: 10vw 0 0 0 var(--col-background-activeline), -10vw 0 0 0 var(--col-background-activeline);
-}
-
-/* --------------------------------------------------------------------------------
-   [14] Disable Custom File Extension Icons in File Explorer RealDisplay
------------------------------------------------------------------------------------ */
-.setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control {
-  position: relative;
-}
-
-.setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::before {
-  display: flex;
-  width: var(--sidebar-icon-size);
-  height: var(--sidebar-icon-size);
-  padding: var(--sidebar-icon-padding);
-  background-color: var(--background-modifier-hover);
-  border-radius: var(--radius-s);
-  content: "";
-  flex-shrink: 0;
-}
-
-.setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::after {
-  position: absolute;
-  left: var(--sidebar-icon-padding);
-  z-index: 2;
-  display: flex;
-  width: var(--sidebar-icon-size);
-  height: var(--sidebar-icon-size);
-  background-color: var(--nav-item-color);
-  content: "";
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::before {
-  display: grid;
-  padding: 0 var(--size-4-1);
-  font-size: 9px;
-  color: var(--nav-item-color);
-  border-radius: var(--radius-s);
-  content: "JPG";
-  font-weight: var(--font-semibold);
-  letter-spacing: 0.05em;
-  line-height: var(--line-height-normal);
-  margin-inline-start: auto;
-  text-transform: uppercase;
-  align-self: center;
-  place-content: center;
-}
-
-body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control:hover::before {
-  color: var(--nav-item-color-active);
-}
-
-body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::after {
-  mask-image: none;
-  background-color: transparent;
-}
-
 /* RealDisplay for SS */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -35108,7 +34627,7 @@ body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons
 \ Plugins > Community
 \ Style Settings
 \ High Level CSS Manipulations for Colours RealDisplay
-\ v3
+\ v2
 ───────────────────────────────────────────────────────────────────────────────────
 Style Settings allows you some new HTML divs.
 Which means CSS could do funny things with it.
@@ -35134,10 +34653,6 @@ The sky is the limit and we're testing it.
 ----------------------------------------------------------------- */
 
 /* 1. Helpers — one rule, one direction */
-
-/* ==================================================================
-   CORRECT & FINAL CONDITIONAL MIXINS
-   ================================================================== */
 
 /* -----------------------------------------------------------------
    3.  V1 WILLEMSTAD COLOUR-PANEL
@@ -35269,9 +34784,9 @@ body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-
 
   /* BASE — opposite previews */
 
-  /* ACCENT */
+  /* ACCENT — opposite previews */
 
-  /* RAINBOW */
+  /* RAINBOW — opposite previews */
 
   /* SELECTION */
 
@@ -35299,50 +34814,42 @@ body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-
   align-content: center;
 }
 
-.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-selection"].style-settings-heading[data-id="V3-willemstad-color-selection-settings-light"] .setting-item-control::before {
-  color: black;
-}
-
-.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-selection"].style-settings-heading[data-id="V3-willemstad-color-selection-settings-dark"] .setting-item-control::before {
-  color: white;
-}
-
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-light"] .setting-item-control::before {
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-dark"] .setting-item-control::before {
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-dark"] .setting-item-control::before {
   background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) 33.3333333333%, var(--color-accent-1) 33.3333333333%, var(--color-accent-1) 66.6666666667%, var(--color-accent-2) 66.6666666667%, var(--color-accent-2) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) 33.3333333333%, var(--color-accent-1) 33.3333333333%, var(--color-accent-1) 66.6666666667%, var(--color-accent-2) 66.6666666667%, var(--color-accent-2) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-red) 0%, var(--color-red) 12.5%, var(--color-orange) 12.5%, var(--color-orange) 25%, var(--color-yellow) 25%, var(--color-yellow) 37.5%, var(--color-green) 37.5%, var(--color-green) 50%, var(--color-cyan) 50%, var(--color-cyan) 62.5%, var(--color-blue) 62.5%, var(--color-blue) 75%, var(--color-purple) 75%, var(--color-purple) 87.5%, var(--color-pink) 87.5%, var(--color-pink) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-red) 0%, var(--color-red) 12.5%, var(--color-orange) 12.5%, var(--color-orange) 25%, var(--color-yellow) 25%, var(--color-yellow) 37.5%, var(--color-green) 37.5%, var(--color-green) 50%, var(--color-cyan) 50%, var(--color-cyan) 62.5%, var(--color-blue) 62.5%, var(--color-blue) 75%, var(--color-purple) 75%, var(--color-purple) 87.5%, var(--color-pink) 87.5%, var(--color-pink) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, var(--text-selection) 0%, var(--text-selection) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
   background: linear-gradient(to right, var(--text-selection) 0%, var(--text-selection) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
@@ -35357,88 +34864,34 @@ body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .styl
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body.theme-light.ssopt-custom-colour-template-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-tmp-d-accent, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)))) 0%, var(--color-tmp-d-accent, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)))) 33.3333333333%, var(--color-tmp-d-accent-1, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)))) 33.3333333333%, var(--color-tmp-d-accent-1, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)))) 66.6666666667%, var(--color-tmp-d-accent-2, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)))) 66.6666666667%, var(--color-tmp-d-accent-2, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)))) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body.theme-light.ssopt-custom-accent-colours-dark:not(.ssopt-custom-colour-template-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg))) 0%, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg))) 33.3333333333%, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg))) 33.3333333333%, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg))) 66.6666666667%, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg))) 66.6666666667%, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg))) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-light:not(.ssopt-custom-colour-template-dark, .ssopt-custom-accent-colours-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)) 0%, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)) 33.3333333333%, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)) 33.3333333333%, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)) 66.6666666667%, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)) 66.6666666667%, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-dark.ssopt-custom-colour-template-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-tmp-l-accent, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)))) 0%, var(--color-tmp-l-accent, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)))) 33.3333333333%, var(--color-tmp-l-accent-1, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)))) 33.3333333333%, var(--color-tmp-l-accent-1, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)))) 66.6666666667%, var(--color-tmp-l-accent-2, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)))) 66.6666666667%, var(--color-tmp-l-accent-2, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)))) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body.theme-dark.ssopt-custom-accent-colours-light:not(.ssopt-custom-colour-template-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg))) 0%, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg))) 33.3333333333%, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg))) 33.3333333333%, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg))) 66.6666666667%, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg))) 66.6666666667%, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg))) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-dark:not(.ssopt-custom-colour-template-light, .ssopt-custom-accent-colours-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)) 0%, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)) 33.3333333333%, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)) 33.3333333333%, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)) 66.6666666667%, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)) 66.6666666667%, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-light.ssopt-custom-colour-template-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-tmp-d-red, var(--color-pax-d-red, var(--color-set-d-red, #fb464c))) 0%, var(--color-tmp-d-red, var(--color-pax-d-red, var(--color-set-d-red, #fb464c))) 12.5%, var(--color-tmp-d-orange, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f))) 12.5%, var(--color-tmp-d-orange, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f))) 25%, var(--color-tmp-d-yellow, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71))) 25%, var(--color-tmp-d-yellow, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71))) 37.5%, var(--color-tmp-d-green, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e))) 37.5%, var(--color-tmp-d-green, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e))) 50%, var(--color-tmp-d-cyan, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd))) 50%, var(--color-tmp-d-cyan, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd))) 62.5%, var(--color-tmp-d-blue, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff))) 62.5%, var(--color-tmp-d-blue, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff))) 75%, var(--color-tmp-d-purple, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff))) 75%, var(--color-tmp-d-purple, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff))) 87.5%, var(--color-tmp-d-pink, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd))) 87.5%, var(--color-tmp-d-pink, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd))) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body.theme-light.ssopt-custom-rainbow-colours-dark:not(.ssopt-custom-colour-template-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-pax-d-red, var(--color-set-d-red, #fb464c)) 0%, var(--color-pax-d-red, var(--color-set-d-red, #fb464c)) 12.5%, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f)) 12.5%, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f)) 25%, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71)) 25%, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71)) 37.5%, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e)) 37.5%, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e)) 50%, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd)) 50%, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd)) 62.5%, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff)) 62.5%, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff)) 75%, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff)) 75%, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff)) 87.5%, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd)) 87.5%, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd)) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-light:not(.ssopt-custom-colour-template-dark, .ssopt-custom-rainbow-colours-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-set-d-red, #fb464c) 0%, var(--color-set-d-red, #fb464c) 12.5%, var(--color-set-d-orange, #e9973f) 12.5%, var(--color-set-d-orange, #e9973f) 25%, var(--color-set-d-yellow, #e0de71) 25%, var(--color-set-d-yellow, #e0de71) 37.5%, var(--color-set-d-green, #44cf6e) 37.5%, var(--color-set-d-green, #44cf6e) 50%, var(--color-set-d-cyan, #53dfdd) 50%, var(--color-set-d-cyan, #53dfdd) 62.5%, var(--color-set-d-blue, #027aff) 62.5%, var(--color-set-d-blue, #027aff) 75%, var(--color-set-d-purple, #a882ff) 75%, var(--color-set-d-purple, #a882ff) 87.5%, var(--color-set-d-pink, #fa99cd) 87.5%, var(--color-set-d-pink, #fa99cd) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-dark.ssopt-custom-colour-template-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, var(--color-tmp-l-red, var(--color-pax-l-red, var(--color-set-l-red, #e93147))) 0%, var(--color-tmp-l-red, var(--color-pax-l-red, var(--color-set-l-red, #e93147))) 12.5%, var(--color-tmp-l-orange, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500))) 12.5%, var(--color-tmp-l-orange, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500))) 25%, var(--color-tmp-l-yellow, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00))) 25%, var(--color-tmp-l-yellow, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00))) 37.5%, var(--color-tmp-l-green, var(--color-pax-l-green, var(--color-set-l-green, #08b94e))) 37.5%, var(--color-tmp-l-green, var(--color-pax-l-green, var(--color-set-l-green, #08b94e))) 50%, var(--color-tmp-l-cyan, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc))) 50%, var(--color-tmp-l-cyan, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc))) 62.5%, var(--color-tmp-l-blue, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd))) 62.5%, var(--color-tmp-l-blue, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd))) 75%, var(--color-tmp-l-purple, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee))) 75%, var(--color-tmp-l-purple, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee))) 87.5%, var(--color-tmp-l-pink, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984))) 87.5%, var(--color-tmp-l-pink, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984))) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body.theme-dark.ssopt-custom-rainbow-colours-light:not(.ssopt-custom-colour-template-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-pax-l-red, var(--color-set-l-red, #e93147)) 0%, var(--color-pax-l-red, var(--color-set-l-red, #e93147)) 12.5%, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500)) 12.5%, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500)) 25%, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00)) 25%, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00)) 37.5%, var(--color-pax-l-green, var(--color-set-l-green, #08b94e)) 37.5%, var(--color-pax-l-green, var(--color-set-l-green, #08b94e)) 50%, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc)) 50%, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc)) 62.5%, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd)) 62.5%, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd)) 75%, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee)) 75%, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee)) 87.5%, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984)) 87.5%, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984)) 100%);
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-tmp-d-selection, var(--color-pax-d-selection, var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg)))) 0%, var(--color-tmp-d-selection, var(--color-pax-d-selection, var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg)))) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body.theme-dark:not(.ssopt-custom-colour-template-light, .ssopt-custom-rainbow-colours-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--color-set-l-red, #e93147) 0%, var(--color-set-l-red, #e93147) 12.5%, var(--color-set-l-orange, #ec7500) 12.5%, var(--color-set-l-orange, #ec7500) 25%, var(--color-set-l-yellow, #e0ac00) 25%, var(--color-set-l-yellow, #e0ac00) 37.5%, var(--color-set-l-green, #08b94e) 37.5%, var(--color-set-l-green, #08b94e) 50%, var(--color-set-l-cyan, #00bfbc) 50%, var(--color-set-l-cyan, #00bfbc) 62.5%, var(--color-set-l-blue, #086ddd) 62.5%, var(--color-set-l-blue, #086ddd) 75%, var(--color-set-l-purple, #7852ee) 75%, var(--color-set-l-purple, #7852ee) 87.5%, var(--color-set-l-pink, #d53984) 87.5%, var(--color-set-l-pink, #d53984) 100%);
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-tmp-l-selection, var(--color-pax-l-selection, var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg)))) 0%, var(--color-tmp-l-selection, var(--color-pax-l-selection, var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg)))) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-light.ssopt-custom-colour-template-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
-  background: var(--color-tmp-d-selection, var(--color-pax-d-selection, var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg))));
-}
-
-body.theme-light.ssopt-custom-selection-colours-dark:not(.ssopt-custom-colour-template-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
-  background: var(--color-pax-d-selection, var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg)));
-}
-
-body.theme-light:not(.ssopt-custom-colour-template-dark, .ssopt-custom-selection-colours-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
-  background: var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg));
-}
-
-body.theme-dark.ssopt-custom-colour-template-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
-  background: var(--color-tmp-l-selection, var(--color-pax-l-selection, var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg))));
-}
-
-body.theme-dark.ssopt-custom-selection-colours-light:not(.ssopt-custom-colour-template-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
-  background: var(--color-pax-l-selection, var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg)));
-}
-
-body.theme-dark:not(.ssopt-custom-colour-template-light, .ssopt-custom-selection-colours-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
-  background: var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg));
 }
 
 .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container .style-settings-heading + .style-settings-container > .setting-item {
@@ -36117,7 +35570,6 @@ CSS-ing the Credits section
   grid-template-columns: 1fr auto;
   align-items: center;
   justify-content: center;
-  column-gap: 2%;
 }
 
 .setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) .setting-item-description {
@@ -36134,85 +35586,6 @@ CSS-ing the Credits section
 }
 
 /* Icons Elsewhere (usually Documentations) */
-
-/* ────────────────────────────────────────────────────────────────────────────────
-> PC000L2
-\ Plugins > Community
-\ Style Settings
-\ Icons Info
-───────────────────────────────────────────────────────────────────────────────────
-CSS-ing the Credits section
-──────────────────────────────────────────────────────────────────────────────── */
-.setting-item {
-  /* build a comma-separated list of [data-id="…"] */
-
-  /* inject the selector and yield */
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"]) {
-  position: relative;
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"])::after {
-  margin-left: calc(var(--sidebar-icon-size) + 2 * var(--header-padding) - var(--header-icon-size));
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"]) a.external-link:not([href*="github.com"]) {
-  position: absolute;
-  right: calc(0.5 * var(--font-ui-medium));
-  bottom: calc(0.5 * var(--font-ui-medium));
-  display: flex;
-  width: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
-  height: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
-  font-size: 0;
-  background-image: none;
-  padding-inline-end: 0;
-  align-self: start;
-  margin-left: 5px;
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"]) a.external-link:not([href*="github.com"])::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: var(--sidebar-icon-size);
-  height: var(--sidebar-icon-size);
-  margin: var(--header-padding);
-  background-color: var(--icon-color);
-  content: " ";
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"]) a.external-link:not([href*="github.com"]):where([href*="obsidian.md"])::after {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='none' stroke='currentColor' stroke-width='32' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M172.7 461.6c73.6-149.1 2.1-217-43.7-246.9m72 96.7c71.6-17.3 141-16.3 189.8 88.5m-114-96.3c-69.6-174 44.6-181 16.3-273.6m97.7 370c1.6-3 3.3-5.8 5.1-8.6 20-29.9 34.2-53.2 41.4-65.3a16 16 0 0 0-1.2-17.7 342.1 342.1 0 0 1-40.2-66.1c-10.9-26-12.5-66.5-12.6-86.2 0-7.4-2.4-14.7-7-20.6l-81.8-104a32 32 0 0 0-1.4-1.5m97.7 370a172.8 172.8 0 0 0-18 59c-2.9 21.5-24 38.4-45 32.6-30-8.3-64.5-21.1-95.7-23.5l-47.8-3.6c-7.7-.6-15-4-20.3-9.5l-82.3-84.8c-9-9.2-11.4-23-6.2-34.8 0 0 51-111.8 52.8-117.7l.7-3M293.1 30a31.5 31.5 0 0 0-44.4-2.3l-97.4 87.5c-5.4 5-9 11.5-10 18.8-3.7 24.5-9.7 68-12.3 80.7'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"]) a.external-link:not([href*="github.com"])::before {
-  right: 0.5em;
-  bottom: 0.5em;
-  display: block;
-  width: var(--sidebar-icon-size);
-  height: var(--sidebar-icon-size);
-  padding: var(--header-padding);
-  font-size: var(--font-ui-medium);
-  background-color: var(--background-primary-alt);
-  border-radius: var(--radius-s);
-  transition: background-color 0.2s ease-in-out;
-  content: " ";
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"]) a.external-link:not([href*="github.com"]):hover::after {
-  background-color: var(--icon-color-hover);
-}
-
-.setting-item:is([data-id="info-immersive-editing-modes"]) a.external-link:not([href*="github.com"]):hover::before {
-  background-color: var(--background-secondary-alt);
-}
-
-/* Icons for Informations */
 .setting-item:where([data-id="cssc-latex-settings"], [data-id="cssc-cornell-settings"]) .setting-item-name::before {
   padding: 0 8px 0 4px; /* follows their own paddings */
   font-family: Manrope;
@@ -37475,44 +36848,798 @@ body:is(.ssopt-overflow-hack) div.suggestion-item > :is(span.suggestion-prefix, 
   justify-content: right; /* forces it rightward */
 }
 
-/* X101-11 | Indentation Line Fixes */
-body {
-  --checkbox-margin-inline-end: 0.25em;
+/* X101-11 | Make theme-dark come out with theme-dark styling */
+.markdown-preview-view.markdown-rendered.theme-dark, .markdown-preview-view.markdown-rendered.theme-light {
+  background-color: var(--background-primary);
+}
+
+.markdown-preview-view.markdown-rendered.theme-dark, .markdown-preview-view.markdown-rendered.theme-light {
+  /* Animations */
+  --anim-duration-none: 0;
+  --anim-duration-superfast: 70ms;
+  --anim-duration-fast: 140ms;
+  --anim-duration-moderate: 300ms;
+  --anim-duration-slow: 560ms;
+  --anim-motion-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  --anim-motion-delay: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --anim-motion-jumpy: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --anim-motion-swing: cubic-bezier(0, 0.55, 0.45, 1);
+
+  /* Bases */
+  --bases-header-border-width: 0 0 1px 0;
+  --bases-header-height: 40px;
+  --bases-header-padding-start: 2px;
+  --bases-header-padding-end: 2px;
+  --bases-embed-border: 1px solid var(--background-modifier-border);
+  --bases-embed-border-radius: var(--radius-s);
+  --bases-table-row-height: 30px;
+  --bases-table-white-space: nowrap;
+  --bases-table-container-border-width: 1px;
+  --bases-table-container-border-radius: var(--radius-s);
+  --bases-table-header-weight: var(--font-weight);
+  --bases-table-header-color: var(--text-muted);
+  --bases-table-header-background: var(--background-primary);
+  --bases-table-header-background-hover: var(--background-modifier-hover);
+  --bases-table-header-sort-mask: linear-gradient(to left, transparent var(--size-4-6), black var(--size-4-6));
+  --bases-table-border-color: var(--table-border-color);
+  --bases-table-column-border-width: 1px;
+  --bases-table-row-border-width: 1px;
+  --bases-table-text-size: var(--font-smaller);
+  --bases-table-column-max-width: 300;
+  --bases-table-column-min-width: 40;
+  --bases-table-cell-background-active: var(--background-modifier-hover);
+  --bases-table-cell-background-disabled: var(--background-modifier-cover);
+
+  /* Blockquotes */
+  --blockquote-border-thickness: 2px;
+  --blockquote-border-color: var(--interactive-accent);
+  --blockquote-font-style: normal;
+  --blockquote-color: inherit;
+  --blockquote-background-color: transparent;
+
+  /* Bold */
+  --bold-modifier: 200;
+  --bold-color: inherit;
+  --bold-weight: calc(var(--font-weight) + var(--bold-modifier));
+
+  /* Borders */
+  --border-width: 1px;
+
+  /* Buttons */
+  --button-radius: var(--input-radius);
+
+  /* Callouts */
+  --callout-border-width: 0px;
+  --callout-border-opacity: 0.25;
+  --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
+  --callout-radius: var(--radius-s);
+  --callout-blend-mode: var(--highlight-mix-blend-mode);
+  --callout-title-color: inherit;
+  --callout-title-padding: 0;
+  --callout-title-size: inherit;
+  --callout-title-weight: calc(var(--font-weight) + var(--bold-modifier));
+  --callout-content-padding: 0;
+  --callout-content-background: transparent;
+  --callout-bug: var(--color-red-rgb);
+  --callout-default: var(--color-blue-rgb);
+  --callout-error: var(--color-red-rgb);
+  --callout-example: var(--color-purple-rgb);
+  --callout-fail: var(--color-red-rgb);
+  --callout-important: var(--color-cyan-rgb);
+  --callout-info: var(--color-blue-rgb);
+  --callout-question: var(--color-orange-rgb);
+  --callout-success: var(--color-green-rgb);
+  --callout-summary: var(--color-cyan-rgb);
+  --callout-tip: var(--color-cyan-rgb);
+  --callout-todo: var(--color-blue-rgb);
+  --callout-warning: var(--color-orange-rgb);
+  --callout-quote: 158, 158, 158;
+
+  /* Canvas */
+  --canvas-background: var(--background-primary);
+  --canvas-card-label-color: var(--text-faint);
+  --canvas-color-1: var(--color-red-rgb);
+  --canvas-color-2: var(--color-orange-rgb);
+  --canvas-color-3: var(--color-yellow-rgb);
+  --canvas-color-4: var(--color-green-rgb);
+  --canvas-color-5: var(--color-cyan-rgb);
+  --canvas-color-6: var(--color-purple-rgb);
+  --canvas-dot-pattern: var(--color-base-30);
+
+  /* Caret (text entry cursor) */
+  --caret-color: var(--text-normal);
+
+  /* Checkboxes */
+  --checkbox-radius: var(--radius-s);
+  --checkbox-size: var(--font-text-size);
+  --checkbox-marker-color: var(--background-primary);
+  --checkbox-color: var(--interactive-accent);
+  --checkbox-color-hover: var(--interactive-accent-hover);
+  --checkbox-border-color: var(--text-faint);
+  --checkbox-border-color-hover: var(--text-muted);
   --checkbox-margin-inline-start: 0.85em;
-  --indentation-guide-editing-indent: 1em;
-}
+  --checklist-done-decoration: line-through;
+  --checklist-done-color: var(--text-muted);
 
-.task-list-item-checkbox {
-  font-size: var(--sidebar-markdown-font-size);
-}
+  /* Code */
+  --code-white-space: pre-wrap;
+  --code-border-width: 0px;
+  --code-border-color: var(--background-modifier-border);
+  --code-radius: var(--radius-s);
+  --code-size: var(--font-smaller);
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--text-normal);
+  --code-comment: var(--text-faint);
+  --code-function: var(--color-yellow);
+  --code-important: var(--color-orange);
+  --code-keyword: var(--color-pink);
+  --code-operator: var(--color-red);
+  --code-property: var(--color-cyan);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-green);
+  --code-tag: var(--color-red);
+  --code-value: var(--color-purple);
 
-.markdown-rendered.show-indentation-guide li.task-list-item > ul::before {
-  inset-inline-start: -1em;
-}
+  /* Collapse icons */
+  --collapse-icon-color: var(--text-faint);
+  --collapse-icon-color-collapsed: var(--text-accent);
 
-.markdown-rendered.show-indentation-guide li > ul::before,
-.markdown-rendered.show-indentation-guide li > ol::before {
-  inset-inline-start: calc(var(--indentation-guide-reading-indent) + 1px);
-}
+  /* Cursor */
+  --cursor: default;
+  --cursor-link: pointer;
 
-/* X101-12 | Purely for Mac */
-.mod-macos {
-  --size-scrollbar-non-native: 0px;
-  --frame-left-space: calc(4.5vw);
-  --titlebar-height: 40px;
-}
+  /* Dialogs - e.g. small modals, confirmations */
+  --dialog-width: 560px;
+  --dialog-max-width: 80vw;
+  --dialog-max-height: 85vh;
 
-.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-  padding-left: var(--frame-left-space);
-}
+  /* Dividers — between panes */
+  --divider-color: var(--background-modifier-border);
+  --divider-color-hover: var(--interactive-accent);
+  --divider-width: 1px;
+  --divider-width-hover: 3px;
+  --divider-vertical-height: calc(100% - var(--header-height));
 
-.mod-macos .sidebar-toggle-button.mod-left {
-  margin: var(--header-margin) var(--header-margin-half);
-}
+  /* Dragging */
+  --drag-ghost-background: rgb(0 0 0 / 85%);
+  --drag-ghost-text-color: #fff;
 
-/* X101-13 | Hide Tooltip */
-body.ssopt-hide-tooltips .tooltip {
-  display: none;
+  /* Dropdowns */
+  --dropdown-background: var(--interactive-normal);
+  --dropdown-background-blend-mode: hard-light;
+  --dropdown-background-hover: var(--interactive-hover);
+  --dropdown-background-position: right 0.5em top 50%, 0 0;
+  --dropdown-background-size: 1em auto, 100%;
+  --dropdown-padding: 0 1.9em 0 0.8em;
+
+  /* Embeds */
+  --embed-max-height: 4000px;
+  --embed-canvas-max-height: 400px;
+  --embed-background: inherit;
+  --embed-border-start: 2px solid var(--interactive-accent);
+  --embed-border-end: none;
+  --embed-border-top: none;
+  --embed-border-bottom: none;
+  --embed-padding: 0 0 0 var(--size-4-6);
+  --embed-font-style: inherit;
+
+  /* Blocks */
+  --embed-block-shadow-hover: 0 0 0 1px var(--background-modifier-border), inset 0 0 0 1px var(--background-modifier-border);
+
+  /* File layout */
+  --file-line-width: 700px;
+  --file-folding-offset: 24px;
+  --file-margins: var(--size-4-8);
+  --file-header-font: var(--font-interface);
+  --file-header-font-size: var(--font-ui-small);
+  --file-header-font-weight: 400;
+  --file-header-border: var(--border-width) solid transparent;
+  --file-header-justify: center;
+
+  /* Relative font sizes */
+  --font-smallest: 0.8em;
+  --font-smaller: 0.875em;
+  --font-small: 0.933em;
+
+  /* Flair */
+  --flair-background: var(--interactive-normal);
+  --flair-color: var(--text-normal);
+
+  /* UI font sizes */
+  --font-ui-smaller: 12px;
+  --font-ui-small: 13px;
+  --font-ui-medium: 15px;
+  --font-ui-large: 20px;
+
+  /* Font weights */
+  --font-weight: var(--font-normal);
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  /* Footnotes */
+  --footnote-divider-color-active: var(--metadata-divider-color-focus);
+  --footnote-divider-color: var(--metadata-divider-color);
+  --footnote-divider-width: 1px;
+  --footnote-gap: var(--size-4-1);
+  --footnote-id-color-no-occurrences: var(--text-faint);
+  --footnote-id-color: var(--text-muted);
+  --footnote-id-delimiter: ".";
+  --footnote-input-background-active: var(--metadata-input-background-active);
+  --footnote-input-background: var(--metadata-input-background);
+  --footnote-line-height: var(--line-height-normal);
+  --footnote-padding-block: var(--size-2-3);
+  --footnote-padding-inline: var(--size-2-3);
+  --footnote-radius: var(--radius-s);
+  --footnote-size: var(--font-smaller);
+
+  /* Graphs */
+  --graph-controls-width: 240px;
+  --graph-text: var(--text-normal);
+  --graph-line: var(--color-base-35, var(--background-modifier-border-focus));
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--color-green);
+  --graph-node-attachment: var(--color-yellow);
+
+  /* Headings */
+  --heading-formatting: var(--text-faint);
+  --heading-spacing: calc(var(--p-spacing) * 2.5);
+  --h1-color: inherit;
+  --h2-color: inherit;
+  --h3-color: inherit;
+  --h4-color: inherit;
+  --h5-color: inherit;
+  --h6-color: inherit;
+  --h1-font: inherit;
+  --h2-font: inherit;
+  --h3-font: inherit;
+  --h4-font: inherit;
+  --h5-font: inherit;
+  --h6-font: inherit;
+  --h1-line-height: 1.2;
+  --h2-line-height: 1.2;
+  --h3-line-height: 1.3;
+  --h4-line-height: 1.4;
+  --h5-line-height: var(--line-height-normal);
+  --h6-line-height: var(--line-height-normal);
+  --h1-size: 1.802em;
+  --h2-size: 1.602em;
+  --h3-size: 1.424em;
+  --h4-size: 1.266em;
+  --h5-size: 1.125em;
+  --h6-size: 1em;
+  --h1-style: normal;
+  --h2-style: normal;
+  --h3-style: normal;
+  --h4-style: normal;
+  --h5-style: normal;
+  --h6-style: normal;
+  --h1-variant: normal;
+  --h2-variant: normal;
+  --h3-variant: normal;
+  --h4-variant: normal;
+  --h5-variant: normal;
+  --h6-variant: normal;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+
+  /* View header */
+  --header-height: 40px;
+
+  /* Horizontal rules */
+  --hr-color: var(--background-modifier-border);
+  --hr-thickness: 2px;
+
+  /* Icons */
+  --icon-size: var(--icon-m);
+  --icon-stroke: var(--icon-m-stroke-width);
+  --icon-xs: 14px;
+  --icon-s: 16px;
+  --icon-m: 18px;
+  --icon-l: 18px;
+  --icon-xl: 32px;
+  --icon-xs-stroke-width: 2px;
+  --icon-s-stroke-width: 2px;
+  --icon-m-stroke-width: 1.75px;
+  --icon-l-stroke-width: 1.75px;
+  --icon-xl-stroke-width: 1.25px;
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-muted);
+  --icon-color-active: var(--text-accent);
+  --icon-color-focused: var(--text-normal);
+  --icon-opacity: 0.85;
+  --icon-opacity-hover: 1;
+  --icon-opacity-active: 1;
+  --clickable-icon-radius: var(--radius-s);
+
+  /* Indent size */
+  --indent-size: 4;
+  --indent-unit: 0.5625em;
+
+  /* Indentation guide */
+  --indentation-guide-width: 1px;
+  --indentation-guide-width-active: 1px;
+  --indentation-guide-color: rgb(var(--mono-rgb-100), 0.12);
+  --indentation-guide-color-active: rgb(var(--mono-rgb-100), 0.3);
+  --indentation-guide-editing-indent: 0.85em;
+  --indentation-guide-reading-indent: -0.85em;
+  --indentation-guide-source-indent: 0.25em;
+
+  /* Inline title */
+  --inline-title-color: var(--h1-color);
+  --inline-title-font: var(--h1-font);
+  --inline-title-line-height: var(--h1-line-height);
+  --inline-title-size: var(--h1-size);
+  --inline-title-style: var(--h1-style);
+  --inline-title-variant: var(--h1-variant);
+  --inline-title-weight: var(--h1-weight);
+  --inline-title-margin-bottom: 0.5em;
+
+  /* Inputs */
+  --input-height: 30px;
+  --input-radius: 5px;
+  --input-font-weight: var(--font-normal);
+  --input-border-width: 1px;
+  --input-placeholder-color: var(--text-faint);
+  --input-date-separator: var(--text-faint);
+
+  /* Italic */
+  --italic-color: inherit;
+  --italic-weight: inherit;
+
+  /* Z-index */
+  --layer-cover: 5;
+  --layer-sidedock: 10;
+  --layer-status-bar: 15;
+  --layer-popover: 30;
+  --layer-slides: 45;
+  --layer-modal: 50;
+  --layer-notice: 60;
+  --layer-menu: 65;
+  --layer-tooltip: 70;
+  --layer-dragged-item: 80;
+
+  /* Line heights */
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.3;
+
+  /* Links */
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
+  --link-decoration-thickness: auto;
+  --link-weight: var(--font-weight);
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent-hover);
+  --link-external-decoration: underline;
+  --link-external-decoration-hover: underline;
+  --link-external-filter: none;
+  --link-unresolved-color: var(--text-accent);
+  --link-unresolved-opacity: 0.7;
+  --link-unresolved-filter: none;
+  --link-unresolved-decoration-style: solid;
+  --link-unresolved-decoration-color: hsl(var(--interactive-accent-hsl), 0.3);
+
+  /* Lists */
+  --list-indent: calc(var(--indent-unit) * var(--indent-size));
+  --list-indent-editing: 0.75em;
+  --list-indent-source: 0;
+  --list-spacing: 0.075em;
+  --list-marker-color: var(--text-faint);
+  --list-marker-color-hover: var(--text-muted);
+  --list-marker-color-collapsed: var(--text-accent);
+  --list-bullet-border: none;
+  --list-bullet-radius: 50%;
+  --list-bullet-size: 0.3em;
+  --list-bullet-transform: none;
+  --list-numbered-style: decimal;
+  --list-bullet-end-padding: 1.3rem;
+
+  /* File navigator */
+  --nav-item-size: var(--font-ui-small);
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-hover: var(--text-normal);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-color-selected: var(--text-normal);
+  --nav-item-color-highlighted: var(--text-accent);
+  --nav-item-background-hover: var(--background-modifier-hover);
+  --nav-item-background-active: var(--background-modifier-hover);
+  --nav-item-background-selected: hsl(var(--color-accent-hsl), 0.15);
+  --nav-item-padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) var(--size-4-6);
+  --nav-item-parent-padding: var(--nav-item-padding);
+  --nav-item-children-padding-start: var(--size-2-2);
+  --nav-item-children-margin-start: var(--size-4-3);
+  --nav-item-weight: inherit;
+  --nav-item-weight-hover: inherit;
+  --nav-item-weight-active: inherit;
+  --nav-item-white-space: pre;
+  --nav-indentation-guide-width: var(--indentation-guide-width);
+  --nav-indentation-guide-color: var(--indentation-guide-color);
+  --nav-collapse-icon-color: var(--collapse-icon-color);
+  --nav-collapse-icon-color-collapsed: var(--text-faint);
+  --nav-heading-color: var(--text-normal);
+  --nav-heading-color-hover: var(--text-normal);
+  --nav-heading-color-collapsed: var(--text-faint);
+  --nav-heading-color-collapsed-hover: var(--text-muted);
+  --nav-heading-weight: var(--font-medium);
+  --nav-heading-weight-hover: var(--font-medium);
+
+  /* Menus */
+  --menu-padding: var(--size-2-3);
+  --menu-shadow: var(--shadow-s);
+  --menu-radius: var(--radius-m);
+  --menu-background: var(--background-secondary);
+  --menu-border-color: var(--background-modifier-border-hover);
+  --menu-border-width: 1px;
+  --menu-backdrop-filter: none;
+
+  /* Metadata */
+  --metadata-background: transparent;
+  --metadata-display-reading: block;
+  --metadata-display-editing: block;
+  --metadata-max-width: none;
+  --metadata-padding: var(--size-4-2) 0;
+  --metadata-border-color: var(--background-modifier-border);
+  --metadata-border-radius: 0;
+  --metadata-border-width: 0;
+  --metadata-divider-color: var(--background-modifier-border);
+  --metadata-divider-color-hover: transparent;
+  --metadata-divider-color-focus: transparent;
+  --metadata-divider-width: 0;
+  --metadata-gap: 3px;
+  --metadata-property-padding: 0;
+  --metadata-property-radius: 6px;
+  --metadata-property-radius-hover: 6px;
+  --metadata-property-radius-focus: 6px;
+  --metadata-property-background: transparent;
+  --metadata-property-background-hover: transparent;
+  --metadata-property-background-active: var(--background-modifier-hover);
+  --metadata-property-box-shadow-hover: 0 0 0 1px var(--background-modifier-border-hover);
+  --metadata-property-box-shadow-focus: 0 0 0 2px var(--background-modifier-border-focus);
+  --metadata-label-background: transparent;
+  --metadata-label-background-hover: transparent;
+  --metadata-label-background-active: var(--background-modifier-hover);
+  --metadata-label-font: var(--font-interface);
+  --metadata-label-font-size: var(--font-smaller);
+  --metadata-label-font-weight: inherit;
+  --metadata-label-text-color: var(--text-muted);
+  --metadata-label-text-color-hover: var(--text-muted);
+  --metadata-label-width: 9em;
+  --metadata-input-height: calc(var(--font-text-size) * 1.75);
+  --metadata-input-text-color: var(--text-normal);
+  --metadata-input-font: var(--font-interface);
+  --metadata-input-font-size: var(--font-smaller);
+  --metadata-input-background: transparent;
+  --metadata-input-background-hover: transparent;
+  --metadata-input-background-active: var(--background-modifier-hover);
+  --metadata-input-longtext-lines: 3;
+  --metadata-sidebar-label-font-size: var(--font-ui-small);
+  --metadata-sidebar-input-font-size: var(--font-ui-small);
+
+  /* Modals - e.g. settings, community themes, community plugins */
+  --modal-background: var(--background-primary);
+  --modal-width: 90vw;
+  --modal-height: 85vh;
+  --modal-max-width: 1100px;
+  --modal-max-height: 1000px;
+  --modal-max-width-narrow: 800px;
+  --modal-border-width: var(--border-width);
+  --modal-border-color: var(--color-base-40, var(--background-modifier-border-focus));
+  --modal-radius: var(--radius-l);
+  --modal-community-sidebar-width: 280px;
+
+  /* Multi-select pills */
+  --pill-color: var(--text-muted);
+  --pill-color-hover: var(--text-normal);
+  --pill-color-remove: var(--text-faint);
+  --pill-color-remove-hover: var(--text-accent);
+  --pill-decoration: none;
+  --pill-decoration-hover: none;
+  --pill-background: transparent;
+  --pill-background-hover: transparent;
+  --pill-border-color: var(--background-modifier-border);
+  --pill-border-color-hover: var(--background-modifier-border-hover);
+  --pill-border-width: var(--border-width);
+  --pill-padding-x: 0.65em;
+  --pill-padding-y: 0.25em;
+  --pill-radius: 2em;
+  --pill-weight: inherit;
+
+  /* Paragraphs */
+  --p-spacing: 1rem;
+  --p-spacing-empty: 0rem;
+
+  /* PDF view */
+  --pdf-background: var(--background-primary);
+  --pdf-page-background: var(--background-primary);
+  --pdf-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 2px 8px rgb(0 0 0 / 10%);
+  --pdf-spread-shadow: 0 0 0 1px rgb(0 0 0 / 5%);
+  --pdf-sidebar-background: var(--background-primary);
+  --pdf-thumbnail-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 2px 8px rgb(0 0 0 / 20%);
+
+  /* Popovers - file previews */
+  --popover-width: 450px;
+  --popover-height: 400px;
+  --popover-max-height: 95vh;
+  --popover-pdf-width: 450px;
+  --popover-pdf-height: 400px;
+  --popover-font-size: var(--font-text-size);
+
+  /* Prompts - e.g. quick switcher, command palette */
+  --prompt-input-height: 40px;
+  --prompt-width: 700px;
+  --prompt-max-width: 80vw;
+  --prompt-max-height: 70vh;
+  --prompt-border-width: var(--border-width);
+  --prompt-border-color: var(--color-base-40, var(--background-modifier-border-focus));
+
+  /* Radiuses */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-xl: 16px;
+
+  /* Ribbon */
+  --ribbon-background: var(--background-secondary);
+  --ribbon-background-collapsed: var(--background-primary);
+  --ribbon-width: 44px;
+  --ribbon-padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
+
+  /* Scrollbars */
+  --scrollbar-active-thumb-bg: rgb(var(--mono-rgb-100), 0.2);
+  --scrollbar-bg: rgb(var(--mono-rgb-100), 0.05);
+  --scrollbar-thumb-bg: rgb(var(--mono-rgb-100), 0.1);
+
+  /* Search */
+  --search-clear-button-color: var(--text-muted);
+  --search-clear-button-size: 13px;
+  --search-icon-color: var(--text-muted);
+  --search-icon-size: 18px;
+  --search-result-background: var(--background-primary);
+
+  /* Layout sizing - for padding and margins */
+  --size-2-1: 2px;
+  --size-2-2: 4px;
+  --size-2-3: 6px;
+  --size-4-1: 4px;
+  --size-4-2: 8px;
+  --size-4-3: 12px;
+  --size-4-4: 16px;
+  --size-4-5: 20px;
+  --size-4-6: 24px;
+  --size-4-8: 32px;
+  --size-4-9: 36px;
+  --size-4-10: 40px;
+  --size-4-12: 48px;
+  --size-4-16: 64px;
+  --size-4-18: 72px;
+
+  /* Sidebar */
+  --sidebar-markdown-font-size: calc(var(--font-text-size) * 0.9);
+  --sidebar-tab-text-display: none;
+
+  /* Sliders */
+  --slider-thumb-border-width: 1px;
+  --slider-thumb-border-color: var(--background-modifier-border-hover);
+  --slider-thumb-height: 18px;
+  --slider-thumb-width: 18px;
+  --slider-thumb-y: -6px;
+  --slider-thumb-radius: 50%;
+  --slider-s-thumb-size: 15px;
+  --slider-s-thumb-position: -5px;
+  --slider-track-background: var(--background-modifier-border);
+  --slider-track-height: 3px;
+
+  /* Status bar */
+  --status-bar-background: var(--background-secondary);
+  --status-bar-border-color: var(--divider-color);
+  --status-bar-border-width: 1px 0 0 1px;
+  --status-bar-font-size: var(--font-ui-smaller);
+  --status-bar-text-color: var(--text-muted);
+  --status-bar-position: fixed;
+  --status-bar-radius: var(--radius-m) 0 0 0;
+
+  /* Sync */
+  --sync-avatar-color-current-user: transparent;
+  --sync-avatar-color-1: var(--color-red);
+  --sync-avatar-color-2: var(--color-orange);
+  --sync-avatar-color-3: var(--color-yellow);
+  --sync-avatar-color-4: var(--color-green);
+  --sync-avatar-color-5: var(--color-cyan);
+  --sync-avatar-color-6: var(--color-blue);
+  --sync-avatar-color-7: var(--color-purple);
+  --sync-avatar-color-8: var(--color-pink);
+
+  /* Swatch for color inputs */
+  --swatch-radius: 14px;
+  --swatch-height: 24px;
+  --swatch-width: 24px;
+  --swatch-shadow: inset 0 0 0 1px rgb(var(--mono-rgb-100), 0.15);
+
+  /* Tabs */
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-muted);
+  --tab-text-color-focused-highlighted: var(--text-accent);
+  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-font-size: var(--font-ui-small);
+  --tab-font-weight: inherit;
+  --tab-container-background: var(--background-secondary);
+  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-outline-color: var(--divider-color);
+  --tab-outline-width: 1px;
+  --tab-curve: 6px;
+  --tab-radius: var(--radius-s);
+  --tab-radius-active: 6px 6px 0 0;
+  --tab-width: 200px;
+  --tab-max-width: 320px;
+
+  /* Mobile tab switcher */
+  --tab-switcher-menubar-background: var(--mobile-sidebar-background);
+  --tab-switcher-background: var(--background-secondary);
+  --tab-switcher-preview-radius: var(--radius-xl);
+  --tab-switcher-preview-background-shadow: 0 4px 30px 2px rgb(0 0 0 / 20%);
+  --tab-switcher-preview-shadow: 0 0 0 1px rgb(var(--mono-rgb-100), 0.05);
+  --tab-switcher-preview-shadow-active: 0 0 0 2px var(--color-accent);
+
+  /* Stacked tabs */
+  --tab-stacked-pane-width: 700px;
+  --tab-stacked-header-width: var(--header-height);
+  --tab-stacked-font-size: var(--font-ui-small);
+  --tab-stacked-font-weight: 400;
+  --tab-stacked-text-align: start;
+  --tab-stacked-text-transform: rotate(0deg);
+  --tab-stacked-text-writing-mode: vertical-lr;
+  --tab-stacked-shadow: -8px 0 8px 0 rgb(0 0 0 / 5%);
+
+  /* Tables */
+  --table-background: transparent;
+  --table-border-width: 1px;
+  --table-border-color: var(--background-modifier-border);
+  --table-white-space: break-spaces;
+  --table-header-background: var(--table-background);
+  --table-header-background-hover: inherit;
+  --table-header-border-width: var(--table-border-width);
+  --table-header-border-color: var(--table-border-color);
+  --table-header-font: inherit;
+  --table-header-size: var(--table-text-size);
+  --table-header-weight: calc(var(--font-weight) + var(--bold-modifier));
+  --table-header-color: var(--text-normal);
+  --table-line-height: var(--line-height-tight);
+  --table-text-size: var(--font-text-size);
+  --table-text-color: inherit;
+  --table-column-min-width: 6ch;
+  --table-column-max-width: none;
+  --table-column-alt-background: var(--table-background);
+  --table-column-first-border-width: var(--table-border-width);
+  --table-column-last-border-width: var(--table-border-width);
+  --table-row-background-hover: var(--table-background);
+  --table-row-alt-background: var(--table-background);
+  --table-row-alt-background-hover: var(--table-background);
+  --table-row-last-border-width: var(--table-border-width);
+  --table-selection: hsl(var(--color-accent-hsl), 0.1);
+  --table-selection-blend-mode: var(--highlight-mix-blend-mode);
+  --table-selection-border-color: var(--interactive-accent);
+  --table-selection-border-width: 2px;
+  --table-selection-border-radius: 4px;
+  --table-cell-vertical-alignment: top;
+  --table-drag-handle-background: transparent;
+  --table-drag-handle-background-active: var(--table-selection-border-color);
+  --table-drag-handle-color: var(--text-faint);
+  --table-drag-handle-color-active: var(--text-on-accent);
+  --table-add-button-background: transparent;
+  --table-add-button-border-width: var(--table-border-width);
+  --table-add-button-border-color: var(--background-modifier-border);
+
+  /* Tags */
+  --tag-size: var(--font-smaller);
+  --tag-color: var(--text-accent);
+  --tag-color-hover: var(--text-accent);
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --tag-background: hsl(var(--interactive-accent-hsl), 0.1);
+  --tag-background-hover: hsl(var(--interactive-accent-hsl), 0.2);
+  --tag-border-color: hsl(var(--interactive-accent-hsl), 0.15);
+  --tag-border-color-hover: hsl(var(--interactive-accent-hsl), 0.15);
+  --tag-border-width: 0px;
+  --tag-padding-x: 0.65em;
+  --tag-padding-y: 0.25em;
+  --tag-radius: 2em;
+  --tag-weight: inherit;
+
+  /* Window frame */
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary-alt);
+  --titlebar-border-width: 0px;
+  --titlebar-border-color: var(--background-modifier-border);
+  --titlebar-text-color: var(--text-muted);
+  --titlebar-text-color-focused: var(--text-normal);
+  --titlebar-text-weight: var(--font-bold);
+
+  /* Toggles */
+  --toggle-border-width: 2px;
+  --toggle-width: 40px;
+  --toggle-radius: 18px;
+  --toggle-thumb-color: white;
+  --toggle-thumb-radius: 18px;
+  --toggle-thumb-height: 18px;
+  --toggle-thumb-width: 18px;
+  --toggle-s-border-width: 2px;
+  --toggle-s-width: 34px;
+  --toggle-s-thumb-height: 15px;
+  --toggle-s-thumb-width: 15px;
+
+  /* Vault profile */
+  --vault-profile-display: flex;
+  --vault-profile-actions-display: flex;
+  --vault-profile-font-size: var(--font-ui-small);
+  --vault-profile-font-weight: var(--font-medium);
+  --vault-profile-color: var(--text-normal);
+  --vault-profile-color-hover: var(--vault-profile-color);
+
+  /* Workspace */
+  --workspace-background-translucent: rgb(var(--mono-rgb-0), 0.6);
+
+  /* Color mappings ------------------------ */
+
+  /* Accent HSL values */
+  --accent-h: 258;
+  --accent-s: 88%;
+  --accent-l: 66%;
+
+  /* Backgrounds */
+  --background-primary: var(--color-base-00);
+  --background-primary-alt: var(--color-base-10);
+  --background-secondary: var(--color-base-20);
+  --background-modifier-hover: rgb(var(--mono-rgb-100), 0.067);
+  --background-modifier-active-hover: hsl(var(--interactive-accent-hsl), 0.15);
+  --background-modifier-border: var(--color-base-30);
+  --background-modifier-border-hover: var(--color-base-35);
+  --background-modifier-border-focus: var(--color-base-40);
+  --background-modifier-error-rgb: var(--color-red-rgb);
+  --background-modifier-error: var(--color-red);
+  --background-modifier-error-hover: var(--color-red);
+  --background-modifier-success-rgb: var(--color-green-rgb);
+  --background-modifier-success: var(--color-green);
+  --background-modifier-message: rgb(0 0 0 / 90%);
+
+  /* Inputs */
+  --background-modifier-form-field: var(--color-base-00);
+
+  /* Text */
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-70);
+  --text-faint: var(--color-base-50);
+  --text-on-accent: white;
+  --text-on-accent-inverted: black;
+  --text-error: var(--color-red);
+  --text-warning: var(--color-orange);
+  --text-success: var(--color-green);
+  --text-selection: hsl(var(--color-accent-hsl), 0.2);
+  --text-highlight-bg-rgb: 255, 208, 0;
+  --text-highlight-bg: rgb(var(--text-highlight-bg-rgb), 0.4);
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-2);
+  --interactive-normal: var(--color-base-00);
+  --interactive-hover: var(--color-base-10);
+  --interactive-accent-hsl: var(--color-accent-hsl);
+  --interactive-accent: var(--color-accent-1);
+  --interactive-accent-hover: var(--color-accent-2);
 }
 
 /* Remove setting accent color in Settings + Clearer images */
@@ -37533,8 +37660,8 @@ body.ssopt-hide-tooltips .tooltip {
  * - $font-weight: (Optional) The font-weight for the text content.
  */
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".canvas"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37542,7 +37669,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".canvas"] .nav-fi
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".canvas"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-layout-dashboard'%3E%3Crect x='3' y='3' width='7' height='9' rx='1'%3E%3C/rect%3E%3Crect x='14' y='3' width='7' height='5' rx='1'%3E%3C/rect%3E%3Crect x='14' y='12' width='7' height='9' rx='1'%3E%3C/rect%3E%3Crect x='3' y='16' width='7' height='5' rx='1'%3E%3C/rect%3E%3C/svg%3E");
@@ -37552,8 +37679,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".canvas"] .nav-fi
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".pdf"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37561,7 +37688,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".pdf"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".pdf"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 4H15V8H19V20H5V4ZM3.9985 2C3.44749 2 3 2.44405 3 2.9918V21.0082C3 21.5447 3.44476 22 3.9934 22H20.0066C20.5551 22 21 21.5489 21 20.9925L20.9997 7L16 2H3.9985ZM10.4999 7.5C10.4999 9.07749 10.0442 10.9373 9.27493 12.6534C8.50287 14.3757 7.46143 15.8502 6.37524 16.7191L7.55464 18.3321C10.4821 16.3804 13.7233 15.0421 16.8585 15.49L17.3162 13.5513C14.6435 12.6604 12.4999 9.98994 12.4999 7.5H10.4999ZM11.0999 13.4716C11.3673 12.8752 11.6042 12.2563 11.8037 11.6285C12.2753 12.3531 12.8553 13.0182 13.5101 13.5953C12.5283 13.7711 11.5665 14.0596 10.6352 14.4276C10.7999 14.1143 10.9551 13.7948 11.0999 13.4716Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37571,8 +37698,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".pdf"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".js"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37580,7 +37707,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".js"] .nav-file-t
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".js"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM13.3344 16.055C14.0531 16.6343 14.7717 16.9203 15.4904 16.913C15.9304 16.913 16.2677 16.8323 16.5024 16.671C16.7297 16.517 16.8434 16.297 16.8434 16.011C16.8434 15.7177 16.7297 15.4683 16.5024 15.263C16.2677 15.0577 15.8241 14.8523 15.1714 14.647C14.3867 14.4197 13.7817 14.1263 13.3564 13.767C12.9384 13.4077 12.7257 12.9053 12.7184 12.26C12.7184 11.6513 12.9824 11.1417 13.5104 10.731C14.0237 10.3203 14.6801 10.115 15.4794 10.115C16.5941 10.115 17.4887 10.3863 18.1634 10.929L17.3934 12.128C17.1221 11.9153 16.8104 11.7613 16.4584 11.666C16.1064 11.556 15.7911 11.501 15.5124 11.501C15.1311 11.501 14.8267 11.5707 14.5994 11.71C14.3721 11.8493 14.2584 12.0327 14.2584 12.26C14.2584 12.5093 14.3977 12.722 14.6764 12.898C14.9551 13.0667 15.4317 13.2537 16.1064 13.459C16.9204 13.701 17.4997 14.0237 17.8444 14.427C18.1891 14.8303 18.3614 15.3437 18.3614 15.967C18.3614 16.605 18.1157 17.155 17.6244 17.617C17.1404 18.0717 16.4364 18.31 15.5124 18.332C14.3024 18.332 13.2904 17.969 12.4764 17.243L13.3344 16.055ZM7.80405 16.693C8.03872 16.8397 8.32105 16.913 8.65105 16.913C8.99572 16.913 9.28172 16.814 9.50905 16.616C9.73639 16.4107 9.85005 16.055 9.85005 15.549V10.247H11.3351V15.835C11.3131 16.7003 11.0637 17.3237 10.5871 17.705C10.3157 17.9323 10.0187 18.0937 9.69605 18.189C9.37339 18.2843 9.06172 18.332 8.76105 18.332C8.21105 18.332 7.72339 18.2367 7.29805 18.046C6.84339 17.8407 6.46205 17.4777 6.15405 16.957L7.18805 16.11C7.37872 16.3667 7.58405 16.561 7.80405 16.693Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37590,8 +37717,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".js"] .nav-file-t
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".cook"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37599,7 +37726,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".cook"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".cook"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 48C39.9411 48 48 39.9411 48 30H12C12 39.9411 20.0589 48 30 48Z' fill='currentColor'%3E%3C/path%3E%3Ccircle cx='18' cy='18' r='4' fill='currentColor'%3E%3C/circle%3E%3Ccircle cx='42' cy='18' r='4' fill='currentColor'%3E%3C/circle%3E%3Ccircle cx='30' cy='16' r='4' fill='currentColor'%3E%3C/circle%3E%3C/svg%3E");
@@ -37609,8 +37736,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".cook"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".css"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37618,7 +37745,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".css"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".css"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.8 14H4.83961L4.2947 16.7245L10.0393 18.8787L17.2665 16.4697L18.3604 11H3.4L3.8 9H18.7604L19.5604 5H4.6L5 3H22L19 18L10 21L2 18L2.8 14Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37628,8 +37755,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".css"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".scss"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37637,7 +37764,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".scss"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".scss"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.8 14H4.83961L4.2947 16.7245L10.0393 18.8787L17.2665 16.4697L18.3604 11H3.4L3.8 9H18.7604L19.5604 5H4.6L5 3H22L19 18L10 21L2 18L2.8 14Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37647,8 +37774,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".scss"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".less"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37656,7 +37783,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".less"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".less"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.8 14H4.83961L4.2947 16.7245L10.0393 18.8787L17.2665 16.4697L18.3604 11H3.4L3.8 9H18.7604L19.5604 5H4.6L5 3H22L19 18L10 21L2 18L2.8 14Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37666,8 +37793,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".less"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".avif"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37675,7 +37802,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".avif"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".avif"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37685,8 +37812,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".avif"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".bmp"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37694,7 +37821,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".bmp"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".bmp"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37704,8 +37831,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".bmp"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".gif"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37713,7 +37840,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".gif"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".gif"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37723,8 +37850,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".gif"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpeg"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37732,7 +37859,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpeg"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpeg"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37742,8 +37869,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpeg"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpg"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37751,7 +37878,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpg"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpg"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37761,8 +37888,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".jpg"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".png"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37770,7 +37897,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".png"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".png"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37780,8 +37907,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".png"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".svg"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37789,7 +37916,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".svg"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".svg"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37799,8 +37926,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".svg"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webp"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37808,7 +37935,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webp"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webp"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37818,8 +37945,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webp"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".flac"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37827,7 +37954,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".flac"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".flac"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37837,8 +37964,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".flac"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".m4a"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37846,7 +37973,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".m4a"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".m4a"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37856,8 +37983,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".m4a"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp3"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37865,7 +37992,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp3"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp3"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37875,8 +38002,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp3"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogg"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37884,7 +38011,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogg"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogg"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37894,8 +38021,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogg"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".wav"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37903,7 +38030,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".wav"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".wav"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37913,8 +38040,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".wav"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".3gp"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37922,7 +38049,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".3gp"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".3gp"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 7H7V17H5V7ZM1 10H3V14H1V10ZM9 2H11V20H9V2ZM13 4H15V22H13V4ZM17 7H19V17H17V7ZM21 10H23V14H21V10Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37932,8 +38059,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".3gp"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mkv"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37941,7 +38068,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mkv"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mkv"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 5V19H16V5H8ZM4 5V7H6V5H4ZM18 5V7H20V5H18ZM4 9V11H6V9H4ZM18 9V11H20V9H18ZM4 13V15H6V13H4ZM18 13V15H20V13H18ZM4 17V19H6V17H4ZM18 17V19H20V17H18Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37951,8 +38078,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mkv"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mov"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37960,7 +38087,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mov"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mov"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 5V19H16V5H8ZM4 5V7H6V5H4ZM18 5V7H20V5H18ZM4 9V11H6V9H4ZM18 9V11H20V9H18ZM4 13V15H6V13H4ZM18 13V15H20V13H18ZM4 17V19H6V17H4ZM18 17V19H20V17H18Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37970,8 +38097,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mov"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp4"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37979,7 +38106,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp4"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp4"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 5V19H16V5H8ZM4 5V7H6V5H4ZM18 5V7H20V5H18ZM4 9V11H6V9H4ZM18 9V11H20V9H18ZM4 13V15H6V13H4ZM18 13V15H20V13H18ZM4 17V19H6V17H4ZM18 17V19H20V17H18Z'%3E%3C/path%3E%3C/svg%3E");
@@ -37989,8 +38116,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".mp4"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogv"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -37998,7 +38125,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogv"] .nav-file-
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogv"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 5V19H16V5H8ZM4 5V7H6V5H4ZM18 5V7H20V5H18ZM4 9V11H6V9H4ZM18 9V11H20V9H18ZM4 13V15H6V13H4ZM18 13V15H20V13H18ZM4 17V19H6V17H4ZM18 17V19H20V17H18Z'%3E%3C/path%3E%3C/svg%3E");
@@ -38008,8 +38135,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".ogv"] .nav-file-
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webm"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -38017,7 +38144,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webm"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webm"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 5V19H16V5H8ZM4 5V7H6V5H4ZM18 5V7H20V5H18ZM4 9V11H6V9H4ZM18 9V11H20V9H18ZM4 13V15H6V13H4ZM18 13V15H20V13H18ZM4 17V19H6V17H4ZM18 17V19H20V17H18Z'%3E%3C/path%3E%3C/svg%3E");
@@ -38027,8 +38154,8 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".webm"] .nav-file
 }
 
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".base"] .nav-file-tag {
+  align-self: stretch;
   padding: 0 var(--size-2-1);
-  padding: var(--size-2-1);
   font-size: 0;
   font-size: 0;
 }
@@ -38036,7 +38163,7 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".base"] .nav-file
 body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".base"] .nav-file-tag::after {
   display: flex;
   width: 12px;
-  height: 12px;
+  height: 100%;
   background-color: var(--nav-item-color);
   content: "";
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 12.5C5 12.8134 5.46101 13.3584 6.53047 13.8931C7.91405 14.5849 9.87677 15 12 15C14.1232 15 16.0859 14.5849 17.4695 13.8931C18.539 13.3584 19 12.8134 19 12.5V10.3287C17.35 11.3482 14.8273 12 12 12C9.17273 12 6.64996 11.3482 5 10.3287V12.5ZM19 15.3287C17.35 16.3482 14.8273 17 12 17C9.17273 17 6.64996 16.3482 5 15.3287V17.5C5 17.8134 5.46101 18.3584 6.53047 18.8931C7.91405 19.5849 9.87677 20 12 20C14.1232 20 16.0859 19.5849 17.4695 18.8931C18.539 18.3584 19 17.8134 19 17.5V15.3287ZM3 17.5V7.5C3 5.01472 7.02944 3 12 3C16.9706 3 21 5.01472 21 7.5V17.5C21 19.9853 16.9706 22 12 22C7.02944 22 3 19.9853 3 17.5ZM12 10C14.1232 10 16.0859 9.58492 17.4695 8.89313C18.539 8.3584 19 7.81342 19 7.5C19 7.18658 18.539 6.6416 17.4695 6.10687C16.0859 5.41508 14.1232 5 12 5C9.87677 5 7.91405 5.41508 6.53047 6.10687C5.46101 6.6416 5 7.18658 5 7.5C5 7.81342 5.46101 8.3584 6.53047 8.89313C7.91405 9.58492 9.87677 10 12 10Z'%3E%3C/path%3E%3C/svg%3E");
@@ -38051,16 +38178,6 @@ body:not(.ssopt-disable-nav-icons) .nav-file-title[data-path$=".base"] .nav-file
   $text-content: "\f3c7" // Note the extra quotes! Important for SCSS strings.
 );
 */
-
-/* fixes the flex for the icons */
-.nav-file-title :where(.nav-file-title-content) {
-  flex: 1;
-}
-
-.nav-file-title :where(.nav-file-tag) {
-  flex: 0;
-  margin-left: var(--size-2-2);
-}
 
 /* Swapping Navigation Text for Icons */
 
@@ -38132,14 +38249,6 @@ settings:
         notes: (For Windows and Linux only)
         description: "When enabled, Obsidian’s non-native scrollbars in Windows and Linux are replaced with zero-width tracks, giving the interface a neater look."
         default: false
-        addCommand: true
-    -
-        id: ssopt-hide-tooltips
-        title: Hide Tooltips
-        type: class-toggle
-        description: "When enabled, this hides all tooltips that appear when hovering over buttons and other UI elements."
-        default: false
-        addCommand: true
     -
         id: shape-roundish
         title: "Border Radius"
@@ -38640,6 +38749,7 @@ settings:
                     -
                         label: "Solar Flare"
                         value: ssopt-col-base-tone-l-solar-flare
+
     -
                 id: V4-willemstad-color-base-variations-light
                 title: Custom Settings
@@ -42378,7 +42488,6 @@ settings:
             document: DA12-AppliedColours
             notes: (For Obsidian Frame and Frameless Mode only)
             description: "When enabled, this changes the titlebar colour to use the accent colours."
-            addCommand: true
     -
             id: col-titlebar-accent
             title: Titlebar Accent Colour
@@ -42406,7 +42515,6 @@ settings:
             notes: (For Windows and Linux, and in Frameless Mode)
             description: "When enabled, the three control buttons (minimise, maximise and close) on the right side of the titlebar will be omitted. Drag the left sidebar to move the Obsidian window around your screen, double-click to minimise/expand, and Alt-F4 (Windows) to close."
             default: false
-            addCommand: true
     -
             id: ssopt-tb-willemstad
             title: Remove Willemstad Version Number Suffix
@@ -42473,21 +42581,6 @@ settings:
                 -
                     label: 'Right-Aligned (Default Obsidian)'
                     value: ssopt-status-bar-right
-    -
-            id: ssopt-status-bar-full-style
-            title: Coverage of Full Status Bar
-            type: variable-select
-            description: "Determine whether the Full Status Bar should be full-width, or whether the ribbon should be full-height."
-            note: (Requires 'Style of Status Bar' set to 'Full')
-            allowEmpty: false
-            default: '1'
-            options:
-                -
-                    label: "Stylised (excludes space under left ribbon)"
-                    value: '1'
-                -
-                    label: "Full-Width (including space under left ribbon)"
-                    value: '0'
     -
             id: ssopt-status-bar-float-not
             title: Disable Floating Status Bar
@@ -42823,20 +42916,6 @@ settings:
             max: 5
             step: 1
     -
-            id: nav-item-white-space
-            title: File and Folder Title Wrapping
-            type: variable-select
-            description: "Controls how file and folder names wrap in the navigation pane. 'No Wrap (pre)' is the default Obsidian behavior."
-            allowEmpty: false
-            default: 'pre'
-            options:
-                -
-                    label: "No Wrap (pre)"
-                    value: 'pre'
-                -
-                    label: "Wrap When Needed (pre-wrap)"
-                    value: 'pre-wrap'
-    -
             id: ssopt-disable-nav-icons
             title: Disable Custom File Extension Icons in File Explorer
             type: class-toggle
@@ -43080,28 +43159,11 @@ settings:
             document: ED03-ActiveLineHighlight
             description: "Willemstad has active line highlights by default across the specific line you're editing on. When toggled, this disables the highlighting."
             default: false
-            addCommand: true
-    -
-            id: col-base-bg-alh
-            title: Colour for Active Line Highlight
-            type: variable-text
-            description: "Sets the base colour for the active line highlight. The theme will apply transparency to this colour. Accepts any valid CSS colour format (e.g., hex, rgb, oklch, var(--color-accent)). Please note that the input field is meant to be colour-responsive and mimics how the Active Line Highlight looks in the editor when in focus."
-            default: 'var(--color-base-50)'
-    -
-            id: col-base-alpha-alh
-            title: Opacity of Active Line Highlight
-            type: variable-number-slider
-            description: "Controls the opacity of the active line highlight. Lower values are more transparent. The default is 0.25; you are recommended to set values below 0.5."
-            format: ""
-            min: 0
-            max: 1
-            step: 0.01
-            default: 0.25
     -
         id: variable-line-lengths
-        title: "Editor Pane Manipulation (Variable Line Lengths and Pane Margins)"
+        title: Variable Line Lengths
         type: heading
-        description: "Options to change the line lengths and pane margin/padding of the editor."
+        description: Options to change the line lengths of the editor.
         level: 2
         collapsed: false
     -
@@ -43111,7 +43173,6 @@ settings:
             document: ED01-VarLineLength
             description: "When enabled, this overrides the Readable Line Length core setting. You are then able to set the line length you would like to use."
             default: false
-            addCommand: true
     -
             id: width-vll
             title: Custom Maximum Line Length 
@@ -43129,16 +43190,6 @@ settings:
             description: "When enabled, this will fit titles to the editor line length."
             warning: "Note that this changes the display of the title's bottom border too."
             default: false
-    -
-            id: file-margins
-            title: Pane Margins in Editing Workspace
-            type: variable-number-slider
-            description: "Controls the padding on all sides within the editor pane, creating more or less 'breathing room' around your content. Please note that this option might affect components such as header numbering and header collapse indicators. The default is 32px."
-            format: "px"
-            min: 10
-            max: 60
-            step: 1
-            default: 32
     -
         id: headers
         title: Headers
@@ -43165,12 +43216,6 @@ settings:
             title: Note on Coloured Headers
             type: class-toggle
             description: "By default, Willemstad uses the accent colours (--color-accent, --color-accent-1 and --color-accent-2) to colour the headers. You can customise these by enabling 'Custom Header Colours'. For legacy users of Willemstad, the previous header styles are available under 'Old Willemstad Header Colours'."  
-            default: false    
-    -
-            id: info-coloured-headers-text
-            title: Note on Coloured Header Text
-            type: class-toggle
-            description: "For your information, Willemstad sets the header text colours mathematically in accordance to the colours chosen for your headers."  
             default: false    
     -
             id: ssopt-no-coloured-headers
@@ -43601,32 +43646,12 @@ settings:
             description: "When enabled, this hides the entire Properties block when in Reading Mode."
             default: false
     -
-            id: ssopt-hide-metadata-container-lp
-            title: Hide Properties in Live Preview
-            type: class-toggle
-            document: EF02-PropertiesMetadata
-            notes: (Reading View)
-            description: "When enabled, this hides the entire Properties block when in Live Preview."
-            default: false
-    -
             id: ssopt-hide-properties-title
             title: Hide 'Properties' Title
             type: class-toggle
             document: EF02-PropertiesMetadata
             notes: (Reading View and Editing View Live Preview)
             description: "When enabled, this hides the 'Properties' heading above the metadata frontmatter table in both Live Preview and Reading Mode."
-            default: false
-    -
-            id: ssopt-frontmatter-in-front
-            title: Move Properties to Top of Note in Reading View
-            type: class-toggle
-            description: "When enabled, this moves the Properties block to appear before the in-line note title in Reading Mode."
-            default: false
-    -
-            id: ssopt-frontmatter-in-front-lp
-            title: Move Properties to Top of Note in Live Preview
-            type: class-toggle
-            description: "When enabled, this moves the Properties block to appear before the in-line note title in Live Preview."
             default: false
     -
             id: ssopt-properties-button-original
@@ -43693,14 +43718,14 @@ settings:
             title: Disable Table Striping
             type: class-toggle
             document: PB006-BasesTables (PB006-01A)
-            description: "By default, Willemstad colours alternate rows differently in Markdown tables. Enable this should you prefer Obsidian's default look for ordinary Markdown tables."
+            description: "By default, Willemstad colours alternate rows differently in Markdown tables. Enable this should you prefer Obsidian’s default look for ordinary Markdown tables."
             default: false
     -
             id: ssopt-standard-bases-colours
             title: Revert to Standard Bases Appearance
             type: class-toggle
             document: PB006-BasesTables (PB006-01B)
-            description: "Reverts the Bases core plugin to its stock colour scheme instead of Willemstad's palette."
+            description: "Reverts the Bases core plugin to its stock colour scheme instead of Willemstad’s palette."
             default: false
     -
             id: ssopt-bases-no-edit
@@ -43709,126 +43734,6 @@ settings:
             document: PB006-BasesTables (PB006-02)
             description: "By default in Obsidian, Bases are editable in Reading Mode. Enable this to turn off editing in Reading Mode."
             default: false
-    -
--
-        id: canvas-settings
-        title: Canvas
-        type: heading
-        description: 'Options to manipulate items in the Canvas.'
-        level: 2
-        collapsed: false
-    -
-            id: ssopt-canvas-hide-node-labels
-            title: Hide Node Labels
-            type: class-toggle
-            description: "When enabled, hides the labels/titles on individual nodes (files/cards) in the Canvas."
-            default: false
-    -
-            id: ssopt-canvas-hide-group-labels
-            title: Hide Group Labels
-            type: class-toggle
-            description: "When enabled, hides the labels on groups in the Canvas."
-            default: false
-    -
-            id: canvas-node-font-size
-            title: Node Label Font Size
-            type: variable-text
-            description: "Sets the font size for labels on individual nodes (files/cards). Accepts any valid CSS unit (e.g., 1em, 14px, 1.2rem)."
-            default: '1em'
-    -
-            id: canvas-group-font-size
-            title: Group Label Font Size
-            type: variable-text
-            description: "Sets the font size for labels on groups. Accepts any valid CSS unit."
-            default: '1.5em'
-    -
-            id: canvas-background
-            title: Canvas Background Colour
-            type: variable-text
-            description: "Sets the background colour of the Canvas. Accepts any valid CSS colour format (e.g., hex, rgb, hsl, oklch, var(--some-variable))."
-            default: 'var(--background-primary)'
-    -
-            id: canvas-settings-grid
-            title: Grid and Dots
-            type: heading
-            level: 3
-            collapsed: false
-    -
-                id: canvas-dot-pattern
-                title: Canvas Background Dot Colour
-                type: variable-text
-                description: "Sets the colour of the dots in the Canvas background. Accepts any valid CSS colour format."
-                default: 'var(--color-base-30)'
-    -
-                id: canvas-dot-size
-                title: Canvas Background Dot Size
-                type: variable-number-slider
-                description: "Controls the size of the dots in the Canvas background. Obsidian's default is 0.7. Change this to zero to get a Heptabase-like background."
-                format: ""
-                min: 0
-                max: 2
-                step: 0.1
-                default: 0.7
-    -
-        id: pdf-viewer-settings
-        title: PDF Viewer
-        type: heading
-        description: 'Options to manipulate and control the PDF viewer.'
-        level: 2
-        collapsed: false
-    -
-            id: ssopt-invert-pdf-dark
-            title: Invert PDF Colours in Dark Mode
-            type: class-toggle
-            description: "When in dark mode, this inverts the colors of embedded PDFs to make them easier to read. Please note that this option is very rudimentary and there are no good CSS options given the limitations of accessing colours within PDF in Obsidian."
-            default: false
-    -
-        id: immersive-editing-modes
-        title: Immersive Editing Modes (Focused Mode and Super Focused Mode)
-        type: heading
-        description: "Styles that hide UI elements and fade out non-active lines to help you focus on writing."
-        level: 2
-        collapsed: false
-    -
-        id: info-immersive-editing-modes
-        title: Note on Immersive Editing Modes
-        type: info-text
-        description: "Please note that the immersive editing modes (Focused and Super Focused Modes) can be set via hotkeys and is accessible via the Command Palette. Please see the Obsidian's documentation (accessible via the button on the right) to do this. Immersive Editing Modes takes inspiration from [Ryan McQuen's Focus Mode plugin](https://github.com/ryanpcmcquen/obsidian-focus-mode), which Willemstad's maintainer used to use extensively years ago. [Obsidian Docs](https://help.obsidian.md/hotkeys)"
-        markdown: true
-    -
-            id: ssopt-focused-mode
-            title: Focused Mode
-            type: class-toggle
-            description: "Hides all UI elements (status bar, sidebars, etc.) except for the tab header bar, and fades out lines of text that are not near your active line. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
-            default: false
-            addCommand: true
-    -
-            id: ssopt-super-focused-mode
-            title: Super Focused Mode
-            type: class-toggle
-            description: "An even more extreme focus mode. Hides all elements, except the current active page. Does not require 'Focused Mode' enabled. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
-            default: false
-            addCommand: true
-    -
-            id: distant-opacity
-            title: Distant Line Opacity
-            type: variable-number-slider
-            description: "Controls the minimum opacity for lines far away from your active line in Focused Mode. Default is 0.2."
-            format: ""
-            min: 0
-            max: 1
-            step: 0.05
-            default: 0.2
-    -
-            id: near-fade-factor
-            title: Near Line Fade Factor
-            type: variable-number-slider
-            description: "Controls the opacity of the lines fade out as they get further from the active line. Higher values mean a bigger difference in opacity, which is stepped by the value you input here, multiplied by the amount of lines away from the active line it is (up to the third line). The default is 0.15."
-            format: ""
-            min: 0
-            max: 0.5
-            step: 0.01
-            default: 0.15
     -
         id: ancillary-editor-options
         title: Ancillary Editor Options
