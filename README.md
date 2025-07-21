@@ -21,7 +21,12 @@ Alternatively, download the release, and drop `obsidian.css` into your `.obsidia
 ---
 
 ### Why is Inter embedded into Willemstad X, isn't that included in Obsidian proper?
-Yes, it is. Inter is included in Obsidian proper. However, most people will download Inter onto their computers, and Obsidian [will use the font with the name that is present in your computer](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/Best+Practices+and+Tips+for+Theme+Development). Moreover, most people (**including myself**) download/-s/-ed Inter from Google Fonts, [which is probably the most outdated version you can get of the font](https://github.com/rsms/inter#alternate-distributions). (No proper _italics_, need I say more?!) By embedding Inter, alongside the other fonts, allows me to quality control and ensure the quality of your experience.
+There are a few reasons for this:
+1. While Inter is included in Obsidian proper, Obsidian does not support all font-weights of Inter.
+2. Most people will download Inter onto their computers, and Obsidian [will use the font with the name that is present in your computer](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/Best+Practices+and+Tips+for+Theme+Development).
+3. Moreover, most people (**including myself**) will have had downloaded Inter from Google Fonts, [which is probably the most outdated version you can get of the font](https://github.com/rsms/inter#alternate-distributions), which has no proper italics.
+4. There has been a case in the past in which Obsidian failed to work with fonts if it was not embedded into the theme. This prevents that occurence from happening again.
+By embedding Inter, alongside the other fonts, allows me to quality control and ensure the quality of your experience.
 
 ### I'd like to change something or propose something. What's the easiest way to do so?
 If it's something you reckon people would need/want as well, the easiest way to request changes is to use the Issues tab here on GitHub. If you would like to change something that you can reckon you rather do it yourself, the best way would be to use a snippet.
@@ -39,9 +44,14 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - No-Shadow Sliding Panes, with input from [Damian Korcz](https://github.com/damiankorcz)
 - No-Shadow Admonitions, inspired by Leah's lamentations to [Jeremy Valentine](https://github.com/valentine195)
 - Longform plugin and `writing` cssclass support, adapted from [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code, and also with credits to [Kevin Barrett (@kevboh)](https://github.com/kevboh/longform)'s [styling](https://github.com/kevboh/longform#scene-only-styling)
-- and many other snippets that were written by [Chris Grieser](https://github.com/chrisgrieser)
-- Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
+- and many other snippets that were written by [Chris Grieser](https://github.com/chrisgrieser).
 
+This theme uses assets/colour palettes and fonts all publicly available and open-sourced, such as
+- Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
+- The MetBrewer colour palettes, created and compiled by [Blake R. Mills](https://github.com/BlakeRMills/MetBrewer)
+- Inter font, created by [Rasmus Andersson](https://github.com/rsms/inter)
+- Manrope font, created by Mikhail Sharanda and no longer available on GitHub
+- ... and many more.
 
 ## Theme Documentation
 Available [here](https://willemstad.cc).
@@ -56,6 +66,6 @@ That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus]
 ### License
 Previous versions of Willemstad was licensed under the Mozilla Public License 2.0. From version 1.1 onwards this is licensed under GNU Public License 3.0 (GPL 3.0)
 
-As is permissible under the original TOS as is the case with Obsidian, most of its constituent snippets (CSSClass, code written in conjunction with, or by other developers) and components that are licensed under the terms of the MIT license or another license, either by myself or its respective authors remain as is.
+Willemstad's code in its earlier days includes constituent snippets (CSSClass, code written in conjunction with, or by other developers) and components that are licensed under the terms of the MIT license or another license, either by myself or its respective authors. These parts of the code take the original licence and remain as is.
 
 You will obtain a compiled copy of the CSS code, which includes the snippets as well (as these do not require compiling). However, since version 1.1 the uncompiled SASS/SCSS source code will no longer be available on GitHub.
