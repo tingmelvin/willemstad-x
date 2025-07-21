@@ -1,7 +1,7 @@
 
 ![Willemstad-X](https://github.com/user-attachments/assets/46dd7d2b-6520-4deb-8d12-30ad4c822fa3)
 
-![wx-github-2-mini](https://user-images.githubusercontent.com/43155211/159142584-70b88e36-7634-4ddb-9ee1-1a7c11f0b2c9.png)
+
 
 ## The theme documentation is available [here](https://willemstad.cc/). 
 
@@ -41,7 +41,6 @@ As is with most theme codes in Obsidian, many pieces/snippets of code have been 
 - Longform plugin and `writing` cssclass support, adapted from [Chris Grieser (@pseudometa)](https://github.com/chrisgrieser)'s code, and also with credits to [Kevin Barrett (@kevboh)](https://github.com/kevboh/longform)'s [styling](https://github.com/kevboh/longform#scene-only-styling)
 - and many other snippets that were written by [Chris Grieser](https://github.com/chrisgrieser)
 - Nord theme colour palette, adapted from the original documentation written by [Sven Greb](https://github.com/svengreb)
-- Minimal Cards and Image Grids, from [Stephan Ango](https://github.com/kepano)
 
 
 ## Theme Documentation
@@ -51,6 +50,7 @@ Available [here](https://willemstad.cc).
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
 That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
 
+<!-- ![wx-github-2-mini](https://user-images.githubusercontent.com/43155211/159142584-70b88e36-7634-4ddb-9ee1-1a7c11f0b2c9.png) -->
 
 ---
 ### License
