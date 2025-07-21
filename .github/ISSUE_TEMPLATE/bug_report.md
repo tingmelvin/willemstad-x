@@ -50,6 +50,9 @@ If applicable, add screenshots or screen recordings.
 **Installer Version:**
 <!-- Go to Settings > About and paste the "Installer version" number -->
 
+**Willemstad Version:**
+<!-- Go to Settings > Appearance > Manage > Willemstad and paste the "Currently Installed" number -->
+
 ---
 
 ### Checklist
