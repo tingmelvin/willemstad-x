@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.9 Newfoundland
+Willemstad | v1.9.8 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.9 Newfoundland";
+  content: "  /  Willemstad v1.9.8 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.9 Newfoundland"; /* prints version number */
+  content: "\av1.9.8 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -1879,7 +1879,6 @@ input[type="range"]::after {
 
 input[type="range"]::-webkit-slider-thumb {
   box-shadow: none;
-  transform: translateY(-1.5px);
 }
 
 input[type="range"]::-webkit-slider-thumb:hover, input[type="range"]::-webkit-slider-thumb:active {
@@ -23512,14 +23511,12 @@ body:where(.ssopt-editor-vll) .markdown-preview-view.markdown-preview-view .mark
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* ED02-1 | clean - no borders */
-body:not(.ssopt-not-seamless-embeds) .markdown-embed {
-  --embed-border-start: 0px;
-  --embed-padding: 0px;
-
-  /* ED02-2 | no scroll - no max height */
+.theme-light, .theme-dark {
+  --embed-border-left: none;
 }
 
-body:not(.ssopt-not-seamless-embeds) .markdown-embed .markdown-embed-content {
+/* ED02-2 | no scroll - no max height */
+.markdown-embed-content {
   max-height: none;
 }
 
@@ -26974,127 +26971,6 @@ body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-render
 /* PrismJS Replace */
 
 /* ────────────────────────────────────────────────────────────────────────────────
-> EE01
-\ Editor > Block Widths
-\ Bases and Tables
-──────────────────────────────────────────────────────────────────────────────── */
-
-/* Reading Mode Container */
-.markdown-reading-view .markdown-preview-view {
-  container-type: inline-size;
-  container-name: reading-mode;
-}
-
-/* Live Preview Container */
-.view-content .cm-scroller {
-  container-type: inline-size;
-  container-name: live-preview;
-}
-
-/* 1. TABLES */
-body {
-  --size-bw-table: size * var(--magnifier-bw-table);
-  --magnifier-bw-table: 1.5;
-  --ratio-bw-table-source: 1;
-  --ratio-bw-table-reading: 0.96;
-  --ssopt-bw-table-content-fit: 0;
-  --table-drag-handle-size: var(--size-4-4);
-}
-
-/* Live Preview */
-body:is(.ssopt-block-width-tables) {
-  /* Reading Mode */
-}
-
-@container live-preview (min-width: 0) {
-  body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget {
-    left: 50%;
-    width: calc-size(auto, var(--size-bw-table));
-    margin: 0 auto !important;
-    padding: 0;
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-table-source) * 100cqi + 2 * max(0px, var(--file-margins) - var(--table-drag-handle-size)));
-    contain: layout style paint;
-  }
-
-  body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
-    margin: 0 auto;
-  }
-
-  @container whole-body style(--ssopt-bw-table-content-fit: 1) {
-    body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
-      width: 100%;
-      margin: 0;
-    }
-  }
-
-  body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper table {
-    max-width: 100%;
-  }
-
-  @container whole-body style(--ssopt-bw-table-content-fit: 1) {
-    body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper table {
-      width: 100%;
-      margin: 0;
-    }
-  }
-}
-
-@container reading-mode (min-width: 0) {
-  body:is(.ssopt-block-width-tables) .markdown-reading-view .el-table {
-    position: relative;
-    left: 50%;
-    width: calc-size(auto, var(--size-bw-table));
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-table-reading) * 100cqi + 2 * var(--file-margins));
-    overflow: unset;
-  }
-
-  body:is(.ssopt-block-width-tables) .markdown-reading-view .el-table > table {
-    margin: 0 auto;
-  }
-
-  @container whole-body style(--ssopt-bw-table-content-fit: 1) {
-    body:is(.ssopt-block-width-tables) .markdown-reading-view .el-table > table {
-      width: 100%;
-      margin: 0;
-    }
-  }
-}
-
-body {
-  --size-bw-bases: size * var(--magnifier-bw-bases);
-  --magnifier-bw-bases: 1.5;
-  --ratio-bw-bases-source: 1;
-  --ratio-bw-bases-reading: 0.96;
-}
-
-/* Live Preview */
-@container live-preview (min-width: 0) {
-  body:is(.ssopt-block-width-bases) .markdown-source-view.mod-cm6 .bases-embed {
-    position: relative;
-    left: 50%;
-    width: calc-size(auto, var(--size-bw-bases));
-    margin: 0 auto;
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-bases-source) * 100cqi + 2 * max(0px, var(--file-margins) - var(--table-drag-handle-size)));
-  }
-}
-
-@container reading-mode (min-width: 0) {
-  body:is(.ssopt-block-width-bases) .markdown-reading-view .bases-embed {
-    position: relative;
-    left: 50%;
-    width: calc-size(auto, var(--size-bw-bases));
-    margin: 0 auto;
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-bases-reading) * 100cqi + 2 * var(--file-margins));
-  }
-}
-
-/* Block Widths - only Bases and Tables */
-
-/* ────────────────────────────────────────────────────────────────────────────────
 > EF01
 \ Editor > Frontmatter
 ──────────────────────────────────────────────────────────────────────────────── */
@@ -27841,55 +27717,6 @@ body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] 
   content: "H6";
 }
 
-/* EH91-4 | Add Text Colours via Headers if no Background Coloring */
-body:is(.ssopt-no-coloured-headers).theme-light h1 {
-  --h1-color: var(--h1-color-light);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-light h2 {
-  --h2-color: var(--h2-color-light);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-light h3 {
-  --h3-color: var(--h3-color-light);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-light h4 {
-  --h4-color: var(--h4-color-light);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-light h5 {
-  --h5-color: var(--h5-color-light);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-light h6 {
-  --h6-color: var(--h6-color-light);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-dark h1 {
-  --h1-color: var(--h1-color-dark);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-dark h2 {
-  --h2-color: var(--h2-color-dark);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-dark h3 {
-  --h3-color: var(--h3-color-dark);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-dark h4 {
-  --h4-color: var(--h4-color-dark);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-dark h5 {
-  --h5-color: var(--h5-color-dark);
-}
-
-body:is(.ssopt-no-coloured-headers).theme-dark h6 {
-  --h6-color: var(--h6-color-dark);
-}
-
 /* Headers Additions */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -28505,7 +28332,7 @@ body:not(.ssopt-highlight-no-box-shadow) mark, body:not(.ssopt-highlight-no-box-
 }
 
 /* EDITOR */
-body:not(.ssopt-highlight-no-box-shadow) .cm-highlight {
+.cm-highlight {
   box-shadow: 0 var(--padding-highlight-TB) 0 var(--col-highlight-col), 0 calc(-1 * var(--padding-highlight-TB)) 0 var(--col-highlight-col);
 
   /*
@@ -28782,12 +28609,6 @@ a:not(.tag),
   filter: invert(1) hue-rotate(180deg) brightness(1.1);
 }
 
-/* PDF Embed Buttons */
-.markdown-source-view.mod-cm6 .pdf-embed .edit-block-button {
-  top: var(--size-2-2);
-  right: var(--size-2-2);
-}
-
 /* PDF Viewer */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -28832,82 +28653,25 @@ body {
 
 /* Graph view */
 
-/* Test new Callouts */
-
 /* ────────────────────────────────────────────────────────────────────────────────
-CALLOUT SYSTEM REFACTOR
-Extensible, container query-based architecture
-──────────────────────────────────────────────────────────────────────────────── */
-body {
-  --ssopt-callout-style: 0;
-  --callout-border-base-width-override: var(--callout-border-base-width-preset);
-  --callout-border-other-width: var(--callout-border-base-width);
-  --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
-  --callout-border-base-width: var(--callout-border-base-width-override, var(--callout-border-base-width-preset, 0px));
-  --callout-border-left-extra: 5px;
+> EW01
+\ Callouts Visual Surroundings
+───────────────────────────────────────────────────────────────────────────────────
+    >> [CALLOUTS]
+    \\ \ Introduced in Obsidian 0.14.0
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> 
+        ──────────────────────────────────────────────────────────────────────── */
+.theme-light, .theme-dark {
   --margin-callout: var(--p-spacing);
-  --callout-gap: 0.5em;
-  --callout-title-gap: 0.75em;
-  --callout-title-padding: unset;
-  --callout-columns-margin-top: var(--margin-callout);
-  --aside-float: right;
-  --aside-margin-left: var(--p-spacing-root);
-  --aside-margin-right: 0;
-  --infobox-title-font-size: var(--h2-size);
-  --infobox-max-width: 50%;
-  --infobox-set-width: 50%;
-}
-
-:where(:not(.ssopt-callout-standard)) {
-  /*
-  & .callout[data-callout="columns"] {
-
-      > .callout-title {
-          border-left: var(--callout-border-left-width) solid oklch(from rgb(var(--callout-color)) l c h);
-          border-right: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-          border-top: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-          border-bottom: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-      }
-  }
-  */
-}
-
-body:where(:not(.ssopt-callout-standard)) .callout {
-  --callout-padding: 0;
-
-  transition: var(--quick-transition);
-}
-
-body:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
-  border-right: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-  border-top: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-  border-bottom: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-}
-
-body.ssopt-callout-no-hover:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
-}
-
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
-  border-left: var(--callout-border-other-width) solid rgb(var(--callout-color));
-  transition: var(--quick-transition);
-}
-
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]):hover, :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title:hover {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
-  transition: var(--quick-transition);
-}
-
-body.ssopt-callout-aside-float-left {
-  --aside-float: left;
-  --aside-margin-left: 0;
-  --aside-margin-right: var(--p-spacing-root);
 }
 
 .callout {
-  overflow-x: hidden;
-  margin: var(--margin-callout) 0;
-  background-color: rgb(var(--callout-color), 0.125);
+  overflow-x: hidden; /* ensures that it wouldn't eat into other things as well */
+  margin: var(--margin-callout) 0; /* top and bottom callout margin */
+  background-color: rgb(var(--callout-color), 0.125); /* default app.css alpha is 0.1 */
+
+  /* wth is there even this */
 }
 
 .callout .callout .callout-content {
@@ -28926,525 +28690,148 @@ body.ssopt-callout-aside-float-left {
   margin-top: var(--size-4-3);
 }
 
-.callout-icon {
-  width: 1em;
-  height: 1em;
-  align-self: center;
-}
-
 .callout-icon svg {
   display: inline-block;
   width: 1em;
   height: 1em;
-}
 
+  /* font-size: inherit; */
+} /* to make sure they scale properly - bug fix */
+
+/* ─────────────────────────────────────────────────────────────────────────
+>>> 
+───────────────────────────────────────────────────────────────────────── */
+
+/* key fixes */
 .callout-title {
-  gap: var(--callout-gap);
+  --callout-title-padding: var(--size-2-3) var(--size-4-2); /* takes the padding of the .callout as seen below */
+
+  gap: 0.5em; /* should it be 5? */
 }
 
 .callout-title .callout-title-inner {
-  word-break: break-all;
+  word-break: break-all; /* ensure that it doesn't break callouts */
 }
 
 .callout-title .callout-fold, .callout-title .callout-icon {
   display: flex;
-  align-items: center;
+  align-items: center; /* ensures that the svg is centered */
 }
 
 .callout-title .callout-fold svg {
   width: 1em;
-  height: 1em;
+  height: 1em; /* fix tp custom size, follows admonitions */
 }
 
-.callout-content {
-  --callout-content-padding: var(--callout-content-padding-TB) var(--callout-content-padding-LR);
-  --callout-content-padding-TB: 0;
-  --callout-content-padding-LR: 1em;
+/* opinionated stuff */
+body:not(.ssopt-callout-standard) .callout {
+  --callout-padding: 0 /* var(--size-2-3) var(--size-4-2) */; /* relegate it down DOM */
+
+  transition: var(--quick-transition);
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="note"] {
-  --callout-color: 0, 191, 111;
+body:not(.ssopt-callout-standard) .callout:hover {
+  border-left: 5px solid rgb(var(--callout-color));
+  transition: var(--quick-transition);
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="aside"] {
-  --callout-color: 0, 191, 111;
+body:not(.ssopt-callout-standard) .callout-title {
+  font-family: var(--font-heading);
+
+  /* ensures this appears first */
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="abstract"] {
-  --callout-color: 91, 197, 219;
-  --callout-icon: loader;
+body:not(.ssopt-callout-standard) .callout-title .callout-title-inner {
+  order: -2;
+  flex-grow: 1; /* forces the stuff to to be right-aligned */
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="summary"] {
-  --callout-color: 91, 197, 219;
-  --callout-icon: loader;
+body:not(.ssopt-callout-standard) .callout-title .callout-fold {
+  order: -1; /* ensures this appears before all the svg */
+  opacity: 0.3;
+  transition: var(--quicker-transition);
+  padding-right: 0; /* removes weird padding */
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="tldr"] {
-  --callout-color: 91, 197, 219;
-  --callout-icon: loader;
+body:not(.ssopt-callout-standard) .callout-title:hover .callout-fold {
+  opacity: 1;
+  transition: var(--quicker-transition);
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="info"] {
-  --callout-color: 0, 170, 199;
+body:not(.ssopt-callout-standard) .callout-title .callout-fold, body:not(.ssopt-callout-standard) .callout-title .callout-icon {
+  display: flex;
+  align-items: center; /* ensures that the svg is centered */
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="todo"] {
-  --callout-color: 0, 170, 199;
+body:not(.ssopt-callout-standard) .callout-content {
+  padding: 0 1em;
+  background-color: var(--background-primary-alt);
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="tip"] {
-  --callout-color: 34, 148, 1;
-  --callout-icon: asterisk;
+body:not(.ssopt-callout-standard) .callout-content p {
+  margin-block: 0.5em;
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="hint"] {
-  --callout-color: 34, 148, 1;
-  --callout-icon: asterisk;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="check"] {
-  --callout-color: 0, 158, 76;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="done"] {
-  --callout-color: 0, 158, 76;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="question"] {
-  --callout-color: 160, 199, 92;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="help"] {
-  --callout-color: 160, 199, 92;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="faq"] {
-  --callout-color: 160, 199, 92;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="warning"] {
-  --callout-color: 255, 182, 26;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="caution"] {
-  --callout-color: 255, 182, 26;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="attention"] {
-  --callout-color: 255, 182, 26;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="failure"] {
-  --callout-color: 161, 40, 100;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="fail"] {
-  --callout-color: 161, 40, 100;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="missing"] {
-  --callout-color: 161, 40, 100;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="danger"] {
-  --callout-color: 241, 0, 34;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="error"] {
-  --callout-color: 241, 0, 34;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="bug"] {
-  --callout-color: 164, 103, 80;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="example"] {
-  --callout-color: 125, 84, 178;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="quote"] {
-  --callout-color: 161, 169, 173;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="cite"] {
-  --callout-color: 161, 169, 173;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="attachment"] {
-  --callout-color: 197, 101, 199;
-  --callout-icon: paperclip;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="file"] {
-  --callout-color: 197, 101, 199;
-  --callout-icon: paperclip;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="link"] {
-  --callout-color: 127, 127, 127;
-  --callout-icon: link;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="url"] {
-  --callout-color: 127, 127, 127;
-  --callout-icon: link;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="phone"] {
-  --callout-color: 250, 121, 33;
-  --callout-icon: phone;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="email"] {
-  --callout-color: 250, 121, 33;
-  --callout-icon: at-sign;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="mail"] {
-  --callout-color: 250, 121, 33;
-  --callout-icon: at-sign;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="goal"] {
-  --callout-color: 140, 102, 255;
-  --callout-icon: flag;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="plus"] {
-  --callout-color: 50, 205, 50;
-  --callout-icon: plus;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="positive"] {
-  --callout-color: 50, 205, 50;
-  --callout-icon: plus;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="minus"] {
-  --callout-color: 124, 13, 14;
-  --callout-icon: minus;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="negative"] {
-  --callout-color: 124, 13, 14;
-  --callout-icon: minus;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="code"] {
-  --callout-color: 0, 0, 0;
-  --callout-icon: code-2;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="success"] {
-  --callout-color: 0, 158, 76;
-  --callout-icon: star;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="important"] {
-  --callout-color: 191, 63, 54;
-  --callout-icon: flag-triangle-right;
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="columns"] {
-  --callout-color: 150, 150, 150;
-  --callout-icon: lucide-columns;
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="tip"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(107deg 99% 40%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="hint"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(107deg 99% 40%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="check"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(149deg 100% 40%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="done"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(149deg 100% 40%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="failure"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(330deg 60% 65%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="fail"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(330deg 60% 65%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="missing"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(330deg 60% 65%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="danger"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(352deg 100% 60%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="error"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(352deg 100% 60%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="bug"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(16deg 34% 60%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="example"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(266deg 38% 65%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="link"] :is(.callout-title-inner, .callout-icon svg) {
-  color: var(--text-normal);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="url"] :is(.callout-title-inner, .callout-icon svg) {
-  color: var(--text-normal);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="goal"] :is(.callout-title-inner, .callout-icon svg) {
-  color: hsl(255deg 100% 75%);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="code"] :is(.callout-title-inner, .callout-icon svg) {
-  color: var(--text-normal);
-}
-
-body.theme-light:not(.ssopt-callout-standard) .callout-icon.callout-icon svg {
-  color: oklch(from rgb(var(--callout-color)) calc(l - 0.05) c h);
-}
-
-body.theme-light:not(.ssopt-callout-standard) .callout .callout-title-inner {
-  color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
-}
-
-body.theme-dark:not(.ssopt-callout-standard) .callout .callout-title-inner {
-  color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
-}
-
-:not(.ssopt-callout-standard) svg.ChevronDown {
-  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+body:not(.ssopt-callout-standard) svg.ChevronDown {
   background-color: var(--text-muted);
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
   mask-position: center;
   mask-repeat: no-repeat;
 }
 
-:not(.ssopt-callout-standard) svg.ChevronDown > * {
+body:not(.ssopt-callout-standard) svg.ChevronDown > * {
   display: none;
 }
 
-body {
-  container-name: whole-body;
-  container-type: inline-size;
+/* ─────────────────────────────────────────────────────────────────────────
+>>> BRIGHTER ICONS
+\\\ thanks to @pseudometa! :carrrl:
+>>> incl. svg fixes
+
+originally by Chris - replaced filters with oklch in 2025.
+───────────────────────────────────────────────────────────────────────── */
+:not(.ssopt-callout-standard) .callout-icon.callout-icon {
+  /* transform: scale(calc(var(-font-text-size) * 0.8)); */
 }
 
-@container whole-body style(--ssopt-callout-style: 0) {
-  body:not(.ssopt-callout-standard) .callout {
-    --callout-border-base-width-preset: 0px;
-    --callout-title-padding: var(--size-2-3) var(--size-4-2);
-  }
-
-  body:not(.ssopt-callout-standard) .callout {
-    --callout-padding: 0;
-
-    transition: var(--quick-transition);
-  }
-
-  body:not(.ssopt-callout-standard) .callout-title {
-    font-family: var(--font-heading);
-  }
-
-  body:not(.ssopt-callout-standard) .callout-title .callout-title-inner {
-    order: -2;
-    flex-grow: 1;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  body:not(.ssopt-callout-standard) .callout-title .callout-fold {
-    order: -1;
-    opacity: 0.3;
-    transition: var(--quicker-transition);
-    padding-right: 0;
-  }
-
-  body:not(.ssopt-callout-standard) .callout-title:hover .callout-fold {
-    opacity: 1;
-    transition: var(--quicker-transition);
-  }
-
-  body:not(.ssopt-callout-standard) .callout-content {
-    background-color: var(--background-primary-alt);
-  }
-
-  body:not(.ssopt-callout-standard) .callout-content p {
-    margin-block: 0.5em;
-  }
+:not(.ssopt-callout-standard) .callout-icon.callout-icon svg {
+  width: 1em; /* admonitions is 1em */
+  height: 1em;
 }
 
-@container whole-body style(--ssopt-callout-style: 1) {
-  body:not(.ssopt-callout-standard) .callout {
-    --callout-radius: 0px;
-
-    padding-top: var(--size-2-3);
-    padding-bottom: var(--size-2-3);
-
-    --callout-title-padding: 0 0.75em;
-  }
-
-  body:not(.ssopt-callout-standard) .callout:where([data-callout="columns"]) > .callout-title {
-    padding-top: var(--size-2-3);
-    padding-bottom: var(--size-2-3);
-  }
-
-  body:not(.ssopt-callout-standard).theme-light .callout {
-    --callout-border-base-width-preset: 1px;
-  }
-
-  body:not(.ssopt-callout-standard).theme-dark .callout {
-    --callout-border-base-width-preset: 0px;
-  }
-
-  body:not(.ssopt-callout-standard).theme-dark .callout:not([data-callout="columns"], [data-callout="success"]) {
-    background-color: color-mix(in lab, black 75%, rgb(var(--callout-color)) 25%);
-  }
-
-  body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="success"]), body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="success"]) .callout-title-inner {
-    color: var(--background-primary-alt);
-  }
-
-  body:not(.ssopt-callout-standard) .callout-title {
-    gap: var(--callout-title-gap);
-  }
-
-  body:not(.ssopt-callout-standard) .callout-title :where(.callout-fold) {
-    margin-inline-start: auto;
-    padding-inline-end: 0;
-  }
-
-  body:not(.ssopt-callout-standard) .callout-title-inner {
-    font-weight: 500;
-  }
-
-  body:not(.ssopt-callout-standard) .callout-content {
-    padding-left: 2.5em; /* title padding + icon + gap */
-  }
-
-  body:not(.ssopt-callout-standard) .callout-content p {
-    margin-block-start: 0;
-  }
-
-  body:not(.ssopt-callout-standard) .callout-content p:last-of-type {
-    margin-block-end: 0;
-  }
-
-  body:not(.ssopt-callout-standard) .callout.callout .callout-title-inner {
-    color: var(--text-normal);
-  }
+.theme-light :not(.ssopt-callout-standard) .callout-icon.callout-icon svg {
+  color: oklch(from rgb(var(--callout-color)) calc(l - 0.05) c h);
 }
 
-@container whole-body style(--ssopt-callout-style) {
-  body .callout {
-    --callout-border-base-width: var(--callout-border-base-width-override, var(--callout-border-base-width-preset, 0px));
-    --callout-border-other-width: var(--callout-border-base-width);
-    --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
-  }
+/* we need to come out with better colouring */
+body.theme-light :not(.ssopt-callout-standard) .callout .callout-title-inner {
+  color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="success"] .callout-title-inner {
-  filter: brightness(65%) contrast(0.9) hue-rotate(-5deg);
+body.theme-dark :not(.ssopt-callout-standard) .callout .callout-title-inner {
+  color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
 }
 
-@container whole-body style(--ssopt-callout-style: 0) {
-  body:not(.ssopt-callout-standard) .callout[data-callout="success"] .callout-title {
-    background: linear-gradient(258deg, hsl(60deg 100% 50%) 0%, hsl(63.47deg 97.58% 51.37%) 11%, hsl(67.6deg 95.82% 53.14%) 22%, hsl(71.89deg 93.13% 54.31%) 33%, hsl(76.47deg 89.47% 55.29%) 44%, hsl(81.76deg 86.55% 56.27%) 55%, hsl(87.36deg 82.73% 56.86%) 66%, hsl(94.24deg 78.7% 57.65%) 77%, hsl(102deg 74.77% 58.04%) 88%, hsl(111.54deg 70.62% 58.63%) 100%);
-    background-size: 200% 200%;
-  }
+/* Callouts > Fixes */
 
-  body:not(.no-animations) body:not(.ssopt-callout-standard) .callout[data-callout="success"] .callout-title {
-    animation: CalloutSuccess 10s infinite;
-  }
-}
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW11
+\ Callouts 
+\ Global Classes + Metadata
+──────────────────────────────────────────────────────────────────────────────── */
 
-@container whole-body style(--ssopt-callout-style: 1) {
-  body:not(.ssopt-callout-standard) .callout[data-callout="success"] {
-    background: linear-gradient(258deg, hsl(60deg 100% 50%) 0%, hsl(63.47deg 97.58% 51.37%) 11%, hsl(67.6deg 95.82% 53.14%) 22%, hsl(71.89deg 93.13% 54.31%) 33%, hsl(76.47deg 89.47% 55.29%) 44%, hsl(81.76deg 86.55% 56.27%) 55%, hsl(87.36deg 82.73% 56.86%) 66%, hsl(94.24deg 78.7% 57.65%) 77%, hsl(102deg 74.77% 58.04%) 88%, hsl(111.54deg 70.62% 58.63%) 100%);
-    background-size: 200% 200%;
-  }
+/**
+ * Creates a callout modifier based on metadata.
+ * It can handle 1, 2, or 3 aliases for the variant name.
+ *
+ * @param {String} $name - The primary name.
+ * @param {String | null} $alias1 - An optional second name.
+ * @param {String | null} $alias2 - An optional third name.
+ * @content The block of styles to apply when the metadata matches.
+ */
 
-  body:not(.no-animations) body:not(.ssopt-callout-standard) .callout[data-callout="success"] {
-    animation: CalloutSuccess 10s infinite;
-  }
-
-  body:not(.ssopt-callout-standard) .callout[data-callout="success"] .callout-title.callout-title {
-    background: transparent;
-  }
-}
-
-body:not(.no-animations) body:not(.ssopt-callout-standard) .callout[data-callout="important"] .callout-title-inner {
-  animation: CalloutImpt 3s infinite;
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="code"] {
-  border-left-color: var(--text-normal);
-}
-
-.theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="code"] :is(.callout-title-inner, .callout-icon svg) {
-  color: var(--text-normal);
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="code"] .callout-content {
-  font-family: var(--font-monospace);
-}
-
-body:not(.ssopt-callout-standard) .callout[data-callout="code"] .callout-content pre[class*="language-"] {
-  background-color: transparent;
-}
-
-@keyframes CalloutSuccess {
-  0% {
-    background-position: 0% 0%;
-  }
-
-  50% {
-    background-position: 100% 100%;
-  }
-
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-@keyframes CalloutImpt {
-  0% {
-    opacity: 1;
-  }
-
-  20% {
-    opacity: 0.9;
-  }
-
-  40% {
-    opacity: 0.8;
-  }
-
-  50% {
-    opacity: 0.75;
-  }
-
-  60% {
-    opacity: 0.8;
-  }
-
-  80% {
-    opacity: 0.9;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
+/* MIXIN TIME */
 body div.callout:is([data-callout-metadata*="no-t"], [data-callout-metadata*="no-title"]) > .callout-title {
   display: none;
 }
@@ -29517,80 +28904,556 @@ body div.callout:is([data-callout-metadata*="no-m-r"], [data-callout-metadata*="
   margin-right: 0;
 }
 
-.callout[data-callout="columns"] {
-  padding: 0;
-  background-color: unset;
-  margin-bottom: 0;
+/* Callouts > Metadata */
 
-  --callout-color: 150, 150, 150;
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW12
+\ Callouts
+\ Standard Callouts
+───────────────────────────────────────────────────────────────────────────────────
+        >>> CALLOUT COLOURS
+        ───────────────────────────────────────────────────────────────────────── */
+body:not(.ssopt-callout-standard) {
+  /* add Chris's stuff - from Shimmering Focus */
+
+  /* more extras */
+
+  /* plus */
+
+  /* minus */
+
+  /* code */
+
+  /* success */
+
+  /*
+  & .callout-icon svg {
+      background: var(--col-startup);
+      background-color: transparent;
+      background-size: 200% 200%;
+      animation: CalloutSuccess2 20s infinite;
+      animation-fill-mode: forwards;
+
+          @keyframes CalloutSuccess2 {
+              0% {
+                  background-position: 100% 100%;
+              }
+              50% {
+                  background-position: 0% 0%;
+              }
+              100% {
+                  background-position: 100% 100%;
+              }
+          }
+
+          @-webkit-keyframes CalloutSuccess2 {
+              0% {
+                  background-position: 100% 100%;
+              }
+              50% {
+                  background-position: 0% 0%;
+              }
+              100% {
+                  background-position: 100% 100%;
+              }
+          }
+  }
+  */
+
+  /* important */
+
+  /* test stuff */
 }
 
-.callout[data-callout="columns"].callout.callout, .callout[data-callout="columns"].callout.callout:hover {
-  border-left: 0;
+body:not(.ssopt-callout-standard) .callout .callout-title-inner {
+  /* opacity: 0.9; */
+  color: rgb(var(--callout-color));
+  -webkit-font-smoothing: antialiased;
 }
 
-.callout[data-callout="columns"] > .callout-title {
-  background-color: rgb(var(--callout-color), 0.125);
-  border-radius: var(--callout-radius);
+body:not(.ssopt-callout-standard) .callout:is([data-callout="note"],
+[data-callout="aside"]) {
+  --callout-color: 0, 191, 111;
 }
 
-body:is(.ssopt-callout-standard) .callout[data-callout="columns"] > .callout-title {
-  --callout-title-padding: var(--callout-padding);
+body:not(.ssopt-callout-standard) .callout:is([data-callout="abstract"],
+[data-callout="summary"],
+[data-callout="tldr"]) {
+  --callout-color: 91, 197, 219;
+  --callout-icon: loader;
 }
 
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout[data-callout="columns"] > .callout-title:hover {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
-  transition: var(--quick-transition);
+body:not(.ssopt-callout-standard) .callout:is([data-callout="info"],
+[data-callout="todo"]) {
+  --callout-color: 0, 170, 199;
 }
 
-body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout[data-callout="columns"] > .callout-title {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
-  transition: var(--quick-transition);
+body:not(.ssopt-callout-standard) .callout:is([data-callout="tip"],
+[data-callout="hint"]) {
+  --callout-color: 34, 148, 1;
+  --callout-icon: asterisk;
 }
 
-.callout[data-callout="columns"] > .callout-content {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  background-color: unset;
-  gap: 0.5em;
-  max-width: 100%;
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="tip"], [data-callout="hint"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: hsl(107deg 99% 40%);
 }
 
-.callout[data-callout="columns"] > .callout-content > .callout {
-  margin-bottom: auto;
-  margin-top: var(--callout-columns-margin-top);
-  flex: 1 1 100%;
-  flex-wrap: wrap;
+body:not(.ssopt-callout-standard) .callout:is([data-callout="check"],
+[data-callout="done"]) {
+  --callout-color: 0, 158, 76;
 }
 
-.callout[data-callout="aside"] {
-  position: relative;
-  background-color: var(--background-primary-alt);
-  max-width: 25%;
-  min-width: 125px;
-  float: var(--aside-float);
-  margin-left: var(--aside-margin-left);
-  margin-right: var(--aside-margin-right);
-  overflow-wrap: break-word;
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="check"], [data-callout="done"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: hsl(149deg 100% 40%);
 }
 
-.callout[data-callout="aside"] .callout-title {
-  padding-bottom: 0;
+body:not(.ssopt-callout-standard) .callout:is([data-callout="question"],
+[data-callout="help"],
+[data-callout="faq"]) {
+  --callout-color: 160, 199, 92;
 }
 
-.callout[data-callout="aside"] .callout-content {
-  padding: var(--callout-title-padding);
+body:not(.ssopt-callout-standard) .callout:is([data-callout="warning"],
+[data-callout="caution"],
+[data-callout="attention"]) {
+  /* --callout-color: 237, 183, 50; */
+  --callout-color: 255, 182, 26;
 }
 
-.callout[data-callout="aside"] .callout-content p {
-  margin: 0;
+body:not(.ssopt-callout-standard) .callout:is([data-callout="failure"],
+[data-callout="fail"],
+[data-callout="missing"]) {
+  --callout-color: 161, 40, 100;
 }
 
-.callout[data-callout="aside"] .callout-icon {
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="failure"], [data-callout="fail"], [data-callout="missing"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: hsl(330deg 60% 65%);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="danger"],
+[data-callout="error"]) {
+  --callout-color: 241, 0, 34;
+}
+
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="danger"], [data-callout="error"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: hsl(352deg 100% 60%);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="bug"]) {
+  --callout-color: 164, 103, 80;
+}
+
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="bug"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: hsl(16deg 34% 60%);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="example"]) {
+  --callout-color: 125, 84, 178;
+}
+
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="example"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: hsl(266deg 38% 65%);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="quote"],
+[data-callout="cite"]) {
+  --callout-color: 161, 169, 173;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout^="attachment"],
+[data-callout^="file"]) {
+  --callout-color: 197, 101, 199;
+  --callout-icon: paperclip;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="link"],
+[data-callout="url"]) {
+  --callout-color: 127, 127, 127;
+  --callout-icon: link;
+}
+
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="link"], [data-callout="url"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: var(--text-normal);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="phone"]) {
+  --callout-color: 250, 121, 33;
+  --callout-icon: phone;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="email"],
+[data-callout="mail"]) {
+  --callout-color: 250, 121, 33;
+  --callout-icon: at-sign;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="goal"]) {
+  --callout-color: 140, 102, 255;
+  --callout-icon: flag;
+}
+
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="goal"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: hsl(255deg 100% 75%);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="plus"],
+[data-callout="positive"]) {
+  --callout-color: 50, 205, 50;
+  --callout-icon: plus;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="minus"],
+[data-callout="negative"]) {
+  --callout-color: 124, 13, 14;
+  --callout-icon: minus;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="code"]) {
+  --callout-color: 0, 0, 0;
+  --callout-icon: code-2;
+}
+
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="code"]) {
+  border-left-color: var(--text-normal);
+}
+
+body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="code"]) :is(.callout-title-inner, .callout-icon svg) {
+  color: var(--text-normal);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="code"]) .callout-content {
+  font-family: var(--font-monospace);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="code"]) .callout-content pre[class*="language-"] {
+  background-color: transparent;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="success"]) {
+  --callout-color: 0, 158, 76;
+  --callout-icon: star;
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="success"]) :is(.callout-title-inner) {
+  /* color: var(--background-primary); */
+
+  /* -webkit-text-stroke: 1px var(--background-secondary-alt); */
+  filter: brightness(65%) contrast(0.9) hue-rotate(-5deg);
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="success"]) :is(.callout-title) {
+  background: linear-gradient(258deg, hsl(60deg 100% 50%) 0%, hsl(63.47deg 97.58% 51.37%) 11%, hsl(67.6deg 95.82% 53.14%) 22%, hsl(71.89deg 93.13% 54.31%) 33%, hsl(76.47deg 89.47% 55.29%) 44%, hsl(81.76deg 86.55% 56.27%) 55%, hsl(87.36deg 82.73% 56.86%) 66%, hsl(94.24deg 78.7% 57.65%) 77%, hsl(102deg 74.77% 58.04%) 88%, hsl(111.54deg 70.62% 58.63%) 100%);
+  background-color: transparent;
+  background-size: 200% 200%;
+}
+
+body:not(.ssopt-callout-standard, .no-animations) .callout:is([data-callout="success"]) :is(.callout-title) {
+  animation: CalloutSuccess 10s infinite;
+}
+
+@keyframes CalloutSuccess {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes CalloutSuccess {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+body:not(.ssopt-callout-standard) .callout:is([data-callout="important"]) {
+  --callout-color: 191, 63, 54;
+  --callout-icon: flag-triangle-right;
+}
+
+body:not(.ssopt-callout-standard, .no-animations) .callout:is([data-callout="important"]) .callout-title-inner {
+  animation: CalloutImpt 3s infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes CalloutImpt {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0.9;
+  }
+
+  40% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes CalloutImpt {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0.9;
+  }
+
+  40% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> CUSTOM CALLOUT ICONS
+──────────────────────────────────────────────────────────────────────────── */
+body:not(.icons-obsidian-standard) .callout[data-callout="success"] svg.star {
+  background-color: hsl(149deg 100% 31%);
+  transform: rotate(45deg);
+  mask-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.587 8.236l2.598-5.232a.911.911 0 0 1 1.63 0l2.598 5.232l5.808.844a.902.902 0 0 1 .503 1.542l-4.202 4.07l.992 5.75c.127.738-.653 1.3-1.32.952L12 18.678l-5.195 2.716c-.666.349-1.446-.214-1.319-.953l.992-5.75l-4.202-4.07a.902.902 0 0 1 .503-1.54l5.808-.845Z"%2F%3E%3C%2Fsvg%3E');
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  /* background-color: rgb(0, 158, 76); */
+
+ /* sama-sama */
+}
+
+body:not(.icons-obsidian-standard) .callout[data-callout="success"] svg.star > * {
   display: none;
 }
 
+/* Callouts > Standard Callouts */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW13
+\ Callouts
+\ Columns
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --callout-columns-margin-top: var(--margin-callout);
+}
+
+body .callout:is([data-callout="columns"]) {
+  --callout-color: 150, 150, 150;
+  --callout-icon: lucide-columns; /* fallback option: grid */
+
+  background-color: unset;
+  margin-bottom: 0;
+}
+
+body .callout:is([data-callout="columns"]):hover {
+  border-left: 0 solid rgb(var(--callout-color));
+}
+
+body .callout:is([data-callout="columns"]) > .callout-title {
+  background-color: rgb(var(--callout-color), 0.125); /* inherits the original */
+  border-radius: var(--callout-radius);
+}
+
+body .callout:is([data-callout="columns"]) > .callout-title:hover {
+  border-left: 5px solid rgb(var(--callout-color));
+  transition: var(--quick-transition);
+}
+
+body .callout:is([data-callout="columns"]) > .callout-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  background-color: unset; /* remove background */
+  gap: 0.5em;
+  max-width: 100%;
+
+  /* padding: 0 0.5em; */
+}
+
+body .callout:is([data-callout="columns"]) > .callout-content > .callout {
+  margin-bottom: auto;
+  margin-top: var(--callout-columns-margin-top);
+}
+
+body .callout:is([data-callout="columns"]) > .callout-content .callout {
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+
+  /* min-width: var(--callout-columns-sub-width-min); */
+}
+
+body .callout:is([data-callout="columns"]) > .callout-content .callout .callout-content {
+  /* border: 0px; */
+}
+
+/* clamp flex in order to force minimum width
+to relook at later */
+.theme-light, .theme-dark {
+  --callout-columns-sub-width-min: max(50%,200px);
+}
+
+/* Callouts > Columns */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW23
+\ Admonitions and Callouts 
+\ Aside
+\ by me!
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+Aside Callouts for Obsidian
+Author: @tingmelvin
+Version: 0.2.0
+
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --aside-callout-padding: var(--size-2-3) var(--size-4-2);
+  --aside-callout-float: right;
+  --aside-callout-margin-left: var(--p-spacing-root);
+  --aside-callout-margin-right: 0;
+}
+
+body:is(.ssopt-callout-aside-float-left) {
+  --aside-callout-float: left;
+  --aside-callout-margin-left: 0;
+  --aside-callout-margin-right: var(--p-spacing-root);
+}
+
+div.callout[data-callout="aside"] {
+  position: relative;
+  background-color: var(--background-primary-alt);
+
+  /* text-align: justify; */
+  max-width: 25%;
+  min-width: 125px;
+  float: var(--aside-callout-float);
+  margin-left: var(--aside-callout-margin-left);
+  margin-right: var(--aside-callout-margin-right);
+  word-break: break-word;
+}
+
+div.callout[data-callout="aside"] .callout-content {
+  padding: 0 var(--size-4-2) var(--size-2-3);
+}
+
+div.callout[data-callout="aside"] .callout-content p {
+  margin: 0;
+}
+
+div.callout[data-callout="aside"] .callout-title {
+  padding: var(--aside-callout-padding);
+}
+
+div.callout[data-callout="aside"] .callout-icon {
+  display: none;
+}
+
+/* Callouts > Aside */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> EW24
+\ Admonitions and Callouts 
+\ Infobox
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+Infobox Callouts for Obsidian
+Author: @tingmelvin
+Version: 0.2.0
+
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --infobox-title-font-size: var(--h2-size);
+  --infobox-max-width: 50%;
+  --infobox-set-width: 50%;
+}
+
+/* --- Infobox Callout Styles --- */
 .callout[data-callout="infobox"] {
   float: right;
   max-width: var(--infobox-max-width);
@@ -29599,7 +29462,7 @@ body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout[d
   margin-left: 0.5rem;
 }
 
-.callout[data-callout="infobox"]:hover {
+.callout[data-callout="infobox"].callout:hover {
   border-left: none;
 }
 
@@ -29624,14 +29487,14 @@ body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout[d
   border: none;
 }
 
-.callout[data-callout="infobox"] .callout-content :is(h1, h2, h3, h4, h5, h6) {
+.callout[data-callout="infobox"] .callout-content.callout-content :is(h1, h2, h3, h4, h5, h6) {
   font-size: var(--editor-font-size);
   text-align: center;
   padding-left: 0.15rem;
   padding-right: 0.15rem;
 }
 
-.callout[data-callout="infobox"] .callout-content :is(h1, h2, h3, h4, h5, h6):is([data-heading*=".png"], [data-heading*=".jpg"], [data-heading*=".jpeg"], [data-heading*=".gif"], [data-heading*=".svg"], [data-heading*=".webp"], [data-heading*=".bmp"], [data-heading*=".avif"]) {
+.callout[data-callout="infobox"] .callout-content.callout-content :is(h1, h2, h3, h4, h5, h6):is([data-heading*=".png"], [data-heading*=".jpg"], [data-heading*=".jpeg"], [data-heading*=".gif"], [data-heading*=".svg"], [data-heading*=".webp"], [data-heading*=".bmp"], [data-heading*=".avif"]) {
   background-color: unset;
 }
 
@@ -29643,32 +29506,21 @@ body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout[d
   justify-self: center;
 }
 
+/* --- Rules for Elements preceding an Infobox --- */
 div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6, .el-hr) {
   display: flex;
 }
 
 div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6, .el-hr) > * {
   flex-grow: 1;
-  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 div:is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6, .el-hr) + div.callout[data-callout="infobox"] {
   margin-top: calc(var(--margin-callout) - 0.5em);
 }
 
-body:not(.icons-obsidian-standard) .callout[data-callout="success"] svg.star {
-  background-color: hsl(149deg 100% 31%);
-  transform: rotate(45deg);
-  mask-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8.587 8.236l2.598-5.232a.911.911 0 0 1 1.63 0l2.598 5.232l5.808.844a.902.902 0 0 1 .503 1.542l-4.202 4.07l.992 5.75c.127.738-.653 1.3-1.32.952L12 18.678l-5.195 2.716c-.666.349-1.446-.214-1.319-.953l.992-5.75l-4.202-4.07a.902.902 0 0 1 .503-1.54l5.808-.845Z"%2F%3E%3C%2Fsvg%3E');
-  mask-position: center;
-  mask-repeat: no-repeat;
-}
-
-body:not(.icons-obsidian-standard) .callout[data-callout="success"] svg.star > * {
-  display: none;
-}
-
-/* Callouts (New Global File) */
+/* Callouts > Infobox */
 
 /* ────────────────────────────────────────────────────────────────────────────────
 > EY11
@@ -29717,7 +29569,7 @@ aside {
   max-width: 25%;
   min-width: 125px;
   text-align: var(--aside-text-align);
-  overflow-wrap: break-word;
+  word-break: break-word;
   float: var(--aside-float);
 }
 
@@ -31272,15 +31124,15 @@ body {
 }
 
 /* PB006-01A | Auto Alternating Colours for Tables */
-body:not(.ssopt-no-table-colours) :where(.cm-html-embed, .markdown-rendered) thead tr {
+body:not(.ssopt-no-table-colours) .cm-html-embed thead tr, .markdown-rendered thead tr {
   background-color: var(--color-table-head);
 }
 
-body:not(.ssopt-no-table-colours) :where(.cm-html-embed, .markdown-rendered) tbody tr:nth-child(odd) {
+body:not(.ssopt-no-table-colours) .cm-html-embed tbody tr:nth-child(odd), .markdown-rendered tbody tr:nth-child(odd) {
   background-color: var(--color-table-odd);
 }
 
-body:not(.ssopt-no-table-colours) :where(.cm-html-embed, .markdown-rendered) tbody tr:nth-child(even) {
+body:not(.ssopt-no-table-colours) .cm-html-embed tbody tr:nth-child(even), .markdown-rendered tbody tr:nth-child(even) {
   background-color: var(--color-table-even);
 }
 
@@ -31691,8 +31543,6 @@ Style Settings only appear when the right options are being selected!
 
   /* 6. HEADERS */
 
-  /* 6A. HEADER TEXT COLOURS */
-
   /* 7. RIBBONS */
 
   /* 8. ADVANCED TABLES */
@@ -31710,10 +31560,6 @@ Style Settings only appear when the right options are being selected!
   /* 14. PROPERTIES/FRONTMATTER STUFF */
 
   /* 15. ACTIVE LINE HIGHLIGHT STUFF */
-
-  /* 16. CALLOUTS STUFF */
-
-  /* 17. BLOCK WIDTHS STUFF */
 
   /* 20. COLOURS STUFF */
 }
@@ -31842,30 +31688,6 @@ body:is(.ssopt-smaller-header-hexes) .setting-item.setting-item:where([data-id="
   display: grid;
 }
 
-body:not(.ssopt-no-coloured-headers) .setting-item.setting-item:where([data-id="header-text-colours"]) {
-  display: none;
-}
-
-body:not(.ssopt-no-coloured-headers) .setting-item.setting-item:where([data-id="header-text-colours"]) + .style-settings-container {
-  display: none;
-}
-
-body:is(.theme-dark) .setting-item.setting-item:where([data-id="header-text-colours-light"]) {
-  display: none;
-}
-
-body:is(.theme-dark) .setting-item.setting-item:where([data-id="header-text-colours-light"]) + .style-settings-container {
-  display: none;
-}
-
-body:is(.theme-light) .setting-item.setting-item:where([data-id="header-text-colours-dark"]) {
-  display: none;
-}
-
-body:is(.theme-light) .setting-item.setting-item:where([data-id="header-text-colours-dark"]) + .style-settings-container {
-  display: none;
-}
-
 .setting-item.setting-item:where([data-id="ssopt-ribbon-no-drag"]) {
   display: none;
 }
@@ -31939,18 +31761,6 @@ body:is(.ssopt-hide-metadata-container-lp) .setting-item.setting-item:where([dat
 }
 
 body:is(.ssopt-disable-alh) .setting-item.setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
-  display: none;
-}
-
-body:is(.ssopt-callout-standard) .setting-item.setting-item:where([data-id="ssopt-callout-no-hover"], [data-id="callout-border-left-extra"], [data-id="callout-border-base-width-override"], [data-id="ssopt-callout-style"]) {
-  display: none;
-}
-
-body:not(.ssopt-block-width-tables) .setting-item.setting-item:where([data-id="ssopt-bw-table-content-fit"], [data-id="magnifier-bw-table"], [data-id="ratio-bw-table-source"], [data-id="ratio-bw-table-reading"]) {
-  display: none;
-}
-
-body:not(.ssopt-block-width-bases) .setting-item.setting-item:where([data-id="magnifier-bw-bases"], [data-id="ratio-bw-bases-source"], [data-id="ratio-bw-bases-reading"]) {
   display: none;
 }
 
@@ -32110,8 +31920,6 @@ body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-sd-float-ribb
 
   /* 6. HEADERS */
 
-  /* 6A. HEADER TEXT COLOURS */
-
   /* 7. RIBBONS */
 
   /* 8. ADVANCED TABLES */
@@ -32129,10 +31937,6 @@ body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-sd-float-ribb
   /* 14. PROPERTIES/FRONTMATTER STUFF */
 
   /* 15. ACTIVE LINE HIGHLIGHT STUFF */
-
-  /* 16. CALLOUTS STUFF */
-
-  /* 17. BLOCK WIDTHS STUFF */
 
   /* 20. COLOURS STUFF */
 }
@@ -32261,30 +32065,6 @@ body:is(.ssopt-smaller-header-hexes) .view-content .style-settings-container.sty
   display: grid;
 }
 
-body:not(.ssopt-no-coloured-headers) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours"]) {
-  display: none;
-}
-
-body:not(.ssopt-no-coloured-headers) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours"]) + .style-settings-container {
-  display: none;
-}
-
-body:is(.theme-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-light"]) {
-  display: none;
-}
-
-body:is(.theme-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-light"]) + .style-settings-container {
-  display: none;
-}
-
-body:is(.theme-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-dark"]) {
-  display: none;
-}
-
-body:is(.theme-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-dark"]) + .style-settings-container {
-  display: none;
-}
-
 .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-ribbon-no-drag"]) {
   display: none;
 }
@@ -32358,18 +32138,6 @@ body:is(.ssopt-hide-metadata-container-lp) .view-content .style-settings-contain
 }
 
 body:is(.ssopt-disable-alh) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
-  display: none;
-}
-
-body:is(.ssopt-callout-standard) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-callout-no-hover"], [data-id="callout-border-left-extra"], [data-id="callout-border-base-width-override"], [data-id="ssopt-callout-style"]) {
-  display: none;
-}
-
-body:not(.ssopt-block-width-tables) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-bw-table-content-fit"], [data-id="magnifier-bw-table"], [data-id="ratio-bw-table-source"], [data-id="ratio-bw-table-reading"]) {
-  display: none;
-}
-
-body:not(.ssopt-block-width-bases) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="magnifier-bw-bases"], [data-id="ratio-bw-bases-source"], [data-id="ratio-bw-bases-reading"]) {
   display: none;
 }
 
@@ -32760,17 +32528,17 @@ PC000D-2 | Underline Customisations + TWO LINE DISPLAY
   grid-area: btm;
 }
 
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"], .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] {
+.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] {
   display: grid;
   gap: var(--size-4-2);
   grid-template-areas: "top top" "btm btm";
 }
 
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] .setting-item-info {
+.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-info {
   grid-area: top;
 }
 
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] .setting-item-control {
+.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-control {
   grid-area: btm;
 }
 
@@ -32920,47 +32688,47 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   /* inject the selector and yield */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   /* overrides whatever first child settings there is */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-control {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-control {
   display: none;
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   overflow: auto;
   overflow-wrap: anywhere;
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   padding: 0.75em; /* used to be 0.75em and 0 */
   background-color: var(--background-secondary);
   border-left: 1px solid var(--background-modifier-border);
   border-right: 1px solid var(--background-modifier-border);
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-description {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-description {
   color: var(--text-accent);
   text-align: justify;
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]):first-child {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]):first-child {
   border-top: 1px solid var(--background-modifier-border);
   padding-top: var(--padding-ss);
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
   /* INFO ICON */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
   /* add icon? */
 
   /* add hover color change */
 }
 
-.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"])::after {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"])::after {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22lucide%20lucide-info-icon%20lucide-info%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M12%2016v-4%22/%3E%3Cpath%20d%3D%22M12%208h.01%22/%3E%3C/svg%3E");
@@ -32972,12 +32740,8 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   justify-self: right;
 }
 
-.theme-light .setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
-  background: oklch(from var(--icon-color) calc(l - 0.2) c h);
-}
-
-.theme-dark .setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
-  background: oklch(from var(--icon-color) calc(l + 0.2) c h);
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
+  filter: contrast(180%);
 }
 
 /* just this to make sure it closes the bottom off for the main infobox for CSSClass */
@@ -32989,26 +32753,6 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
 
 .setting-item:where([data-id="info-cssclass"]) {
   border-bottom: 1px solid var(--background-modifier-border);
-}
-
-.setting-item {
-  /* build a comma-separated list of [data-id="…"] */
-
-  /* inject the selector and yield */
-}
-
-.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name {
-  font-weight: 500;
-}
-
-.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name::after {
-  display: inline-flex;
-  width: var(--sidebar-icon-size);
-  height: var(--sidebar-icon-size);
-  font-family: remixicon;
-  color: var(--text-accent);
-  content: "\efbf";
-  margin-left: 4px;
 }
 
 /* Information Settings for SS */
@@ -33961,186 +33705,6 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Revert to Original Obsidian Styling on Standard Callouts' disabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="callout-border-left-width"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="callout-border-left-width"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Revert to Original Obsidian Styling on Standard Callouts' disabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="header-text-colours"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="header-text-colours"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'No Background Coloured Headers' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for Tables' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="magnifier-bw-table"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="magnifier-bw-table"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for Tables' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ratio-bw-table-source"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ratio-bw-table-source"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for Tables' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for Tables' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="magnifier-bw-bases"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="magnifier-bw-bases"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for Bases' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for Bases' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for Bases' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
 /* SET NOTES - experimental or whatnot */
 .setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) {
   /* ADD ALL THE STUFF HERE */
@@ -34237,12 +33801,8 @@ So content is set via the Style Settings.
   justify-self: right;
 }
 
-.theme-light .setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
-  background: oklch(from var(--icon-color) calc(l - 0.2) c h);
-}
-
-.theme-dark .setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
-  background: oklch(from var(--icon-color) calc(l + 0.2) c h);
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
+  filter: contrast(180%);
 }
 
 /* Syntax Flair for SS */
@@ -35341,7 +34901,7 @@ body:is(.ssopt-acrs-enable) .setting-item[data-id="ssopt-acrs-enable"] .setting-
 /* --------------------------------------------------------------------------------
    [13] Rainbow Colours RealDisplay
 ----------------------------------------------------------------------------------- */
-.setting-item:is([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"], [data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"], [data-id="color-pax-l-accent-textfield"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"], [data-id="color-pax-d-accent-textfield"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"], [data-id="canvas-background"], [data-id="h1-color-dark"], [data-id="h2-color-dark"], [data-id="h3-color-dark"], [data-id="h4-color-dark"], [data-id="h5-color-dark"], [data-id="h6-color-dark"], [data-id="h1-color-light"], [data-id="h2-color-light"], [data-id="h3-color-light"], [data-id="h4-color-light"], [data-id="h5-color-light"], [data-id="h6-color-light"]) .setting-item-control::before {
+.setting-item:is([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"], [data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"], [data-id="color-pax-l-accent-textfield"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"], [data-id="color-pax-d-accent-textfield"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"], [data-id="canvas-background"]) .setting-item-control::before {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   padding: var(--size-2-3);
@@ -35442,54 +35002,6 @@ body:is(.ssopt-acrs-enable) .setting-item[data-id="ssopt-acrs-enable"] .setting-
   background-color: var(--canvas-background);
 }
 
-.setting-item[data-id="h1-color-dark"] .setting-item-control::before {
-  background-color: var(--h1-color-dark);
-}
-
-.setting-item[data-id="h2-color-dark"] .setting-item-control::before {
-  background-color: var(--h2-color-dark);
-}
-
-.setting-item[data-id="h3-color-dark"] .setting-item-control::before {
-  background-color: var(--h3-color-dark);
-}
-
-.setting-item[data-id="h4-color-dark"] .setting-item-control::before {
-  background-color: var(--h4-color-dark);
-}
-
-.setting-item[data-id="h5-color-dark"] .setting-item-control::before {
-  background-color: var(--h5-color-dark);
-}
-
-.setting-item[data-id="h6-color-dark"] .setting-item-control::before {
-  background-color: var(--h6-color-dark);
-}
-
-.setting-item[data-id="h1-color-light"] .setting-item-control::before {
-  background-color: var(--h1-color-light);
-}
-
-.setting-item[data-id="h2-color-light"] .setting-item-control::before {
-  background-color: var(--h2-color-light);
-}
-
-.setting-item[data-id="h3-color-light"] .setting-item-control::before {
-  background-color: var(--h3-color-light);
-}
-
-.setting-item[data-id="h4-color-light"] .setting-item-control::before {
-  background-color: var(--h4-color-light);
-}
-
-.setting-item[data-id="h5-color-light"] .setting-item-control::before {
-  background-color: var(--h5-color-light);
-}
-
-.setting-item[data-id="h6-color-light"] .setting-item-control::before {
-  background-color: var(--h6-color-light);
-}
-
 .setting-item:is([data-id="canvas-dot-pattern"]) .setting-item-control::before {
   width: 30%;
   height: var(--header-icon-size);
@@ -35587,254 +35099,6 @@ body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons
 body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::after {
   mask-image: none;
   background-color: transparent;
-}
-
-/* --------------------------------------------------------------------------------
-   [15] Callouts RealDisplay
------------------------------------------------------------------------------------ */
-.setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control {
-  position: relative;
-  display: grid;
-  grid-template-columns: 25px 1fr 25px 2fr auto;
-  grid-template-rows: 1fr;
-
-  --callout-color: 150, 150, 150;
-}
-
-body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control:hover::before {
-  --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
-
-  border-left: var(--callout-border-left-width) solid oklch(from rgb(var(--callout-color)) l c h);
-  transition: var(--quick-transition);
-}
-
-@container whole-body style(--ssopt-callout-style: 1) {
-  body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control:hover::after {
-    padding-left: calc(0.75em + var(--callout-border-left-extra));
-    transition: var(--quick-transition);
-  }
-}
-
-.setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-  height: var(--header-icon-size);
-  padding: var(--size-2-3);
-  font-family: var(--font-text);
-  background-color: rgb(var(--callout-color), 0.125);
-  border-radius: var(--callout-radius);
-  box-shadow: inset 0 0 0 var(--callout-border-other-width) oklch(from rgb(var(--callout-color)) l c h);
-  content: "";
-  grid-column: 1/4;
-  grid-row: 1/1;
-  flex-shrink: 0;
-  line-height: 1;
-  animation: changeCalloutText 10s infinite, changeCalloutColor 10s infinite;
-  text-align: start;
-  align-self: center;
-
-  --callout-radius: var(--radius-s);
-  --callout-border-other-width: var(--callout-border-base-width);
-  --callout-border-base-width: var(--callout-border-base-width-override, var(--callout-border-base-width-preset, 0px));
-}
-
-@container whole-body style(--ssopt-callout-style: 0) {
-  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-    --callout-border-base-width-preset: 0px;
-
-    font-family: var(--font-heading);
-    font-weight: 600;
-  }
-
-  .theme-light .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-    color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
-  }
-
-  .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-    color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
-  }
-}
-
-@container whole-body style(--ssopt-callout-style: 1) {
-  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-    --callout-border-base-width-preset: 1px;
-    --callout-radius: 0px;
-
-    font-weight: 500;
-    padding-left: calc(0.75em + 20px + 0.75em);
-    color: var(--text-normal);
-  }
-
-  .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-    box-shadow: none;
-  }
-}
-
-body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-  --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
-
-  border-left: var(--callout-border-left-width) solid oklch(from rgb(var(--callout-color)) l c h);
-}
-
-@keyframes changeCalloutText {
-  0%, 100% {
-    content: "Note";
-  }
-
-  10% {
-    content: "Abstract";
-  }
-
-  20% {
-    content: "Info";
-  }
-
-  30% {
-    content: "Tip";
-  }
-
-  40% {
-    content: "Check";
-  }
-
-  50% {
-    content: "Question";
-  }
-
-  60% {
-    content: "Warning";
-  }
-
-  70% {
-    content: "Missing";
-  }
-
-  80% {
-    content: "Danger";
-  }
-
-  90% {
-    content: "Bug";
-  }
-}
-
-@keyframes changeCalloutIcon {
-  0%, 100% {
-    content: "\efe0";
-  }
-
-  10% {
-    content: "\eec2";
-  }
-
-  20% {
-    content: "\ee59";
-  }
-
-  30% {
-    content: "\ea81";
-  }
-
-  40% {
-    content: "\eb7b";
-  }
-
-  50% {
-    content: "\f045";
-  }
-
-  60% {
-    content: "\ea21";
-  }
-
-  70% {
-    content: "\eb99";
-  }
-
-  80% {
-    content: "\ed3d";
-  }
-
-  90% {
-    content: "\eb07";
-  }
-}
-
-@keyframes changeCalloutColor {
-  0%, 100% {
-    --callout-color: 0, 191, 111;
-  }
-
-  10% {
-    --callout-color: 91, 197, 219;
-  }
-
-  20% {
-    --callout-color: 0, 170, 199;
-  }
-
-  30% {
-    --callout-color: 34, 148, 1;
-  }
-
-  40% {
-    --callout-color: 0, 158, 76;
-  }
-
-  50% {
-    --callout-color: 160, 199, 92;
-  }
-
-  60% {
-    --callout-color: 255, 182, 26;
-  }
-
-  70% {
-    --callout-color: 161, 40, 100;
-  }
-
-  80% {
-    --callout-color: 241, 0, 34;
-  }
-
-  90% {
-    --callout-color: 164, 103, 80;
-  }
-}
-
-.setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-  width: 20px;
-  font-family: remixicon;
-  color: rgb(var(--callout-color));
-  transform: translateY(-1px);
-  content: "\f18c";
-  text-align: center;
-  animation: changeCalloutColor 10s infinite, changeCalloutIcon 10s infinite;
-}
-
-@container whole-body style(--ssopt-callout-style: 0) {
-  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-    grid-column: 3/4;
-    grid-row: 1/1;
-  }
-
-  .theme-light .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-    color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
-  }
-
-  .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-    color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
-  }
-}
-
-@container whole-body style(--ssopt-callout-style: 1) {
-  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-    grid-column: 1/2;
-    grid-row: 1/1;
-    padding-left: 0.75em;
-  }
-
-  body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-    padding-left: calc(0.75em + var(--callout-border-left-extra));
-  }
 }
 
 /* RealDisplay for SS */
@@ -37001,7 +36265,7 @@ CSS-ing the Credits section
   font-size: var(--font-ui-small);
   background-color: var(--background-primary-alt);
   border-radius: var(--radius-s);
-  content: "cssclasses: [latex]";
+  content: "cssclasses: latex";
   align-self: center;
   font-weight: var(--font-normal);
 }
@@ -37033,24 +36297,7 @@ CSS-ing the Credits section
   font-size: var(--font-ui-small);
   background-color: var(--background-primary-alt);
   border-radius: var(--radius-s);
-  content: "cssclasses: [cornell]";
-  align-self: center;
-  font-weight: var(--font-normal);
-}
-
-.setting-item[data-id="cssclass-banner"] .setting-item-control {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-gap: 2%;
-}
-
-.setting-item[data-id="cssclass-banner"] .setting-item-control::before {
-  padding: 4px 8px;
-  font-family: var(--font-monospace);
-  font-size: var(--font-ui-small);
-  background-color: var(--background-primary-alt);
-  border-radius: var(--radius-s);
-  content: "cssclasses: [banner]";
+  content: "cssclasses: cornell";
   align-self: center;
   font-weight: var(--font-normal);
 }
@@ -37344,28 +36591,6 @@ body:where(.PComm002-canvas-background) .kanban-plugin {
 body:where(.PComm002-canvas-background) .kanban-plugin__board {
   background-image: radial-gradient(var(--PComm002-CB-dot-colour) var(--PComm002-CB-dot-size), transparent var(--PComm002-CB-dot-size));
   background-size: var(--PComm002-CB-dot-spacing) var(--PComm002-CB-dot-spacing);
-}
-
-/* ────────────────────────────────────────────────────────────────────────────
->>> FIX | Plugin Lane Titles + Padding Fix
-──────────────────────────────────────────────────────────────────────────── */
-.kanban-plugin__lane-wrapper.collapse-horizontal .kanban-plugin__lane-title-count, .kanban-plugin__lane-wrapper.collapse-horizontal .kanban-plugin__lane-title-text {
-  display: flex;
-  align-items: center;
-}
-
-.kanban-plugin__lane-header-wrapper {
-  padding-inline: 4px;
-}
-
-.kanban-plugin__lane-title .markdown-preview-view {
-  font-size: var(--font-ui-small);
-
-  --font-text-size: var(--font-ui-small);
-}
-
-.kanban-plugin__lane-wrapper {
-  margin-inline-end: 4px;
 }
 
 /* Kanban */
@@ -38273,9 +37498,7 @@ body {
 /* X101-12 | Purely for Mac */
 .mod-macos {
   --size-scrollbar-non-native: 0px;
-
-  /* --frame-left-space: calc(4.5vw); // needs vw in order to scale properly with Shift + in Mac */
-  --frame-left-space: calc(calc(80px - var(--ribbon-width)) / var(--zoom-factor));
+  --frame-left-space: calc(4.5vw);
   --titlebar-height: 40px;
 }
 
@@ -38285,30 +37508,6 @@ body {
 
 .mod-macos .sidebar-toggle-button.mod-left {
   margin: var(--header-margin) var(--header-margin-half);
-}
-
-.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
-  padding-right: 1px; /* just to make sure it works */
-}
-
-.mod-macos .sidebar-toggle-button.mod-left {
-  padding-left: 1px;
-}
-
-.mod-macos.is-hidden-frameless.is-fullscreen .mod-top {
-  overflow: visible;
-}
-
-.mod-macos.is-hidden-frameless.is-fullscreen :where(.side-dock-ribbon.is-collapsed) ~ .mod-root .workspace-tab-header-container {
-  left: calc(-1 * var(--ribbon-width));
-  width: calc-size(auto, size + var(--ribbon-width));
-  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
-}
-
-.mod-macos.is-hidden-frameless.is-fullscreen :where(.side-dock-ribbon.is-collapsed)::before {
-  background-color: transparent;
-  pointer-events: none;
-  transition: 0.2s ease-in-out;
 }
 
 /* X101-13 | Hide Tooltip */
@@ -43965,27 +43164,27 @@ settings:
             id: info-coloured-headers
             title: Note on Coloured Headers
             type: class-toggle
-            description: "By default, Willemstad uses the accent colours (--color-accent, --color-accent-1 and --color-accent-2) to colour the background of the headers. You can customise these by enabling 'Custom Header Colours (Background Colours)'. For legacy users of Willemstad, the previous header styles are available under 'Old Willemstad Header Colours'. If you prefer no background colours but coloured header text, please toggle the 'No Background Coloured Headers' option."  
+            description: "By default, Willemstad uses the accent colours (--color-accent, --color-accent-1 and --color-accent-2) to colour the headers. You can customise these by enabling 'Custom Header Colours'. For legacy users of Willemstad, the previous header styles are available under 'Old Willemstad Header Colours'."  
             default: false    
     -
             id: info-coloured-headers-text
-            title: Note on Header Text Colours
+            title: Note on Coloured Header Text
             type: class-toggle
-            description: "If the Background Coloured Headers are enabled, Willemstad sets the header text colours mathematically in accordance to the colours chosen for your headers."  
+            description: "For your information, Willemstad sets the header text colours mathematically in accordance to the colours chosen for your headers."  
             default: false    
     -
             id: ssopt-no-coloured-headers
-            title: No Background Coloured Headers
+            title: No Coloured Headers
             type: class-toggle
             document: EH01-HSetBase
-            description: "Headers with background colours are enabled by default in Willemstad. When enabled, this will remove the background colouring for headers, and also optionally allows you to set headers with coloured text."
+            description: "Coloured Headers are enabled by default in Willemstad. When enabled, this will remove the coloured headers."
             default: false
     -
             id: ssopt-headers-custom-colours
-            title: Custom Header Colours (Background Colours)
+            title: Custom Header Colours
             type: class-toggle
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled)
+            notes: (Requires 'No Coloured Headers' disabled)
             description: "When enabled, this will allow you to set custom header colours."
             default: false
     -
@@ -43993,7 +43192,7 @@ settings:
             title: Old Willemstad Header Colours
             type: class-toggle
             document: EH12-HCol-OldStad
-            notes: (Requires 'No Background Coloured Headers' disabled)
+            notes: (Requires 'No Coloured Headers' disabled)
             description: "When enabled, this will use the old Willemstad header colours. There are two options for the old header colours: the original Willemstad colours, and the old Willemstad-style Nord colours."
             default: false
     -
@@ -44001,7 +43200,7 @@ settings:
             title: Old Header Colour Palettes
             type: class-select
             document: EH12-HCol-OldStad
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Old Willemstad Header Colours' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Old Willemstad Header Colours' enabled)
             description: "Use the dropdown to choose either the original Willemstad colours, or the old Willemstad-style Nord colours."
             default: ssopt-headers-old-style-willemstad
             options:
@@ -44016,7 +43215,7 @@ settings:
             title: Custom Header Colour 0
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
             description: "This header colour is applied to H1 (and H4 headers, if 'Complete Header Colour Control' is not enabled)."
             opacity: false
             format: hsl
@@ -44027,7 +43226,7 @@ settings:
             title: Custom Header Colour 1
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
             description: "This header colour is applied to H2 (and H5 headers, if 'Complete Header Colour Control' is not enabled)."
             opacity: false
             format: hsl
@@ -44038,7 +43237,7 @@ settings:
             title: Custom Header Colour 2
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
             description: "This header colour is applied to H3 (and H6 headers, if 'Complete Header Colour Control' is not enabled)."
             opacity: false
             format: hsl
@@ -44049,7 +43248,7 @@ settings:
             title: Complete Header Colour Control
             type: class-toggle
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
             description: "When enabled, this will allow you to fully customise all header colours."
             default: false
     -
@@ -44057,7 +43256,7 @@ settings:
             title: Custom Header Colour H4
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This header colour is applied to H4 headers.'
             opacity: false
             format: hsl
@@ -44068,7 +43267,7 @@ settings:
             title: Custom Header Colour H5
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This header colour is applied to H5 headers.'
             opacity: false
             format: hsl
@@ -44079,7 +43278,7 @@ settings:
             title: Custom Header Colour H6
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This header colour is applied to H6 headers.'
             opacity: false
             format: hsl
@@ -44090,7 +43289,7 @@ settings:
             title: Custom Header Text Colour H1
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This text colour is applied to H1 headers.'
             opacity: false
             format: hsl
@@ -44101,7 +43300,7 @@ settings:
             title: Custom Header Text Colour H2
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This text colour is applied to H2 headers.'
             opacity: false
             format: hsl
@@ -44112,7 +43311,7 @@ settings:
             title: Custom Header Text Colour H3
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This text colour is applied to H3 headers.'
             opacity: false
             format: hsl
@@ -44123,7 +43322,7 @@ settings:
             title: Custom Header Text Colour H4
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This text colour is applied to H4 headers.'
             opacity: false
             format: hsl
@@ -44134,7 +43333,7 @@ settings:
             title: Custom Header Text Colour H5
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This text colour is applied to H5 headers.'
             opacity: false
             format: hsl
@@ -44145,620 +43344,12 @@ settings:
             title: Custom Header Text Colour H6
             type: variable-themed-color
             document: EH13-HCol-Custom
-            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            notes: (Requires 'No Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
             description: 'This text colour is applied to H6 headers.'
             opacity: false
             format: hsl
             default-light: hsl(0, 0%, 100%)
             default-dark: hsl(0, 0%, 100%)
-    -
-    -
-        id: header-text-colours
-        title: Header Text Colours
-        type: heading
-        description: "These settings allow you to set the color for each header level from the set accent and rainbow palettes, should you prefer coloured text. These settings will automatically show you the options for the current light/dark theme mode. You are able to set different header text colours for both modes without them affecting each other."
-        level: 3
-        collapsed: false
-    -
-            id: header-text-colours-light
-            title: Light Mode
-            type: heading
-            level: 4
-            collapsed: false
-    -
-                id: h1-color-light
-                title: "H1 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h2-color-light
-                title: "H2 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h3-color-light
-                title: "H3 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h4-color-light
-                title: "H4 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h5-color-light
-                title: "H5 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h6-color-light
-                title: "H6 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-            id: header-text-colours-dark
-            title: Dark Mode
-            type: heading
-            level: 4
-            collapsed: false
-    -
-                id: h1-color-dark
-                title: "H1 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h2-color-dark
-                title: "H2 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h3-color-dark
-                title: "H3 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h4-color-dark
-                title: "H4 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h5-color-dark
-                title: "H5 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
-    -
-                id: h6-color-dark
-                title: "H6 Color"
-                type: variable-select
-                allowEmpty: false
-                default: 'inherit'
-                options:
-                    -
-                        label: "Default (Inherit)"
-                        value: 'inherit'
-                    -
-                        label: "  Accent Colours  "
-                        value: 'no-stuff-break-accent'
-                    -
-                        label: "Accent"
-                        value: 'var(--color-accent)'
-                    -
-                        label: "Accent 1"
-                        value: 'var(--color-accent-1)'
-                    -
-                        label: "Accent 2"
-                        value: 'var(--color-accent-2)'
-                    -
-                        label: "  Rainbow Colours  "
-                        value: 'no-stuff-break-rainbow'
-                    -
-                        label: "Red"
-                        value: 'var(--color-red)'
-                    -
-                        label: "Orange"
-                        value: 'var(--color-orange)'
-                    -
-                        label: "Yellow"
-                        value: 'var(--color-yellow)'
-                    -
-                        label: "Green"
-                        value: 'var(--color-green)'
-                    -
-                        label: "Cyan"
-                        value: 'var(--color-cyan)'
-                    -
-                        label: "Blue"
-                        value: 'var(--color-blue)'
-                    -
-                        label: "Purple"
-                        value: 'var(--color-purple)'
-                    -
-                        label: "Pink"
-                        value: 'var(--color-pink)'
     -
         id: header-hexes
         title: Header Hexes
@@ -45054,19 +43645,6 @@ settings:
             description: "When enabled, this reverts the styling for alias pills (and other multi-select items) to the Obsidian default."
             default: false
     -
-        id: embeds-settings
-        title: Embeds
-        type: heading
-        description: "Options to control the appearance of embedded notes and files."
-        level: 2
-        collapsed: false
-    -
-            id: ssopt-not-seamless-embeds
-            title: Disable Seamless Embeds
-            type: class-toggle
-            description: "By default, this theme makes embedded notes seamless (no borders, padding, or scrollbars). When enabled, this reverts embeds to the standard Obsidian style, adding back borders and scrollbars."
-            default: false
-    -
         id: Lists
         title: Lists
         description: Options to manipulate and control user-created lists.
@@ -45104,86 +43682,25 @@ settings:
             description: "When enabled, this allows the usage of the Alternative Checkboxes Reference Set developed by Damian Korcz, also supported by other themes, in your lists."
             default: false
     -
-        id: table-settings
-        title: Tables
-        description: Options to manipulate and control Markdown tables.
+        id: BasesTables
+        title: Bases and Tables
+        description: Options to manipulate and control Markdown tables and for the Bases core plugin.
         type: heading
         level: 2
         collapsed: false
-    -
-            id: ssopt-block-width-tables
-            title: Enable Block Widths for Tables
-            type: class-toggle
-            description: "Enables a modern, content-aware block width system for tables. When off, tables will take Obsidian's original settings."
-            default: false
     -
             id: ssopt-no-table-colours
             title: Disable Table Striping
             type: class-toggle
             document: PB006-BasesTables (PB006-01A)
-            description: "By default, Willemstad colours alternate rows differently in Markdown tables. Enable this should you prefer Obsidian’s default look for ordinary Markdown tables."
-            default: false
-
-    -
-            id: ssopt-bw-table-content-fit
-            title: Table Width Behavior
-            type: variable-select
-            description: "Choose whether tables should shrink-to-fit their content (standard Obsidian behaviour) or be forced to fill the available width."
-            allowEmpty: false
-            default: '0'
-            options:
-                -
-                    label: "Fit to Content (Default)"
-                    value: '0'
-                -
-                    label: "Fit to Width"
-                    value: '1'
-    -
-            id: magnifier-bw-table
-            title: "Tables Content Width Magnifier"
-            type: variable-number-slider
-            description: "A multiplier to increase the base width of the table content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable/Variable Line Lengths are turned off."
-            min: 0.5
-            max: 3
-            step: 0.05
-            default: 1.5
-    -
-            id: ratio-bw-table-source
-            title: "Tables Max Width Ratio (Live Preview)"
-            type: variable-number-slider
-            description: "The maximum width the table can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 1."
-            min: 0.5
-            max: 1
-            step: 0.01
-            default: 1
-    -
-            id: ratio-bw-table-reading
-            title: "Tables Max Width Ratio (Reading Mode)"
-            type: variable-number-slider
-            description: "The maximum width the table can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 0.96 (96%)."
-            min: 0.5
-            max: 1
-            step: 0.01
-            default: 0.96
-    -
-        id: bases-settings
-        title: Bases
-        type: heading
-        description: Options to manipulate and control the Bases core plugin.
-        level: 2
-        collapsed: false
-    -
-            id: ssopt-block-width-bases
-            title: "Enable Block Widths for Bases"
-            type: class-toggle
-            description: "Enables a modern, content-aware block width system for Bases."
+            description: "By default, Willemstad colours alternate rows differently in Markdown tables. Enable this should you prefer Obsidian's default look for ordinary Markdown tables."
             default: false
     -
             id: ssopt-standard-bases-colours
             title: Revert to Standard Bases Appearance
             type: class-toggle
             document: PB006-BasesTables (PB006-01B)
-            description: "Reverts the Bases core plugin to its stock colour scheme instead of Willemstad’s palette."
+            description: "Reverts the Bases core plugin to its stock colour scheme instead of Willemstad's palette."
             default: false
     -
             id: ssopt-bases-no-edit
@@ -45192,35 +43709,8 @@ settings:
             document: PB006-BasesTables (PB006-02)
             description: "By default in Obsidian, Bases are editable in Reading Mode. Enable this to turn off editing in Reading Mode."
             default: false
-
     -
-            id: magnifier-bw-bases
-            title: "Bases Content Width Magnifier"
-            type: variable-number-slider
-            description: "A multiplier to increase the base width of the Bases content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable/Variable Line Lengths are turned off."
-            min: 0.5
-            max: 3
-            step: 0.05
-            default: 1.5
-    -
-            id: ratio-bw-bases-source
-            title: "Bases Max Width Ratio (Live Preview)"
-            type: variable-number-slider
-            description: "The maximum width Bases can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 1."
-            min: 0.5
-            max: 1.2
-            step: 0.01
-            default: 1
-    -
-            id: ratio-bw-bases-reading
-            title: "Bases Max Width Ratio (Reading Mode)"
-            type: variable-number-slider
-            description: "The maximum width Bases can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 0.96 (96%)."
-            min: 0.5
-            max: 1
-            step: 0.01
-            default: 0.96
-    -
+-
         id: canvas-settings
         title: Canvas
         type: heading
@@ -45442,48 +43932,12 @@ settings:
                 description: note; abstract, summary, tldr; info, todo; tip, hint; check, done; question, help, faq; warning, caution, attention; failure, fail, missing; danger, error; bug; example; quote, cite; file, attachment; phone; email, mail; goal; success; important; code; positive, plus; negative, minus
                 default: false
     -
-            id: ssopt-callout-style
-            title: Callout Style
-            type: variable-select
-            description: "Choose the visual style for callouts. 'Willemstad' is the default theme style. To use Obsidian's standard styling, please use the 'Revent to Original Obsidian Styling on Standard Callouts' toggle below this option."
-            allowEmpty: false
-            default: '0'
-            options:
-                -
-                    label: "Willemstad"
-                    value: '0'
-                -
-                    label: "IBM Carbon"
-                    value: '1'
-    -
                 id: ssopt-callout-standard
-                title: Revert to Original Obsidian Styling on Standard Callouts
+                title: Disable Styling on Standard Callouts
                 type: class-toggle
                 document: EW01-CFixes
                 description: "Willemstad by default styles the callouts, toggle this in order to disable this and return to Obsidian's standard callouts appearance."
                 default: false
-    -
-                id: ssopt-callout-no-hover
-                title: "Disable Callout Border Hover/Always Show Callout Border"
-                type: class-toggle
-                description: "By default, the colored left border on callouts only appears on hover. When enabled, this makes the border permanently visible. If you do not want a border, toggle this to always show the border and set the callout border width below to zero."
-                default: false
-    -
-                id: callout-border-left-extra
-                title: "Callout Border Width (Left)"
-                type: variable-number-slider
-                description: "Controls the additional thickness of the colored left border on callouts, added to the base width. Set this and the base width to zero to hide the border completely. Default is 5px."
-                format: "px"
-                min: 0
-                max: 10
-                step: 1
-                default: 5
-    -
-                id: callout-border-base-width-override
-                title: "Callout Border Width (Base)"
-                type: variable-text
-                description: "Overrides the base border width for callouts. Accepts any valid CSS length (e.g., 1px, 0.25rem, 0) or variables that resolves to a length. The default is set in a way that the override will take the values of any presets set by the callout."
-                default: 'var(--callout-border-base-width-preset)'
     -
             id: callouts-infobox
             title: Infobox Callouts
@@ -45624,7 +44078,7 @@ settings:
                 id: syntax-callouts-columns
                 title: Syntax for Banner CSSClass
                 type: class-toggle
-                description: "cssclasses: [banner]"
+                description: "cssclasses: - banner"
                 default: false
     -
             id: cssc-banner-height
