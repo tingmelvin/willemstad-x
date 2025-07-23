@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.11 Newfoundland
+Willemstad | v1.9.10 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.11 Newfoundland";
+  content: "  /  Willemstad v1.9.10 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.11 Newfoundland"; /* prints version number */
+  content: "\av1.9.10 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -27026,14 +27026,7 @@ body:is(.ssopt-block-width-tables) {
 
   @container whole-body style(--ssopt-bw-table-content-fit: 1) {
     body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
-      min-width: calc(100% - var(--table-drag-handle-size));
-      margin: 0;
-    }
-  }
-
-  @container whole-body style(--ssopt-bw-table-content-fit: 2) {
-    body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
-      min-width: 100%;
+      width: 100%;
       margin: 0;
     }
   }
@@ -27042,7 +27035,7 @@ body:is(.ssopt-block-width-tables) {
     max-width: 100%;
   }
 
-  @container whole-body style(--ssopt-bw-table-content-fit: 1) or style(--ssopt-bw-table-content-fit: 2) {
+  @container whole-body style(--ssopt-bw-table-content-fit: 1) {
     body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper table {
       width: 100%;
       margin: 0;
@@ -27064,7 +27057,7 @@ body:is(.ssopt-block-width-tables) {
     margin: 0 auto;
   }
 
-  @container whole-body style(--ssopt-bw-table-content-fit: 1) or style(--ssopt-bw-table-content-fit: 2) {
+  @container whole-body style(--ssopt-bw-table-content-fit: 1) {
     body:is(.ssopt-block-width-tables) .markdown-reading-view .el-table > table {
       width: 100%;
       margin: 0;
@@ -32769,17 +32762,17 @@ PC000D-2 | Underline Customisations + TWO LINE DISPLAY
   grid-area: btm;
 }
 
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"], .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"], .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-bw-table-content-fit"] {
+.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"], .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"], .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] {
   display: grid;
   gap: var(--size-4-2);
   grid-template-areas: "top top" "btm btm";
 }
 
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-info {
+.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-info, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] .setting-item-info {
   grid-area: top;
 }
 
-.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-control {
+.style-settings-heading + .style-settings-container .setting-item[data-id="canvas-dot-pattern"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-header-hex"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="col-base-bg-alh"] .setting-item-control, .style-settings-heading + .style-settings-container .setting-item[data-id="ssopt-callout-style"] .setting-item-control {
   grid-area: btm;
 }
 
@@ -35813,6 +35806,7 @@ body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"
   width: 20px;
   font-family: remixicon;
   color: rgb(var(--callout-color));
+  transform: translateY(-1px);
   content: "\f18c";
   text-align: center;
   animation: changeCalloutColor 10s infinite, changeCalloutIcon 10s infinite;
@@ -45136,19 +45130,16 @@ settings:
             id: ssopt-bw-table-content-fit
             title: Table Width Behavior
             type: variable-select
-            description: "Choose whether tables should shrink-to-fit their content (standard Obsidian behaviour) or be forced to fill the available width. The two Fit to Width options differ in their Live Preview look. Not requiring scrolling for the button is functionally sensible and aesthetically less pleasing, and vice versa."
+            description: "Choose whether tables should shrink-to-fit their content (standard Obsidian behaviour) or be forced to fill the available width."
             allowEmpty: false
             default: '0'
             options:
                 -
-                    label: "Fit to Content"
+                    label: "Fit to Content (Default)"
                     value: '0'
                 -
-                    label: "Fit to Width (Add Table Column button does not require scrolling)"
+                    label: "Fit to Width"
                     value: '1'
-                -
-                    label: "Fit to Width (Add Table Column button requires scrolling)"
-                    value: '2'
     -
             id: magnifier-bw-table
             title: "Tables Content Width Magnifier"
