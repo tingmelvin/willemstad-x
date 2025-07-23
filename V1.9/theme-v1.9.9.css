@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.10 Newfoundland
+Willemstad | v1.9.9 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.10 Newfoundland";
+  content: "  /  Willemstad v1.9.9 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.10 Newfoundland"; /* prints version number */
+  content: "\av1.9.9 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -26989,8 +26989,6 @@ body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-render
 .view-content .cm-scroller {
   container-type: inline-size;
   container-name: live-preview;
-
-  --cqi-live-preview: 100cqi;
 }
 
 /* 1. TABLES */
@@ -27010,14 +27008,13 @@ body:is(.ssopt-block-width-tables) {
 
 @container live-preview (min-width: 0) {
   body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget {
-    /*
-    left: calc(50% + var(--ratio-bw-table-source) * max(0px, var(--file-margins) - var(--table-drag-handle-size)));
-     */
-    left: calc(50% + var(--size-4-4));
+    left: 50%;
     width: calc-size(auto, var(--size-bw-table));
+    margin: 0 auto !important;
     padding: 0;
     transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-table-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
+    max-width: calc(var(--ratio-bw-table-source) * 100cqi + 2 * max(0px, var(--file-margins) - var(--table-drag-handle-size)));
+    contain: layout style paint;
   }
 
   body:is(.ssopt-block-width-tables) .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
@@ -27074,17 +27071,18 @@ body {
 
 /* Live Preview */
 @container live-preview (min-width: 0) {
-  body:is(.ssopt-block-width-bases) .markdown-source-view.mod-cm6 :where(.cm-content) > .bases-embed {
+  body:is(.ssopt-block-width-bases) .markdown-source-view.mod-cm6 .bases-embed {
     position: relative;
     left: 50%;
     width: calc-size(auto, var(--size-bw-bases));
+    margin: 0 auto;
     transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-bases-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
+    max-width: calc(var(--ratio-bw-bases-source) * 100cqi + 2 * max(0px, var(--file-margins) - var(--table-drag-handle-size)));
   }
 }
 
 @container reading-mode (min-width: 0) {
-  body:is(.ssopt-block-width-bases) .markdown-reading-view :where(.markdown-preview-section > .el-p > p) > .bases-embed {
+  body:is(.ssopt-block-width-bases) .markdown-reading-view .bases-embed {
     position: relative;
     left: 50%;
     width: calc-size(auto, var(--size-bw-bases));
@@ -45210,7 +45208,7 @@ settings:
             type: variable-number-slider
             description: "The maximum width Bases can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 1."
             min: 0.5
-            max: 1
+            max: 1.2
             step: 0.01
             default: 1
     -
