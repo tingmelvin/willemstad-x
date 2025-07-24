@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.12 Newfoundland
+Willemstad | v1.9.11 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.12 Newfoundland";
+  content: "  /  Willemstad v1.9.11 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.12 Newfoundland"; /* prints version number */
+  content: "\av1.9.11 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -23260,22 +23260,22 @@ body {
 ───────────────────────────────────────────────────────────────────────────────────
 
         ──────────────────────────────────────────────────────────────────────── */
-body:not(.is-mobile, .is-tablet) .workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) {
+.workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) {
   gap: var(--header-margin);
 
   /* follows header-icon-size */
 }
 
-body:not(.is-mobile, .is-tablet) .workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) .clickable-icon {
+.workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) .clickable-icon {
   padding: var(--header-padding);
 }
 
-body:not(.is-mobile, .is-tablet) .workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) .clickable-icon .svg-icon {
+.workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) .clickable-icon .svg-icon {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
 }
 
-body:not(.is-mobile, .is-tablet) .workspace-leaf-content .view-header {
+.workspace-leaf-content .view-header {
   padding: var(--header-margin) calc(1.5 * var(--header-margin)); /* follow EV 01 */
 }
 
@@ -27095,6 +27095,7 @@ body {
     position: relative;
     left: 50%;
     width: calc-size(auto, var(--size-bw-bases));
+    margin: 0 auto;
     transform: translateX(-50%);
     max-width: calc(var(--ratio-bw-bases-reading) * 100cqi + 2 * var(--file-margins));
   }
@@ -27850,51 +27851,51 @@ body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] 
 }
 
 /* EH91-4 | Add Text Colours via Headers if no Background Coloring */
-body:is(.ssopt-no-coloured-headers).theme-light h1, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-1 {
+body:is(.ssopt-no-coloured-headers).theme-light h1 {
   --h1-color: var(--h1-color-light);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-light h2, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-2 {
+body:is(.ssopt-no-coloured-headers).theme-light h2 {
   --h2-color: var(--h2-color-light);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-light h3, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-3 {
+body:is(.ssopt-no-coloured-headers).theme-light h3 {
   --h3-color: var(--h3-color-light);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-light h4, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-4 {
+body:is(.ssopt-no-coloured-headers).theme-light h4 {
   --h4-color: var(--h4-color-light);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-light h5, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-5 {
+body:is(.ssopt-no-coloured-headers).theme-light h5 {
   --h5-color: var(--h5-color-light);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-light h6, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-6 {
+body:is(.ssopt-no-coloured-headers).theme-light h6 {
   --h6-color: var(--h6-color-light);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-dark h1, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-1 {
+body:is(.ssopt-no-coloured-headers).theme-dark h1 {
   --h1-color: var(--h1-color-dark);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-dark h2, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-2 {
+body:is(.ssopt-no-coloured-headers).theme-dark h2 {
   --h2-color: var(--h2-color-dark);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-dark h3, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-3 {
+body:is(.ssopt-no-coloured-headers).theme-dark h3 {
   --h3-color: var(--h3-color-dark);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-dark h4, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-4 {
+body:is(.ssopt-no-coloured-headers).theme-dark h4 {
   --h4-color: var(--h4-color-dark);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-dark h5, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-5 {
+body:is(.ssopt-no-coloured-headers).theme-dark h5 {
   --h5-color: var(--h5-color-dark);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-dark h6, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-6 {
+body:is(.ssopt-no-coloured-headers).theme-dark h6 {
   --h6-color: var(--h6-color-dark);
 }
 
@@ -29865,7 +29866,7 @@ remove margin-bottom */
   transition: var(--anim-motion-smooth); /* to display */
 }
 
-body:not(.is-mobile, .is-tablet) .modal-close-button:not(:hover)::before {
+.modal-close-button:not(:hover)::before {
   color: transparent;
 }
 
@@ -38321,33 +38322,6 @@ body {
 /* X101-13 | Hide Tooltip */
 body.ssopt-hide-tooltips .tooltip {
   display: none;
-}
-
-/* X101-14 | Mobile Stuff */
-.is-mobile {
-  --mobile-sidebar-width: 82vw;
-  --mobile-sidebar-max-width: 100vw;
-  --mobile-sidebar-radius: 0px;
-}
-
-body:where(.is-mobile, .is-tablet) {
-  --nav-padding: 0 4px;
-}
-
-body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-container .workspace-drawer-active-tab-content .nav-files-container {
-  padding-top: var(--size-4-1);
-}
-
-body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-header {
-  margin: var(--nav-padding);
-}
-
-body:where(.is-mobile, .is-tablet) .workspace-drawer-header-name-text {
-  display: none;
-}
-
-body:where(.is-mobile, .is-tablet) .nav-files-container.node-insert-event > div > div {
-  width: unset !important;
 }
 
 /* Remove setting accent color in Settings + Clearer images */
