@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.15 Newfoundland
+Willemstad | v1.9.14 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.15 Newfoundland";
+  content: "  /  Willemstad v1.9.14 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.15 Newfoundland"; /* prints version number */
+  content: "\av1.9.14 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -46734,10 +46734,7 @@ body {
   /* OVERRIDES TO LEFT */
   --aside-callout-float: left;
   --aside-callout-margin-left: 0;
-
-  float: var(--aside-callout-float);
-  margin-left: var(--aside-callout-margin-left);
-  margin-right: var(--cssc-cornell-gap); /* aligns to the gap for the right side */
+  --aside-callout-margin-right: var(--p-spacing-root);
 }
 
 /* Live Preview so it goes across the page */
