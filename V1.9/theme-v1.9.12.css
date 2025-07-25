@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.13 Newfoundland
+Willemstad | v1.9.12 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.13 Newfoundland";
+  content: "  /  Willemstad v1.9.12 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.13 Newfoundland"; /* prints version number */
+  content: "\av1.9.12 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -31492,11 +31492,6 @@ body:is(.ssopt-bases-no-edit) .bases-td .multi-select-container, body:is(.ssopt-
   grid-template-columns: 1fr max-content;
 }
 
-body:is(.is-mobile) .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-}
-
 :where(.style-settings-container) .setting-item:not(.setting-item-heading), .vertical-tab-content:has(.installed-plugins-container) .setting-item:not(.setting-item-heading) {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -31927,14 +31922,6 @@ body:is(.is-mobile) .setting-item.setting-item:where([data-id="font-editor"], [d
   display: none;
 }
 
-body:is(.is-mobile) .setting-item.setting-item:where([data-id="V1-Willemstad-UI"]) {
-  display: none;
-}
-
-body:is(.is-mobile) .setting-item.setting-item:where([data-id="V1-Willemstad-UI"]) + .style-settings-container {
-  display: none;
-}
-
 body:not(.mod-windows, .mod-linux) .setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"], [data-id="ssopt-hidden-scrollbars"]) {
   display: none;
 }
@@ -32351,14 +32338,6 @@ body:not(.is-mobile) .view-content .style-settings-container.style-settings-cont
 }
 
 body:is(.is-mobile) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="font-editor"], [data-id="font-menu"], [data-id="font-ui"]) {
-  display: none;
-}
-
-body:is(.is-mobile) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-UI"]) {
-  display: none;
-}
-
-body:is(.is-mobile) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-UI"]) + .style-settings-container {
   display: none;
 }
 
@@ -32939,7 +32918,7 @@ PC000D-5 | actually what was i doing here
 
 Here, Style Settings coding to turn certain settings into Information Boxes are done.
 ──────────────────────────────────────────────────────────────────────────────── */
-.setting-item.setting-item {
+.setting-item {
   /* build a comma-separated list of [data-id="…"] */
 
   /* inject the selector and yield */
@@ -32949,47 +32928,47 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   /* overrides whatever first child settings there is */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-control {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-control {
   display: none;
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   overflow: auto;
   overflow-wrap: anywhere;
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   padding: 0.75em; /* used to be 0.75em and 0 */
   background-color: var(--background-secondary);
   border-left: 1px solid var(--background-modifier-border);
   border-right: 1px solid var(--background-modifier-border);
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-description {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-description {
   color: var(--text-accent);
   text-align: justify;
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]):first-child {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]):first-child {
   border-top: 1px solid var(--background-modifier-border);
   padding-top: var(--padding-ss);
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
   /* INFO ICON */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
   /* add icon? */
 
   /* add hover color change */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"])::after {
+.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"])::after {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22lucide%20lucide-info-icon%20lucide-info%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M12%2016v-4%22/%3E%3Cpath%20d%3D%22M12%208h.01%22/%3E%3C/svg%3E");
@@ -33001,36 +32980,36 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   justify-self: right;
 }
 
-.theme-light .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
+.theme-light .setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
   background: oklch(from var(--icon-color) calc(l - 0.2) c h);
 }
 
-.theme-dark .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
+.theme-dark .setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
   background: oklch(from var(--icon-color) calc(l + 0.2) c h);
 }
 
 /* just this to make sure it closes the bottom off for the main infobox for CSSClass */
-.setting-item.setting-item {
+.setting-item {
   /* build a comma-separated list of [data-id="…"] */
 
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="info-cssclass"]) {
+.setting-item:where([data-id="info-cssclass"]) {
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
-.setting-item.setting-item {
+.setting-item {
   /* build a comma-separated list of [data-id="…"] */
 
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name {
+.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name {
   font-weight: 500;
 }
 
-.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name::after {
+.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name::after {
   display: inline-flex;
   width: var(--sidebar-icon-size);
   height: var(--sidebar-icon-size);
@@ -33054,11 +33033,11 @@ Here, Style Settings coding to add Notes is done.
 /* TO SET ALL THE CONTENT ITEMS WITH NOTES */
 
 /* ADD DESCRIPTIONS IN BEFORE */
-.setting-item.setting-item[data-id="ssopt-titlebar-use-accent"] .setting-item-description {
+.setting-item[data-id="ssopt-titlebar-use-accent"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-titlebar-use-accent"] .setting-item-description::before {
+.setting-item[data-id="ssopt-titlebar-use-accent"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33072,11 +33051,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="col-titlebar-accent"] .setting-item-description {
+.setting-item[data-id="col-titlebar-accent"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="col-titlebar-accent"] .setting-item-description::before {
+.setting-item[data-id="col-titlebar-accent"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33090,11 +33069,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-exclude-titlebar-buttons"] .setting-item-description {
+.setting-item[data-id="ssopt-exclude-titlebar-buttons"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-exclude-titlebar-buttons"] .setting-item-description::before {
+.setting-item[data-id="ssopt-exclude-titlebar-buttons"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33108,11 +33087,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-hidden-scrollbars"] .setting-item-description {
+.setting-item[data-id="ssopt-hidden-scrollbars"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-hidden-scrollbars"] .setting-item-description::before {
+.setting-item[data-id="ssopt-hidden-scrollbars"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33126,11 +33105,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-description {
+.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-description::before {
+.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33144,11 +33123,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-hide-metadata-container"] .setting-item-description {
+.setting-item[data-id="ssopt-hide-metadata-container"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-hide-metadata-container"] .setting-item-description::before {
+.setting-item[data-id="ssopt-hide-metadata-container"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33162,11 +33141,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description {
+.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description::before {
+.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33180,11 +33159,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-hide-properties-title"] .setting-item-description {
+.setting-item[data-id="ssopt-hide-properties-title"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-hide-properties-title"] .setting-item-description::before {
+.setting-item[data-id="ssopt-hide-properties-title"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33198,11 +33177,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-properties-button-original"] .setting-item-description {
+.setting-item[data-id="ssopt-properties-button-original"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-properties-button-original"] .setting-item-description::before {
+.setting-item[data-id="ssopt-properties-button-original"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33216,11 +33195,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-description {
+.setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-description::before {
+.setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33234,11 +33213,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-bases-no-edit"] .setting-item-description {
+.setting-item[data-id="ssopt-bases-no-edit"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-bases-no-edit"] .setting-item-description::before {
+.setting-item[data-id="ssopt-bases-no-edit"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33252,11 +33231,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-description {
+.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-description::before {
+.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33270,11 +33249,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="status-bar-glass-blur"] .setting-item-description {
+.setting-item[data-id="status-bar-glass-blur"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="status-bar-glass-blur"] .setting-item-description::before {
+.setting-item[data-id="status-bar-glass-blur"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33288,11 +33267,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-description {
+.setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-description::before {
+.setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33306,11 +33285,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="width-vll"] .setting-item-description {
+.setting-item[data-id="width-vll"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="width-vll"] .setting-item-description::before {
+.setting-item[data-id="width-vll"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33324,11 +33303,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-editor-vll-title"] .setting-item-description {
+.setting-item[data-id="ssopt-editor-vll-title"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-editor-vll-title"] .setting-item-description::before {
+.setting-item[data-id="ssopt-editor-vll-title"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33342,11 +33321,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="startup-obsidian-image"] .setting-item-description {
+.setting-item[data-id="startup-obsidian-image"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="startup-obsidian-image"] .setting-item-description::before {
+.setting-item[data-id="startup-obsidian-image"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33360,11 +33339,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-tb-willemstad"] .setting-item-description {
+.setting-item[data-id="ssopt-tb-willemstad"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-tb-willemstad"] .setting-item-description::before {
+.setting-item[data-id="ssopt-tb-willemstad"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33378,11 +33357,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm011-no-sync-colours"] .setting-item-description {
+.setting-item[data-id="PComm011-no-sync-colours"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm011-no-sync-colours"] .setting-item-description::before {
+.setting-item[data-id="PComm011-no-sync-colours"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33396,11 +33375,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-show-urls"] .setting-item-description {
+.setting-item[data-id="ssopt-show-urls"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-show-urls"] .setting-item-description::before {
+.setting-item[data-id="ssopt-show-urls"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33414,11 +33393,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="header-hex-size"] .setting-item-description {
+.setting-item[data-id="header-hex-size"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="header-hex-size"] .setting-item-description::before {
+.setting-item[data-id="header-hex-size"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33432,11 +33411,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-headers-old-willemstad"] .setting-item-description {
+.setting-item[data-id="ssopt-headers-old-willemstad"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-headers-old-willemstad"] .setting-item-description::before {
+.setting-item[data-id="ssopt-headers-old-willemstad"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33450,11 +33429,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-headers-custom-colours"] .setting-item-description {
+.setting-item[data-id="ssopt-headers-custom-colours"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-headers-custom-colours"] .setting-item-description::before {
+.setting-item[data-id="ssopt-headers-custom-colours"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33468,11 +33447,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-headers-old-style-col-palette"] .setting-item-description {
+.setting-item[data-id="ssopt-headers-old-style-col-palette"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-headers-old-style-col-palette"] .setting-item-description::before {
+.setting-item[data-id="ssopt-headers-old-style-col-palette"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33486,11 +33465,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-ribbon-no-drag"] .setting-item-description {
+.setting-item[data-id="ssopt-ribbon-no-drag"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-ribbon-no-drag"] .setting-item-description::before {
+.setting-item[data-id="ssopt-ribbon-no-drag"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33504,11 +33483,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="sd-height-norm"] .setting-item-description {
+.setting-item[data-id="sd-height-norm"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="sd-height-norm"] .setting-item-description::before {
+.setting-item[data-id="sd-height-norm"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33522,11 +33501,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="sd-height-hover"] .setting-item-description {
+.setting-item[data-id="sd-height-hover"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="sd-height-hover"] .setting-item-description::before {
+.setting-item[data-id="sd-height-hover"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33540,11 +33519,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-sd-float-ribbon-blur"] .setting-item-description {
+.setting-item[data-id="ssopt-sd-float-ribbon-blur"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-sd-float-ribbon-blur"] .setting-item-description::before {
+.setting-item[data-id="ssopt-sd-float-ribbon-blur"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33558,11 +33537,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="blur-floating-ribbon"] .setting-item-description {
+.setting-item[data-id="blur-floating-ribbon"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="blur-floating-ribbon"] .setting-item-description::before {
+.setting-item[data-id="blur-floating-ribbon"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33576,11 +33555,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-overflow-hack"] .setting-item-description {
+.setting-item[data-id="ssopt-overflow-hack"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-overflow-hack"] .setting-item-description::before {
+.setting-item[data-id="ssopt-overflow-hack"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33594,11 +33573,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-bg-colour"] .setting-item-description {
+.setting-item[data-id="PComm002-CB-bg-colour"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-bg-colour"] .setting-item-description::before {
+.setting-item[data-id="PComm002-CB-bg-colour"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33612,11 +33591,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-dot-colour"] .setting-item-description {
+.setting-item[data-id="PComm002-CB-dot-colour"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-dot-colour"] .setting-item-description::before {
+.setting-item[data-id="PComm002-CB-dot-colour"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33630,11 +33609,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-dot-size"] .setting-item-description {
+.setting-item[data-id="PComm002-CB-dot-size"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-dot-size"] .setting-item-description::before {
+.setting-item[data-id="PComm002-CB-dot-size"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33648,11 +33627,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-dot-spacing"] .setting-item-description {
+.setting-item[data-id="PComm002-CB-dot-spacing"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-CB-dot-spacing"] .setting-item-description::before {
+.setting-item[data-id="PComm002-CB-dot-spacing"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33666,11 +33645,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-float"] .setting-item-description {
+.setting-item[data-id="ssopt-status-bar-float"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-float"] .setting-item-description::before {
+.setting-item[data-id="ssopt-status-bar-float"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33684,11 +33663,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="status-bar-align"] .setting-item-description {
+.setting-item[data-id="status-bar-align"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="status-bar-align"] .setting-item-description::before {
+.setting-item[data-id="status-bar-align"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33702,11 +33681,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="status-bar-max-width"] .setting-item-description {
+.setting-item[data-id="status-bar-max-width"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="status-bar-max-width"] .setting-item-description::before {
+.setting-item[data-id="status-bar-max-width"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33720,11 +33699,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-shift-workspace"] .setting-item-description {
+.setting-item[data-id="ssopt-status-bar-shift-workspace"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-shift-workspace"] .setting-item-description::before {
+.setting-item[data-id="ssopt-status-bar-shift-workspace"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33738,11 +33717,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description {
+.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description::before {
+.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33756,11 +33735,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="status-bar-full-justify-content"] .setting-item-description {
+.setting-item[data-id="status-bar-full-justify-content"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="status-bar-full-justify-content"] .setting-item-description::before {
+.setting-item[data-id="status-bar-full-justify-content"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33774,11 +33753,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="status-bar-bottom-float-margin"] .setting-item-description {
+.setting-item[data-id="status-bar-bottom-float-margin"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="status-bar-bottom-float-margin"] .setting-item-description::before {
+.setting-item[data-id="status-bar-bottom-float-margin"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33792,11 +33771,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-sp-fitwidth"] .setting-item-description {
+.setting-item[data-id="PComm002-sp-fitwidth"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-sp-fitwidth"] .setting-item-description::before {
+.setting-item[data-id="PComm002-sp-fitwidth"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33810,11 +33789,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-sp-maxheight"] .setting-item-description {
+.setting-item[data-id="PComm002-sp-maxheight"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-sp-maxheight"] .setting-item-description::before {
+.setting-item[data-id="PComm002-sp-maxheight"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33828,11 +33807,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-wp-fitwidth"] .setting-item-description {
+.setting-item[data-id="PComm002-wp-fitwidth"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-wp-fitwidth"] .setting-item-description::before {
+.setting-item[data-id="PComm002-wp-fitwidth"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33846,11 +33825,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="PComm002-wp-maxheight"] .setting-item-description {
+.setting-item[data-id="PComm002-wp-maxheight"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="PComm002-wp-maxheight"] .setting-item-description::before {
+.setting-item[data-id="PComm002-wp-maxheight"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33864,11 +33843,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-tabs-modern-borderless"] .setting-item-description {
+.setting-item[data-id="ssopt-tabs-modern-borderless"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-tabs-modern-borderless"] .setting-item-description::before {
+.setting-item[data-id="ssopt-tabs-modern-borderless"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33882,11 +33861,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-custom-colour-template-light"] .setting-item-description {
+.setting-item[data-id="ssopt-custom-colour-template-light"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-custom-colour-template-light"] .setting-item-description::before {
+.setting-item[data-id="ssopt-custom-colour-template-light"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33900,11 +33879,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-custom-colour-template-dark"] .setting-item-description {
+.setting-item[data-id="ssopt-custom-colour-template-dark"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-custom-colour-template-dark"] .setting-item-description::before {
+.setting-item[data-id="ssopt-custom-colour-template-dark"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33918,11 +33897,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description {
+.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description::before {
+.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33936,11 +33915,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description {
+.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description::before {
+.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33954,11 +33933,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="col-base-bg-alh"] .setting-item-description {
+.setting-item[data-id="col-base-bg-alh"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="col-base-bg-alh"] .setting-item-description::before {
+.setting-item[data-id="col-base-bg-alh"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33972,11 +33951,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="col-base-alpha-alh"] .setting-item-description {
+.setting-item[data-id="col-base-alpha-alh"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="col-base-alpha-alh"] .setting-item-description::before {
+.setting-item[data-id="col-base-alpha-alh"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -33990,11 +33969,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description {
+.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description::before {
+.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34008,11 +33987,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="callout-border-left-width"] .setting-item-description {
+.setting-item[data-id="callout-border-left-width"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="callout-border-left-width"] .setting-item-description::before {
+.setting-item[data-id="callout-border-left-width"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34026,11 +34005,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="header-text-colours"] .setting-item-description {
+.setting-item[data-id="header-text-colours"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="header-text-colours"] .setting-item-description::before {
+.setting-item[data-id="header-text-colours"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34044,11 +34023,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description {
+.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description::before {
+.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34062,11 +34041,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="magnifier-bw-table"] .setting-item-description {
+.setting-item[data-id="magnifier-bw-table"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="magnifier-bw-table"] .setting-item-description::before {
+.setting-item[data-id="magnifier-bw-table"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34080,11 +34059,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-table-source"] .setting-item-description {
+.setting-item[data-id="ratio-bw-table-source"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-table-source"] .setting-item-description::before {
+.setting-item[data-id="ratio-bw-table-source"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34098,11 +34077,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description {
+.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description::before {
+.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34116,11 +34095,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="magnifier-bw-bases"] .setting-item-description {
+.setting-item[data-id="magnifier-bw-bases"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="magnifier-bw-bases"] .setting-item-description::before {
+.setting-item[data-id="magnifier-bw-bases"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34134,11 +34113,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description {
+.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description::before {
+.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34152,11 +34131,11 @@ Here, Style Settings coding to add Notes is done.
   max-width: 100%;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description {
+.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description {
   position: relative;
 }
 
-.setting-item.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description::before {
+.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description::before {
   display: block;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-4-1);
@@ -34171,11 +34150,11 @@ Here, Style Settings coding to add Notes is done.
 }
 
 /* SET NOTES - experimental or whatnot */
-.setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) {
+.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) {
   /* ADD ALL THE STUFF HERE */
 }
 
-.setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) .setting-item-name::after {
+.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) .setting-item-name::after {
   display: inline-flex;
   width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
   padding: var(--size-2-1) var(--size-2-3);
@@ -34212,30 +34191,30 @@ Here, Style Settings coding to add Syntax is done.
 This is similar to Information Settings, but with a different background colour.
 So content is set via the Style Settings.
 ──────────────────────────────────────────────────────────────────────────────── */
-.setting-item.setting-item {
+.setting-item {
   /* build a comma-separated list of [data-id="…"] */
 
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
   /* overrides whatever first child settings there is */
 
   /* CODE ICON */
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) .setting-item-control {
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) .setting-item-control {
   display: none;
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
   padding: 0.75em; /* used to be 0.75em and 0 */
   background-color: var(--background-primary-alt);
   border-left: 1px solid var(--background-modifier-border);
   border-right: 1px solid var(--background-modifier-border);
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) .setting-item-description {
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) .setting-item-description {
   font-family: var(--font-monospace);
   color: var(--text-accent);
   text-align: justify;
@@ -34243,18 +34222,18 @@ So content is set via the Style Settings.
   user-select: all;
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):first-child {
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):first-child {
   border-top: 1px solid var(--background-modifier-border);
   padding-top: var(--padding-ss);
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
   /* add icon? */
 
   /* add hover color change */
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"])::after {
+.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"])::after {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22lucide%20lucide-code-icon%20lucide-code%22%3E%3Cpath%20d%3D%22m16%2018%206-6-6-6%22/%3E%3Cpath%20d%3D%22m8%206-6%206%206%206%22/%3E%3C/svg%3E");
@@ -34266,11 +34245,11 @@ So content is set via the Style Settings.
   justify-self: right;
 }
 
-.theme-light .setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
+.theme-light .setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
   background: oklch(from var(--icon-color) calc(l - 0.2) c h);
 }
 
-.theme-dark .setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
+.theme-dark .setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
   background: oklch(from var(--icon-color) calc(l + 0.2) c h);
 }
 
@@ -35935,12 +35914,6 @@ The sky is the limit and we're testing it.
   font-size: var(--code-size);
 }
 
-body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 0%;
-}
-
 .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading:not([data-id="willemstad-theme-colours-light"],
 [data-id="willemstad-theme-colours-dark"]) {
   grid-column: 1/-1;
@@ -35976,16 +35949,8 @@ body:is(.theme-dark) .style-settings-heading[data-id="willemstad-theme-colours-l
   grid-area: 1/2;
 }
 
-body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-dark"] {
-  grid-area: 3/1;
-}
-
 .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-dark"] + .style-settings-container {
   grid-area: 2/2;
-}
-
-body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-dark"] + .style-settings-container {
-  grid-area: 4/1;
 }
 
 body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-dark"] {
@@ -38360,7 +38325,7 @@ body.ssopt-hide-tooltips .tooltip {
 
 /* X101-14 | Mobile Stuff */
 .is-mobile {
-  --mobile-sidebar-width: 100vw;
+  --mobile-sidebar-width: 82vw;
   --mobile-sidebar-max-width: 100vw;
   --mobile-sidebar-radius: 0px;
 }
@@ -38377,9 +38342,12 @@ body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-header {
   margin: var(--nav-padding);
 }
 
-/* X101-15 | Tablet Stuff */
-body.is-tablet .sidebar-toggle-button.mod-left {
-  padding-left: 0;
+body:where(.is-mobile, .is-tablet) .workspace-drawer-header-name-text {
+  display: none;
+}
+
+body:where(.is-mobile, .is-tablet) .nav-files-container.node-insert-event > div > div {
+  width: unset !important;
 }
 
 /* Remove setting accent color in Settings + Clearer images */
