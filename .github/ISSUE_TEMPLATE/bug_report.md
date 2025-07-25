@@ -9,6 +9,9 @@ assignees: tingmelvin
 
 ## Bug Report
 
+**NOTE! We have had SlRvb's [ITS Callouts](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Callouts.css) snippets causing multiple issues with the theme. Please ensure that this (and all other snippets) are turned off before sending a bug report!** 
+Please note that mobile Obsidian is not officially supported but reports are welcome for consideration.
+
 **Before submitting:** Search existing issues to avoid duplicates. Ensure you've tested with only this theme active.
 
 ### Bug Description
@@ -34,7 +37,10 @@ If applicable, add screenshots or screen recordings.
 **Operating System:**
 - [ ] Windows
 - [ ] macOS  
-- [ ] Linux
+- [ ] Linux (which distro?)
+- [ ] Android (please note Willemstad is not officially supported on mobile)
+- [ ] iOS (please note Willemstad is not officially supported on mobile)
+- [ ] iPadOS (please note Willemstad is not officially supported on mobile)
 
 **Editor Mode:** *(Willemstad does not support the legacy editor)*
 - [ ] New Editor (CodeMirror 6)
@@ -65,4 +71,3 @@ If applicable, add screenshots or screen recordings.
 Any other relevant information, console errors, or related issues.
 
 ---
-**Note:** Mobile Obsidian is not officially supported but reports are welcome for future consideration.
