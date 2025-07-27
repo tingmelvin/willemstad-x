@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.17 Newfoundland
+Willemstad | v1.9.16 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.17 Newfoundland";
+  content: "  /  Willemstad v1.9.16 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.17 Newfoundland"; /* prints version number */
+  content: "\av1.9.16 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -32795,8 +32795,8 @@ body.theme-dark .setting-item:where([data-id^="col-highlight-3"]) .theme-dark .p
   background-color: var(--pcr-color, var(--col-custom-headers-H6));
 }
 
-body:is(.is-mobile) .setting-item:where([data-id^="col-highlight-"]) .pickr button {
-  width: max-content;
+body:is(.is-mobile) .setting-item:where([data-id^="col-highlight-1"]) .pickr button {
+  width: 100%;
 }
 
 /* hide the wrapper when it's not the right theme setting */
@@ -38409,7 +38409,7 @@ body.ssopt-hide-tooltips .tooltip {
 
 body:where(.is-mobile, .is-tablet) {
   --nav-padding: 0 var(--nav-padding-side);
-  --nav-padding-side: 8px;
+  --nav-padding-side: 4px;
   --tab-switcher-preview-radius: var(--radius-m);
   --tab-switcher-preview-background-shadow: none;
 }
@@ -38426,7 +38426,11 @@ body:where(.is-mobile, .is-tablet) .workspace-drawer-header-info {
   margin: var(--size-4-1) 0 var(--size-4-2) 0;
 }
 
-body:where(.is-mobile, .is-tablet) .workspace-drawer-header {
+.mod-right body:where(.is-mobile, .is-tablet) .workspace-drawer-header {
+  padding: var(--size-4-2) var(--size-4-3) 0 var(--size-4-3);
+}
+
+.mod-left body:where(.is-mobile, .is-tablet) .workspace-drawer-header {
   padding: var(--size-4-2) var(--size-4-3) 0 var(--size-4-3);
 }
 
