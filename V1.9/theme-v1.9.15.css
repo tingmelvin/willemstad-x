@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.16 Newfoundland
+Willemstad | v1.9.15 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.16 Newfoundland";
+  content: "  /  Willemstad v1.9.15 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.16 Newfoundland"; /* prints version number */
+  content: "\av1.9.15 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -22417,12 +22417,10 @@ body {
   --nav-title-margin: 2px; /* original */
 }
 
-body:not(.is-mobile) .nav-files-container {
-  overflow: auto;
-} /* you will always h going to account for it */
 .nav-files-container {
   padding: var(--nav-padding);
-}
+  overflow: auto;
+} /* you will always have to scroll files so I'm going to account for it */
 
 /*
 .nav-folder.mod-root .nav-folder > .nav-folder-children {
@@ -28260,13 +28258,11 @@ body .empty-state {
 }
 
 body:not(.ssopt-empty-state-original) {
-  --empty-state-background: var(--background-primary-alt);
-
   /* add icon for NO FILE IS OPEN */
 }
 
 body:not(.ssopt-empty-state-original) .workspace-leaf-content[data-type="empty"] .view-header {
-  background-color: var(--empty-state-background);
+  background-color: var(--background-primary-alt);
 }
 
 body:not(.ssopt-empty-state-original) .workspace-leaf-content[data-type="empty"] .view-header-title-container:not(.mod-at-end)::after {
@@ -28274,7 +28270,7 @@ body:not(.ssopt-empty-state-original) .workspace-leaf-content[data-type="empty"]
 }
 
 body:not(.ssopt-empty-state-original) .empty-state {
-  background-color: var(--empty-state-background);
+  background-color: var(--background-primary-alt);
 
   --margin-inter-empty-state: var(--size-4-1);
 }
@@ -32793,10 +32789,6 @@ body.theme-dark .setting-item:where([data-id^="col-highlight-3"]) .theme-dark .p
 
 .setting-item:where([data-id="col-custom-headers-H6"]) .pickr button::after {
   background-color: var(--pcr-color, var(--col-custom-headers-H6));
-}
-
-body:is(.is-mobile) .setting-item:where([data-id^="col-highlight-1"]) .pickr button {
-  width: 100%;
 }
 
 /* hide the wrapper when it's not the right theme setting */
@@ -38410,8 +38402,6 @@ body.ssopt-hide-tooltips .tooltip {
 body:where(.is-mobile, .is-tablet) {
   --nav-padding: 0 var(--nav-padding-side);
   --nav-padding-side: 4px;
-  --tab-switcher-preview-radius: var(--radius-m);
-  --tab-switcher-preview-background-shadow: none;
 }
 
 body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-container .workspace-drawer-active-tab-content .nav-files-container {
@@ -38420,30 +38410,6 @@ body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-container .works
 
 body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-header {
   margin: var(--nav-padding);
-}
-
-body:where(.is-mobile, .is-tablet) .workspace-drawer-header-info {
-  margin: var(--size-4-1) 0 var(--size-4-2) 0;
-}
-
-.mod-right body:where(.is-mobile, .is-tablet) .workspace-drawer-header {
-  padding: var(--size-4-2) var(--size-4-3) 0 var(--size-4-3);
-}
-
-.mod-left body:where(.is-mobile, .is-tablet) .workspace-drawer-header {
-  padding: var(--size-4-2) var(--size-4-3) 0 var(--size-4-3);
-}
-
-body:where(.is-mobile, .is-tablet) .mod-left-split-toggle svg.sidebar-left {
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-color: currentcolor;
-  content: "";
-  mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMThoMTYiLz48cGF0aCBkPSJNNCA2aDE2Ii8+PC9zdmc+");
-  mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMThoMTYiLz48cGF0aCBkPSJNNCA2aDE2Ii8+PC9zdmc+");
-  mask-size: contain;
-  mask-size: contain;
 }
 
 /* X101-15 | Tablet Stuff */
