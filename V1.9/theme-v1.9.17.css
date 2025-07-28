@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.18 Newfoundland
+Willemstad | v1.9.17 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.18 Newfoundland";
+  content: "  /  Willemstad v1.9.17 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.18 Newfoundland"; /* prints version number */
+  content: "\av1.9.17 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -8424,27 +8424,27 @@ v10.1
 
 /* =================================================================== */
 .theme-light {
-  --ch-color-base-l-l-00-set: 1;
-  --ch-color-base-l-l-05-set: 0.99;
-  --ch-color-base-l-l-10-set: 0.98;
-  --ch-color-base-l-l-15-set: 0.97;
-  --ch-color-base-l-l-20-set: 0.95;
-  --ch-color-base-l-l-25-set: 0.93;
-  --ch-color-base-l-l-30-set: 0.88;
-  --ch-color-base-l-l-35-set: 0.8;
-  --ch-color-base-l-l-40-set: 0.7;
-  --ch-color-base-l-l-45-set: 0.6;
-  --ch-color-base-l-l-50-set: 0.5;
-  --ch-color-base-l-l-55-set: 0.4;
-  --ch-color-base-l-l-60-set: 0.3;
-  --ch-color-base-l-l-65-set: 0.2;
-  --ch-color-base-l-l-70-set: 0.12;
-  --ch-color-base-l-l-75-set: 0.07;
-  --ch-color-base-l-l-80-set: 0.05;
-  --ch-color-base-l-l-85-set: 0.03;
-  --ch-color-base-l-l-90-set: 0.02;
-  --ch-color-base-l-l-95-set: 0.01;
-  --ch-color-base-l-l-100-set: 0;
+  --ch-color-base-l-l-00-set: 100%;
+  --ch-color-base-l-l-05-set: 99%;
+  --ch-color-base-l-l-10-set: 98%;
+  --ch-color-base-l-l-15-set: 97%;
+  --ch-color-base-l-l-20-set: 95%;
+  --ch-color-base-l-l-25-set: 93%;
+  --ch-color-base-l-l-30-set: 88%;
+  --ch-color-base-l-l-35-set: 80%;
+  --ch-color-base-l-l-40-set: 70%;
+  --ch-color-base-l-l-45-set: 60%;
+  --ch-color-base-l-l-50-set: 50%;
+  --ch-color-base-l-l-55-set: 40%;
+  --ch-color-base-l-l-60-set: 30%;
+  --ch-color-base-l-l-65-set: 20%;
+  --ch-color-base-l-l-70-set: 12%;
+  --ch-color-base-l-l-75-set: 7%;
+  --ch-color-base-l-l-80-set: 5%;
+  --ch-color-base-l-l-85-set: 3%;
+  --ch-color-base-l-l-90-set: 2%;
+  --ch-color-base-l-l-95-set: 1%;
+  --ch-color-base-l-l-100-set: 0%;
   --ch-color-base-l-c-00-set: 0;
   --ch-color-base-l-h-00-set: 0;
   --ch-color-base-l-c-05-set: 0;
@@ -8490,27 +8490,27 @@ v10.1
 }
 
 .theme-dark {
-  --ch-color-base-d-l-00-set: 0.13;
-  --ch-color-base-d-l-05-set: 0.15;
-  --ch-color-base-d-l-10-set: 0.17;
-  --ch-color-base-d-l-15-set: 0.18;
-  --ch-color-base-d-l-20-set: 0.19;
-  --ch-color-base-d-l-25-set: 0.21;
-  --ch-color-base-d-l-30-set: 0.24;
-  --ch-color-base-d-l-35-set: 0.3;
-  --ch-color-base-d-l-40-set: 0.38;
-  --ch-color-base-d-l-45-set: 0.48;
-  --ch-color-base-d-l-50-set: 0.58;
-  --ch-color-base-d-l-55-set: 0.63;
-  --ch-color-base-d-l-60-set: 0.68;
-  --ch-color-base-d-l-65-set: 0.78;
-  --ch-color-base-d-l-70-set: 0.86;
-  --ch-color-base-d-l-75-set: 0.9;
-  --ch-color-base-d-l-80-set: 0.92;
-  --ch-color-base-d-l-85-set: 0.94;
-  --ch-color-base-d-l-90-set: 0.95;
-  --ch-color-base-d-l-95-set: 0.96;
-  --ch-color-base-d-l-100-set: 0.98;
+  --ch-color-base-d-l-00-set: 13%;
+  --ch-color-base-d-l-05-set: 15%;
+  --ch-color-base-d-l-10-set: 17%;
+  --ch-color-base-d-l-15-set: 18%;
+  --ch-color-base-d-l-20-set: 19%;
+  --ch-color-base-d-l-25-set: 21%;
+  --ch-color-base-d-l-30-set: 24%;
+  --ch-color-base-d-l-35-set: 30%;
+  --ch-color-base-d-l-40-set: 38%;
+  --ch-color-base-d-l-45-set: 48%;
+  --ch-color-base-d-l-50-set: 58%;
+  --ch-color-base-d-l-55-set: 63%;
+  --ch-color-base-d-l-60-set: 68%;
+  --ch-color-base-d-l-65-set: 78%;
+  --ch-color-base-d-l-70-set: 86%;
+  --ch-color-base-d-l-75-set: 90%;
+  --ch-color-base-d-l-80-set: 92%;
+  --ch-color-base-d-l-85-set: 94%;
+  --ch-color-base-d-l-90-set: 95%;
+  --ch-color-base-d-l-95-set: 96%;
+  --ch-color-base-d-l-100-set: 98%;
   --ch-color-base-d-c-00-set: 0;
   --ch-color-base-d-h-00-set: 0;
   --ch-color-base-d-c-05-set: 0;
@@ -8563,703 +8563,703 @@ v10.1
 .ssopt-col-base-lightness-l-high-contrast,
 .ssopt-col-base-lightness-l-high-contrast .theme-light,
 .ssopt-col-base-lightness-l-high-contrast.theme-light {
-  --ch-color-base-l-l-00-set: 1;
-  --ch-color-base-l-l-05-set: 0.98;
-  --ch-color-base-l-l-10-set: 0.95;
-  --ch-color-base-l-l-15-set: 0.92;
-  --ch-color-base-l-l-20-set: 0.88;
-  --ch-color-base-l-l-25-set: 0.82;
-  --ch-color-base-l-l-30-set: 0.75;
-  --ch-color-base-l-l-35-set: 0.65;
-  --ch-color-base-l-l-40-set: 0.55;
-  --ch-color-base-l-l-45-set: 0.45;
-  --ch-color-base-l-l-50-set: 0.38;
-  --ch-color-base-l-l-55-set: 0.3;
-  --ch-color-base-l-l-60-set: 0.22;
-  --ch-color-base-l-l-65-set: 0.15;
-  --ch-color-base-l-l-70-set: 0.1;
-  --ch-color-base-l-l-75-set: 0.07;
-  --ch-color-base-l-l-80-set: 0.05;
-  --ch-color-base-l-l-85-set: 0.03;
-  --ch-color-base-l-l-90-set: 0.02;
-  --ch-color-base-l-l-95-set: 0.01;
-  --ch-color-base-l-l-100-set: 0;
+  --ch-color-base-l-l-00-set: 100%;
+  --ch-color-base-l-l-05-set: 98%;
+  --ch-color-base-l-l-10-set: 95%;
+  --ch-color-base-l-l-15-set: 92%;
+  --ch-color-base-l-l-20-set: 88%;
+  --ch-color-base-l-l-25-set: 82%;
+  --ch-color-base-l-l-30-set: 75%;
+  --ch-color-base-l-l-35-set: 65%;
+  --ch-color-base-l-l-40-set: 55%;
+  --ch-color-base-l-l-45-set: 45%;
+  --ch-color-base-l-l-50-set: 38%;
+  --ch-color-base-l-l-55-set: 30%;
+  --ch-color-base-l-l-60-set: 22%;
+  --ch-color-base-l-l-65-set: 15%;
+  --ch-color-base-l-l-70-set: 10%;
+  --ch-color-base-l-l-75-set: 7%;
+  --ch-color-base-l-l-80-set: 5%;
+  --ch-color-base-l-l-85-set: 3%;
+  --ch-color-base-l-l-90-set: 2%;
+  --ch-color-base-l-l-95-set: 1%;
+  --ch-color-base-l-l-100-set: 0%;
 }
 
 .ssopt-col-base-lightness-l-low-contrast,
 .ssopt-col-base-lightness-l-low-contrast .theme-light,
 .ssopt-col-base-lightness-l-low-contrast.theme-light {
-  --ch-color-base-l-l-00-set: 0.98;
-  --ch-color-base-l-l-05-set: 0.96;
-  --ch-color-base-l-l-10-set: 0.94;
-  --ch-color-base-l-l-15-set: 0.91;
-  --ch-color-base-l-l-20-set: 0.87;
-  --ch-color-base-l-l-25-set: 0.83;
-  --ch-color-base-l-l-30-set: 0.78;
-  --ch-color-base-l-l-35-set: 0.72;
-  --ch-color-base-l-l-40-set: 0.65;
-  --ch-color-base-l-l-45-set: 0.58;
-  --ch-color-base-l-l-50-set: 0.52;
-  --ch-color-base-l-l-55-set: 0.46;
-  --ch-color-base-l-l-60-set: 0.4;
-  --ch-color-base-l-l-65-set: 0.35;
-  --ch-color-base-l-l-70-set: 0.3;
-  --ch-color-base-l-l-75-set: 0.25;
-  --ch-color-base-l-l-80-set: 0.2;
-  --ch-color-base-l-l-85-set: 0.15;
-  --ch-color-base-l-l-90-set: 0.1;
-  --ch-color-base-l-l-95-set: 0.05;
-  --ch-color-base-l-l-100-set: 0.02;
+  --ch-color-base-l-l-00-set: 98%;
+  --ch-color-base-l-l-05-set: 96%;
+  --ch-color-base-l-l-10-set: 94%;
+  --ch-color-base-l-l-15-set: 91%;
+  --ch-color-base-l-l-20-set: 87%;
+  --ch-color-base-l-l-25-set: 83%;
+  --ch-color-base-l-l-30-set: 78%;
+  --ch-color-base-l-l-35-set: 72%;
+  --ch-color-base-l-l-40-set: 65%;
+  --ch-color-base-l-l-45-set: 58%;
+  --ch-color-base-l-l-50-set: 52%;
+  --ch-color-base-l-l-55-set: 46%;
+  --ch-color-base-l-l-60-set: 40%;
+  --ch-color-base-l-l-65-set: 35%;
+  --ch-color-base-l-l-70-set: 30%;
+  --ch-color-base-l-l-75-set: 25%;
+  --ch-color-base-l-l-80-set: 20%;
+  --ch-color-base-l-l-85-set: 15%;
+  --ch-color-base-l-l-90-set: 10%;
+  --ch-color-base-l-l-95-set: 5%;
+  --ch-color-base-l-l-100-set: 2%;
 }
 
 .ssopt-col-base-lightness-l-ultra-low-contrast,
 .ssopt-col-base-lightness-l-ultra-low-contrast .theme-light,
 .ssopt-col-base-lightness-l-ultra-low-contrast.theme-light {
-  --ch-color-base-l-l-00-set: 0.951;
-  --ch-color-base-l-l-05-set: 0.942;
-  --ch-color-base-l-l-10-set: 0.933;
-  --ch-color-base-l-l-15-set: 0.916;
-  --ch-color-base-l-l-20-set: 0.899;
-  --ch-color-base-l-l-25-set: 0.86;
-  --ch-color-base-l-l-30-set: 0.82;
-  --ch-color-base-l-l-35-set: 0.75;
-  --ch-color-base-l-l-40-set: 0.65;
-  --ch-color-base-l-l-45-set: 0.55;
-  --ch-color-base-l-l-50-set: 0.45;
-  --ch-color-base-l-l-55-set: 0.38;
-  --ch-color-base-l-l-60-set: 0.32;
-  --ch-color-base-l-l-65-set: 0.26;
-  --ch-color-base-l-l-70-set: 0.2;
-  --ch-color-base-l-l-75-set: 0.15;
-  --ch-color-base-l-l-80-set: 0.12;
-  --ch-color-base-l-l-85-set: 0.09;
-  --ch-color-base-l-l-90-set: 0.06;
-  --ch-color-base-l-l-95-set: 0.03;
-  --ch-color-base-l-l-100-set: 0.01;
+  --ch-color-base-l-l-00-set: 95.1%;
+  --ch-color-base-l-l-05-set: 94.2%;
+  --ch-color-base-l-l-10-set: 93.3%;
+  --ch-color-base-l-l-15-set: 91.6%;
+  --ch-color-base-l-l-20-set: 89.9%;
+  --ch-color-base-l-l-25-set: 86%;
+  --ch-color-base-l-l-30-set: 82%;
+  --ch-color-base-l-l-35-set: 75%;
+  --ch-color-base-l-l-40-set: 65%;
+  --ch-color-base-l-l-45-set: 55%;
+  --ch-color-base-l-l-50-set: 45%;
+  --ch-color-base-l-l-55-set: 38%;
+  --ch-color-base-l-l-60-set: 32%;
+  --ch-color-base-l-l-65-set: 26%;
+  --ch-color-base-l-l-70-set: 20%;
+  --ch-color-base-l-l-75-set: 15%;
+  --ch-color-base-l-l-80-set: 12%;
+  --ch-color-base-l-l-85-set: 9%;
+  --ch-color-base-l-l-90-set: 6%;
+  --ch-color-base-l-l-95-set: 3%;
+  --ch-color-base-l-l-100-set: 1%;
 }
 
 .ssopt-col-base-lightness-l-cinematic,
 .ssopt-col-base-lightness-l-cinematic .theme-light,
 .ssopt-col-base-lightness-l-cinematic.theme-light {
-  --ch-color-base-l-l-00-set: 0.99;
-  --ch-color-base-l-l-05-set: 0.97;
-  --ch-color-base-l-l-10-set: 0.94;
-  --ch-color-base-l-l-15-set: 0.9;
-  --ch-color-base-l-l-20-set: 0.85;
-  --ch-color-base-l-l-25-set: 0.78;
-  --ch-color-base-l-l-30-set: 0.7;
-  --ch-color-base-l-l-35-set: 0.6;
-  --ch-color-base-l-l-40-set: 0.5;
-  --ch-color-base-l-l-45-set: 0.4;
-  --ch-color-base-l-l-50-set: 0.32;
-  --ch-color-base-l-l-55-set: 0.25;
-  --ch-color-base-l-l-60-set: 0.19;
-  --ch-color-base-l-l-65-set: 0.14;
-  --ch-color-base-l-l-70-set: 0.1;
-  --ch-color-base-l-l-75-set: 0.07;
-  --ch-color-base-l-l-80-set: 0.05;
-  --ch-color-base-l-l-85-set: 0.04;
-  --ch-color-base-l-l-90-set: 0.03;
-  --ch-color-base-l-l-95-set: 0.02;
-  --ch-color-base-l-l-100-set: 0.015;
+  --ch-color-base-l-l-00-set: 99%;
+  --ch-color-base-l-l-05-set: 97%;
+  --ch-color-base-l-l-10-set: 94%;
+  --ch-color-base-l-l-15-set: 90%;
+  --ch-color-base-l-l-20-set: 85%;
+  --ch-color-base-l-l-25-set: 78%;
+  --ch-color-base-l-l-30-set: 70%;
+  --ch-color-base-l-l-35-set: 60%;
+  --ch-color-base-l-l-40-set: 50%;
+  --ch-color-base-l-l-45-set: 40%;
+  --ch-color-base-l-l-50-set: 32%;
+  --ch-color-base-l-l-55-set: 25%;
+  --ch-color-base-l-l-60-set: 19%;
+  --ch-color-base-l-l-65-set: 14%;
+  --ch-color-base-l-l-70-set: 10%;
+  --ch-color-base-l-l-75-set: 7%;
+  --ch-color-base-l-l-80-set: 5%;
+  --ch-color-base-l-l-85-set: 4%;
+  --ch-color-base-l-l-90-set: 3%;
+  --ch-color-base-l-l-95-set: 2%;
+  --ch-color-base-l-l-100-set: 1.5%;
 }
 
 .ssopt-col-base-lightness-l-paper,
 .ssopt-col-base-lightness-l-paper .theme-light,
 .ssopt-col-base-lightness-l-paper.theme-light {
-  --ch-color-base-l-l-00-set: 0.97;
-  --ch-color-base-l-l-05-set: 0.95;
-  --ch-color-base-l-l-10-set: 0.93;
-  --ch-color-base-l-l-15-set: 0.9;
-  --ch-color-base-l-l-20-set: 0.86;
-  --ch-color-base-l-l-25-set: 0.81;
-  --ch-color-base-l-l-30-set: 0.75;
-  --ch-color-base-l-l-35-set: 0.68;
-  --ch-color-base-l-l-40-set: 0.6;
-  --ch-color-base-l-l-45-set: 0.52;
-  --ch-color-base-l-l-50-set: 0.45;
-  --ch-color-base-l-l-55-set: 0.4;
-  --ch-color-base-l-l-60-set: 0.35;
-  --ch-color-base-l-l-65-set: 0.3;
-  --ch-color-base-l-l-70-set: 0.26;
-  --ch-color-base-l-l-75-set: 0.23;
-  --ch-color-base-l-l-80-set: 0.21;
-  --ch-color-base-l-l-85-set: 0.19;
-  --ch-color-base-l-l-90-set: 0.17;
-  --ch-color-base-l-l-95-set: 0.15;
-  --ch-color-base-l-l-100-set: 0.14;
+  --ch-color-base-l-l-00-set: 97%;
+  --ch-color-base-l-l-05-set: 95%;
+  --ch-color-base-l-l-10-set: 93%;
+  --ch-color-base-l-l-15-set: 90%;
+  --ch-color-base-l-l-20-set: 86%;
+  --ch-color-base-l-l-25-set: 81%;
+  --ch-color-base-l-l-30-set: 75%;
+  --ch-color-base-l-l-35-set: 68%;
+  --ch-color-base-l-l-40-set: 60%;
+  --ch-color-base-l-l-45-set: 52%;
+  --ch-color-base-l-l-50-set: 45%;
+  --ch-color-base-l-l-55-set: 40%;
+  --ch-color-base-l-l-60-set: 35%;
+  --ch-color-base-l-l-65-set: 30%;
+  --ch-color-base-l-l-70-set: 26%;
+  --ch-color-base-l-l-75-set: 23%;
+  --ch-color-base-l-l-80-set: 21%;
+  --ch-color-base-l-l-85-set: 19%;
+  --ch-color-base-l-l-90-set: 17%;
+  --ch-color-base-l-l-95-set: 15%;
+  --ch-color-base-l-l-100-set: 14%;
 }
 
 .ssopt-col-base-lightness-l-vivid,
 .ssopt-col-base-lightness-l-vivid .theme-light,
 .ssopt-col-base-lightness-l-vivid.theme-light {
-  --ch-color-base-l-l-00-set: 0.96;
-  --ch-color-base-l-l-05-set: 0.94;
-  --ch-color-base-l-l-10-set: 0.92;
-  --ch-color-base-l-l-15-set: 0.88;
-  --ch-color-base-l-l-20-set: 0.83;
-  --ch-color-base-l-l-25-set: 0.77;
-  --ch-color-base-l-l-30-set: 0.7;
-  --ch-color-base-l-l-35-set: 0.62;
-  --ch-color-base-l-l-40-set: 0.54;
-  --ch-color-base-l-l-45-set: 0.47;
-  --ch-color-base-l-l-50-set: 0.41;
-  --ch-color-base-l-l-55-set: 0.36;
-  --ch-color-base-l-l-60-set: 0.31;
-  --ch-color-base-l-l-65-set: 0.27;
-  --ch-color-base-l-l-70-set: 0.24;
-  --ch-color-base-l-l-75-set: 0.21;
-  --ch-color-base-l-l-80-set: 0.19;
-  --ch-color-base-l-l-85-set: 0.17;
-  --ch-color-base-l-l-90-set: 0.15;
-  --ch-color-base-l-l-95-set: 0.13;
-  --ch-color-base-l-l-100-set: 0.12;
+  --ch-color-base-l-l-00-set: 96%;
+  --ch-color-base-l-l-05-set: 94%;
+  --ch-color-base-l-l-10-set: 92%;
+  --ch-color-base-l-l-15-set: 88%;
+  --ch-color-base-l-l-20-set: 83%;
+  --ch-color-base-l-l-25-set: 77%;
+  --ch-color-base-l-l-30-set: 70%;
+  --ch-color-base-l-l-35-set: 62%;
+  --ch-color-base-l-l-40-set: 54%;
+  --ch-color-base-l-l-45-set: 47%;
+  --ch-color-base-l-l-50-set: 41%;
+  --ch-color-base-l-l-55-set: 36%;
+  --ch-color-base-l-l-60-set: 31%;
+  --ch-color-base-l-l-65-set: 27%;
+  --ch-color-base-l-l-70-set: 24%;
+  --ch-color-base-l-l-75-set: 21%;
+  --ch-color-base-l-l-80-set: 19%;
+  --ch-color-base-l-l-85-set: 17%;
+  --ch-color-base-l-l-90-set: 15%;
+  --ch-color-base-l-l-95-set: 13%;
+  --ch-color-base-l-l-100-set: 12%;
 }
 
 .ssopt-col-base-lightness-l-analog,
 .ssopt-col-base-lightness-l-analog .theme-light,
 .ssopt-col-base-lightness-l-analog.theme-light {
-  --ch-color-base-l-l-00-set: 0.96;
-  --ch-color-base-l-l-05-set: 0.94;
-  --ch-color-base-l-l-10-set: 0.92;
-  --ch-color-base-l-l-15-set: 0.88;
-  --ch-color-base-l-l-20-set: 0.83;
-  --ch-color-base-l-l-25-set: 0.78;
-  --ch-color-base-l-l-30-set: 0.72;
-  --ch-color-base-l-l-35-set: 0.66;
-  --ch-color-base-l-l-40-set: 0.6;
-  --ch-color-base-l-l-45-set: 0.54;
-  --ch-color-base-l-l-50-set: 0.48;
-  --ch-color-base-l-l-55-set: 0.43;
-  --ch-color-base-l-l-60-set: 0.38;
-  --ch-color-base-l-l-65-set: 0.34;
-  --ch-color-base-l-l-70-set: 0.3;
-  --ch-color-base-l-l-75-set: 0.27;
-  --ch-color-base-l-l-80-set: 0.25;
-  --ch-color-base-l-l-85-set: 0.23;
-  --ch-color-base-l-l-90-set: 0.22;
-  --ch-color-base-l-l-95-set: 0.21;
-  --ch-color-base-l-l-100-set: 0.2;
+  --ch-color-base-l-l-00-set: 96%;
+  --ch-color-base-l-l-05-set: 94%;
+  --ch-color-base-l-l-10-set: 92%;
+  --ch-color-base-l-l-15-set: 88%;
+  --ch-color-base-l-l-20-set: 83%;
+  --ch-color-base-l-l-25-set: 78%;
+  --ch-color-base-l-l-30-set: 72%;
+  --ch-color-base-l-l-35-set: 66%;
+  --ch-color-base-l-l-40-set: 60%;
+  --ch-color-base-l-l-45-set: 54%;
+  --ch-color-base-l-l-50-set: 48%;
+  --ch-color-base-l-l-55-set: 43%;
+  --ch-color-base-l-l-60-set: 38%;
+  --ch-color-base-l-l-65-set: 34%;
+  --ch-color-base-l-l-70-set: 30%;
+  --ch-color-base-l-l-75-set: 27%;
+  --ch-color-base-l-l-80-set: 25%;
+  --ch-color-base-l-l-85-set: 23%;
+  --ch-color-base-l-l-90-set: 22%;
+  --ch-color-base-l-l-95-set: 21%;
+  --ch-color-base-l-l-100-set: 20%;
 }
 
 .ssopt-col-base-lightness-l-structural,
 .ssopt-col-base-lightness-l-structural .theme-light,
 .ssopt-col-base-lightness-l-structural.theme-light {
-  --ch-color-base-l-l-00-set: 1;
-  --ch-color-base-l-l-05-set: 0.96;
-  --ch-color-base-l-l-10-set: 0.96;
-  --ch-color-base-l-l-15-set: 0.96;
-  --ch-color-base-l-l-20-set: 0.92;
-  --ch-color-base-l-l-25-set: 0.92;
-  --ch-color-base-l-l-30-set: 0.8;
-  --ch-color-base-l-l-35-set: 0.8;
-  --ch-color-base-l-l-40-set: 0.65;
-  --ch-color-base-l-l-45-set: 0.65;
-  --ch-color-base-l-l-50-set: 0.5;
-  --ch-color-base-l-l-55-set: 0.48;
-  --ch-color-base-l-l-60-set: 0.35;
-  --ch-color-base-l-l-65-set: 0.35;
-  --ch-color-base-l-l-70-set: 0.2;
-  --ch-color-base-l-l-75-set: 0.2;
-  --ch-color-base-l-l-80-set: 0.08;
-  --ch-color-base-l-l-85-set: 0.08;
-  --ch-color-base-l-l-90-set: 0.04;
-  --ch-color-base-l-l-95-set: 0.04;
-  --ch-color-base-l-l-100-set: 0.02;
+  --ch-color-base-l-l-00-set: 100%;
+  --ch-color-base-l-l-05-set: 96%;
+  --ch-color-base-l-l-10-set: 96%;
+  --ch-color-base-l-l-15-set: 96%;
+  --ch-color-base-l-l-20-set: 92%;
+  --ch-color-base-l-l-25-set: 92%;
+  --ch-color-base-l-l-30-set: 80%;
+  --ch-color-base-l-l-35-set: 80%;
+  --ch-color-base-l-l-40-set: 65%;
+  --ch-color-base-l-l-45-set: 65%;
+  --ch-color-base-l-l-50-set: 50%;
+  --ch-color-base-l-l-55-set: 48%;
+  --ch-color-base-l-l-60-set: 35%;
+  --ch-color-base-l-l-65-set: 35%;
+  --ch-color-base-l-l-70-set: 20%;
+  --ch-color-base-l-l-75-set: 20%;
+  --ch-color-base-l-l-80-set: 8%;
+  --ch-color-base-l-l-85-set: 8%;
+  --ch-color-base-l-l-90-set: 4%;
+  --ch-color-base-l-l-95-set: 4%;
+  --ch-color-base-l-l-100-set: 2%;
 }
 
 .ssopt-col-base-lightness-l-glow,
 .ssopt-col-base-lightness-l-glow .theme-light,
 .ssopt-col-base-lightness-l-glow.theme-light {
-  --ch-color-base-l-l-00-set: 0.98;
-  --ch-color-base-l-l-05-set: 0.97;
-  --ch-color-base-l-l-10-set: 0.96;
-  --ch-color-base-l-l-15-set: 0.94;
-  --ch-color-base-l-l-20-set: 0.91;
-  --ch-color-base-l-l-25-set: 0.87;
-  --ch-color-base-l-l-30-set: 0.82;
-  --ch-color-base-l-l-35-set: 0.76;
-  --ch-color-base-l-l-40-set: 0.7;
-  --ch-color-base-l-l-45-set: 0.64;
-  --ch-color-base-l-l-50-set: 0.58;
-  --ch-color-base-l-l-55-set: 0.53;
-  --ch-color-base-l-l-60-set: 0.49;
-  --ch-color-base-l-l-65-set: 0.45;
-  --ch-color-base-l-l-70-set: 0.42;
-  --ch-color-base-l-l-75-set: 0.4;
-  --ch-color-base-l-l-80-set: 0.38;
-  --ch-color-base-l-l-85-set: 0.37;
-  --ch-color-base-l-l-90-set: 0.36;
-  --ch-color-base-l-l-95-set: 0.355;
-  --ch-color-base-l-l-100-set: 0.35;
+  --ch-color-base-l-l-00-set: 98%;
+  --ch-color-base-l-l-05-set: 97%;
+  --ch-color-base-l-l-10-set: 96%;
+  --ch-color-base-l-l-15-set: 94%;
+  --ch-color-base-l-l-20-set: 91%;
+  --ch-color-base-l-l-25-set: 87%;
+  --ch-color-base-l-l-30-set: 82%;
+  --ch-color-base-l-l-35-set: 76%;
+  --ch-color-base-l-l-40-set: 70%;
+  --ch-color-base-l-l-45-set: 64%;
+  --ch-color-base-l-l-50-set: 58%;
+  --ch-color-base-l-l-55-set: 53%;
+  --ch-color-base-l-l-60-set: 49%;
+  --ch-color-base-l-l-65-set: 45%;
+  --ch-color-base-l-l-70-set: 42%;
+  --ch-color-base-l-l-75-set: 40%;
+  --ch-color-base-l-l-80-set: 38%;
+  --ch-color-base-l-l-85-set: 37%;
+  --ch-color-base-l-l-90-set: 36%;
+  --ch-color-base-l-l-95-set: 35.5%;
+  --ch-color-base-l-l-100-set: 35%;
 }
 
 .ssopt-col-base-lightness-l-catppuccin,
 .ssopt-col-base-lightness-l-catppuccin .theme-light,
 .ssopt-col-base-lightness-l-catppuccin.theme-light {
-  --ch-color-base-l-l-00-set: 0.96;
-  --ch-color-base-l-l-05-set: 0.945;
-  --ch-color-base-l-l-10-set: 0.93;
-  --ch-color-base-l-l-15-set: 0.9;
-  --ch-color-base-l-l-20-set: 0.85;
-  --ch-color-base-l-l-25-set: 0.8;
-  --ch-color-base-l-l-30-set: 0.74;
-  --ch-color-base-l-l-35-set: 0.67;
-  --ch-color-base-l-l-40-set: 0.6;
-  --ch-color-base-l-l-45-set: 0.53;
-  --ch-color-base-l-l-50-set: 0.47;
-  --ch-color-base-l-l-55-set: 0.42;
-  --ch-color-base-l-l-60-set: 0.37;
-  --ch-color-base-l-l-65-set: 0.33;
-  --ch-color-base-l-l-70-set: 0.29;
-  --ch-color-base-l-l-75-set: 0.25;
-  --ch-color-base-l-l-80-set: 0.22;
-  --ch-color-base-l-l-85-set: 0.19;
-  --ch-color-base-l-l-90-set: 0.16;
-  --ch-color-base-l-l-95-set: 0.13;
-  --ch-color-base-l-l-100-set: 0.1;
+  --ch-color-base-l-l-00-set: 96%;
+  --ch-color-base-l-l-05-set: 94.5%;
+  --ch-color-base-l-l-10-set: 93%;
+  --ch-color-base-l-l-15-set: 90%;
+  --ch-color-base-l-l-20-set: 85%;
+  --ch-color-base-l-l-25-set: 80%;
+  --ch-color-base-l-l-30-set: 74%;
+  --ch-color-base-l-l-35-set: 67%;
+  --ch-color-base-l-l-40-set: 60%;
+  --ch-color-base-l-l-45-set: 53%;
+  --ch-color-base-l-l-50-set: 47%;
+  --ch-color-base-l-l-55-set: 42%;
+  --ch-color-base-l-l-60-set: 37%;
+  --ch-color-base-l-l-65-set: 33%;
+  --ch-color-base-l-l-70-set: 29%;
+  --ch-color-base-l-l-75-set: 25%;
+  --ch-color-base-l-l-80-set: 22%;
+  --ch-color-base-l-l-85-set: 19%;
+  --ch-color-base-l-l-90-set: 16%;
+  --ch-color-base-l-l-95-set: 13%;
+  --ch-color-base-l-l-100-set: 10%;
 }
 
 .ssopt-col-base-lightness-l-writing,
 .ssopt-col-base-lightness-l-writing .theme-light,
 .ssopt-col-base-lightness-l-writing.theme-light {
-  --ch-color-base-l-l-00-set: 0.98;
-  --ch-color-base-l-l-05-set: 0.965;
-  --ch-color-base-l-l-10-set: 0.94;
-  --ch-color-base-l-l-15-set: 0.91;
-  --ch-color-base-l-l-20-set: 0.87;
-  --ch-color-base-l-l-25-set: 0.82;
-  --ch-color-base-l-l-30-set: 0.76;
-  --ch-color-base-l-l-35-set: 0.69;
-  --ch-color-base-l-l-40-set: 0.62;
-  --ch-color-base-l-l-45-set: 0.55;
-  --ch-color-base-l-l-50-set: 0.48;
-  --ch-color-base-l-l-55-set: 0.44;
-  --ch-color-base-l-l-60-set: 0.4;
-  --ch-color-base-l-l-65-set: 0.36;
-  --ch-color-base-l-l-70-set: 0.52;
-  --ch-color-base-l-l-75-set: 0.46;
-  --ch-color-base-l-l-80-set: 0.4;
-  --ch-color-base-l-l-85-set: 0.36;
-  --ch-color-base-l-l-90-set: 0.33;
-  --ch-color-base-l-l-95-set: 0.315;
-  --ch-color-base-l-l-100-set: 0.3;
+  --ch-color-base-l-l-00-set: 98%;
+  --ch-color-base-l-l-05-set: 96.5%;
+  --ch-color-base-l-l-10-set: 94%;
+  --ch-color-base-l-l-15-set: 91%;
+  --ch-color-base-l-l-20-set: 87%;
+  --ch-color-base-l-l-25-set: 82%;
+  --ch-color-base-l-l-30-set: 76%;
+  --ch-color-base-l-l-35-set: 69%;
+  --ch-color-base-l-l-40-set: 62%;
+  --ch-color-base-l-l-45-set: 55%;
+  --ch-color-base-l-l-50-set: 48%;
+  --ch-color-base-l-l-55-set: 44%;
+  --ch-color-base-l-l-60-set: 40%;
+  --ch-color-base-l-l-65-set: 36%;
+  --ch-color-base-l-l-70-set: 52%;
+  --ch-color-base-l-l-75-set: 46%;
+  --ch-color-base-l-l-80-set: 40%;
+  --ch-color-base-l-l-85-set: 36%;
+  --ch-color-base-l-l-90-set: 33%;
+  --ch-color-base-l-l-95-set: 31.5%;
+  --ch-color-base-l-l-100-set: 30%;
 }
 
 .ssopt-col-base-lightness-l-solarized,
 .ssopt-col-base-lightness-l-solarized .theme-light,
 .ssopt-col-base-lightness-l-solarized.theme-light {
-  --ch-color-base-l-l-00-set: 0.974;
-  --ch-color-base-l-l-05-set: 0.974;
-  --ch-color-base-l-l-10-set: 0.974;
-  --ch-color-base-l-l-15-set: 0.953;
-  --ch-color-base-l-l-20-set: 0.931;
-  --ch-color-base-l-l-25-set: 0.931;
-  --ch-color-base-l-l-30-set: 0.858;
-  --ch-color-base-l-l-35-set: 0.786;
-  --ch-color-base-l-l-40-set: 0.713;
-  --ch-color-base-l-l-45-set: 0.641;
-  --ch-color-base-l-l-50-set: 0.568;
-  --ch-color-base-l-l-55-set: 0.557;
-  --ch-color-base-l-l-60-set: 0.546;
-  --ch-color-base-l-l-65-set: 0.534;
-  --ch-color-base-l-l-70-set: 0.523;
-  --ch-color-base-l-l-75-set: 0.48;
-  --ch-color-base-l-l-80-set: 0.438;
-  --ch-color-base-l-l-85-set: 0.395;
-  --ch-color-base-l-l-90-set: 0.352;
-  --ch-color-base-l-l-95-set: 0.31;
-  --ch-color-base-l-l-100-set: 0.267;
+  --ch-color-base-l-l-00-set: 97.4%;
+  --ch-color-base-l-l-05-set: 97.4%;
+  --ch-color-base-l-l-10-set: 97.4%;
+  --ch-color-base-l-l-15-set: 95.3%;
+  --ch-color-base-l-l-20-set: 93.1%;
+  --ch-color-base-l-l-25-set: 93.1%;
+  --ch-color-base-l-l-30-set: 85.8%;
+  --ch-color-base-l-l-35-set: 78.6%;
+  --ch-color-base-l-l-40-set: 71.3%;
+  --ch-color-base-l-l-45-set: 64.1%;
+  --ch-color-base-l-l-50-set: 56.8%;
+  --ch-color-base-l-l-55-set: 55.7%;
+  --ch-color-base-l-l-60-set: 54.6%;
+  --ch-color-base-l-l-65-set: 53.4%;
+  --ch-color-base-l-l-70-set: 52.3%;
+  --ch-color-base-l-l-75-set: 48%;
+  --ch-color-base-l-l-80-set: 43.8%;
+  --ch-color-base-l-l-85-set: 39.5%;
+  --ch-color-base-l-l-90-set: 35.2%;
+  --ch-color-base-l-l-95-set: 31%;
+  --ch-color-base-l-l-100-set: 26.7%;
 }
 
 .ssopt-col-base-lightness-l-flexoki,
 .ssopt-col-base-lightness-l-flexoki .theme-light,
 .ssopt-col-base-lightness-l-flexoki.theme-light {
-  --ch-color-base-l-l-00-set: 0.986;
-  --ch-color-base-l-l-05-set: 0.986;
-  --ch-color-base-l-l-10-set: 0.954;
-  --ch-color-base-l-l-15-set: 0.954;
-  --ch-color-base-l-l-20-set: 0.954;
-  --ch-color-base-l-l-25-set: 0.917;
-  --ch-color-base-l-l-30-set: 0.917;
-  --ch-color-base-l-l-35-set: 0.881;
-  --ch-color-base-l-l-40-set: 0.846;
-  --ch-color-base-l-l-45-set: 0.809;
-  --ch-color-base-l-l-50-set: 0.772;
-  --ch-color-base-l-l-55-set: 0.694;
-  --ch-color-base-l-l-60-set: 0.617;
-  --ch-color-base-l-l-65-set: 0.578;
-  --ch-color-base-l-l-70-set: 0.538;
-  --ch-color-base-l-l-75-set: 0.477;
-  --ch-color-base-l-l-80-set: 0.415;
-  --ch-color-base-l-l-85-set: 0.354;
-  --ch-color-base-l-l-90-set: 0.293;
-  --ch-color-base-l-l-95-set: 0.231;
-  --ch-color-base-l-l-100-set: 0.17;
+  --ch-color-base-l-l-00-set: 98.6%;
+  --ch-color-base-l-l-05-set: 98.6%;
+  --ch-color-base-l-l-10-set: 95.4%;
+  --ch-color-base-l-l-15-set: 95.4%;
+  --ch-color-base-l-l-20-set: 95.4%;
+  --ch-color-base-l-l-25-set: 91.7%;
+  --ch-color-base-l-l-30-set: 91.7%;
+  --ch-color-base-l-l-35-set: 88.1%;
+  --ch-color-base-l-l-40-set: 84.6%;
+  --ch-color-base-l-l-45-set: 80.9%;
+  --ch-color-base-l-l-50-set: 77.2%;
+  --ch-color-base-l-l-55-set: 69.4%;
+  --ch-color-base-l-l-60-set: 61.7%;
+  --ch-color-base-l-l-65-set: 57.8%;
+  --ch-color-base-l-l-70-set: 53.8%;
+  --ch-color-base-l-l-75-set: 47.7%;
+  --ch-color-base-l-l-80-set: 41.5%;
+  --ch-color-base-l-l-85-set: 35.4%;
+  --ch-color-base-l-l-90-set: 29.3%;
+  --ch-color-base-l-l-95-set: 23.1%;
+  --ch-color-base-l-l-100-set: 17%;
 }
 
 .ssopt-col-base-lightness-d-high-contrast,
 .ssopt-col-base-lightness-d-high-contrast .theme-dark,
 .ssopt-col-base-lightness-d-high-contrast.theme-dark {
-  --ch-color-base-d-l-00-set: 0.1;
-  --ch-color-base-d-l-05-set: 0.13;
-  --ch-color-base-d-l-10-set: 0.15;
-  --ch-color-base-d-l-15-set: 0.16;
-  --ch-color-base-d-l-20-set: 0.17;
-  --ch-color-base-d-l-25-set: 0.19;
-  --ch-color-base-d-l-30-set: 0.22;
-  --ch-color-base-d-l-35-set: 0.28;
-  --ch-color-base-d-l-40-set: 0.36;
-  --ch-color-base-d-l-45-set: 0.46;
-  --ch-color-base-d-l-50-set: 0.56;
-  --ch-color-base-d-l-55-set: 0.61;
-  --ch-color-base-d-l-60-set: 0.66;
-  --ch-color-base-d-l-65-set: 0.76;
-  --ch-color-base-d-l-70-set: 0.84;
-  --ch-color-base-d-l-75-set: 0.88;
-  --ch-color-base-d-l-80-set: 0.9;
-  --ch-color-base-d-l-85-set: 0.92;
-  --ch-color-base-d-l-90-set: 0.94;
-  --ch-color-base-d-l-95-set: 0.97;
-  --ch-color-base-d-l-100-set: 0.99;
+  --ch-color-base-d-l-00-set: 10%;
+  --ch-color-base-d-l-05-set: 13%;
+  --ch-color-base-d-l-10-set: 15%;
+  --ch-color-base-d-l-15-set: 16%;
+  --ch-color-base-d-l-20-set: 17%;
+  --ch-color-base-d-l-25-set: 19%;
+  --ch-color-base-d-l-30-set: 22%;
+  --ch-color-base-d-l-35-set: 28%;
+  --ch-color-base-d-l-40-set: 36%;
+  --ch-color-base-d-l-45-set: 46%;
+  --ch-color-base-d-l-50-set: 56%;
+  --ch-color-base-d-l-55-set: 61%;
+  --ch-color-base-d-l-60-set: 66%;
+  --ch-color-base-d-l-65-set: 76%;
+  --ch-color-base-d-l-70-set: 84%;
+  --ch-color-base-d-l-75-set: 88%;
+  --ch-color-base-d-l-80-set: 90%;
+  --ch-color-base-d-l-85-set: 92%;
+  --ch-color-base-d-l-90-set: 94%;
+  --ch-color-base-d-l-95-set: 97%;
+  --ch-color-base-d-l-100-set: 99%;
 }
 
 .ssopt-col-base-lightness-d-true-black,
 .ssopt-col-base-lightness-d-true-black .theme-dark,
 .ssopt-col-base-lightness-d-true-black.theme-dark {
-  --ch-color-base-d-l-00-set: 0;
-  --ch-color-base-d-l-05-set: 0.03;
-  --ch-color-base-d-l-10-set: 0.05;
-  --ch-color-base-d-l-15-set: 0.06;
-  --ch-color-base-d-l-20-set: 0.07;
-  --ch-color-base-d-l-25-set: 0.09;
-  --ch-color-base-d-l-30-set: 0.12;
-  --ch-color-base-d-l-35-set: 0.18;
-  --ch-color-base-d-l-40-set: 0.26;
-  --ch-color-base-d-l-45-set: 0.36;
-  --ch-color-base-d-l-50-set: 0.51;
-  --ch-color-base-d-l-55-set: 0.66;
-  --ch-color-base-d-l-60-set: 0.7;
-  --ch-color-base-d-l-65-set: 0.72;
-  --ch-color-base-d-l-70-set: 0.76;
-  --ch-color-base-d-l-75-set: 0.82;
-  --ch-color-base-d-l-80-set: 0.88;
-  --ch-color-base-d-l-85-set: 0.93;
-  --ch-color-base-d-l-90-set: 0.95;
-  --ch-color-base-d-l-95-set: 0.98;
-  --ch-color-base-d-l-100-set: 0.99;
+  --ch-color-base-d-l-00-set: 0%;
+  --ch-color-base-d-l-05-set: 3%;
+  --ch-color-base-d-l-10-set: 5%;
+  --ch-color-base-d-l-15-set: 6%;
+  --ch-color-base-d-l-20-set: 7%;
+  --ch-color-base-d-l-25-set: 9%;
+  --ch-color-base-d-l-30-set: 12%;
+  --ch-color-base-d-l-35-set: 18%;
+  --ch-color-base-d-l-40-set: 26%;
+  --ch-color-base-d-l-45-set: 36%;
+  --ch-color-base-d-l-50-set: 51%;
+  --ch-color-base-d-l-55-set: 66%;
+  --ch-color-base-d-l-60-set: 70%;
+  --ch-color-base-d-l-65-set: 72%;
+  --ch-color-base-d-l-70-set: 76%;
+  --ch-color-base-d-l-75-set: 82%;
+  --ch-color-base-d-l-80-set: 88%;
+  --ch-color-base-d-l-85-set: 93%;
+  --ch-color-base-d-l-90-set: 95%;
+  --ch-color-base-d-l-95-set: 98%;
+  --ch-color-base-d-l-100-set: 99%;
 }
 
 .ssopt-col-base-lightness-d-low-contrast,
 .ssopt-col-base-lightness-d-low-contrast .theme-dark,
 .ssopt-col-base-lightness-d-low-contrast.theme-dark {
-  --ch-color-base-d-l-00-set: 0.15;
-  --ch-color-base-d-l-05-set: 0.17;
-  --ch-color-base-d-l-10-set: 0.19;
-  --ch-color-base-d-l-15-set: 0.21;
-  --ch-color-base-d-l-20-set: 0.23;
-  --ch-color-base-d-l-25-set: 0.25;
-  --ch-color-base-d-l-30-set: 0.28;
-  --ch-color-base-d-l-35-set: 0.32;
-  --ch-color-base-d-l-40-set: 0.38;
-  --ch-color-base-d-l-45-set: 0.44;
-  --ch-color-base-d-l-50-set: 0.5;
-  --ch-color-base-d-l-55-set: 0.56;
-  --ch-color-base-d-l-60-set: 0.62;
-  --ch-color-base-d-l-65-set: 0.68;
-  --ch-color-base-d-l-70-set: 0.74;
-  --ch-color-base-d-l-75-set: 0.8;
-  --ch-color-base-d-l-80-set: 0.85;
-  --ch-color-base-d-l-85-set: 0.88;
-  --ch-color-base-d-l-90-set: 0.91;
-  --ch-color-base-d-l-95-set: 0.94;
-  --ch-color-base-d-l-100-set: 0.96;
+  --ch-color-base-d-l-00-set: 15%;
+  --ch-color-base-d-l-05-set: 17%;
+  --ch-color-base-d-l-10-set: 19%;
+  --ch-color-base-d-l-15-set: 21%;
+  --ch-color-base-d-l-20-set: 23%;
+  --ch-color-base-d-l-25-set: 25%;
+  --ch-color-base-d-l-30-set: 28%;
+  --ch-color-base-d-l-35-set: 32%;
+  --ch-color-base-d-l-40-set: 38%;
+  --ch-color-base-d-l-45-set: 44%;
+  --ch-color-base-d-l-50-set: 50%;
+  --ch-color-base-d-l-55-set: 56%;
+  --ch-color-base-d-l-60-set: 62%;
+  --ch-color-base-d-l-65-set: 68%;
+  --ch-color-base-d-l-70-set: 74%;
+  --ch-color-base-d-l-75-set: 80%;
+  --ch-color-base-d-l-80-set: 85%;
+  --ch-color-base-d-l-85-set: 88%;
+  --ch-color-base-d-l-90-set: 91%;
+  --ch-color-base-d-l-95-set: 94%;
+  --ch-color-base-d-l-100-set: 96%;
 }
 
 .ssopt-col-base-lightness-d-ultra-low-contrast,
 .ssopt-col-base-lightness-d-ultra-low-contrast .theme-dark,
 .ssopt-col-base-lightness-d-ultra-low-contrast.theme-dark {
-  --ch-color-base-d-l-00-set: 0.324;
-  --ch-color-base-d-l-05-set: 0.351;
-  --ch-color-base-d-l-10-set: 0.379;
-  --ch-color-base-d-l-15-set: 0.398;
-  --ch-color-base-d-l-20-set: 0.416;
-  --ch-color-base-d-l-25-set: 0.452;
-  --ch-color-base-d-l-30-set: 0.476;
-  --ch-color-base-d-l-35-set: 0.5;
-  --ch-color-base-d-l-40-set: 0.55;
-  --ch-color-base-d-l-45-set: 0.6;
-  --ch-color-base-d-l-50-set: 0.65;
-  --ch-color-base-d-l-55-set: 0.7;
-  --ch-color-base-d-l-60-set: 0.75;
-  --ch-color-base-d-l-65-set: 0.8;
-  --ch-color-base-d-l-70-set: 0.83;
-  --ch-color-base-d-l-75-set: 0.86;
-  --ch-color-base-d-l-80-set: 0.89;
-  --ch-color-base-d-l-85-set: 0.91;
-  --ch-color-base-d-l-90-set: 0.93;
-  --ch-color-base-d-l-95-set: 0.95;
-  --ch-color-base-d-l-100-set: 0.97;
+  --ch-color-base-d-l-00-set: 32.4%;
+  --ch-color-base-d-l-05-set: 35.1%;
+  --ch-color-base-d-l-10-set: 37.9%;
+  --ch-color-base-d-l-15-set: 39.8%;
+  --ch-color-base-d-l-20-set: 41.6%;
+  --ch-color-base-d-l-25-set: 45.2%;
+  --ch-color-base-d-l-30-set: 47.6%;
+  --ch-color-base-d-l-35-set: 50%;
+  --ch-color-base-d-l-40-set: 55%;
+  --ch-color-base-d-l-45-set: 60%;
+  --ch-color-base-d-l-50-set: 65%;
+  --ch-color-base-d-l-55-set: 70%;
+  --ch-color-base-d-l-60-set: 75%;
+  --ch-color-base-d-l-65-set: 80%;
+  --ch-color-base-d-l-70-set: 83%;
+  --ch-color-base-d-l-75-set: 86%;
+  --ch-color-base-d-l-80-set: 89%;
+  --ch-color-base-d-l-85-set: 91%;
+  --ch-color-base-d-l-90-set: 93%;
+  --ch-color-base-d-l-95-set: 95%;
+  --ch-color-base-d-l-100-set: 97%;
 }
 
 .ssopt-col-base-lightness-d-cinematic,
 .ssopt-col-base-lightness-d-cinematic .theme-dark,
 .ssopt-col-base-lightness-d-cinematic.theme-dark {
-  --ch-color-base-d-l-00-set: 0.05;
-  --ch-color-base-d-l-05-set: 0.07;
-  --ch-color-base-d-l-10-set: 0.09;
-  --ch-color-base-d-l-15-set: 0.12;
-  --ch-color-base-d-l-20-set: 0.16;
-  --ch-color-base-d-l-25-set: 0.22;
-  --ch-color-base-d-l-30-set: 0.29;
-  --ch-color-base-d-l-35-set: 0.38;
-  --ch-color-base-d-l-40-set: 0.48;
-  --ch-color-base-d-l-45-set: 0.58;
-  --ch-color-base-d-l-50-set: 0.66;
-  --ch-color-base-d-l-55-set: 0.73;
-  --ch-color-base-d-l-60-set: 0.79;
-  --ch-color-base-d-l-65-set: 0.84;
-  --ch-color-base-d-l-70-set: 0.88;
-  --ch-color-base-d-l-75-set: 0.91;
-  --ch-color-base-d-l-80-set: 0.93;
-  --ch-color-base-d-l-85-set: 0.95;
-  --ch-color-base-d-l-90-set: 0.96;
-  --ch-color-base-d-l-95-set: 0.97;
-  --ch-color-base-d-l-100-set: 0.98;
+  --ch-color-base-d-l-00-set: 5%;
+  --ch-color-base-d-l-05-set: 7%;
+  --ch-color-base-d-l-10-set: 9%;
+  --ch-color-base-d-l-15-set: 12%;
+  --ch-color-base-d-l-20-set: 16%;
+  --ch-color-base-d-l-25-set: 22%;
+  --ch-color-base-d-l-30-set: 29%;
+  --ch-color-base-d-l-35-set: 38%;
+  --ch-color-base-d-l-40-set: 48%;
+  --ch-color-base-d-l-45-set: 58%;
+  --ch-color-base-d-l-50-set: 66%;
+  --ch-color-base-d-l-55-set: 73%;
+  --ch-color-base-d-l-60-set: 79%;
+  --ch-color-base-d-l-65-set: 84%;
+  --ch-color-base-d-l-70-set: 88%;
+  --ch-color-base-d-l-75-set: 91%;
+  --ch-color-base-d-l-80-set: 93%;
+  --ch-color-base-d-l-85-set: 95%;
+  --ch-color-base-d-l-90-set: 96%;
+  --ch-color-base-d-l-95-set: 97%;
+  --ch-color-base-d-l-100-set: 98%;
 }
 
 .ssopt-col-base-lightness-d-paper,
 .ssopt-col-base-lightness-d-paper .theme-dark,
 .ssopt-col-base-lightness-d-paper.theme-dark {
-  --ch-color-base-d-l-00-set: 0.18;
-  --ch-color-base-d-l-05-set: 0.2;
-  --ch-color-base-d-l-10-set: 0.22;
-  --ch-color-base-d-l-15-set: 0.24;
-  --ch-color-base-d-l-20-set: 0.27;
-  --ch-color-base-d-l-25-set: 0.31;
-  --ch-color-base-d-l-30-set: 0.36;
-  --ch-color-base-d-l-35-set: 0.42;
-  --ch-color-base-d-l-40-set: 0.49;
-  --ch-color-base-d-l-45-set: 0.56;
-  --ch-color-base-d-l-50-set: 0.63;
-  --ch-color-base-d-l-55-set: 0.68;
-  --ch-color-base-d-l-60-set: 0.73;
-  --ch-color-base-d-l-65-set: 0.78;
-  --ch-color-base-d-l-70-set: 0.82;
-  --ch-color-base-d-l-75-set: 0.85;
-  --ch-color-base-d-l-80-set: 0.88;
-  --ch-color-base-d-l-85-set: 0.9;
-  --ch-color-base-d-l-90-set: 0.92;
-  --ch-color-base-d-l-95-set: 0.94;
-  --ch-color-base-d-l-100-set: 0.95;
+  --ch-color-base-d-l-00-set: 18%;
+  --ch-color-base-d-l-05-set: 20%;
+  --ch-color-base-d-l-10-set: 22%;
+  --ch-color-base-d-l-15-set: 24%;
+  --ch-color-base-d-l-20-set: 27%;
+  --ch-color-base-d-l-25-set: 31%;
+  --ch-color-base-d-l-30-set: 36%;
+  --ch-color-base-d-l-35-set: 42%;
+  --ch-color-base-d-l-40-set: 49%;
+  --ch-color-base-d-l-45-set: 56%;
+  --ch-color-base-d-l-50-set: 63%;
+  --ch-color-base-d-l-55-set: 68%;
+  --ch-color-base-d-l-60-set: 73%;
+  --ch-color-base-d-l-65-set: 78%;
+  --ch-color-base-d-l-70-set: 82%;
+  --ch-color-base-d-l-75-set: 85%;
+  --ch-color-base-d-l-80-set: 88%;
+  --ch-color-base-d-l-85-set: 90%;
+  --ch-color-base-d-l-90-set: 92%;
+  --ch-color-base-d-l-95-set: 94%;
+  --ch-color-base-d-l-100-set: 95%;
 }
 
 .ssopt-col-base-lightness-d-vivid,
 .ssopt-col-base-lightness-d-vivid .theme-dark,
 .ssopt-col-base-lightness-d-vivid.theme-dark {
-  --ch-color-base-d-l-00-set: 0.15;
-  --ch-color-base-d-l-05-set: 0.17;
-  --ch-color-base-d-l-10-set: 0.19;
-  --ch-color-base-d-l-15-set: 0.22;
-  --ch-color-base-d-l-20-set: 0.26;
-  --ch-color-base-d-l-25-set: 0.32;
-  --ch-color-base-d-l-30-set: 0.39;
-  --ch-color-base-d-l-35-set: 0.47;
-  --ch-color-base-d-l-40-set: 0.55;
-  --ch-color-base-d-l-45-set: 0.62;
-  --ch-color-base-d-l-50-set: 0.68;
-  --ch-color-base-d-l-55-set: 0.73;
-  --ch-color-base-d-l-60-set: 0.78;
-  --ch-color-base-d-l-65-set: 0.82;
-  --ch-color-base-d-l-70-set: 0.85;
-  --ch-color-base-d-l-75-set: 0.88;
-  --ch-color-base-d-l-80-set: 0.9;
-  --ch-color-base-d-l-85-set: 0.92;
-  --ch-color-base-d-l-90-set: 0.94;
-  --ch-color-base-d-l-95-set: 0.96;
-  --ch-color-base-d-l-100-set: 0.97;
+  --ch-color-base-d-l-00-set: 15%;
+  --ch-color-base-d-l-05-set: 17%;
+  --ch-color-base-d-l-10-set: 19%;
+  --ch-color-base-d-l-15-set: 22%;
+  --ch-color-base-d-l-20-set: 26%;
+  --ch-color-base-d-l-25-set: 32%;
+  --ch-color-base-d-l-30-set: 39%;
+  --ch-color-base-d-l-35-set: 47%;
+  --ch-color-base-d-l-40-set: 55%;
+  --ch-color-base-d-l-45-set: 62%;
+  --ch-color-base-d-l-50-set: 68%;
+  --ch-color-base-d-l-55-set: 73%;
+  --ch-color-base-d-l-60-set: 78%;
+  --ch-color-base-d-l-65-set: 82%;
+  --ch-color-base-d-l-70-set: 85%;
+  --ch-color-base-d-l-75-set: 88%;
+  --ch-color-base-d-l-80-set: 90%;
+  --ch-color-base-d-l-85-set: 92%;
+  --ch-color-base-d-l-90-set: 94%;
+  --ch-color-base-d-l-95-set: 96%;
+  --ch-color-base-d-l-100-set: 97%;
 }
 
 .ssopt-col-base-lightness-d-analog,
 .ssopt-col-base-lightness-d-analog .theme-dark,
 .ssopt-col-base-lightness-d-analog.theme-dark {
-  --ch-color-base-d-l-00-set: 0.2;
-  --ch-color-base-d-l-05-set: 0.22;
-  --ch-color-base-d-l-10-set: 0.24;
-  --ch-color-base-d-l-15-set: 0.27;
-  --ch-color-base-d-l-20-set: 0.31;
-  --ch-color-base-d-l-25-set: 0.35;
-  --ch-color-base-d-l-30-set: 0.4;
-  --ch-color-base-d-l-35-set: 0.46;
-  --ch-color-base-d-l-40-set: 0.52;
-  --ch-color-base-d-l-45-set: 0.58;
-  --ch-color-base-d-l-50-set: 0.64;
-  --ch-color-base-d-l-55-set: 0.69;
-  --ch-color-base-d-l-60-set: 0.74;
-  --ch-color-base-d-l-65-set: 0.78;
-  --ch-color-base-d-l-70-set: 0.82;
-  --ch-color-base-d-l-75-set: 0.85;
-  --ch-color-base-d-l-80-set: 0.87;
-  --ch-color-base-d-l-85-set: 0.89;
-  --ch-color-base-d-l-90-set: 0.91;
-  --ch-color-base-d-l-95-set: 0.93;
-  --ch-color-base-d-l-100-set: 0.94;
+  --ch-color-base-d-l-00-set: 20%;
+  --ch-color-base-d-l-05-set: 22%;
+  --ch-color-base-d-l-10-set: 24%;
+  --ch-color-base-d-l-15-set: 27%;
+  --ch-color-base-d-l-20-set: 31%;
+  --ch-color-base-d-l-25-set: 35%;
+  --ch-color-base-d-l-30-set: 40%;
+  --ch-color-base-d-l-35-set: 46%;
+  --ch-color-base-d-l-40-set: 52%;
+  --ch-color-base-d-l-45-set: 58%;
+  --ch-color-base-d-l-50-set: 64%;
+  --ch-color-base-d-l-55-set: 69%;
+  --ch-color-base-d-l-60-set: 74%;
+  --ch-color-base-d-l-65-set: 78%;
+  --ch-color-base-d-l-70-set: 82%;
+  --ch-color-base-d-l-75-set: 85%;
+  --ch-color-base-d-l-80-set: 87%;
+  --ch-color-base-d-l-85-set: 89%;
+  --ch-color-base-d-l-90-set: 91%;
+  --ch-color-base-d-l-95-set: 93%;
+  --ch-color-base-d-l-100-set: 94%;
 }
 
 .ssopt-col-base-lightness-d-structural,
 .ssopt-col-base-lightness-d-structural .theme-dark,
 .ssopt-col-base-lightness-d-structural.theme-dark {
-  --ch-color-base-d-l-00-set: 0.08;
-  --ch-color-base-d-l-05-set: 0.12;
-  --ch-color-base-d-l-10-set: 0.12;
-  --ch-color-base-d-l-15-set: 0.12;
-  --ch-color-base-d-l-20-set: 0.16;
-  --ch-color-base-d-l-25-set: 0.16;
-  --ch-color-base-d-l-30-set: 0.25;
-  --ch-color-base-d-l-35-set: 0.25;
-  --ch-color-base-d-l-40-set: 0.4;
-  --ch-color-base-d-l-45-set: 0.4;
-  --ch-color-base-d-l-50-set: 0.55;
-  --ch-color-base-d-l-55-set: 0.58;
-  --ch-color-base-d-l-60-set: 0.75;
-  --ch-color-base-d-l-65-set: 0.75;
-  --ch-color-base-d-l-70-set: 0.85;
-  --ch-color-base-d-l-75-set: 0.85;
-  --ch-color-base-d-l-80-set: 0.92;
-  --ch-color-base-d-l-85-set: 0.92;
-  --ch-color-base-d-l-90-set: 0.96;
-  --ch-color-base-d-l-95-set: 0.96;
-  --ch-color-base-d-l-100-set: 0.98;
+  --ch-color-base-d-l-00-set: 8%;
+  --ch-color-base-d-l-05-set: 12%;
+  --ch-color-base-d-l-10-set: 12%;
+  --ch-color-base-d-l-15-set: 12%;
+  --ch-color-base-d-l-20-set: 16%;
+  --ch-color-base-d-l-25-set: 16%;
+  --ch-color-base-d-l-30-set: 25%;
+  --ch-color-base-d-l-35-set: 25%;
+  --ch-color-base-d-l-40-set: 40%;
+  --ch-color-base-d-l-45-set: 40%;
+  --ch-color-base-d-l-50-set: 55%;
+  --ch-color-base-d-l-55-set: 58%;
+  --ch-color-base-d-l-60-set: 75%;
+  --ch-color-base-d-l-65-set: 75%;
+  --ch-color-base-d-l-70-set: 85%;
+  --ch-color-base-d-l-75-set: 85%;
+  --ch-color-base-d-l-80-set: 92%;
+  --ch-color-base-d-l-85-set: 92%;
+  --ch-color-base-d-l-90-set: 96%;
+  --ch-color-base-d-l-95-set: 96%;
+  --ch-color-base-d-l-100-set: 98%;
 }
 
 .ssopt-col-base-lightness-d-glow,
 .ssopt-col-base-lightness-d-glow .theme-dark,
 .ssopt-col-base-lightness-d-glow.theme-dark {
-  --ch-color-base-d-l-00-set: 0.35;
-  --ch-color-base-d-l-05-set: 0.36;
-  --ch-color-base-d-l-10-set: 0.37;
-  --ch-color-base-d-l-15-set: 0.39;
-  --ch-color-base-d-l-20-set: 0.42;
-  --ch-color-base-d-l-25-set: 0.46;
-  --ch-color-base-d-l-30-set: 0.51;
-  --ch-color-base-d-l-35-set: 0.57;
-  --ch-color-base-d-l-40-set: 0.63;
-  --ch-color-base-d-l-45-set: 0.69;
-  --ch-color-base-d-l-50-set: 0.74;
-  --ch-color-base-d-l-55-set: 0.78;
-  --ch-color-base-d-l-60-set: 0.82;
-  --ch-color-base-d-l-65-set: 0.85;
-  --ch-color-base-d-l-70-set: 0.88;
-  --ch-color-base-d-l-75-set: 0.9;
-  --ch-color-base-d-l-80-set: 0.92;
-  --ch-color-base-d-l-85-set: 0.94;
-  --ch-color-base-d-l-90-set: 0.95;
-  --ch-color-base-d-l-95-set: 0.96;
-  --ch-color-base-d-l-100-set: 0.97;
+  --ch-color-base-d-l-00-set: 35%;
+  --ch-color-base-d-l-05-set: 36%;
+  --ch-color-base-d-l-10-set: 37%;
+  --ch-color-base-d-l-15-set: 39%;
+  --ch-color-base-d-l-20-set: 42%;
+  --ch-color-base-d-l-25-set: 46%;
+  --ch-color-base-d-l-30-set: 51%;
+  --ch-color-base-d-l-35-set: 57%;
+  --ch-color-base-d-l-40-set: 63%;
+  --ch-color-base-d-l-45-set: 69%;
+  --ch-color-base-d-l-50-set: 74%;
+  --ch-color-base-d-l-55-set: 78%;
+  --ch-color-base-d-l-60-set: 82%;
+  --ch-color-base-d-l-65-set: 85%;
+  --ch-color-base-d-l-70-set: 88%;
+  --ch-color-base-d-l-75-set: 90%;
+  --ch-color-base-d-l-80-set: 92%;
+  --ch-color-base-d-l-85-set: 94%;
+  --ch-color-base-d-l-90-set: 95%;
+  --ch-color-base-d-l-95-set: 96%;
+  --ch-color-base-d-l-100-set: 97%;
 }
 
 .ssopt-col-base-lightness-d-catppuccin,
 .ssopt-col-base-lightness-d-catppuccin .theme-dark,
 .ssopt-col-base-lightness-d-catppuccin.theme-dark {
-  --ch-color-base-d-l-00-set: 0.28;
-  --ch-color-base-d-l-05-set: 0.265;
-  --ch-color-base-d-l-10-set: 0.25;
-  --ch-color-base-d-l-15-set: 0.29;
-  --ch-color-base-d-l-20-set: 0.35;
-  --ch-color-base-d-l-25-set: 0.42;
-  --ch-color-base-d-l-30-set: 0.47;
-  --ch-color-base-d-l-35-set: 0.52;
-  --ch-color-base-d-l-40-set: 0.57;
-  --ch-color-base-d-l-45-set: 0.62;
-  --ch-color-base-d-l-50-set: 0.67;
-  --ch-color-base-d-l-55-set: 0.71;
-  --ch-color-base-d-l-60-set: 0.75;
-  --ch-color-base-d-l-65-set: 0.78;
-  --ch-color-base-d-l-70-set: 0.81;
-  --ch-color-base-d-l-75-set: 0.84;
-  --ch-color-base-d-l-80-set: 0.87;
-  --ch-color-base-d-l-85-set: 0.89;
-  --ch-color-base-d-l-90-set: 0.91;
-  --ch-color-base-d-l-95-set: 0.93;
-  --ch-color-base-d-l-100-set: 0.95;
+  --ch-color-base-d-l-00-set: 28%;
+  --ch-color-base-d-l-05-set: 26.5%;
+  --ch-color-base-d-l-10-set: 25%;
+  --ch-color-base-d-l-15-set: 29%;
+  --ch-color-base-d-l-20-set: 35%;
+  --ch-color-base-d-l-25-set: 42%;
+  --ch-color-base-d-l-30-set: 47%;
+  --ch-color-base-d-l-35-set: 52%;
+  --ch-color-base-d-l-40-set: 57%;
+  --ch-color-base-d-l-45-set: 62%;
+  --ch-color-base-d-l-50-set: 67%;
+  --ch-color-base-d-l-55-set: 71%;
+  --ch-color-base-d-l-60-set: 75%;
+  --ch-color-base-d-l-65-set: 78%;
+  --ch-color-base-d-l-70-set: 81%;
+  --ch-color-base-d-l-75-set: 84%;
+  --ch-color-base-d-l-80-set: 87%;
+  --ch-color-base-d-l-85-set: 89%;
+  --ch-color-base-d-l-90-set: 91%;
+  --ch-color-base-d-l-95-set: 93%;
+  --ch-color-base-d-l-100-set: 95%;
 }
 
 .ssopt-col-base-lightness-d-writing,
 .ssopt-col-base-lightness-d-writing .theme-dark,
 .ssopt-col-base-lightness-d-writing.theme-dark {
-  --ch-color-base-d-l-00-set: 0.3;
-  --ch-color-base-d-l-05-set: 0.315;
-  --ch-color-base-d-l-10-set: 0.33;
-  --ch-color-base-d-l-15-set: 0.36;
-  --ch-color-base-d-l-20-set: 0.4;
-  --ch-color-base-d-l-25-set: 0.46;
-  --ch-color-base-d-l-30-set: 0.52;
-  --ch-color-base-d-l-35-set: 0.36;
-  --ch-color-base-d-l-40-set: 0.4;
-  --ch-color-base-d-l-45-set: 0.44;
-  --ch-color-base-d-l-50-set: 0.48;
-  --ch-color-base-d-l-55-set: 0.55;
-  --ch-color-base-d-l-60-set: 0.62;
-  --ch-color-base-d-l-65-set: 0.69;
-  --ch-color-base-d-l-70-set: 0.76;
-  --ch-color-base-d-l-75-set: 0.82;
-  --ch-color-base-d-l-80-set: 0.87;
-  --ch-color-base-d-l-85-set: 0.91;
-  --ch-color-base-d-l-90-set: 0.94;
-  --ch-color-base-d-l-95-set: 0.965;
-  --ch-color-base-d-l-100-set: 0.98;
+  --ch-color-base-d-l-00-set: 30%;
+  --ch-color-base-d-l-05-set: 31.5%;
+  --ch-color-base-d-l-10-set: 33%;
+  --ch-color-base-d-l-15-set: 36%;
+  --ch-color-base-d-l-20-set: 40%;
+  --ch-color-base-d-l-25-set: 46%;
+  --ch-color-base-d-l-30-set: 52%;
+  --ch-color-base-d-l-35-set: 36%;
+  --ch-color-base-d-l-40-set: 40%;
+  --ch-color-base-d-l-45-set: 44%;
+  --ch-color-base-d-l-50-set: 48%;
+  --ch-color-base-d-l-55-set: 55%;
+  --ch-color-base-d-l-60-set: 62%;
+  --ch-color-base-d-l-65-set: 69%;
+  --ch-color-base-d-l-70-set: 76%;
+  --ch-color-base-d-l-75-set: 82%;
+  --ch-color-base-d-l-80-set: 87%;
+  --ch-color-base-d-l-85-set: 91%;
+  --ch-color-base-d-l-90-set: 94%;
+  --ch-color-base-d-l-95-set: 96.5%;
+  --ch-color-base-d-l-100-set: 98%;
 }
 
 .ssopt-col-base-lightness-d-solarized,
 .ssopt-col-base-lightness-d-solarized .theme-dark,
 .ssopt-col-base-lightness-d-solarized.theme-dark {
-  --ch-color-base-d-l-00-set: 0.267;
-  --ch-color-base-d-l-05-set: 0.267;
-  --ch-color-base-d-l-10-set: 0.267;
-  --ch-color-base-d-l-15-set: 0.291;
-  --ch-color-base-d-l-20-set: 0.315;
-  --ch-color-base-d-l-25-set: 0.315;
-  --ch-color-base-d-l-30-set: 0.366;
-  --ch-color-base-d-l-35-set: 0.416;
-  --ch-color-base-d-l-40-set: 0.467;
-  --ch-color-base-d-l-45-set: 0.517;
-  --ch-color-base-d-l-50-set: 0.568;
-  --ch-color-base-d-l-55-set: 0.59;
-  --ch-color-base-d-l-60-set: 0.611;
-  --ch-color-base-d-l-65-set: 0.633;
-  --ch-color-base-d-l-70-set: 0.654;
-  --ch-color-base-d-l-75-set: 0.661;
-  --ch-color-base-d-l-80-set: 0.669;
-  --ch-color-base-d-l-85-set: 0.676;
-  --ch-color-base-d-l-90-set: 0.683;
-  --ch-color-base-d-l-95-set: 0.691;
-  --ch-color-base-d-l-100-set: 0.698;
+  --ch-color-base-d-l-00-set: 26.7%;
+  --ch-color-base-d-l-05-set: 26.7%;
+  --ch-color-base-d-l-10-set: 26.7%;
+  --ch-color-base-d-l-15-set: 29.1%;
+  --ch-color-base-d-l-20-set: 31.5%;
+  --ch-color-base-d-l-25-set: 31.5%;
+  --ch-color-base-d-l-30-set: 36.6%;
+  --ch-color-base-d-l-35-set: 41.6%;
+  --ch-color-base-d-l-40-set: 46.7%;
+  --ch-color-base-d-l-45-set: 51.7%;
+  --ch-color-base-d-l-50-set: 56.8%;
+  --ch-color-base-d-l-55-set: 59%;
+  --ch-color-base-d-l-60-set: 61.1%;
+  --ch-color-base-d-l-65-set: 63.3%;
+  --ch-color-base-d-l-70-set: 65.4%;
+  --ch-color-base-d-l-75-set: 66.1%;
+  --ch-color-base-d-l-80-set: 66.9%;
+  --ch-color-base-d-l-85-set: 67.6%;
+  --ch-color-base-d-l-90-set: 68.3%;
+  --ch-color-base-d-l-95-set: 69.1%;
+  --ch-color-base-d-l-100-set: 69.8%;
 }
 
 .ssopt-col-base-lightness-d-flexoki,
 .ssopt-col-base-lightness-d-flexoki .theme-dark,
 .ssopt-col-base-lightness-d-flexoki.theme-dark {
-  --ch-color-base-d-l-00-set: 0.17;
-  --ch-color-base-d-l-05-set: 0.17;
-  --ch-color-base-d-l-10-set: 0.223;
-  --ch-color-base-d-l-15-set: 0.223;
-  --ch-color-base-d-l-20-set: 0.223;
-  --ch-color-base-d-l-25-set: 0.273;
-  --ch-color-base-d-l-30-set: 0.273;
-  --ch-color-base-d-l-35-set: 0.321;
-  --ch-color-base-d-l-40-set: 0.365;
-  --ch-color-base-d-l-45-set: 0.409;
-  --ch-color-base-d-l-50-set: 0.453;
-  --ch-color-base-d-l-55-set: 0.496;
-  --ch-color-base-d-l-60-set: 0.538;
-  --ch-color-base-d-l-65-set: 0.578;
-  --ch-color-base-d-l-70-set: 0.617;
-  --ch-color-base-d-l-75-set: 0.655;
-  --ch-color-base-d-l-80-set: 0.693;
-  --ch-color-base-d-l-85-set: 0.732;
-  --ch-color-base-d-l-90-set: 0.77;
-  --ch-color-base-d-l-95-set: 0.808;
-  --ch-color-base-d-l-100-set: 0.846;
+  --ch-color-base-d-l-00-set: 17%;
+  --ch-color-base-d-l-05-set: 17%;
+  --ch-color-base-d-l-10-set: 22.3%;
+  --ch-color-base-d-l-15-set: 22.3%;
+  --ch-color-base-d-l-20-set: 22.3%;
+  --ch-color-base-d-l-25-set: 27.3%;
+  --ch-color-base-d-l-30-set: 27.3%;
+  --ch-color-base-d-l-35-set: 32.1%;
+  --ch-color-base-d-l-40-set: 36.5%;
+  --ch-color-base-d-l-45-set: 40.9%;
+  --ch-color-base-d-l-50-set: 45.3%;
+  --ch-color-base-d-l-55-set: 49.6%;
+  --ch-color-base-d-l-60-set: 53.8%;
+  --ch-color-base-d-l-65-set: 57.8%;
+  --ch-color-base-d-l-70-set: 61.7%;
+  --ch-color-base-d-l-75-set: 65.5%;
+  --ch-color-base-d-l-80-set: 69.3%;
+  --ch-color-base-d-l-85-set: 73.2%;
+  --ch-color-base-d-l-90-set: 77%;
+  --ch-color-base-d-l-95-set: 80.8%;
+  --ch-color-base-d-l-100-set: 84.6%;
 }
 
 /* =================================================================== */
@@ -21553,291 +21553,6 @@ body {
 
 /* replaces var(--color-red-rgb) etc via Relative OKLCH syntax */
 
-/* Light-on-Dark and Dark-on-Light Mode - Cross UI */
-
-/* ────────────────────────────────────────────────────────────────────────────────
-> CX00
-\ Colour \ Cross-Colours
-
-? Allows you to use dark items on light and light items on dark
-──────────────────────────────────────────────────────────────────────────────── */
-
-/* FOR ORIGINAL COLOURS */
-body {
-  /* IMPORT COLORS FROM DARK MODE */
-
-  /* for light -> dark and dark -> light */
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light,
-.ssopt-theme-contrast-dark.theme-dark) {
-  --opp-lightness: calc(1 - l + 0.1);
-  --opp-background-primary: oklch(from var(--background-primary) var(--opp-lightness) c h);
-  --opp-background-primary-alt: oklch(from var(--background-primary-alt) var(--opp-lightness) c h);
-  --opp-background-secondary: oklch(from var(--background-secondary) var(--opp-lightness) c h);
-  --opp-background-secondary-alt: oklch(from var(--background-secondary-alt) var(--opp-lightness) c h);
-  --opp-background-modifier-border: oklch(from var(--background-modifier-border) var(--opp-lightness) c h);
-  --opp-background-modifier-border-hover: oklch(from var(--background-modifier-border-hover) var(--opp-lightness) c h);
-  --opp-background-modifier-border-focus: oklch(from var(--background-modifier-border-focus) var(--opp-lightness) c h);
-  --opp-background-modifier-hover: oklch(from var(--background-modifier-hover) var(--opp-lightness) c h);
-  --opp-background-modifier-form-field: oklch(from var(--background-modifier-form-field) var(--opp-lightness) c h);
-  --opp-text-faint: oklch(from var(--text-faint) var(--opp-lightness) c h);
-  --opp-text-muted: oklch(from var(--text-muted) var(--opp-lightness) c h);
-  --opp-text-normal: oklch(from var(--text-normal) var(--opp-lightness) c h);
-  --opp-text-on-accent: oklch(from var(--text-on-accent) var(--opp-lightness) c h);
-  --opp-text-on-accent-inverted: oklch(from var(--text-on-accent-inverted) var(--opp-lightness) c h);
-
-  /* two things to take note -> change scale on dark to light and light to dark */
-
-  /* one is a conversion of the --color-accents */
-
-  /* the other is to paste the dark/light scale conversion */
-
-  /* speshul dark stuff from app.css */
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light,
-.ssopt-theme-contrast-dark.theme-dark) .canvas-card-menu {
-  background-color: var(--opp-background-secondary);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light,
-.ssopt-theme-contrast-dark.theme-dark) .canvas-card-menu svg {
-  fill: var(--opp-background-secondary);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light,
-.ssopt-theme-contrast-dark.theme-dark) .canvas-control-item {
-  background-color: var(--opp-background-secondary);
-}
-
-body:is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l).theme-light) {
-  --opp-background-primary: oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00));
-  --opp-background-primary-alt: oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10));
-  --opp-background-secondary: oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20));
-  --opp-background-secondary-alt: oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25));
-  --opp-background-modifier-border: oklch(var(--ch-color-base-d-l-35) var(--ch-color-base-d-c-35) var(--ch-color-base-d-h-35));
-  --opp-background-modifier-border-hover: oklch(var(--ch-color-base-d-l-40) var(--ch-color-base-d-c-40) var(--ch-color-base-d-h-40));
-  --opp-background-modifier-border-focus: oklch(var(--ch-color-base-d-l-45) var(--ch-color-base-d-c-45) var(--ch-color-base-d-h-45));
-  --opp-background-modifier-form-field: oklch(var(--ch-color-base-d-l-05) var(--ch-color-base-d-c-05) var(--ch-color-base-d-h-05)); /* Light theme uses -00, Dark uses -25. Mapping to -00 as the base. */
-  --opp-background-modifier-hover: oklch(from var(--background-modifier-hover) var(--opp-lightness) c h);
-  --opp-text-faint: oklch(var(--ch-color-base-d-l-45) var(--ch-color-base-d-c-45) var(--ch-color-base-d-h-45));
-  --opp-text-muted: oklch(var(--ch-color-base-d-l-60) var(--ch-color-base-d-c-60) var(--ch-color-base-d-h-60));
-  --opp-text-normal: oklch(var(--ch-color-base-d-l-100) var(--ch-color-base-d-c-100) var(--ch-color-base-d-h-100));
-  --opp-text-on-accent: oklch(from var(--text-on-accent) var(--opp-lightness) c h);
-  --opp-text-on-accent-inverted: oklch(from var(--text-on-accent-inverted) var(--opp-lightness) c h);
-}
-
-body:is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d).theme-dark) {
-  --opp-background-primary: oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00));
-  --opp-background-primary-alt: oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10));
-  --opp-background-secondary: oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20));
-  --opp-background-secondary-alt: oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25));
-  --opp-background-modifier-border: oklch(var(--ch-color-base-l-l-35) var(--ch-color-base-l-c-35) var(--ch-color-base-l-h-35));
-  --opp-background-modifier-border-hover: oklch(var(--ch-color-base-l-l-40) var(--ch-color-base-l-c-40) var(--ch-color-base-l-h-40));
-  --opp-background-modifier-border-focus: oklch(var(--ch-color-base-l-l-45) var(--ch-color-base-l-c-45) var(--ch-color-base-l-h-45));
-  --opp-background-modifier-form-field: oklch(var(--ch-color-base-l-l-05) var(--ch-color-base-l-c-05) var(--ch-color-base-l-h-05)); /* Light theme uses -00, Dark uses -25. Mapping to -00 as the base. */
-  --opp-background-modifier-hover: oklch(from var(--background-modifier-hover) var(--opp-lightness) c h);
-  --opp-text-faint: oklch(var(--ch-color-base-l-l-45) var(--ch-color-base-l-c-45) var(--ch-color-base-l-h-45));
-  --opp-text-muted: oklch(var(--ch-color-base-l-l-60) var(--ch-color-base-l-c-60) var(--ch-color-base-l-h-60));
-  --opp-text-normal: oklch(var(--ch-color-base-l-l-100) var(--ch-color-base-l-c-100) var(--ch-color-base-l-h-100));
-  --opp-text-on-accent: oklch(from var(--text-on-accent) var(--opp-lightness) c h);
-  --opp-text-on-accent-inverted: oklch(from var(--text-on-accent-inverted) var(--opp-lightness) c h);
-}
-
-body:is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l.ssopt-tc-accent-cross-l).theme-light) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) {
-  --color-accent: var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)));
-  --color-accent-1: var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)));
-  --color-accent-2: var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)));
-  --text-accent: var(--color-accent-1);
-  --interactive-accent: var(--color-accent);
-  --interactive-accent-hover: var(--color-accent-1);
-  --col-h1-bg: var(--color-accent);
-  --col-h2-bg: var(--color-accent-1);
-  --col-h3-bg: var(--color-accent-2);
-  --col-h4-bg: var(--color-accent);
-  --col-h5-bg: var(--color-accent-1);
-  --col-h6-bg: var(--color-accent-2);
-  --icon-color-active: var(--color-accent-1);
-  --icon-color-hover: var(--color-accent-2);
-}
-
-body:is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d.ssopt-tc-accent-cross-d).theme-dark) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) {
-  --color-accent: var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)));
-  --color-accent-1: var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)));
-  --color-accent-2: var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)));
-  --text-accent: var(--color-accent);
-  --interactive-accent: var(--color-accent-1);
-  --interactive-accent-hover: var(--color-accent);
-  --col-h1-bg: var(--color-accent);
-  --col-h2-bg: var(--color-accent-1);
-  --col-h3-bg: var(--color-accent-2);
-  --col-h4-bg: var(--color-accent);
-  --col-h5-bg: var(--color-accent-1);
-  --col-h6-bg: var(--color-accent-2);
-  --icon-color-active: var(--color-accent);
-  --icon-color-hover: var(--color-accent-1);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) {
-  --opp-caret-color: var(--opp-text-normal);
-  --opp-divider-color: var(--opp-background-modifier-border);
-  --opp-indentation-guide-color: oklch(from var(--indentation-guide-color) calc(1 - l + 0.1) c h);
-  --opp-collapse-icon-color: var(--opp-text-faint);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) {
-  --titlebar-background: var(--opp-background-secondary);
-  --titlebar-background-focused: var(--opp-background-secondary-alt);
-  --titlebar-border-color: var(--opp-background-modifier-border);
-  --titlebar-text-color: var(--opp-text-muted);
-  --titlebar-text-color-focused: var(--opp-text-normal);
-  --ribbon-background: var(--opp-background-secondary);
-  --ribbon-background-collapsed: var(--opp-background-primary);
-  --status-bar-background: var(--opp-background-secondary);
-  --status-bar-border-color: var(--opp-divider-color);
-  --status-bar-text-color: var(--opp-text-muted);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right) {
-  color: var(--opp-text-normal);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar),
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)),
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) {
-  --metadata-border-color: var(--opp-background-modifier-border);
-  --metadata-divider-color: var(--opp-background-modifier-border);
-  --metadata-property-background-active: var(--opp-background-modifier-hover);
-  --metadata-property-background-active: var(--opp-background-modifier-hover);
-  --metadata-property-box-shadow-hover: 0 0 0 1px var(--opp-background-modifier-border-hover);
-  --metadata-property-box-shadow-focus: 0 0 0 2px var(--opp-background-modifier-border-focus);
-  --metadata-label-background-active: var(--opp-background-modifier-hover);
-  --metadata-label-text-color: var(--opp-text-muted);
-  --metadata-label-text-color-hover: var(--opp-text-muted);
-  --metadata-input-background-active: var(--opp-background-modifier-hover);
-  --tab-container-background: var(--opp-background-secondary);
-  --tab-background-active: var(--opp-background-primary);
-  --tab-text-color: var(--opp-text-faint);
-  --tab-text-color-active: var(--opp-text-muted);
-  --tab-text-color-focused: var(--opp-text-muted);
-  --tab-text-color-focused-active: var(--opp-text-muted);
-  --tab-text-color-focused-active-current: var(--icon-color-active);
-  --tab-divider-color: var(--opp-background-modifier-border-hover);
-  --tab-outline-color: var(--opp-divider-color);
-  --vault-profile-color: var(--opp-text-normal);
-  --background-primary: var(--opp-background-primary);
-  --background-primary-alt: var(--opp-background-primary-alt);
-  --background-secondary: var(--opp-background-secondary);
-  --background-modifier-border: var(--opp-background-modifier-border);
-  --background-modifier-border-hover: var(--opp-background-modifier-border-hover);
-  --background-modifier-border-focus: var(--opp-background-modifier-border-focus);
-  --background-modifier-hover: var(--opp-background-modifier-hover);
-  --background-modifier-form-field: var(--opp-background-modifier-form-field);
-  --divider-color: var(--opp-background-modifier-border);
-  --empty-state-background: var(--opp-background-primary-alt);
-  --text-normal: var(--opp-text-normal);
-  --text-muted: var(--opp-text-muted);
-  --text-faint: var(--opp-text-faint);
-  --text-on-accent: var(--opp-text-on-accent);
-  --text-on-accent-inverted: var(--opp-text-on-accent-inverted);
-  --caret-color: var(--opp-text-normal);
-  --divider-color: var(--opp-background-modifier-border);
-  --indentation-guide-color: var(--opp-indentation-guide-color);
-  --collapse-icon-color: var(--opp-text-faint);
-
-  /* --- ICONS --- */
-  --icon-color: var(--opp-text-muted);
-  --icon-color-hover: var(--opp-text-muted);
-  --icon-color-focused: var(--icon-color-active);
-  --nav-item-color: var(--opp-text-muted);
-  --nav-item-color-hover: var(--opp-text-normal);
-  --nav-item-color-active: var(--opp-text-normal);
-  --nav-item-color-selected: var(--opp-text-normal);
-  --nav-item-background-hover: var(--opp-background-modifier-hover);
-  --nav-item-background-active: var(--opp-background-modifier-hover);
-  --nav-indentation-guide-color: var(--opp-indentation-guide-color);
-  --nav-collapse-icon-color: var(--opp-collapse-icon-color);
-  --nav-collapse-icon-color-collapsed: var(--opp-text-faint);
-  --nav-heading-color: var(--opp-text-normal);
-  --nav-heading-color-hover: var(--opp-text-normal);
-  --nav-heading-color-collapsed: var(--opp-text-faint);
-  --nav-heading-color-collapsed-hover: var(--opp-text-muted);
-
-  /* --- CONTENT-SPECIFIC NEUTRAL COLORS --- */
-  --hr-color: var(--opp-background-modifier-border);
-  --code-background: var(--opp-background-primary-alt);
-  --code-border-color: var(--opp-background-modifier-border);
-  --code-normal: var(--opp-text-normal);
-  --code-comment: var(--opp-text-faint);
-  --code-punctuation: var(--opp-text-muted);
-  --code-bracket-background: var(--opp-background-modifier-hover);
-  --table-border-color: var(--opp-background-modifier-border);
-  --table-header-border-color: var(--opp-table-border-color);
-  --table-header-color: var(--opp-text-normal);
-  --pill-color: var(--opp-text-muted);
-  --pill-color-hover: var(--opp-text-normal);
-  --pill-color-remove: var(--opp-text-faint);
-  --pill-color-remove-hover: var(--text-accent);
-  --search-result-background: var(--opp-background-primary);
-  --search-icon-color: var(--opp-text-muted);
-  --search-clear-button-color: var(--opp-text-muted);
-  --list-marker-color: var(--opp-text-faint);
-  --list-marker-color-hover: var(--opp-text-muted);
-  --checkbox-marker-color: var(--opp-background-primary);
-  --checkbox-border-color: var(--opp-text-faint);
-  --checkbox-border-color-hover: var(--opp-text-muted);
-  --checklist-done-color: var(--opp-text-muted);
-
-  /* --- SPECIALIZED PANE NEUTRAL COLORS --- */
-  --pdf-background: var(--opp-background-primary);
-  --pdf-page-background: var(--opp-background-primary);
-  --pdf-shadow: var(--opp-pdf-shadow);
-  --pdf-sidebar-background: var(--opp-background-primary);
-  --canvas-background: var(--opp-background-primary);
-  --canvas-card-label-color: var(--opp-text-faint);
-  --canvas-dot-pattern: var(--opp-background-modifier-border);
-
-  /* --- BASES UI COMPONENTS (TABLES, CARDS, EMBEDS) --- */
-  --bases-embed-border-color: var(--opp-background-modifier-border);
-  --bases-table-header-color: var(--opp-text-muted);
-  --bases-table-header-background: var(--opp-background-primary);
-  --bases-table-header-background-hover: var(--opp-background-modifier-hover);
-  --bases-table-border-color: var(--opp-background-modifier-border);
-  --bases-cards-container-background: var(--opp-background-primary);
-  --bases-cards-background: var(--opp-background-primary);
-  --bases-cards-cover-background: var(--opp-background-primary-alt);
-  --bases-cards-shadow: 0 0 0 1px var(--opp-background-modifier-border);
-  --bases-cards-shadow-hover: 0 0 0 1px var(--opp-background-modifier-border-hover);
-  --color-table-odd: var(--opp-background-primary);
-  --color-table-even: var(--opp-background-primary-alt);
-  --color-table-head: var(--opp-background-secondary);
-  --color-table-head-hover: var(--opp-background-modifier-hover);
-  --table-border-color: var(--opp-background-modifier-border);
-  --table-header-border-color: var(--table-border-color);
-  --table-header-background: var(--color-table-head);
-  --table-header-background-hover: var(--color-table-head-hover);
-
-  /* BLOCKQUOTES */
-  --blockquote-background-color: var(--opp-background-primary-alt);
-  --blockquote-border-color: var(--opp-background-secondary-alt);
-
-  /* --blockquote-color: var(--opp-text-normal); */
-  --link-external-color: var(--text-accent);
-  --link-external-color-hover: var(--text-accent-hover);
-  --link-color: var(--text-accent);
-  --link-color-hover: var(--text-accent-hover);
-  --link-unresolved-color: var(--text-accent);
-  --list-marker-color-collapsed: var(--text-accent);
-  --input-placeholder-color: var(--opp-text-faint);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) .search-result-file-matches,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .search-result-file-matches,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .search-result-file-matches {
-  --search-result-background: var(--opp-background-primary);
-}
-
 /* APP UI */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -21901,11 +21616,6 @@ body {
 
 body:is(.ssopt-tabs-modern-borderless) {
   --tab-focus-border-width: 0px;
-}
-
-/* remove the | between the tabs */
-.workspace .mod-root .workspace-tab-header-inner::after {
-  background-color: transparent;
 }
 
 /**
@@ -32371,22 +32081,6 @@ body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark.sso
   display: none;
 }
 
-body:not(.ssopt-theme-contrast-dark) .setting-item.setting-item:where([data-id="ssopt-tc-cross-d"]) {
-  display: none;
-}
-
-body:not(.ssopt-theme-contrast-dark.ssopt-tc-cross-d) .setting-item.setting-item:where([data-id="ssopt-tc-accent-cross-d"]) {
-  display: none;
-}
-
-body:not(.ssopt-theme-contrast-light) .setting-item.setting-item:where([data-id="ssopt-tc-cross-l"]) {
-  display: none;
-}
-
-body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .setting-item.setting-item:where([data-id="ssopt-tc-accent-cross-l"]) {
-  display: none;
-}
-
 body .setting-item.setting-item:where([data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
   padding: 0 8px 0 4px; /* follows their own paddings */
   font-family: Manrope;
@@ -32822,22 +32516,6 @@ body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark.sso
   display: none;
 }
 
-body:not(.ssopt-theme-contrast-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-cross-d"]) {
-  display: none;
-}
-
-body:not(.ssopt-theme-contrast-dark.ssopt-tc-cross-d) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-accent-cross-d"]) {
-  display: none;
-}
-
-body:not(.ssopt-theme-contrast-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-cross-l"]) {
-  display: none;
-}
-
-body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-accent-cross-l"]) {
-  display: none;
-}
-
 body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
   padding: 0 8px 0 4px; /* follows their own paddings */
   font-family: Manrope;
@@ -33117,12 +32795,8 @@ body.theme-dark .setting-item:where([data-id^="col-highlight-3"]) .theme-dark .p
   background-color: var(--pcr-color, var(--col-custom-headers-H6));
 }
 
-body:is(.is-phone) .setting-item:where([data-id^="col-highlight-"]) :where(.setting-item-control) {
-  justify-content: start;
-}
-
-body:is(.is-phone) .setting-item:where([data-id^="col-highlight-"]) :where(.setting-item-control) .pickr button {
-  width: 50vw;
+body:is(.is-mobile) .setting-item:where([data-id^="col-highlight-"]) .pickr button {
+  width: max-content;
 }
 
 /* hide the wrapper when it's not the right theme setting */
@@ -35732,7 +35406,7 @@ body:is(.ssopt-acrs-enable) .setting-item[data-id="ssopt-acrs-enable"] .setting-
 }
 
 /* --------------------------------------------------------------------------------
-   [13] Colour Preview Boxes RealDisplay (originally for Rainbows)
+   [13] Rainbow Colours RealDisplay
 ----------------------------------------------------------------------------------- */
 .setting-item:is([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"], [data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"], [data-id="color-pax-l-accent-textfield"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"], [data-id="color-pax-d-accent-textfield"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"], [data-id="canvas-background"], [data-id="h1-color-dark"], [data-id="h2-color-dark"], [data-id="h3-color-dark"], [data-id="h4-color-dark"], [data-id="h5-color-dark"], [data-id="h6-color-dark"], [data-id="h1-color-light"], [data-id="h2-color-light"], [data-id="h3-color-light"], [data-id="h4-color-light"], [data-id="h5-color-light"], [data-id="h6-color-light"]) .setting-item-control::before {
   width: var(--header-icon-size);
@@ -36236,7 +35910,7 @@ body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"
 \ Plugins > Community
 \ Style Settings
 \ High Level CSS Manipulations for Colours RealDisplay
-\ v4
+\ v3
 ───────────────────────────────────────────────────────────────────────────────────
 Style Settings allows you some new HTML divs.
 Which means CSS could do funny things with it.
@@ -36391,15 +36065,25 @@ body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-
 
   /* ───────── SOLID PALETTE PREVIEWS ───────── */
 
-  /* CROSS-COLOURS | FOR CONTRAST PREVIEWS */
+  /* light panel */
+
+  /* dark panel */
+
+  /* light panel */
+
+  /* dark panel */
+
+  /* light panel */
+
+  /* dark panel */
+
+  /* light panel */
+
+  /* dark panel */
 
   /* ───────── OPPOSITE (cross-theme) PREVIEWS ───────── */
 
   /* BASE — opposite previews */
-
-  /* CONTRAST (BASE) - IF NO OPTION IS TURNED ON */
-
-  /* CONTRAST (USE OWN COLOURS BUT DIFF LIGHTNESS) */
 
   /* ACCENT */
 
@@ -36443,28 +36127,6 @@ body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .
   color: white;
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container {
-  /* light panel */
-
-  /* dark panel */
-
-  /* light panel */
-
-  /* dark panel */
-
-  /* light panel */
-
-  /* dark panel */
-
-  /* light panel */
-
-  /* dark panel */
-
-  /* light panel */
-
-  /* dark panel */
-}
-
 body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
@@ -36505,32 +36167,6 @@ body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body:where(.ssopt-theme-contrast-dark.theme-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container, body:where(.ssopt-theme-contrast-light.theme-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container {
-  /* light panel */
-
-  /* dark panel */
-}
-
-body:where(.ssopt-theme-contrast-dark.theme-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before, body:where(.ssopt-theme-contrast-light.theme-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--opp-background-primary) 0%, var(--opp-background-primary) 25%, var(--opp-background-primary-alt) 25%, var(--opp-background-primary-alt) 50%, var(--opp-background-secondary) 50%, var(--opp-background-secondary) 75%, var(--opp-background-secondary-alt) 75%, var(--opp-background-secondary-alt) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body:where(.ssopt-theme-contrast-dark.theme-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before, body:where(.ssopt-theme-contrast-light.theme-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--opp-background-primary) 0%, var(--opp-background-primary) 25%, var(--opp-background-primary-alt) 25%, var(--opp-background-primary-alt) 50%, var(--opp-background-secondary) 50%, var(--opp-background-secondary) 75%, var(--opp-background-secondary-alt) 75%, var(--opp-background-secondary-alt) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
 body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-dark"] .setting-item-control::before {
   background: linear-gradient(to right, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 0%, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
@@ -36539,32 +36175,6 @@ body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .sty
 body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-light"] .setting-item-control::before {
   background: linear-gradient(to right, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 0%, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 100%);
   box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 0%, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 0%, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 100%);
-  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
-}
-
-body.ssopt-theme-contrast-dark.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, oklch(calc(1 - var(--ch-color-base-d-l-00) + 0.1) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 0%, oklch(calc(1 - var(--ch-color-base-d-l-00) + 0.1) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 25%, oklch(calc(1 - var(--ch-color-base-d-l-10) + 0.1) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 25%, oklch(calc(1 - var(--ch-color-base-d-l-10) + 0.1) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 50%, oklch(calc(1 - var(--ch-color-base-d-l-20) + 0.1) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 50%, oklch(calc(1 - var(--ch-color-base-d-l-20) + 0.1) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 75%, oklch(calc(1 - var(--ch-color-base-d-l-25) + 0.1) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 75%, oklch(calc(1 - var(--ch-color-base-d-l-25) + 0.1) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 100%);
-}
-
-body.ssopt-theme-contrast-dark.theme-light.ssopt-tc-cross-d .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
-}
-
-body.ssopt-theme-contrast-light.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, oklch(calc(1 - var(--ch-color-base-l-l-00) + 0.1) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 0%, oklch(calc(1 - var(--ch-color-base-l-l-00) + 0.1) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 25%, oklch(calc(1 - var(--ch-color-base-l-l-10) + 0.1) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 25%, oklch(calc(1 - var(--ch-color-base-l-l-10) + 0.1) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 50%, oklch(calc(1 - var(--ch-color-base-l-l-20) + 0.1) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 50%, oklch(calc(1 - var(--ch-color-base-l-l-20) + 0.1) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 75%, oklch(calc(1 - var(--ch-color-base-l-l-25) + 0.1) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 75%, oklch(calc(1 - var(--ch-color-base-l-l-25) + 0.1) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 100%);
-}
-
-body.ssopt-theme-contrast-light.theme-dark.ssopt-tc-cross-l .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
-  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
 }
 
 body.theme-light.ssopt-custom-colour-template-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
@@ -41563,46 +41173,22 @@ settings:
                 default: ''
                 description: 'Overrides the default selection colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
     -
-            id: V3-willemstad-color-contrast-settings-light
-            title: 'Cross-Colour UI (Dark UI)'
-            type: heading
-            level: 3
-            collapsed: true
+        id: info-override-template-light
+        title: Override via Custom Template Snippet
+        type: heading
+        level: 3
+        collapsed: true
     -
-                id: ssopt-theme-contrast-light
-                title: Enable Contrast
-                type: class-toggle
-                description: "When enabled, UI elements like the titlebar, ribbon, status bar, and side panes will use a contrasting colour scheme taken from the current mode's chroma and hue."
-                default: false
+            id: ssopt-custom-colour-template-light
+            title: Enable User-Set Colours via Template for Light Mode
+            description: "Enable this option to allow the use of a snippet, for specific preset variables which will customize colors for the theme's appearance in light mode. This will override the variables set within Style Settings."
+            type: class-toggle
     -
-                id: ssopt-tc-cross-l
-                title: Use Base Colours from Dark Mode
-                type: class-toggle
-                description: "Imports the base background and text colours from your dark mode settings to use for the contrasting UI elements. The base colours within your main editing workspace will not be affected."
-                default: false
-    -
-                id: ssopt-tc-accent-cross-l
-                title: Use Accent Colours from Dark Mode
-                type: class-toggle
-                description: "Imports the accent colours from your dark mode settings to use for the contrasting UI elements. The accent colours within your main editing workspace will not be affected."
-                default: false
-    -
-            id: info-override-template-light
-            title: Override via Custom Template Snippet
-            type: heading
-            level: 3
-            collapsed: true
-    -
-                id: ssopt-custom-colour-template-light
-                title: Enable User-Set Colours via Template for Light Mode
-                description: "Enable this option to allow the use of a snippet, for specific preset variables which will customize colors for the theme's appearance in light mode. This will override the variables set within Style Settings."
-                type: class-toggle
-    -
-                id: info-template-file-light
-                title: Template Snippet File
-                description: "[Template File](https://willemstad.cc/Dev+Docs/Template+Snippet)"
-                type: info-text
-                markdown: true
+            id: info-template-file-light
+            title: Template Snippet File
+            description: "[Template File](https://willemstad.cc/Dev+Docs/Template+Snippet)"
+            type: info-text
+            markdown: true
     -
         id: willemstad-theme-colours-dark
         title: Dark Mode
@@ -43641,30 +43227,6 @@ settings:
         type: variable-text
         default: ''
         description: 'Overrides the default selection colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
-    -
-        id: V3-willemstad-color-contrast-settings-dark
-        title: 'Cross-Colour UI (Light UI)'
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: ssopt-theme-contrast-dark
-        title: Enable Contrast
-        type: class-toggle
-        description: "When enabled, UI elements like the titlebar, ribbon, status bar, and side panes will use a contrasting colour scheme taken from the current mode's chroma and hue."
-        default: false
-    -
-        id: ssopt-tc-cross-d
-        title: Use Base Colours from Light Mode
-        type: class-toggle
-        description: "Imports the base background and text colours from your light mode settings to use for the contrasting UI elements. The base colours within your main editing workspace will not be affected."
-        default: false
-    -
-        id: ssopt-tc-accent-cross-d
-        title: Use Accent Colours from Light Mode
-        type: class-toggle
-        description: "Imports the accent colours from your light mode settings to use for the contrasting UI elements. The accent colours within your main editing workspace will not be affected."
-        default: false
     -
         id: info-override-template-dark
         title: Override via Custom Template Snippet
