@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.20 Newfoundland
+Willemstad | v1.9.19 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.20 Newfoundland";
+  content: "  /  Willemstad v1.9.19 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.20 Newfoundland"; /* prints version number */
+  content: "\av1.9.19 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -2073,10 +2073,6 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   border-width: var(--border-scrollbar-non-native);
   border-left-width: var(--border-scrollbar-non-native); /* even if I take into account this with the above math, I cannot take into account if there is no scrollbars */ /* hence zero */
   border-right-width: var(--border-scrollbar-non-native); /* to account for the border and border-box? */
-}
-
-body:not(.native-scrollbars).styled-scrollbars .modal-close-button {
-  inset-inline-end: calc(var(--size-scrollbar-non-native) + var(--size-2-3));
 }
 
 /* Scrollbars */
@@ -22286,7 +22282,6 @@ body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light,
   --opp-background-modifier-border-focus: oklch(from var(--background-modifier-border-focus) var(--opp-lightness) c h);
   --opp-background-modifier-hover: oklch(from var(--background-modifier-hover) var(--opp-lightness) c h);
   --opp-background-modifier-form-field: oklch(from var(--background-modifier-form-field) var(--opp-lightness) c h);
-  --opp-code-background: oklch(from var(--color-base-15) var(--opp-lightness) c h);
   --opp-text-faint: oklch(from var(--text-faint) var(--opp-lightness) c h);
   --opp-text-muted: oklch(from var(--text-muted) var(--opp-lightness) c h);
   --opp-text-normal: oklch(from var(--text-normal) var(--opp-lightness) c h);
@@ -22327,7 +22322,6 @@ body:not(.is-mobile):is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l).the
   --opp-background-modifier-border-focus: oklch(var(--ch-color-base-d-l-45) var(--ch-color-base-d-c-45) var(--ch-color-base-d-h-45));
   --opp-background-modifier-form-field: oklch(var(--ch-color-base-d-l-05) var(--ch-color-base-d-c-05) var(--ch-color-base-d-h-05)); /* Light theme uses -00, Dark uses -25. Mapping to -00 as the base. */
   --opp-background-modifier-hover: oklch(from var(--background-modifier-hover) var(--opp-lightness) c h);
-  --opp-code-background: oklch(var(--ch-color-base-d-l-15) var(--ch-color-base-d-c-15) var(--ch-color-base-d-h-15));
   --opp-text-faint: oklch(var(--ch-color-base-d-l-45) var(--ch-color-base-d-c-45) var(--ch-color-base-d-h-45));
   --opp-text-muted: oklch(var(--ch-color-base-d-l-60) var(--ch-color-base-d-c-60) var(--ch-color-base-d-h-60));
   --opp-text-normal: oklch(var(--ch-color-base-d-l-100) var(--ch-color-base-d-c-100) var(--ch-color-base-d-h-100));
@@ -22473,7 +22467,7 @@ body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-co
 
   /* --- CONTENT-SPECIFIC NEUTRAL COLORS --- */
   --hr-color: var(--opp-background-modifier-border);
-  --code-background: var(--opp-code-background);
+  --code-background: var(--opp-background-primary-alt);
   --code-border-color: var(--opp-background-modifier-border);
   --code-normal: var(--opp-text-normal);
   --code-comment: var(--opp-text-faint);
@@ -28011,6 +28005,7 @@ body {
   --table-drag-handle-size: var(--size-4-4);
 }
 
+/* Live Preview */
 body:is(.ssopt-block-width-tables) {
   /* Reading Mode */
 }
@@ -28079,7 +28074,6 @@ body:is(.ssopt-block-width-tables) {
   }
 }
 
-/* BASES */
 body {
   --size-bw-bases: size * var(--magnifier-bw-bases);
   --magnifier-bw-bases: 1.5;
@@ -28087,6 +28081,7 @@ body {
   --ratio-bw-bases-reading: 0.96;
 }
 
+/* Live Preview */
 @container live-preview (min-width: 0) {
   body:is(.ssopt-block-width-bases) .markdown-source-view.mod-cm6 :where(.cm-content) > .bases-embed {
     position: relative;
@@ -28104,37 +28099,6 @@ body {
     width: calc-size(auto, var(--size-bw-bases));
     transform: translateX(-50%);
     max-width: calc(var(--ratio-bw-bases-reading) * 100cqi + 2 * var(--file-margins));
-  }
-}
-
-/* IFRAMES */
-body {
-  --size-bw-iframe: size * var(--magnifier-bw-iframe);
-  --magnifier-bw-iframe: 1.5;
-  --ratio-bw-iframe-source: 1;
-  --ratio-bw-iframe-reading: 0.96;
-  --aspect-ratio-bw-iframe: auto 16/9;
-}
-
-@container live-preview (min-width: 0) {
-  body:is(.ssopt-block-width-iframe) .markdown-source-view.mod-cm6 :where(.cm-html-embed) > iframe {
-    position: relative;
-    left: 50%;
-    width: calc-size(100%, var(--size-bw-iframe));
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-iframe-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
-    aspect-ratio: var(--aspect-ratio-bw-iframe);
-  }
-}
-
-@container reading-mode (min-width: 0) {
-  body:is(.ssopt-block-width-iframe) .markdown-reading-view :where(.markdown-preview-section > .el-iframe) > iframe {
-    position: relative;
-    left: 50%;
-    width: calc-size(100%, var(--size-bw-iframe)); /* calc-size(auto, var(--size-bw-iframe)); */
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-iframe-reading) * 100cqi + 2 * var(--file-margins));
-    aspect-ratio: var(--aspect-ratio-bw-iframe);
   }
 }
 
@@ -29926,22 +29890,22 @@ body:where(:not(.ssopt-callout-standard)) .callout {
   transition: var(--quick-transition);
 }
 
-body:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
+body:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
   border-right: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
   border-top: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
   border-bottom: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
 }
 
-body.ssopt-callout-no-hover:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
+body.ssopt-callout-no-hover:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
   border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
 }
 
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
+body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
   border-left: var(--callout-border-other-width) solid rgb(var(--callout-color));
   transition: var(--quick-transition);
 }
 
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]):hover, :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title:hover {
+body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"]):hover, :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title:hover {
   border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
   transition: var(--quick-transition);
 }
@@ -30353,11 +30317,11 @@ body {
     --callout-border-base-width-preset: 0px;
   }
 
-  body:not(.ssopt-callout-standard).theme-dark .callout:where(:not([data-callout="columns"], [data-callout="success"])) {
+  body:not(.ssopt-callout-standard).theme-dark .callout:not([data-callout="columns"], [data-callout="success"]) {
     background-color: color-mix(in lab, black 75%, rgb(var(--callout-color)) 25%);
   }
 
-  body:not(.ssopt-callout-standard).theme-dark .callout:where(:is([data-callout="success"])), body:not(.ssopt-callout-standard).theme-dark .callout:where(:is([data-callout="success"])) .callout-title-inner {
+  body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="success"]), body:not(.ssopt-callout-standard).theme-dark .callout:is([data-callout="success"]) .callout-title-inner {
     color: var(--background-primary-alt);
   }
 
@@ -30714,11 +30678,6 @@ body:not(.icons-obsidian-standard) .callout[data-callout="success"] svg.star {
 
 body:not(.icons-obsidian-standard) .callout[data-callout="success"] svg.star > * {
   display: none;
-}
-
-.callout.callout.callout[data-callout="note-toolbar"] {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 /* Callouts (New Global File) */
@@ -32057,30 +32016,6 @@ body {
 
 /* removed .prompt from the .suggestion-item.mod-complex to ensure it applies to Slash Commands too */
 :where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) {
-  /* QUICK SWITCHER STUFF */
-}
-
-:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) {
-  display: flex;
-}
-
-:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-content, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-content {
-  justify-self: start;
-}
-
-:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > :not(.qsp-content), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > :not(.qsp-content) {
-  justify-self: end;
-}
-
-:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux {
-  display: flex;
-}
-
-:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux .suggestion-flair, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux .suggestion-flair {
-  margin-inline-start: var(--size-4-1);
-}
-
-:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) {
   display: grid;
   column-gap: var(--size-4-2); /* should follow the bottom gap in sug-title */
   grid-column: 1/-1;
@@ -32094,9 +32029,7 @@ body {
 
 :where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-aux, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-aux {
   gap: var(--size-4-1) var(--size-4-2); /* needs this for gaps between two in a vertical line */
-
-  /* grid-template-columns: repeat(2, max-content); */
-  grid-auto-flow: column;
+  grid-template-columns: repeat(2, max-content);
 }
 
 :where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title {
@@ -33059,10 +32992,6 @@ body:not(.ssopt-block-width-bases) .setting-item.setting-item:where([data-id="ma
   display: none;
 }
 
-body:not(.ssopt-block-width-iframe) .setting-item.setting-item:where([data-id="magnifier-bw-iframe"], [data-id="ratio-bw-iframe-source"], [data-id="ratio-bw-iframe-reading"], [data-id="aspect-ratio-bw-iframe"]) {
-  display: none;
-}
-
 body:not(.ssopt-custom-rainbow-colours-light) .setting-item.setting-item:where([data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"]) {
   display: none;
 }
@@ -33511,10 +33440,6 @@ body:not(.ssopt-block-width-tables) .view-content .style-settings-container.styl
 }
 
 body:not(.ssopt-block-width-bases) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="magnifier-bw-bases"], [data-id="ratio-bw-bases-source"], [data-id="ratio-bw-bases-reading"]) {
-  display: none;
-}
-
-body:not(.ssopt-block-width-iframe) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="magnifier-bw-iframe"], [data-id="ratio-bw-iframe-source"], [data-id="ratio-bw-iframe-reading"], [data-id="aspect-ratio-bw-iframe"]) {
   display: none;
 }
 
@@ -34166,11 +34091,11 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-iframe"]) .setting-item-name {
+.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name {
   font-weight: 500;
 }
 
-.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-iframe"]) .setting-item-name::after {
+.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"]) .setting-item-name::after {
   display: inline-flex;
   width: var(--sidebar-icon-size);
   height: var(--sidebar-icon-size);
@@ -35305,78 +35230,6 @@ Here, Style Settings coding to add Notes is done.
   background-color: var(--background-secondary);
   border-radius: var(--radius-s);
   content: "Requires 'Enable Block Widths for Bases' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item.setting-item[data-id="magnifier-bw-iframe"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item.setting-item[data-id="magnifier-bw-iframe"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for iFrames' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item.setting-item[data-id="ratio-bw-iframe-source"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item.setting-item[data-id="ratio-bw-iframe-source"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for iFrames' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item.setting-item[data-id="ratio-bw-iframe-reading"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item.setting-item[data-id="ratio-bw-iframe-reading"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for iFrames' enabled";
-  font-weight: var(--font-normal);
-  white-space: pre-wrap;
-  max-width: 100%;
-}
-
-.setting-item.setting-item[data-id="aspect-ratio-bw-iframe"] .setting-item-description {
-  position: relative;
-}
-
-.setting-item.setting-item[data-id="aspect-ratio-bw-iframe"] .setting-item-description::before {
-  display: block;
-  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
-  padding: var(--size-2-1) var(--size-4-1);
-  font-size: var(--font-ui-smaller);
-  color: var(--text-accent);
-  background-color: var(--background-secondary);
-  border-radius: var(--radius-s);
-  content: "Requires 'Enable Block Widths for iFrames' enabled";
   font-weight: var(--font-normal);
   white-space: pre-wrap;
   max-width: 100%;
@@ -46474,7 +46327,7 @@ settings:
         id: embeds-settings
         title: Embeds
         type: heading
-        description: "Options to control the appearance of embedded notes and files. For embeds that take content from external pages (such as YouTube videos), please refer to the iFrames section further down."
+        description: "Options to control the appearance of embedded notes and files."
         level: 2
         collapsed: false
     -
@@ -46712,52 +46565,6 @@ settings:
             type: class-toggle
             description: "When in dark mode, this inverts the colors of embedded PDFs to make them easier to read. Please note that this option is very rudimentary and there are no good CSS options given the limitations of accessing colours within PDF in Obsidian."
             default: false
-    -
-        id: iframe-settings
-        title: "iFrames (External Embeds)"
-        type: heading
-        description: "Options to control the layout and sizing of embedded iFrames (e.g., YouTube videos, Google forms)."
-        level: 2
-        collapsed: false
-    -
-                    id: ssopt-block-width-iframe
-                    title: Enable Block Widths for iFrames
-                    type: class-toggle
-                    description: "Enables a modern, content-aware width system for iFrames. When off, tables will take Obsidian's original settings."
-                    default: false
-    -
-                    id: magnifier-bw-iframe
-                    title: "iFrame Content Width Magnifier"
-                    type: variable-number-slider
-                    description: "A multiplier to increase the base width of the iFrame content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable/Variable Line Lengths are turned off."
-                    min: 0.5
-                    max: 3
-                    step: 0.05
-                    default: 1.5
-    -
-                    id: ratio-bw-iframe-source
-                    title: "iFrames Max Width Ratio (Live Preview)"
-                    type: variable-number-slider
-                    description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 1."
-                    min: 0.5
-                    max: 1
-                    step: 0.01
-                    default: 1
-    -
-                    id: ratio-bw-iframe-reading
-                    title: "iFrames Max Width Ratio (Reading Mode)"
-                    type: variable-number-slider
-                    description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 0.96."
-                    min: 0.5
-                    max: 1
-                    step: 0.01
-                    default: 0.96
-    -
-                    id: aspect-ratio-bw-iframe
-                    title: iFrames Aspect Ratio
-                    type: variable-text
-                    description: "Sets the aspect ratio of the iFrame. Use the format 'width / height', and 'auto' for it to default to its original aspect ratio, which can be used alone, or added before or after to the 'width / height' format. Default is 'auto 16/9'."
-                    default: 'auto 16/9'
     -
         id: immersive-editing-modes
         title: Immersive Editing Modes (Focused Mode and Super Focused Mode)
