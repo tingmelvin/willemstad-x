@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.21 Newfoundland
+Willemstad | v1.9.20 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.21 Newfoundland";
+  content: "  /  Willemstad v1.9.20 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.21 Newfoundland"; /* prints version number */
+  content: "\av1.9.20 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -1962,21 +1962,6 @@ body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
   inset-inline-end: 0;
 } /* flush to the end */
 
-/* AI05-3 | adding stuff app.css missed out */
-input[type="time"], input[type="tel"], input[type="week"],
-input[type="url"], input[type="month"], input[type="week"], input[type="file"] {
-  height: var(--input-height);
-  padding: var(--input-padding);
-  font-family: inherit;
-  font-size: var(--font-ui-small);
-  color: var(--text-normal);
-  border: var(--input-border-width) solid var(--background-modifier-border);
-  border-radius: var(--input-radius);
-  -webkit-app-region: no-drag;
-  background: var(--background-modifier-form-field);
-  outline: none;
-}
-
 /* Input */
 
 /* DISPARATE ELEMENTS */
@@ -2091,7 +2076,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
 }
 
 body:not(.native-scrollbars).styled-scrollbars .modal-close-button {
-  inset-inline-end: var(--size-2-3);
+  inset-inline-end: calc(var(--size-scrollbar-non-native) + var(--size-2-3));
 }
 
 /* Scrollbars */
@@ -39656,7 +39641,7 @@ body.ssopt-hide-tooltips .tooltip {
 /* X101-14 | Mobile Stuff */
 .is-mobile {
   --mobile-sidebar-width: 90vw;
-  --mobile-sidebar-max-width: 500px;
+  --mobile-sidebar-max-width: 100vw;
   --mobile-sidebar-radius: 0px;
 }
 
