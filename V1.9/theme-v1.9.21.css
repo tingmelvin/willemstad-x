@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.22 Newfoundland
+Willemstad | v1.9.21 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.22 Newfoundland";
+  content: "  /  Willemstad v1.9.21 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.22 Newfoundland"; /* prints version number */
+  content: "\av1.9.21 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -22427,11 +22427,9 @@ body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-co
 
 body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar),
 body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)),
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer),
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) {
   --metadata-border-color: var(--opp-background-modifier-border);
   --metadata-divider-color: var(--opp-background-modifier-border);
-  --metadata-input-text-color: var(-opp-text-normal);
   --metadata-property-background-active: var(--opp-background-modifier-hover);
   --metadata-property-background-active: var(--opp-background-modifier-hover);
   --metadata-property-box-shadow-hover: 0 0 0 1px var(--opp-background-modifier-border-hover);
@@ -22558,19 +22556,8 @@ body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-co
 
 body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) .search-result-file-matches,
 body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .search-result-file-matches,
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .search-result-file-matches,
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) .search-result-file-matches {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .search-result-file-matches {
   --search-result-background: var(--opp-background-primary);
-}
-
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) .multi-select-pill-container,
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .multi-select-pill-container,
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .multi-select-pill-container,
-body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) .multi-select-pill-container {
-  --pill-color: var(--opp-text-muted);
-  --pill-color-hover: var(--opp-text-normal);
-  --pill-color-remove: var(--opp-text-faint);
-  --pill-color-remove-hover: var(--text-accent);
 }
 
 /* APP UI */
@@ -32591,7 +32578,7 @@ body:is(.ssopt-bases-no-edit) .bases-td .multi-select-container, body:is(.ssopt-
   grid-template-columns: 1fr max-content;
 }
 
-body:is(.is-phone) .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+body:is(.is-mobile) .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
 }
@@ -32601,7 +32588,7 @@ body:is(.is-phone) .view-content .style-settings-container .setting-item:not(.se
   grid-template-columns: 1fr max-content;
 }
 
-body:is(.is-phone) :where(.style-settings-container) .setting-item:not(.setting-item-heading), body:is(.is-phone) .vertical-tab-content:has(.installed-plugins-container) .setting-item:not(.setting-item-heading) {
+body:is(.is-mobile) :where(.style-settings-container) .setting-item:not(.setting-item-heading), body:is(.is-mobile) .vertical-tab-content:has(.installed-plugins-container) .setting-item:not(.setting-item-heading) {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
 }
@@ -32686,13 +32673,7 @@ body {
   padding-left: 0.75em; 
   border-left: 1px solid var(--background-modifier-border);
   */
-}
-
-.is-phone .style-settings-heading[data-level="0"] + .style-settings-container {
-  padding-left: 0;
-}
-
-/* from Style Settings own things - padding-left: 0.75em */
+} /* from Style Settings own things - padding-left: 0.75em */
 div.style-settings-heading[data-level="1"],
 div.style-settings-heading[data-level="2"],
 div.style-settings-heading[data-level="3"],
@@ -32716,19 +32697,6 @@ div.style-settings-heading[data-level="6"] + .style-settings-container {
   border-bottom: 1px solid var(--background-modifier-border);
 
   /* seems to cause trouble */
-}
-
-.is-phone div.style-settings-heading[data-level="1"] + .style-settings-container,
-.is-phone div.style-settings-heading[data-level="2"] + .style-settings-container,
-.is-phone div.style-settings-heading[data-level="3"] + .style-settings-container,
-.is-phone div.style-settings-heading[data-level="4"] + .style-settings-container,
-.is-phone div.style-settings-heading[data-level="5"] + .style-settings-container,
-.is-phone div.style-settings-heading[data-level="6"] + .style-settings-container {
-  padding-top: 0;
-}
-
-.is-phone div.style-settings-heading[data-level="2"]:where(:not([data-id^="willemstad-theme-colours"])) + .style-settings-container > .setting-item:where(:not(.style-settings-info-text)):first-of-type {
-  padding-top: 0;
 }
 
 div.style-settings-heading[data-level="1"] + .style-settings-container .setting-item:last-of-type,
@@ -33206,7 +33174,7 @@ body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .setting-item.setting-ite
   display: none;
 }
 
-body .setting-item.setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
+body .setting-item.setting-item:where([data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
   padding: 0 8px 0 4px; /* follows their own paddings */
   font-family: Manrope;
   color: var(--text-accent);
@@ -33661,7 +33629,7 @@ body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .view-content .style-sett
   display: none;
 }
 
-body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
+body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
   padding: 0 8px 0 4px; /* follows their own paddings */
   font-family: Manrope;
   color: var(--text-accent);
@@ -33999,8 +33967,13 @@ PC000D-3 | Willemstad Theme Information Customisations
   /* add whitespace for Willemstad name */
 }
 
-.style-settings-heading[data-id="V1-Willemstad-Info"] .setting-item-name {
-  justify-self: center;
+.style-settings-heading[data-id="V1-Willemstad-Info"]::before {
+  padding: 0.25em;
+  font-family: Manrope;
+  color: var(--text-accent);
+  border-radius: var(--radius-m);
+  content: "Willemstad";
+  font-weight: 600;
 }
 
 .style-settings-heading[data-id="V1-Willemstad-Info"] .style-settings-collapse-indicator {
@@ -37616,8 +37589,7 @@ body.theme-dark:not(.ssopt-custom-colour-template-light, .ssopt-custom-selection
 ───────────────────────────────────────────────────────────────────────────────────
 CSS-ing the Credits section
 ──────────────────────────────────────────────────────────────────────────────── */
-.setting-item,
-.is-phone .setting-item {
+.setting-item {
   /* build a comma-separated list of [data-id="…"] */
 
   /* inject the selector and yield */
@@ -37643,13 +37615,11 @@ CSS-ing the Credits section
   /* inject the selector and yield */
 }
 
-.setting-item:where([data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]),
-.is-phone .setting-item:where([data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) {
+.setting-item:where([data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) {
   column-gap: 0;
 }
 
-.setting-item:where([data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]),
-.is-phone .setting-item:where([data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) {
+.setting-item:where([data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) {
   overflow: auto;
   overflow-wrap: anywhere;
   border-left: 1px solid var(--background-modifier-border);
@@ -37658,19 +37628,16 @@ CSS-ing the Credits section
   background-color: var(--background-primary-alt);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]).style-settings-info-text,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]).style-settings-info-text {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]).style-settings-info-text {
   column-gap: 0;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) .setting-item-description,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) .setting-item-description {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) .setting-item-description {
   color: var(--text-accent);
   text-align: justify;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) p,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) p {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) p {
   overflow: visible;
   display: grid;
   width: 100%;
@@ -37681,40 +37648,34 @@ CSS-ing the Credits section
   grid-template-columns: 1fr auto;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link {
   float: right;
   background-image: none;
   padding-inline-end: 0;
   width: calc(var(--header-icon-size) + 2 * var(--header-padding));
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link.external-link,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link.external-link {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link.external-link {
   margin-top: var(--header-margin);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link:first-of-type,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link:first-of-type {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link:first-of-type {
   padding-inline-end: 0;
   margin-left: 10px;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"],
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"] {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]:hover::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]:hover::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]::before {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37729,8 +37690,7 @@ CSS-ing the Credits section
   flex-shrink: 0;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]::after {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37746,26 +37706,22 @@ CSS-ing the Credits section
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M9.3349 11.5022L11.5049 11.5027C13.9902 11.5027 16.0049 13.5174 16.0049 16.0027L9.00388 16.0018L9.00488 17.0027L17.0049 17.0019V16.0027C17.0049 14.9202 16.6867 13.8996 16.1188 13.0019L19.0049 13.0027C20.9972 13.0027 22.7173 14.1679 23.521 15.8541C21.1562 18.9747 17.3268 21.0027 13.0049 21.0027C10.2436 21.0027 7.90437 20.4121 6.00447 19.3779L6.00592 10.0737C7.25147 10.2521 8.39122 10.7583 9.3349 11.5022ZM4.00488 9.00268C4.51772 9.00268 4.94039 9.38872 4.99816 9.88606L5.00488 10.0018V19.0027C5.00488 19.555 4.55717 20.0027 4.00488 20.0027H2.00488C1.4526 20.0027 1.00488 19.555 1.00488 19.0027V10.0027C1.00488 9.45039 1.4526 9.00268 2.00488 9.00268H4.00488ZM13.6513 3.57806L14.0046 3.93183L14.3584 3.57806C15.3347 2.60175 16.9177 2.60175 17.894 3.57806C18.8703 4.55437 18.8703 6.13728 17.894 7.11359L14.0049 11.0027L10.1158 7.11359C9.13948 6.13728 9.13948 4.55437 10.1158 3.57806C11.0921 2.60175 12.675 2.60175 13.6513 3.57806Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]:hover::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]:hover::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="ko-fi.com"]:hover::after {
   background-color: var(--icon-color-hover);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"],
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"] {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]:hover::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]:hover::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]::before {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37780,8 +37736,7 @@ CSS-ing the Credits section
   flex-shrink: 0;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]::after {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37797,26 +37752,22 @@ CSS-ing the Credits section
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M9.3349 11.5022L11.5049 11.5027C13.9902 11.5027 16.0049 13.5174 16.0049 16.0027L9.00388 16.0018L9.00488 17.0027L17.0049 17.0019V16.0027C17.0049 14.9202 16.6867 13.8996 16.1188 13.0019L19.0049 13.0027C20.9972 13.0027 22.7173 14.1679 23.521 15.8541C21.1562 18.9747 17.3268 21.0027 13.0049 21.0027C10.2436 21.0027 7.90437 20.4121 6.00447 19.3779L6.00592 10.0737C7.25147 10.2521 8.39122 10.7583 9.3349 11.5022ZM4.00488 9.00268C4.51772 9.00268 4.94039 9.38872 4.99816 9.88606L5.00488 10.0018V19.0027C5.00488 19.555 4.55717 20.0027 4.00488 20.0027H2.00488C1.4526 20.0027 1.00488 19.555 1.00488 19.0027V10.0027C1.00488 9.45039 1.4526 9.00268 2.00488 9.00268H4.00488ZM13.6513 3.57806L14.0046 3.93183L14.3584 3.57806C15.3347 2.60175 16.9177 2.60175 17.894 3.57806C18.8703 4.55437 18.8703 6.13728 17.894 7.11359L14.0049 11.0027L10.1158 7.11359C9.13948 6.13728 9.13948 4.55437 10.1158 3.57806C11.0921 2.60175 12.675 2.60175 13.6513 3.57806Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]:hover::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]:hover::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="buymeacoffee.com"]:hover::after {
   background-color: var(--icon-color-hover);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"],
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"] {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]:hover::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]:hover::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]::before {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37831,8 +37782,7 @@ CSS-ing the Credits section
   flex-shrink: 0;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]::after {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37848,26 +37798,22 @@ CSS-ing the Credits section
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='currentColor' d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3.3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]:hover::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]:hover::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="github.com"]:hover::after {
   background-color: var(--icon-color-hover);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"],
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"] {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]:hover::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]:hover::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]::before {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37882,8 +37828,7 @@ CSS-ing the Credits section
   flex-shrink: 0;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]::after {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37899,26 +37844,22 @@ CSS-ing the Credits section
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='none' stroke='currentColor' stroke-width='32' stroke-linecap='round' stroke-linejoin='round' class='logo-wireframe'%3E%3Cpath d='M172.7 461.6c73.6-149.1 2.1-217-43.7-246.9m72 96.7c71.6-17.3 141-16.3 189.8 88.5m-114-96.3c-69.6-174 44.6-181 16.3-273.6m97.7 370c1.6-3 3.3-5.8 5.1-8.6 20-29.9 34.2-53.2 41.4-65.3a16 16 0 0 0-1.2-17.7 342.1 342.1 0 0 1-40.2-66.1c-10.9-26-12.5-66.5-12.6-86.2 0-7.4-2.4-14.7-7-20.6l-81.8-104a32 32 0 0 0-1.4-1.5m97.7 370a172.8 172.8 0 0 0-18 59c-2.9 21.5-24 38.4-45 32.6-30-8.3-64.5-21.1-95.7-23.5l-47.8-3.6c-7.7-.6-15-4-20.3-9.5l-82.3-84.8c-9-9.2-11.4-23-6.2-34.8 0 0 51-111.8 52.8-117.7l.7-3M293.1 30a31.5 31.5 0 0 0-44.4-2.3l-97.4 87.5c-5.4 5-9 11.5-10 18.8-3.7 24.5-9.7 68-12.3 80.7'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]:hover::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]:hover::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="obsidian.md"]:hover::after {
   background-color: var(--icon-color-hover);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"],
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"] {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]:hover::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]:hover::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]::before {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]::before {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37933,8 +37874,7 @@ CSS-ing the Credits section
   flex-shrink: 0;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]::after {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37950,23 +37890,19 @@ CSS-ing the Credits section
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]:hover::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]:hover::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"], [data-id="info-template-file-dark"], [data-id="info-template-file-light"], [data-id="info-credits-pseudometa"], [data-id="info-credits-damikiller"], [data-id="info-credits-ceciliamay"], [data-id="info-credits-slrvb"], [data-id="info-credits-kepano"], [data-id="info-credits-jdanielmourao"], [data-id="info-credits-zcysxy"], [data-id="info-credits-mgmeyers"], [data-id="info-credits-chetachi"], [data-id="info-credits-obsidian"], [data-id="info-credits-others"], [data-id="info-credits-theme-showcase"]) a.external-link[href*="willemstad.cc"]:hover::after {
   background-color: var(--icon-color-hover);
 }
-.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"],
-.is-phone .setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"] {
+.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
-.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]:hover::before,
-.is-phone .setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]:hover::before {
+.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
-.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]::before,
-.is-phone .setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]::before {
+.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]::before {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37980,8 +37916,7 @@ CSS-ing the Credits section
   content: " ";
   flex-shrink: 0;
 }
-.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]::after,
-.is-phone .setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]::after {
+.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]::after {
   position: absolute;
   right: 0;
   bottom: 50%;
@@ -37996,87 +37931,72 @@ CSS-ing the Credits section
   mask-position: center;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M3 15V3C3 2.44772 3.44772 2 4 2H20C20.5523 2 21 2.44772 21 3V19C21 20.6569 19.6569 22 18 22H4C2.34315 22 1 20.6569 1 19V17H17V19C17 19.5523 17.4477 20 18 20C18.5523 20 19 19.5523 19 19V15H3Z'%3E%3C/path%3E%3C/svg%3E");
 }
-.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]:hover::after,
-.is-phone .setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]:hover::after {
+.setting-item:where([data-id=info-credits-willemstad], [data-id=info-theme-documentation], [data-id=info-theme-repository], [data-id=info-template-file-dark], [data-id=info-template-file-light], [data-id=info-credits-pseudometa], [data-id=info-credits-damikiller], [data-id=info-credits-ceciliamay], [data-id=info-credits-slrvb], [data-id=info-credits-kepano], [data-id=info-credits-jdanielmourao], [data-id=info-credits-zcysxy], [data-id=info-credits-mgmeyers], [data-id=info-credits-chetachi], [data-id=info-credits-obsidian], [data-id=info-credits-others], [data-id=info-credits-theme-showcase]) a.external-link[href="https://willemstad.cc/Dev+Docs/Template+Snippet"]:hover::after {
   background-color: var(--icon-color-hover);
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]),
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) {
   text-align: justify;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link {
   align-self: start;
   width: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
   height: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
   margin-left: 5px;
 }
 
-.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link.external-link::before, .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link.external-link::after,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link.external-link::before,
-.is-phone .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link.external-link::after {
+.setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link.external-link::before, .setting-item:where([data-id="info-credits-willemstad"], [data-id="info-theme-documentation"], [data-id="info-theme-repository"]) a.external-link.external-link::after {
   bottom: 100%;
   width: var(--sidebar-icon-size);
   height: var(--sidebar-icon-size);
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]),
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) {
   text-align: justify;
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info,
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: unset;
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info :where(.setting-item-name),
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info :where(.setting-item-name) {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info :where(.setting-item-name) {
   grid-column: 1/2;
   place-self: center end;
   display: inline-flex;
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info :where(.style-settings-markdown),
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info :where(.style-settings-markdown) {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-info :where(.style-settings-markdown) {
   grid-column: 2/3;
   justify-self: end;
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-description,
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-description {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) .setting-item-description {
   padding-top: 0;
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link,
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link {
   margin-top: 0;
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link::before,
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link::before {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link::before {
   position: relative;
   bottom: unset;
   display: inline-flex;
 }
 
-.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link::after,
-.is-phone .setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link::after {
+.setting-item:where([data-id="info-template-file-dark"], [data-id="info-template-file-light"]) a.external-link.external-link.external-link::after {
   bottom: unset;
   display: inline-flex;
 }
 
-.setting-item:where([data-id="info-credits-obsidian"]),
-.is-phone .setting-item:where([data-id="info-credits-obsidian"]) {
+.setting-item:where([data-id="info-credits-obsidian"]) {
   border-bottom: 1px solid var(--background-modifier-border);
 }
 
-.setting-item:where([data-id="V1-Willemstad-Credits"]),
-.is-phone .setting-item:where([data-id="V1-Willemstad-Credits"]) {
+.setting-item:where([data-id="V1-Willemstad-Credits"]) {
   justify-content: center;
   background-color: var(--background-primary-alt);
   border-left: 1px solid var(--background-modifier-border);
@@ -38084,29 +38004,12 @@ CSS-ing the Credits section
   padding-bottom: 0.75em;
 }
 
-.setting-item:where([data-id="V1-Willemstad-Credits"]) .setting-item-control,
-.is-phone .setting-item:where([data-id="V1-Willemstad-Credits"]) .setting-item-control {
+.setting-item:where([data-id="V1-Willemstad-Credits"]) .setting-item-control {
   display: none;
 }
 
-.setting-item:where([data-id="V1-Willemstad-Credits"]) + .style-settings-container.style-settings-container.style-settings-container,
-.is-phone .setting-item:where([data-id="V1-Willemstad-Credits"]) + .style-settings-container.style-settings-container.style-settings-container {
+.setting-item:where([data-id="V1-Willemstad-Credits"]) + .style-settings-container.style-settings-container.style-settings-container {
   padding-left: 0;
-}
-
-.is-phone .setting-item {
-  /* build a comma-separated list of [data-id="…"] */
-
-  /* inject the selector and yield */
-}
-
-.is-phone .setting-item:where([data-id="V1-Willemstad-Credits"]) {
-  border-top: 1px solid var(--background-modifier-border);
-  border-bottom: 1px solid var(--background-modifier-border);
-}
-
-.is-phone .setting-item:where([data-id="V1-Willemstad-Credits"]) .setting-item-name {
-  justify-self: center;
 }
 
 /* Credits Flair for SS */
@@ -39757,19 +39660,6 @@ body.ssopt-hide-tooltips .tooltip {
   --mobile-sidebar-radius: 0px;
 }
 
-.is-mobile .tree-item-inner {
-  min-height: 16px;
-  display: inline-flex;
-}
-
-.is-mobile .tree-item-self {
-  align-items: center;
-}
-
-.is-mobile .setting-item-name {
-  display: flex;
-}
-
 body:where(.is-mobile, .is-tablet) {
   --nav-padding: 0 var(--nav-padding-side);
   --nav-padding-side: 8px;
@@ -39793,7 +39683,7 @@ body:where(.is-mobile, .is-tablet) .workspace-drawer-header {
   padding: var(--size-4-2) var(--size-4-3) 0 var(--size-4-3);
 }
 
-body:where(.is-mobile, .is-tablet) :is(.mod-left-split-toggle) :is(svg.sidebar-left, svg.sidebar-toggle-button-icon) {
+body:where(.is-mobile, .is-tablet) .mod-left-split-toggle svg.sidebar-left {
   display: block;
   width: 24px;
   height: 24px;
@@ -39808,27 +39698,6 @@ body:where(.is-mobile, .is-tablet) :is(.mod-left-split-toggle) :is(svg.sidebar-l
 /* X101-15 | Tablet Stuff */
 body.is-tablet .sidebar-toggle-button.mod-left {
   padding-left: 0;
-}
-
-body.is-tablet .installed-plugins-container {
-  padding-top: 0.75em;
-}
-
-body.is-tablet .hotkey-list-container .setting-item {
-  flex-direction: row;
-  align-items: center;
-}
-
-body.is-tablet .hotkey-list-container .setting-item :where(.setting-item-control) {
-  margin-top: 0;
-}
-
-body.is-tablet .hotkey-list-container .setting-item :where(.setting-command-hotkeys) {
-  align-self: center;
-}
-
-body.is-tablet .hotkey-list-container .setting-item :where(.hotkey-list-container .setting-hotkey) {
-  align-self: auto;
 }
 
 /* Remove setting accent color in Settings + Clearer images */
@@ -40485,7 +40354,7 @@ settings:
             title: Font Typeface — Headers
             type: variable-text
             document: AB02-Set-Typography
-            default: '"Manrope", "Inter 4.1", "DM Sans"'
+            default: '"Inter 4.1", "DM Sans", "Manrope"'
     -
             id: font-editor
             title: Font Typeface — Editor
@@ -45499,7 +45368,7 @@ settings:
             type: variable-number-slider
             description: "Controls the padding on all sides within the editor pane, creating more or less 'breathing room' around your content. Please note that this option might affect components such as header numbering and header collapse indicators. The default is 32px."
             format: "px"
-            min: 20
+            min: 10
             max: 60
             step: 1
             default: 32
@@ -48433,29 +48302,27 @@ body {
 }
 
 /* Reading Mode */
-@container reading-mode (min-width: 0) {
-  .markdown-preview-view:where(.banner) .markdown-preview-section {
-    display: flex;
-    flex-direction: column;
-  }
+.markdown-preview-view:where(.banner) .markdown-preview-section {
+  display: flex;
+  flex-direction: column;
+}
 
-  .markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) {
-    order: -1;
-    height: var(--cssc-banner-height);
-    margin: calc(-1 * var(--file-margins)) calc(-1 * var(--file-margins)) var(--cssc-banner-residual);
-  }
+.markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) {
+  order: -1;
+  height: var(--cssc-banner-height);
+  margin: calc(-1 * var(--file-margins)) calc(-1 * var(--file-margins)) var(--cssc-banner-residual);
+}
 
-  .markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) p {
-    margin-left: 0;
-  }
+.markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) p {
+  margin-left: 0;
+}
 
-  .markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) img {
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    height: var(--cssc-banner-height);
-    mask: var(--cssc-banner-gradient-mask);
-  }
+.markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  height: var(--cssc-banner-height);
+  mask: var(--cssc-banner-gradient-mask);
 }
 
 /* Markdown Live Preview */
