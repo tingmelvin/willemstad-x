@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.23 Newfoundland
+Willemstad | v1.9.22 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.23 Newfoundland";
+  content: "  /  Willemstad v1.9.22 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.23 Newfoundland"; /* prints version number */
+  content: "\av1.9.22 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -22283,13 +22283,13 @@ body {
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* FOR ORIGINAL COLOURS */
-body {
+body:not(.is-mobile) {
   /* IMPORT COLORS FROM DARK MODE */
 
   /* for light -> dark and dark -> light */
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light,
 .ssopt-theme-contrast-dark.theme-dark) {
   --opp-lightness: calc(1 - l + 0.1);
   --opp-background-primary: oklch(from var(--background-primary) var(--opp-lightness) c h);
@@ -22317,22 +22317,22 @@ body:is(.ssopt-theme-contrast-light.theme-light,
   /* speshul dark stuff from app.css */
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light,
 .ssopt-theme-contrast-dark.theme-dark) .canvas-card-menu {
   background-color: var(--opp-background-secondary);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light,
 .ssopt-theme-contrast-dark.theme-dark) .canvas-card-menu svg {
   fill: var(--opp-background-secondary);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light,
 .ssopt-theme-contrast-dark.theme-dark) .canvas-control-item {
   background-color: var(--opp-background-secondary);
 }
 
-body:is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l).theme-light) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l).theme-light) {
   --opp-background-primary: oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00));
   --opp-background-primary-alt: oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10));
   --opp-background-secondary: oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20));
@@ -22350,7 +22350,7 @@ body:is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l).theme-light) {
   --opp-text-on-accent-inverted: oklch(from var(--text-on-accent-inverted) var(--opp-lightness) c h);
 }
 
-body:is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d).theme-dark) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d).theme-dark) {
   --opp-background-primary: oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00));
   --opp-background-primary-alt: oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10));
   --opp-background-secondary: oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20));
@@ -22367,7 +22367,7 @@ body:is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d).theme-dark) {
   --opp-text-on-accent-inverted: oklch(from var(--text-on-accent-inverted) var(--opp-lightness) c h);
 }
 
-body:is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l.ssopt-tc-accent-cross-l).theme-light) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l.ssopt-tc-accent-cross-l).theme-light) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) {
   --color-accent: var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)));
   --color-accent-1: var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)));
   --color-accent-2: var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)));
@@ -22384,7 +22384,7 @@ body:is(.ssopt-theme-contrast-light:where(.ssopt-tc-cross-l.ssopt-tc-accent-cros
   --icon-color-hover: var(--color-accent-2);
 }
 
-body:is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d.ssopt-tc-accent-cross-d).theme-dark) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d.ssopt-tc-accent-cross-d).theme-dark) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) {
   --color-accent: var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)));
   --color-accent-1: var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)));
   --color-accent-2: var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)));
@@ -22401,15 +22401,14 @@ body:is(.ssopt-theme-contrast-dark:where(.ssopt-tc-cross-d.ssopt-tc-accent-cross
   --icon-color-hover: var(--color-accent-1);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) {
   --opp-caret-color: var(--opp-text-normal);
   --opp-divider-color: var(--opp-background-modifier-border);
   --opp-indentation-guide-color: oklch(from var(--indentation-guide-color) calc(1 - l + 0.1) c h);
   --opp-collapse-icon-color: var(--opp-text-faint);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) {
-  --mobile-sidebar-background: var(--opp-background-primary);
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) {
   --titlebar-background: var(--opp-background-secondary);
   --titlebar-background-focused: var(--opp-background-secondary-alt);
   --titlebar-border-color: var(--opp-background-modifier-border);
@@ -22422,14 +22421,14 @@ body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.them
   --status-bar-text-color: var(--opp-text-muted);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :is(.mod-right-split, .mod-left-split, .mod-left:not(.sidebar-toggle-button), .mod-right) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :is(.mod-right-split, .mod-left-split, .mod-left, .mod-right) {
   color: var(--opp-text-normal);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar, .workspace-drawer, .workspace-drawer-active-tab-container),
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)),
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer),
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar),
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)),
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer),
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) {
   --metadata-border-color: var(--opp-background-modifier-border);
   --metadata-divider-color: var(--opp-background-modifier-border);
   --metadata-input-text-color: var(-opp-text-normal);
@@ -22557,28 +22556,21 @@ body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.them
   --input-placeholder-color: var(--opp-text-faint);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar, .workspace-drawer, .workspace-drawer-active-tab-container) .search-result-file-matches,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .search-result-file-matches,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .search-result-file-matches,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) .search-result-file-matches {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) .search-result-file-matches,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .search-result-file-matches,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .search-result-file-matches,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) .search-result-file-matches {
   --search-result-background: var(--opp-background-primary);
 }
 
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar, .workspace-drawer, .workspace-drawer-active-tab-container) .multi-select-pill-container,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .multi-select-pill-container,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .multi-select-pill-container,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) .multi-select-pill-container {
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar) .multi-select-pill-container,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .multi-select-pill-container,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .multi-select-pill-container,
+body:not(.is-mobile):is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) .multi-select-pill-container {
   --pill-color: var(--opp-text-muted);
   --pill-color-hover: var(--opp-text-normal);
   --pill-color-remove: var(--opp-text-faint);
   --pill-color-remove-hover: var(--text-accent);
-}
-
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) :where(.mod-right-split, .mod-left-split, .mod-left, .mod-right, .titlebar, .status-bar, .workspace-drawer, .workspace-drawer-active-tab-container) .metadata-input-longtext,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top:not(.mod-stacked) :where(.workspace-tab-header:not(.is-active)) .metadata-input-longtext,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .mod-root.mod-vertical .workspace-tabs.mod-top :where(.workspace-tab-header-new-tab, .workspace-tab-header-tab-list, .workspace-tab-header-spacer) .metadata-input-longtext,
-body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) .workspace-leaf-content[data-type="markdown"]:has(:where(.markdown-source-view, .markdown-preview-view).match-pane) .metadata-input-longtext {
-  --metadata-input-text-color: var(--opp-text-normal);
 }
 
 /* APP UI */
@@ -23119,19 +23111,6 @@ body .workspace-split.workspace-split.mod-left-split .workspace-sidedock-vault-p
   padding: var(--header-margin) var(--header-margin); /* follows NOTE-2 */
 }
 
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-  background-color: var(--vault-drawer-background-color);
-
-  --vault-drawer-background-color: var(--background-secondary);
-}
-
-@container whole-body (style(--ssopt-drawer-bg: 1)) {
-  body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-    /* It overrides ONLY the variable's value */
-    --vault-drawer-background-color: var(--background-primary-alt);
-  }
-}
-
 .workspace-drawer-vault-actions {
   gap: var(--header-margin); /* NOTE-4 */
 
@@ -23468,25 +23447,6 @@ body:not(.is-mobile) .nav-files-container {
 } /* you will always h going to account for it */
 .nav-files-container {
   padding: var(--nav-padding);
-}
-
-/* containers for nav buttons alignment */
-@container whole-body (style(--ssopt-nav-align: center)) {
-  .nav-header .nav-buttons-container {
-    justify-content: center;
-  }
-}
-
-@container whole-body (style(--ssopt-nav-align: right)) {
-  .nav-header .nav-buttons-container {
-    justify-content: flex-end;
-  }
-}
-
-@container whole-body (style(--ssopt-nav-align: stretch)) {
-  .nav-header .nav-buttons-container .nav-action-button {
-    flex-grow: 1;
-  }
 }
 
 /*
@@ -28413,7 +28373,6 @@ body {
 /* ────────────────────────────────────────────────────────────────────────────────
 > EH01
 \ Headers > Setting the Base
-\ v3
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* EH01-1 |  Δ Heading Background and Text Colours */
@@ -28426,9 +28385,7 @@ body {
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 {
-  --h1-color: var(--col-h1);
-
-  color: var(--h1-color);
+  color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
   background-color: var(--col-h1-bg);
 }
 
@@ -28444,9 +28401,7 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 {
-  --h2-color: var(--col-h2);
-
-  color: var(--h2-color);
+  color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
   background-color: var(--col-h2-bg);
 }
 
@@ -28462,9 +28417,7 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 {
-  --h3-color: var(--col-h3);
-
-  color: var(--h3-color);
+  color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
   background-color: var(--col-h3-bg);
 }
 
@@ -28480,9 +28433,7 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 {
-  --h4-color: var(--col-h4);
-
-  color: var(--h4-color);
+  color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
   background-color: var(--col-h4-bg);
 }
 
@@ -28498,9 +28449,7 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 {
-  --h5-color: var(--col-h5);
-
-  color: var(--h5-color);
+  color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
   background-color: var(--col-h5-bg);
 }
 
@@ -28516,9 +28465,7 @@ body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown
 }
 
 body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 {
-  --h6-color: var(--col-h6);
-
-  color: var(--h6-color);
+  color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
   background-color: var(--col-h6-bg);
 }
 
@@ -28573,56 +28520,6 @@ body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-6.cm-link, bo
   --link-color-hover: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-external-color: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
   --link-unresolved-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h / calc(alpha - 0.1));
-}
-
-body:not(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad) {
-  /*
-  h1, .markdown-rendered h1, .HyperMD-header-1 {
-      // Conditionally define the text color variable
-      @include header-text-color(--col-h1-bg, --col-h1);
-  }
-  */
-  --col-h1: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
-
-  /*
-  h2, .markdown-rendered h2, .HyperMD-header-2 {
-      // Conditionally define the text color variable
-      @include header-text-color(--col-h2-bg, --col-h2);
-  }
-  */
-  --col-h2: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
-
-  /*
-  h3, .markdown-rendered h3, .HyperMD-header-3 {
-      // Conditionally define the text color variable
-      @include header-text-color(--col-h3-bg, --col-h3);
-  }
-  */
-  --col-h3: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
-
-  /*
-  h4, .markdown-rendered h4, .HyperMD-header-4 {
-      // Conditionally define the text color variable
-      @include header-text-color(--col-h4-bg, --col-h4);
-  }
-  */
-  --col-h4: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
-
-  /*
-  h5, .markdown-rendered h5, .HyperMD-header-5 {
-      // Conditionally define the text color variable
-      @include header-text-color(--col-h5-bg, --col-h5);
-  }
-  */
-  --col-h5: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
-
-  /*
-  h6, .markdown-rendered h6, .HyperMD-header-6 {
-      // Conditionally define the text color variable
-      @include header-text-color(--col-h6-bg, --col-h6);
-  }
-  */
-  --col-h6: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
 }
 
 /* EH01-2 | Δ Heading Padding */
@@ -29019,79 +28916,51 @@ body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] 
 }
 
 /* EH91-4 | Add Text Colours via Headers if no Background Coloring */
-
-/*
-body:is(.ssopt-no-coloured-headers) {
-    &.theme-light {
-        h1, .HyperMD-header-1 {
-            --h1-color: var(--h1-color-light);
-        }
-
-        h2, .HyperMD-header-2 {
-            --h2-color: var(--h2-color-light);
-        }
-
-        h3, .HyperMD-header-3 {
-            --h3-color: var(--h3-color-light);
-        }
-
-        h4, .HyperMD-header-4 {
-            --h4-color: var(--h4-color-light);
-        }
-
-        h5, .HyperMD-header-5 {
-            --h5-color: var(--h5-color-light);
-        }
-
-        h6, .HyperMD-header-6 {
-            --h6-color: var(--h6-color-light);
-        }
-    }
-
-    &.theme-dark {
-        h1, .HyperMD-header-1 {
-            --h1-color: var(--h1-color-dark);
-        }
-
-        h2, .HyperMD-header-2 {
-            --h2-color: var(--h2-color-dark);
-        }
-
-        h3, .HyperMD-header-3 {
-            --h3-color: var(--h3-color-dark);
-        }
-
-        h4, .HyperMD-header-4 {
-            --h4-color: var(--h4-color-dark);
-        }
-
-        h5, .HyperMD-header-5 {
-            --h5-color: var(--h5-color-dark);
-        }
-
-        h6, .HyperMD-header-6 {
-            --h6-color: var(--h6-color-dark);
-        }
-    }
-}
-*/
-
-/* duplicate but just to test before removing the above */
-body:is(.ssopt-no-coloured-headers).theme-light {
+body:is(.ssopt-no-coloured-headers).theme-light h1, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-1 {
   --h1-color: var(--h1-color-light);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-light h2, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-2 {
   --h2-color: var(--h2-color-light);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-light h3, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-3 {
   --h3-color: var(--h3-color-light);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-light h4, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-4 {
   --h4-color: var(--h4-color-light);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-light h5, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-5 {
   --h5-color: var(--h5-color-light);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-light h6, body:is(.ssopt-no-coloured-headers).theme-light .HyperMD-header-6 {
   --h6-color: var(--h6-color-light);
 }
 
-body:is(.ssopt-no-coloured-headers).theme-dark {
+body:is(.ssopt-no-coloured-headers).theme-dark h1, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-1 {
   --h1-color: var(--h1-color-dark);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-dark h2, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-2 {
   --h2-color: var(--h2-color-dark);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-dark h3, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-3 {
   --h3-color: var(--h3-color-dark);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-dark h4, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-4 {
   --h4-color: var(--h4-color-dark);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-dark h5, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-5 {
   --h5-color: var(--h5-color-dark);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-dark h6, body:is(.ssopt-no-coloured-headers).theme-dark .HyperMD-header-6 {
   --h6-color: var(--h6-color-dark);
 }
 
@@ -31330,8 +31199,6 @@ body {
   /* TOP BIT */
 
   /* FLIPS ORDER OF TOP BIT SETTING CONTROLS BUTTONS */
-
-  /* to make sure it goes the the right place with something open */
 }
 
 .modal.mod-community-theme .community-item {
@@ -31403,13 +31270,6 @@ body {
   display: none; /* extraneous! */
 }
 
-.modal.mod-community-theme .community-modal-controls {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: minmax(240px, 1.5fr) 1fr 1fr;
-  padding-right: var(--spacing-comm-modal);
-}
-
 .modal.mod-community-theme .community-modal-controls .setting-item .setting-item-info {
   order: 2;
 }
@@ -31420,28 +31280,7 @@ body {
 
 .modal.mod-community-theme .community-modal-controls .setting-item .setting-item-control {
   order: 1;
-  flex: 1 0 auto;
-}
-
-.modal.mod-community-theme .community-modal-controls .setting-item.mod-toggle {
-  justify-self: center;
-}
-
-.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls {
-  grid-auto-flow: row;
-  grid-template-columns: 1fr;
-}
-
-.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle {
-  justify-self: end;
-}
-
-.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-info {
-  order: 1;
-}
-
-.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-control {
-  order: 2;
+  flex: 0 0 auto;
 }
 
 /* Fixes and Customisations */
@@ -31836,8 +31675,6 @@ body {
 
   /* FLIPS ORDER OF TOP BIT SETTING CONTROLS BUTTONS */
 
-  /* to make sure it goes the the right place with something open */
-
   /* color fixes */
 }
 
@@ -31894,13 +31731,6 @@ body {
   display: none; /* extraneous! */
 }
 
-.modal.mod-community-plugin .community-modal-controls {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: minmax(240px, 1.5fr) 2fr;
-  padding-right: var(--spacing-comm-modal);
-}
-
 .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info {
   order: 2;
 }
@@ -31911,24 +31741,7 @@ body {
 
 .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-control {
   order: 1;
-  flex: 1 0 auto;
-}
-
-.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls {
-  grid-auto-flow: row;
-  grid-template-columns: 1fr;
-}
-
-.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle {
-  justify-self: end;
-}
-
-.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-info {
-  order: 1;
-}
-
-.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-control {
-  order: 2;
+  flex: 0 0 auto;
 }
 
 .modal.mod-community-plugin .community-item.is-selected .community-item-desc {
@@ -33277,7 +33090,7 @@ body:is(.ssopt-hide-metadata-container-lp) .setting-item.setting-item:where([dat
   display: none;
 }
 
-body:is(.ssopt-disable-alh.ssopt-disable-alh) .setting-item.setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
+body:is(.ssopt-disable-alh) .setting-item.setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
   display: none;
 }
 
@@ -33393,7 +33206,7 @@ body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .setting-item.setting-ite
   display: none;
 }
 
-body .setting-item.setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Typography"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
+body .setting-item.setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
   padding: 0 8px 0 4px; /* follows their own paddings */
   font-family: Manrope;
   color: var(--text-accent);
@@ -33732,7 +33545,7 @@ body:is(.ssopt-hide-metadata-container-lp) .view-content .style-settings-contain
   display: none;
 }
 
-body:is(.ssopt-disable-alh.ssopt-disable-alh) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
+body:is(.ssopt-disable-alh) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
   display: none;
 }
 
@@ -33848,7 +33661,7 @@ body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .view-content .style-sett
   display: none;
 }
 
-body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Typography"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
+body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
   padding: 0 8px 0 4px; /* follows their own paddings */
   font-family: Manrope;
   color: var(--text-accent);
@@ -34318,47 +34131,47 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   /* overrides whatever first child settings there is */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) .setting-item-control {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-control {
   display: none;
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   overflow: auto;
   overflow-wrap: anywhere;
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) {
   padding: 0.75em; /* used to be 0.75em and 0 */
   background-color: var(--background-secondary);
   border-left: 1px solid var(--background-modifier-border);
   border-right: 1px solid var(--background-modifier-border);
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) .setting-item-description {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]) .setting-item-description {
   color: var(--text-accent);
   text-align: justify;
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]):first-child {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"]):first-child {
   border-top: 1px solid var(--background-modifier-border);
   padding-top: var(--padding-ss);
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
   /* INFO ICON */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]) {
   /* add icon? */
 
   /* add hover color change */
 }
 
-.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"])::after {
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"])::after {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22lucide%20lucide-info-icon%20lucide-info%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M12%2016v-4%22/%3E%3Cpath%20d%3D%22M12%208h.01%22/%3E%3C/svg%3E");
@@ -34370,11 +34183,11 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   justify-self: right;
 }
 
-.theme-light .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]):hover::after {
+.theme-light .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
   background: oklch(from var(--icon-color) calc(l - 0.2) c h);
 }
 
-.theme-dark .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]):hover::after {
+.theme-dark .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"]):hover::after {
   background: oklch(from var(--icon-color) calc(l + 0.2) c h);
 }
 
@@ -35760,37 +35573,37 @@ mixins or deep nesting, while still reducing code duplication.
 @keyframes changeHeaderNum {
   0%, 100% {
     content: "H1";
-    color: var(--col-h1);
+    color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
     background-color: var(--col-h1-bg);
   }
 
   16.67% {
     content: "H2";
-    color: var(--col-h2);
+    color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
     background-color: var(--col-h2-bg);
   }
 
   33.33% {
     content: "H3";
-    color: var(--col-h3);
+    color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
     background-color: var(--col-h3-bg);
   }
 
   50% {
     content: "H4";
-    color: var(--col-h4);
+    color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
     background-color: var(--col-h4-bg);
   }
 
   66.67% {
     content: "H5";
-    color: var(--col-h5);
+    color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
     background-color: var(--col-h5-bg);
   }
 
   83.33% {
     content: "H6";
-    color: var(--col-h6);
+    color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
     background-color: var(--col-h6-bg);
   }
 }
@@ -35798,32 +35611,26 @@ mixins or deep nesting, while still reducing code duplication.
 @keyframes changeHeaderNumNoColor {
   0%, 100% {
     content: "H1";
-    color: var(--h1-color);
   }
 
   16.67% {
     content: "H2";
-    color: var(--h2-color);
   }
 
   33.33% {
     content: "H3";
-    color: var(--h3-color);
   }
 
   50% {
     content: "H4";
-    color: var(--h4-color);
   }
 
   66.67% {
     content: "H5";
-    color: var(--h5-color);
   }
 
   83.33% {
     content: "H6";
-    color: var(--h6-color);
   }
 }
 
@@ -36168,27 +35975,27 @@ body:not(.ssopt-no-coloured-headers) .setting-item[data-id="coloured-headers"] .
 }
 
 body:not(.ssopt-no-coloured-headers) .cm-formatting-header-1 {
-  color: var(--col-header-hex, var(--col-h1, oklch(from var(--col-h1-bg) var(--l) 0.03 h)));
+  color: var(--col-header-hex, oklch(from var(--col-h1-bg) var(--l) 0.03 h));
 }
 
 body:not(.ssopt-no-coloured-headers) .cm-formatting-header-2 {
-  color: var(--col-header-hex, var(--col-h2, oklch(from var(--col-h2-bg) var(--l) 0.03 h)));
+  color: var(--col-header-hex, oklch(from var(--col-h2-bg) var(--l) 0.03 h));
 }
 
 body:not(.ssopt-no-coloured-headers) .cm-formatting-header-3 {
-  color: var(--col-header-hex, var(--col-h3, oklch(from var(--col-h3-bg) var(--l) 0.03 h)));
+  color: var(--col-header-hex, oklch(from var(--col-h3-bg) var(--l) 0.03 h));
 }
 
 body:not(.ssopt-no-coloured-headers) .cm-formatting-header-4 {
-  color: var(--col-header-hex, var(--col-h4, oklch(from var(--col-h4-bg) var(--l) 0.03 h)));
+  color: var(--col-header-hex, oklch(from var(--col-h4-bg) var(--l) 0.03 h));
 }
 
 body:not(.ssopt-no-coloured-headers) .cm-formatting-header-5 {
-  color: var(--col-header-hex, var(--col-h5, oklch(from var(--col-h5-bg) var(--l) 0.03 h)));
+  color: var(--col-header-hex, oklch(from var(--col-h5-bg) var(--l) 0.03 h));
 }
 
 body:not(.ssopt-no-coloured-headers) .cm-formatting-header-6 {
-  color: var(--col-header-hex, var(--col-h6, oklch(from var(--col-h6-bg) var(--l) 0.03 h)));
+  color: var(--col-header-hex, oklch(from var(--col-h6-bg) var(--l) 0.03 h));
 }
 
 .setting-item[data-id="col-header-hex"] .setting-item-control::before {
@@ -36221,141 +36028,6 @@ body:not(.ssopt-no-coloured-headers) .setting-item[data-id="col-header-hex"] .se
 
   --text-lightness-mod: -0.15;
   --text-chroma-mod: 0.85;
-}
-
-/* --------------------------------------------------------------------------------
-   [3A] Headers RealDisplay
------------------------------------------------------------------------------------ */
-.setting-item[data-id="h1-settings"] .setting-item-control::before {
-  padding: var(--padding-headers);
-  font-family: var(--h1-font);
-  font-size: var(--h1-size);
-  color: var(--h1-color);
-  content: "Header 1";
-  font-variant: var(--h1-variant);
-  letter-spacing: -0.015em;
-  line-height: var(--h1-line-height);
-  font-weight: var(--font-weight);
-  font-style: var(--h1-style);
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  --font-weight: var(--h1-weight);
-}
-
-body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h1-settings"] .setting-item-control::before {
-  color: var(--col-h1);
-  background-color: var(--col-h1-bg);
-}
-
-.setting-item[data-id="h2-settings"] .setting-item-control::before {
-  padding: var(--padding-headers);
-  font-family: var(--h2-font);
-  font-size: var(--h2-size);
-  color: var(--h2-color);
-  content: "Header 2";
-  font-variant: var(--h2-variant);
-  letter-spacing: -0.015em;
-  line-height: var(--h2-line-height);
-  font-weight: var(--font-weight);
-  font-style: var(--h2-style);
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  --font-weight: var(--h2-weight);
-}
-
-body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h2-settings"] .setting-item-control::before {
-  color: var(--col-h2);
-  background-color: var(--col-h2-bg);
-}
-
-.setting-item[data-id="h3-settings"] .setting-item-control::before {
-  padding: var(--padding-headers);
-  font-family: var(--h3-font);
-  font-size: var(--h3-size);
-  color: var(--h3-color);
-  content: "Header 3";
-  font-variant: var(--h3-variant);
-  letter-spacing: -0.015em;
-  line-height: var(--h3-line-height);
-  font-weight: var(--font-weight);
-  font-style: var(--h3-style);
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  --font-weight: var(--h3-weight);
-}
-
-body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h3-settings"] .setting-item-control::before {
-  color: var(--col-h3);
-  background-color: var(--col-h3-bg);
-}
-
-.setting-item[data-id="h4-settings"] .setting-item-control::before {
-  padding: var(--padding-headers);
-  font-family: var(--h4-font);
-  font-size: var(--h4-size);
-  color: var(--h4-color);
-  content: "Header 4";
-  font-variant: var(--h4-variant);
-  letter-spacing: -0.015em;
-  line-height: var(--h4-line-height);
-  font-weight: var(--font-weight);
-  font-style: var(--h4-style);
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  --font-weight: var(--h4-weight);
-}
-
-body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h4-settings"] .setting-item-control::before {
-  color: var(--col-h4);
-  background-color: var(--col-h4-bg);
-}
-
-.setting-item[data-id="h5-settings"] .setting-item-control::before {
-  padding: var(--padding-headers);
-  font-family: var(--h5-font);
-  font-size: var(--h5-size);
-  color: var(--h5-color);
-  content: "Header 5";
-  font-variant: var(--h5-variant);
-  letter-spacing: -0.015em;
-  line-height: var(--h5-line-height);
-  font-weight: var(--font-weight);
-  font-style: var(--h5-style);
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  --font-weight: var(--h5-weight);
-}
-
-body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h5-settings"] .setting-item-control::before {
-  color: var(--col-h5);
-  background-color: var(--col-h5-bg);
-}
-
-.setting-item[data-id="h6-settings"] .setting-item-control::before {
-  padding: var(--padding-headers);
-  font-family: var(--h6-font);
-  font-size: var(--h6-size);
-  color: var(--h6-color);
-  content: "Header 6";
-  font-variant: var(--h6-variant);
-  letter-spacing: -0.015em;
-  line-height: var(--h6-line-height);
-  font-weight: var(--font-weight);
-  font-style: var(--h6-style);
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  --font-weight: var(--h6-weight);
-}
-
-body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h6-settings"] .setting-item-control::before {
-  color: var(--col-h6);
-  background-color: var(--col-h6-bg);
 }
 
 /* --------------------------------------------------------------------------------
@@ -38720,15 +38392,6 @@ CSS-ing the Credits section
   letter-spacing: -0.05ch;
 }
 
-.setting-item:where([data-id="pluglets-iem-settings"]) .setting-item-name::before {
-  padding: 0 8px 0 4px; /* follows their own paddings */
-  font-family: Manrope;
-  color: var(--text-accent);
-  content: "Willemstad Pluglets";
-  font-weight: 400;
-  letter-spacing: -0.05ch;
-}
-
 .setting-item:where([data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"]) .setting-item-description.setting-item-description > p {
   column-gap: var(--size-4-1);
 }
@@ -38955,15 +38618,6 @@ div.kanban-plugin__board > div {
 .PComm002-wp-singlelane .mod-root .kanban-plugin__lane-wrapper.collapse-horizontal .kanban-plugin__lane-title-count,
 .PComm002-wp-singlelane .mod-root .kanban-plugin__lane-wrapper.collapse-horizontal .kanban-plugin__lane-title-text {
   transform: unset;
-}
-
-/* fix shadows */
-.kanban-plugin__lane-form-wrapper {
-  border: 0;
-}
-
-body:not(.yes-shadows) .kanban-plugin__lane-form-wrapper {
-  box-shadow: none;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -39889,22 +39543,6 @@ body:not(.pane-relief-disable-counts) .view-header-nav-buttons button:last-child
 \ Small Fixes
 ──────────────────────────────────────────────────────────────────────────────── */
 
-/* X101-0 | Get rid of the horrid mix-blend-mode thing that always causes trouble */
-body {
-  --highlight-mix-blend-mode: normal !important;
-} /* important because I don't need kepano screwing this up */
-
-/* X101-0A | Bold and Italics split */
-.theme-light {
-  --bold-color: var(--bold-color-light, inherit);
-  --italic-color: var(--italic-color-light, inherit);
-}
-
-.theme-dark {
-  --bold-color: var(--bold-color-dark, inherit);
-  --italic-color: var(--italic-color-dark, inherit);
-}
-
 /* X101-1 | Remove setting accent color in Settings > Appearance */
 .modal.mod-settings .vertical-tab-content > .setting-item:nth-of-type(2) > .setting-item-control > .clickable-icon > .lucide-rotate-ccw {
   display: none;
@@ -40191,38 +39829,6 @@ body.is-tablet .hotkey-list-container .setting-item :where(.setting-command-hotk
 
 body.is-tablet .hotkey-list-container .setting-item :where(.hotkey-list-container .setting-hotkey) {
   align-self: auto;
-}
-
-/* PHONE ONLY STUFF */
-.is-phone .setting-item:not(.mod-toggle, .setting-item-heading, .mod-list-item):has(.setting-item-control > .style-settings-import) {
-  flex-direction: row;
-}
-
-.is-phone .setting-item:not(.mod-toggle, .setting-item-heading, .mod-list-item):has(.setting-item-control > .style-settings-import) .setting-item-info {
-  flex-grow: 1;
-}
-
-.is-phone .setting-item:not(.mod-toggle, .setting-item-heading, .mod-list-item):has(.setting-item-control > .style-settings-import) .setting-item-control {
-  margin-top: 0;
-  flex-grow: 0;
-  flex-basis: content;
-}
-
-.is-phone .mod-community-theme .community-modal-controls {
-  display: grid;
-  grid-template-areas: "top top" "left right";
-}
-
-.is-phone .mod-community-theme .community-modal-controls .setting-item:not(.mod-toggle) {
-  grid-area: top;
-}
-
-.is-phone .mod-community-theme .community-modal-controls .setting-item.mod-toggle::first-of-type {
-  grid-area: left;
-}
-
-.is-phone .mod-community-theme .community-modal-controls .setting-item.mod-toggle::last-of-type {
-  grid-area: right;
 }
 
 /* Remove setting accent color in Settings + Clearer images */
@@ -40862,28 +40468,6 @@ settings:
         step: 1
         default: 6
     -
-        id: divider-width
-        title: Divider Width
-        type: variable-number-slider
-        description: "Controls the thickness of divider lines throughout the theme."
-        format: "px"
-        min: 0
-        max: 5
-        step: 1
-        default: 1
-*/
-
-/* @settings
-name: "Global Typography"
-id: V1-Willemstad-Typography
-settings:
-    -
-        id: info-global-typography-split
-        title: Note on Global Typography
-        type: info-text
-        description: "This section controls global typography settings like font sizes, underlines, bold, and italic styles, which affects every element within Obsidian. For settings specific to the editor, such as Markdown headers and Canvas typography options, please see the **Editor** section."
-        markdown: true
-    -
         id: typography-typeface
         title: Typeface
         type: heading
@@ -40946,336 +40530,6 @@ settings:
             description: Changes font for the in-built Mermaid.js visualisations in the theme.
             default: '"Inter 4.1", "DM Sans", "Manrope"'
     -
-        id: bold-italic-settings
-        title: Bold and Italic
-        type: heading
-        description: "Controls options for bold and italic text across Obsidian."
-        level: 2
-        collapsed: false
-    -
-        id: bold-color-settings
-        title: Bold Text
-        type: heading
-        level: 3
-        collapsed: false
-    -
-        id: bold-modifier
-        title: Font Weight Modifier of Bold Text
-        type: variable-number-slider
-        description: "Adjusts the font weight for bold text, on top of the usual font weight for normal text. The default is 200."
-        min: -300
-        max: 300
-        step: 100
-        default: 200
-    -
-        id: bold-color-light
-        title: "Colour of Bold Text (Light Mode)"
-        type: variable-select
-        allowEmpty: false
-        default: 'inherit'
-        options:
-            -
-                label: "Default (Inherit)"
-                value: 'inherit'
-            -
-                label: "  Text Colours  "
-                value: 'no-stuff-break-text'
-            -
-                label: "Normal"
-                value: 'var(--text-normal)'
-            -
-                label: "Muted"
-                value: 'var(--text-muted)'
-            -
-                label: "Faint"
-                value: 'var(--text-faint)'
-            -
-                label: "  Accent Colours  "
-                value: 'no-stuff-break-accent'
-            -
-                label: "Accent"
-                value: 'var(--color-accent)'
-            -
-                label: "Accent 1"
-                value: 'var(--color-accent-1)'
-            -
-                label: "Accent 2"
-                value: 'var(--color-accent-2)'
-            -
-                label: "  Rainbow Colours  "
-                value: 'no-stuff-break-rainbow'
-            -
-                label: "Red"
-                value: 'var(--color-red)'
-            -
-                label: "Orange"
-                value: 'var(--color-orange)'
-            -
-                label: "Yellow"
-                value: 'var(--color-yellow)'
-            -
-                label: "Green"
-                value: 'var(--color-green)'
-            -
-                label: "Cyan"
-                value: 'var(--color-cyan)'
-            -
-                label: "Blue"
-                value: 'var(--color-blue)'
-            -
-                label: "Purple"
-                value: 'var(--color-purple)'
-            -
-                label: "Pink"
-                value: 'var(--color-pink)'
-    -
-        id: bold-color-dark
-        title: "Colour of Bold Text (Dark Mode)"
-        type: variable-select
-        allowEmpty: false
-        default: 'inherit'
-        options:
-            -
-                label: "Default (Inherit)"
-                value: 'inherit'
-            -
-                label: "  Text Colours  "
-                value: 'no-stuff-break-text'
-            -
-                label: "Normal"
-                value: 'var(--text-normal)'
-            -
-                label: "Muted"
-                value: 'var(--text-muted)'
-            -
-                label: "Faint"
-                value: 'var(--text-faint)'
-            -
-                label: "  Accent Colours  "
-                value: 'no-stuff-break-accent'
-            -
-                label: "Accent"
-                value: 'var(--color-accent)'
-            -
-                label: "Accent 1"
-                value: 'var(--color-accent-1)'
-            -
-                label: "Accent 2"
-                value: 'var(--color-accent-2)'
-            -
-                label: "  Rainbow Colours  "
-                value: 'no-stuff-break-rainbow'
-            -
-                label: "Red"
-                value: 'var(--color-red)'
-            -
-                label: "Orange"
-                value: 'var(--color-orange)'
-            -
-                label: "Yellow"
-                value: 'var(--color-yellow)'
-            -
-                label: "Green"
-                value: 'var(--color-green)'
-            -
-                label: "Cyan"
-                value: 'var(--color-cyan)'
-            -
-                label: "Blue"
-                value: 'var(--color-blue)'
-            -
-                label: "Purple"
-                value: 'var(--color-purple)'
-            -
-                label: "Pink"
-                value: 'var(--color-pink)'
-    -
-        id: italic-color-settings
-        title: Italic Text
-        type: heading
-        level: 3
-        collapsed: false
-    -
-            id: italic-weight
-            title: Font Weight
-            type: variable-number-slider
-            description: "Controls the font weight for italic text. The default is 400 (normal)."
-            min: 100
-            max: 900
-            step: 100
-            default: 400
-    -
-        id: italic-color-light
-        title: "Colour of Italic Text (Light Mode)"
-        type: variable-select
-        allowEmpty: false
-        default: 'inherit'
-        options:
-            -
-                label: "Default (Inherit)"
-                value: 'inherit'
-            -
-                label: "  Text Colours  "
-                value: 'no-stuff-break-text'
-            -
-                label: "Normal"
-                value: 'var(--text-normal)'
-            -
-                label: "Muted"
-                value: 'var(--text-muted)'
-            -
-                label: "Faint"
-                value: 'var(--text-faint)'
-            -
-                label: "  Accent Colours  "
-                value: 'no-stuff-break-accent'
-            -
-                label: "Accent"
-                value: 'var(--color-accent)'
-            -
-                label: "Accent 1"
-                value: 'var(--color-accent-1)'
-            -
-                label: "Accent 2"
-                value: 'var(--color-accent-2)'
-            -
-                label: "  Rainbow Colours  "
-                value: 'no-stuff-break-rainbow'
-            -
-                label: "Red"
-                value: 'var(--color-red)'
-            -
-                label: "Orange"
-                value: 'var(--color-orange)'
-            -
-                label: "Yellow"
-                value: 'var(--color-yellow)'
-            -
-                label: "Green"
-                value: 'var(--color-green)'
-            -
-                label: "Cyan"
-                value: 'var(--color-cyan)'
-            -
-                label: "Blue"
-                value: 'var(--color-blue)'
-            -
-                label: "Purple"
-                value: 'var(--color-purple)'
-            -
-                label: "Pink"
-                value: 'var(--color-pink)'
-    -
-        id: italic-color-dark
-        title: "Colour of Bold Text (Dark Mode)"
-        type: variable-select
-        allowEmpty: false
-        default: 'inherit'
-        options:
-            -
-                label: "Default (Inherit)"
-                value: 'inherit'
-            -
-                label: "  Text Colours  "
-                value: 'no-stuff-break-text'
-            -
-                label: "Normal"
-                value: 'var(--text-normal)'
-            -
-                label: "Muted"
-                value: 'var(--text-muted)'
-            -
-                label: "Faint"
-                value: 'var(--text-faint)'
-            -
-                label: "  Accent Colours  "
-                value: 'no-stuff-break-accent'
-            -
-                label: "Accent"
-                value: 'var(--color-accent)'
-            -
-                label: "Accent 1"
-                value: 'var(--color-accent-1)'
-            -
-                label: "Accent 2"
-                value: 'var(--color-accent-2)'
-            -
-                label: "  Rainbow Colours  "
-                value: 'no-stuff-break-rainbow'
-            -
-                label: "Red"
-                value: 'var(--color-red)'
-            -
-                label: "Orange"
-                value: 'var(--color-orange)'
-            -
-                label: "Yellow"
-                value: 'var(--color-yellow)'
-            -
-                label: "Green"
-                value: 'var(--color-green)'
-            -
-                label: "Cyan"
-                value: 'var(--color-cyan)'
-            -
-                label: "Blue"
-                value: 'var(--color-blue)'
-            -
-                label: "Purple"
-                value: 'var(--color-purple)'
-            -
-                label: "Pink"
-                value: 'var(--color-pink)'
-    -
-        id: typography-underlines
-        title: Underlines
-        description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
-        type: heading
-        level: 2
-        collapsed: false
-    -
-        id: ssopt-typ-undl-skip-ink
-        title: Skip Ink for Underlines
-        type: class-toggle
-        document: ET12-Underlines
-        description: 'Willemstad by default does not have a space in the underline (also known as "skip ink") between interfering descenders (the bottom portion of letters "g, j, q, p, y"). This option restores the skip ink, which is also the original option in Obsidian.'
-        default: false
-    -
-        id: undl-text-norm
-        title: Underlines Spacing — Normal Text
-        type: class-select
-        document: ET12-Underlines
-        description: Choose which underline spacing you would like your normal text to have.
-        allowEmpty: false
-        default: default
-        options:
-            -
-                label: 🔴 Standard (Classic Obsidian Core/Classic Shimmering Focus style)
-                value: ssopt-typ-undl-nor-min
-            -
-                label: 🟡 Additional (Shimmering Focus style for hyperlinks)
-                value: ssopt-typ-undl-nor-add
-            -
-                label: 🟢 Maximum (Willemstad style) — Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
-                value: default
-    -
-        id: undl-hlink
-        title: Underlines Spacing — Hyperlinks
-        type: class-select
-        document: ET12-Underlines
-        description: Choose which underline spacing you would like your hyperlinks to have.
-        allowEmpty: false
-        default: default
-        options:
-            -
-                label: 🔴 Standard (Classic Obsidian style)
-                value: ssopt-typ-undl-hyp-min
-            -
-                label: 🟡 Additional (Shimmering Focus style)
-                value: ssopt-typ-undl-hyp-add
-            -
-                label: 🟢 Maximum (Willemstad style) — Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
-                value: default
 */
 
 /* @settings
@@ -45870,27 +45124,6 @@ settings:
                 max: 1
                 step: 0.05
     -
-        id: vault-profile-settings
-        title: Vault Profile
-        type: heading
-        description: "Options to control the vault profile drawer at the bottom of the left sidebar."
-        level: 2
-        collapsed: false
-    -
-        id: ssopt-drawer-bg
-        title: Vault Profile Background Colour
-        type: variable-select
-        description: "Changes the background colour of the vault profile drawer."
-        allowEmpty: false
-        default: '0'
-        options:
-            -
-                label: "background-secondary (Default)"
-                value: '0'
-            -
-                label: "background-primary-alt (Flushes with Left Sidepane)"
-                value: '1'
-    -
         id: editor-workspace-tab-settings
         title: Tabs in Editor Workspace
         description: Options to manipulate and control the tabs in the editor workspace tab headers.
@@ -45973,26 +45206,6 @@ settings:
             type: class-toggle
             document: X102
             description: "Willemstad changes the file extension text in the file explorer to icons. Toggle this to disable the change and revert back to the Obsidian default."
-    -
-            id: ssopt-nav-align
-            title: "Alignment of Nav Buttons in File Explorer and Bookmarks"
-            type: variable-select
-            description: "Controls the alignment of the buttons (e.g., New Note, New Folder) in the File Explorer header. Also affects bookmarks."
-            allowEmpty: false
-            default: 'left'
-            options:
-                -
-                    label: "Left (Default)"
-                    value: 'left'
-                -
-                    label: "Center"
-                    value: 'center'
-                -
-                    label: "Right"
-                    value: 'right'
-                -
-                    label: "Stretch"
-                    value: 'stretch'
     -
         id: modals
         title: Modals
@@ -46132,18 +45345,6 @@ settings:
 name: "Editor" 
 id: V1-Willemstad-Editor
 settings:
-    -
-        id: info-editor-typography-split
-        title: Note on Typography
-        type: info-text
-        description: "Global typography settings (like global font sizes, underlines, bold, italic, and strikethrough) are controlled in the **Global Typography** section. Settings specific to the editor (like Header and Canvas font sizes) can be found within this Editor section."
-        markdown: true
-    -
-        id: info-editor-block-widths
-        title: Note on Block Widths
-        type: info-text
-        description: "Block Widths are an optional feature and must be enabled to take effect. This feature is being progressively implemented and is currently available for **Bases**, **Tables**, and **iFrames**."
-        markdown: true
     -
         id: document-titlebar
         title: Document Titlebar
@@ -46322,7 +45523,7 @@ settings:
         type: heading
         description: Options for coloured headers.
         level: 3
-        collapsed: true
+        collapsed: false
     -
             id: info-coloured-headers
             title: Note on Coloured Headers
@@ -47122,349 +46323,12 @@ settings:
                         label: "Pink"
                         value: 'var(--color-pink)'
     -
-        id: header-typography-settings
-        title: Header Typography
-        type: heading
-        description: "Provides detailed control over the font size, weight, and style for each header level."
-        level: 3
-        collapsed: true
-    -
-        id: h1-settings
-        title: H1 Settings
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: h1-size
-        title: Font Size
-        type: variable-number-slider
-        format: "em"
-        min: 1
-        max: 4
-        step: 0.05
-        default: 1.8
-    -
-        id: h1-weight
-        title: Font Weight
-        type: variable-number-slider
-        min: 100
-        max: 900
-        step: 100
-        default: 600
-    -
-        id: h1-style
-        title: Font Style
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Italic"
-                value: 'italic'
-            -
-                label: "Oblique"
-                value: 'oblique'
-    -
-        id: h1-variant
-        title: Font Variant
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Small Caps"
-                value: 'small-caps'
-            -
-                label: "All Small Caps"
-                value: 'all-small-caps'
-    -
-        id: h2-settings
-        title: H2 Settings
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: h2-size
-        title: Font Size
-        type: variable-number-slider
-        format: "em"
-        min: 1
-        max: 3.5
-        step: 0.05
-        default: 1.6
-    -
-        id: h2-weight
-        title: Font Weight
-        type: variable-number-slider
-        min: 100
-        max: 900
-        step: 100
-        default: 600
-    -
-        id: h2-style
-        title: Font Style
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Italic"
-                value: 'italic'
-            -
-                label: "Oblique"
-                value: 'oblique'
-    -
-        id: h2-variant
-        title: Font Variant
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Small Caps"
-                value: 'small-caps'
-            -
-                label: "All Small Caps"
-                value: 'all-small-caps'
-    -
-        id: h3-settings
-        title: H3 Settings
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: h3-size
-        title: Font Size
-        type: variable-number-slider
-        format: "em"
-        min: 1
-        max: 3
-        step: 0.05
-        default: 1.45
-    -
-        id: h3-weight
-        title: Font Weight
-        type: variable-number-slider
-        min: 100
-        max: 900
-        step: 100
-        default: 600
-    -
-        id: h3-style
-        title: Font Style
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Italic"
-                value: 'italic'
-            -
-                label: "Oblique"
-                value: 'oblique'
-    -
-        id: h3-variant
-        title: Font Variant
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Small Caps"
-                value: 'small-caps'
-            -
-                label: "All Small Caps"
-                value: 'all-small-caps'
-    -
-        id: h4-settings
-        title: H4 Settings
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: h4-size
-        title: Font Size
-        type: variable-number-slider
-        format: "em"
-        min: 1
-        max: 2.5
-        step: 0.05
-        default: 1.3
-    -
-        id: h4-weight
-        title: Font Weight
-        type: variable-number-slider
-        min: 100
-        max: 900
-        step: 100
-        default: 500
-    -
-        id: h4-style
-        title: Font Style
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Italic"
-                value: 'italic'
-            -
-                label: "Oblique"
-                value: 'oblique'
-    -
-        id: h4-variant
-        title: Font Variant
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Small Caps"
-                value: 'small-caps'
-            -
-                label: "All Small Caps"
-                value: 'all-small-caps'
-    -
-        id: h5-settings
-        title: H5 Settings
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: h5-size
-        title: Font Size
-        type: variable-number-slider
-        format: "em"
-        min: 1
-        max: 2
-        step: 0.05
-        default: 1.15
-    -
-        id: h5-weight
-        title: Font Weight
-        type: variable-number-slider
-        min: 100
-        max: 900
-        step: 100
-        default: 500
-    -
-        id: h5-style
-        title: Font Style
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Italic"
-                value: 'italic'
-            -
-                label: "Oblique"
-                value: 'oblique'
-    -
-        id: h5-variant
-        title: Font Variant
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Small Caps"
-                value: 'small-caps'
-            -
-                label: "All Small Caps"
-                value: 'all-small-caps'
-    -
-        id: h6-settings
-        title: H6 Settings
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: h6-size
-        title: Font Size
-        type: variable-number-slider
-        format: "em"
-        min: 1
-        max: 1.5
-        step: 0.05
-        default: 1.05
-    -
-        id: h6-weight
-        title: Font Weight
-        type: variable-number-slider
-        min: 100
-        max: 900
-        step: 100
-        default: 500
-    -
-        id: h6-style
-        title: Font Style
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Italic"
-                value: 'italic'
-            -
-                label: "Oblique"
-                value: 'oblique'
-    -
-        id: h6-variant
-        title: Font Variant
-        type: variable-select
-        allowEmpty: false
-        default: 'normal'
-        options:
-            -
-                label: "Normal"
-                value: 'normal'
-            -
-                label: "Small Caps"
-                value: 'small-caps'
-            -
-                label: "All Small Caps"
-                value: 'all-small-caps'
-    -
         id: header-hexes
         title: Header Hexes
         type: heading
         description: Options to change the header hexes (# at the start of a heading).
         level: 3
-        collapsed: true
+        collapsed: false
     -
             id: ssopt-smaller-header-hexes
             title: Make Header Hexes Smaller
@@ -47516,6 +46380,56 @@ settings:
             document: ES01-EmptyState
             description: "When enabled, this reverts the empty state screen to the Obsidian default."
             default: false
+    -
+        id: typography-underlines
+        title: Underlines
+        description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-typ-undl-skip-ink
+            title: Skip Ink for Underlines
+            type: class-toggle
+            document: ET12-Underlines
+            description: 'Willemstad by default does not have a space in the underline (also known as "skip ink") between interfering descenders (the bottom portion of letters "g, j, q, p, y"). This option restores the skip ink, which is also the original option in Obsidian.'
+            default: false
+    -
+            id: undl-text-norm
+            title: Underlines Spacing — Normal Text
+            type: class-select
+            document: ET12-Underlines
+            description: Choose which underline spacing you would like your normal text to have.
+            allowEmpty: false
+            default: default
+            options:
+                -
+                    label: 🔴 Standard (Classic Obsidian Core/Classic Shimmering Focus style)
+                    value: ssopt-typ-undl-nor-min
+                -
+                    label: 🟡 Additional (Shimmering Focus style for hyperlinks)
+                    value: ssopt-typ-undl-nor-add
+                -
+                    label: 🟢 Maximum (Willemstad style) — Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                    value: default
+    -
+            id: undl-hlink
+            title: Underlines Spacing — Hyperlinks
+            type: class-select
+            document: ET12-Underlines
+            description: Choose which underline spacing you would like your hyperlinks to have.       
+            allowEmpty: false
+            default: default
+            options:
+                -
+                    label: 🔴 Standard (Classic Obsidian style)
+                    value: ssopt-typ-undl-hyp-min
+                -
+                    label: 🟡 Additional (Shimmering Focus style)
+                    value: ssopt-typ-undl-hyp-add
+                -
+                    label: 🟢 Maximum (Willemstad style) — Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                    value: default
     -
         id: typography-highlight
         title: Highlights
@@ -47990,6 +46904,53 @@ settings:
                     type: variable-text
                     description: "Sets the aspect ratio of the iFrame. Use the format 'width / height', and 'auto' for it to default to its original aspect ratio, which can be used alone, or added before or after to the 'width / height' format. Default is 'auto 16/9'."
                     default: 'auto 16/9'
+    -
+        id: immersive-editing-modes
+        title: Immersive Editing Modes (Focused Mode and Super Focused Mode)
+        type: heading
+        description: "Styles that hide UI elements and fade out non-active lines to help you focus on writing."
+        level: 2
+        collapsed: false
+    -
+        id: info-immersive-editing-modes
+        title: Note on Immersive Editing Modes
+        type: info-text
+        description: "Please note that the immersive editing modes (Focused and Super Focused Modes) can be set via hotkeys and is accessible via the Command Palette. Please see the Obsidian's documentation (accessible via the button on the right) to do this. Immersive Editing Modes takes inspiration from [Ryan McQuen's Focus Mode plugin](https://github.com/ryanpcmcquen/obsidian-focus-mode), which Willemstad's maintainer used to use extensively years ago. [Obsidian Docs](https://help.obsidian.md/hotkeys)"
+        markdown: true
+    -
+            id: ssopt-focused-mode
+            title: Focused Mode
+            type: class-toggle
+            description: "Hides all UI elements (status bar, sidebars, etc.) except for the tab header bar, and fades out lines of text that are not near your active line. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
+            default: false
+            addCommand: true
+    -
+            id: ssopt-super-focused-mode
+            title: Super Focused Mode
+            type: class-toggle
+            description: "An even more extreme focus mode. Hides all elements, except the current active page. Does not require 'Focused Mode' enabled. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
+            default: false
+            addCommand: true
+    -
+            id: distant-opacity
+            title: Distant Line Opacity
+            type: variable-number-slider
+            description: "Controls the minimum opacity for lines far away from your active line in Focused Mode. Default is 0.2."
+            format: ""
+            min: 0
+            max: 1
+            step: 0.05
+            default: 0.2
+    -
+            id: near-fade-factor
+            title: Near Line Fade Factor
+            type: variable-number-slider
+            description: "Controls the opacity of the lines fade out as they get further from the active line. Higher values mean a bigger difference in opacity, which is stepped by the value you input here, multiplied by the amount of lines away from the active line it is (up to the third line). The default is 0.15."
+            format: ""
+            min: 0
+            max: 0.5
+            step: 0.01
+            default: 0.15
     -
         id: ancillary-editor-options
         title: Ancillary Editor Options
@@ -48794,60 +47755,6 @@ settings:
         type: info-text
         description: "Last but not least, you can also choose to support Obsidian by purchasing a Catalyst license, or by subscribing to Obsidian Publish and/or Obsidian Sync. [Catalyst](https://obsidian.md/account/catalyst) [Sync](https://obsidian.md/sync) [Publish](https://obsidian.md/publish)"
         markdown: true
-*/
-
-/* @settings
-name: "Immersive Editing Modes — Focused & Super Focused Mode"
-id: pluglets-iem-settings
-settings:
-    -
-        id: immersive-editing-modes
-        title: Immersive Editing Modes (Focused Mode and Super Focused Mode)
-        type: heading
-        description: "Styles that hide UI elements and fade out non-active lines to help you focus on writing."
-        level: 3
-        collapsed: false
-    -
-        id: info-immersive-editing-modes
-        title: Note on Immersive Editing Modes
-        type: info-text
-        description: "Please note that the immersive editing modes (Focused and Super Focused Modes) can be set via hotkeys and is accessible via the Command Palette. Please see the Obsidian's documentation (accessible via the button on the right) to do this. Immersive Editing Modes takes inspiration from [Ryan McQuen's Focus Mode plugin](https://github.com/ryanpcmcquen/obsidian-focus-mode), which Willemstad's maintainer used to use extensively years ago. [Obsidian Docs](https://help.obsidian.md/hotkeys)"
-        markdown: true
-    -
-        id: ssopt-focused-mode
-        title: Focused Mode
-        type: class-toggle
-        description: "Hides all UI elements (status bar, sidebars, etc.) except for the tab header bar, and fades out lines of text that are not near your active line. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
-        default: false
-        addCommand: true
-    -
-        id: ssopt-super-focused-mode
-        title: Super Focused Mode
-        type: class-toggle
-        description: "An even more extreme focus mode. Hides all elements, except the current active page. Does not require 'Focused Mode' enabled. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
-        default: false
-        addCommand: true
-    -
-        id: distant-opacity
-        title: Distant Line Opacity
-        type: variable-number-slider
-        description: "Controls the minimum opacity for lines far away from your active line in Focused Mode. Default is 0.2."
-        format: ""
-        min: 0
-        max: 1
-        step: 0.05
-        default: 0.2
-    -
-        id: near-fade-factor
-        title: Near Line Fade Factor
-        type: variable-number-slider
-        description: "Controls the opacity of the lines fade out as they get further from the active line. Higher values mean a bigger difference in opacity, which is stepped by the value you input here, multiplied by the amount of lines away from the active line it is (up to the third line). The default is 0.15."
-        format: ""
-        min: 0
-        max: 0.5
-        step: 0.01
-        default: 0.15
-    -
 */
 
 /* Style Settings Temporary File */
