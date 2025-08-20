@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.24 Newfoundland
+Willemstad | v1.9.23 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.24 Newfoundland";
+  content: "  /  Willemstad v1.9.23 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.24 Newfoundland"; /* prints version number */
+  content: "\av1.9.23 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -31330,6 +31330,8 @@ body {
   /* TOP BIT */
 
   /* FLIPS ORDER OF TOP BIT SETTING CONTROLS BUTTONS */
+
+  /* to make sure it goes the the right place with something open */
 }
 
 .modal.mod-community-theme .community-item {
@@ -31401,6 +31403,13 @@ body {
   display: none; /* extraneous! */
 }
 
+.modal.mod-community-theme .community-modal-controls {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(240px, 1.5fr) 1fr 1fr;
+  padding-right: var(--spacing-comm-modal);
+}
+
 .modal.mod-community-theme .community-modal-controls .setting-item .setting-item-info {
   order: 2;
 }
@@ -31411,51 +31420,27 @@ body {
 
 .modal.mod-community-theme .community-modal-controls .setting-item .setting-item-control {
   order: 1;
-  flex: 0 0 auto;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme {
-  /* to make sure it goes the the right place with something open */
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .community-modal-controls {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: minmax(240px, 1.5fr) 1fr 1fr;
-  padding-right: var(--spacing-comm-modal);
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .community-modal-controls .setting-item .setting-item-info {
-  order: 2;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .community-modal-controls .setting-item .setting-item-info .setting-item-name {
-  padding-left: 0;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .community-modal-controls .setting-item .setting-item-control {
-  order: 1;
   flex: 1 0 auto;
 }
 
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .community-modal-controls .setting-item.mod-toggle {
+.modal.mod-community-theme .community-modal-controls .setting-item.mod-toggle {
   justify-self: center;
 }
 
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls {
+.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls {
   grid-auto-flow: row;
   grid-template-columns: 1fr;
 }
 
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle {
+.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle {
   justify-self: end;
 }
 
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-info {
+.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-info {
   order: 1;
 }
 
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-control {
+.modal.mod-community-theme .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-control {
   order: 2;
 }
 
@@ -31851,6 +31836,8 @@ body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .mod
 
   /* FLIPS ORDER OF TOP BIT SETTING CONTROLS BUTTONS */
 
+  /* to make sure it goes the the right place with something open */
+
   /* color fixes */
 }
 
@@ -31907,6 +31894,13 @@ body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .mod
   display: none; /* extraneous! */
 }
 
+.modal.mod-community-plugin .community-modal-controls {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(240px, 1.5fr) 2fr;
+  padding-right: var(--spacing-comm-modal);
+}
+
 .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info {
   order: 2;
 }
@@ -31917,57 +31911,29 @@ body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .mod
 
 .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-control {
   order: 1;
-  flex: 0 0 auto;
+  flex: 1 0 auto;
+}
+
+.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls {
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+}
+
+.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle {
+  justify-self: end;
+}
+
+.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-info {
+  order: 1;
+}
+
+.modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-control {
+  order: 2;
 }
 
 .modal.mod-community-plugin .community-item.is-selected .community-item-desc {
   color: var(--text-on-accent);
   opacity: 0.95;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin {
-  /* to make sure it goes the the right place with something open */
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: minmax(240px, 1.5fr) 2fr;
-  padding-right: var(--spacing-comm-modal);
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info {
-  order: 2;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info .setting-item-name {
-  padding-left: 0;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-control {
-  order: 1;
-  flex: 1 0 auto;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item.mod-toggle {
-  justify-self: center;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls {
-  grid-auto-flow: row;
-  grid-template-columns: 1fr;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle {
-  justify-self: end;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-info {
-  order: 1;
-}
-
-body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-control {
-  order: 2;
 }
 
 /* Fixes and Customisations */
@@ -46034,12 +46000,6 @@ settings:
         description: 'Change the widths and heights of modals (the settings/community plugins/themes/Publish menus).'
         level: 2
         collapsed: false
-    -
-            id: ssopt-revert-mod-community
-            title: Revert Community Modals to Default
-            type: class-toggle
-            description: "When enabled, this disables the theme's custom layout for the Community Plugin and Theme store modals, reverting them to the standard Obsidian appearance."
-            default: false
     -
             id: grid-columns-container-comm-modal
             title: Community Modals Container Readme Per-Row Items 
