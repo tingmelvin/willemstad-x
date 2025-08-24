@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.25 Newfoundland
+Willemstad | v1.9.24 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.25 Newfoundland";
+  content: "  /  Willemstad v1.9.24 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.25 Newfoundland"; /* prints version number */
+  content: "\av1.9.24 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -23508,14 +23508,6 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
   box-shadow: inset 0 0 0 1px var(--background-modifier-border-focus); /* perfect! inset is a blessing */
 }
 
-/* Nav folder title sticky options */
-body.ssopt-sticky-nav-folder-title .nav-folder > .nav-folder-title {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: var(--background-primary-alt); /* Crucial for covering content */
-}
-
 /* Nav */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -28065,13 +28057,13 @@ body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-render
 
 /* Reading Mode Container */
 .markdown-reading-view .markdown-preview-view {
-  container-type: inline-size scroll-state;
+  container-type: inline-size;
   container-name: reading-mode;
 }
 
 /* Live Preview Container */
 .view-content .cm-scroller {
-  container-type: inline-size scroll-state;
+  container-type: inline-size;
   container-name: live-preview;
 
   --cqi-live-preview: 100cqi;
@@ -28211,34 +28203,6 @@ body {
     transform: translateX(-50%);
     max-width: calc(var(--ratio-bw-iframe-reading) * 100cqi + 2 * var(--file-margins));
     aspect-ratio: var(--aspect-ratio-bw-iframe);
-  }
-}
-
-/* PDF Embeds */
-body {
-  --size-bw-pdfembed: size * var(--magnifier-bw-pdfembed);
-  --magnifier-bw-pdfembed: 1.5;
-  --ratio-bw-pdfembed-source: 1;
-  --ratio-bw-pdfembed-reading: 0.96;
-}
-
-@container live-preview (min-width: 0) {
-  body:is(.ssopt-block-width-pdfembed) .markdown-source-view.mod-cm6 :where(.cm-content) > .pdf-embed.pdf-embed {
-    position: relative;
-    left: 50%;
-    width: calc-size(auto, var(--size-bw-pdfembed));
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-pdfembed-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
-  }
-}
-
-@container reading-mode (min-width: 0) {
-  body:is(.ssopt-block-width-pdfembed) .markdown-reading-view :where(.markdown-preview-section > .el-p > p) > .pdf-embed.pdf-embed {
-    position: relative;
-    left: 50%;
-    width: calc-size(auto, var(--size-bw-pdfembed)); /* calc-size(auto, var(--size-bw-pdfembed)); */
-    transform: translateX(-50%);
-    max-width: calc(var(--ratio-bw-pdfembed-reading) * 100cqi + 2 * var(--file-margins));
   }
 }
 
@@ -30075,8 +30039,7 @@ body {
 
 /* Graph view */
 
-/* THIS IS EW00.
-Test new Callouts */
+/* Test new Callouts */
 
 /* ────────────────────────────────────────────────────────────────────────────────
 CALLOUT SYSTEM REFACTOR
@@ -30122,22 +30085,22 @@ body:where(:not(.ssopt-callout-standard)) .callout {
   transition: var(--quick-transition);
 }
 
-body:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="gallery"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="gallery"]) > .callout-title {
+body:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
   border-right: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
   border-top: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
   border-bottom: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
 }
 
-body.ssopt-callout-no-hover:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="gallery"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="gallery"]) > .callout-title {
+body.ssopt-callout-no-hover:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
   border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
 }
 
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="gallery"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="gallery"]) > .callout-title {
+body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title {
   border-left: var(--callout-border-other-width) solid rgb(var(--callout-color));
   transition: var(--quick-transition);
 }
 
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="gallery"], [data-callout="note-toolbar"]):hover, :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="gallery"]) > .callout-title:hover {
+body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="note-toolbar"]):hover, :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"]) > .callout-title:hover {
   border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
   transition: var(--quick-transition);
 }
@@ -30395,11 +30358,6 @@ body:not(.ssopt-callout-standard) .callout[data-callout="columns"] {
   --callout-icon: lucide-columns;
 }
 
-body:not(.ssopt-callout-standard) .callout[data-callout="gallery"] {
-  --callout-color: 150, 150, 150;
-  --callout-icon: image;
-}
-
 .theme-dark body:not(.ssopt-callout-standard) .callout[data-callout="tip"] :is(.callout-title-inner, .callout-icon svg) {
   color: hsl(107deg 99% 40%);
 }
@@ -30541,7 +30499,7 @@ body {
     --callout-title-padding: 0 0.75em;
   }
 
-  body:not(.ssopt-callout-standard) .callout:where([data-callout="columns"], [data-callout="gallery"]) > .callout-title {
+  body:not(.ssopt-callout-standard) .callout:where([data-callout="columns"]) > .callout-title {
     padding-top: var(--size-2-3);
     padding-bottom: var(--size-2-3);
   }
@@ -30554,7 +30512,7 @@ body {
     --callout-border-base-width-preset: 0px;
   }
 
-  body:not(.ssopt-callout-standard).theme-dark .callout:where(:not([data-callout="columns"], [data-callout="gallery"], [data-callout="success"])) {
+  body:not(.ssopt-callout-standard).theme-dark .callout:where(:not([data-callout="columns"], [data-callout="success"])) {
     background-color: color-mix(in lab, black 75%, rgb(var(--callout-color)) 25%);
   }
 
@@ -30766,7 +30724,7 @@ body div.callout:is([data-callout-metadata*="no-m-r"], [data-callout-metadata*="
   margin-right: 0;
 }
 
-.callout:is([data-callout="columns"], [data-callout="gallery"]) {
+.callout[data-callout="columns"] {
   padding: 0;
   background-color: unset;
   margin-bottom: 0;
@@ -30774,30 +30732,30 @@ body div.callout:is([data-callout-metadata*="no-m-r"], [data-callout-metadata*="
   --callout-color: 150, 150, 150;
 }
 
-.callout:is([data-callout="columns"], [data-callout="gallery"]).callout.callout, .callout:is([data-callout="columns"], [data-callout="gallery"]).callout.callout:hover {
+.callout[data-callout="columns"].callout.callout, .callout[data-callout="columns"].callout.callout:hover {
   border-left: 0;
 }
 
-.callout:is([data-callout="columns"], [data-callout="gallery"]) > .callout-title {
+.callout[data-callout="columns"] > .callout-title {
   background-color: rgb(var(--callout-color), 0.125);
   border-radius: var(--callout-radius);
 }
 
-body:is(.ssopt-callout-standard) .callout:is([data-callout="columns"], [data-callout="gallery"]) > .callout-title {
+body:is(.ssopt-callout-standard) .callout[data-callout="columns"] > .callout-title {
   --callout-title-padding: var(--callout-padding);
 }
 
-body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:is([data-callout="columns"], [data-callout="gallery"]) > .callout-title:hover {
+body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout[data-callout="columns"] > .callout-title:hover {
   border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
   transition: var(--quick-transition);
 }
 
-body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:is([data-callout="columns"], [data-callout="gallery"]) > .callout-title {
+body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout[data-callout="columns"] > .callout-title {
   border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
   transition: var(--quick-transition);
 }
 
-.callout:is([data-callout="columns"], [data-callout="gallery"]) > .callout-content {
+.callout[data-callout="columns"] > .callout-content {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -30809,65 +30767,8 @@ body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:i
 .callout[data-callout="columns"] > .callout-content > .callout {
   margin-bottom: auto;
   margin-top: var(--callout-columns-margin-top);
-  flex: 1 1 0%;
+  flex: 1 1 100%;
   flex-wrap: wrap;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="w1"] {
-  flex-grow: 1;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="width-1"] {
-  flex-grow: 1;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="w2"] {
-  flex-grow: 2;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="width-2"] {
-  flex-grow: 2;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="w3"] {
-  flex-grow: 3;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="width-3"] {
-  flex-grow: 3;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="w4"] {
-  flex-grow: 4;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="width-4"] {
-  flex-grow: 4;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="w5"] {
-  flex-grow: 5;
-}
-
-.callout[data-callout="columns"] > .callout-content > .callout[data-callout-metadata="width-5"] {
-  flex-grow: 5;
-}
-
-.callout[data-callout="gallery"] > .callout-content {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.callout[data-callout="gallery"] > .callout-content > p:has(img) {
-  display: flex;
-  flex-direction: row;
-  columns: 2;
-}
-
-.callout[data-callout="gallery"] > .callout-content span:where(.internal-embed, .img-embed), .callout[data-callout="gallery"] > .callout-content img {
-  flex: 1 0 100%;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 }
 
 .callout[data-callout="aside"] {
@@ -33430,10 +33331,6 @@ body:not(.ssopt-block-width-iframe) .setting-item.setting-item:where([data-id="m
   display: none;
 }
 
-body:not(.ssopt-block-width-pdfembed) .setting-item.setting-item:where([data-id="magnifier-bw-pdfembed"], [data-id="ratio-bw-pdfembed-source"], [data-id="ratio-bw-pdfembed-reading"]) {
-  display: none;
-}
-
 body:not(.ssopt-custom-rainbow-colours-light) .setting-item.setting-item:where([data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"]) {
   display: none;
 }
@@ -33886,10 +33783,6 @@ body:not(.ssopt-block-width-bases) .view-content .style-settings-container.style
 }
 
 body:not(.ssopt-block-width-iframe) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="magnifier-bw-iframe"], [data-id="ratio-bw-iframe-source"], [data-id="ratio-bw-iframe-reading"], [data-id="aspect-ratio-bw-iframe"]) {
-  display: none;
-}
-
-body:not(.ssopt-block-width-pdfembed) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="magnifier-bw-pdfembed"], [data-id="ratio-bw-pdfembed-source"], [data-id="ratio-bw-pdfembed-reading"]) {
   display: none;
 }
 
@@ -34536,11 +34429,11 @@ Here, Style Settings coding to turn certain settings into Information Boxes are 
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-iframe"], [data-id="ssopt-block-width-pdfembed"]) .setting-item-name {
+.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-iframe"]) .setting-item-name {
   font-weight: 500;
 }
 
-.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-iframe"], [data-id="ssopt-block-width-pdfembed"]) .setting-item-name::after {
+.setting-item.setting-item:where([data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-iframe"]) .setting-item-name::after {
   display: inline-flex;
   width: var(--sidebar-icon-size);
   height: var(--sidebar-icon-size);
@@ -35800,24 +35693,24 @@ So content is set via the Style Settings.
   /* inject the selector and yield */
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]) {
+.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
   /* overrides whatever first child settings there is */
 
   /* CODE ICON */
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]) .setting-item-control {
+.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) .setting-item-control {
   display: none;
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]) {
+.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
   padding: 0.75em; /* used to be 0.75em and 0 */
   background-color: var(--background-primary-alt);
   border-left: 1px solid var(--background-modifier-border);
   border-right: 1px solid var(--background-modifier-border);
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]) .setting-item-description {
+.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) .setting-item-description {
   font-family: var(--font-monospace);
   color: var(--text-accent);
   text-align: justify;
@@ -35825,18 +35718,18 @@ So content is set via the Style Settings.
   user-select: all;
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]):first-child {
+.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):first-child {
   border-top: 1px solid var(--background-modifier-border);
   padding-top: var(--padding-ss);
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]) {
+.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]) {
   /* add icon? */
 
   /* add hover color change */
 }
 
-.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"])::after {
+.setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"])::after {
   width: var(--header-icon-size);
   height: var(--header-icon-size);
   mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22lucide%20lucide-code-icon%20lucide-code%22%3E%3Cpath%20d%3D%22m16%2018%206-6-6-6%22/%3E%3Cpath%20d%3D%22m8%206-6%206%206%206%22/%3E%3C/svg%3E");
@@ -35848,11 +35741,11 @@ So content is set via the Style Settings.
   justify-self: right;
 }
 
-.theme-light .setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]):hover::after {
+.theme-light .setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
   background: oklch(from var(--icon-color) calc(l - 0.2) c h);
 }
 
-.theme-dark .setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"], [data-id="syntax-type-callouts-columns-metadata"], [data-id="syntax-callouts-columns-metadata"], [data-id="syntax-callouts-gallery"]):hover::after {
+.theme-dark .setting-item.setting-item:where([data-id="syntax-progress-bars"], [data-id="syntax-html-aside"], [data-id="syntax-html-infobox"], [data-id="syntax-callouts-standard"], [data-id="syntax-callouts-infobox"], [data-id="syntax-type-callouts-standard"], [data-id="syntax-callouts-metadata"], [data-id="syntax-type-callouts-metadata"], [data-id="syntax-callouts-aside"], [data-id="syntax-callouts-columns"]):hover::after {
   background: oklch(from var(--icon-color) calc(l + 0.2) c h);
 }
 
@@ -38594,11 +38487,11 @@ CSS-ing the Credits section
   /* inject the selector and yield */
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) {
   column-gap: 0;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) {
   overflow: auto;
   overflow-wrap: anywhere;
   border-left: 1px solid var(--background-modifier-border);
@@ -38609,16 +38502,16 @@ CSS-ing the Credits section
   border-top: 1px solid var(--background-modifier-border);
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]).style-settings-info-text {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]).style-settings-info-text {
   column-gap: 0;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) .setting-item-description {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) .setting-item-description {
   color: var(--text-accent);
   text-align: justify;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) p {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) p {
   overflow: visible;
   display: grid;
   width: 100%;
@@ -38629,34 +38522,34 @@ CSS-ing the Credits section
   grid-template-columns: 1fr auto;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link {
   float: right;
   background-image: none;
   padding-inline-end: 0;
   width: calc(var(--header-icon-size) + 2 * var(--header-padding));
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link.external-link {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link.external-link {
   margin-top: var(--header-margin);
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link:first-of-type {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link:first-of-type {
   padding-inline-end: 0;
   margin-left: 10px;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href*="willemstad.cc"] {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href*="willemstad.cc"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href*="willemstad.cc"]:hover::before {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href*="willemstad.cc"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href*="willemstad.cc"]::before {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href*="willemstad.cc"]::before {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -38671,7 +38564,7 @@ CSS-ing the Credits section
   flex-shrink: 0;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href*="willemstad.cc"]::after {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href*="willemstad.cc"]::after {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -38687,22 +38580,22 @@ CSS-ing the Credits section
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M12 2C15.866 2 19 5.13401 19 9C19 9.11351 18.9973 9.22639 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 18.3137 20.3137 21 17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 5.13401 8.13401 2 12 2ZM12 4C9.23858 4 7 6.23858 7 9C7 9.08147 7.00193 9.16263 7.00578 9.24344L7.07662 10.7309L5.67183 11.2252C4.0844 11.7837 3 13.2889 3 15C3 17.2091 4.79086 19 7 19H17C19.2091 19 21 17.2091 21 15C21 12.79 19.21 11 17 11C15.233 11 13.7337 12.1457 13.2042 13.7347L11.3064 13.1021C12.1005 10.7185 14.35 9 17 9C17 6.23858 14.7614 4 12 4Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href*="willemstad.cc"]:hover::after {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href*="willemstad.cc"]:hover::after {
   background-color: var(--icon-color-hover);
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href$="Example"] {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href$="Example"] {
   position: relative;
   display: block;
   font-size: 0;
   flex: 0 0 auto;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href$="Example"]:hover::before {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href$="Example"]:hover::before {
   background-color: var(--background-secondary-alt);
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href$="Example"]::before {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href$="Example"]::before {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -38717,7 +38610,7 @@ CSS-ing the Credits section
   flex-shrink: 0;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href$="Example"]::after {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href$="Example"]::after {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -38733,11 +38626,11 @@ CSS-ing the Credits section
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M19 4H5V20H19V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H19.9997C20.5519 2 20.9996 2.44772 20.9997 3L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918ZM11.2929 13.1213L15.5355 8.87868L16.9497 10.2929L11.2929 15.9497L7.40381 12.0607L8.81802 10.6464L11.2929 13.1213Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link[href$="Example"]:hover::after {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link[href$="Example"]:hover::after {
   background-color: var(--icon-color-hover);
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link {
   display: flex;
   width: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
   height: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
@@ -38745,12 +38638,12 @@ CSS-ing the Credits section
   margin-left: 5px;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link.external-link::before, .setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) a.external-link.external-link::after {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link.external-link::before, .setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) a.external-link.external-link::after {
   width: var(--sidebar-icon-size);
   height: var(--sidebar-icon-size);
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) .setting-item-info {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) .setting-item-info {
   position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -38759,15 +38652,15 @@ CSS-ing the Credits section
   column-gap: 2%;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) .setting-item-description {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) .setting-item-description {
   padding-top: 0;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) .setting-item-description > p {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) .setting-item-description > p {
   column-gap: unset;
 }
 
-.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"]) .setting-item-description a.external-link {
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"]) .setting-item-description a.external-link {
   margin-left: 0;
   margin-top: 0;
 }
@@ -46109,29 +46002,16 @@ settings:
                     label: "Wrap When Needed (pre-wrap)"
                     value: 'pre-wrap'
     -
-            id: ssopt-sticky-nav-folder-title
-            title: Sticky Folder Titles
-            type: class-toggle
-            description: "When enabled, folder titles in the File Explorer will stick to the top of the pane as you scroll."
-            default: false
-    -
             id: ssopt-disable-nav-icons
             title: Disable Custom File Extension Icons in File Explorer
             type: class-toggle
             document: X102
             description: "Willemstad changes the file extension text in the file explorer to icons. Toggle this to disable the change and revert back to the Obsidian default."
     -
-        id: nav-header-settings
-        title: Navigation Header
-        type: heading
-        description: 'Options to manipulate and control items within the navigation header, which is generally located at the top of panes such as File Explorer and Bookmarks.'
-        level: 2
-        collapsed: false
-    -
             id: ssopt-nav-align
-            title: "Alignment of Nav Buttons"
+            title: "Alignment of Nav Buttons in File Explorer and Bookmarks"
             type: variable-select
-            description: "Controls the alignment of the buttons (e.g., New Note, New Folder) in the navigation header."
+            description: "Controls the alignment of the buttons (e.g., New Note, New Folder) in the File Explorer header. Also affects bookmarks."
             allowEmpty: false
             default: 'left'
             options:
@@ -47866,7 +47746,7 @@ settings:
         id: embeds-settings
         title: Embeds
         type: heading
-        description: "Options to control the appearance of embedded notes and files."
+        description: "Options to control the appearance of embedded notes and files. For embeds that take content from external pages (such as YouTube videos), please refer to the iFrames section further down."
         level: 2
         collapsed: false
     -
@@ -47875,78 +47755,6 @@ settings:
             type: class-toggle
             description: "By default, this theme makes embedded notes seamless (no borders, padding, or scrollbars). When enabled, this reverts embeds to the standard Obsidian style, adding back borders and scrollbars."
             default: false
-    -
-            id: ssopt-block-width-iframe
-            title: Enable Block Widths for iFrames
-            type: class-toggle
-            description: "Enables a modern, content-aware width system for iFrames (e.g. YouTube videos, Google forms). When off, tables will take Obsidian's original settings."
-            default: false
-    -
-                id: magnifier-bw-iframe
-                title: "iFrame Content Width Magnifier"
-                type: variable-number-slider
-                description: "A multiplier to increase the base width of the iFrame content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable/Variable Line Lengths are turned off."
-                min: 0.5
-                max: 3
-                step: 0.05
-                default: 1.5
-    -
-                id: ratio-bw-iframe-source
-                title: "iFrames Max Width Ratio (Live Preview)"
-                type: variable-number-slider
-                description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 1."
-                min: 0.5
-                max: 1
-                step: 0.01
-                default: 1
-    -
-                id: ratio-bw-iframe-reading
-                title: "iFrames Max Width Ratio (Reading Mode)"
-                type: variable-number-slider
-                description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 0.96."
-                min: 0.5
-                max: 1
-                step: 0.01
-                default: 0.96
-    -
-                id: aspect-ratio-bw-iframe
-                title: iFrames Aspect Ratio
-                type: variable-text
-                description: "Sets the aspect ratio of the iFrame. Use the format 'width / height', and 'auto' for it to default to its original aspect ratio, which can be used alone, or added before or after to the 'width / height' format. Default is 'auto 16/9'."
-                default: 'auto 16/9'
-    -
-            id: ssopt-block-width-pdfembed
-            title: Enable Block Widths for PDF Embeds
-            type: class-toggle
-            description: "Enables a modern, content-aware width system for PDF embeds. When off, PDF embeds will have a simple, standard layout."
-            default: false
-    -
-                id: magnifier-bw-pdfembed
-                title: "PDF Embed Content Width Magnifier"
-                type: variable-number-slider
-                description: "A multiplier to increase the base width of the PDF embed content, with respect to the document's line lengths. Default is 1.5 (150%)."
-                min: 0.5
-                max: 3
-                step: 0.05
-                default: 1.5
-    -
-                id: ratio-bw-pdfembed-source
-                title: "PDF Embed Max Width Ratio (Live Preview)"
-                type: variable-number-slider
-                description: "The maximum width the PDF embed can occupy, as a ratio of the container's width. 1 = 100%. Default is 1."
-                min: 0.5
-                max: 1
-                step: 0.01
-                default: 1
-    -
-                id: ratio-bw-pdfembed-reading
-                title: "PDF Embed Max Width Ratio (Reading Mode)"
-                type: variable-number-slider
-                description: "The maximum width the PDF embed can occupy, as a ratio of the container's width. 1 = 100%. Default is 0.96."
-                min: 0.5
-                max: 1
-                step: 0.01
-                default: 0.96
     -
         id: Lists
         title: Lists
@@ -48167,15 +47975,61 @@ settings:
         id: pdf-viewer-settings
         title: PDF Viewer
         type: heading
-        description: 'Options to manipulate and control the PDF viewer. For PDF embeds, please refer to the Embeds section above.'
+        description: 'Options to manipulate and control the PDF viewer.'
         level: 2
         collapsed: false
     -
             id: ssopt-invert-pdf-dark
             title: Invert PDF Colours in Dark Mode
             type: class-toggle
-            description: "When in dark mode, this inverts the colors of embedded PDFs to make them easier to read. Please note that this option is very rudimentary and there are no good CSS options given the limitations of accessing colours within PDF in Obsidian. You are strongly recommended to use Obsidian's 'Adapt to Theme' option, accessible via the PDF toolbar, first, and only resort to this should it fail to work."
+            description: "When in dark mode, this inverts the colors of embedded PDFs to make them easier to read. Please note that this option is very rudimentary and there are no good CSS options given the limitations of accessing colours within PDF in Obsidian."
             default: false
+    -
+        id: iframe-settings
+        title: "iFrames (External Embeds)"
+        type: heading
+        description: "Options to control the layout and sizing of embedded iFrames (e.g., YouTube videos, Google forms)."
+        level: 2
+        collapsed: false
+    -
+                    id: ssopt-block-width-iframe
+                    title: Enable Block Widths for iFrames
+                    type: class-toggle
+                    description: "Enables a modern, content-aware width system for iFrames. When off, tables will take Obsidian's original settings."
+                    default: false
+    -
+                    id: magnifier-bw-iframe
+                    title: "iFrame Content Width Magnifier"
+                    type: variable-number-slider
+                    description: "A multiplier to increase the base width of the iFrame content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable/Variable Line Lengths are turned off."
+                    min: 0.5
+                    max: 3
+                    step: 0.05
+                    default: 1.5
+    -
+                    id: ratio-bw-iframe-source
+                    title: "iFrames Max Width Ratio (Live Preview)"
+                    type: variable-number-slider
+                    description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 1."
+                    min: 0.5
+                    max: 1
+                    step: 0.01
+                    default: 1
+    -
+                    id: ratio-bw-iframe-reading
+                    title: "iFrames Max Width Ratio (Reading Mode)"
+                    type: variable-number-slider
+                    description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 0.96."
+                    min: 0.5
+                    max: 1
+                    step: 0.01
+                    default: 0.96
+    -
+                    id: aspect-ratio-bw-iframe
+                    title: iFrames Aspect Ratio
+                    type: variable-text
+                    description: "Sets the aspect ratio of the iFrame. Use the format 'width / height', and 'auto' for it to default to its original aspect ratio, which can be used alone, or added before or after to the 'width / height' format. Default is 'auto 16/9'."
+                    default: 'auto 16/9'
     -
         id: ancillary-editor-options
         title: Ancillary Editor Options
@@ -48431,49 +48285,13 @@ settings:
                 document: EW13-C-Columns
                 description: ">[!columns]"
                 default: false
-    -
-                id: syntax-callouts-columns-metadata
-                title: Syntax for Columns Metadata Classes
-                type: info-text
-                document: EW11-C-Metadata
-                description: ">[!columns|metadata-class]
-                >
-                >> [!callout-class|metadata-class]"
-                default: false
-    -
-                id: syntax-type-callouts-columns-metadata
-                title: Types of Columns Metadata Classes
-                type: class-toggle
-                document: EW13-C-Columns
-                description: w1, width-1; w2, width-2; w3, width-3; w4, width-4; w5, width-5;
-                default: false
-    -
+    -             
                 id: callout-columns-margin-top
                 title: Top Margin of Column Callouts
                 type: variable-text
                 document: EW24-C-Columns
                 description: "Sets the margin above children callouts to create vertical space between the children callouts and the column callout title. You can use any valid CSS unit, or valid variables, such as 20px, 1.5em, 2vh, etc."
                 default: "var(--margin-callout)"
-    -
-            id: callouts-gallery
-            title: Gallery Callouts
-            type: heading
-            level: 3
-            collapsed: false
-    -
-                id: documentation-callouts-gallery
-                title: Documentation for Gallery Callouts
-                type: info-text
-                document: EW13-C-Gallery
-                description: "[Docs](https://willemstad.cc/Features/Callouts/Gallery)"
-                markdown: true
-    -
-                id: syntax-callouts-gallery
-                title: Syntax for Gallery Callouts
-                type: class-toggle
-                document: EW13-C-Gallery
-                description: ">[!gallery]"
-                default: false
     -
         id: cssclass-inline
         title: Inline CSSClass
