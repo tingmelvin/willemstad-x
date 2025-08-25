@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.26 Newfoundland
+Willemstad | v1.9.25 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.26 Newfoundland";
+  content: "  /  Willemstad v1.9.25 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.26 Newfoundland"; /* prints version number */
+  content: "\av1.9.25 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -28065,13 +28065,13 @@ body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-render
 
 /* Reading Mode Container */
 .markdown-reading-view .markdown-preview-view {
-  container-type: inline-size;
+  container-type: inline-size scroll-state;
   container-name: reading-mode;
 }
 
 /* Live Preview Container */
 .view-content .cm-scroller {
-  container-type: inline-size;
+  container-type: inline-size scroll-state;
   container-name: live-preview;
 
   --cqi-live-preview: 100cqi;
