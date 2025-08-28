@@ -1,13 +1,12 @@
+>[!note] Willemstad. Set once and get on with work.
+> The theme documentation is available [here](https://willemstad.cc/).
+>
+> See our rather-numerous [callout types supported](https://willemstad.cc/Features/Callouts/Callouts).
+> Willemstad also supports [Alternative Checkboxes](https://willemstad.cc/Features/Alternative+Checkboxes+Reference+Set).
+>
+> If you need examples on what colour palettes to use from Willemstad, see [here](https://willemstad.cc/Showcase).
 
 ![Willemstad-X](https://github.com/user-attachments/assets/46dd7d2b-6520-4deb-8d12-30ad4c822fa3)
-
-
-
-## The theme documentation is available [here](https://willemstad.cc/). 
-
-[Callouts](https://willemstad.cc/Features/Callouts/Callouts) | [Alternative Checkboxes](https://willemstad.cc/Features/Alternative+Checkboxes+Reference+Set) | 
-
-## If you need examples on what colour palettes to use from Willemstad, see [here](https://willemstad.cc/Showcase).
 
 # Willemstad
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
