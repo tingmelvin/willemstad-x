@@ -1,7 +1,7 @@
 ## Willemstad. Set once (via [Style Settings](obsidian://show-plugin?id=obsidian-style-settings)), and get on with work.
 This theme is made for work. You download it, and it comes pretty much without colour. Tabula rasa.
 
-But there's enough [colour](https://willemstad.cc/Showcase) options, over 1 million permutations just from base and accent colours, and that's if you don't count the cross-dark/light colour modes that brings this number up to almost 300 trillion. So you don't have the excuse of not being able to find the right colour.
+But there's enough [colour](https://willemstad.cc/Showcase) options, over 1 million permutations just from base and accent colours, and that's if you don't count the cross-dark/light colour modes that brings this number up to almost 300 billion. So you don't have the excuse of not being able to find the right colour.
 
 There's enough Style Settings options to customise what you need. We even show you how things look like via the Style Settings menu through our very own RealDisplay. It's even responsive, so you won't get options that you shouldn't, because we know how important your time is. There's even a whole comprehensive [theme documentation available](https://willemstad.cc/) so you get the info you need and won't dither.
 
