@@ -1,4 +1,13 @@
->[!note] Willemstad. Set once and get on with work.
+## Willemstad. Set once (via [Style Settings](obsidian://show-plugin?id=obsidian-style-settings)), and get on with work.
+This theme is made for work.
+You download it, and it comes pretty much without colour. Tabula rasa.
+But there's enough [colour](https://willemstad.cc/Showcase) options, 1.25 million permutations, and that's if you don't count cross-dark/light colour modes. There's enough Style Settings options to customise what you need. We even show you how things look like via the Style Settings menu through our very own RealDisplay. It's even responsive, so you won't get options that you shouldn't, because we know how important your time is. There's even a whole comprehensive [theme documentation available](https://willemstad.cc/) so you get the info you need and won't dither.
+There's features, like Focused Mode. Multiple [callout types](https://willemstad.cc/Features/Callouts/Callouts), including those that arrange your images into [grids](https://willemstad.cc/Features/Callouts/Image+Grid) or a [slide-able gallery](https://willemstad.cc/Features/Callouts/Gallery). Multiple CSSClasses as well, including one that looks like [LaTeX](https://willemstad.cc/Features/Global+CSSClass/LaTeX+Display+Example) and another that resembles [Cornell notes](https://willemstad.cc/Features/Global+CSSClass/Cornell+Notes+Example). [Block widths](https://willemstad.cc/Features/Block+Widths) that allows you more control over display. And we even support [alternative checkboxes](https://willemstad.cc/Features/Alternative+Checkboxes+Reference+Set).
+**But at the end of the day we want you to stop tinkering. And get on with work. Because this is made for work.**
+
+![Willemstad-X](https://github.com/user-attachments/assets/46dd7d2b-6520-4deb-8d12-30ad4c822fa3)
+
+>[!note]
 > The theme documentation is available [here](https://willemstad.cc/).
 >
 > See our rather-numerous [callout types supported](https://willemstad.cc/Features/Callouts/Callouts).
@@ -6,16 +15,8 @@
 >
 > If you need examples on what colour palettes to use from Willemstad, see [here](https://willemstad.cc/Showcase).
 
-![Willemstad-X](https://github.com/user-attachments/assets/46dd7d2b-6520-4deb-8d12-30ad4c822fa3)
-
 # Willemstad
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
-
-**To use**:
-
-For the most current version, use the Community Theme store in Obsidian. __(this is the preferred and recommended method!)__ 
-
-Alternatively, download the release, and drop `obsidian.css` into your `.obsidian\themes` folder in the vault you wish to have the theme in.
 
 ---
 
