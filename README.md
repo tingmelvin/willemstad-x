@@ -1,5 +1,5 @@
-## Willemstad. Set once (via [Style Settings](obsidian://show-plugin?id=obsidian-style-settings)), and get on with work.
-This theme is made for work. You download it, and it comes pretty much without colour. Tabula rasa.
+## Set once (via [Style Settings](obsidian://show-plugin?id=obsidian-style-settings)), and get on with work.
+This theme is made for work. You download it, and it comes pretty much without colour. _Tabula rasa._
 
 But there's enough [colour](https://willemstad.cc/Showcase) options, over 1 million permutations just from base and accent colours, and that's if you don't count the cross-dark/light colour modes that brings this number up to almost 300 billion. So you don't have the excuse of not being able to find the right colour.
 
