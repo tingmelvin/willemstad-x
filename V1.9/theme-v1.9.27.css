@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.9.28 Newfoundland
+Willemstad | v1.9.27 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.9.28 Newfoundland";
+  content: "  /  Willemstad v1.9.27 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.9.28 Newfoundland"; /* prints version number */
+  content: "\av1.9.27 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -731,8 +731,7 @@ And a template to define:
 *
 * @param {String} $theme-name - 'light' or 'dark'.
 */
-.theme-light,
-.is-mobile.theme-light {
+.theme-light {
   --ch-color-base-d-l-00: var(--ch-color-base-d-l-00-set, 13%);
   --ch-color-base-d-c-00: var(--ch-color-base-d-c-00-set, 0);
   --ch-color-base-d-h-00: var(--ch-color-base-d-h-00-set, 0);
@@ -884,8 +883,7 @@ And a template to define:
   --color-base-100: oklch(var(--ch-color-base-l-l-100) var(--ch-color-base-l-c-100) var(--ch-color-base-l-h-100));
 }
 
-.theme-dark,
-.is-mobile.theme-dark {
+.theme-dark {
   --ch-color-base-d-l-00: var(--ch-color-base-d-l-00-set, 13%);
   --ch-color-base-d-c-00: var(--ch-color-base-d-c-00-set, 0);
   --ch-color-base-d-h-00: var(--ch-color-base-d-h-00-set, 0);
@@ -28141,14 +28139,14 @@ body:is(.ssopt-block-width-pdfembed) .app-container {
 .markdown-reading-view .markdown-preview-view {
   container-type: inline-size;
   container-name: reading-mode;
-  scroll-behavior: smooth;
 }
 
 /* Live Preview Container */
 .view-content .cm-scroller {
   container-type: inline-size;
   container-name: live-preview;
-  scroll-behavior: smooth;
+
+  --cqi-live-preview: 100cqi;
 }
 
 /* 1. TABLES */
@@ -40236,7 +40234,6 @@ body:not(.pane-relief-disable-counts) .view-header-nav-buttons button:last-child
     \\ PComm132 | Theme Picker
     \\ PComm133 | Focus Mode
     \\ PComm134 | CSS Editor
-    \\ PComm135 | Pixel Pets
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* ────────────────────────────────────────────────────────────────────────────────
@@ -40279,25 +40276,13 @@ body:not(.pane-relief-disable-counts) .view-header-nav-buttons button:last-child
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────
->> [COMMUNITY PLUGIN | CSS Editor ]
+>> [COMMUNITY PLUGIN | ]
 \\ (NOMEN | PComm134)
 ───────────────────────────────────────────────────────────────────────────────────
     >>> FIXING View Content
     ──────────────────────────────────────────────────────────────────────────── */
 .workspace-leaf-content[data-type="css-editor-view"] .view-content {
   padding: 0;
-}
-
-/* ────────────────────────────────────────────────────────────────────────────────
->> [COMMUNITY PLUGIN | Pixel Pets ]
-\\ (NOMEN | PComm135)
-───────────────────────────────────────────────────────────────────────────────────
->>> FIXING View Content
-──────────────────────────────────────────────────────────────────────────── */
-.workspace-leaf-content[data-type="pet-view"] .view-content {
-  padding: 0;
-
-  --radius-image: 0;
 }
 
 /* PComm130-series */
