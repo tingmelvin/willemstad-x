@@ -12,7 +12,7 @@
 Apps > Obsidian.md > Theme
 ───────────────────────────────────────────────────────────────────────────────────
 
-Willemstad | v1.11.1 Newfoundland
+Willemstad | v1.11.0 Newfoundland
 by @tingmelvin
 https://github.com/tingmelvin/willemstad-x
 
@@ -43,7 +43,7 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.11.1 Newfoundland";
+  content: "  /  Willemstad v1.11.0 Newfoundland";
 
   /* for title bar */
 }
@@ -73,7 +73,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.11.1 Newfoundland"; /* prints version number */
+  content: "\av1.11.0 Newfoundland"; /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
@@ -40748,31 +40748,6 @@ body:not(.is-phone) .horizontal-tab-nav-item.is-active, body:not(.is-phone) .ver
 .modal .checkbox-container {
   width: var(--header-icon-size) !important;
   height: var(--header-icon-size) !important;
-}
-
-/* MORE FIXES FOR OBS 1.11 */
-.mod-community-modal .modal-sidebar .setting-item:not(.setting-item-heading):first-child {
-  margin-bottom: 0;
-}
-
-body {
-  --touch-radius-xxs: var(--radius-s);
-  --touch-radius-xs: var(--radius-s);
-  --touch-radius-s: var(--radius-s);
-  --touch-radius-m: var(--radius-m);
-  --touch-radius-l: var(--radius-l);
-  --touch-radius-xl: var(--radius-l);
-  --settings-background: var(--background-primary-alt);
-}
-
-.is-phone .modal.mod-settings,
-.is-phone .modal.mod-community-theme,
-.is-phone .modal.mod-community-plugin {
-  width: 100vw;
-}
-
-.is-phone .modal.mod-sidebar-layout {
-  max-width: 100vw;
 }
 
 /* Remove setting accent color in Settings + Clearer images */
