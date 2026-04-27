@@ -22745,11 +22745,11 @@ body:is(.ssopt-tabs-modern-borderless) {
   TAB IMPLEMENTATION FOR FIREFOX-STYLE
 ================================================================================
 */
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::before,
-.workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::after,
-.workspace-split.mod-root .workspace-tab-header.is-active::before,
-.workspace-split.mod-root .workspace-tab-header.is-active::after {
-  box-shadow: none;
+body:not(.ssopt-tabs-index-old) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::before,
+body:not(.ssopt-tabs-index-old) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::after,
+body:not(.ssopt-tabs-index-old) .workspace-split.mod-root .workspace-tab-header.is-active::before,
+body:not(.ssopt-tabs-index-old) .workspace-split.mod-root .workspace-tab-header.is-active::after {
+  box-shadow: none !important;
 }
 
 body:not(.ssopt-no-pin-tab-front) .workspace-tab-header-container-inner .workspace-tab-header:has(.mod-pinned) {
@@ -32056,7 +32056,7 @@ body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-theme .mod
   background-color: var(--background-secondary);
   border-radius: var(--radius-s);
   transition: background-color 0.2s ease-in-out;
-  content: "";
+  content: none;
   flex-shrink: 0;
   margin-left: auto;
 
@@ -32474,7 +32474,7 @@ body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .mo
   background-color: var(--background-secondary);
   border-radius: var(--radius-s);
   transition: background-color 0.2s ease-in-out;
-  content: " ";
+  content: none;
   flex-shrink: 0;
   margin-left: auto;
 }
@@ -32516,6 +32516,7 @@ body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .mo
   transition: opacity 0.2s ease-in-out;
 }
 
+.modal.mod-community-plugin .community-modal-info .community-modal-info-repo:has(> a[aria-label="View the latest update"]),
 .modal.mod-community-plugin .community-modal-info .community-modal-info-repo:last-of-type {
   display: none;
 }
