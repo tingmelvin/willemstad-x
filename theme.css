@@ -22038,8 +22038,8 @@ supported. RGB values in Obs is therefore useless (and should be deprecated)
 
 /* ---------- callouts ---------- */
 .callout {
-  border-color: oklch(from rgb(var(--callout-color)) l c h/var(--callout-border-opacity));
-  background-color: oklch(from rgb(var(--callout-color)) l c h/10%);
+  border-color: oklch(from var(--callout-color) l c h/var(--callout-border-opacity));
+  background-color: oklch(from var(--callout-color) l c h/10%);
 }
 
 .metadata-error-container {
@@ -30198,10 +30198,10 @@ body {
   & .callout[data-callout="columns"] {
 
       > .callout-title {
-          border-left: var(--callout-border-left-width) solid oklch(from rgb(var(--callout-color)) l c h);
-          border-right: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-          border-top: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-          border-bottom: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
+          border-left: var(--callout-border-left-width) solid oklch(from var(--callout-color) l c h);
+          border-right: var(--callout-border-other-width) solid oklch(from var(--callout-color) l c h);
+          border-top: var(--callout-border-other-width) solid oklch(from var(--callout-color) l c h);
+          border-bottom: var(--callout-border-other-width) solid oklch(from var(--callout-color) l c h);
       }
   }
   */
@@ -30214,22 +30214,22 @@ body:where(:not(.ssopt-callout-standard)) .callout {
 }
 
 body:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="images"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="images"]) > .callout-title {
-  border-right: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-  border-top: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
-  border-bottom: var(--callout-border-other-width) solid oklch(from rgb(var(--callout-color)) l c h);
+  border-right: var(--callout-border-other-width) solid oklch(from var(--callout-color) l c h);
+  border-top: var(--callout-border-other-width) solid oklch(from var(--callout-color) l c h);
+  border-bottom: var(--callout-border-other-width) solid oklch(from var(--callout-color) l c h);
 }
 
 body.ssopt-callout-no-hover:where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="images"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="images"]) > .callout-title {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
+  border-left: var(--callout-border-left-width) solid var(--callout-color);
 }
 
 body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="images"], [data-callout="note-toolbar"]), :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="images"]) > .callout-title {
-  border-left: var(--callout-border-other-width) solid rgb(var(--callout-color));
+  border-left: var(--callout-border-other-width) solid var(--callout-color);
   transition: var(--quick-transition);
 }
 
 body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:not([data-callout="columns"], [data-callout="images"], [data-callout="note-toolbar"]):hover, :where(:not(.ssopt-callout-standard)) .callout:where([data-callout="columns"], [data-callout="images"]) > .callout-title:hover {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
+  border-left: var(--callout-border-left-width) solid var(--callout-color);
   transition: var(--quick-transition);
 }
 
@@ -30242,7 +30242,7 @@ body.ssopt-callout-aside-float-left {
 .callout {
   overflow-x: hidden;
   margin: var(--margin-callout) 0;
-  background-color: rgb(var(--callout-color), 0.125);
+  background-color: color-mix(in srgb, var(--callout-color) 12.5%, transparent);
 }
 
 .callout .callout .callout-content {
@@ -30298,196 +30298,196 @@ body.ssopt-callout-aside-float-left {
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="note"] {
-  --callout-color: 0, 191, 111;
+  --callout-color: rgb(0, 191, 111);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="aside"] {
-  --callout-color: 0, 191, 111;
+  --callout-color: rgb(0, 191, 111);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="abstract"] {
-  --callout-color: 91, 197, 219;
+  --callout-color: rgb(91, 197, 219);
   --callout-icon: loader;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="summary"] {
-  --callout-color: 91, 197, 219;
+  --callout-color: rgb(91, 197, 219);
   --callout-icon: loader;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="tldr"] {
-  --callout-color: 91, 197, 219;
+  --callout-color: rgb(91, 197, 219);
   --callout-icon: loader;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="info"] {
-  --callout-color: 0, 170, 199;
+  --callout-color: rgb(0, 170, 199);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="todo"] {
-  --callout-color: 0, 170, 199;
+  --callout-color: rgb(0, 170, 199);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="tip"] {
-  --callout-color: 34, 148, 1;
+  --callout-color: rgb(34, 148, 1);
   --callout-icon: asterisk;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="hint"] {
-  --callout-color: 34, 148, 1;
+  --callout-color: rgb(34, 148, 1);
   --callout-icon: asterisk;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="check"] {
-  --callout-color: 0, 158, 76;
+  --callout-color: rgb(0, 158, 76);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="done"] {
-  --callout-color: 0, 158, 76;
+  --callout-color: rgb(0, 158, 76);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="question"] {
-  --callout-color: 160, 199, 92;
+  --callout-color: rgb(160, 199, 92);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="help"] {
-  --callout-color: 160, 199, 92;
+  --callout-color: rgb(160, 199, 92);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="faq"] {
-  --callout-color: 160, 199, 92;
+  --callout-color: rgb(160, 199, 92);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="warning"] {
-  --callout-color: 255, 182, 26;
+  --callout-color: rgb(255, 182, 26);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="caution"] {
-  --callout-color: 255, 182, 26;
+  --callout-color: rgb(255, 182, 26);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="attention"] {
-  --callout-color: 255, 182, 26;
+  --callout-color: rgb(255, 182, 26);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="failure"] {
-  --callout-color: 161, 40, 100;
+  --callout-color: rgb(161, 40, 100);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="fail"] {
-  --callout-color: 161, 40, 100;
+  --callout-color: rgb(161, 40, 100);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="missing"] {
-  --callout-color: 161, 40, 100;
+  --callout-color: rgb(161, 40, 100);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="danger"] {
-  --callout-color: 241, 0, 34;
+  --callout-color: rgb(241, 0, 34);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="error"] {
-  --callout-color: 241, 0, 34;
+  --callout-color: rgb(241, 0, 34);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="bug"] {
-  --callout-color: 164, 103, 80;
+  --callout-color: rgb(164, 103, 80);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="example"] {
-  --callout-color: 125, 84, 178;
+  --callout-color: rgb(125, 84, 178);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="quote"] {
-  --callout-color: 161, 169, 173;
+  --callout-color: rgb(161, 169, 173);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="cite"] {
-  --callout-color: 161, 169, 173;
+  --callout-color: rgb(161, 169, 173);
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="attachment"] {
-  --callout-color: 197, 101, 199;
+  --callout-color: rgb(197, 101, 199);
   --callout-icon: paperclip;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="file"] {
-  --callout-color: 197, 101, 199;
+  --callout-color: rgb(197, 101, 199);
   --callout-icon: paperclip;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="link"] {
-  --callout-color: 127, 127, 127;
+  --callout-color: rgb(127, 127, 127);
   --callout-icon: link;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="url"] {
-  --callout-color: 127, 127, 127;
+  --callout-color: rgb(127, 127, 127);
   --callout-icon: link;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="phone"] {
-  --callout-color: 250, 121, 33;
+  --callout-color: rgb(250, 121, 33);
   --callout-icon: phone;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="email"] {
-  --callout-color: 250, 121, 33;
+  --callout-color: rgb(250, 121, 33);
   --callout-icon: at-sign;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="mail"] {
-  --callout-color: 250, 121, 33;
+  --callout-color: rgb(250, 121, 33);
   --callout-icon: at-sign;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="goal"] {
-  --callout-color: 140, 102, 255;
+  --callout-color: rgb(140, 102, 255);
   --callout-icon: flag;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="plus"] {
-  --callout-color: 50, 205, 50;
+  --callout-color: rgb(50, 205, 50);
   --callout-icon: plus;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="positive"] {
-  --callout-color: 50, 205, 50;
+  --callout-color: rgb(50, 205, 50);
   --callout-icon: plus;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="minus"] {
-  --callout-color: 124, 13, 14;
+  --callout-color: rgb(124, 13, 14);
   --callout-icon: minus;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="negative"] {
-  --callout-color: 124, 13, 14;
+  --callout-color: rgb(124, 13, 14);
   --callout-icon: minus;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="code"] {
-  --callout-color: 0, 0, 0;
+  --callout-color: rgb(0, 0, 0);
   --callout-icon: code-2;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="success"] {
-  --callout-color: 0, 158, 76;
+  --callout-color: rgb(0, 158, 76);
   --callout-icon: star;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="important"] {
-  --callout-color: 191, 63, 54;
+  --callout-color: rgb(191, 63, 54);
   --callout-icon: flag-triangle-right;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="columns"] {
-  --callout-color: 150, 150, 150;
+  --callout-color: rgb(150, 150, 150);
   --callout-icon: lucide-columns;
 }
 
 body:not(.ssopt-callout-standard) .callout[data-callout="images"] {
-  --callout-color: 150, 150, 150;
+  --callout-color: rgb(150, 150, 150);
   --callout-icon: image;
 }
 
@@ -30552,15 +30552,15 @@ body:not(.ssopt-callout-standard) .callout[data-callout="images"] {
 }
 
 body.theme-light:not(.ssopt-callout-standard) .callout-icon.callout-icon svg {
-  color: oklch(from rgb(var(--callout-color)) calc(l - 0.05) c h);
+  color: oklch(from var(--callout-color) calc(l - 0.05) c h);
 }
 
 body.theme-light:not(.ssopt-callout-standard) .callout .callout-title-inner {
-  color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
+  color: oklch(from var(--callout-color) calc(l - 0.15) calc(c * 0.85) h);
 }
 
 body.theme-dark:not(.ssopt-callout-standard) .callout .callout-title-inner {
-  color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
+  color: oklch(from var(--callout-color) calc(l + 0.1) calc(c * 1.5) h);
 }
 
 :not(.ssopt-callout-standard) svg.ChevronDown {
@@ -30646,7 +30646,7 @@ body {
   }
 
   body:not(.ssopt-callout-standard).theme-dark .callout:where(:not([data-callout="columns"], [data-callout="images"], [data-callout="success"])) {
-    background-color: color-mix(in lab, black 75%, rgb(var(--callout-color)) 25%);
+    background-color: color-mix(in lab, black 75%, var(--callout-color) 25%);
   }
 
   body:not(.ssopt-callout-standard).theme-dark .callout:where(:is([data-callout="success"])), body:not(.ssopt-callout-standard).theme-dark .callout:where(:is([data-callout="success"])) .callout-title-inner {
@@ -30881,7 +30881,7 @@ body div.callout:is([data-callout-metadata*="no-m-r"], [data-callout-metadata*="
   background-color: unset;
   margin-bottom: 0;
 
-  --callout-color: 150, 150, 150;
+  --callout-color: rgb(150, 150, 150);
 }
 
 .callout:is([data-callout="columns"], [data-callout="images"]).callout.callout, .callout:is([data-callout="columns"], [data-callout="images"]).callout.callout:hover {
@@ -30889,7 +30889,7 @@ body div.callout:is([data-callout-metadata*="no-m-r"], [data-callout-metadata*="
 }
 
 .callout:is([data-callout="columns"], [data-callout="images"]) > .callout-title {
-  background-color: rgb(var(--callout-color), 0.125);
+  background-color: color-mix(in srgb, var(--callout-color) 12.5%, transparent);
   border-radius: var(--callout-radius);
 }
 
@@ -30898,12 +30898,12 @@ body:is(.ssopt-callout-standard) .callout:is([data-callout="columns"], [data-cal
 }
 
 body:not(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:is([data-callout="columns"], [data-callout="images"]) > .callout-title:hover {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
+  border-left: var(--callout-border-left-width) solid var(--callout-color);
   transition: var(--quick-transition);
 }
 
 body:is(.ssopt-callout-no-hover):where(:not(.ssopt-callout-standard)) .callout:is([data-callout="columns"], [data-callout="images"]) > .callout-title {
-  border-left: var(--callout-border-left-width) solid rgb(var(--callout-color));
+  border-left: var(--callout-border-left-width) solid var(--callout-color);
   transition: var(--quick-transition);
 }
 
@@ -37657,13 +37657,13 @@ body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons
   grid-template-columns: 25px 1fr 25px 2fr auto;
   grid-template-rows: 1fr;
 
-  --callout-color: 150, 150, 150;
+  --callout-color: rgb(150, 150, 150);
 }
 
 body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control:hover::before {
   --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
 
-  border-left: var(--callout-border-left-width) solid oklch(from rgb(var(--callout-color)) l c h);
+  border-left: var(--callout-border-left-width) solid oklch(from var(--callout-color) l c h);
   transition: var(--quick-transition);
 }
 
@@ -37678,9 +37678,9 @@ body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style
   height: var(--header-icon-size);
   padding: var(--size-2-3);
   font-family: var(--font-text);
-  background-color: rgb(var(--callout-color), 0.125);
+  background-color: color-mix(in srgb, var(--callout-color) 12.5%, transparent);
   border-radius: var(--callout-radius);
-  box-shadow: inset 0 0 0 var(--callout-border-other-width) oklch(from rgb(var(--callout-color)) l c h);
+  box-shadow: inset 0 0 0 var(--callout-border-other-width) oklch(from var(--callout-color) l c h);
   content: "";
   grid-column: 1/4;
   grid-row: 1/1;
@@ -37704,11 +37704,11 @@ body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style
   }
 
   .theme-light .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-    color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
+    color: oklch(from var(--callout-color) calc(l - 0.15) calc(c * 0.85) h);
   }
 
   .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
-    color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
+    color: oklch(from var(--callout-color) calc(l + 0.1) calc(c * 1.5) h);
   }
 }
 
@@ -37730,7 +37730,7 @@ body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style
 body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
   --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
 
-  border-left: var(--callout-border-left-width) solid oklch(from rgb(var(--callout-color)) l c h);
+  border-left: var(--callout-border-left-width) solid oklch(from var(--callout-color) l c h);
 }
 
 @keyframes changeCalloutText {
@@ -37819,50 +37819,50 @@ body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"
 
 @keyframes changeCalloutColor {
   0%, 100% {
-    --callout-color: 0, 191, 111;
+    --callout-color: rgb(0, 191, 111);
   }
 
   10% {
-    --callout-color: 91, 197, 219;
+    --callout-color: rgb(91, 197, 219);
   }
 
   20% {
-    --callout-color: 0, 170, 199;
+    --callout-color: rgb(0, 170, 199);
   }
 
   30% {
-    --callout-color: 34, 148, 1;
+    --callout-color: rgb(34, 148, 1);
   }
 
   40% {
-    --callout-color: 0, 158, 76;
+    --callout-color: rgb(0, 158, 76);
   }
 
   50% {
-    --callout-color: 160, 199, 92;
+    --callout-color: rgb(160, 199, 92);
   }
 
   60% {
-    --callout-color: 255, 182, 26;
+    --callout-color: rgb(255, 182, 26);
   }
 
   70% {
-    --callout-color: 161, 40, 100;
+    --callout-color: rgb(161, 40, 100);
   }
 
   80% {
-    --callout-color: 241, 0, 34;
+    --callout-color: rgb(241, 0, 34);
   }
 
   90% {
-    --callout-color: 164, 103, 80;
+    --callout-color: rgb(164, 103, 80);
   }
 }
 
 .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
   width: 20px;
   font-family: remixicon;
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
   content: "\f18c";
   text-align: center;
   animation: changeCalloutColor 10s infinite, changeCalloutIcon 10s infinite;
@@ -37875,11 +37875,11 @@ body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"
   }
 
   .theme-light .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-    color: oklch(from rgb(var(--callout-color)) calc(l - 0.15) calc(c * 0.85) h);
+    color: oklch(from var(--callout-color) calc(l - 0.15) calc(c * 0.85) h);
   }
 
   .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
-    color: oklch(from rgb(var(--callout-color)) calc(l + 0.1) calc(c * 1.5) h);
+    color: oklch(from var(--callout-color) calc(l + 0.1) calc(c * 1.5) h);
   }
 }
 
