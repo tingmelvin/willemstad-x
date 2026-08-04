@@ -22073,29 +22073,29 @@ supported. RGB values in Obs is therefore useless (and should be deprecated)
 
 /* ---------- canvas ---------- */
 .canvas-node-placeholder::after {
-  background-color: oklch(from rgb(var(--canvas-color)) l c h/10%);
+  background-color: oklch(from var(--canvas-color) l c h/10%);
 }
 
 .canvas-node.is-themed .canvas-node-container {
-  border-color: oklch(from rgb(var(--canvas-color)) l c h/70%);
-  box-shadow: inset 0 0 0 1px oklch(from rgb(var(--canvas-color)) l c h/70%), var(--shadow-stationary);
+  border-color: oklch(from var(--canvas-color) l c h/70%);
+  box-shadow: inset 0 0 0 1px oklch(from var(--canvas-color) l c h/70%), var(--shadow-stationary);
 }
 
 .canvas-node-group .canvas-node-content {
-  background-color: oklch(from rgb(var(--canvas-color)) l c h/7%);
+  background-color: oklch(from var(--canvas-color) l c h/7%);
 }
 
 .canvas-group-label {
-  background-color: oklch(from rgb(var(--canvas-color)) l c h/10%);
+  background-color: oklch(from var(--canvas-color) l c h/10%);
 }
 
 .canvas-node.is-themed .canvas-node-content {
-  background-color: oklch(from rgb(var(--canvas-color)) l c h/7%);
+  background-color: oklch(from var(--canvas-color) l c h/7%);
 }
 
 .canvas-edges g.is-focused path.canvas-interaction-path,
 .canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
-  stroke: oklch(from rgb(var(--canvas-color)) l c h/10%);
+  stroke: oklch(from var(--canvas-color) l c h/10%);
 }
 
 /* ---------- misc ---------- */
@@ -22247,13 +22247,13 @@ body {
 
 .theme-light {
   /*
-    --color-red-rgb: 233, 49, 71;
-    --color-orange-rgb: 236, 117, 0;
-    --color-yellow-rgb: 224, 172, 0;
-    --color-green-rgb: 8, 185, 78;
-    --color-cyan-rgb: 0, 191, 188;
+    --color-red-rgb: rgb(233, 49, 71);
+    --color-orange-rgb: rgb(236, 117, 0);
+    --color-yellow-rgb: rgb(224, 172, 0);
+    --color-green-rgb: rgb(8, 185, 78);
+    --color-cyan-rgb: rgb(0, 191, 188);
     --color-blue-rgb: 8, 109, 221;
-    --color-purple-rgb: 120, 82, 238;
+    --color-purple-rgb: rgb(120, 82, 238);
     --color-pink-rgb: 213, 57, 132;
   */
 }
