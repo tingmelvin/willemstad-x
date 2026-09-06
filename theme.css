@@ -24750,12 +24750,13 @@ body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-activ
 body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-header::after {
   position: absolute;
   top: 0;
-  right: 0;
+  right: unset;
+  left: 0;
   bottom: 0;
   z-index: -1;
   width: 100vw;
   background-color: var(--col-background-activeline);
-  box-shadow: 100vw 0 0 0 var(--col-background-activeline);
+  box-shadow: -100vw 0 0 0 var(--col-background-activeline);
   content: "";
 }
 
