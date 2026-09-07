@@ -6721,6 +6721,9 @@ body:not(.callout-standard) svg.ChevronDown > * {
 \ Global Classes + Metadata
 ──────────────────────────────────────────────────────────────────────────────── */
 /* no title */
+body div.callout[data-callout-metadata~="no-icon"] > .callout-title > .callout-icon {
+  display: none;
+}
 body div.callout:is([data-callout-metadata*=no-t],
 [data-callout-metadata*=no-title]) > .callout-title {
   display: none;

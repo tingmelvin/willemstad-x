@@ -30785,6 +30785,10 @@ body:not(.ssopt-callout-standard) .callout[data-callout="code"] .callout-content
   }
 }
 
+body div.callout[data-callout-metadata~="no-icon"] > .callout-title > .callout-icon {
+  display: none;
+}
+
 body div.callout:is([data-callout-metadata*="no-t"], [data-callout-metadata*="no-title"]) > .callout-title {
   display: none;
 }
@@ -49995,7 +49999,7 @@ body {
   text-align: var(--cssc-cornell-text-align);
 }
 
-.cornell .callout[data-callout-metadata="inline"] {
+.cornell .callout[data-callout-metadata~="inline"] {
   margin-left: calc(var(--cssc-cornell-align-left) + var(--cssc-cornell-gap));
 }
 
@@ -50040,11 +50044,11 @@ body {
   float: unset;
 }
 
-.markdown-source-view.mod-cm6.cornell .callout[data-callout-metadata="inline"] {
+.markdown-source-view.mod-cm6.cornell .callout[data-callout-metadata~="inline"] {
   margin-left: unset;
 }
 
-.print .cornell > div > .callout[data-callout-metadata="inline"],
+.print .cornell > div > .callout[data-callout-metadata~="inline"],
 .print .cornell > div > h1, .print .cornell > div > h2, .print .cornell > div > h3, .print .cornell > div > h4, .print .cornell > div > h5, .print .cornell > div > h6, .print .cornell > div > hr,
 .print .cornell > div > pre, .print .cornell > div > blockquote, .print .cornell > div > ol, .print .cornell > div > ul, .print .cornell > div > table {
   margin-left: calc(var(--cssc-cornell-align-left) + var(--cssc-cornell-gap));
