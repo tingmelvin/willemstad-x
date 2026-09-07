@@ -24754,9 +24754,11 @@ body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-activ
   left: 0;
   bottom: 0;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   background-color: var(--col-background-activeline);
-  box-shadow: -100vw 0 0 0 var(--col-background-activeline);
+  /* Extend the paint without extending CodeMirror's line or scroll geometry. */
+  box-shadow: 0 0 0 100vw var(--col-background-activeline);
+  clip-path: inset(0 -100vw);
   content: "";
 }
 
