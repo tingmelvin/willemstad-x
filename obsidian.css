@@ -9141,23 +9141,35 @@ settings:
     -
         id: info-re-theme-documentation
         title: Theme Documentation
+        title.zh: "主题文档"
+        title.zh-TW: "主題文件"
         description: willemstad.cc
+        description.zh: "willemstad.cc"
+        description.zh-TW: "willemstad.cc"
         type: class-toggle
         default: false
     -
         id: download-settings-search
         title: Please install the 'Settings Search' plugin by javalent to find settings faster.
+        title.zh: "安装 javalent 的 Settings Search 插件，可更快查找设置。"
+        title.zh-TW: "安裝 javalent 的 Settings Search 外掛，可更快查詢設定。"
         type: class-toggle
         default: false
     -
         id: warning-cm6-only
         title: "Please note that Willemstad is only supported on the default (non-legacy) editor on desktop at the moment. Mobile support will be rolled out at a later date."
+        title.zh: "Willemstad 目前仅支持桌面端的默认编辑器（非旧版编辑器），移动端支持将在之后提供。"
+        title.zh-TW: "Willemstad 目前僅支援桌面端的預設編輯器（非舊版編輯器），行動版支援將在之後提供。"
         type: class-toggle
         default: false
     -
         id: col-palette
         title: "Colour Palettes"
+        title.zh: "配色方案"
+        title.zh-TW: "配色方案"
         description: "Choose a colour palette!"
+        description.zh: "选择配色方案。"
+        description.zh-TW: "選擇配色方案。"
         type: class-select
         allowEmpty: false
         default: cp-classic-lshtm
@@ -9174,7 +9186,11 @@ settings:
     -
         id: font-pairings
         title: Font Pairings + Enable Custom Fonts
+        title.zh: "字体搭配与自定义字体"
+        title.zh-TW: "字型搭配與自訂字型"
         description: 'There are two suggested font typeface pairings with Willemstad, available here.'
+        description.zh: "Willemstad 提供两组推荐字体搭配，可在此选择。"
+        description.zh-TW: "Willemstad 提供兩組推薦字型搭配，可在此選擇。"
         type: class-select
         allowEmpty: false
         default: fp-manDM
@@ -9192,81 +9208,131 @@ settings:
     -
         id: true-black
         title: "True Black mode"
+        title.zh: "纯黑模式"
+        title.zh-TW: "純黑模式"
         type: class-toggle
         description: "When enabled, this makes the dark mode True Black."
+        description.zh: "启用后，深色模式使用纯黑背景。"
+        description.zh-TW: "啟用後，深色模式使用純黑背景。"
         default: false
     -
         id: no-animations
         title: No Animations
+        title.zh: "禁用动画"
+        title.zh-TW: "停用動畫"
         type: class-toggle
         description: "When enabled, this disables all animations in this theme."
+        description.zh: "启用后，禁用本主题的所有动画。"
+        description.zh-TW: "啟用後，停用本主題的所有動畫。"
         default: false
     -
         id: icons-obsidian-standard
         title: Use Standard Obsidian Icons
+        title.zh: "使用 Obsidian 标准图标"
+        title.zh-TW: "使用 Obsidian 標準圖示"
         type: class-toggle
         description: "When enabled, this replaces the custom Willemstad icon set with the standard Obsidian icons."
+        description.zh: "启用后，用 Obsidian 标准图标替换 Willemstad 自定义图标。"
+        description.zh-TW: "啟用後，用 Obsidian 標準圖示替換 Willemstad 自訂圖示。"
         default: false
     -
     -
         id: theme-willemstad
         title: Willemstad-Specific Class
+        title.zh: "Willemstad 专用类"
+        title.zh-TW: "Willemstad 專用類"
         description: willemstad.cc (should not be visible)
+        description.zh: "willemstad.cc（此项不应显示）"
+        description.zh-TW: "willemstad.cc（此項不應顯示）"
         type: class-toggle
         default: true
     -
     -
         id: startup
         title: Startup Screen
+        title.zh: "启动画面"
+        title.zh-TW: "啟動畫面"
         type: heading
         description: Startup Background Image, Dotted Grid Overlay, Loading Message Prefix, Gradient Startup Progress Bar
+        description.zh: "启动背景图片、圆点网格、加载信息前缀和渐变启动进度条。"
+        description.zh-TW: "啟動背景圖片、圓點網格、載入資訊字首和漸變啟動進度條。"
         level: 2
         collapsed: true
     -
             id: startup-devolution
             title: Disable Startup Screen Customisation
+            title.zh: "禁用启动画面自定义"
+            title.zh-TW: "停用啟動畫面自訂"
             type: class-toggle
             description: "Willemstad changes the startup screen by default, and multiple options to customise the startup screen. Toggle this to disable the customisation."
+            description.zh: "Willemstad 默认自定义启动画面，并提供多种调整选项。启用此项可停用自定义启动画面。"
+            description.zh-TW: "Willemstad 預設自訂啟動畫面，並提供多種調整選項。啟用此項可停用自訂啟動畫面。"
             default: false
     -
             id: bg-start-light
             title: Choose your Startup Background Image (Light mode)
+            title.zh: "选择启动背景图片（浅色模式）"
+            title.zh-TW: "選擇啟動背景圖片（淺色模式）"
             type: variable-text
             description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
+            description.zh: "可填入自选图片的 URL、背景色或渐变。"
+            description.zh-TW: "可填入自選圖片的 URL、背景色或漸變。"
             default: "url(https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.webp)"
     -
             id: bg-start-dark
             title: Choose your Startup Background Image (Dark mode)
+            title.zh: "选择启动背景图片（深色模式）"
+            title.zh-TW: "選擇啟動背景圖片（深色模式）"
             type: variable-text
             description: "Enter your own image (using a URL), or preferred background colour, or gradient. It's all up to you!"
+            description.zh: "可填入自选图片的 URL、背景色或渐变。"
+            description.zh-TW: "可填入自選圖片的 URL、背景色或漸變。"
             default: "url(https://images.unsplash.com/photo-1644773741876-e5f43ac020ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8.webp)"
     -
             id: startup-grid-hide
             title: Disable Dotted Grid Overlay to the Startup Screen
+            title.zh: "禁用启动画面的圆点网格"
+            title.zh-TW: "停用啟動畫面的圓點網格"
             type: class-toggle
             description: "A dotted grid overlay to the startup screen is applied by default in Willemstad. Toggle to disable this."
+            description.zh: "Willemstad 默认为启动画面添加圆点网格。启用此项可移除网格。"
+            description.zh-TW: "Willemstad 預設為啟動畫面新增圓點網格。啟用此項可移除網格。"
             default: false
     -
             id: startup-message-before-hide
             title: Disable Loading Message Prefix
+            title.zh: "禁用加载信息前缀"
+            title.zh-TW: "停用載入資訊字首"
             type: class-toggle
             description: "A customised message before the loading message is applied by default in Willemstad. Toggle to disable this."
+            description.zh: "Willemstad 默认在加载信息前添加自定义文本。启用此项可移除前缀。"
+            description.zh-TW: "Willemstad 預設在載入資訊前新增自訂文本。啟用此項可移除字首。"
             default: false
     -
             id: message-startup
             title: Loading Message Prefix — Text
+            title.zh: "加载信息前缀文本"
+            title.zh-TW: "載入資訊字首文本"
             type: variable-text
             description: "Enter your own loading message prefix here."
+            description.zh: "在此输入自定义加载信息前缀。"
+            description.zh-TW: "在此輸入自訂載入資訊字首。"
             default: '"Welcome back. "'
     -
             id: gradient-startup-bar
             title: Gradient Startup Progress Bar
+            title.zh: "渐变启动进度条"
+            title.zh-TW: "漸變啟動進度條"
             type: class-toggle
             description: "When enabled, the startup progress bar will have a gradient applied to it."
+            description.zh: "启用后，启动进度条使用渐变效果。"
+            description.zh-TW: "啟用後，啟動進度條使用漸變效果。"
             default: true
     -
             id: col-startup-1
             title: Gradient Startup Progress Bar — Colour
+            title.zh: "渐变启动进度条颜色"
+            title.zh-TW: "漸變啟動進度條顏色"
             type: variable-text
             description: 
             default: linear-gradient(258deg, hsl(60, 93%, 71%) 0%, hsl(98, 88%, 55%) 16%, hsl(122, 84%, 45%) 33%, hsl(138, 82%, 39%) 50%, hsl(155, 79%, 32%) 66%, hsl(171, 77%, 25%) 83%, hsl(184, 75%, 20%) 100%)
@@ -9274,15 +9340,23 @@ settings:
     -
         id: elements-ui-0
         title: 🌠 User Interface (UI) Elements
+        title.zh: "用户界面元素"
+        title.zh-TW: "使用者介面元素"
         description: 'Customise the UI elements here.'
+        description.zh: "在此自定义界面元素。"
+        description.zh-TW: "在此自訂介面元素。"
         type: heading
         level: 1
         collapsed: false
     -
         id: tb
         title: Titlebar
+        title.zh: "标题栏"
+        title.zh-TW: "標題列"
         type: class-select
         description: Choose which titlebar style you would like to use for Obsidian.
+        description.zh: "选择 Obsidian 标题栏样式。"
+        description.zh-TW: "選擇 Obsidian 標題列樣式。"
         allowEmpty: false
         default: default
         options:
@@ -9298,25 +9372,39 @@ settings:
     -
         id: elements-tb
         title: Titlebar Customisation
+        title.zh: "标题栏自定义"
+        title.zh-TW: "標題列自訂"
         type: heading
         description: Customise the titlebar elements here.
+        description.zh: "在此自定义标题栏元素。"
+        description.zh-TW: "在此自訂標題列元素。"
         level: 2
         collapsed: true
     -
             id: tb-title-remove
             title: Remove Title
+            title.zh: "移除标题"
+            title.zh-TW: "移除標題"
             type: class-toggle
             description: When enabled, this removes the title from the titlebar.
+            description.zh: "启用后，移除标题栏中的标题。"
+            description.zh-TW: "啟用後，移除標題列中的標題。"
             default: false
     -
             id: tb-willemstad
             title: Remove Willemstad Version Numbering Suffix
+            title.zh: "移除 Willemstad 版本编号后缀"
+            title.zh-TW: "移除 Willemstad 版本編號字尾"
             type: class-toggle
             description: When enabled, the titlebar removes the suffixed Willemstad version number from the end of the Obsidian version number.
+            description.zh: "启用后，移除标题栏中 Obsidian 版本号后附加的 Willemstad 版本号。"
+            description.zh-TW: "啟用後，移除標題列中 Obsidian 版本號後附加的 Willemstad 版本號。"
             default: false        
     -
             id: col-titlebar
             title: Change Titlebar Colour
+            title.zh: "更改标题栏颜色"
+            title.zh-TW: "更改標題列顏色"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -9326,15 +9414,23 @@ settings:
     -
         id: elements-ui
         title: 🌠 User Interface (UI) Elements
+        title.zh: "用户界面元素"
+        title.zh-TW: "使用者介面元素"
         description: 'Customise the UI elements here.'
+        description.zh: "在此自定义界面元素。"
+        description.zh-TW: "在此自訂介面元素。"
         type: heading
         level: 1
         collapsed: false
     -
             id: sb
             title: Status Bar
+            title.zh: "状态栏"
+            title.zh-TW: "狀態列"
             type: class-select
             description: Choose which status bar you would like to use for Obsidian.
+            description.zh: "选择 Obsidian 状态栏样式。"
+            description.zh-TW: "選擇 Obsidian 狀態列樣式。"
             allowEmpty: false
             default: sb-conjuring
             options:
@@ -9354,8 +9450,12 @@ settings:
     -
             id: sd
             title: Ribbon
+            title.zh: "侧边工具栏"
+            title.zh-TW: "側邊工具列"
             type: class-select
             description: Choose which ribbon/sidebar/side docks style you would like to use for Obsidian.
+            description.zh: "选择 Obsidian 的侧边工具栏、侧边栏与侧边面板样式。 选项含义：Floating Tabs — tabs that come into full-view when hovered：悬浮标签，悬停时完整显示；Styled Bars：自定义样式工具栏；Default Bars：默认工具栏；No Bars — hide all bars：隐藏所有工具栏。"
+            description.zh-TW: "選擇 Obsidian 的側邊工具列、側邊欄與側邊面板樣式。 選項含義：Floating Tabs — tabs that come into full-view when hovered：懸浮標籤，懸停時完整顯示；Styled Bars：自訂樣式工具列；Default Bars：預設工具列；No Bars — hide all bars：隱藏所有工具列。"
             allowEmpty: false
             default: sd-float-tabs
             options:
@@ -9374,15 +9474,23 @@ settings:
     -
             id: elements-sd
             title: Ribbon Customisation
+            title.zh: "侧边工具栏自定义"
+            title.zh-TW: "側邊工具列自訂"
             description: 'Customise the ribbon/sidebar elements here.'
+            description.zh: "在此自定义侧边工具栏和侧边栏元素。"
+            description.zh-TW: "在此自訂側邊工具列和側邊欄元素。"
             type: heading
             level: 2
             collapsed: true
     -
                 id: col-sd
                 title: 'Colours'
+                title.zh: "颜色"
+                title.zh-TW: "顏色"
                 type: variable-themed-color
                 description: 'Choose the colour you would like for your ribbons/sidebars. This affects the border colours for Styled Bars, and all colours for the Floating Tabs. Does not affect the default bars. [For Yellow — hsl(41, 100%, 55%)]' 
+                description.zh: "选择侧边工具栏与侧边栏颜色。影响 Styled Bars 的边框色以及 Floating Tabs 的全部配色，不影响默认工具栏。黄色可使用 hsl(41, 100%, 55%)。"
+                description.zh-TW: "選擇側邊工具列與側邊欄顏色。影響 Styled Bars 的邊框色以及 Floating Tabs 的全部配色，不影響預設工具列。黃色可使用 hsl(41, 100%, 55%)。"
                 opacity: true
                 format: hsl
                 default-light: hsl(184, 74%, 20%)
@@ -9390,27 +9498,43 @@ settings:
     -
                 id: ribbon-action-align-centre
                 title: Centre Ribbon Action Buttons
+                title.zh: "侧边工具栏操作按钮垂直居中"
+                title.zh-TW: "側邊工具列操作按鈕垂直居中"
                 type: class-toggle
                 description: "When enabled, the Ribbon Action buttons (on the left ribbon/sidebar) will be vertically centered."
+                description.zh: "启用后，左侧工具栏中的操作按钮垂直居中。"
+                description.zh-TW: "啟用後，左側工具列中的操作按鈕垂直居中。"
                 default: false
     -
                 id: custom-ft
                 title: 'Customisation — Floating Tabs'
+                title.zh: "悬浮标签自定义"
+                title.zh-TW: "懸浮標籤自訂"
                 description: 'If you have selected the Floating Tabs option in the Ribbon style setting, customise the Floating Tabs here.'
+                description.zh: "在工具栏样式中选择 Floating Tabs 后，可在此自定义悬浮标签。"
+                description.zh-TW: "在工具列樣式中選擇 Floating Tabs 後，可在此自訂懸浮標籤。"
                 type: heading
                 level: 3
                 collapsed: false
     -
                     id: sd-opacity-none
                     title: 'Disappearing Floating Tabs'
+                    title.zh: "自动隐藏悬浮标签"
+                    title.zh-TW: "自動隱藏懸浮標籤"
                     type: class-toggle
                     description: 'If toggled, Floating Tabs will disappear when not hovered.'
+                    description.zh: "启用后，悬浮标签在未悬停时自动隐藏。"
+                    description.zh-TW: "啟用後，懸浮標籤在未懸停時自動隱藏。"
                     default: false
     -
                     id: sd-height-norm
                     title: 'Floating Tab Height, when not hovered'
+                    title.zh: "悬浮标签高度（未悬停）"
+                    title.zh-TW: "懸浮標籤高度（未懸停）"
                     type: variable-number-slider
                     description: 'Set the height of the tabs for the Floating Tabs, when not hovered.'
+                    description.zh: "设置悬浮标签未悬停时的高度。"
+                    description.zh-TW: "設定懸浮標籤未懸停時的高度。"
                     format: 'rem'
                     default: 15
                     min: 5
@@ -9419,8 +9543,12 @@ settings:
     -
                     id: sd-height-hover
                     title: 'Floating Tab Height, when hovered'
+                    title.zh: "悬浮标签高度（悬停时）"
+                    title.zh-TW: "懸浮標籤高度（懸停時）"
                     type: variable-number-slider
                     description: 'Set the height of the tabs for the Floating Tabs, when hovered.'
+                    description.zh: "设置悬浮标签悬停时的高度。"
+                    description.zh-TW: "設定懸浮標籤懸停時的高度。"
                     format: '%'
                     default: 50
                     min: 5
@@ -9429,8 +9557,12 @@ settings:
     -
                     id: sd-width-norm
                     title: 'Floating Tab Width, when not hovered'
+                    title.zh: "悬浮标签宽度（未悬停）"
+                    title.zh-TW: "懸浮標籤寬度（未懸停）"
                     type: variable-number-slider
                     description: 'Set the width of the tabs for the Floating Tabs, when not hovered.'
+                    description.zh: "设置悬浮标签未悬停时的宽度。"
+                    description.zh-TW: "設定懸浮標籤未懸停時的寬度。"
                     format: 'rem'
                     default: 1.1
                     min: 0.7
@@ -9439,21 +9571,33 @@ settings:
     -
             id: elements-nav
             title: Navigation, Navigation Pane, Sidebar Panes and Sidebar Tabs
+            title.zh: "导航、导航面板、侧边面板与侧边栏标签页"
+            title.zh-TW: "導航、導航面板、側邊面板與側邊欄標籤頁"
             description: 'Customise the abovementioned elements here.'
+            description.zh: "在此自定义上述元素。"
+            description.zh-TW: "在此自訂上述元素。"
             type: heading
             level: 2
             collapsed: true
     -
             id: mobile-style-sidepanes
             title: Mobile-Style Floating Sidebar Panes
+            title.zh: "移动端风格的悬浮侧边面板"
+            title.zh-TW: "行動版風格的懸浮側邊面板"
             type: class-toggle
             description: "When enabled, the workspace pane will not move to acommodate the sidepanes; instead, the sidepanes will be displayed on top of the workspace pane."
+            description.zh: "启用后，侧边面板覆盖显示在工作区上方，工作区不再为侧边面板移动或让出空间。"
+            description.zh-TW: "啟用後，側邊面板覆蓋顯示在工作區上方，工作區不再為側邊面板移動或讓出空間。"
             default: false
     -
             id: opacity-mobile-style
             title: 'Opacity (Unhovered) — Mobile-Style Sidepanes'
+            title.zh: "移动端风格侧边面板不透明度（未悬停）"
+            title.zh-TW: "行動版風格側邊面板不透明度（未懸停）"
             type: variable-number-slider
             description: Use this setting to change the opacity of the sidepanes, when unhovered.
+            description.zh: "设置侧边面板未悬停时的不透明度。"
+            description.zh-TW: "設定側邊面板未懸停時的不透明度。"
             format: ''
             default: 0
             min: 0
@@ -9462,7 +9606,11 @@ settings:
     -
             id: transition-mobile-style
             title: 'Transition Speed — Mobile-Style Sidepanes'
+            title.zh: "移动端风格侧边面板过渡速度"
+            title.zh-TW: "行動版風格側邊面板過渡速度"
             description: "Use this setting to change the transition speed of the sidepanes from unhovered to hovered."
+            description.zh: "设置侧边面板从未悬停到悬停状态的过渡速度。 选项含义：Slow：慢；Medium：中等；Quick：快；Quicker：更快；No Transition：无过渡。"
+            description.zh-TW: "設定側邊面板從未懸停到懸停狀態的過渡速度。 選項含義：Slow：慢；Medium：中等；Quick：快；Quicker：更快；No Transition：無過渡。"
             type: variable-select
             default: var(--medium-transition)
             options:
@@ -9484,14 +9632,22 @@ settings:
     -
             id: no-nav-file-tag
             title: Remove Navigation File Tags
+            title.zh: "移除导航文件标签"
+            title.zh-TW: "移除導航檔案標籤"
             type: class-toggle
             description: When enabled, this removes the file tags from the navigation bar.
+            description.zh: "启用后，移除导航栏中的文件标签。"
+            description.zh-TW: "啟用後，移除導航欄中的檔案標籤。"
             default: false
     -
             id: size-font-nav
             title: Font Size — Navigation Pane
+            title.zh: "导航面板字号"
+            title.zh-TW: "導航面板字級"
             type: variable-number-slider
             description: Use this setting to change the font size of the navigation pane.
+            description.zh: "设置导航面板字号。"
+            description.zh-TW: "設定導航面板字級。"
             format: "em"
             default: 0.9
             min: 0.25
@@ -9500,8 +9656,12 @@ settings:
     -
             id: nav-buttons-align-L
             title: Navigation Buttons Alignment — Navigation Pane
+            title.zh: "导航面板按钮对齐方式"
+            title.zh-TW: "導航面板按鈕對齊方式"
             type: class-select
             description: "Choose the alignment of your navigation buttons on the navigation pane/left sidebar pane."
+            description.zh: "选择导航面板或左侧边面板中导航按钮的对齐方式。 选项含义：Left-aligned：左对齐；Centre-aligned：居中；Right-aligned：右对齐。"
+            description.zh-TW: "選擇導航面板或左側邊面板中導航按鈕的對齊方式。 選項含義：Left-aligned：左對齊；Centre-aligned：居中；Right-aligned：右對齊。"
             allowEmpty: false
             default: nav-buttons-left-L
             options:
@@ -9517,8 +9677,12 @@ settings:
     -
             id: nav-buttons-align-R
             title: Navigation Buttons Alignment — Right Sidebar Pane
+            title.zh: "右侧边面板导航按钮对齐方式"
+            title.zh-TW: "右側邊面板導航按鈕對齊方式"
             type: class-select
             description: "Choose the alignment of your navigation buttons on the right sidebar pane."
+            description.zh: "选择右侧边面板中导航按钮的对齐方式。 选项含义：Left-aligned：左对齐；Centre-aligned：居中；Right-aligned：右对齐。"
+            description.zh-TW: "選擇右側邊面板中導航按鈕的對齊方式。 選項含義：Left-aligned：左對齊；Centre-aligned：居中；Right-aligned：右對齊。"
             allowEmpty: false
             default: nav-buttons-right-R
             options:
@@ -9534,14 +9698,22 @@ settings:
     -
             id: show-sidebar-tabs
             title: "Show Sidebar Tabs"
+            title.zh: "显示侧边栏标签页"
+            title.zh-TW: "顯示側邊欄標籤頁"
             type: class-toggle
             description: "When enabled, the sidebar tabs will be displayed."
+            description.zh: "启用后，显示侧边栏标签页。"
+            description.zh-TW: "啟用後，顯示側邊欄標籤頁。"
             default: false
     -
             id: sb-tabs-align-L
             title: Sidebar Tabs Alignment — Left Sidebar Pane
+            title.zh: "左侧边面板标签页对齐方式"
+            title.zh-TW: "左側邊面板標籤頁對齊方式"
             type: class-select
             description: "Choose the alignment of your sidebar tabs on the navigation pane/left sidebar pane."
+            description.zh: "选择导航面板或左侧边面板中标签页的对齐方式。 选项含义：Left-aligned：左对齐；Centre-aligned：居中；Right-aligned：右对齐。"
+            description.zh-TW: "選擇導航面板或左側邊面板中標籤頁的對齊方式。 選項含義：Left-aligned：左對齊；Centre-aligned：居中；Right-aligned：右對齊。"
             allowEmpty: false
             default: sb-tabs-left-L
             options:
@@ -9557,8 +9729,12 @@ settings:
     -
             id: sb-tabs-align-R
             title: Sidebar Tabs Alignment — Right Sidebar Pane
+            title.zh: "右侧边面板标签页对齐方式"
+            title.zh-TW: "右側邊面板標籤頁對齊方式"
             type: class-select
             description: "Choose the alignment of your sidebar tabs on the right sidebar pane."
+            description.zh: "选择右侧边面板中标签页的对齐方式。 选项含义：Left-aligned：左对齐；Centre-aligned：居中；Right-aligned：右对齐。"
+            description.zh-TW: "選擇右側邊面板中標籤頁的對齊方式。 選項含義：Left-aligned：左對齊；Centre-aligned：居中；Right-aligned：右對齊。"
             allowEmpty: false
             default: sb-tabs-right-R
             options:
@@ -9574,19 +9750,29 @@ settings:
     -
             id: modals
             title: Modals
+            title.zh: "对话框"
+            title.zh-TW: "對話方塊"
             description: 'Change the widths and heights of modals (the settings/community plugins/themes/Publish menus).'
+            description.zh: "调整设置、社区插件、主题和 Publish 对话框的宽度与高度。"
+            description.zh-TW: "調整設定、社群外掛、主題和 Publish 對話方塊的寬度與高度。"
             type: heading
             level: 2
             collapsed: true
     -
                 id: remove-modal-cp-options-bold
                 title: "Disable Shimmering Focus-style Bold Typeface for Appearance, Hotkeys and Community Plugins options"
+                title.zh: "禁用外观、快捷键与社区插件选项的 Shimmering Focus 风格粗体"
+                title.zh-TW: "停用外觀、快捷鍵與社群外掛選項的 Shimmering Focus 風格粗體"
                 type: class-toggle
                 description: "Shimmering Focus's predilection for bolded Appearance, Hotkeys, and Community Plugins options in the Settings modal are applied in Willemstad by default. Toggle this to remove this specific bold styling."
+                description.zh: "Willemstad 默认采用 Shimmering Focus 的做法，将设置中的“外观”“快捷键”“社区插件”选项加粗。启用此项可移除此粗体样式。"
+                description.zh-TW: "Willemstad 預設採用 Shimmering Focus 的做法，將設定中的“外觀”“快捷鍵”“社群外掛”選項加粗。啟用此項可移除此粗體樣式。"
                 default: false
     -
             id: modal-widths
             title: Modal Widths
+            title.zh: "对话框宽度"
+            title.zh-TW: "對話方塊寬度"
             description:
             type: heading
             level: 3
@@ -9594,6 +9780,8 @@ settings:
     -
                 id: modal-width-settings
                 title: Modal Widths — Settings
+                title.zh: "对话框宽度：设置"
+                title.zh-TW: "對話方塊寬度：設定"
                 type: variable-number-slider
                 format: 'vw'
                 default: 70
@@ -9603,6 +9791,8 @@ settings:
     -
                 id: modal-width-community-plugin
                 title: Modal Widths — Community Plugin Store
+                title.zh: "对话框宽度：社区插件商店"
+                title.zh-TW: "對話方塊寬度：社群外掛商店"
                 type: variable-number-slider
                 format: 'vw'
                 default: 70
@@ -9612,6 +9802,8 @@ settings:
     -
                 id: modal-width-community-theme
                 title: Modal Widths — Theme Store
+                title.zh: "对话框宽度：主题商店"
+                title.zh-TW: "對話方塊寬度：主題商店"
                 type: variable-number-slider
                 format: 'vw'
                 default: 70
@@ -9621,6 +9813,8 @@ settings:
     -
                 id: modal-width-publish
                 title: Modal Widths — Publish
+                title.zh: "对话框宽度：Publish"
+                title.zh-TW: "對話方塊寬度：Publish"
                 type: variable-number-slider
                 format: 'vw'
                 default: 42
@@ -9631,6 +9825,8 @@ settings:
     -
             id: modal-heights
             title: Modal Heights
+            title.zh: "对话框高度"
+            title.zh-TW: "對話方塊高度"
             description:
             type: heading
             level: 3
@@ -9638,6 +9834,8 @@ settings:
     -
                 id: modal-height-settings
                 title: Modal Heights — Settings
+                title.zh: "对话框高度：设置"
+                title.zh-TW: "對話方塊高度：設定"
                 type: variable-number-slider
                 format: 'vh'
                 default: 70
@@ -9647,6 +9845,8 @@ settings:
     -
                 id: modal-height-community-plugin
                 title: Modal Heights — Community Plugin Store
+                title.zh: "对话框高度：社区插件商店"
+                title.zh-TW: "對話方塊高度：社群外掛商店"
                 type: variable-number-slider
                 format: 'vh'
                 default: 90
@@ -9656,6 +9856,8 @@ settings:
     -
                 id: modal-height-community-theme
                 title: Modal Heights — Theme Store
+                title.zh: "对话框高度：主题商店"
+                title.zh-TW: "對話方塊高度：主題商店"
                 type: variable-number-slider
                 format: 'vh'
                 default: 90
@@ -9665,6 +9867,8 @@ settings:
     -
                 id: modal-height-publish
                 title: Modal Heights — Publish
+                title.zh: "对话框高度：Publish"
+                title.zh-TW: "對話方塊高度：Publish"
                 type: variable-number-slider
                 format: 'vh'
                 default: 25
@@ -9680,6 +9884,8 @@ settings:
     -
             id: size-scrollbar
             title: Scrollbar Size
+            title.zh: "滚动条尺寸"
+            title.zh-TW: "捲軸尺寸"
             type: variable-number-slider
             format: "rem"
             default: 0.35
@@ -9689,8 +9895,12 @@ settings:
     -
             id: style-backlink
             title: Backlink Pane Styling
+            title.zh: "反向链接面板样式"
+            title.zh-TW: "反向連結面板樣式"
             type: class-toggle
             description: When toggled, this styles the backlink panes.
+            description.zh: "启用后，应用反向链接面板样式。"
+            description.zh-TW: "啟用後，應用反向連結面板樣式。"
             default: true
 */
 /* @settings
@@ -9700,25 +9910,41 @@ settings:
     -
         id: length-line-var
         title: Override Line Lengths
+        title.zh: "覆盖阅读行宽"
+        title.zh-TW: "覆蓋閱讀行寬"
         type: class-toggle
         description: "When enabled, this overrides the Readable Line Length core setting."
+        description.zh: "启用后，覆盖 Obsidian 核心的阅读行宽设置。"
+        description.zh-TW: "啟用後，覆蓋 Obsidian 核心的閱讀行寬設定。"
         default: false
     -
             id: width-vll
             title: Custom Maximum Line Length 
+            title.zh: "自定义最大行宽"
+            title.zh-TW: "自訂最大行寬"
             description: "Set the maximum line length. Accepts all valid CSS units."
+            description.zh: "设置最大行宽。接受有效的 CSS 单位。"
+            description.zh-TW: "設定最大行寬。接受有效的 CSS 單位。"
             type: variable-text
             default: 700px
     -
             id: fit-titles-vll
             title: Fit Titles to Line Length
+            title.zh: "标题宽度适应行宽"
+            title.zh-TW: "標題寬度適應行寬"
             description: "When enabled, this will fit titles to the editor line length."
+            description.zh: "启用后，标题宽度适应编辑器行宽。"
+            description.zh-TW: "啟用後，標題寬度適應編輯器行寬。"
             type: class-toggle
             default: false
     -
             id: document-title-display
             title: Document Title Display Options
+            title.zh: "文档标题显示选项"
+            title.zh-TW: "文件標題顯示選項"
             description: "Choose how (and whether) you want the document title displayed."
+            description.zh: "选择文档标题是否显示，以及显示方式。 选项含义：Standard (Left-aligned)：标准（左对齐）；Centered：居中；Right-aligned：右对齐；Hidden：隐藏。"
+            description.zh-TW: "選擇文件標題是否顯示，以及顯示方式。 選項含義：Standard (Left-aligned)：標準（左對齊）；Centered：居中；Right-aligned：右對齊；Hidden：隱藏。"
             type: class-select
             allowEmpty: false
             default: doc-title-align-l
@@ -9738,32 +9964,52 @@ settings:
     -
         id: frontmatter-options
         title: Frontmatter
+        title.zh: "Frontmatter"
+        title.zh-TW: "Frontmatter"
         type: heading
         level: 2
         description: Frontmatter options for Willemstad.
+        description.zh: "Willemstad 的 Frontmatter 选项。"
+        description.zh-TW: "Willemstad 的 Frontmatter 選項。"
         collapsed: true
     -
             id: yaml-no-colour
             title: Disable Coloured YAML
+            title.zh: "禁用彩色 YAML"
+            title.zh-TW: "停用彩色 YAML"
             type: class-toggle
             description: By default, the YAML frontmatter is coloured selectively to increase readabiity. Toggle this to disable this feature.
+            description.zh: "默认对 YAML Frontmatter 的不同部分着色以提高可读性。启用此项可禁用配色。"
+            description.zh-TW: "預設對 YAML Frontmatter 的不同部分著色以提高可讀性。啟用此項可停用配色。"
             default: false
     -
             id: size-font-frontmatter-header
             title: Font Size — Frontmatter Header
+            title.zh: "Frontmatter 标题字号"
+            title.zh-TW: "Frontmatter 標題字級"
             description: Accepts any valid CSS units.
+            description.zh: "接受有效的 CSS 单位。"
+            description.zh-TW: "接受有效的 CSS 單位。"
             type: variable-text
             default: 0.9em
     -
             id: size-font-frontmatter-section
             title: Font Size — Frontmatter Section (Aliases and Tags)
+            title.zh: "Frontmatter 区域字号（别名与标签）"
+            title.zh-TW: "Frontmatter 區域字級（別名與標籤）"
             description: Accepts any valid CSS units.
+            description.zh: "接受有效的 CSS 单位。"
+            description.zh-TW: "接受有效的 CSS 單位。"
             type: variable-texts
             default: 0.9em
     -
             id: frontmatter-display
             title: Frontmatter Display Options
+            title.zh: "Frontmatter 显示选项"
+            title.zh-TW: "Frontmatter 顯示選項"
             description: "Choose how (and whether) you want the frontmatter displayed. Works only for Reading mode."
+            description.zh: "选择 Frontmatter 是否显示，以及显示方式。仅适用于阅读模式。"
+            description.zh-TW: "選擇 Frontmatter 是否顯示，以及顯示方式。僅適用於閱讀模式。"
             type: class-select
             allowEmpty: false
             default: default
@@ -9784,100 +10030,146 @@ settings:
     -
         id: typography-typeface
         title: Font Typeface
+        title.zh: "字体"
+        title.zh-TW: "字型"
         type: heading
         description: Typeface options for Willemstad. For Longform and Writing CSSClass settings, please use the Longform-specific options in the Plugin Settings panel. Font settings set in core Obsidian will override the settings set here.
+        description.zh: "Willemstad 字体选项。Longform 和写作 CSSClass 请在插件设置面板的 Longform 专用区域调整。Obsidian 核心字体设置会覆盖此处的设置。"
+        description.zh-TW: "Willemstad 字型選項。Longform 和寫作 CSSClass 請在外掛設定面板的 Longform 專用區域調整。Obsidian 核心字型設定會覆蓋此處的設定。"
         level: 2
         collapsed: true
     -
             id: font-monospace-theme
             title: Font Typeface — Monospace
+            title.zh: "字体：等宽"
+            title.zh-TW: "字型：等寬"
             description:
             type: variable-text
             default: '"DM Mono"'
     -
             id: font-heading
             title: Font Typeface — Headers
+            title.zh: "字体：标题"
+            title.zh-TW: "字型：標題"
             description:
             type: variable-text
             default: '"DM Sans", "Inter 3.19", "Manrope"'
     -
             id: font-editor
             title: Font Typeface — Editor
+            title.zh: "字体：编辑器"
+            title.zh-TW: "字型：編輯器"
             description:
             type: variable-text
             default: '"DM Sans", "Inter 3.19", "Manrope"'
     -
             id: font-menu
             title: Font Typeface — Menu
+            title.zh: "字体：菜单"
+            title.zh-TW: "字型：選單"
             description:
             type: variable-text
             default: '"Manrope", "Inter 3.19", "DM Sans"'
     -
             id: font-ui
             title: Font Typeface — User Interface (UI)
+            title.zh: "字体：用户界面"
+            title.zh-TW: "字型：使用者介面"
             description:
             type: variable-text
             default: '"Manrope", "Inter 3.19", "DM Sans"'
     -
             id: font-editor-m
             title: Font Typeface — Mobile Editor
+            title.zh: "字体：移动端编辑器"
+            title.zh-TW: "字型：行動版編輯器"
             description:
             type: variable-text
             default: '"DM Sans", "Inter 3.19", "Manrope'
     -
             id: font-menu-m
             title: Font Typeface — Mobile Menu
+            title.zh: "字体：移动端菜单"
+            title.zh-TW: "字型：行動版選單"
             description:
             type: variable-text
             default: '"Manrope", "Inter 3.19", "DM Sans"'
     -
             id: font-ui-m
             title: Font Typeface — Mobile User Interface (UI)
+            title.zh: "字体：移动端用户界面"
+            title.zh-TW: "字型：行動版使用者介面"
             description:
             type: variable-text
             default: '"Manrope", "Inter 3.19", "DM Sans"'
     -
             id: font-mermaid
             title: "Font Typeface — Mermaid.js"
+            title.zh: "字体：Mermaid.js"
+            title.zh-TW: "字型：Mermaid.js"
             description: Changes font for the in-built Mermaid.js visualisations in the theme.
+            description.zh: "更改主题内置 Mermaid.js 图表的字体。"
+            description.zh-TW: "更改主題內建 Mermaid.js 圖表的字型。"
             type: variable-text
             default: '"DM Sans", "Inter 3.19", "Manrope"'
     -
         id: h-col
         title: Headers
+        title.zh: "标题"
+        title.zh-TW: "標題"
         type: heading
         description: Change settings for headers (H1–H6) here.
+        description.zh: "在此调整 H1-H6 标题设置。"
+        description.zh-TW: "在此調整 H1-H6 標題設定。"
         level: 2
         collapsed: true
     -
             id: no-smol-headers
             title: "Disable Smaller Header Hexes" 
+            title.zh: "禁用缩小标题井号"
+            title.zh-TW: "停用縮小標題井號"
             type: class-toggle
             description: "The header hex prefix (#) are smaller in Willemstad by default. Toggle this to disable this feature."
+            description.zh: "Willemstad 默认缩小标题前的井号（#）。启用此项可禁用该效果。"
+            description.zh-TW: "Willemstad 預設縮小標題前的井號（#）。啟用此項可停用該效果。"
             default: false
     -
             id: remove-collapse-header-sanctum
             title: Disable Sanctum-style Header Collapse Indicator
+            title.zh: "禁用 Sanctum 风格标题折叠指示器"
+            title.zh-TW: "停用 Sanctum 風格標題摺疊指示器"
             type: class-toggle
             description: Sanctum's more minimalist header collapse indicator are used in Willemstad by default. Toggle this to disable this feature and to use the original Obsidian indicator.
+            description.zh: "Willemstad 默认使用 Sanctum 风格的精简标题折叠指示器。启用此项可恢复 Obsidian 原始指示器。"
+            description.zh-TW: "Willemstad 預設使用 Sanctum 風格的精簡標題摺疊指示器。啟用此項可恢復 Obsidian 原始指示器。"
             default: false
     -
         id: typography-h-col-text
         title: Colours — Header Text
+        title.zh: "标题文字颜色"
+        title.zh-TW: "標題文字顏色"
         type: heading
         description: Changes the font colours of the headers (H1–H6).
+        description.zh: "更改 H1-H6 标题的字体颜色。"
+        description.zh-TW: "更改 H1-H6 標題的字型顏色。"
         level: 3
         collapsed: true
     -
     -
             id: gradient-headers
             title: "Gradient Headers"
+            title.zh: "渐变标题"
+            title.zh-TW: "漸變標題"
             type: class-toggle
             description: "When enabled, the headers will have a colour gradient applied to them."
+            description.zh: "启用后，标题采用颜色渐变。"
+            description.zh-TW: "啟用後，標題採用顏色漸變。"
             default: false
     -
             id: col-h1
             title: Font Colour — H1
+            title.zh: "H1 字体颜色"
+            title.zh-TW: "H1 字型顏色"
             type: variable-themed-color
             description:                
             opacity: false
@@ -9887,6 +10179,8 @@ settings:
     -
             id: col-h2
             title: Font Colour — H2
+            title.zh: "H2 字体颜色"
+            title.zh-TW: "H2 字型顏色"
             type: variable-themed-color
             description:                
             opacity: false
@@ -9896,6 +10190,8 @@ settings:
     -
             id: col-h3
             title: Font Colour — H3
+            title.zh: "H3 字体颜色"
+            title.zh-TW: "H3 字型顏色"
             type: variable-themed-color
             description:                
             opacity: false
@@ -9905,6 +10201,8 @@ settings:
     -
             id: col-h4
             title: Font Colour — H4
+            title.zh: "H4 字体颜色"
+            title.zh-TW: "H4 字型顏色"
             type: variable-themed-color
             description:                
             opacity: false
@@ -9914,6 +10212,8 @@ settings:
     -
             id: col-h5
             title: Font Colour — H5
+            title.zh: "H5 字体颜色"
+            title.zh-TW: "H5 字型顏色"
             type: variable-themed-color
             description:                
             opacity: false
@@ -9923,6 +10223,8 @@ settings:
     -
             id: col-h6
             title: Font Colour — H6
+            title.zh: "H6 字体颜色"
+            title.zh-TW: "H6 字型顏色"
             type: variable-themed-color
             description:
             opacity: false
@@ -9932,55 +10234,77 @@ settings:
     -
             id: col-h1-grad
             title: Font Colour (Gradient) — H1
+            title.zh: "H1 渐变字体颜色"
+            title.zh-TW: "H1 漸變字型顏色"
             description:
             type: variable-text
             default: linear-gradient( 160deg, hsl(184deg 75% 20%) 0%, hsl(182deg 100% 19%) 21%, hsl(179deg 100% 21%) 30%, hsl(176deg 100% 23%) 39%, hsl(173deg 100% 26%) 46%, hsl(170deg 100% 28%) 54%, hsl(166deg 100% 30%) 61%, hsl(162deg 100% 33%) 69%, hsl(159deg 100% 35%) 79%, hsl(155deg 100% 37%) 100% )
     -
             id: col-h2-grad
             title: Font Colour (Gradient) — H2
+            title.zh: "H2 渐变字体颜色"
+            title.zh-TW: "H2 漸變字型顏色"
             description:                
             type: variable-text
             default: linear-gradient( 160deg, hsl(155deg 100% 37%) 0%, hsl(164deg 100% 35%) 21%, hsl(175deg 100% 33%) 30%, hsl(187deg 100% 34%) 39%, hsl(197deg 100% 38%) 46%, hsl(204deg 100% 41%) 54%, hsl(210deg 100% 42%) 61%, hsl(214deg 100% 41%) 69%, hsl(219deg 100% 38%) 79%, hsl(238deg 70% 39%) 100% )
     -
             id: col-h3-grad
             title: Font Colour (Gradient) — H3
+            title.zh: "H3 渐变字体颜色"
+            title.zh-TW: "H3 漸變字型顏色"
             description:                
             type: variable-text
             default: linear-gradient( 160deg, hsl(238deg 70% 39%) 0%, hsl(221deg 100% 36%) 21%, hsl(216deg 100% 38%) 30%, hsl(212deg 100% 40%) 39%, hsl(208deg 100% 40%) 46%, hsl(204deg 100% 40%) 54%, hsl(200deg 100% 40%) 61%, hsl(196deg 100% 40%) 69%, hsl(192deg 100% 39%) 79%, hsl(188deg 100% 39%) 100% )
     -
             id: col-h4-grad
             title: Font Colour (Gradient) — H4
+            title.zh: "H4 渐变字体颜色"
+            title.zh-TW: "H4 漸變字型顏色"
             description:                
             type: variable-text
             default: linear-gradient( 160deg, hsl(19deg 100% 57%) 0%, hsl(22deg 100% 56%) 21%, hsl(25deg 100% 56%) 30%, hsl(28deg 100% 55%) 39%, hsl(30deg 100% 55%) 46%, hsl(33deg 100% 54%) 54%, hsl(35deg 100% 54%) 61%, hsl(37deg 100% 54%) 69%, hsl(39deg 100% 54%) 79%, hsl(41deg 100% 55%) 100% )
     -
             id: col-h5-grad
             title: Font Colour (Gradient) — H5
+            title.zh: "H5 渐变字体颜色"
+            title.zh-TW: "H5 漸變字型顏色"
             description:                
             type: variable-text
             default: linear-gradient( 160deg, hsl(41deg 100% 55%) 0%, hsl(34deg 93% 55%) 21%, hsl(27deg 83% 55%) 30%, hsl(19deg 70% 53%) 39%, hsl(11deg 58% 50%) 46%, hsl(2deg 52% 46%) 54%, hsl(352deg 58% 38%) 61%, hsl(343deg 68% 30%) 69%, hsl(334deg 83% 22%) 79%, hsl(326deg 100% 15%) 100% )
     -
             id: col-h6-grad
             title: Font Colour (Gradient) — H6
+            title.zh: "H6 渐变字体颜色"
+            title.zh-TW: "H6 漸變字型顏色"
             description:
             type: variable-text
             default: linear-gradient( 160deg, hsl(324deg 100% 15%) 0%, hsl(330deg 62% 23%) 12%, hsl(334deg 46% 31%) 26%, hsl(337deg 38% 38%) 40%, hsl(340deg 32% 46%) 53%, hsl(343deg 32% 53%) 65%, hsl(345deg 38% 61%) 76%, hsl(348deg 48% 69%) 85%, hsl(350deg 65% 77%) 93%, hsl(352deg 100% 85%) 100% )
     -
         id: typography-h-col-bg
         title: Colours — Header Background
+        title.zh: "标题背景色"
+        title.zh-TW: "標題背景色"
         type: heading
         description: Changes the background colours of the headers (H1–H6).
+        description.zh: "更改 H1-H6 标题的背景色。"
+        description.zh-TW: "更改 H1-H6 標題的背景色。"
         level: 3
         collapsed: true
     -
             id: no-header-bg
             title: Turn off all Header Background Colours
+            title.zh: "关闭全部标题背景色"
+            title.zh-TW: "關閉全部標題背景色"
             type: class-toggle
             description: When enabled, this turns off all header background colours.
+            description.zh: "启用后，关闭所有标题背景色。"
+            description.zh-TW: "啟用後，關閉所有標題背景色。"
             default: false
     -
             id: col-h1-bg
             title: Background Colour — H1
+            title.zh: "H1 背景色"
+            title.zh-TW: "H1 背景色"
             type: variable-themed-color
             description:
             opacity: true
@@ -9990,6 +10314,8 @@ settings:
     -
             id: col-h2-bg
             title: Background Colour — H2
+            title.zh: "H2 背景色"
+            title.zh-TW: "H2 背景色"
             type: variable-themed-color
             description:                
             opacity: true
@@ -9999,6 +10325,8 @@ settings:
     -
             id: col-h3-bg
             title: Background Colour — H3
+            title.zh: "H3 背景色"
+            title.zh-TW: "H3 背景色"
             description:                
             type: variable-themed-color
             opacity: true
@@ -10008,6 +10336,8 @@ settings:
     -
             id: col-h4-bg
             title: Background Colour — H4
+            title.zh: "H4 背景色"
+            title.zh-TW: "H4 背景色"
             type: variable-themed-color
             description:               
             opacity: true
@@ -10017,6 +10347,8 @@ settings:
     -
             id: col-h5-bg
             title: Background Colour — H5
+            title.zh: "H5 背景色"
+            title.zh-TW: "H5 背景色"
             type: variable-themed-color
             description:                
             opacity: true
@@ -10026,6 +10358,8 @@ settings:
     -
             id: col-h6-bg
             title: Background Colour — H6
+            title.zh: "H6 背景色"
+            title.zh-TW: "H6 背景色"
             type: variable-themed-color
             description:                
             opacity: true
@@ -10035,14 +10369,20 @@ settings:
     -
         id: typography-h-size-text
         title: Font Size — Header Text
+        title.zh: "标题文字字号"
+        title.zh-TW: "標題文字字級"
         type: heading
         description: Changes the font size of the headers (H1–H6).
+        description.zh: "更改 H1-H6 标题的字号。"
+        description.zh-TW: "更改 H1-H6 標題的字級。"
         level: 3
         collapsed: true
     -
             id: h1
             find: h1-size
             title: Font Size — H1
+            title.zh: "H1 字号"
+            title.zh-TW: "H1 字級"
             type: variable-number-slider
             default: 1.8
             min: 1
@@ -10053,6 +10393,8 @@ settings:
             id: h2
             find: h2-size
             title: Font Size — H2
+            title.zh: "H2 字号"
+            title.zh-TW: "H2 字級"
             type: variable-number-slider
             default: 1.6
             min: 1
@@ -10063,6 +10405,8 @@ settings:
             id: h3
             find: h3-size
             title: Font Size — H3
+            title.zh: "H3 字号"
+            title.zh-TW: "H3 字級"
             type: variable-number-slider
             default: 1.45
             min: 1
@@ -10073,6 +10417,8 @@ settings:
             id: h4
             find: h4-size
             title: Font Size — H4
+            title.zh: "H4 字号"
+            title.zh-TW: "H4 字級"
             type: variable-number-slider
             default: 1.3
             min: 1
@@ -10083,6 +10429,8 @@ settings:
             id: h5
             find: h5-size
             title: Font Size — H5
+            title.zh: "H5 字号"
+            title.zh-TW: "H5 字級"
             type: variable-number-slider
             default: 1.15
             min: 1
@@ -10093,6 +10441,8 @@ settings:
             id: h6
             find: h6-size
             title: Font Size — H6
+            title.zh: "H6 字号"
+            title.zh-TW: "H6 字級"
             type: variable-number-slider
             default: 1.05
             min: 1
@@ -10102,39 +10452,63 @@ settings:
     -
         id: typography-h-size-paddings
         title: Padding Size — Headers
+        title.zh: "标题内边距"
+        title.zh-TW: "標題內邊距"
         type: heading
         description: Changes the padding size of the headers (H1–H6).
+        description.zh: "更改 H1-H6 标题的内边距。"
+        description.zh-TW: "更改 H1-H6 標題的內邊距。"
         level: 3
         collapsed: true
     -
             id: mirror-header-paddings
             title: Mirror Header Paddings 
+            title.zh: "标题上下内边距保持一致"
+            title.zh-TW: "標題上下內邊距保持一致"
             description: When enabled, this will disable the bottom padding size option, and mirror your top padding size preferences for the bottom padding.
+            description.zh: "启用后，不再单独设置底部内边距，底部沿用顶部内边距。"
+            description.zh-TW: "啟用後，不再單獨設定底部內邊距，底部沿用頂部內邊距。"
             type: class-toggle
             default: false
     -
             id: padding-header-t
             title: Top Padding Size — Headers 
+            title.zh: "标题顶部内边距"
+            title.zh-TW: "標題頂部內邊距"
             description: Accepts any valid CSS units.
+            description.zh: "接受有效的 CSS 单位。"
+            description.zh-TW: "接受有效的 CSS 單位。"
             type: variable-text
             default: 0.125em
     -
             id: padding-header-b
             title: Bottom Padding Size — Headers 
+            title.zh: "标题底部内边距"
+            title.zh-TW: "標題底部內邊距"
             description: Accepts any valid CSS units.
+            description.zh: "接受有效的 CSS 单位。"
+            description.zh-TW: "接受有效的 CSS 單位。"
             type: variable-text
             default: 0.125em
     -
         id: typography-undl
         title: Underlines
+        title.zh: "下划线"
+        title.zh-TW: "底線"
         description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
+        description.zh: "可将下划线下移、增大与文本的间距以提高可读性，也可保留默认间距。"
+        description.zh-TW: "可將底線下移、增大與文本的間距以提高可讀性，也可保留預設間距。"
         type: heading
         level: 2
         collapsed: true
     -
             id: undl-text-norm
             title: Underlines Spacing — Normal Text
+            title.zh: "下划线间距：普通文本"
+            title.zh-TW: "底線間距：普通文本"
             description: Choose which underline spacing you would like your normal text to have.
+            description.zh: "选择普通文本的下划线间距。"
+            description.zh-TW: "選擇普通文本的底線間距。"
             type: class-select
             allowEmpty: false
             default: llus-nor-max
@@ -10151,7 +10525,11 @@ settings:
     -
             id: undl-hlink
             title: Underlines Spacing — Hyperlinks
+            title.zh: "下划线间距：超链接"
+            title.zh-TW: "底線間距：超連結"
             description: Choose which underline spacing you would like your hyperlinks to have.
+            description.zh: "选择超链接的下划线间距。"
+            description.zh-TW: "選擇超連結的底線間距。"
             type: class-select
             allowEmpty: false
             default: llus-hyp-max
@@ -10168,21 +10546,33 @@ settings:
     -
         id: typography-highlight
         title: Highlights
+        title.zh: "高亮"
+        title.zh-TW: "高亮"
         description: Options to change highlighting colours.
+        description.zh: "调整高亮颜色。"
+        description.zh-TW: "調整高亮顏色。"
         type: heading
         level: 2
         collapsed: true
     -
             id: highlight-col-original
             title: 'Use Standard Highlight Colours'
+            title.zh: "使用标准高亮颜色"
+            title.zh-TW: "使用標準高亮顏色"
             type: class-toggle
             description: When enabled, this will disable the custom Willemstad highlight colours and use the standard colours used for highlighting.
+            description.zh: "启用后，停用 Willemstad 自定义高亮配色，使用标准高亮颜色。"
+            description.zh-TW: "啟用後，停用 Willemstad 自訂高亮配色，使用標準高亮顏色。"
             default: false
     -
             id: col-highlight-text
             title: 'Highlighted Text Colour'
+            title.zh: "高亮文本颜色"
+            title.zh-TW: "高亮文本顏色"
             type: variable-themed-color
             description: 'Colour of the text highlighted — this defaults to black.'
+            description.zh: "高亮区域内的文本颜色，默认为黑色。"
+            description.zh-TW: "高亮區域內的文本顏色，預設為黑色。"
             opacity: false
             format: hsl
             default-light: hsl(0, 0%, 0%)
@@ -10190,8 +10580,12 @@ settings:
     -
             id: col-highlight-0
             title: 'Highlight Colour (Willemstad) — default'
+            title.zh: "Willemstad 默认高亮颜色"
+            title.zh-TW: "Willemstad 預設高亮顏色"
             type: variable-themed-color
             description: 'Default highlight colour (==)'
+            description.zh: "默认高亮颜色（==）。"
+            description.zh-TW: "預設高亮顏色（==）。"
             opacity: false
             format: hsl
             default-light: hsl(46, 100%, 50%)
@@ -10199,8 +10593,12 @@ settings:
     -
             id: col-highlight-1
             title: 'Highlight Colour (Willemstad) — additional #1 (italics + highlight markdown)'
+            title.zh: "Willemstad 附加高亮颜色 #1（斜体与高亮语法）"
+            title.zh-TW: "Willemstad 附加高亮顏色 #1（斜體與高亮語法）"
             type: variable-themed-color
             description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
+            description.zh: "同时使用斜体和高亮 Markdown 语法（*==）时的高亮颜色。"
+            description.zh-TW: "同時使用斜體和高亮 Markdown 語法（*==）時的高亮顏色。"
             opacity: false
             format: hsl
             default-light: hsl(76, 100%, 50%)
@@ -10208,7 +10606,11 @@ settings:
     -
             id: col-highlight-2
             title: 'Highlight Colour (Willemstad) — additional #2 (bold + highlight markdown)'
+            title.zh: "Willemstad 附加高亮颜色 #2（粗体与高亮语法）"
+            title.zh-TW: "Willemstad 附加高亮顏色 #2（粗體與高亮語法）"
             description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'     
+            description.zh: "同时使用粗体和高亮 Markdown 语法（**==）时的高亮颜色。"
+            description.zh-TW: "同時使用粗體和高亮 Markdown 語法（**==）時的高亮顏色。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -10217,7 +10619,11 @@ settings:
     -
             id: col-highlight-3
             title: 'Highlight Colour (Willemstad) — additional #3 (bold + italics + highlight markdown)'
+            title.zh: "Willemstad 附加高亮颜色 #3（粗体、斜体与高亮语法）"
+            title.zh-TW: "Willemstad 附加高亮顏色 #3（粗體、斜體與高亮語法）"
             description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'     
+            description.zh: "同时使用粗体、斜体和高亮 Markdown 语法（***==）时的高亮颜色。"
+            description.zh-TW: "同時使用粗體、斜體和高亮 Markdown 語法（***==）時的高亮顏色。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -10226,8 +10632,12 @@ settings:
     -
             id: col-highlight-0-org
             title: 'Highlight Colour (Standard) — default'
+            title.zh: "标准默认高亮颜色"
+            title.zh-TW: "標準預設高亮顏色"
             type: variable-themed-color
             description: 'Default highlight colour (==)'
+            description.zh: "默认高亮颜色（==）。"
+            description.zh-TW: "預設高亮顏色（==）。"
             opacity: false
             format: hsl
             default-light: hsl(60, 100%, 50%)
@@ -10235,8 +10645,12 @@ settings:
     -
             id: col-highlight-1-org
             title: 'Highlight Colour (Standard) — additional #1 (italics + highlight markdown)'
+            title.zh: "标准附加高亮颜色 #1（斜体与高亮语法）"
+            title.zh-TW: "標準附加高亮顏色 #1（斜體與高亮語法）"
             type: variable-themed-color
             description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
+            description.zh: "同时使用斜体和高亮 Markdown 语法（*==）时的高亮颜色。"
+            description.zh-TW: "同時使用斜體和高亮 Markdown 語法（*==）時的高亮顏色。"
             opacity: false
             format: hsl
             default-light: hsl(120, 100%, 50%)
@@ -10244,7 +10658,11 @@ settings:
     -
             id: col-highlight-2-org
             title: 'Highlight Colour (Standard) — additional #2 (bold + highlight markdown)'
+            title.zh: "标准附加高亮颜色 #2（粗体与高亮语法）"
+            title.zh-TW: "標準附加高亮顏色 #2（粗體與高亮語法）"
             description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'     
+            description.zh: "同时使用粗体和高亮 Markdown 语法（**==）时的高亮颜色。"
+            description.zh-TW: "同時使用粗體和高亮 Markdown 語法（**==）時的高亮顏色。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -10253,7 +10671,11 @@ settings:
     -
             id: col-highlight-3-org
             title: 'Highlight Colour (Standard) — additional #3 (bold + italics + highlight markdown)'
+            title.zh: "标准附加高亮颜色 #3（粗体、斜体与高亮语法）"
+            title.zh-TW: "標準附加高亮顏色 #3（粗體、斜體與高亮語法）"
             description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'     
+            description.zh: "同时使用粗体、斜体和高亮 Markdown 语法（***==）时的高亮颜色。"
+            description.zh-TW: "同時使用粗體、斜體和高亮 Markdown 語法（***==）時的高亮顏色。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -10262,21 +10684,33 @@ settings:
     -
         id: table-options
         title: Tables
+        title.zh: "表格"
+        title.zh-TW: "表格"
         description: Table-specific options.
+        description.zh: "表格专用选项。"
+        description.zh-TW: "表格專用選項。"
         type: heading
         level: 2
         collapsed: true
     -
             id: table-lp-magic
             title: "Almost-True Rendering"
+            title.zh: "接近阅读效果的渲染"
+            title.zh-TW: "接近閱讀效果的渲染"
             type: class-toggle
             description: "When enabled, this renders Source mode and being-edited Live Preview tables congruently similar to Reading mode and rendered Live Preview tables."
+            description.zh: "启用后，使源码模式和实时预览中正在编辑的表格尽量接近阅读模式与已渲染表格的外观。"
+            description.zh-TW: "啟用後，使原始碼模式和即時預覽中正在編輯的表格儘量接近閱讀模式與已渲染表格的外觀。"
             default: false
     -                   
             id: size-font-editor-table
             title: Font Size — Tables (in Editing mode)
+            title.zh: "表格字号（编辑模式）"
+            title.zh-TW: "表格字級（編輯模式）"
             type: variable-number-slider
             description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview).
+            description.zh: "设置编辑表格时使用的等宽字体字号，适用于源码模式与实时预览。"
+            description.zh-TW: "設定編輯表格時使用的等寬字型字級，適用於原始碼模式與即時預覽。"
             format: "em"
             default: 0.8
             min: 0.25
@@ -10285,8 +10719,12 @@ settings:
     -
             id: size-font-preview-table-th
             title: Font Size — Table Headers (in Reading mode)
+            title.zh: "表格表头字号（阅读模式）"
+            title.zh-TW: "表格表頭字級（閱讀模式）"
             type: variable-number-slider
             description: Use this setting to change the font size of the table headers in Reading mode.
+            description.zh: "设置阅读模式中的表格表头字号。"
+            description.zh-TW: "設定閱讀模式中的表格表頭字級。"
             format: "em"
             default: 1
             min: 0.25
@@ -10295,8 +10733,12 @@ settings:
     -
             id: size-font-preview-table-td
             title: Font Size — Table Content (in Reading mode)
+            title.zh: "表格内容字号（阅读模式）"
+            title.zh-TW: "表格內容字級（閱讀模式）"
             type: variable-number-slider
             description: Use this setting to change the font size of the table content in Reading mode.
+            description.zh: "设置阅读模式中的表格内容字号。"
+            description.zh-TW: "設定閱讀模式中的表格內容字級。"
             format: "em"
             default: 1
             min: 0.25
@@ -10305,8 +10747,12 @@ settings:
     -
             id: weight-font-preview-table-th
             title: Font Weight — Table Headers (in Reading mode)
+            title.zh: "表格表头字重（阅读模式）"
+            title.zh-TW: "表格表頭字重（閱讀模式）"
             type: variable-number-slider
             description: Use this setting to change the font size of the table content in Reading mode.
+            description.zh: "设置阅读模式中的表格内容字号。"
+            description.zh-TW: "設定閱讀模式中的表格內容字級。"
             format: ''
             default: 800
             min: 100
@@ -10315,8 +10761,12 @@ settings:
     -
             id: weight-font-preview-table-td
             title: Font Weight — Table Content (in Reading mode)
+            title.zh: "表格内容字重（阅读模式）"
+            title.zh-TW: "表格內容字重（閱讀模式）"
             type: variable-number-slider
             description: Use this setting to change the font size of the table content in Reading mode.
+            description.zh: "设置阅读模式中的表格内容字号。"
+            description.zh-TW: "設定閱讀模式中的表格內容字級。"
             format: ''
             default: 400
             min: 100
@@ -10325,8 +10775,12 @@ settings:
     -
             id: col-bg-table
             title: Background Colour — Table Headers
+            title.zh: "表格表头背景色"
+            title.zh-TW: "表格表頭背景色"
             type: variable-themed-color
             description: Change the background colour of the table headers.
+            description.zh: "更改表格表头背景色。"
+            description.zh-TW: "更改表格表頭背景色。"
             opacity: false
             format: hsl
             default-light: hsl(155, 100%, 37%)
@@ -10334,43 +10788,69 @@ settings:
     -
             id: table-alt-bg
             title: Alternate Colours for Tables
+            title.zh: "表格隔行配色"
+            title.zh-TW: "表格隔行配色"
             type: class-toggle
             description: When enabled, the background colours of each successive row (every 2 rows) in the table will be of a different colour.
+            description.zh: "启用后，表格相邻行使用交替背景色，每两行循环一次。"
+            description.zh-TW: "啟用後，表格相鄰行使用交替背景色，每兩行迴圈一次。"
             default: false
     -
             id: table-no-borders-td
             title: No Borders for Table Content
+            title.zh: "表格内容无边框"
+            title.zh-TW: "表格內容無邊框"
             type: class-toggle
             description: "When enabled, the body/content of the tables will not display a border."
+            description.zh: "启用后，表格内容不显示边框。"
+            description.zh-TW: "啟用後，表格內容不顯示邊框。"
             default: false
     -
             id: table-no-borders-th
             title: No Borders for Table Headers
+            title.zh: "表格表头无边框"
+            title.zh-TW: "表格表頭無邊框"
             type: class-toggle
             description: When enabled, the headers of the tables will not display a border.
+            description.zh: "启用后，表格表头不显示边框。"
+            description.zh-TW: "啟用後，表格表頭不顯示邊框。"
             default: false
     -
             id: table-min-space
             title: Space Maximiser (removes all margins/paddings)
+            title.zh: "最大化空间（移除所有内外边距）"
+            title.zh-TW: "最大化空間（移除所有內外邊距）"
             type: class-toggle
             description: When enabled, all margins and paddings of/in the tables will be removed.
+            description.zh: "启用后，移除表格的所有内外边距。"
+            description.zh-TW: "啟用後，移除表格的所有內外邊距。"
             default: false
     -
             id: table-set-minmax
             title: Set Minimum and Maximum Table Widths
+            title.zh: "设置表格最小与最大宽度"
+            title.zh-TW: "設定表格最小與最大寬度"
             type: class-toggle
             description: When enabled, you will gain the ability to set the minimum and maximum widths of your tables.
+            description.zh: "启用后，可设置表格最小宽度与最大宽度。"
+            description.zh-TW: "啟用後，可設定表格最小寬度與最大寬度。"
             default: false
     -
                 id: table-min-space-settings
                 title: "Additional settings available with 'Space Maximiser' option"
+                title.zh: "“最大化空间”启用后的附加设置"
+                title.zh-TW: "“最大化空間”啟用後的附加設定"
                 description: "Too intense? Use the below options to finetune if you need additional spacing."
+                description.zh: "如需保留更多留白，可用下方选项微调间距。"
+                description.zh-TW: "如需保留更多留白，可用下方選項微調間距。"
                 type: heading
                 level: 3
                 collapsed: false
     -
             id: table-td-space-padding-tb
             title: Table Content — Padding — Top and Bottom
+            title.zh: "表格内容上下内边距"
+            title.zh-TW: "表格內容上下內邊距"
             type: variable-number-slider
             format: "px"
             default: 0
@@ -10380,6 +10860,8 @@ settings:
     -
             id: table-td-space-padding-lr
             title: Table Content — Padding — Left and Right
+            title.zh: "表格内容左右内边距"
+            title.zh-TW: "表格內容左右內邊距"
             type: variable-number-slider
             format: "px"
             default: 0
@@ -10389,6 +10871,8 @@ settings:
     -
             id: table-th-space-padding-tb
             title: Table Headers — Padding — Top and Bottom
+            title.zh: "表格表头上下内边距"
+            title.zh-TW: "表格表頭上下內邊距"
             type: variable-number-slider
             format: "px"
             default: 0
@@ -10398,6 +10882,8 @@ settings:
     -
             id: table-th-space-padding-lr
             title: Table Headers — Padding — Left and Right
+            title.zh: "表格表头左右内边距"
+            title.zh-TW: "表格表頭左右內邊距"
             type: variable-number-slider
             format: "px"
             default: 0
@@ -10408,14 +10894,20 @@ settings:
     -
                 id: table-width-settings
                 title: "Additional settings available with 'Set Minimum and Maximum Table Widths' option"
+                title.zh: "“设置表格最小与最大宽度”启用后的附加设置"
+                title.zh-TW: "“設定表格最小與最大寬度”啟用後的附加設定"
                 type: heading
                 level: 3
                 collapsed: true
     -
                 id: width-tables-min
                 title: "Minimum Table Width"
+                title.zh: "表格最小宽度"
+                title.zh-TW: "表格最小寬度"
                 type: variable-number-slider
                 description: "Set the minimum width your tables should be."
+                description.zh: "设置表格最小宽度。"
+                description.zh-TW: "設定表格最小寬度。"
                 format: rem
                 default: 2.5
                 min: 0.5
@@ -10424,8 +10916,12 @@ settings:
     -
                 id: width-tables-max
                 title: "Maximum Table Width"
+                title.zh: "表格最大宽度"
+                title.zh-TW: "表格最大寬度"
                 type: variable-number-slider
                 description: "Set the maximum width your tables should be. "
+                description.zh: "设置表格最大宽度。"
+                description.zh-TW: "設定表格最大寬度。"
                 format: rem
                 default: 25
                 min: 0.5
@@ -10439,21 +10935,33 @@ settings:
     -
      id: callouts-settings
      title: Callouts
+     title.zh: "标注（Callouts）"
+     title.zh-TW: "標註（Callouts）"
      type: heading
      description: "Customise your Callouts here! Special callout classes currently: 'table', 'infobox', 'aside', 'kanban', 'kanban-no-title'"
+     description.zh: "自定义标注。当前特殊标注类包括 table、infobox、aside、kanban 和 kanban-no-title。"
+     description.zh-TW: "自訂標註。當前特殊標註類包括 table、infobox、aside、kanban 和 kanban-no-title。"
      level: 2
      collapsed: false
     -
         id: callout-standard
         title: Standard Obsidian Callouts
+        title.zh: "Obsidian 标准标注"
+        title.zh-TW: "Obsidian 標準標註"
         type: class-toggle
         description: When enabled, the standard Obsidian Callouts styling will be applied instead.
+        description.zh: "启用后，改用 Obsidian 标准标注样式。"
+        description.zh-TW: "啟用後，改用 Obsidian 標準標註樣式。"
         default: false
     -
         id: margin-callout
         title: Callout Margin Size
+        title.zh: "标注外边距"
+        title.zh-TW: "標註外邊距"
         type: variable-number-slider
         description: "Change the size of Callout margins."
+        description.zh: "更改标注外边距。"
+        description.zh-TW: "更改標註外邊距。"
         format: em
         default: 0.5
         min: 0
@@ -10462,16 +10970,24 @@ settings:
     -
         id: kanban-callout
         title: "Kanban Callout"
+        title.zh: "看板标注"
+        title.zh-TW: "看板標註"
         description: "Settings for the 'kanban' callouts."
+        description.zh: "kanban 看板标注设置。"
+        description.zh-TW: "kanban 看板標註設定。"
         type: heading
         level: 3
         collapsed: true
     -
         id: height-callout-kanban
         title: "Callout Height"
+        title.zh: "标注高度"
+        title.zh-TW: "標註高度"
         note: "'Kanban' Callout"
         type: variable-number-slider
         description: "Set the callout height of the Kanban callouts."
+        description.zh: "设置看板标注高度。"
+        description.zh-TW: "設定看板標註高度。"
         format: rem
         default: 30
         min: 8
@@ -10480,9 +10996,13 @@ settings:
     -
         id: height-header-kanban
         title: "Header Height"
+        title.zh: "标题高度"
+        title.zh-TW: "標題高度"
         note: "'Kanban' Callout"
         type: variable-number-slider
         description: "Set the header height of the Kanban callouts."
+        description.zh: "设置看板标注标题高度。"
+        description.zh-TW: "設定看板標註標題高度。"
         format: rem
         default: 3.5
         min: 1
@@ -10491,9 +11011,13 @@ settings:
     -
         id: width-ul-kanban
         title: "Lane Width"
+        title.zh: "看板列宽度"
+        title.zh-TW: "看板列寬度"
         note: "'Kanban' Callout"
         type: variable-number-slider
         description: "Set the kanban lane width of the Kanban callouts."
+        description.zh: "设置看板标注中列的宽度。"
+        description.zh-TW: "設定看板標註中列的寬度。"
         format: px
         default: 272
         min: 80
@@ -10502,9 +11026,13 @@ settings:
     -
         id: size-font-callout-title
         title: "Callout Title Font Size"
+        title.zh: "标注标题字号"
+        title.zh-TW: "標註標題字級"
         note: "'Kanban' Callout"
         type: variable-number-slider
         description: "Set the font size of the Kanban callout title. The default is H1's original size."
+        description.zh: "设置看板标注标题字号。默认为 H1 原始字号。"
+        description.zh-TW: "設定看板標註標題字級。預設為 H1 原始字級。"
         format: em
         default: 1
         min: 0.5
@@ -10513,26 +11041,40 @@ settings:
     -
      id: cssclass-settings
      title: CSSClass
+     title.zh: "CSSClass"
+     title.zh-TW: "CSSClass"
      type: heading
      description: "LaTeX, Magazine, Cornell Notes"
+     description.zh: "LaTeX、杂志与康奈尔笔记。"
+     description.zh-TW: "LaTeX、雜誌與康奈爾筆記。"
      level: 2
      collapsed: false
     -
      id: latex-settings
      title: LaTeX CSSClass
+     title.zh: "LaTeX CSSClass"
+     title.zh-TW: "LaTeX CSSClass"
      description: "Settings for the 'latex' CSSClass."
+     description.zh: "latex CSSClass 设置。"
+     description.zh-TW: "latex CSSClass 設定。"
      type: heading
      level: 3
      collapsed: true
     -
         id: eq-num-latex
         title: "Equation Numbering"
+        title.zh: "公式编号"
+        title.zh-TW: "公式編號"
         type: class-toggle
         description: When enabled, the equations will be numbered incrementally throughout the document.
+        description.zh: "启用后，在整个文档中为公式递增编号。"
+        description.zh-TW: "啟用後，在整個文件中為公式遞增編號。"
         default: false
     -
         id: size-cssclass-latex
         title: "Font Size — LaTeX CSSClass"
+        title.zh: "LaTeX CSSClass 字号"
+        title.zh-TW: "LaTeX CSSClass 字級"
         type: variable-number-slider
         default: 14
         min: 8
@@ -10542,16 +11084,22 @@ settings:
     -
         id: font-cssclass-latex-source
         title: "Font Typeface (Source mode) — LaTeX CSSClass"
+        title.zh: "LaTeX CSSClass 字体（源码模式）"
+        title.zh-TW: "LaTeX CSSClass 字型（原始碼模式）"
         type: variable-text
         default: '"DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX"'
     -
         id: font-cssclass-latex-reading
         title: "Font Typeface (Reading mode) — LaTeX CSSClass"
+        title.zh: "LaTeX CSSClass 字体（阅读模式）"
+        title.zh-TW: "LaTeX CSSClass 字型（閱讀模式）"
         type: variable-text
         default: '"MathJax Main", "MJXZERO", "MJXTEX"'
     -
         id: textindent-cssclass-latex
         title: "Text Indent for first paragraph line — LaTeX CSSClass"
+        title.zh: "LaTeX CSSClass 段落首行缩进"
+        title.zh-TW: "LaTeX CSSClass 段落首行縮排"
         type: variable-number-slider
         default: 0
         min: -0.5
@@ -10561,8 +11109,12 @@ settings:
     -                   
         id: size-font-editor-table-latex
         title: Font Size — Tables (in Editing mode) for LaTeX CSSClass
+        title.zh: "LaTeX CSSClass 表格字号（编辑模式）"
+        title.zh-TW: "LaTeX CSSClass 表格字級（編輯模式）"
         type: variable-number-slider
         description: Use this setting to change the size of the monospace font when editing tables in Editing mode (both Source mode and Live Preview) for the LaTeX CSSClass.
+        description.zh: "设置 LaTeX CSSClass 下编辑表格时的等宽字体字号，适用于源码模式与实时预览。"
+        description.zh-TW: "設定 LaTeX CSSClass 下編輯表格時的等寬字型字級，適用於原始碼模式與即時預覽。"
         format: "em"
         default: 0.8
         min: 0.25
@@ -10571,8 +11123,12 @@ settings:
     -
         id: size-font-preview-table-latex
         title: Font Size — Tables (in Reading mode) for LaTeX CSSClass
+        title.zh: "LaTeX CSSClass 表格字号（阅读模式）"
+        title.zh-TW: "LaTeX CSSClass 表格字級（閱讀模式）"
         type: variable-number-slider
         description: Use this setting to change the font size of the tables in Reading mode for the LaTeX CSSClass.
+        description.zh: "设置 LaTeX CSSClass 下阅读模式中的表格字号。"
+        description.zh-TW: "設定 LaTeX CSSClass 下閱讀模式中的表格字級。"
         format: "em"
         default: 1
         min: 0.25
@@ -10581,18 +11137,28 @@ settings:
     -
      id: magazine-settings
      title: Magazine CSSClass
+     title.zh: "杂志 CSSClass"
+     title.zh-TW: "雜誌 CSSClass"
      description: "Settings for the 'magazine' CSSClass."
+     description.zh: "magazine 杂志 CSSClass 设置。"
+     description.zh-TW: "magazine 雜誌 CSSClass 設定。"
      type: heading
      level: 3
      collapsed: true
     -
         id: magazine-cssclass-see-syntax
         title: "See an example of how to make your own Magazine"
+        title.zh: "查看自建杂志的示例"
+        title.zh-TW: "檢視自建雜誌的示例"
         description: https://willemstad.cc/Examples/CSSClass-Magazine
+        description.zh: "https://willemstad.cc/Examples/CSSClass-Magazine"
+        description.zh-TW: "https://willemstad.cc/Examples/CSSClass-Magazine"
         type: class-toggle
     -
         id: size-cssclass-magazine
         title: "Font Size — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 字号"
+        title.zh-TW: "雜誌 CSSClass 字級"
         type: variable-number-slider
         default: 1.5
         min: 0.75
@@ -10602,12 +11168,16 @@ settings:
     -
         id: font-cssclass-magazine
         title: "Font Typeface — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 字体"
+        title.zh-TW: "雜誌 CSSClass 字型"
         type: variable-text
         default: '"Manrope" ,"DM Sans", "Inter"'
         note: do I change var(--font-ui) in the thing
     -
         id: weight-cssclass-magazine
         title: "Font Weight — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 字重"
+        title.zh-TW: "雜誌 CSSClass 字重"
         type: variable-number-slider
         default: 500
         min: 100
@@ -10617,8 +11187,12 @@ settings:
     -
         id: height-items-magazine
         title: "Card Height — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 卡片高度"
+        title.zh-TW: "雜誌 CSSClass 卡片高度"
         type: variable-number-slider
         description: "Use this setting to change height of the magazine cards."
+        description.zh: "设置杂志卡片高度。"
+        description.zh-TW: "設定雜誌卡片高度。"
         default: 10
         min: 3
         max: 50
@@ -10627,8 +11201,12 @@ settings:
     -
         id: margin-items-magazine
         title: "Inter-Cards Margin — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 卡片间距"
+        title.zh-TW: "雜誌 CSSClass 卡片間距"
         type: variable-number-slider
         description: "Use this setting to change the external spacing (margins) between magazine cards."
+        description.zh: "设置杂志卡片之间的外边距。"
+        description.zh-TW: "設定雜誌卡片之間的外邊距。"
         default: 0.25
         min: 0
         max: 1.5
@@ -10637,8 +11215,12 @@ settings:
     -
         id: padding-items-magazine
         title: "Card Padding — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 卡片内边距"
+        title.zh-TW: "雜誌 CSSClass 卡片內邊距"
         type: variable-number-slider
         description: "Use this setting to change the internal spacing between the card content and card borders"
+        description.zh: "设置卡片内容与边框之间的内边距。"
+        description.zh-TW: "設定卡片內容與邊框之間的內邊距。"
         default: 0.75
         min: 0
         max: 3
@@ -10647,32 +11229,52 @@ settings:
     -
         id: bg-highlight-magazine-first
         title: "Background (First item) — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 背景（首个项目）"
+        title.zh-TW: "雜誌 CSSClass 背景（首個專案）"
         description: "Use this to customise the background to the 1st item."
+        description.zh: "自定义第一个项目的背景。"
+        description.zh-TW: "自訂第一個專案的背景。"
         type: variable-text
         default: 'linear-gradient(45deg, hsl(240, 100%, 20%) 0%, hsl(289, 100%, 21%) 11%, hsl(315, 100%, 27%) 22%, hsl(329, 100%, 36%) 33%, hsl(337, 100%, 43%) 44%, hsl(357, 91%, 59%) 56%, hsl(17, 100%, 59%) 67%, hsl(34, 100%, 53%) 78%, hsl(45, 100%, 50%) 89%, hsl(55, 100%, 50%) 100%)'
     -
         id: bg-highlight-magazine
         title: "Background (Wide items) — Magazine CSSClass"
+        title.zh: "杂志 CSSClass 背景（宽版项目）"
+        title.zh-TW: "雜誌 CSSClass 背景（寬版專案）"
         description: "Use this to customise the background to every 9n+1 item."
+        description.zh: "自定义每个序号为 9n+1 的项目的背景。"
+        description.zh-TW: "自訂每個序號為 9n+1 的專案的背景。"
         type: variable-text
         default: 'linear-gradient(to right, hsl(215, 65%, 53%), hsl(191, 100%, 50%))'
     -
      id: cornell-settings
      title: Cornell Notes CSSClass
+     title.zh: "康奈尔笔记 CSSClass"
+     title.zh-TW: "康奈爾筆記 CSSClass"
      description: "Settings for the 'cornell' CSSClass."
+     description.zh: "cornell 康奈尔笔记 CSSClass 设置。"
+     description.zh-TW: "cornell 康奈爾筆記 CSSClass 設定。"
      type: heading
      level: 3
      collapsed: true
     -
         id: cornell-cssclass-see-syntax
         title: "See an example of how to make your own Cornell Notes"
+        title.zh: "查看自建康奈尔笔记的示例"
+        title.zh-TW: "檢視自建康奈爾筆記的示例"
         description: https://willemstad.cc/Examples/CSSClass-Cornell
+        description.zh: "https://willemstad.cc/Examples/CSSClass-Cornell"
+        description.zh-TW: "https://willemstad.cc/Examples/CSSClass-Cornell"
         type: class-toggle
     -
         id: left-align-cornell-cssclass
         title: "Left Margin — Cornell Notes CSSClass"
+        title.zh: "康奈尔笔记 CSSClass 左侧外边距"
+        title.zh-TW: "康奈爾筆記 CSSClass 左側外邊距"
         type: variable-number-slider
         description: "Use this setting to change the left margin of the Cornell Notes CSSClass."
+        description.zh: "设置康奈尔笔记 CSSClass 的左侧外边距。"
+        description.zh-TW: "設定康奈爾筆記 CSSClass 的左側外邊距。"
         default: 30
         min: 10
         max: 50
@@ -10681,8 +11283,12 @@ settings:
     -
         id: gap-cornell-cssclass
         title: "Gap Between Left and Right Content — Cornell Notes CSSClass"
+        title.zh: "康奈尔笔记 CSSClass 左右内容间距"
+        title.zh-TW: "康奈爾筆記 CSSClass 左右內容間距"
         type: variable-number-slider
         description: "Use this setting to change the gap between the left and right content of the Cornell Notes CSSClass."
+        description.zh: "设置康奈尔笔记 CSSClass 左右内容之间的间距。"
+        description.zh-TW: "設定康奈爾筆記 CSSClass 左右內容之間的間距。"
         default: 2.5
         min: 0
         max: 10
@@ -10691,6 +11297,10 @@ settings:
     -
         id: text-align-cornell-cssclass
         title: "Text Alignment — Cornell Notes CSSClass"
+        title.zh: "康奈尔笔记 CSSClass 文本对齐方式"
+        title.zh-TW: "康奈爾筆記 CSSClass 文本對齊方式"
+        description.zh: "选项含义：Justify：两端对齐；Left：左；Right：右；Centre：居中。"
+        description.zh-TW: "選項含義：Justify：兩端對齊；Left：左；Right：右；Centre：居中。"
         type: variable-select
         default: justify
         options:
@@ -10709,6 +11319,10 @@ settings:
     -
         id: text-align-last-cornell-cssclass
         title: "Text Alignment (Last Line) — Cornell Notes CSSClass"
+        title.zh: "康奈尔笔记 CSSClass 末行文本对齐方式"
+        title.zh-TW: "康奈爾筆記 CSSClass 末行文本對齊方式"
+        description.zh: "选项含义：Justify：两端对齐；Left：左；Right：右；Centre：居中。"
+        description.zh-TW: "選項含義：Justify：兩端對齊；Left：左；Right：右；Centre：居中。"
         type: variable-select
         default: right
         options:
@@ -10727,40 +11341,64 @@ settings:
     -
      id: html-settings
      title: HTML Styling
+     title.zh: "HTML 样式"
+     title.zh-TW: "HTML 樣式"
      type: heading
      description: "LaTeX, Magazine, Cornell Notes"
+     description.zh: "LaTeX、杂志与康奈尔笔记。"
+     description.zh-TW: "LaTeX、雜誌與康奈爾筆記。"
      level: 2
      collapsed: false
     -
         id: progressbar-settings
         title: Progress Bar
+        title.zh: "进度条"
+        title.zh-TW: "進度條"
         type: heading
         description: "Settings for the Progress Bar"
+        description.zh: "进度条设置。"
+        description.zh-TW: "進度條設定。"
         level: 3
         collapsed: true
     -
             id: percentage-progressbar
             title: "Append Percentage to Progress Bar"
+            title.zh: "在进度条末尾显示百分比"
+            title.zh-TW: "在進度條末尾顯示百分比"
             type: class-toggle
             description: "When enabled, this will append the progress bar percentage to the right end of the progress bar."
+            description.zh: "启用后，在进度条右端显示百分比。"
+            description.zh-TW: "啟用後，在進度條右端顯示百分比。"
             default: false 
     -
      id: misc
      title: "Miscellany"
+     title.zh: "其他设置"
+     title.zh-TW: "其他設定"
      type: heading
      description: Centre Image; Image Desaturation; Fix Widths for MathJax equations, Mermaid.js graphs and images; Rounded Headers and Boxes; Hide External Hyperlink URLs in Source Mode
+     description.zh: "图片居中、图片去色、MathJax 公式宽度修复、Mermaid.js 图表宽度修复、图片宽度修复、圆角标题与框，以及源码模式下隐藏外部链接 URL。"
+     description.zh-TW: "圖片居中、圖片去色、MathJax 公式寬度修復、Mermaid.js 圖表寬度修復、圖片寬度修復、圓角標題與框，以及原始碼模式下隱藏外部連結 URL。"
      level: 2
      collapsed: false
     -
             id: centre-image
             title: Centre Image
+            title.zh: "图片居中"
+            title.zh-TW: "圖片居中"
             type: class-toggle
             description: When enabled, this centres embedded images in your notes.
+            description.zh: "启用后，笔记中的嵌入图片居中显示。"
+            description.zh-TW: "啟用後，筆記中的嵌入圖片居中顯示。"
             default: true
     -
             id: image-desaturation
             title: Image Desaturation
+            title.zh: "图片去色"
+            title.zh-TW: "圖片去色"
             description: Choose which images should be desaturated when not hovered.
+            description.zh: "选择哪些图片在未悬停时去色。 选项含义：None：无；Reading mode：阅读模式；Reading mode + Live Preview：阅读模式与实时预览。"
+            description.zh-TW: "選擇哪些圖片在未懸停時去色。 選項含義：None：無；Reading mode：閱讀模式；Reading mode + Live Preview：閱讀模式與即時預覽。"
             type: class-select
             allowEmpty: false
             default: default
@@ -10777,32 +11415,52 @@ settings:
     -
             id: fix-mathjax-width
             title: Fix MathJax Equation Width
+            title.zh: "修复 MathJax 公式宽度"
+            title.zh-TW: "修復 MathJax 公式寬度"
             type: class-toggle
             description: When enabled, this fixes the MathJax equation width to fit the viewpane.
+            description.zh: "启用后，修复 MathJax 公式宽度以适应面板。"
+            description.zh-TW: "啟用後，修復 MathJax 公式寬度以適應面板。"
             default: false
     -
             id: fix-mermaid-width
             title: Fix Mermaid.js Graph Width
+            title.zh: "修复 Mermaid.js 图表宽度"
+            title.zh-TW: "修復 Mermaid.js 圖表寬度"
             type: class-toggle
             description: When enabled, this fixes the Mermaid.js graph width to fit the viewpane.
+            description.zh: "启用后，修复 Mermaid.js 图表宽度以适应面板。"
+            description.zh-TW: "啟用後，修復 Mermaid.js 圖表寬度以適應面板。"
             default: true
     -
             id: fix-img-width
             title: Fix Image Width
+            title.zh: "修复图片宽度"
+            title.zh-TW: "修復圖片寬度"
             type: class-toggle
             description: When enabled, this fixes the image width to fit the viewpane.
+            description.zh: "启用后，修复图片宽度以适应面板。"
+            description.zh-TW: "啟用後，修復圖片寬度以適應面板。"
             default: true
     -
             id: headers-round
             title: Rounded Headers and Boxes
+            title.zh: "标题与框使用圆角"
+            title.zh-TW: "標題與框使用圓角"
             type: class-toggle
             description: When enabled, rounded-border headers and boxes (such as Admonition and Callout boxes) will be applied over the standard rectangular ones.
+            description.zh: "启用后，标题与框（如 Admonition 和标注）使用圆角，而非标准直角。"
+            description.zh-TW: "啟用後，標題與框（如 Admonition 和標註）使用圓角，而非標準直角。"
             default: false
     -
             id: source-links-hide
             title: Shimmering Focus-style Hide External Hyperlink URLs in Source Mode
+            title.zh: "在源码模式隐藏外部链接 URL（Shimmering Focus 风格）"
+            title.zh-TW: "在原始碼模式隱藏外部連結 URL（Shimmering Focus 風格）"
             type: class-toggle
             description: When enabled, this hides external hyperlink URLs in Source mode, similar to Shimmering Focus.
+            description.zh: "启用后，在源码模式隐藏外部链接 URL，效果类似 Shimmering Focus。"
+            description.zh-TW: "啟用後，在原始碼模式隱藏外部連結 URL，效果類似 Shimmering Focus。"
             default: false
     -
 */
@@ -10851,13 +11509,19 @@ settings:
     -
      id: plugin-core
      title: Core Plugins
+     title.zh: "核心插件"
+     title.zh-TW: "核心外掛"
      type: heading
      description: "Command Palette"
+     description.zh: "命令面板。"
+     description.zh-TW: "命令面板。"
      level: 2
      collapsed: false
     -
      id: PCore001-settings
      title: Command Palette
+     title.zh: "命令面板"
+     title.zh-TW: "命令面板"
      description: 
      type: heading
      level: 3
@@ -10865,20 +11529,30 @@ settings:
     -
             id: normal-command-palette
             title: Revert back to standard Obsidian style
+            title.zh: "恢复 Obsidian 标准样式"
+            title.zh-TW: "恢復 Obsidian 標準樣式"
             note: Command Palette
             type: class-toggle
             description: When enabled, this moves the plugin name back to the left. Use when the Command Palette looks wonky.
+            description.zh: "启用后，将插件名称移回左侧。命令面板显示异常时可尝试此项。"
+            description.zh-TW: "啟用後，將外掛名稱移回左側。命令面板顯示異常時可嘗試此項。"
             default: false
     -
      id: plugin-community
      title: Community Plugins
+     title.zh: "社区插件"
+     title.zh-TW: "社群外掛"
      type: heading
      description: "Admonitions, Calendar, Footnotes & Citation Indicator, Full Calendar, Kanban, Sliding Panes, Style Settings, Longform"
+     description.zh: "Admonitions、Calendar、Footnotes & Citation Indicator、Full Calendar、Kanban、Sliding Panes、Style Settings 和 Longform。"
+     description.zh-TW: "Admonitions、Calendar、Footnotes & Citation Indicator、Full Calendar、Kanban、Sliding Panes、Style Settings 和 Longform。"
      level: 2
      collapsed: false
     -
      id: PComm003-settings
      title: Admonitions
+     title.zh: "Admonitions"
+     title.zh-TW: "Admonitions"
      description: 
      type: heading
      level: 3
@@ -10886,6 +11560,8 @@ settings:
     -
         id: PComm003-margin
         title: Change the size of the margins
+        title.zh: "更改外边距"
+        title.zh-TW: "更改外邊距"
         note: Admonitions
         type: variable-number-slider
         format: px
@@ -10896,9 +11572,13 @@ settings:
     -
         id: admonition-margin-top
         title: Change size of padding
+        title.zh: "更改内边距"
+        title.zh-TW: "更改內邊距"
         note: Admonitions
         type: variable-number-slider
         description: "Admonition's original settings are 1.625."
+        description.zh: "Admonition 原始值为 1.625。"
+        description.zh-TW: "Admonition 原始值為 1.625。"
         format: em
         default: 0.5
         min: 0
@@ -10907,6 +11587,8 @@ settings:
     -
      id: PComm001-settings
      title: Calendar
+     title.zh: "Calendar"
+     title.zh-TW: "Calendar"
      description: 
      type: heading
      level: 3
@@ -10914,9 +11596,13 @@ settings:
     -
         id: PComm001-col-today
         title: Change colour, Font of today's date
+        title.zh: "更改今日日期字体颜色"
+        title.zh-TW: "更改今日日期字型顏色"
         note: 📆 Calendar
         type: variable-themed-color
         description: Change the font colour for today's date in the Calendar plugin.
+        description.zh: "更改 Calendar 插件中今日日期的字体颜色。"
+        description.zh-TW: "更改 Calendar 外掛中今日日期的字型顏色。"
         opacity: false
         format: hsl
         default-light: hsl(155, 100%, 37%)
@@ -10924,9 +11610,13 @@ settings:
     -
         id: PComm001-col-year
         title: Change colour, Font of the year
+        title.zh: "更改年份字体颜色"
+        title.zh-TW: "更改年份字型顏色"
         note: 📆 Calendar
         type: variable-themed-color
         description: Change the font colour for the year in the Calendar plugin.
+        description.zh: "更改 Calendar 插件中年份的字体颜色。"
+        description.zh-TW: "更改 Calendar 外掛中年份的字型顏色。"
         opacity: false
         format: hsl
         default-light: hsl(155, 100%, 37%)
@@ -10934,9 +11624,13 @@ settings:
     -
         id: PComm001-col-dot
         title: Change colour, Filled dot
+        title.zh: "更改实心圆点颜色"
+        title.zh-TW: "更改實心圓點顏色"
         note: 📆 Calendar
         type: variable-themed-color
         description: Change the colour of the dot in the Calendar plugin.
+        description.zh: "更改 Calendar 插件中圆点的颜色。"
+        description.zh-TW: "更改 Calendar 外掛中圓點的顏色。"
         opacity: false
         format: hsl
         default-light: hsl(155, 100%, 37%)
@@ -10944,6 +11638,8 @@ settings:
     -
      id: PComm033-settings
      title: Focus Mode
+     title.zh: "Focus Mode"
+     title.zh-TW: "Focus Mode"
      description: 
      type: heading
      level: 3
@@ -10951,21 +11647,31 @@ settings:
     -
         id: PComm033-standard-focus
         title: Disable True Focus Mode
+        title.zh: "禁用完全专注模式"
+        title.zh-TW: "停用完全專注模式"
         note: Focus Mode
         type: class-toggle
         description: "By default, Willemstad removes the exit button in Focus Mode. This toggle re-enables the ribbon and its accompanying exit button."
+        description.zh: "Willemstad 默认移除 Focus Mode 的退出按钮。启用此项可恢复侧边工具栏及其退出按钮。"
+        description.zh-TW: "Willemstad 預設移除 Focus Mode 的退出按鈕。啟用此項可恢復側邊工具列及其退出按鈕。"
         default: false
     -
         id: PComm033-transparent-header
         title: Make Un-Hovered Title Headers Transparent in Focus Mode
+        title.zh: "专注模式下标题栏在未悬停时透明"
+        title.zh-TW: "專注模式下標題列在未懸停時透明"
         note: Focus Mode
         type: class-toggle
         description: "When enabled, this toggle makes title headers transparent when un-hovered. Hover over for title headers to reappear."
+        description.zh: "启用后，标题栏在未悬停时透明，鼠标悬停后重新显示。"
+        description.zh-TW: "啟用後，標題列在未懸停時透明，滑鼠懸停後重新顯示。"
         default: false
     -
     -
      id: PComm027-settings
      title: Footnotes & Citation Indicator
+     title.zh: "Footnotes & Citation Indicator"
+     title.zh-TW: "Footnotes & Citation Indicator"
      description: 
      type: heading
      level: 3
@@ -10973,20 +11679,30 @@ settings:
     -
         id: PComm027-active
         title: Activate Footnotes and Citation Indicator and Relevant Settings
+        title.zh: "启用脚注与引用指示器及相关设置"
+        title.zh-TW: "啟用腳註與引用指示器及相關設定"
         note: 🦶📝 Footnotes & Citation Indicator
         type: class-toggle
         description: "Toggle to make Style Settings changes to the Footnotes and Citation Indicator. When enabled, this can also be used independently of the plugin."
+        description.zh: "启用后，可通过 Style Settings 调整 Footnotes and Citation Indicator。此功能也可独立于该插件使用。"
+        description.zh-TW: "啟用後，可通過 Style Settings 調整 Footnotes and Citation Indicator。此功能也可獨立於該外掛使用。"
         default: false
     -
         id: PComm027-indicator
         title: Change Gutter Indicator
+        title.zh: "更改编辑器边栏指示器"
+        title.zh-TW: "更改編輯器邊欄指示器"
         note: 🦶📝 Footnotes & Citation Indicator
         type: variable-text
         description: "Change the gutter indicator icon here, for the Footnotes & Citation Indicator plugin."
+        description.zh: "更改 Footnotes & Citation Indicator 插件的编辑器边栏指示图标。"
+        description.zh-TW: "更改 Footnotes & Citation Indicator 外掛的編輯器邊欄指示圖示。"
         default: '⦿'
     -
      id: PComm009-settings
      title: Full Calendar
+     title.zh: "Full Calendar"
+     title.zh-TW: "Full Calendar"
      description: 
      type: heading
      level: 3
@@ -10994,13 +11710,19 @@ settings:
     -
         id: PComm009-no-halfhour-grid
         title: Remove Half-hour Dotted Lines
+        title.zh: "移除半小时虚线"
+        title.zh-TW: "移除半小時虛線"
         note: 💯📆 Full Calendar
         type: class-toggle
         description: "When enabled, this removes the half-hour dotted lines from the Full Calendar calendar view."
+        description.zh: "启用后，移除 Full Calendar 日历视图中的半小时虚线。"
+        description.zh-TW: "啟用後，移除 Full Calendar 日曆檢視中的半小時虛線。"
         default: false
     -
      id: PComm007-settings
      title: Kanban
+     title.zh: "Kanban"
+     title.zh-TW: "Kanban"
      description: 
      type: heading
      level: 3
@@ -11008,23 +11730,35 @@ settings:
     -
         id: PComm007-sp-singlelane
         title: Vertical Scroll Kanbans in Side Panes
+        title.zh: "侧边面板看板纵向滚动"
+        title.zh-TW: "側邊面板看板縱向滾動"
         note: Kanban
         type: class-toggle
         description: When enabled, multiple kanban lanes in the side panes can be navigated via scrolling vertically rather than scrolling horizontally.
+        description.zh: "启用后，侧边面板中的多列看板采用纵向滚动，而非横向滚动。"
+        description.zh-TW: "啟用後，側邊面板中的多列看板採用縱向滾動，而非橫向滾動。"
         default: false
     -
         id: PComm007-sp-fitwidth
         title: Fit to Width of Side Panes
+        title.zh: "适应侧边面板宽度"
+        title.zh-TW: "適應側邊面板寬度"
         note: Kanban
         type: class-toggle
         description: When enabled, the kanban lanes in the side panes will fit to the width of the side panes.
+        description.zh: "启用后，看板列适应侧边面板宽度。"
+        description.zh-TW: "啟用後，看板列適應側邊面板寬度。"
         default: false
     -
         id: PComm007-sp-maxheight
         title: Max Height of Vertical Kanban Lane in Side Panes
+        title.zh: "侧边面板纵向看板列最大高度"
+        title.zh-TW: "側邊面板縱向看板列最大高度"
         note: Kanban
         type: variable-number-slider
         description: "Set the maximum height of each kanban lane in the side panes, when vertical."
+        description.zh: "设置侧边面板采用纵向布局时，每个看板列的最大高度。"
+        description.zh-TW: "設定側邊面板採用縱向佈局時，每個看板列的最大高度。"
         default: 33
         min: 5
         max: 100
@@ -11033,23 +11767,35 @@ settings:
     -
         id: PComm007-wp-singlelane
         title: Vertical Scroll Kanbans in Main Workspace Panes
+        title.zh: "主工作区面板看板纵向滚动"
+        title.zh-TW: "主工作區面板看板縱向滾動"
         note: Kanban
         type: class-toggle
         description: When enabled, multiple kanban lanes in the main workspace panes can be navigated via scrolling vertically rather than scrolling horizontally.
+        description.zh: "启用后，主工作区面板中的多列看板采用纵向滚动，而非横向滚动。"
+        description.zh-TW: "啟用後，主工作區面板中的多列看板採用縱向滾動，而非橫向滾動。"
         default: false
     -
         id: PComm007-wp-fitwidth
         title: Fit to Width of Main Workspace Panes
+        title.zh: "适应主工作区面板宽度"
+        title.zh-TW: "適應主工作區面板寬度"
         note: Kanban
         type: class-toggle
         description: When enabled, the kanban lanes in the main workspace panes will fit to the width of the pane.
+        description.zh: "启用后，看板列适应主工作区面板宽度。"
+        description.zh-TW: "啟用後，看板列適應主工作區面板寬度。"
         default: false
     -
         id: PComm007-wp-maxheight
         title: Max Height of Vertical Kanban Lane in Main Workspace Panes
+        title.zh: "主工作区面板纵向看板列最大高度"
+        title.zh-TW: "主工作區面板縱向看板列最大高度"
         note: Kanban
         type: variable-number-slider
         description: "Set the maximum height of each kanban lane in the main workspace panes, when vertical."
+        description.zh: "设置主工作区面板采用纵向布局时，每个看板列的最大高度。"
+        description.zh-TW: "設定主工作區面板採用縱向佈局時，每個看板列的最大高度。"
         default: 33
         min: 5
         max: 100
@@ -11058,6 +11804,8 @@ settings:
     -
      id: PComm002-settings
      title: Sliding Panes
+     title.zh: "Sliding Panes"
+     title.zh-TW: "Sliding Panes"
      description: 
      type: heading
      level: 3
@@ -11065,20 +11813,30 @@ settings:
     -
         id: PComm002-shadow
         title: Re-enable Shadows between Two Panes
+        title.zh: "重新启用两个面板之间的阴影"
+        title.zh-TW: "重新啟用兩個面板之間的陰影"
         note: Sliding Panes
         type: class-toggle
         description: "By default, Willemstad removes Sliding Panes' shadows. This toggle re-enables the shadows between two sliding panes when using the Sliding Panes plugin."
+        description.zh: "Willemstad 默认移除 Sliding Panes 的阴影。启用此项可恢复使用该插件时两个滑动面板之间的阴影。"
+        description.zh-TW: "Willemstad 預設移除 Sliding Panes 的陰影。啟用此項可恢復使用該外掛時兩個滑動面板之間的陰影。"
         default: false
     -
         id: PComm002-rotate-title
         title: Rotate Document Title
+        title.zh: "旋转文档标题"
+        title.zh-TW: "旋轉文件標題"
         note: Sliding Panes
         type: class-toggle
         description: "When enabled, the document title will rotate 180 degrees when using the Sliding Panes plugin. This is useful for right-aligned document titles. Title alignments can be changed in the Editor settings."
+        description.zh: "启用后，使用 Sliding Panes 时文档标题旋转 180 度，适合右对齐的文档标题。标题对齐方式可在编辑器设置中调整。"
+        description.zh-TW: "啟用後，使用 Sliding Panes 時文件標題旋轉 180 度，適合右對齊的文件標題。標題對齊方式可在編輯器設定中調整。"
         default: false
     -
      id: PComm000-settings
      title: Style Settings
+     title.zh: "Style Settings"
+     title.zh-TW: "Style Settings"
      description: 
      type: heading
      level: 3
@@ -11086,13 +11844,19 @@ settings:
     -
         id: PComm000-blockdesc-appear
         title: Keep Header Block Description visible
+        title.zh: "保持标题区块说明可见"
+        title.zh-TW: "保持標題區塊說明可見"
         note: ⚙️ Style Settings
         type: class-toggle
         description: When enabled, this keeps the header description in the Style Settings visible when said option is toggled.
+        description.zh: "启用后，在折叠相关选项时，Style Settings 的标题说明仍保持可见。"
+        description.zh-TW: "啟用後，在摺疊相關選項時，Style Settings 的標題說明仍保持可見。"
         default: true
     -
      id: longform-settings
      title: Longform plugin & Writing CSSClass
+     title.zh: "Longform 插件与写作 CSSClass"
+     title.zh-TW: "Longform 外掛與寫作 CSSClass"
      description: 
      type: heading
      level: 3
@@ -11100,13 +11864,19 @@ settings:
     -    
         id: font-longform
         title: Font Typeface — Longform & Writing notes
+        title.zh: "Longform 与写作笔记字体"
+        title.zh-TW: "Longform 與寫作筆記字型"
         description: "Globally overrides all font typefaces for specific use with longform & writing notes, except for code, which still uses the monospace font."
+        description.zh: "覆盖 Longform 和写作笔记的全部字体，但代码仍使用等宽字体。"
+        description.zh-TW: "覆蓋 Longform 和寫作筆記的全部字型，但程式碼仍使用等寬字型。"
         note: ✍️📕 Longform plugin & Writing CSSClass
         type: variable-text
         default: '"Crimson Pro"'
     -
         id: size-font-longform
         title: Font Size — Longform & Writing notes
+        title.zh: "Longform 与写作笔记字号"
+        title.zh-TW: "Longform 與寫作筆記字級"
         note: ✍️📕 Longform plugin & Writing CSSClass
         type: variable-number-slider
         default: 1.2
@@ -11117,42 +11887,66 @@ settings:
     -
         id: PComm029-text-indent
         title: Text Indentation — Longform & Writing notes
+        title.zh: "Longform 与写作笔记文本缩进"
+        title.zh-TW: "Longform 與寫作筆記文本縮排"
         note: ✍️📕 Longform plugin & Writing CSSClass
         type: class-toggle
         description: When enabled, longform & writing notes will be indented.
+        description.zh: "启用后，Longform 和写作笔记的文本采用缩进。"
+        description.zh-TW: "啟用後，Longform 和寫作筆記的文本採用縮排。"
         default: false
     -
         id: PComm029-justify
         title: Text Justification — Longform & Writing notes
+        title.zh: "Longform 与写作笔记文本两端对齐"
+        title.zh-TW: "Longform 與寫作筆記文本兩端對齊"
         note: ✍️📕 Longform plugin & Writing CSSClass
         type: class-toggle
         description: When enabled, longform & writing notes will be justified.
+        description.zh: "启用后，Longform 和写作笔记的文本采用两端对齐。"
+        description.zh-TW: "啟用後，Longform 和寫作筆記的文本採用兩端對齊。"
         default: false
     -
         id: support-willemstad
         title: Support the development of Willemstad
+        title.zh: "支持 Willemstad 的开发"
+        title.zh-TW: "支援 Willemstad 的開發"
         type: heading
         level: 2
         description: 'Hi! I hope you enjoy Willemstad. There are a few ways you can support its continuing development:'
+        description.zh: "希望你喜欢 Willemstad。可通过以下方式支持主题的持续开发："
+        description.zh-TW: "希望你喜歡 Willemstad。可通過以下方式支援主題的持續開發："
         collapsed: false
     -
         id: support-willemstad-github
         title: Star the repository on Github!
+        title.zh: "在 GitHub 为代码仓库加星！"
+        title.zh-TW: "在 GitHub 為程式碼倉庫加星！"
         type: class-toggle
         default: false
         description: https://github.com/tingmelvin/willemstad-x
+        description.zh: "https://github.com/tingmelvin/willemstad-x"
+        description.zh-TW: "https://github.com/tingmelvin/willemstad-x"
     -
         id: support-willemstad-issue
         title: Submit an issue or a feature request on Github!
+        title.zh: "在 GitHub 提交问题或功能请求！"
+        title.zh-TW: "在 GitHub 提交問題或功能請求！"
         type: class-toggle
         default: false    
         description: https://github.com/tingmelvin/willemstad-x/issues
+        description.zh: "https://github.com/tingmelvin/willemstad-x/issues"
+        description.zh-TW: "https://github.com/tingmelvin/willemstad-x/issues"
     -
         id: support-willemstad-obsidian
         title: Purchase a Catalyst license with Obsidian!
+        title.zh: "购买 Obsidian Catalyst 许可！"
+        title.zh-TW: "購買 Obsidian Catalyst 許可！"
         type: class-toggle
         default: false
         description: https://obsidian.md/pricing
+        description.zh: "https://obsidian.md/pricing"
+        description.zh-TW: "https://obsidian.md/pricing"
 */
 /* ────────────────────────────────────────────────────────────────────────────────
 > WX000
@@ -15987,41 +16781,61 @@ settings:
     -
         id: img-grid
         title: Toggle Image Grid Globally
+        title.zh: "全局启用图片网格"
+        title.zh-TW: "全域啟用圖片網格"
         description: "When enabled, this toggles the Image Grid extension from Minimal, by @kepano, globally. If you would like to use Image Grid for specific notes, you can alternatively use 'img-grid' as a CSSClass for your relevant notes."
+        description.zh: "启用后，全局应用 @kepano 为 Minimal 制作的图片网格扩展。如只需用于特定笔记，可为笔记设置 img-grid CSSClass。"
+        description.zh-TW: "啟用後，全域應用 @kepano 為 Minimal 製作的圖片網格擴充套件。如只需用於特定筆記，可為筆記設定 img-grid CSSClass。"
         type: class-toggle
     -
         id: cards-min-width
         title: Minimum Card Width
+        title.zh: "卡片最小宽度"
+        title.zh-TW: "卡片最小寬度"
         description: Accepts any valid CSS units.
+        description.zh: "接受有效的 CSS 单位。"
+        description.zh-TW: "接受有效的 CSS 單位。"
         type: variable-text
         default: 180px
     - 
         id: cards-max-width
         title: Maximum Card Width
+        title.zh: "卡片最大宽度"
+        title.zh-TW: "卡片最大寬度"
         description: Accepts any valid CSS units, default fills the available width.
+        description.zh: "接受有效的 CSS 单位，默认填满可用宽度。"
+        description.zh-TW: "接受有效的 CSS 單位，預設填滿可用寬度。"
         type: variable-text
         default: 1fr
     - 
         id: cards-padding
         title: Card Padding
+        title.zh: "卡片内边距"
+        title.zh-TW: "卡片內邊距"
         description: 
         type: variable-text
         default: 1.2em
     - 
         id: cards-image-height
         title: Maximum Card Image Height
+        title.zh: "卡片图片最大高度"
+        title.zh-TW: "卡片圖片最大高度"
         description: 
         type: variable-text
         default: 400px
     - 
         id: cards-border-width
         title: Card Border Width
+        title.zh: "卡片边框宽度"
+        title.zh-TW: "卡片邊框寬度"
         description: 
         type: variable-text
         default: 1px
     -  
         id: cards-background
         title: Card Background Colour
+        title.zh: "卡片背景色"
+        title.zh-TW: "卡片背景色"
         type: variable-themed-color
         format: hsl
         default-light: 'hsla(0, 0%, 0%, 0)'
@@ -16029,7 +16843,11 @@ settings:
     -
         id: support-kepano
         title: "Minimal Cards is created by @kepano! Please support him at his Buy Me a Coffee site if you've liked it!"
+        title.zh: "Minimal Cards 由 @kepano 创作。喜欢此功能可在 Buy Me a Coffee 支持他！"
+        title.zh-TW: "Minimal Cards 由 @kepano 創作。喜歡此功能可在 Buy Me a Coffee 支援他！"
         description: https://www.buymeacoffee.com/kepano
+        description.zh: "https://www.buymeacoffee.com/kepano"
+        description.zh-TW: "https://www.buymeacoffee.com/kepano"
         type: class-toggle
         default: false
 */
@@ -16053,26 +16871,38 @@ settings:
     -
         id: readme-adv-settings
         title: I declare I am absolutely sure of what I am doing, and I want to access Advanced Settings.
+        title.zh: "我确定了解这些设置的作用，并希望访问高级设置。"
+        title.zh-TW: "我確定瞭解這些設定的作用，並希望訪問進階設定。"
         type: class-toggle
         description: 
         default: false
     -
      id: adv-settings-frontmatter
      title: "Advanced Settings — Frontmatter"
+     title.zh: "高级设置：Frontmatter"
+     title.zh-TW: "進階設定：Frontmatter"
      type: heading
      level: 2
      collapsed: false
     -
         id: adv-settings-frontmatter-colour
         title: "Coloured YAML Options"
+        title.zh: "彩色 YAML 选项"
+        title.zh-TW: "彩色 YAML 選項"
         description: "The advanced options here are only available and displayed when the Coloured YAML option is checked."
+        description.zh: "仅在启用彩色 YAML 时，才显示并允许使用这些高级选项。"
+        description.zh-TW: "僅在啟用彩色 YAML 時，才顯示並允許使用這些進階選項。"
         type: heading
         level: 3
         collapsed: false
     -
             id: col-frontmatter-default
             title: col-frontmatter-default
+            title.zh: "Frontmatter 默认颜色（col-frontmatter-default）"
+            title.zh-TW: "Frontmatter 預設顏色（col-frontmatter-default）"
             description: "Default Frontmatter Colour. Typically controlled via text-accent-hover's colour."
+            description.zh: "Frontmatter 默认颜色，通常由 text-accent-hover 的颜色控制。"
+            description.zh-TW: "Frontmatter 預設顏色，通常由 text-accent-hover 的顏色控制。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16081,7 +16911,11 @@ settings:
     -
             id: col-frontmatter-atom
             title: col-frontmatter-atom
+            title.zh: "Frontmatter 原子值颜色（col-frontmatter-atom）"
+            title.zh-TW: "Frontmatter 原子值顏色（col-frontmatter-atom）"
             description: "Atom Frontmatter Colour. Typically controlled via text-accent's colour."
+            description.zh: "Frontmatter 原子值颜色，通常由 text-accent 的颜色控制。"
+            description.zh-TW: "Frontmatter 原子值顏色，通常由 text-accent 的顏色控制。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16090,7 +16924,11 @@ settings:
     -
             id: col-frontmatter-meta
             title: col-frontmatter-meta
+            title.zh: "Frontmatter 元数据颜色（col-frontmatter-meta）"
+            title.zh-TW: "Frontmatter 後設資料顏色（col-frontmatter-meta）"
             description: "Meta Frontmatter Colour. Typically controlled via text-accent-hover's colour."
+            description.zh: "Frontmatter 元数据颜色，通常由 text-accent-hover 的颜色控制。"
+            description.zh-TW: "Frontmatter 後設資料顏色，通常由 text-accent-hover 的顏色控制。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16099,7 +16937,11 @@ settings:
     -
             id: col-frontmatter-number
             title: col-frontmatter-number
+            title.zh: "Frontmatter 数字颜色（col-frontmatter-number）"
+            title.zh-TW: "Frontmatter 數字顏色（col-frontmatter-number）"
             description: "Number Frontmatter Colour. Typically controlled via text-accent-hover's colour."
+            description.zh: "Frontmatter 数字颜色，通常由 text-accent-hover 的颜色控制。"
+            description.zh-TW: "Frontmatter 數字顏色，通常由 text-accent-hover 的顏色控制。"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16108,53 +16950,79 @@ settings:
     -
      id: adv-settings-smolfont
      title: "Advanced Settings — Small Fonts"
+     title.zh: "高级设置：小字号"
+     title.zh-TW: "進階設定：小字級"
      type: heading
      level: 2
      collapsed: true
     -
         id: size-font-searchbox
         title: size-font-searchbox
+        title.zh: "搜索框字号（size-font-searchbox）"
+        title.zh-TW: "搜尋框字級（size-font-searchbox）"
         description: "General size controls for all small items. Accepts any valid CSS units"
+        description.zh: "统一控制各类小型元素的字号。接受有效的 CSS 单位。"
+        description.zh-TW: "統一控制各類小型元素的字級。接受有效的 CSS 單位。"
         type: variable-text
         default: 0.9em
     -
         id: size-font-input
         title: size-font-input
+        title.zh: "输入框字号（size-font-input）"
+        title.zh-TW: "輸入框字級（size-font-input）"
         type: variable-text
         default: 'var(--size-font-searchbox)'
     -
         id: size-font-dropdown
         title: size-font-dropdown
+        title.zh: "下拉菜单字号（size-font-dropdown）"
+        title.zh-TW: "下拉選單字級（size-font-dropdown）"
         type: variable-text
         default: 'var(--size-font-searchbox)'        
     -
         id: size-font-select
         title: size-font-select
+        title.zh: "选择控件字号（size-font-select）"
+        title.zh-TW: "選擇控制元件字級（size-font-select）"
         type: variable-text
         default: 'var(--size-font-searchbox)'
     -
         id: size-font-mod-settings-navitem
         title: size-font-mod-settings-navitem
+        title.zh: "设置导航项字号（size-font-mod-settings-navitem）"
+        title.zh-TW: "設定導航項字級（size-font-mod-settings-navitem）"
         description: 'Font size for Settings modal navigation items.' 
+        description.zh: "设置对话框导航项的字号。"
+        description.zh-TW: "設定對話方塊導航項的字級。"
         type: variable-text
         default: 'calc(var(--size-font-searchbox) * 1.1)'        
     -
         id: size-font-mod-settings-grptitle
         title: size-font-mod-settings-grptitle
+        title.zh: "设置分组标题字号（size-font-mod-settings-grptitle）"
+        title.zh-TW: "設定分組標題字級（size-font-mod-settings-grptitle）"
         description: 'Font size for Settings modal header titles ("Options" and "Plugin Options").' 
+        description.zh: "设置对话框分组标题（“选项”和“插件选项”）的字号。"
+        description.zh-TW: "設定對話方塊分組標題（“選項”和“外掛選項”）的字級。"
         type: variable-text
         default: 'var(--size-font-searchbox)'        
     -
     -
      id: adv-settings-col
      title: "Advanced Settings — Colours"
+     title.zh: "高级设置：颜色"
+     title.zh-TW: "進階設定：顏色"
      type: heading
      description: "Ever wanted to change every single element's colour? Here's your chance to do so!"
+     description.zh: "在此逐项自定义各个元素的颜色。"
+     description.zh-TW: "在此逐項自訂各個元素的顏色。"
      level: 2
      collapsed: false
     -
      id: adv-settings-col-bg
      title: "Background"
+     title.zh: "背景"
+     title.zh-TW: "背景"
      type: heading
      description:
      level: 3
@@ -16162,6 +17030,8 @@ settings:
     -
             id: background-primary
             title: background-primary
+            title.zh: "主背景（background-primary）"
+            title.zh-TW: "主背景（background-primary）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16170,6 +17040,8 @@ settings:
     -
             id: background-primary-alt
             title: background-primary-alt
+            title.zh: "主背景变体（background-primary-alt）"
+            title.zh-TW: "主背景變體（background-primary-alt）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16178,6 +17050,8 @@ settings:
     -
             id: background-secondary
             title: background-secondary
+            title.zh: "次背景（background-secondary）"
+            title.zh-TW: "次背景（background-secondary）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16186,6 +17060,8 @@ settings:
     -
             id: background-secondary-alt
             title: background-secondary-alt
+            title.zh: "次背景变体（background-secondary-alt）"
+            title.zh-TW: "次背景變體（background-secondary-alt）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16194,8 +17070,12 @@ settings:
     -
             id: background-primary-contra
             title: background-primary-contra
+            title.zh: "主背景对比色（background-primary-contra）"
+            title.zh-TW: "主背景對比色（background-primary-contra）"
             type: variable-themed-color
             description: 'Applies only for Nord palette.'
+            description.zh: "仅适用于 Nord 配色方案。"
+            description.zh-TW: "僅適用於 Nord 配色方案。"
             opacity: false
             format: hsl
             default-light: hsl(220, 16%, 22%)
@@ -16203,6 +17083,8 @@ settings:
     -
             id: background-modifier-border
             title: background-modifier-border
+            title.zh: "边框颜色（background-modifier-border）"
+            title.zh-TW: "邊框顏色（background-modifier-border）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16211,6 +17093,8 @@ settings:
     -
             id: background-modifier-form-field
             title: background-modifier-form-field
+            title.zh: "表单字段背景（background-modifier-form-field）"
+            title.zh-TW: "表單欄位背景（background-modifier-form-field）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16219,6 +17103,8 @@ settings:
     -
             id: background-modifier-form-field-highlighted
             title: background-modifier-form-field-highlighted
+            title.zh: "高亮表单字段背景（background-modifier-form-field-highlighted）"
+            title.zh-TW: "高亮表單欄位背景（background-modifier-form-field-highlighted）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16227,6 +17113,8 @@ settings:
     -
             id: background-modifier-box-shadow
             title: background-modifier-box-shadow
+            title.zh: "盒阴影颜色（background-modifier-box-shadow）"
+            title.zh-TW: "盒陰影顏色（background-modifier-box-shadow）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16235,6 +17123,8 @@ settings:
     -
             id: background-modifier-success
             title: background-modifier-success
+            title.zh: "成功提示背景（background-modifier-success）"
+            title.zh-TW: "成功提示背景（background-modifier-success）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16243,6 +17133,8 @@ settings:
     -
             id: background-modifier-error
             title: background-modifier-error
+            title.zh: "错误提示背景（background-modifier-error）"
+            title.zh-TW: "錯誤提示背景（background-modifier-error）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16251,6 +17143,8 @@ settings:
     -
             id: background-modifier-error-hover
             title: background-modifier-error-hover
+            title.zh: "错误提示悬停背景（background-modifier-error-hover）"
+            title.zh-TW: "錯誤提示懸停背景（background-modifier-error-hover）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16259,6 +17153,8 @@ settings:
     -
             id: background-modifier-cover
             title: background-modifier-cover
+            title.zh: "遮罩背景（background-modifier-cover）"
+            title.zh-TW: "遮罩背景（background-modifier-cover）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16267,6 +17163,8 @@ settings:
     -
      id: adv-settings-col-text
      title: "Text"
+     title.zh: "文本"
+     title.zh-TW: "文本"
      type: heading
      description:
      level: 3
@@ -16274,6 +17172,8 @@ settings:
     -
             id: text-accent
             title: text-accent
+            title.zh: "文本强调色（text-accent）"
+            title.zh-TW: "文本強調色（text-accent）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16282,6 +17182,8 @@ settings:
     -
             id: text-accent-hover
             title: text-accent-hover
+            title.zh: "文本悬停强调色（text-accent-hover）"
+            title.zh-TW: "文本懸停強調色（text-accent-hover）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16290,6 +17192,8 @@ settings:
     -
             id: text-normal
             title: text-normal
+            title.zh: "普通文本（text-normal）"
+            title.zh-TW: "普通文本（text-normal）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16298,6 +17202,8 @@ settings:
     -
             id: text-muted
             title: text-muted
+            title.zh: "弱化文本（text-muted）"
+            title.zh-TW: "弱化文本（text-muted）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16306,6 +17212,8 @@ settings:
     -
             id: text-faint
             title: text-faint
+            title.zh: "淡色文本（text-faint）"
+            title.zh-TW: "淡色文本（text-faint）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16314,6 +17222,8 @@ settings:
     -
             id: text-error
             title: text-error
+            title.zh: "错误文本（text-error）"
+            title.zh-TW: "錯誤文本（text-error）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16322,6 +17232,8 @@ settings:
     -
             id: text-error-hover
             title: text-error-hover
+            title.zh: "错误文本悬停色（text-error-hover）"
+            title.zh-TW: "錯誤文本懸停色（text-error-hover）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16330,6 +17242,8 @@ settings:
     -
             id: text-selection
             title: text-selection
+            title.zh: "文本选区（text-selection）"
+            title.zh-TW: "文本選區（text-selection）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16338,6 +17252,8 @@ settings:
     -
             id: text-on-accent
             title: text-on-accent
+            title.zh: "强调色背景上的文本（text-on-accent）"
+            title.zh-TW: "強調色背景上的文本（text-on-accent）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16346,6 +17262,8 @@ settings:
     -
      id: adv-settings-col-interactive
      title: "Interactives"
+     title.zh: "交互元素"
+     title.zh-TW: "互動元素"
      type: heading
      description:
      level: 3
@@ -16353,6 +17271,8 @@ settings:
     -
             id: interactive-bg
             title: interactive-bg
+            title.zh: "交互背景（interactive-bg）"
+            title.zh-TW: "互動背景（interactive-bg）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16361,6 +17281,8 @@ settings:
     -
             id: interactive-border-color
             title: interactive-border-color
+            title.zh: "交互边框（interactive-border-color）"
+            title.zh-TW: "互動邊框（interactive-border-color）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16369,6 +17291,8 @@ settings:
     -
             id: interactive-normal
             title: interactive-normal
+            title.zh: "交互元素常态（interactive-normal）"
+            title.zh-TW: "互動元素常態（interactive-normal）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16377,6 +17301,8 @@ settings:
     -
             id: interactive-hover
             title: interactive-hover
+            title.zh: "交互元素悬停态（interactive-hover）"
+            title.zh-TW: "互動元素懸停態（interactive-hover）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16385,6 +17311,8 @@ settings:
     -
             id: interactive-accent
             title: interactive-accent
+            title.zh: "交互强调色（interactive-accent）"
+            title.zh-TW: "互動強調色（interactive-accent）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16393,6 +17321,8 @@ settings:
     -
             id: interactive-accent-hover
             title: interactive-accent-hover
+            title.zh: "交互悬停强调色（interactive-accent-hover）"
+            title.zh-TW: "互動懸停強調色（interactive-accent-hover）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16401,6 +17331,8 @@ settings:
     -
             id: interactive-success
             title: interactive-success
+            title.zh: "交互成功色（interactive-success）"
+            title.zh-TW: "互動成功色（interactive-success）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16409,6 +17341,8 @@ settings:
     -
      id: adv-settings-col-others
      title: "Others"
+     title.zh: "其他"
+     title.zh-TW: "其他"
      type: heading
      description:
      level: 3
@@ -16416,6 +17350,8 @@ settings:
     -
             id: scrollbar-active-thumb-bg
             title: scrollbar-active-thumb-bg
+            title.zh: "活动滚动条滑块背景（scrollbar-active-thumb-bg）"
+            title.zh-TW: "活動捲軸滑塊背景（scrollbar-active-thumb-bg）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16424,6 +17360,8 @@ settings:
     -
             id: scrollbar-bg
             title: scrollbar-bg
+            title.zh: "滚动条背景（scrollbar-bg）"
+            title.zh-TW: "捲軸背景（scrollbar-bg）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16432,6 +17370,8 @@ settings:
     -
             id: scrollbar-thumb-bg
             title: scrollbar-thumb-bg
+            title.zh: "滚动条滑块背景（scrollbar-thumb-bg）"
+            title.zh-TW: "捲軸滑塊背景（scrollbar-thumb-bg）"
             type: variable-themed-color
             opacity: true
             format: hsl
@@ -16440,6 +17380,8 @@ settings:
     -
             id: scroll-hover
             title: scroll-hover
+            title.zh: "滚动条悬停色（scroll-hover）"
+            title.zh-TW: "捲軸懸停色（scroll-hover）"
             type: variable-themed-color
             opacity: false
             format: hsl
@@ -16448,6 +17390,8 @@ settings:
     -
             id: col-selection
             title: col-selection
+            title.zh: "选区颜色（col-selection）"
+            title.zh-TW: "選區顏色（col-selection）"
             type: variable-themed-color
             opacity: false
             format: hsl
