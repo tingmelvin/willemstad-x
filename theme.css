@@ -28150,14 +28150,12 @@ body:is(.ssopt-block-width-pdfembed) .app-container {
 .markdown-reading-view .markdown-preview-view {
   container-type: inline-size;
   container-name: reading-mode;
-  scroll-behavior: smooth;
 }
 
 /* Live Preview Container */
 .view-content .cm-scroller {
   container-type: inline-size;
   container-name: live-preview;
-  scroll-behavior: smooth;
 }
 
 /* 1. TABLES */
