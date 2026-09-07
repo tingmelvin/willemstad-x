@@ -46221,10 +46221,14 @@ settings:
     -
             id: ssopt-status-bar-glass-ui-colours
             title: Use Sidebar Colours for Frosted Status Bar
+            title.zh: "毛玻璃状态栏使用侧边栏配色"
+            title.zh-TW: "毛玻璃狀態列使用側邊欄配色"
             type: class-toggle
             document: DV01-StatusBar
             notes: (Requires a cross-colour UI and a frosted mini status bar)
             description: "Frosted status bars use the editor's text and border colours by default. Enable this when the bar sits over a sidebar to use the contrasting UI colours instead."
+            description.zh: "毛玻璃状态栏默认使用编辑器的文本和边框颜色。若状态栏覆盖侧边栏，启用此项可改用对比界面配色。"
+            description.zh-TW: "毛玻璃狀態列預設使用編輯器的文本和邊框顏色。若狀態列覆蓋側邊欄，啟用此項可改用對比介面配色。"
             default: false
     -
             id: status-bar-glass-blur
