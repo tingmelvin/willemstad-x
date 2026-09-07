@@ -24230,6 +24230,20 @@ body:is(.ssopt-status-bar-glass):not(.no-blur) .status-bar {
   --status-bar-background: transparent;
 }
 
+/* Frosted mini bars expose the editor beneath the cross-colour UI. */
+body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark).ssopt-status-bar-glass:not(.no-blur, .ssopt-status-bar-full, .ssopt-status-bar-glass-ui-colours) .status-bar {
+  --text-normal: inherit;
+  --text-muted: inherit;
+  --text-faint: inherit;
+  --background-modifier-hover: inherit;
+  --divider-color: inherit;
+  --icon-color: inherit;
+  --icon-color-hover: inherit;
+  --icon-color-focused: inherit;
+  --status-bar-text-color: var(--text-muted);
+  --status-bar-border-color: var(--divider-color);
+}
+
 .status-bar-item {
   line-height: var(--line-height-tight); /* overrides the 1 with 1.3 */
   padding: var(--elements-padding);
@@ -33536,6 +33550,14 @@ body:is(.ssopt-status-bar-glass):not(.no-blur) .setting-item.setting-item:where(
   display: grid;
 }
 
+.setting-item.setting-item:where([data-id="ssopt-status-bar-glass-ui-colours"]) {
+  display: none;
+}
+
+body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark).ssopt-status-bar-glass:not(.no-blur, .ssopt-status-bar-full) .setting-item.setting-item:where([data-id="ssopt-status-bar-glass-ui-colours"]) {
+  display: grid;
+}
+
 body:is(.ssopt-status-bar-full) .setting-item.setting-item:where([data-id="status-bar-align"], [data-id="ssopt-status-bar-float-not"], [data-id="status-bar-max-width"], [data-id="ssopt-status-bar-shift-workspace"]) {
   display: none;
 }
@@ -36493,6 +36515,11 @@ body:is(.ssopt-status-bar-float-not) .setting-item[data-id="ssopt-status-bar-gla
 body:is(.ssopt-status-bar-glass):not(.no-blur) .setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-control::before {
   backdrop-filter: blur(var(--status-bar-glass-blur));
   background-color: unset;
+}
+
+body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark).ssopt-status-bar-glass:not(.no-blur, .ssopt-status-bar-full, .ssopt-status-bar-glass-ui-colours) :is(.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info, .setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-control)::before {
+  color: var(--text-muted);
+  border-color: var(--divider-color);
 }
 
 /* --------------------------------------------------------------------------------
@@ -46190,6 +46217,14 @@ settings:
             document: DV01-StatusBar
             notes: (Requires 'No Blur Backdrop Filter' deactivated) 
             description: "When enabled, the status bar will adopt a frosted glass aesthetic."
+            default: false
+    -
+            id: ssopt-status-bar-glass-ui-colours
+            title: Use Sidebar Colours for Frosted Status Bar
+            type: class-toggle
+            document: DV01-StatusBar
+            notes: (Requires a cross-colour UI and a frosted mini status bar)
+            description: "Frosted status bars use the editor's text and border colours by default. Enable this when the bar sits over a sidebar to use the contrasting UI colours instead."
             default: false
     -
             id: status-bar-glass-blur
