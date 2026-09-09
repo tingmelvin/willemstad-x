@@ -1407,6 +1407,7 @@ pax, and tmp variables, which will be defined in other files/stylesheets.
   --background-primary-alt: var(--color-base-10);
   --background-secondary: var(--color-base-20);
   --background-secondary-alt: var(--color-base-25);
+  --workspace-background-translucent: oklch(from var(--background-secondary) l c h / 60%);
   --interactive-normal: var(--color-base-20);
   --interactive-hover: var(--color-base-30);
   --interactive-focus: var(--color-base-40);
@@ -1432,6 +1433,7 @@ pax, and tmp variables, which will be defined in other files/stylesheets.
   --background-primary-alt: var(--color-base-10);
   --background-secondary: var(--color-base-20);
   --background-secondary-alt: var(--color-base-25);
+  --workspace-background-translucent: oklch(from var(--background-secondary) l c h / 60%);
   --interactive-normal: var(--color-base-20);
   --interactive-hover: var(--color-base-30);
   --interactive-focus: var(--color-base-40);
@@ -22405,6 +22407,7 @@ body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.them
 
 body:is(.ssopt-theme-contrast-light.theme-light, .ssopt-theme-contrast-dark.theme-dark) {
   --mobile-sidebar-background: var(--opp-background-primary);
+  --workspace-background-translucent: oklch(from var(--opp-background-secondary) l c h / 60%);
   --titlebar-background: var(--opp-background-secondary);
   --titlebar-background-focused: var(--opp-background-secondary-alt);
   --titlebar-border-color: var(--opp-background-modifier-border);
