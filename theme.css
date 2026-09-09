@@ -28110,7 +28110,7 @@ body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-render
 /* ────────────────────────────────────────────────────────────────────────────────
 > EE01
 \ Editor > Block Widths
-\ Bases and Tables
+\ Content Blocks
 ──────────────────────────────────────────────────────────────────────────────── */
 
 /* Global Block Width Mode + Feature Flags */
@@ -28139,8 +28139,68 @@ body:is(.ssopt-block-width-pdfembed) .app-container {
   --ssopt-bw-pdfembed-enabled: 1;
 }
 
+body.ssopt-block-width-callout .app-container {
+  --ssopt-bw-callout-enabled: 1;
+}
+
+body.ssopt-block-width-columns .app-container {
+  --ssopt-bw-columns-enabled: 1;
+}
+
+body.ssopt-block-width-image-callout .app-container {
+  --ssopt-bw-image-callout-enabled: 1;
+}
+
+body.ssopt-block-width-gallery .app-container {
+  --ssopt-bw-gallery-enabled: 1;
+}
+
+body.ssopt-block-width-image-grid .app-container {
+  --ssopt-bw-image-grid-enabled: 1;
+}
+
+body.ssopt-block-width-image .app-container {
+  --ssopt-bw-image-enabled: 1;
+}
+
+body.ssopt-block-width-video .app-container {
+  --ssopt-bw-video-enabled: 1;
+}
+
+body.ssopt-block-width-audio .app-container {
+  --ssopt-bw-audio-enabled: 1;
+}
+
+body.ssopt-block-width-blockquote .app-container {
+  --ssopt-bw-blockquote-enabled: 1;
+}
+
+body.ssopt-block-width-codeblock .app-container {
+  --ssopt-bw-codeblock-enabled: 1;
+}
+
+body.ssopt-block-width-list .app-container {
+  --ssopt-bw-list-enabled: 1;
+}
+
+body.ssopt-block-width-note-embed .app-container {
+  --ssopt-bw-note-embed-enabled: 1;
+}
+
 @container whole-body (style(--global-block-width-mode: 0)) {
   .app-container {
+    --enable-bw-callout: 0;
+    --enable-bw-columns: 0;
+    --enable-bw-image-callout: 0;
+    --enable-bw-gallery: 0;
+    --enable-bw-image-grid: 0;
+    --enable-bw-image: 0;
+    --enable-bw-video: 0;
+    --enable-bw-audio: 0;
+    --enable-bw-blockquote: 0;
+    --enable-bw-codeblock: 0;
+    --enable-bw-list: 0;
+    --enable-bw-note-embed: 0;
     --enable-bw-table: 0;
     --enable-bw-bases: 0;
     --enable-bw-iframe: 0;
@@ -28150,6 +28210,18 @@ body:is(.ssopt-block-width-pdfembed) .app-container {
 
 @container whole-body (style(--global-block-width-mode: auto)) {
   .app-container {
+    --enable-bw-callout: var(--ssopt-bw-callout-enabled, 0);
+    --enable-bw-columns: var(--ssopt-bw-columns-enabled, 0);
+    --enable-bw-image-callout: var(--ssopt-bw-image-callout-enabled, 0);
+    --enable-bw-gallery: var(--ssopt-bw-gallery-enabled, 0);
+    --enable-bw-image-grid: var(--ssopt-bw-image-grid-enabled, 0);
+    --enable-bw-image: var(--ssopt-bw-image-enabled, 0);
+    --enable-bw-video: var(--ssopt-bw-video-enabled, 0);
+    --enable-bw-audio: var(--ssopt-bw-audio-enabled, 0);
+    --enable-bw-blockquote: var(--ssopt-bw-blockquote-enabled, 0);
+    --enable-bw-codeblock: var(--ssopt-bw-codeblock-enabled, 0);
+    --enable-bw-list: var(--ssopt-bw-list-enabled, 0);
+    --enable-bw-note-embed: var(--ssopt-bw-note-embed-enabled, 0);
     --enable-bw-table: var(--ssopt-bw-table-enabled, 0);
     --enable-bw-bases: var(--ssopt-bw-bases-enabled, 0);
     --enable-bw-iframe: var(--ssopt-bw-iframe-enabled, 0);
@@ -28159,6 +28231,18 @@ body:is(.ssopt-block-width-pdfembed) .app-container {
 
 @container whole-body (style(--global-block-width-mode: 1)) {
   .app-container {
+    --enable-bw-callout: 1;
+    --enable-bw-columns: 1;
+    --enable-bw-image-callout: 1;
+    --enable-bw-gallery: 1;
+    --enable-bw-image-grid: 1;
+    --enable-bw-image: 1;
+    --enable-bw-video: 1;
+    --enable-bw-audio: 1;
+    --enable-bw-blockquote: 1;
+    --enable-bw-codeblock: 1;
+    --enable-bw-list: 1;
+    --enable-bw-note-embed: 1;
     --enable-bw-table: 1;
     --enable-bw-bases: 1;
     --enable-bw-iframe: 1;
@@ -28348,7 +28432,382 @@ body {
   }
 }
 
-/* Block Widths - only Bases and Tables */
+/* Additional top-level block widths. Keep nested content in its parent block. */
+/* Leave the line-number gutter clear when widening Live Preview blocks. */
+.markdown-source-view.mod-cm6 {
+  --bw-source-spare-width: 0px;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width {
+  --bw-source-spare-width: max(0px, 100cqi - var(--file-line-width));
+}
+
+.markdown-source-view.mod-cm6 .cm-contentContainer:has(> .cm-gutters > .cm-lineNumbers) {
+  --bw-source-gutter-cap: calc(100% + var(--bw-source-spare-width) / 2);
+  --bw-source-gutter-margin: 0px;
+}
+
+body {
+  --magnifier-bw-callout: 1.5;
+  --ratio-bw-callout-source: 1;
+  --ratio-bw-callout-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-callout: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-callout:has(> .markdown-rendered > .callout:not([data-callout="aside"], [data-callout="infobox"], [data-callout="note-toolbar"], [data-callout="columns"], [data-callout="images"])):not(:has(> .markdown-rendered > .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-callout: min(calc(100% * var(--magnifier-bw-callout)), calc(100cqi * var(--ratio-bw-callout-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-callout);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-callout)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-div:has(> .callout:not([data-callout="aside"], [data-callout="infobox"], [data-callout="note-toolbar"], [data-callout="columns"], [data-callout="images"])):not(:has(> .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-callout: min(calc(100% * var(--magnifier-bw-callout)), calc(100cqi * var(--ratio-bw-callout-reading)));
+
+      clear: both;
+      width: var(--width-bw-callout);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-callout)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-columns: 1.5;
+  --ratio-bw-columns-source: 1;
+  --ratio-bw-columns-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-columns: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-callout:has(> .markdown-rendered > .callout[data-callout="columns"]):not(:has(> .markdown-rendered > .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-columns: min(calc(100% * var(--magnifier-bw-columns)), calc(100cqi * var(--ratio-bw-columns-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-columns);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-columns)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-div:has(> .callout[data-callout="columns"]):not(:has(> .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-columns: min(calc(100% * var(--magnifier-bw-columns)), calc(100cqi * var(--ratio-bw-columns-reading)));
+
+      clear: both;
+      width: var(--width-bw-columns);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-columns)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-image-callout: 1.5;
+  --ratio-bw-image-callout-source: 1;
+  --ratio-bw-image-callout-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-image-callout: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-callout:has(> .markdown-rendered > .callout[data-callout="images"]:not([data-callout-metadata*="gallery"], [data-callout-metadata*="grid"])):not(:has(> .markdown-rendered > .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-image-callout: min(calc(100% * var(--magnifier-bw-image-callout)), calc(100cqi * var(--ratio-bw-image-callout-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-image-callout);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-image-callout)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-div:has(> .callout[data-callout="images"]:not([data-callout-metadata*="gallery"], [data-callout-metadata*="grid"])):not(:has(> .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-image-callout: min(calc(100% * var(--magnifier-bw-image-callout)), calc(100cqi * var(--ratio-bw-image-callout-reading)));
+
+      clear: both;
+      width: var(--width-bw-image-callout);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-image-callout)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-gallery: 1.5;
+  --ratio-bw-gallery-source: 1;
+  --ratio-bw-gallery-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-gallery: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-callout:has(> .markdown-rendered > .callout[data-callout="images"][data-callout-metadata*="gallery"]:not([data-callout-metadata*="grid"])):not(:has(> .markdown-rendered > .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-gallery: min(calc(100% * var(--magnifier-bw-gallery)), calc(100cqi * var(--ratio-bw-gallery-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-gallery);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-gallery)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-div:has(> .callout[data-callout="images"][data-callout-metadata*="gallery"]:not([data-callout-metadata*="grid"])):not(:has(> .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-gallery: min(calc(100% * var(--magnifier-bw-gallery)), calc(100cqi * var(--ratio-bw-gallery-reading)));
+
+      clear: both;
+      width: var(--width-bw-gallery);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-gallery)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-image-grid: 1.5;
+  --ratio-bw-image-grid-source: 1;
+  --ratio-bw-image-grid-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-image-grid: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-callout:has(> .markdown-rendered > .callout[data-callout="images"][data-callout-metadata*="grid"]):not(:has(> .markdown-rendered > .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-image-grid: min(calc(100% * var(--magnifier-bw-image-grid)), calc(100cqi * var(--ratio-bw-image-grid-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-image-grid);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-image-grid)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-div:has(> .callout[data-callout="images"][data-callout-metadata*="grid"]):not(:has(> .callout:is([data-callout-metadata*="inline"], [data-callout-metadata*="float"], [data-callout-metadata~="fl"], [data-callout-metadata~="fr"], [data-callout-metadata~="left"], [data-callout-metadata~="right"]))) {
+      --width-bw-image-grid: min(calc(100% * var(--magnifier-bw-image-grid)), calc(100cqi * var(--ratio-bw-image-grid-reading)));
+
+      clear: both;
+      width: var(--width-bw-image-grid);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-image-grid)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-image: 1.5;
+  --ratio-bw-image-source: 1;
+  --ratio-bw-image-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-image: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .image-embed:not([width]):not(:has(img[width])),
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line:not(.HyperMD-list-line, .HyperMD-quote) > .image-embed:not([width]):not(:has(img[width])) {
+      --width-bw-image: min(calc(100% * var(--magnifier-bw-image)), calc(100cqi * var(--ratio-bw-image-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      display: block;
+      width: var(--width-bw-image);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-image)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-p > p > .image-embed:not([width]):not(:has(img[width])) {
+      --width-bw-image: min(calc(100% * var(--magnifier-bw-image)), calc(100cqi * var(--ratio-bw-image-reading)));
+
+      clear: both;
+      display: block;
+      width: var(--width-bw-image);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-image)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-video: 1.5;
+  --ratio-bw-video-source: 1;
+  --ratio-bw-video-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-video: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .video-embed:not([width]):not(:has(video[width])),
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line:not(.HyperMD-list-line, .HyperMD-quote) > .video-embed:not([width]):not(:has(video[width])) {
+      --width-bw-video: min(calc(100% * var(--magnifier-bw-video)), calc(100cqi * var(--ratio-bw-video-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      display: block;
+      width: var(--width-bw-video);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-video)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-p > p > .video-embed:not([width]):not(:has(video[width])) {
+      --width-bw-video: min(calc(100% * var(--magnifier-bw-video)), calc(100cqi * var(--ratio-bw-video-reading)));
+
+      clear: both;
+      display: block;
+      width: var(--width-bw-video);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-video)) / 2);
+    }
+  }
+}
+
+@container app-container (style(--enable-bw-video: 1)) {
+  body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .video-embed:not([width]) > video:not([width]),
+  body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line:not(.HyperMD-list-line, .HyperMD-quote) > .video-embed:not([width]) > video:not([width]),
+  body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-p > p > .video-embed:not([width]) > video:not([width]) {
+    width: 100%;
+  }
+}
+
+body {
+  --magnifier-bw-audio: 1.5;
+  --ratio-bw-audio-source: 1;
+  --ratio-bw-audio-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-audio: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .audio-embed,
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line:not(.HyperMD-list-line, .HyperMD-quote) > .audio-embed {
+      --width-bw-audio: min(calc(100% * var(--magnifier-bw-audio)), calc(100cqi * var(--ratio-bw-audio-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      display: block;
+      width: var(--width-bw-audio);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-audio)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-p > p > .audio-embed {
+      --width-bw-audio: min(calc(100% * var(--magnifier-bw-audio)), calc(100cqi * var(--ratio-bw-audio-reading)));
+
+      clear: both;
+      display: block;
+      width: var(--width-bw-audio);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-audio)) / 2);
+    }
+  }
+}
+
+@container app-container (style(--enable-bw-audio: 1)) {
+  body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .audio-embed > audio:not([width]),
+  body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line:not(.HyperMD-list-line, .HyperMD-quote) > .audio-embed > audio:not([width]),
+  body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-p > p > .audio-embed > audio:not([width]) {
+    width: 100%;
+  }
+}
+
+body {
+  --magnifier-bw-blockquote: 1.5;
+  --ratio-bw-blockquote-source: 1;
+  --ratio-bw-blockquote-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-blockquote: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line.HyperMD-quote:not(.HyperMD-callout, .HyperMD-codeblock) {
+      --width-bw-blockquote: min(calc(100% * var(--magnifier-bw-blockquote)), calc(100cqi * var(--ratio-bw-blockquote-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-blockquote);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-blockquote)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-blockquote:not(:has(> .callout)) {
+      --width-bw-blockquote: min(calc(100% * var(--magnifier-bw-blockquote)), calc(100cqi * var(--ratio-bw-blockquote-reading)));
+
+      clear: both;
+      width: var(--width-bw-blockquote);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-blockquote)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-codeblock: 1.5;
+  --ratio-bw-codeblock-source: 1;
+  --ratio-bw-codeblock-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-codeblock: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line.HyperMD-codeblock:not(.HyperMD-quote, .HyperMD-list-line) {
+      --width-bw-codeblock: min(calc(100% * var(--magnifier-bw-codeblock)), calc(100cqi * var(--ratio-bw-codeblock-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-codeblock);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-codeblock)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-pre {
+      --width-bw-codeblock: min(calc(100% * var(--magnifier-bw-codeblock)), calc(100cqi * var(--ratio-bw-codeblock-reading)));
+
+      clear: both;
+      width: var(--width-bw-codeblock);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-codeblock)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-list: 1.5;
+  --ratio-bw-list-source: 1;
+  --ratio-bw-list-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-list: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .cm-line.HyperMD-list-line:not(.HyperMD-quote, .HyperMD-codeblock) {
+      --width-bw-list: min(calc(100% * var(--magnifier-bw-list)), calc(100cqi * var(--ratio-bw-list-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-list);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-list)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-ul,
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-ol {
+      --width-bw-list: min(calc(100% * var(--magnifier-bw-list)), calc(100cqi * var(--ratio-bw-list-reading)));
+
+      clear: both;
+      width: var(--width-bw-list);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-list)) / 2);
+    }
+  }
+}
+
+body {
+  --magnifier-bw-note-embed: 1.5;
+  --ratio-bw-note-embed-source: 1;
+  --ratio-bw-note-embed-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-note-embed: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6.is-live-preview .cm-content:not(.markdown-embed *) > .markdown-embed {
+      --width-bw-note-embed: min(calc(100% * var(--magnifier-bw-note-embed)), calc(100cqi * var(--ratio-bw-note-embed-source)), var(--bw-source-gutter-cap, 100cqi));
+
+      width: var(--width-bw-note-embed);
+      max-width: none;
+      margin-inline: var(--bw-source-gutter-margin, calc((100% - var(--width-bw-note-embed)) / 2)) !important;
+    }
+  }
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view > .markdown-preview-view > .markdown-preview-section > .el-p > p > .markdown-embed {
+      --width-bw-note-embed: min(calc(100% * var(--magnifier-bw-note-embed)), calc(100cqi * var(--ratio-bw-note-embed-reading)));
+
+      clear: both;
+      width: var(--width-bw-note-embed);
+      max-width: none;
+      margin-inline: calc((100% - var(--width-bw-note-embed)) / 2);
+    }
+  }
+}
 
 /* ────────────────────────────────────────────────────────────────────────────────
 > EF01
@@ -33429,6 +33888,73 @@ body:not(.ssopt-block-width-iframe) .setting-item:where([data-id="magnifier-bw-i
 
 body:not(.ssopt-block-width-pdfembed) .setting-item:where([data-id="magnifier-bw-pdfembed"], [data-id="ratio-bw-pdfembed-source"], [data-id="ratio-bw-pdfembed-reading"]) {
   display: none;
+}
+
+body:not(.ssopt-block-width-callout) .setting-item:where([data-id="magnifier-bw-callout"], [data-id="ratio-bw-callout-source"], [data-id="ratio-bw-callout-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-columns) .setting-item:where([data-id="magnifier-bw-columns"], [data-id="ratio-bw-columns-source"], [data-id="ratio-bw-columns-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-image-callout) .setting-item:where([data-id="magnifier-bw-image-callout"], [data-id="ratio-bw-image-callout-source"], [data-id="ratio-bw-image-callout-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-gallery) .setting-item:where([data-id="magnifier-bw-gallery"], [data-id="ratio-bw-gallery-source"], [data-id="ratio-bw-gallery-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-image-grid) .setting-item:where([data-id="magnifier-bw-image-grid"], [data-id="ratio-bw-image-grid-source"], [data-id="ratio-bw-image-grid-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-image) .setting-item:where([data-id="magnifier-bw-image"], [data-id="ratio-bw-image-source"], [data-id="ratio-bw-image-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-video) .setting-item:where([data-id="magnifier-bw-video"], [data-id="ratio-bw-video-source"], [data-id="ratio-bw-video-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-audio) .setting-item:where([data-id="magnifier-bw-audio"], [data-id="ratio-bw-audio-source"], [data-id="ratio-bw-audio-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-blockquote) .setting-item:where([data-id="magnifier-bw-blockquote"], [data-id="ratio-bw-blockquote-source"], [data-id="ratio-bw-blockquote-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-codeblock) .setting-item:where([data-id="magnifier-bw-codeblock"], [data-id="ratio-bw-codeblock-source"], [data-id="ratio-bw-codeblock-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-list) .setting-item:where([data-id="magnifier-bw-list"], [data-id="ratio-bw-list-source"], [data-id="ratio-bw-list-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-note-embed) .setting-item:where([data-id="magnifier-bw-note-embed"], [data-id="ratio-bw-note-embed-source"], [data-id="ratio-bw-note-embed-reading"]) {
+  display: none;
+}
+
+@container whole-body (style(--global-block-width-mode: 0)) {
+  .setting-item.setting-item.setting-item:where([data-id="magnifier-bw-callout"], [data-id="ratio-bw-callout-source"], [data-id="ratio-bw-callout-reading"], [data-id="magnifier-bw-columns"], [data-id="ratio-bw-columns-source"], [data-id="ratio-bw-columns-reading"], [data-id="magnifier-bw-image-callout"], [data-id="ratio-bw-image-callout-source"], [data-id="ratio-bw-image-callout-reading"], [data-id="magnifier-bw-gallery"], [data-id="ratio-bw-gallery-source"], [data-id="ratio-bw-gallery-reading"], [data-id="magnifier-bw-image-grid"], [data-id="ratio-bw-image-grid-source"], [data-id="ratio-bw-image-grid-reading"], [data-id="magnifier-bw-image"], [data-id="ratio-bw-image-source"], [data-id="ratio-bw-image-reading"], [data-id="magnifier-bw-video"], [data-id="ratio-bw-video-source"], [data-id="ratio-bw-video-reading"], [data-id="magnifier-bw-audio"], [data-id="ratio-bw-audio-source"], [data-id="ratio-bw-audio-reading"], [data-id="magnifier-bw-blockquote"], [data-id="ratio-bw-blockquote-source"], [data-id="ratio-bw-blockquote-reading"], [data-id="magnifier-bw-codeblock"], [data-id="ratio-bw-codeblock-source"], [data-id="ratio-bw-codeblock-reading"], [data-id="magnifier-bw-list"], [data-id="ratio-bw-list-source"], [data-id="ratio-bw-list-reading"], [data-id="magnifier-bw-note-embed"], [data-id="ratio-bw-note-embed-source"], [data-id="ratio-bw-note-embed-reading"]) {
+    display: none;
+  }
+
+  .setting-item.setting-item.setting-item:where([data-id="ssopt-block-width-callout"], [data-id="ssopt-block-width-columns"], [data-id="ssopt-block-width-image-callout"], [data-id="ssopt-block-width-gallery"], [data-id="ssopt-block-width-image-grid"], [data-id="ssopt-block-width-image"], [data-id="ssopt-block-width-video"], [data-id="ssopt-block-width-audio"], [data-id="ssopt-block-width-blockquote"], [data-id="ssopt-block-width-codeblock"], [data-id="ssopt-block-width-list"], [data-id="ssopt-block-width-note-embed"]) {
+    display: none;
+  }
+}
+@container whole-body (style(--global-block-width-mode: 1)) {
+  .setting-item.setting-item.setting-item:where([data-id="magnifier-bw-callout"], [data-id="ratio-bw-callout-source"], [data-id="ratio-bw-callout-reading"], [data-id="magnifier-bw-columns"], [data-id="ratio-bw-columns-source"], [data-id="ratio-bw-columns-reading"], [data-id="magnifier-bw-image-callout"], [data-id="ratio-bw-image-callout-source"], [data-id="ratio-bw-image-callout-reading"], [data-id="magnifier-bw-gallery"], [data-id="ratio-bw-gallery-source"], [data-id="ratio-bw-gallery-reading"], [data-id="magnifier-bw-image-grid"], [data-id="ratio-bw-image-grid-source"], [data-id="ratio-bw-image-grid-reading"], [data-id="magnifier-bw-image"], [data-id="ratio-bw-image-source"], [data-id="ratio-bw-image-reading"], [data-id="magnifier-bw-video"], [data-id="ratio-bw-video-source"], [data-id="ratio-bw-video-reading"], [data-id="magnifier-bw-audio"], [data-id="ratio-bw-audio-source"], [data-id="ratio-bw-audio-reading"], [data-id="magnifier-bw-blockquote"], [data-id="ratio-bw-blockquote-source"], [data-id="ratio-bw-blockquote-reading"], [data-id="magnifier-bw-codeblock"], [data-id="ratio-bw-codeblock-source"], [data-id="ratio-bw-codeblock-reading"], [data-id="magnifier-bw-list"], [data-id="ratio-bw-list-source"], [data-id="ratio-bw-list-reading"], [data-id="magnifier-bw-note-embed"], [data-id="ratio-bw-note-embed-source"], [data-id="ratio-bw-note-embed-reading"]) {
+    display: grid;
+  }
+
+  .setting-item.setting-item.setting-item:where([data-id="ssopt-block-width-callout"], [data-id="ssopt-block-width-columns"], [data-id="ssopt-block-width-image-callout"], [data-id="ssopt-block-width-gallery"], [data-id="ssopt-block-width-image-grid"], [data-id="ssopt-block-width-image"], [data-id="ssopt-block-width-video"], [data-id="ssopt-block-width-audio"], [data-id="ssopt-block-width-blockquote"], [data-id="ssopt-block-width-codeblock"], [data-id="ssopt-block-width-list"], [data-id="ssopt-block-width-note-embed"]) {
+    display: none;
+  }
 }
 
 /* ──────────────────────────────────────────────────────────────────────────── */
@@ -47481,9 +48007,9 @@ settings:
         title.zh: "内容块宽度说明"
         title.zh-TW: "內容塊寬度說明"
         type: info-text
-        description: "Block Widths are an optional feature and must be enabled to take effect. This feature is being progressively implemented and is currently available for **Bases**, **Tables**, **iFrames**, and **PDF Embeds**."
-        description.zh: "内容块宽度功能需要启用后才会生效。此功能正在逐步实现，目前支持**数据库（Bases）**、**表格**、**iFrame** 和**嵌入 PDF**。"
-        description.zh-TW: "內容塊寬度功能需要啟用後才會生效。此功能正在逐步實現，目前支援**資料庫（Bases）**、**表格**、**iFrame** 和**嵌入 PDF**。"
+        description: "Block Widths are optional and must be enabled to take effect. Controls are available for **Bases**, **Tables**, **iFrames**, **PDF Embeds**, **Callouts**, **Images**, **Video**, **Audio**, **Blockquotes**, **Code Blocks**, **Lists**, and **Note Embeds**. Additional controls below apply in Live Preview and Reading Mode; Source Mode keeps its normal text layout."
+        description.zh: "内容块宽度功能需要启用后才会生效。当前支持**数据库（Bases）**、**表格**、**iFrame**、**嵌入 PDF**、**标注**、**图片**、**视频**、**音频**、**引用块**、**代码块**、**列表**及**嵌入笔记**。下方新增控件适用于实时预览和阅读模式；源码模式保留原有文本布局。"
+        description.zh-TW: "內容塊寬度功能需要啟用後才會生效。當前支援**資料庫（Bases）**、**表格**、**iFrame**、**嵌入 PDF**、**標註**、**圖片**、**影片**、**音訊**、**引用塊**、**程式碼塊**、**列表**及**嵌入筆記**。下方新增控制元件適用於即時預覽和閱讀模式；原始碼模式保留原有文本佈局。"
         markdown: true
     -
         id: global-block-width-mode
@@ -47506,6 +48032,698 @@ settings:
             -
                 label: "Force All Off"
                 value: '0'
+    -
+        id: additional-block-widths
+        title: Additional Block Widths
+        title.zh: "更多内容块宽度设置"
+        title.zh-TW: "更多內容塊寬度設定"
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: block-width-settings-callout
+        title: Standard Callouts Widths
+        title.zh: "标准标注宽度"
+        title.zh-TW: "標準標註寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-callout
+        title: Enable Block Widths for Standard Callouts
+        title.zh: "启用标准标注内容块宽度"
+        title.zh-TW: "啟用標準標註內容塊寬度"
+        type: class-toggle
+        description: "Rendered standard and custom callouts, excluding aside, infobox, note-toolbar and floating callouts."
+        description.zh: "已渲染的标准与自定义标注，不包括 aside、infobox、note-toolbar 和浮动标注。"
+        description.zh-TW: "已渲染的標準與自訂標註，不包括 aside、infobox、note-toolbar 和浮動標註。"
+        default: false
+    -
+        id: magnifier-bw-callout
+        title: "Standard Callouts Content Width Magnifier"
+        title.zh: "标准标注内容宽度放大倍数"
+        title.zh-TW: "標準標註內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-callout-source
+        title: "Standard Callouts Max Width Ratio (Live Preview)"
+        title.zh: "标准标注最大宽度比例（实时预览）"
+        title.zh-TW: "標準標註最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-callout-reading
+        title: "Standard Callouts Max Width Ratio (Reading Mode)"
+        title.zh: "标准标注最大宽度比例（阅读模式）"
+        title.zh-TW: "標準標註最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-columns
+        title: Columns Callouts Widths
+        title.zh: "分栏标注宽度"
+        title.zh-TW: "分欄標註寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-columns
+        title: Enable Block Widths for Columns Callouts
+        title.zh: "启用分栏标注内容块宽度"
+        title.zh-TW: "啟用分欄標註內容塊寬度"
+        type: class-toggle
+        description: "Top-level columns callouts. Nested columns retain their own layout."
+        description.zh: "笔记顶层的分栏标注。嵌套的分栏保留自身布局。"
+        description.zh-TW: "筆記頂層的分欄標註。巢狀的分欄保留自身佈局。"
+        default: false
+    -
+        id: magnifier-bw-columns
+        title: "Columns Callouts Content Width Magnifier"
+        title.zh: "分栏标注内容宽度放大倍数"
+        title.zh-TW: "分欄標註內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-columns-source
+        title: "Columns Callouts Max Width Ratio (Live Preview)"
+        title.zh: "分栏标注最大宽度比例（实时预览）"
+        title.zh-TW: "分欄標註最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-columns-reading
+        title: "Columns Callouts Max Width Ratio (Reading Mode)"
+        title.zh: "分栏标注最大宽度比例（阅读模式）"
+        title.zh-TW: "分欄標註最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-image-callout
+        title: Image Callouts Widths
+        title.zh: "图片标注宽度"
+        title.zh-TW: "圖片標註寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-image-callout
+        title: Enable Block Widths for Image Callouts
+        title.zh: "启用图片标注内容块宽度"
+        title.zh-TW: "啟用圖片標註內容塊寬度"
+        type: class-toggle
+        description: "Plain images callouts; galleries and image grids have separate controls."
+        description.zh: "普通图片标注；画廊和图片网格使用各自的独立设置。"
+        description.zh-TW: "普通圖片標註；畫廊和圖片網格使用各自的獨立設定。"
+        default: false
+    -
+        id: magnifier-bw-image-callout
+        title: "Image Callouts Content Width Magnifier"
+        title.zh: "图片标注内容宽度放大倍数"
+        title.zh-TW: "圖片標註內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-image-callout-source
+        title: "Image Callouts Max Width Ratio (Live Preview)"
+        title.zh: "图片标注最大宽度比例（实时预览）"
+        title.zh-TW: "圖片標註最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-image-callout-reading
+        title: "Image Callouts Max Width Ratio (Reading Mode)"
+        title.zh: "图片标注最大宽度比例（阅读模式）"
+        title.zh-TW: "圖片標註最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-gallery
+        title: Gallery Callouts Widths
+        title.zh: "画廊式图片标注宽度"
+        title.zh-TW: "畫廊式圖片標註寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-gallery
+        title: Enable Block Widths for Gallery Callouts
+        title.zh: "启用画廊式图片标注内容块宽度"
+        title.zh-TW: "啟用畫廊式圖片標註內容塊寬度"
+        type: class-toggle
+        description: "Gallery callouts using [!images|gallery]."
+        description.zh: "使用 [!images|gallery] 语法的画廊标注。"
+        description.zh-TW: "使用 [!images|gallery] 語法的畫廊標註。"
+        default: false
+    -
+        id: magnifier-bw-gallery
+        title: "Gallery Callouts Content Width Magnifier"
+        title.zh: "画廊式图片标注内容宽度放大倍数"
+        title.zh-TW: "畫廊式圖片標註內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-gallery-source
+        title: "Gallery Callouts Max Width Ratio (Live Preview)"
+        title.zh: "画廊式图片标注最大宽度比例（实时预览）"
+        title.zh-TW: "畫廊式圖片標註最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-gallery-reading
+        title: "Gallery Callouts Max Width Ratio (Reading Mode)"
+        title.zh: "画廊式图片标注最大宽度比例（阅读模式）"
+        title.zh-TW: "畫廊式圖片標註最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-image-grid
+        title: Image Grid Callouts Widths
+        title.zh: "网格式图片标注宽度"
+        title.zh-TW: "網格式圖片標註寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-image-grid
+        title: Enable Block Widths for Image Grid Callouts
+        title.zh: "启用网格式图片标注内容块宽度"
+        title.zh-TW: "啟用網格式圖片標註內容塊寬度"
+        type: class-toggle
+        description: "Image grid callouts using [!images|grid]."
+        description.zh: "使用 [!images|grid] 语法的图片网格标注。"
+        description.zh-TW: "使用 [!images|grid] 語法的圖片網格標註。"
+        default: false
+    -
+        id: magnifier-bw-image-grid
+        title: "Image Grid Callouts Content Width Magnifier"
+        title.zh: "网格式图片标注内容宽度放大倍数"
+        title.zh-TW: "網格式圖片標註內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-image-grid-source
+        title: "Image Grid Callouts Max Width Ratio (Live Preview)"
+        title.zh: "网格式图片标注最大宽度比例（实时预览）"
+        title.zh-TW: "網格式圖片標註最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-image-grid-reading
+        title: "Image Grid Callouts Max Width Ratio (Reading Mode)"
+        title.zh: "网格式图片标注最大宽度比例（阅读模式）"
+        title.zh-TW: "網格式圖片標註最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-image
+        title: Images Widths
+        title.zh: "图片宽度"
+        title.zh-TW: "圖片寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-image
+        title: Enable Block Widths for Images
+        title.zh: "启用图片内容块宽度"
+        title.zh-TW: "啟用圖片內容塊寬度"
+        type: class-toggle
+        description: "Top-level embedded images. Explicit image widths and images inside callouts or embedded notes are preserved."
+        description.zh: "笔记顶层的嵌入图片。保留显式设置的图片宽度，以及标注或嵌入笔记内图片的原有布局。"
+        description.zh-TW: "筆記頂層的嵌入圖片。保留顯式設定的圖片寬度，以及標註或嵌入筆記內圖片的原有佈局。"
+        default: false
+    -
+        id: magnifier-bw-image
+        title: "Images Content Width Magnifier"
+        title.zh: "图片内容宽度放大倍数"
+        title.zh-TW: "圖片內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-image-source
+        title: "Images Max Width Ratio (Live Preview)"
+        title.zh: "图片最大宽度比例（实时预览）"
+        title.zh-TW: "圖片最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-image-reading
+        title: "Images Max Width Ratio (Reading Mode)"
+        title.zh: "图片最大宽度比例（阅读模式）"
+        title.zh-TW: "圖片最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-video
+        title: Videos Widths
+        title.zh: "视频宽度"
+        title.zh-TW: "影片寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-video
+        title: Enable Block Widths for Videos
+        title.zh: "启用视频内容块宽度"
+        title.zh-TW: "啟用影片內容塊寬度"
+        type: class-toggle
+        description: "Top-level embedded video files. Explicit video widths are preserved."
+        description.zh: "笔记顶层的嵌入视频文件。保留显式设置的视频宽度。"
+        description.zh-TW: "筆記頂層的嵌入影片檔案。保留顯式設定的影片寬度。"
+        default: false
+    -
+        id: magnifier-bw-video
+        title: "Videos Content Width Magnifier"
+        title.zh: "视频内容宽度放大倍数"
+        title.zh-TW: "影片內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-video-source
+        title: "Videos Max Width Ratio (Live Preview)"
+        title.zh: "视频最大宽度比例（实时预览）"
+        title.zh-TW: "影片最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-video-reading
+        title: "Videos Max Width Ratio (Reading Mode)"
+        title.zh: "视频最大宽度比例（阅读模式）"
+        title.zh-TW: "影片最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-audio
+        title: Audio Widths
+        title.zh: "音频宽度"
+        title.zh-TW: "音訊寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-audio
+        title: Enable Block Widths for Audio
+        title.zh: "启用音频内容块宽度"
+        title.zh-TW: "啟用音訊內容塊寬度"
+        type: class-toggle
+        description: "Top-level embedded audio players."
+        description.zh: "笔记顶层的嵌入音频播放器。"
+        description.zh-TW: "筆記頂層的嵌入音訊播放器。"
+        default: false
+    -
+        id: magnifier-bw-audio
+        title: "Audio Content Width Magnifier"
+        title.zh: "音频内容宽度放大倍数"
+        title.zh-TW: "音訊內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-audio-source
+        title: "Audio Max Width Ratio (Live Preview)"
+        title.zh: "音频最大宽度比例（实时预览）"
+        title.zh-TW: "音訊最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-audio-reading
+        title: "Audio Max Width Ratio (Reading Mode)"
+        title.zh: "音频最大宽度比例（阅读模式）"
+        title.zh-TW: "音訊最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-blockquote
+        title: Blockquotes Widths
+        title.zh: "引用块宽度"
+        title.zh-TW: "引用塊寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-blockquote
+        title: Enable Block Widths for Blockquotes
+        title.zh: "启用引用块内容块宽度"
+        title.zh-TW: "啟用引用塊內容塊寬度"
+        type: class-toggle
+        description: "Top-level blockquotes in Live Preview and Reading Mode."
+        description.zh: "实时预览和阅读模式中笔记顶层的引用块。"
+        description.zh-TW: "即時預覽和閱讀模式中筆記頂層的引用塊。"
+        default: false
+    -
+        id: magnifier-bw-blockquote
+        title: "Blockquotes Content Width Magnifier"
+        title.zh: "引用块内容宽度放大倍数"
+        title.zh-TW: "引用塊內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-blockquote-source
+        title: "Blockquotes Max Width Ratio (Live Preview)"
+        title.zh: "引用块最大宽度比例（实时预览）"
+        title.zh-TW: "引用塊最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-blockquote-reading
+        title: "Blockquotes Max Width Ratio (Reading Mode)"
+        title.zh: "引用块最大宽度比例（阅读模式）"
+        title.zh-TW: "引用塊最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-codeblock
+        title: Code Blocks Widths
+        title.zh: "代码块宽度"
+        title.zh-TW: "程式碼塊寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-codeblock
+        title: Enable Block Widths for Code Blocks
+        title.zh: "启用代码块内容块宽度"
+        title.zh-TW: "啟用程式碼塊內容塊寬度"
+        type: class-toggle
+        description: "Fenced code blocks in Live Preview and Reading Mode."
+        description.zh: "实时预览和阅读模式中使用围栏语法的代码块。"
+        description.zh-TW: "即時預覽和閱讀模式中使用圍欄語法的程式碼塊。"
+        default: false
+    -
+        id: magnifier-bw-codeblock
+        title: "Code Blocks Content Width Magnifier"
+        title.zh: "代码块内容宽度放大倍数"
+        title.zh-TW: "程式碼塊內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-codeblock-source
+        title: "Code Blocks Max Width Ratio (Live Preview)"
+        title.zh: "代码块最大宽度比例（实时预览）"
+        title.zh-TW: "程式碼塊最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-codeblock-reading
+        title: "Code Blocks Max Width Ratio (Reading Mode)"
+        title.zh: "代码块最大宽度比例（阅读模式）"
+        title.zh-TW: "程式碼塊最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-list
+        title: Lists Widths
+        title.zh: "列表宽度"
+        title.zh-TW: "列表寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-list
+        title: Enable Block Widths for Lists
+        title.zh: "启用列表内容块宽度"
+        title.zh-TW: "啟用列表內容塊寬度"
+        type: class-toggle
+        description: "Lists in Live Preview and Reading Mode; nested Reading Mode lists stay within their parent."
+        description.zh: "实时预览和阅读模式中的列表；阅读模式下的嵌套列表保持在父列表范围内。"
+        description.zh-TW: "即時預覽和閱讀模式中的列表；閱讀模式下的巢狀列表保持在父列表範圍內。"
+        default: false
+    -
+        id: magnifier-bw-list
+        title: "Lists Content Width Magnifier"
+        title.zh: "列表内容宽度放大倍数"
+        title.zh-TW: "列表內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-list-source
+        title: "Lists Max Width Ratio (Live Preview)"
+        title.zh: "列表最大宽度比例（实时预览）"
+        title.zh-TW: "列表最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-list-reading
+        title: "Lists Max Width Ratio (Reading Mode)"
+        title.zh: "列表最大宽度比例（阅读模式）"
+        title.zh-TW: "列表最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
+    -
+        id: block-width-settings-note-embed
+        title: Note Embeds Widths
+        title.zh: "嵌入笔记宽度"
+        title.zh-TW: "嵌入筆記寬度"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-block-width-note-embed
+        title: Enable Block Widths for Note Embeds
+        title.zh: "启用嵌入笔记内容块宽度"
+        title.zh-TW: "啟用嵌入筆記內容塊寬度"
+        type: class-toggle
+        description: "Top-level note embeds, including heading and block embeds. The embedded note contents retain their own layout."
+        description.zh: "笔记顶层的嵌入笔记，包括嵌入的标题章节和内容块。嵌入笔记内部的内容保留自身布局。"
+        description.zh-TW: "筆記頂層的嵌入筆記，包括嵌入的標題章節和內容塊。嵌入筆記內部的內容保留自身佈局。"
+        default: false
+    -
+        id: magnifier-bw-note-embed
+        title: "Note Embeds Content Width Magnifier"
+        title.zh: "嵌入笔记内容宽度放大倍数"
+        title.zh-TW: "嵌入筆記內容寬度放大倍數"
+        type: variable-number-slider
+        description: "Width relative to the note's line length. The maximum width ratio limits this to the available pane."
+        description.zh: "相对于笔记行宽的宽度倍数。最大宽度比例会将其限制在面板可用宽度内。"
+        description.zh-TW: "相對於筆記行寬的寬度倍數。最大寬度比例會將其限制在面板可用寬度內。"
+        min: 0.5
+        max: 3
+        step: 0.05
+        default: 1.5
+    -
+        id: ratio-bw-note-embed-source
+        title: "Note Embeds Max Width Ratio (Live Preview)"
+        title.zh: "嵌入笔记最大宽度比例（实时预览）"
+        title.zh-TW: "嵌入筆記最大寬度比例（即時預覽）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 1
+    -
+        id: ratio-bw-note-embed-reading
+        title: "Note Embeds Max Width Ratio (Reading Mode)"
+        title.zh: "嵌入笔记最大宽度比例（阅读模式）"
+        title.zh-TW: "嵌入筆記最大寬度比例（閱讀模式）"
+        type: variable-number-slider
+        description: "Maximum width as a ratio of the available pane, excluding its margins."
+        description.zh: "最大宽度占面板可用宽度的比例，不包括面板外边距。"
+        description.zh-TW: "最大寬度佔面板可用寬度的比例，不包括面板外邊距。"
+        min: 0.5
+        max: 1
+        step: 0.01
+        default: 0.96
     -
         id: document-titlebar
         title: Document Titlebar
