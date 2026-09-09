@@ -52,6 +52,11 @@ This theme uses assets/colour palettes and fonts all publicly available and open
 ## Theme Documentation
 Available [here](https://willemstad.cc).
 
+Repository guides: [Cross-Colour UI](docs/cross-colour-ui.md),
+[Focused and Super Focused Mode](docs/focused-mode.md),
+[PDF viewing and embeds](docs/pdf-viewer.md), and
+[Style Settings recovery](docs/style-settings-recovery.md).
+
 ### Just another word
 Having a theme out within 2.5 weeks of trying to do something with CSS (from the time I left [Sanctum](https://github.com/jdanielmourao/obsidian-sanctum), which I honestly think [jdaniel](https://github.com/jdanielmourao) did an amazing job with) is probably something I didn't think was possible even a week before this was published.
 That being said, [Chris](https://github.com/chrisgrieser) (of [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) fame), [Cecilia](https://github.com/ceciliamay) (of [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) fame), and [SlRvB](https://github.com/SlRvb) (of [ITS Theme](https://github.com/SlRvb/Obsidian--ITS-Theme) fame) prophesied I would end up with a theme and had more faith in me than I did. I owe them a word of thanks. Thanks y'all, and I hope I didn't let anyone of you down. :blush:
