@@ -1,0 +1,77 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC120
+\ Plugins > Community
+\ Smaller General
+    \\ PComm130 | LanguageTool Integration
+    \\ PComm131 | Vault Statistics
+    \\ PComm132 | Theme Picker
+    \\ PComm133 | Focus Mode
+    \\ PComm134 | CSS Editor
+    \\ PComm135 | Pixel Pets
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Vault Statistics]
+\\ (NOMEN | PComm131)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING Status Bar
+    ──────────────────────────────────────────────────────────────────────────── */
+.obsidian-vault-statistics--item {
+  margin-left: 0;
+} /* extraneous margin */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Theme Picker]
+\\ (NOMEN | PComm132)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING Status Bar
+    ──────────────────────────────────────────────────────────────────────────── */
+.status-bar-item.plugin-theme-picker {
+  padding: 0;
+  gap: calc(0.5 * var(--header-margin)); /* follow from the bottom */
+}
+
+.status-bar-item.plugin-theme-picker .theme-picker-color-scheme-icon svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  transform: translate(-1px, -1px);
+
+  /* FIX */
+  overflow: visible; /* better */
+
+  --icon-size: var(--header-icon-size);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> Hide the theme picker modal overrides for box-shadow
+──────────────────────────────────────────────────────────────────────────── */
+.theme-picker-modal {
+  box-shadow: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | CSS Editor ]
+\\ (NOMEN | PComm134)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> FIXING View Content
+    ──────────────────────────────────────────────────────────────────────────── */
+.workspace-leaf-content[data-type="css-editor-view"] .view-content {
+  padding: 0;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Pixel Pets ]
+\\ (NOMEN | PComm135)
+───────────────────────────────────────────────────────────────────────────────────
+>>> FIXING View Content
+──────────────────────────────────────────────────────────────────────────── */
+.workspace-leaf-content[data-type="pet-view"] .view-content {
+  padding: 0;
+
+  --radius-image: 0;
+}
+
+/* PComm130-series */
+
+/* SMALL FIXES */
+

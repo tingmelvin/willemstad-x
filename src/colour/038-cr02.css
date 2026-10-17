@@ -1,0 +1,64 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CR02
+\ Colour \ RGB PhaseOut Reference
+\ REGEX (--color-[^-]+-rgb)
+\ for var(--color-**-rgb)
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  /*
+      --callout-bug: var(--color-red-rgb);
+      --callout-default: var(--color-blue-rgb);
+      --callout-error: var(--color-red-rgb);
+      --callout-example: var(--color-purple-rgb);
+      --callout-fail: var(--color-red-rgb);
+      --callout-important: var(--color-cyan-rgb);
+      --callout-info: var(--color-blue-rgb);
+      --callout-question: var(--color-orange-rgb);
+      --callout-success: var(--color-green-rgb);
+      --callout-summary: var(--color-cyan-rgb);
+      --callout-tip: var(--color-cyan-rgb);
+      --callout-todo: var(--color-blue-rgb);
+      --callout-warning: var(--color-orange-rgb);
+      --canvas-color-1: var(--color-red-rgb);
+      --canvas-color-2: var(--color-orange-rgb);
+      --canvas-color-3: var(--color-yellow-rgb);
+      --canvas-color-4: var(--color-green-rgb);
+      --canvas-color-5: var(--color-cyan-rgb);
+      --canvas-color-6: var(--color-purple-rgb);
+      --background-modifier-error-rgb: var(--color-red-rgb);
+      --background-modifier-success-rgb: var(--color-green-rgb);
+  */
+}
+
+.theme-light {
+  /*
+    --color-red-rgb: rgb(233, 49, 71);
+    --color-orange-rgb: rgb(236, 117, 0);
+    --color-yellow-rgb: rgb(224, 172, 0);
+    --color-green-rgb: rgb(8, 185, 78);
+    --color-cyan-rgb: rgb(0, 191, 188);
+    --color-blue-rgb: 8, 109, 221;
+    --color-purple-rgb: rgb(120, 82, 238);
+    --color-pink-rgb: 213, 57, 132;
+  */
+}
+
+.pdf-container .textLayer .highlight:not(.selected) {
+  background-color: oklch(from var(--color-yellow) l c h);
+  box-shadow: 0 0 0 2px oklch(from var(--color-yellow) l c h);
+}
+
+@media (hover: hover) {
+  .metadata-property-warning-icon:hover {
+    background-color: oklch(from var(--color-orange) l c h/15%);
+  }
+}
+
+.mobile-onboarding-radio-option-title .flair {
+  background-color: oklch(from var(--color-orange) l c h/30%);
+}
+
+/* replaces var(--color-red-rgb) etc via Relative OKLCH syntax */
+
+/* Light-on-Dark and Dark-on-Light Mode - Cross UI */
+

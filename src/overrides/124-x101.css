@@ -1,0 +1,433 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> X101
+\ Small Fixes
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* X101-0 | Get rid of the horrid mix-blend-mode thing that always causes trouble */
+body {
+  --highlight-mix-blend-mode: normal !important;
+} /* important because I don't need kepano screwing this up. affects print and display in A LOT of cases. */
+
+/* X101-0A | Bold and Italics split */
+.theme-light {
+  --bold-color: var(--bold-color-light, inherit);
+  --italic-color: var(--italic-color-light, inherit);
+}
+
+.theme-dark {
+  --bold-color: var(--bold-color-dark, inherit);
+  --italic-color: var(--italic-color-dark, inherit);
+}
+
+/* X101-0B | Legacy width-vll from ED01 Variable Line Lengths */
+.theme-light, .theme-dark {
+  --width-vll: 700px;
+  --file-line-width: var(--width-vll);
+} /* setting a default for width-vll */
+
+/* X101-0C | Image radius */
+body {
+  --radius-image: var(--radius-s);
+}
+
+img {
+  border-radius: var(--radius-image);
+}
+
+/* X101-1 | Remove setting accent color in Settings > Appearance */
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control > .clickable-icon > .lucide-rotate-ccw {
+  display: none;
+}
+
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control > .clickable-icon.extra-setting-button {
+  display: none;
+}
+
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type="color"] {
+  display: grid;
+  width: fit-content;
+  height: fit-content; /* forces it to take full space */
+  visibility: hidden;
+  pointer-events: none; /* so that the color thingy won't appear */
+  grid-template-rows: 1fr 1fr 0;
+}
+
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type="color"]::before {
+  position: relative;
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-error);
+  visibility: visible;
+  content: "The accent colour is overriden by the theme.";
+  font-weight: bold;
+  white-space: pre-wrap; /* breaks the lines into two */
+  grid-row: 1/2;
+}
+
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type="color"]::after {
+  position: relative;
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-error);
+  visibility: visible;
+  content: "Please use the Style Settings plugin to customise colours.";
+  white-space: pre-wrap; /* breaks the lines into two */
+  grid-row: 2/3;
+}
+
+/* X101-2 | Clearer Image Rendering, by Damian Korcz (Prism) */
+.markdown-preview-view img,
+.markdown-rendered img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* X101-3 | Set Toggle and Prompt Border Width to Zero */
+.theme-light, .theme-dark {
+  --toggle-border-width: 0;
+  --prompt-border-width: 0;
+}
+
+/* X101-4 | Getting rid of the weird .is-focused effect on the top bar */
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+  --tab-container-background: var(--titlebar-background); /* yes, no --titlebar-background-focused */
+} /* app.css 1651 and 1652 */
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+  background-color: var(--titlebar-background);
+}
+
+body.is-focused .titlebar,
+body.is-focused .workspace-ribbon.mod-left {
+  --titlebar-background: inherit; /* CURSES */
+} /* yes, no --titlebar-background-focused */
+
+/* this is for the little notch on the left */
+
+ /* app.css 1655 and 1656 */
+.is-focused .workspace-tab-header {
+  color: var(--tab-text-color);
+}
+
+/* X101-5 | Remove top: -1px from Community-Item Flair (mostly for modals) */
+.community-item .flair {
+  top: 0; /* app.css sets to -1px */
+} /* for modals flair mostly, not sure why it's set down by 1px */
+
+/* X101-6 | External Link Icon fix sizing via Ctrl-mousescroll */
+.external-link {
+  background-size: var(--font-text-size), var(--font-text-size);
+  padding-right: calc(1.125 * var(--font-text-size)); /* seems like it's about ~2px of the 14px on the right side of the svg, but 1.14 is a bit too big */
+  background-position-y: calc(0.1 * var(--font-text-size));
+}
+
+/* X101-7 | Hide Links in Source Mode by Chris Grieser (Shimmering Focus) */
+body:not(.ssopt-show-urls) .cm-s-obsidian:not(.is-live-preview) .cm-line:not(.cm-active) .cm-string.cm-url:not(.cm-formatting) {
+  font-size: 0;
+}
+
+body:not(.ssopt-show-urls) .cm-s-obsidian:not(.is-live-preview) .cm-line:not(.cm-active) .cm-string.cm-url:not(.cm-formatting)::after {
+  position: relative;
+  top: 0.125rem;
+  font-family: remixicon;
+  font-size: var(--font-text-size);
+
+  /*
+  content: url(public/images/874d8b8e340f75575caa.svg);
+  width: var(--font-text-size);
+  height: var(--font-text-size);
+  font-size: var(--font-text-size);
+  */
+
+  /*
+  content: "    ";
+  background-image: linear-gradient(transparent, transparent), url(public/images/874d8b8e340f75575caa.svg);
+  background-repeat: no-repeat;
+
+  background-size: var(--font-text-size), var(--font-text-size);
+  width: var(--font-text-size);
+  height: var(--font-text-size);
+  font-size: var(--font-text-size);
+  font-family: var(--font-monospace);
+  */
+  content: "\eeb7";
+
+  /* the Old Style */
+}
+
+/* X101-8 | Overflow Hack */
+
+/* works fine without it, but sometimes people might want it? */
+body:is(.ssopt-overflow-hack) .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+body:is(.ssopt-overflow-hack) p, body:is(.ssopt-overflow-hack) kbd, body:is(.ssopt-overflow-hack) hr,
+body:is(.ssopt-overflow-hack) blockquote,
+body:is(.ssopt-overflow-hack) .cm-header-1, body:is(.ssopt-overflow-hack) .cm-header-2, body:is(.ssopt-overflow-hack) .cm-header-3, body:is(.ssopt-overflow-hack) .cm-header-4, body:is(.ssopt-overflow-hack) .cm-header-5, body:is(.ssopt-overflow-hack) .cm-header-6,
+body:is(.ssopt-overflow-hack) div.suggestion-item > :is(span.suggestion-prefix, span.suggestion-content, span.suggestion-hotkey) {
+  overflow: hidden;
+}
+
+/* X101-9 | Align Menu Padding to Ribbon Padding, which is aligned to Header Margin */
+.theme-dark, .theme-light {
+  --menu-padding: var(--ribbon-padding);
+}
+
+/* X101-10 | Fix the Command Hotkeys layout */
+.setting-command-hotkeys {
+  justify-content: right; /* forces it rightward */
+}
+
+/* X101-11 | Indentation Line Fixes */
+body {
+  --checkbox-margin-inline-end: 0.25em;
+  --checkbox-margin-inline-start: 0.85em;
+  --indentation-guide-editing-indent: 1em;
+}
+
+.task-list-item-checkbox {
+  font-size: var(--sidebar-markdown-font-size);
+}
+
+.markdown-rendered.show-indentation-guide li.task-list-item > ul::before {
+  inset-inline-start: -1em;
+}
+
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-rendered.show-indentation-guide li > ol::before {
+  inset-inline-start: calc(var(--indentation-guide-reading-indent) + 1px);
+}
+
+/* X101-12 | Purely for Mac */
+.mod-macos {
+  --size-scrollbar-non-native: 0px;
+
+  /* --frame-left-space: calc(4.5vw); // needs vw in order to scale properly with Shift + in Mac */
+  --frame-left-space: calc(calc(80px - var(--ribbon-width)) / var(--zoom-factor));
+  --titlebar-height: 40px;
+}
+
+.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: var(--frame-left-space);
+}
+
+.mod-macos .sidebar-toggle-button.mod-left {
+  margin: var(--header-margin) var(--header-margin-half);
+}
+
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+  padding-right: 1px; /* just to make sure it works */
+}
+
+.mod-macos .sidebar-toggle-button.mod-left {
+  padding-left: 1px;
+}
+
+.mod-macos.is-hidden-frameless.is-fullscreen .mod-top {
+  overflow: visible;
+}
+
+.mod-macos.is-hidden-frameless.is-fullscreen :where(.side-dock-ribbon.is-collapsed) ~ .mod-root .workspace-tab-header-container {
+  left: calc(-1 * var(--ribbon-width));
+  width: calc-size(auto, size + var(--ribbon-width));
+  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.mod-macos.is-hidden-frameless.is-fullscreen :where(.side-dock-ribbon.is-collapsed)::before {
+  background-color: transparent;
+  pointer-events: none;
+  transition: 0.2s ease-in-out;
+}
+
+/* X101-13 | Hide Tooltip */
+body.ssopt-hide-tooltips .tooltip {
+  display: none;
+}
+
+/* X101-14 | Mobile Stuff */
+.is-mobile {
+  --mobile-sidebar-width: 90vw;
+  --mobile-sidebar-max-width: 500px;
+  --mobile-sidebar-radius: 0px;
+}
+
+.is-mobile .tree-item-inner {
+  min-height: 16px;
+  display: inline-flex;
+}
+
+.is-mobile .tree-item-self {
+  align-items: center;
+}
+
+.is-mobile .setting-item-name {
+  display: flex;
+}
+
+body:where(.is-mobile, .is-tablet) {
+  --nav-padding: 0 var(--nav-padding-side);
+  --nav-padding-side: 8px;
+  --tab-switcher-preview-radius: var(--radius-m);
+  --tab-switcher-preview-background-shadow: none;
+}
+
+body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-container .workspace-drawer-active-tab-content .nav-files-container {
+  padding-top: var(--nav-padding-side);
+}
+
+body:where(.is-mobile, .is-tablet) .workspace-drawer-active-tab-header {
+  margin: var(--nav-padding);
+}
+
+body:where(.is-mobile, .is-tablet) .workspace-drawer-header-info {
+  margin: var(--size-4-1) 0 var(--size-4-2) 0;
+}
+
+body:where(.is-mobile, .is-tablet) .workspace-drawer-header {
+  padding: var(--size-4-2) var(--size-4-3) 0 var(--size-4-3);
+}
+
+body:where(.is-mobile, .is-tablet) :is(.mod-left-split-toggle) :is(svg.sidebar-left, svg.sidebar-toggle-button-icon) {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  content: "";
+  mask: /*@svg assets/icons/icon-7.svg */;
+  mask: /*@svg assets/icons/icon-7.svg */;
+  mask-size: contain;
+  mask-size: contain;
+}
+
+/* X101-15 | Tablet Stuff */
+body.is-tablet .sidebar-toggle-button.mod-left {
+  padding-left: 0;
+}
+
+body.is-tablet .installed-plugins-container {
+  padding-top: 0.75em;
+}
+
+body.is-tablet .hotkey-list-container .setting-item {
+  flex-direction: row;
+  align-items: center;
+}
+
+body.is-tablet .hotkey-list-container .setting-item :where(.setting-item-control) {
+  margin-top: 0;
+}
+
+body.is-tablet .hotkey-list-container .setting-item :where(.setting-command-hotkeys) {
+  align-self: center;
+}
+
+body.is-tablet .hotkey-list-container .setting-item :where(.hotkey-list-container .setting-hotkey) {
+  align-self: auto;
+}
+
+/* PHONE ONLY STUFF */
+.is-phone .setting-item:not(.mod-toggle, .setting-item-heading, .mod-list-item):has(.setting-item-control > .style-settings-import) {
+  flex-direction: row;
+}
+
+.is-phone .setting-item:not(.mod-toggle, .setting-item-heading, .mod-list-item):has(.setting-item-control > .style-settings-import) .setting-item-info {
+  flex-grow: 1;
+}
+
+.is-phone .setting-item:not(.mod-toggle, .setting-item-heading, .mod-list-item):has(.setting-item-control > .style-settings-import) .setting-item-control {
+  margin-top: 0;
+  flex-grow: 0;
+  flex-basis: content;
+}
+
+.is-phone .mod-community-theme .community-modal-controls {
+  display: grid;
+  grid-template-areas: "top top" "left right";
+}
+
+.is-phone .mod-community-theme .community-modal-controls .setting-item:not(.mod-toggle) {
+  grid-area: top;
+}
+
+.is-phone .mod-community-theme .community-modal-controls .setting-item.mod-toggle:first-of-type {
+  grid-area: left;
+}
+
+.is-phone .mod-community-theme .community-modal-controls .setting-item.mod-toggle:last-of-type {
+  grid-area: right;
+}
+
+/* FOR OBSIDIAN 1.11 SHENANIGANS */
+body {
+  --modal-sidebar-background: var(--background-secondary);
+}
+
+.setting-items {
+  display: contents;
+}
+
+.setting-item {
+  --setting-items-radius: 0px;
+}
+
+.setting-group .setting-item {
+  padding: 0.75em 0;
+}
+
+.setting-group .setting-item-heading {
+  padding: 0;
+}
+
+.setting-group .setting-group-search {
+  display: contents;
+}
+
+.setting-group:not(:first-child) .setting-item:where(:not(.setting-item-heading):first-child) {
+  border-top: var(--border-width) solid var(--background-modifier-border);
+  padding-top: 0.75em; /* aligns to .setting-group .setting-item */
+}
+
+/* accents on active tab in Settings */
+body:not(.is-phone) .horizontal-tab-nav-item.is-active, body:not(.is-phone) .vertical-tab-nav-item.is-active {
+  --background-modifier-hover: var(--interactive-accent);
+  --icon-color: var(--text-on-accent);
+
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
+  -electron-corner-smoothing: var(--corner-smoothing);
+}
+
+.horizontal-tab-nav-item.is-active .vertical-tab-nav-item-icon, .vertical-tab-nav-item.is-active .vertical-tab-nav-item-icon {
+  color: var(--text-on-accent);
+}
+
+/* ensuring checkboxes display */
+.modal .checkbox-container {
+  width: var(--header-icon-size) !important;
+  height: var(--header-icon-size) !important;
+}
+
+/* MORE FIXES FOR OBS 1.11 */
+.mod-community-modal .modal-sidebar .setting-item:not(.setting-item-heading):first-child {
+  margin-bottom: 0;
+}
+
+body {
+  --touch-radius-xxs: var(--radius-s);
+  --touch-radius-xs: var(--radius-s);
+  --touch-radius-s: var(--radius-s);
+  --touch-radius-m: var(--radius-m);
+  --touch-radius-l: var(--radius-l);
+  --touch-radius-xl: var(--radius-l);
+  --settings-background: var(--background-primary-alt);
+}
+
+.is-phone .modal.mod-settings,
+.is-phone .modal.mod-community-theme,
+.is-phone .modal.mod-community-plugin {
+  width: 100vw;
+}
+
+.is-phone .modal.mod-sidebar-layout {
+  max-width: 100vw;
+}
+
+/* Remove setting accent color in Settings + Clearer images */
+

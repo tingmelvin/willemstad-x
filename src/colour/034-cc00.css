@@ -1,0 +1,962 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CC00
+\ Set Rainbow Preset
+──────────────────────────────────────────────────────────────────────────────── */
+.ssopt-col-rainbow-l-vibrant,
+.ssopt-col-rainbow-l-vibrant .theme-light,
+.ssopt-col-rainbow-l-vibrant.theme-light {
+  --color-set-l-red: #ff3838;
+  --color-set-l-orange: #ff9f1a;
+  --color-set-l-yellow: #fff200;
+  --color-set-l-green: #32ff7e;
+  --color-set-l-cyan: #1effff;
+  --color-set-l-blue: #18dcff;
+  --color-set-l-purple: #c56cf0;
+  --color-set-l-pink: #ff47a6;
+}
+
+.ssopt-col-rainbow-d-vibrant,
+.ssopt-col-rainbow-d-vibrant .theme-dark,
+.ssopt-col-rainbow-d-vibrant.theme-dark {
+  --color-set-d-red: #ff3838;
+  --color-set-d-orange: #ff9f1a;
+  --color-set-d-yellow: #fff200;
+  --color-set-d-green: #32ff7e;
+  --color-set-d-cyan: #1effff;
+  --color-set-d-blue: #18dcff;
+  --color-set-d-purple: #c56cf0;
+  --color-set-d-pink: #ff47a6;
+}
+
+.ssopt-col-rainbow-l-pastel,
+.ssopt-col-rainbow-l-pastel .theme-light,
+.ssopt-col-rainbow-l-pastel.theme-light {
+  --color-set-l-red: #ffadad;
+  --color-set-l-orange: #ffd6a5;
+  --color-set-l-yellow: #fdffb6;
+  --color-set-l-green: #caffbf;
+  --color-set-l-cyan: #9bf6ff;
+  --color-set-l-blue: #a0c4ff;
+  --color-set-l-purple: #bdb2ff;
+  --color-set-l-pink: #ffc6ff;
+}
+
+.ssopt-col-rainbow-d-pastel,
+.ssopt-col-rainbow-d-pastel .theme-dark,
+.ssopt-col-rainbow-d-pastel.theme-dark {
+  --color-set-d-red: #ffadad;
+  --color-set-d-orange: #ffd6a5;
+  --color-set-d-yellow: #fdffb6;
+  --color-set-d-green: #caffbf;
+  --color-set-d-cyan: #9bf6ff;
+  --color-set-d-blue: #a0c4ff;
+  --color-set-d-purple: #bdb2ff;
+  --color-set-d-pink: #ffc6ff;
+}
+
+.ssopt-col-rainbow-l-flexoki-light,
+.ssopt-col-rainbow-l-flexoki-light .theme-light,
+.ssopt-col-rainbow-l-flexoki-light.theme-light {
+  --color-set-l-red: oklch(59.7% 0.169 28.38deg);
+  --color-set-l-orange: oklch(65.8% 0.154 49.3deg);
+  --color-set-l-yellow: oklch(73.5% 0.146 87.46deg);
+  --color-set-l-green: oklch(65.1% 0.124 119.38deg);
+  --color-set-l-cyan: oklch(67% 0.1 186.58deg);
+  --color-set-l-blue: oklch(59.9% 0.11 247deg);
+  --color-set-l-purple: oklch(63.5% 0.11 291deg);
+  --color-set-l-pink: oklch(63.5% 0.156 350.47deg);
+}
+
+.ssopt-col-rainbow-d-flexoki-light,
+.ssopt-col-rainbow-d-flexoki-light .theme-dark,
+.ssopt-col-rainbow-d-flexoki-light.theme-dark {
+  --color-set-d-red: oklch(59.7% 0.169 28.38deg);
+  --color-set-d-orange: oklch(65.8% 0.154 49.3deg);
+  --color-set-d-yellow: oklch(73.5% 0.146 87.46deg);
+  --color-set-d-green: oklch(65.1% 0.124 119.38deg);
+  --color-set-d-cyan: oklch(67% 0.1 186.58deg);
+  --color-set-d-blue: oklch(59.9% 0.11 247deg);
+  --color-set-d-purple: oklch(63.5% 0.11 291deg);
+  --color-set-d-pink: oklch(63.5% 0.156 350.47deg);
+}
+
+.ssopt-col-rainbow-l-flexoki-dark,
+.ssopt-col-rainbow-l-flexoki-dark .theme-light,
+.ssopt-col-rainbow-l-flexoki-dark.theme-light {
+  --color-set-l-red: oklch(50.4% 0.163 17.7deg);
+  --color-set-l-orange: oklch(56.6% 0.154 25.82deg);
+  --color-set-l-yellow: oklch(63.4% 0.11 47.45deg);
+  --color-set-l-green: oklch(56.1% 0.072 85.3deg);
+  --color-set-l-cyan: oklch(55.7% 0.054 177.52deg);
+  --color-set-l-blue: oklch(48.4% 0.126 218.44deg);
+  --color-set-l-purple: oklch(45.6% 0.086 252.7deg);
+  --color-set-l-pink: oklch(49.7% 0.124 354.52deg);
+}
+
+.ssopt-col-rainbow-d-flexoki-dark,
+.ssopt-col-rainbow-d-flexoki-dark .theme-dark,
+.ssopt-col-rainbow-d-flexoki-dark.theme-dark {
+  --color-set-d-red: oklch(50.4% 0.163 17.7deg);
+  --color-set-d-orange: oklch(56.6% 0.154 25.82deg);
+  --color-set-d-yellow: oklch(63.4% 0.11 47.45deg);
+  --color-set-d-green: oklch(56.1% 0.072 85.3deg);
+  --color-set-d-cyan: oklch(55.7% 0.054 177.52deg);
+  --color-set-d-blue: oklch(48.4% 0.126 218.44deg);
+  --color-set-d-purple: oklch(45.6% 0.086 252.7deg);
+  --color-set-d-pink: oklch(49.7% 0.124 354.52deg);
+}
+
+.ssopt-col-rainbow-l-le-corbusier,
+.ssopt-col-rainbow-l-le-corbusier .theme-light,
+.ssopt-col-rainbow-l-le-corbusier.theme-light {
+  --color-set-l-red: oklch(45.6% 0.12 21.3deg);
+  --color-set-l-orange: oklch(57.3% 0.16 41.5deg);
+  --color-set-l-yellow: oklch(74.5% 0.12 77.2deg);
+  --color-set-l-green: oklch(42.5% 0.053 145.1deg);
+  --color-set-l-cyan: oklch(84.1% 0.044 230.1deg);
+  --color-set-l-blue: oklch(43.1% 0.113 251.7deg);
+  --color-set-l-purple: oklch(74.8% 0.065 329.8deg);
+  --color-set-l-pink: oklch(73.5% 0.07 15.3deg);
+}
+
+.ssopt-col-rainbow-d-le-corbusier,
+.ssopt-col-rainbow-d-le-corbusier .theme-dark,
+.ssopt-col-rainbow-d-le-corbusier.theme-dark {
+  --color-set-d-red: oklch(45.6% 0.12 21.3deg);
+  --color-set-d-orange: oklch(57.3% 0.16 41.5deg);
+  --color-set-d-yellow: oklch(74.5% 0.12 77.2deg);
+  --color-set-d-green: oklch(42.5% 0.053 145.1deg);
+  --color-set-d-cyan: oklch(84.1% 0.044 230.1deg);
+  --color-set-d-blue: oklch(43.1% 0.113 251.7deg);
+  --color-set-d-purple: oklch(74.8% 0.065 329.8deg);
+  --color-set-d-pink: oklch(73.5% 0.07 15.3deg);
+}
+
+.ssopt-col-rainbow-l-accent-1931,
+.ssopt-col-rainbow-l-accent-1931 .theme-light,
+.ssopt-col-rainbow-l-accent-1931.theme-light {
+  --color-set-l-red: oklch(45.6% 0.158 23.58deg);
+  --color-set-l-orange: oklch(64.6% 0.165 40.95deg);
+  --color-set-l-yellow: oklch(89.3% 0.062 68.45deg);
+  --color-set-l-green: oklch(71.5% 0.107 134.13deg);
+  --color-set-l-cyan: oklch(73.3% 0.056 197.49deg);
+  --color-set-l-blue: oklch(50.9% 0.087 265.94deg);
+  --color-set-l-purple: oklch(42.9% 0.158 6.09deg);
+  --color-set-l-pink: oklch(89.7% 0.05 59.23deg);
+}
+
+.ssopt-col-rainbow-d-accent-1931,
+.ssopt-col-rainbow-d-accent-1931 .theme-dark,
+.ssopt-col-rainbow-d-accent-1931.theme-dark {
+  --color-set-d-red: oklch(45.6% 0.158 23.58deg);
+  --color-set-d-orange: oklch(64.6% 0.165 40.95deg);
+  --color-set-d-yellow: oklch(89.3% 0.062 68.45deg);
+  --color-set-d-green: oklch(71.5% 0.107 134.13deg);
+  --color-set-d-cyan: oklch(73.3% 0.056 197.49deg);
+  --color-set-d-blue: oklch(50.9% 0.087 265.94deg);
+  --color-set-d-purple: oklch(42.9% 0.158 6.09deg);
+  --color-set-d-pink: oklch(89.7% 0.05 59.23deg);
+}
+
+.ssopt-col-rainbow-l-kandinsky,
+.ssopt-col-rainbow-l-kandinsky .theme-light,
+.ssopt-col-rainbow-l-kandinsky.theme-light {
+  --color-set-l-red: oklch(65.09% 0.2199 25.04deg);
+  --color-set-l-orange: oklch(69.59% 0.1772 45.27deg);
+  --color-set-l-yellow: oklch(85.28% 0.1452 85.83deg);
+  --color-set-l-green: oklch(74.95% 0.1199 132.78deg);
+  --color-set-l-cyan: oklch(66.92% 0.1065 170.05deg);
+  --color-set-l-blue: oklch(54.98% 0.0547 246.16deg);
+  --color-set-l-purple: oklch(44.75% 0.2326 304.84deg);
+  --color-set-l-pink: oklch(69.42% 0.2264 354.05deg);
+}
+
+.ssopt-col-rainbow-d-kandinsky,
+.ssopt-col-rainbow-d-kandinsky .theme-dark,
+.ssopt-col-rainbow-d-kandinsky.theme-dark {
+  --color-set-d-red: oklch(65.09% 0.2199 25.04deg);
+  --color-set-d-orange: oklch(69.59% 0.1772 45.27deg);
+  --color-set-d-yellow: oklch(85.28% 0.1452 85.83deg);
+  --color-set-d-green: oklch(74.95% 0.1199 132.78deg);
+  --color-set-d-cyan: oklch(66.92% 0.1065 170.05deg);
+  --color-set-d-blue: oklch(54.98% 0.0547 246.16deg);
+  --color-set-d-purple: oklch(44.75% 0.2326 304.84deg);
+  --color-set-d-pink: oklch(69.42% 0.2264 354.05deg);
+}
+
+.ssopt-col-rainbow-l-munsell,
+.ssopt-col-rainbow-l-munsell .theme-light,
+.ssopt-col-rainbow-l-munsell.theme-light {
+  --color-set-l-red: oklch(68.31% 0.1133 17.68deg);
+  --color-set-l-orange: oklch(66.84% 0.1191 49.03deg);
+  --color-set-l-yellow: oklch(67.14% 0.123 90.92deg);
+  --color-set-l-green: oklch(65.93% 0.1144 158.17deg);
+  --color-set-l-cyan: oklch(67.66% 0.1156 183.1deg);
+  --color-set-l-blue: oklch(68.07% 0.1147 210.56deg);
+  --color-set-l-purple: oklch(67.14% 0.08785 312.15deg);
+  --color-set-l-pink: oklch(67.53% 0.09127 355.61deg);
+}
+
+.ssopt-col-rainbow-d-munsell,
+.ssopt-col-rainbow-d-munsell .theme-dark,
+.ssopt-col-rainbow-d-munsell.theme-dark {
+  --color-set-d-red: oklch(68.31% 0.1133 17.68deg);
+  --color-set-d-orange: oklch(66.84% 0.1191 49.03deg);
+  --color-set-d-yellow: oklch(67.14% 0.123 90.92deg);
+  --color-set-d-green: oklch(65.93% 0.1144 158.17deg);
+  --color-set-d-cyan: oklch(67.66% 0.1156 183.1deg);
+  --color-set-d-blue: oklch(68.07% 0.1147 210.56deg);
+  --color-set-d-purple: oklch(67.14% 0.08785 312.15deg);
+  --color-set-d-pink: oklch(67.53% 0.09127 355.61deg);
+}
+
+.ssopt-col-rainbow-l-munsell-610,
+.ssopt-col-rainbow-l-munsell-610 .theme-light,
+.ssopt-col-rainbow-l-munsell-610.theme-light {
+  --color-set-l-red: oklch(67.7% 0.133 21.2deg);
+  --color-set-l-orange: oklch(68.1% 0.137 55.3deg);
+  --color-set-l-yellow: oklch(64% 0.131 89.2deg);
+  --color-set-l-green: oklch(65.7% 0.143 159.4deg);
+  --color-set-l-cyan: oklch(67% 0.121 181.3deg);
+  --color-set-l-blue: oklch(69% 0.12 213.4deg);
+  --color-set-l-purple: oklch(68.3% 0.125 310.9deg);
+  --color-set-l-pink: oklch(68.7% 0.113 355deg);
+}
+
+.ssopt-col-rainbow-d-munsell-610,
+.ssopt-col-rainbow-d-munsell-610 .theme-dark,
+.ssopt-col-rainbow-d-munsell-610.theme-dark {
+  --color-set-d-red: oklch(67.7% 0.133 21.2deg);
+  --color-set-d-orange: oklch(68.1% 0.137 55.3deg);
+  --color-set-d-yellow: oklch(64% 0.131 89.2deg);
+  --color-set-d-green: oklch(65.7% 0.143 159.4deg);
+  --color-set-d-cyan: oklch(67% 0.121 181.3deg);
+  --color-set-d-blue: oklch(69% 0.12 213.4deg);
+  --color-set-d-purple: oklch(68.3% 0.125 310.9deg);
+  --color-set-d-pink: oklch(68.7% 0.113 355deg);
+}
+
+.ssopt-col-rainbow-l-klee,
+.ssopt-col-rainbow-l-klee .theme-light,
+.ssopt-col-rainbow-l-klee.theme-light {
+  --color-set-l-red: oklch(54.02% 0.2008 21.1deg);
+  --color-set-l-orange: oklch(72.37% 0.1714 53.29deg);
+  --color-set-l-yellow: oklch(89.08% 0.1769 98.26deg);
+  --color-set-l-green: oklch(61.36% 0.1648 137.95deg);
+  --color-set-l-cyan: oklch(68.03% 0.1423 233.98deg);
+  --color-set-l-blue: oklch(43.91% 0.1461 255.3deg);
+  --color-set-l-purple: oklch(52.61% 0.1705 314.65deg);
+  --color-set-l-pink: oklch(60.62% 0.2298 9.63deg);
+}
+
+.ssopt-col-rainbow-d-klee,
+.ssopt-col-rainbow-d-klee .theme-dark,
+.ssopt-col-rainbow-d-klee.theme-dark {
+  --color-set-d-red: oklch(54.02% 0.2008 21.1deg);
+  --color-set-d-orange: oklch(72.37% 0.1714 53.29deg);
+  --color-set-d-yellow: oklch(89.08% 0.1769 98.26deg);
+  --color-set-d-green: oklch(61.36% 0.1648 137.95deg);
+  --color-set-d-cyan: oklch(68.03% 0.1423 233.98deg);
+  --color-set-d-blue: oklch(43.91% 0.1461 255.3deg);
+  --color-set-d-purple: oklch(52.61% 0.1705 314.65deg);
+  --color-set-d-pink: oklch(60.62% 0.2298 9.63deg);
+}
+
+.ssopt-col-rainbow-l-cross,
+.ssopt-col-rainbow-l-cross .theme-light,
+.ssopt-col-rainbow-l-cross.theme-light {
+  --color-set-l-red: oklch(58.2% 0.175 25.47deg);
+  --color-set-l-orange: oklch(69.5% 0.166 51.09deg);
+  --color-set-l-yellow: oklch(83.5% 0.151 77.48deg);
+  --color-set-l-green: oklch(66% 0.071 128.59deg);
+  --color-set-l-cyan: oklch(62.9% 0.053 208.99deg);
+  --color-set-l-blue: oklch(39.7% 0.073 222.27deg);
+  --color-set-l-purple: oklch(27.4% 0.086 264.87deg);
+  --color-set-l-pink: oklch(64.9% 0.138 345.63deg);
+}
+
+.ssopt-col-rainbow-d-cross,
+.ssopt-col-rainbow-d-cross .theme-dark,
+.ssopt-col-rainbow-d-cross.theme-dark {
+  --color-set-d-red: oklch(58.2% 0.175 25.47deg);
+  --color-set-d-orange: oklch(69.5% 0.166 51.09deg);
+  --color-set-d-yellow: oklch(83.5% 0.151 77.48deg);
+  --color-set-d-green: oklch(66% 0.071 128.59deg);
+  --color-set-d-cyan: oklch(62.9% 0.053 208.99deg);
+  --color-set-d-blue: oklch(39.7% 0.073 222.27deg);
+  --color-set-d-purple: oklch(27.4% 0.086 264.87deg);
+  --color-set-d-pink: oklch(64.9% 0.138 345.63deg);
+}
+
+.ssopt-col-rainbow-l-nizami,
+.ssopt-col-rainbow-l-nizami .theme-light,
+.ssopt-col-rainbow-l-nizami.theme-light {
+  --color-set-l-red: oklch(52.3% 0.172 29.6deg);
+  --color-set-l-orange: oklch(68.2% 0.129 30.7deg);
+  --color-set-l-yellow: oklch(59.2% 0.162 46deg);
+  --color-set-l-green: oklch(79.7% 0.14 78.9deg);
+  --color-set-l-cyan: oklch(78.8% 0.064 180.7deg);
+  --color-set-l-blue: oklch(72.5% 0.108 259.5deg);
+  --color-set-l-purple: oklch(57% 0.124 267.4deg);
+  --color-set-l-pink: oklch(41.1% 0.144 262.8deg);
+}
+
+.ssopt-col-rainbow-d-nizami,
+.ssopt-col-rainbow-d-nizami .theme-dark,
+.ssopt-col-rainbow-d-nizami.theme-dark {
+  --color-set-d-red: oklch(52.3% 0.172 29.6deg);
+  --color-set-d-orange: oklch(68.2% 0.129 30.7deg);
+  --color-set-d-yellow: oklch(59.2% 0.162 46deg);
+  --color-set-d-green: oklch(79.7% 0.14 78.9deg);
+  --color-set-d-cyan: oklch(78.8% 0.064 180.7deg);
+  --color-set-d-blue: oklch(72.5% 0.108 259.5deg);
+  --color-set-d-purple: oklch(57% 0.124 267.4deg);
+  --color-set-d-pink: oklch(41.1% 0.144 262.8deg);
+}
+
+.ssopt-col-rainbow-l-tiepolo,
+.ssopt-col-rainbow-l-tiepolo .theme-light,
+.ssopt-col-rainbow-l-tiepolo.theme-light {
+  --color-set-l-red: oklch(40.4% 0.129 31.1deg);
+  --color-set-l-orange: oklch(60.6% 0.131 46.8deg);
+  --color-set-l-yellow: oklch(70.6% 0.119 71.6deg);
+  --color-set-l-green: oklch(81% 0.12 81.6deg);
+  --color-set-l-cyan: oklch(51.7% 0.074 118.2deg);
+  --color-set-l-blue: oklch(42.6% 0.051 182.5deg);
+  --color-set-l-purple: oklch(38.9% 0.084 246.5deg);
+  --color-set-l-pink: oklch(61.3% 0.071 220.9deg);
+}
+
+.ssopt-col-rainbow-d-tiepolo,
+.ssopt-col-rainbow-d-tiepolo .theme-dark,
+.ssopt-col-rainbow-d-tiepolo.theme-dark {
+  --color-set-d-red: oklch(40.4% 0.129 31.1deg);
+  --color-set-d-orange: oklch(60.6% 0.131 46.8deg);
+  --color-set-d-yellow: oklch(70.6% 0.119 71.6deg);
+  --color-set-d-green: oklch(81% 0.12 81.6deg);
+  --color-set-d-cyan: oklch(51.7% 0.074 118.2deg);
+  --color-set-d-blue: oklch(42.6% 0.051 182.5deg);
+  --color-set-d-purple: oklch(38.9% 0.084 246.5deg);
+  --color-set-d-pink: oklch(61.3% 0.071 220.9deg);
+}
+
+.ssopt-col-rainbow-l-solarized,
+.ssopt-col-rainbow-l-solarized .theme-light,
+.ssopt-col-rainbow-l-solarized.theme-light {
+  --color-set-l-red: oklch(58.6% 0.206 27.1deg);
+  --color-set-l-orange: oklch(58.1% 0.173 39.5deg);
+  --color-set-l-yellow: oklch(65.4% 0.134 85.7deg);
+  --color-set-l-green: oklch(64.4% 0.151 118.6deg);
+  --color-set-l-cyan: oklch(64.4% 0.102 187.4deg);
+  --color-set-l-blue: oklch(61.5% 0.139 244.9deg);
+  --color-set-l-purple: oklch(58.2% 0.126 279.1deg);
+  --color-set-l-pink: oklch(59.2% 0.202 355.9deg);
+}
+
+.ssopt-col-rainbow-d-solarized,
+.ssopt-col-rainbow-d-solarized .theme-dark,
+.ssopt-col-rainbow-d-solarized.theme-dark {
+  --color-set-d-red: oklch(58.6% 0.206 27.1deg);
+  --color-set-d-orange: oklch(58.1% 0.173 39.5deg);
+  --color-set-d-yellow: oklch(65.4% 0.134 85.7deg);
+  --color-set-d-green: oklch(64.4% 0.151 118.6deg);
+  --color-set-d-cyan: oklch(64.4% 0.102 187.4deg);
+  --color-set-d-blue: oklch(61.5% 0.139 244.9deg);
+  --color-set-d-purple: oklch(58.2% 0.126 279.1deg);
+  --color-set-d-pink: oklch(59.2% 0.202 355.9deg);
+}
+
+.ssopt-col-rainbow-l-catppuccin-mocha,
+.ssopt-col-rainbow-l-catppuccin-mocha .theme-light,
+.ssopt-col-rainbow-l-catppuccin-mocha.theme-light {
+  --color-set-l-red: oklch(75.6% 0.13 2.8deg);
+  --color-set-l-orange: oklch(82.4% 0.101 52.6deg);
+  --color-set-l-yellow: oklch(91.9% 0.07 86.5deg);
+  --color-set-l-green: oklch(85.8% 0.109 142.7deg);
+  --color-set-l-cyan: oklch(85.8% 0.079 182.7deg);
+  --color-set-l-blue: oklch(84.7% 0.083 210.3deg);
+  --color-set-l-purple: oklch(78.7% 0.119 304.8deg);
+  --color-set-l-pink: oklch(87% 0.075 336.3deg);
+}
+
+.ssopt-col-rainbow-d-catppuccin-mocha,
+.ssopt-col-rainbow-d-catppuccin-mocha .theme-dark,
+.ssopt-col-rainbow-d-catppuccin-mocha.theme-dark {
+  --color-set-d-red: oklch(75.6% 0.13 2.8deg);
+  --color-set-d-orange: oklch(82.4% 0.101 52.6deg);
+  --color-set-d-yellow: oklch(91.9% 0.07 86.5deg);
+  --color-set-d-green: oklch(85.8% 0.109 142.7deg);
+  --color-set-d-cyan: oklch(85.8% 0.079 182.7deg);
+  --color-set-d-blue: oklch(84.7% 0.083 210.3deg);
+  --color-set-d-purple: oklch(78.7% 0.119 304.8deg);
+  --color-set-d-pink: oklch(87% 0.075 336.3deg);
+}
+
+.ssopt-col-rainbow-l-gruvbox,
+.ssopt-col-rainbow-l-gruvbox .theme-light,
+.ssopt-col-rainbow-l-gruvbox.theme-light {
+  --color-set-l-red: oklch(66% 0.218 30.4deg);
+  --color-set-l-orange: oklch(73.1% 0.182 51.7deg);
+  --color-set-l-yellow: oklch(83.2% 0.159 83deg);
+  --color-set-l-green: oklch(76.5% 0.158 110.8deg);
+  --color-set-l-cyan: oklch(75.6% 0.108 137.7deg);
+  --color-set-l-blue: oklch(69.3% 0.042 169.8deg);
+  --color-set-l-purple: oklch(59.7% 0.111 352.2deg);
+  --color-set-l-pink: oklch(70.5% 0.098 2.2deg);
+}
+
+.ssopt-col-rainbow-d-gruvbox,
+.ssopt-col-rainbow-d-gruvbox .theme-dark,
+.ssopt-col-rainbow-d-gruvbox.theme-dark {
+  --color-set-d-red: oklch(66% 0.218 30.4deg);
+  --color-set-d-orange: oklch(73.1% 0.182 51.7deg);
+  --color-set-d-yellow: oklch(83.2% 0.159 83deg);
+  --color-set-d-green: oklch(76.5% 0.158 110.8deg);
+  --color-set-d-cyan: oklch(75.6% 0.108 137.7deg);
+  --color-set-d-blue: oklch(69.3% 0.042 169.8deg);
+  --color-set-d-purple: oklch(59.7% 0.111 352.2deg);
+  --color-set-d-pink: oklch(70.5% 0.098 2.2deg);
+}
+
+.ssopt-col-rainbow-l-dracula,
+.ssopt-col-rainbow-l-dracula .theme-light,
+.ssopt-col-rainbow-l-dracula.theme-light {
+  --color-set-l-red: oklch(68.2% 0.206 24.4deg);
+  --color-set-l-orange: oklch(83.4% 0.124 66.6deg);
+  --color-set-l-yellow: oklch(95.5% 0.134 112.8deg);
+  --color-set-l-green: oklch(87.1% 0.22 148deg);
+  --color-set-l-cyan: oklch(88.3% 0.093 212.8deg);
+  --color-set-l-blue: oklch(56% 0.08 270.1deg);
+  --color-set-l-purple: oklch(74.2% 0.149 301.9deg);
+  --color-set-l-pink: oklch(75.5% 0.183 346.8deg);
+}
+
+.ssopt-col-rainbow-d-dracula,
+.ssopt-col-rainbow-d-dracula .theme-dark,
+.ssopt-col-rainbow-d-dracula.theme-dark {
+  --color-set-d-red: oklch(68.2% 0.206 24.4deg);
+  --color-set-d-orange: oklch(83.4% 0.124 66.6deg);
+  --color-set-d-yellow: oklch(95.5% 0.134 112.8deg);
+  --color-set-d-green: oklch(87.1% 0.22 148deg);
+  --color-set-d-cyan: oklch(88.3% 0.093 212.8deg);
+  --color-set-d-blue: oklch(56% 0.08 270.1deg);
+  --color-set-d-purple: oklch(74.2% 0.149 301.9deg);
+  --color-set-d-pink: oklch(75.5% 0.183 346.8deg);
+}
+
+.ssopt-col-rainbow-l-one-dark,
+.ssopt-col-rainbow-l-one-dark .theme-light,
+.ssopt-col-rainbow-l-one-dark.theme-light {
+  --color-set-l-red: oklch(67.3% 0.161 17.4deg);
+  --color-set-l-orange: oklch(72.7% 0.095 63.8deg);
+  --color-set-l-yellow: oklch(82.5% 0.097 82.3deg);
+  --color-set-l-green: oklch(76.8% 0.11 133deg);
+  --color-set-l-cyan: oklch(72.3% 0.092 206.3deg);
+  --color-set-l-blue: oklch(73% 0.121 245.3deg);
+  --color-set-l-purple: oklch(69.4% 0.164 318.2deg);
+}
+
+.ssopt-col-rainbow-d-one-dark,
+.ssopt-col-rainbow-d-one-dark .theme-dark,
+.ssopt-col-rainbow-d-one-dark.theme-dark {
+  --color-set-d-red: oklch(67.3% 0.161 17.4deg);
+  --color-set-d-orange: oklch(72.7% 0.095 63.8deg);
+  --color-set-d-yellow: oklch(82.5% 0.097 82.3deg);
+  --color-set-d-green: oklch(76.8% 0.11 133deg);
+  --color-set-d-cyan: oklch(72.3% 0.092 206.3deg);
+  --color-set-d-blue: oklch(73% 0.121 245.3deg);
+  --color-set-d-purple: oklch(69.4% 0.164 318.2deg);
+}
+
+.ssopt-col-rainbow-l-one-darker,
+.ssopt-col-rainbow-l-one-darker .theme-light,
+.ssopt-col-rainbow-l-one-darker.theme-light {
+  --color-set-l-red: oklch(64.4% 0.178 18.8deg);
+  --color-set-l-orange: oklch(70% 0.104 63.3deg);
+  --color-set-l-yellow: oklch(80.4% 0.107 81.4deg);
+  --color-set-l-green: oklch(74.6% 0.122 133deg);
+  --color-set-l-cyan: oklch(70.2% 0.096 206.6deg);
+  --color-set-l-blue: oklch(73.3% 0.132 245.5deg);
+  --color-set-l-purple: oklch(69.3% 0.183 318.1deg);
+}
+
+.ssopt-col-rainbow-d-one-darker,
+.ssopt-col-rainbow-d-one-darker .theme-dark,
+.ssopt-col-rainbow-d-one-darker.theme-dark {
+  --color-set-d-red: oklch(64.4% 0.178 18.8deg);
+  --color-set-d-orange: oklch(70% 0.104 63.3deg);
+  --color-set-d-yellow: oklch(80.4% 0.107 81.4deg);
+  --color-set-d-green: oklch(74.6% 0.122 133deg);
+  --color-set-d-cyan: oklch(70.2% 0.096 206.6deg);
+  --color-set-d-blue: oklch(73.3% 0.132 245.5deg);
+  --color-set-d-purple: oklch(69.3% 0.183 318.1deg);
+}
+
+.ssopt-col-rainbow-l-one-cool,
+.ssopt-col-rainbow-l-one-cool .theme-light,
+.ssopt-col-rainbow-l-one-cool.theme-light {
+  --color-set-l-red: oklch(66.3% 0.193 18.1deg);
+  --color-set-l-orange: oklch(71.8% 0.129 62deg);
+  --color-set-l-yellow: oklch(85.6% 0.144 85.2deg);
+  --color-set-l-green: oklch(77.4% 0.164 118.3deg);
+  --color-set-l-cyan: oklch(74% 0.102 206.6deg);
+  --color-set-l-blue: oklch(75.6% 0.142 245.6deg);
+  --color-set-l-purple: oklch(70.7% 0.171 318.2deg);
+}
+
+.ssopt-col-rainbow-d-one-cool,
+.ssopt-col-rainbow-d-one-cool .theme-dark,
+.ssopt-col-rainbow-d-one-cool.theme-dark {
+  --color-set-d-red: oklch(66.3% 0.193 18.1deg);
+  --color-set-d-orange: oklch(71.8% 0.129 62deg);
+  --color-set-d-yellow: oklch(85.6% 0.144 85.2deg);
+  --color-set-d-green: oklch(77.4% 0.164 118.3deg);
+  --color-set-d-cyan: oklch(74% 0.102 206.6deg);
+  --color-set-d-blue: oklch(75.6% 0.142 245.6deg);
+  --color-set-d-purple: oklch(70.7% 0.171 318.2deg);
+}
+
+.ssopt-col-rainbow-l-one-deep,
+.ssopt-col-rainbow-l-one-deep .theme-light,
+.ssopt-col-rainbow-l-one-deep.theme-light {
+  --color-set-l-red: oklch(67.4% 0.193 18.9deg);
+  --color-set-l-orange: oklch(71.8% 0.129 62deg);
+  --color-set-l-yellow: oklch(82.5% 0.127 81.7deg);
+  --color-set-l-green: oklch(77.9% 0.162 133.9deg);
+  --color-set-l-cyan: oklch(74% 0.115 207.3deg);
+  --color-set-l-blue: oklch(70.8% 0.156 247.6deg);
+  --color-set-l-purple: oklch(66% 0.221 317.6deg);
+}
+
+.ssopt-col-rainbow-d-one-deep,
+.ssopt-col-rainbow-d-one-deep .theme-dark,
+.ssopt-col-rainbow-d-one-deep.theme-dark {
+  --color-set-d-red: oklch(67.4% 0.193 18.9deg);
+  --color-set-d-orange: oklch(71.8% 0.129 62deg);
+  --color-set-d-yellow: oklch(82.5% 0.127 81.7deg);
+  --color-set-d-green: oklch(77.9% 0.162 133.9deg);
+  --color-set-d-cyan: oklch(74% 0.115 207.3deg);
+  --color-set-d-blue: oklch(70.8% 0.156 247.6deg);
+  --color-set-d-purple: oklch(66% 0.221 317.6deg);
+}
+
+.ssopt-col-rainbow-l-tokyo-night,
+.ssopt-col-rainbow-l-tokyo-night .theme-light,
+.ssopt-col-rainbow-l-tokyo-night.theme-light {
+  --color-set-l-red: oklch(72.3% 0.159 10.3deg);
+  --color-set-l-orange: oklch(78.7% 0.137 50.6deg);
+  --color-set-l-yellow: oklch(78.4% 0.106 75.4deg);
+  --color-set-l-green: oklch(79.5% 0.139 130.1deg);
+  --color-set-l-cyan: oklch(82% 0.105 235.7deg);
+  --color-set-l-blue: oklch(71.9% 0.132 264.2deg);
+  --color-set-l-purple: oklch(75.1% 0.134 299.5deg);
+  --color-set-l-pink: oklch(73.9% 0.092 289.7deg);
+}
+
+.ssopt-col-rainbow-d-tokyo-night,
+.ssopt-col-rainbow-d-tokyo-night .theme-dark,
+.ssopt-col-rainbow-d-tokyo-night.theme-dark {
+  --color-set-d-red: oklch(72.3% 0.159 10.3deg);
+  --color-set-d-orange: oklch(78.7% 0.137 50.6deg);
+  --color-set-d-yellow: oklch(78.4% 0.106 75.4deg);
+  --color-set-d-green: oklch(79.5% 0.139 130.1deg);
+  --color-set-d-cyan: oklch(82% 0.105 235.7deg);
+  --color-set-d-blue: oklch(71.9% 0.132 264.2deg);
+  --color-set-d-purple: oklch(75.1% 0.134 299.5deg);
+  --color-set-d-pink: oklch(73.9% 0.092 289.7deg);
+}
+
+.ssopt-col-rainbow-l-nature,
+.ssopt-col-rainbow-l-nature .theme-light,
+.ssopt-col-rainbow-l-nature.theme-light {
+  --color-set-l-red: oklch(61.2% 0.208 22.2deg);
+  --color-set-l-orange: oklch(67.8% 0.156 35.2deg);
+  --color-set-l-yellow: oklch(88.6% 0.154 91.2deg);
+  --color-set-l-green: oklch(56.9% 0.119 154.9deg);
+  --color-set-l-cyan: oklch(77.9% 0.117 213.7deg);
+  --color-set-l-blue: oklch(64.8% 0.11 219deg);
+  --color-set-l-purple: oklch(71.5% 0.063 318.1deg);
+  --color-set-l-pink: oklch(86.8% 0.074 7.1deg);
+}
+
+.ssopt-col-rainbow-d-nature,
+.ssopt-col-rainbow-d-nature .theme-dark,
+.ssopt-col-rainbow-d-nature.theme-dark {
+  --color-set-d-red: oklch(61.2% 0.208 22.2deg);
+  --color-set-d-orange: oklch(67.8% 0.156 35.2deg);
+  --color-set-d-yellow: oklch(88.6% 0.154 91.2deg);
+  --color-set-d-green: oklch(56.9% 0.119 154.9deg);
+  --color-set-d-cyan: oklch(77.9% 0.117 213.7deg);
+  --color-set-d-blue: oklch(64.8% 0.11 219deg);
+  --color-set-d-purple: oklch(71.5% 0.063 318.1deg);
+  --color-set-d-pink: oklch(86.8% 0.074 7.1deg);
+}
+
+.ssopt-col-rainbow-l-tropical-reef,
+.ssopt-col-rainbow-l-tropical-reef .theme-light,
+.ssopt-col-rainbow-l-tropical-reef.theme-light {
+  --color-set-l-red: oklch(61.2% 0.208 22.2deg);
+  --color-set-l-orange: oklch(75.1% 0.179 58.3deg);
+  --color-set-l-yellow: oklch(88.7% 0.182 95.3deg);
+  --color-set-l-green: oklch(56.9% 0.119 154.9deg);
+  --color-set-l-cyan: oklch(77.2% 0.131 196.6deg);
+  --color-set-l-blue: oklch(65.2% 0.19 253.2deg);
+  --color-set-l-purple: oklch(54.1% 0.227 311.5deg);
+  --color-set-l-pink: oklch(65.5% 0.261 356.9deg);
+}
+
+.ssopt-col-rainbow-d-tropical-reef,
+.ssopt-col-rainbow-d-tropical-reef .theme-dark,
+.ssopt-col-rainbow-d-tropical-reef.theme-dark {
+  --color-set-d-red: oklch(61.2% 0.208 22.2deg);
+  --color-set-d-orange: oklch(75.1% 0.179 58.3deg);
+  --color-set-d-yellow: oklch(88.7% 0.182 95.3deg);
+  --color-set-d-green: oklch(56.9% 0.119 154.9deg);
+  --color-set-d-cyan: oklch(77.2% 0.131 196.6deg);
+  --color-set-d-blue: oklch(65.2% 0.19 253.2deg);
+  --color-set-d-purple: oklch(54.1% 0.227 311.5deg);
+  --color-set-d-pink: oklch(65.5% 0.261 356.9deg);
+}
+
+.ssopt-col-rainbow-l-rothko-dark-emotive,
+.ssopt-col-rainbow-l-rothko-dark-emotive .theme-light,
+.ssopt-col-rainbow-l-rothko-dark-emotive.theme-light {
+  --color-set-l-red: oklch(40% 0.164 29.2deg);
+  --color-set-l-orange: oklch(51.2% 0.133 26.8deg);
+  --color-set-l-yellow: oklch(54.1% 0.104 84.4deg);
+  --color-set-l-green: oklch(32.5% 0.056 163.5deg);
+  --color-set-l-cyan: oklch(36.9% 0.033 217.3deg);
+  --color-set-l-blue: oklch(31.3% 0.102 269.3deg);
+  --color-set-l-purple: oklch(30% 0.083 347.9deg);
+  --color-set-l-pink: oklch(38.8% 0.157 0.7deg);
+}
+
+.ssopt-col-rainbow-d-rothko-dark-emotive,
+.ssopt-col-rainbow-d-rothko-dark-emotive .theme-dark,
+.ssopt-col-rainbow-d-rothko-dark-emotive.theme-dark {
+  --color-set-d-red: oklch(40% 0.164 29.2deg);
+  --color-set-d-orange: oklch(51.2% 0.133 26.8deg);
+  --color-set-d-yellow: oklch(54.1% 0.104 84.4deg);
+  --color-set-d-green: oklch(32.5% 0.056 163.5deg);
+  --color-set-d-cyan: oklch(36.9% 0.033 217.3deg);
+  --color-set-d-blue: oklch(31.3% 0.102 269.3deg);
+  --color-set-d-purple: oklch(30% 0.083 347.9deg);
+  --color-set-d-pink: oklch(38.8% 0.157 0.7deg);
+}
+
+.ssopt-col-rainbow-l-rothko-light-radiance,
+.ssopt-col-rainbow-l-rothko-light-radiance .theme-light,
+.ssopt-col-rainbow-l-rothko-light-radiance.theme-light {
+  --color-set-l-red: oklch(57.1% 0.209 21.1deg);
+  --color-set-l-orange: oklch(78.1% 0.127 57.9deg);
+  --color-set-l-yellow: oklch(89.6% 0.139 91.1deg);
+  --color-set-l-green: oklch(83.4% 0.06 158.4deg);
+  --color-set-l-cyan: oklch(71.3% 0.097 247.1deg);
+  --color-set-l-blue: oklch(37.5% 0.044 226.2deg);
+  --color-set-l-purple: oklch(73.9% 0.069 330.4deg);
+  --color-set-l-pink: oklch(75.1% 0.123 20.4deg);
+}
+
+.ssopt-col-rainbow-d-rothko-light-radiance,
+.ssopt-col-rainbow-d-rothko-light-radiance .theme-dark,
+.ssopt-col-rainbow-d-rothko-light-radiance.theme-dark {
+  --color-set-d-red: oklch(57.1% 0.209 21.1deg);
+  --color-set-d-orange: oklch(78.1% 0.127 57.9deg);
+  --color-set-d-yellow: oklch(89.6% 0.139 91.1deg);
+  --color-set-d-green: oklch(83.4% 0.06 158.4deg);
+  --color-set-d-cyan: oklch(71.3% 0.097 247.1deg);
+  --color-set-d-blue: oklch(37.5% 0.044 226.2deg);
+  --color-set-d-purple: oklch(73.9% 0.069 330.4deg);
+  --color-set-d-pink: oklch(75.1% 0.123 20.4deg);
+}
+
+.ssopt-col-rainbow-l-nord,
+.ssopt-col-rainbow-l-nord .theme-light,
+.ssopt-col-rainbow-l-nord.theme-light {
+  --color-set-l-red: oklch(60.6% 0.121 15.3deg);
+  --color-set-l-orange: oklch(69.3% 0.096 38.2deg);
+  --color-set-l-yellow: oklch(85.5% 0.089 84.1deg);
+  --color-set-l-green: oklch(76.8% 0.075 131.1deg);
+  --color-set-l-cyan: oklch(76.3% 0.048 194.5deg);
+  --color-set-l-blue: oklch(77.5% 0.062 217.5deg);
+  --color-set-l-purple: oklch(59.4% 0.077 254deg);
+  --color-set-l-pink: oklch(69.2% 0.062 332.7deg);
+}
+
+.ssopt-col-rainbow-d-nord,
+.ssopt-col-rainbow-d-nord .theme-dark,
+.ssopt-col-rainbow-d-nord.theme-dark {
+  --color-set-d-red: oklch(60.6% 0.121 15.3deg);
+  --color-set-d-orange: oklch(69.3% 0.096 38.2deg);
+  --color-set-d-yellow: oklch(85.5% 0.089 84.1deg);
+  --color-set-d-green: oklch(76.8% 0.075 131.1deg);
+  --color-set-d-cyan: oklch(76.3% 0.048 194.5deg);
+  --color-set-d-blue: oklch(77.5% 0.062 217.5deg);
+  --color-set-d-purple: oklch(59.4% 0.077 254deg);
+  --color-set-d-pink: oklch(69.2% 0.062 332.7deg);
+}
+
+.ssopt-col-rainbow-l-monokai,
+.ssopt-col-rainbow-l-monokai .theme-light,
+.ssopt-col-rainbow-l-monokai.theme-light {
+  --color-set-l-red: oklch(65.6% 0.183 9.6deg);
+  --color-set-l-orange: oklch(76.7% 0.168 62.4deg);
+  --color-set-l-yellow: oklch(87.9% 0.125 103.2deg);
+  --color-set-l-green: oklch(84.1% 0.204 127.3deg);
+  --color-set-l-cyan: oklch(82.7% 0.108 212deg);
+  --color-set-l-blue: oklch(82.7% 0.108 212deg);
+  --color-set-l-purple: oklch(70.1% 0.181 298.1deg);
+  --color-set-l-pink: oklch(64.2% 0.24 7.5deg);
+}
+
+.ssopt-col-rainbow-d-monokai,
+.ssopt-col-rainbow-d-monokai .theme-dark,
+.ssopt-col-rainbow-d-monokai.theme-dark {
+  --color-set-d-red: oklch(65.6% 0.183 9.6deg);
+  --color-set-d-orange: oklch(76.7% 0.168 62.4deg);
+  --color-set-d-yellow: oklch(87.9% 0.125 103.2deg);
+  --color-set-d-green: oklch(84.1% 0.204 127.3deg);
+  --color-set-d-cyan: oklch(82.7% 0.108 212deg);
+  --color-set-d-blue: oklch(82.7% 0.108 212deg);
+  --color-set-d-purple: oklch(70.1% 0.181 298.1deg);
+  --color-set-d-pink: oklch(64.2% 0.24 7.5deg);
+}
+
+.ssopt-col-rainbow-l-everforest,
+.ssopt-col-rainbow-l-everforest .theme-light,
+.ssopt-col-rainbow-l-everforest.theme-light {
+  --color-set-l-red: oklch(70.9% 0.128 19.6deg);
+  --color-set-l-orange: oklch(75% 0.106 44.9deg);
+  --color-set-l-yellow: oklch(80.8% 0.086 83.7deg);
+  --color-set-l-green: oklch(77.3% 0.091 125.8deg);
+  --color-set-l-cyan: oklch(75.4% 0.091 151.4deg);
+  --color-set-l-blue: oklch(74.9% 0.063 185.5deg);
+  --color-set-l-purple: oklch(75% 0.082 349.2deg);
+  --color-set-l-pink: oklch(76.1% 0.092 344.8deg);
+}
+
+.ssopt-col-rainbow-d-everforest,
+.ssopt-col-rainbow-d-everforest .theme-dark,
+.ssopt-col-rainbow-d-everforest.theme-dark {
+  --color-set-d-red: oklch(70.9% 0.128 19.6deg);
+  --color-set-d-orange: oklch(75% 0.106 44.9deg);
+  --color-set-d-yellow: oklch(80.8% 0.086 83.7deg);
+  --color-set-d-green: oklch(77.3% 0.091 125.8deg);
+  --color-set-d-cyan: oklch(75.4% 0.091 151.4deg);
+  --color-set-d-blue: oklch(74.9% 0.063 185.5deg);
+  --color-set-d-purple: oklch(75% 0.082 349.2deg);
+  --color-set-d-pink: oklch(76.1% 0.092 344.8deg);
+}
+
+.ssopt-col-rainbow-l-everforest-palette2,
+.ssopt-col-rainbow-l-everforest-palette2 .theme-light,
+.ssopt-col-rainbow-l-everforest-palette2.theme-light {
+  --color-set-l-red: oklch(67.1% 0.2 25.2deg);
+  --color-set-l-orange: oklch(71.5% 0.173 50.7deg);
+  --color-set-l-yellow: oklch(74.7% 0.155 80.3deg);
+  --color-set-l-green: oklch(67% 0.156 118.2deg);
+  --color-set-l-cyan: oklch(65.3% 0.121 163.9deg);
+  --color-set-l-blue: oklch(63.4% 0.112 236.3deg);
+  --color-set-l-purple: oklch(57.7% 0.152 315.3deg);
+  --color-set-l-pink: oklch(68.7% 0.174 341deg);
+}
+
+.ssopt-col-rainbow-d-everforest-palette2,
+.ssopt-col-rainbow-d-everforest-palette2 .theme-dark,
+.ssopt-col-rainbow-d-everforest-palette2.theme-dark {
+  --color-set-d-red: oklch(67.1% 0.2 25.2deg);
+  --color-set-d-orange: oklch(71.5% 0.173 50.7deg);
+  --color-set-d-yellow: oklch(74.7% 0.155 80.3deg);
+  --color-set-d-green: oklch(67% 0.156 118.2deg);
+  --color-set-d-cyan: oklch(65.3% 0.121 163.9deg);
+  --color-set-d-blue: oklch(63.4% 0.112 236.3deg);
+  --color-set-d-purple: oklch(57.7% 0.152 315.3deg);
+  --color-set-d-pink: oklch(68.7% 0.174 341deg);
+}
+
+.ssopt-col-rainbow-l-kanagawa,
+.ssopt-col-rainbow-l-kanagawa .theme-light,
+.ssopt-col-rainbow-l-kanagawa.theme-light {
+  --color-set-l-red: oklch(80.8% 0.139 91.1deg);
+  --color-set-l-orange: oklch(89.1% 0.214 27.6deg);
+  --color-set-l-yellow: oklch(74.8% 0.151 57.3deg);
+  --color-set-l-green: oklch(76.8% 0.075 131.1deg);
+  --color-set-l-cyan: oklch(76.3% 0.048 194.5deg);
+  --color-set-l-blue: oklch(73.9% 0.069 330.4deg);
+  --color-set-l-purple: oklch(59.4% 0.077 254deg);
+  --color-set-l-pink: oklch(68.9% 0.089 328.4deg);
+}
+
+.ssopt-col-rainbow-d-kanagawa,
+.ssopt-col-rainbow-d-kanagawa .theme-dark,
+.ssopt-col-rainbow-d-kanagawa.theme-dark {
+  --color-set-d-red: oklch(80.8% 0.139 91.1deg);
+  --color-set-d-orange: oklch(89.1% 0.214 27.6deg);
+  --color-set-d-yellow: oklch(74.8% 0.151 57.3deg);
+  --color-set-d-green: oklch(76.8% 0.075 131.1deg);
+  --color-set-d-cyan: oklch(76.3% 0.048 194.5deg);
+  --color-set-d-blue: oklch(73.9% 0.069 330.4deg);
+  --color-set-d-purple: oklch(59.4% 0.077 254deg);
+  --color-set-d-pink: oklch(68.9% 0.089 328.4deg);
+}
+
+.ssopt-col-rainbow-l-big-band-fest,
+.ssopt-col-rainbow-l-big-band-fest .theme-light,
+.ssopt-col-rainbow-l-big-band-fest.theme-light {
+  --color-set-l-red: oklch(63.1% 0.194 29.4deg);
+  --color-set-l-orange: oklch(60.4% 0.176 43.9deg);
+  --color-set-l-yellow: oklch(83.6% 0.169 91.8deg);
+  --color-set-l-green: oklch(66.3% 0.16 152.4deg);
+  --color-set-l-cyan: oklch(63.2% 0.116 174.5deg);
+  --color-set-l-blue: oklch(57.6% 0.119 242.3deg);
+  --color-set-l-purple: oklch(52.6% 0.17 314.7deg);
+  --color-set-l-pink: oklch(68.8% 0.18 2deg);
+}
+
+.ssopt-col-rainbow-d-big-band-fest,
+.ssopt-col-rainbow-d-big-band-fest .theme-dark,
+.ssopt-col-rainbow-d-big-band-fest.theme-dark {
+  --color-set-d-red: oklch(63.1% 0.194 29.4deg);
+  --color-set-d-orange: oklch(60.4% 0.176 43.9deg);
+  --color-set-d-yellow: oklch(83.6% 0.169 91.8deg);
+  --color-set-d-green: oklch(66.3% 0.16 152.4deg);
+  --color-set-d-cyan: oklch(63.2% 0.116 174.5deg);
+  --color-set-d-blue: oklch(57.6% 0.119 242.3deg);
+  --color-set-d-purple: oklch(52.6% 0.17 314.7deg);
+  --color-set-d-pink: oklch(68.8% 0.18 2deg);
+}
+
+.ssopt-col-rainbow-l-chroma,
+.ssopt-col-rainbow-l-chroma .theme-light,
+.ssopt-col-rainbow-l-chroma.theme-light {
+  --color-set-l-red: oklch(52% 0.28 25deg);
+  --color-set-l-orange: oklch(65% 0.3 45deg);
+  --color-set-l-yellow: oklch(75% 0.31 90deg);
+  --color-set-l-green: oklch(45% 0.28 140deg);
+  --color-set-l-cyan: oklch(55% 0.28 190deg);
+  --color-set-l-blue: oklch(35% 0.32 240deg);
+  --color-set-l-purple: oklch(40% 0.28 285deg);
+  --color-set-l-pink: oklch(65% 0.32 330deg);
+}
+
+.ssopt-col-rainbow-d-chroma,
+.ssopt-col-rainbow-d-chroma .theme-dark,
+.ssopt-col-rainbow-d-chroma.theme-dark {
+  --color-set-d-red: oklch(52% 0.28 25deg);
+  --color-set-d-orange: oklch(65% 0.3 45deg);
+  --color-set-d-yellow: oklch(75% 0.31 90deg);
+  --color-set-d-green: oklch(45% 0.28 140deg);
+  --color-set-d-cyan: oklch(55% 0.28 190deg);
+  --color-set-d-blue: oklch(35% 0.32 240deg);
+  --color-set-d-purple: oklch(40% 0.28 285deg);
+  --color-set-d-pink: oklch(65% 0.32 330deg);
+}
+
+.ssopt-col-rainbow-l-pigment,
+.ssopt-col-rainbow-l-pigment .theme-light,
+.ssopt-col-rainbow-l-pigment.theme-light {
+  --color-set-l-red: oklch(50% 0.22 28deg);
+  --color-set-l-orange: oklch(60% 0.2 45deg);
+  --color-set-l-yellow: oklch(75% 0.18 90deg);
+  --color-set-l-green: oklch(45% 0.2 140deg);
+  --color-set-l-cyan: oklch(55% 0.18 190deg);
+  --color-set-l-blue: oklch(40% 0.24 240deg);
+  --color-set-l-purple: oklch(45% 0.2 285deg);
+  --color-set-l-pink: oklch(60% 0.22 330deg);
+}
+
+.ssopt-col-rainbow-d-pigment,
+.ssopt-col-rainbow-d-pigment .theme-dark,
+.ssopt-col-rainbow-d-pigment.theme-dark {
+  --color-set-d-red: oklch(50% 0.22 28deg);
+  --color-set-d-orange: oklch(60% 0.2 45deg);
+  --color-set-d-yellow: oklch(75% 0.18 90deg);
+  --color-set-d-green: oklch(45% 0.2 140deg);
+  --color-set-d-cyan: oklch(55% 0.18 190deg);
+  --color-set-d-blue: oklch(40% 0.24 240deg);
+  --color-set-d-purple: oklch(45% 0.2 285deg);
+  --color-set-d-pink: oklch(60% 0.22 330deg);
+}
+
+.ssopt-col-rainbow-l-aftershock-test,
+.ssopt-col-rainbow-l-aftershock-test .theme-light,
+.ssopt-col-rainbow-l-aftershock-test.theme-light {
+  --color-set-l-red: oklch(73.3% 0.225 343deg);
+  --color-set-l-orange: oklch(75% 0.2 320deg);
+  --color-set-l-yellow: oklch(77% 0.18 290deg);
+  --color-set-l-green: oklch(78.5% 0.17 260deg);
+  --color-set-l-cyan: oklch(80% 0.21 235deg);
+  --color-set-l-blue: oklch(82% 0.24 210deg);
+  --color-set-l-purple: oklch(84% 0.28 195deg);
+  --color-set-l-pink: oklch(86% 0.2 180deg);
+}
+
+.ssopt-col-rainbow-d-aftershock-test,
+.ssopt-col-rainbow-d-aftershock-test .theme-dark,
+.ssopt-col-rainbow-d-aftershock-test.theme-dark {
+  --color-set-d-red: oklch(73.3% 0.225 343deg);
+  --color-set-d-orange: oklch(75% 0.2 320deg);
+  --color-set-d-yellow: oklch(77% 0.18 290deg);
+  --color-set-d-green: oklch(78.5% 0.17 260deg);
+  --color-set-d-cyan: oklch(80% 0.21 235deg);
+  --color-set-d-blue: oklch(82% 0.24 210deg);
+  --color-set-d-purple: oklch(84% 0.28 195deg);
+  --color-set-d-pink: oklch(86% 0.2 180deg);
+}
+
+.ssopt-col-rainbow-l-aftershock,
+.ssopt-col-rainbow-l-aftershock .theme-light,
+.ssopt-col-rainbow-l-aftershock.theme-light {
+  --color-set-l-red: oklch(60% 0.2 20deg);
+  --color-set-l-orange: oklch(68% 0.18 50deg);
+  --color-set-l-yellow: oklch(78% 0.15 90deg);
+  --color-set-l-green: oklch(56% 0.25 145deg);
+  --color-set-l-cyan: oklch(65% 0.16 200deg);
+  --color-set-l-blue: oklch(38% 0.22 246deg);
+  --color-set-l-purple: oklch(40% 0.24 285deg);
+  --color-set-l-pink: oklch(72% 0.24 330deg);
+}
+
+.ssopt-col-rainbow-d-aftershock,
+.ssopt-col-rainbow-d-aftershock .theme-dark,
+.ssopt-col-rainbow-d-aftershock.theme-dark {
+  --color-set-d-red: oklch(60% 0.2 20deg);
+  --color-set-d-orange: oklch(68% 0.18 50deg);
+  --color-set-d-yellow: oklch(78% 0.15 90deg);
+  --color-set-d-green: oklch(56% 0.25 145deg);
+  --color-set-d-cyan: oklch(65% 0.16 200deg);
+  --color-set-d-blue: oklch(38% 0.22 246deg);
+  --color-set-d-purple: oklch(40% 0.24 285deg);
+  --color-set-d-pink: oklch(72% 0.24 330deg);
+}
+
+.ssopt-col-rainbow-l-paul-signac-antibes,
+.ssopt-col-rainbow-l-paul-signac-antibes .theme-light,
+.ssopt-col-rainbow-l-paul-signac-antibes.theme-light {
+  --color-set-l-red: oklch(58.2% 0.195 27.1deg);
+  --color-set-l-orange: oklch(68.9% 0.148 48deg);
+  --color-set-l-yellow: oklch(85.3% 0.145 85.8deg);
+  --color-set-l-green: oklch(56% 0.111 136.2deg);
+  --color-set-l-cyan: oklch(78.2% 0.098 227deg);
+  --color-set-l-blue: oklch(49.2% 0.105 235.5deg);
+  --color-set-l-purple: oklch(48.1% 0.114 301.8deg);
+  --color-set-l-pink: oklch(76.6% 0.128 5.7deg);
+}
+
+.ssopt-col-rainbow-d-paul-signac-antibes,
+.ssopt-col-rainbow-d-paul-signac-antibes .theme-dark,
+.ssopt-col-rainbow-d-paul-signac-antibes.theme-dark {
+  --color-set-d-red: oklch(58.2% 0.195 27.1deg);
+  --color-set-d-orange: oklch(68.9% 0.148 48deg);
+  --color-set-d-yellow: oklch(85.3% 0.145 85.8deg);
+  --color-set-d-green: oklch(56% 0.111 136.2deg);
+  --color-set-d-cyan: oklch(78.2% 0.098 227deg);
+  --color-set-d-blue: oklch(49.2% 0.105 235.5deg);
+  --color-set-d-purple: oklch(48.1% 0.114 301.8deg);
+  --color-set-d-pink: oklch(76.6% 0.128 5.7deg);
+}
+
+/* set rainbow presets */
+
+/* text-selection */
+

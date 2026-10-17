@@ -1,0 +1,239 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CB00
+\ Colour \ Background - Decoupled System
+--color-base
+USER SET
+v1
+──────────────────────────────────────────────────────────────────────────────── */
+
+/*
+---ch-color-base-l-c-0-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.0 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-5-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.05 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-10-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.1 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-15-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.15 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-20-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.2 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-25-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.25 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-30-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.3 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-35-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.35 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-40-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.4 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-45-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.45 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-50-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.5 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-55-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.55 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-60-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.6 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-65-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.65 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-70-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.7 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-75-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.75 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-80-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.8 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-85-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.85 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-90-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.9 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-95-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.95 * var(--ch-color-base-l-c-pax-delta));
+--ch-color-base-l-c-100-pax: calc(var(--ch-color-base-l-c-pax-num) + 1.0 * var(--ch-color-base-l-c-pax-delta));
+*/
+
+/* allows one to set the chroma and hue via a set value and a delta */
+:where(.ssopt-custom-base-colours-light),
+.ssopt-custom-base-colours-light .theme-light,
+.ssopt-custom-base-colours-light.theme-light {
+  --ch-color-base-l-c-0-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-5-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-10-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-15-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-20-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-25-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-30-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-35-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-40-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-45-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-50-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-55-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-60-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-65-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-70-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-75-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-80-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-85-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-90-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-95-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-c-100-pax: var(--ch-color-base-l-c-pax-num);
+  --ch-color-base-l-h-0-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-5-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-10-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-15-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-20-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-25-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-30-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-35-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-40-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-45-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-50-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-55-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-60-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-65-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-70-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-75-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-80-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-85-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-90-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-95-pax: var(--ch-color-base-l-h-pax-num);
+  --ch-color-base-l-h-100-pax: var(--ch-color-base-l-h-pax-num);
+}
+
+:where(.ssopt-custom-base-colours-light.ssopt-enable-base-delta-light),
+.ssopt-custom-base-colours-light.ssopt-enable-base-delta-light .theme-light,
+.ssopt-custom-base-colours-light.ssopt-enable-base-delta-light.theme-light {
+  --ch-color-base-l-c-0-pax: calc(var(--ch-color-base-l-c-pax-num) + 0 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-5-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.05 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-10-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.1 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-15-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.15 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-20-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.2 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-25-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.25 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-30-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.3 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-35-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.35 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-40-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.4 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-45-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.45 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-50-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.5 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-55-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.55 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-60-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.6 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-65-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.65 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-70-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.7 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-75-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.75 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-80-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.8 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-85-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.85 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-90-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.9 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-95-pax: calc(var(--ch-color-base-l-c-pax-num) + 0.95 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-c-100-pax: calc(var(--ch-color-base-l-c-pax-num) + 1 * var(--ch-color-base-l-c-pax-delta));
+  --ch-color-base-l-h-0-pax: calc(var(--ch-color-base-l-h-pax-num) + 0 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-5-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.05 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-10-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.1 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-15-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.15 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-20-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.2 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-25-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.25 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-30-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.3 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-35-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.35 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-40-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.4 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-45-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.45 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-50-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.5 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-55-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.55 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-60-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.6 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-65-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.65 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-70-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.7 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-75-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.75 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-80-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.8 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-85-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.85 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-90-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.9 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-95-pax: calc(var(--ch-color-base-l-h-pax-num) + 0.95 * var(--ch-color-base-l-h-pax-delta));
+  --ch-color-base-l-h-100-pax: calc(var(--ch-color-base-l-h-pax-num) + 1 * var(--ch-color-base-l-h-pax-delta));
+}
+
+:where(.ssopt-custom-base-colours-dark),
+.ssopt-custom-base-colours-dark .theme-dark,
+.ssopt-custom-base-colours-dark.theme-dark {
+  --ch-color-base-d-c-0-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-5-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-10-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-15-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-20-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-25-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-30-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-35-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-40-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-45-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-50-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-55-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-60-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-65-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-70-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-75-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-80-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-85-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-90-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-95-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-c-100-pax: var(--ch-color-base-d-c-pax-num);
+  --ch-color-base-d-h-0-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-5-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-10-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-15-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-20-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-25-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-30-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-35-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-40-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-45-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-50-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-55-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-60-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-65-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-70-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-75-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-80-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-85-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-90-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-95-pax: var(--ch-color-base-d-h-pax-num);
+  --ch-color-base-d-h-100-pax: var(--ch-color-base-d-h-pax-num);
+}
+
+:where(.ssopt-custom-base-colours-dark.ssopt-enable-base-delta-dark),
+.ssopt-custom-base-colours-dark.ssopt-enable-base-delta-dark .theme-dark,
+.ssopt-custom-base-colours-dark.ssopt-enable-base-delta-dark.theme-dark {
+  --ch-color-base-d-c-0-pax: calc(var(--ch-color-base-d-c-pax-num) + 0 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-5-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.05 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-10-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.1 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-15-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.15 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-20-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.2 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-25-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.25 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-30-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.3 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-35-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.35 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-40-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.4 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-45-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.45 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-50-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.5 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-55-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.55 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-60-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.6 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-65-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.65 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-70-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.7 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-75-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.75 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-80-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.8 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-85-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.85 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-90-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.9 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-95-pax: calc(var(--ch-color-base-d-c-pax-num) + 0.95 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-c-100-pax: calc(var(--ch-color-base-d-c-pax-num) + 1 * var(--ch-color-base-d-c-pax-delta));
+  --ch-color-base-d-h-0-pax: calc(var(--ch-color-base-d-h-pax-num) + 0 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-5-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.05 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-10-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.1 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-15-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.15 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-20-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.2 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-25-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.25 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-30-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.3 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-35-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.35 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-40-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.4 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-45-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.45 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-50-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.5 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-55-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.55 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-60-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.6 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-65-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.65 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-70-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.7 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-75-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.75 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-80-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.8 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-85-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.85 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-90-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.9 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-95-pax: calc(var(--ch-color-base-d-h-pax-num) + 0.95 * var(--ch-color-base-d-h-pax-delta));
+  --ch-color-base-d-h-100-pax: calc(var(--ch-color-base-d-h-pax-num) + 1 * var(--ch-color-base-d-h-pax-delta));
+}
+
+body {
+  /* Default values for User-Set Base Tones (Light Mode) */
+  --ch-color-base-l-c-pax-num: 0.035;
+  --ch-color-base-l-h-pax-num: 270;
+  --ch-color-base-l-c-pax-delta: 0;
+  --ch-color-base-l-h-pax-delta: 0;
+
+  /* Default values for User-Set Base Tones (Dark Mode) */
+  --ch-color-base-d-c-pax-num: 0.035;
+  --ch-color-base-d-h-pax-num: 270;
+  --ch-color-base-d-c-pax-delta: 0;
+  --ch-color-base-d-h-pax-delta: 0;
+}
+
+/* --color-base | user-set (pax) */
+
+/* colours of rainbow - ie --color-red */
+

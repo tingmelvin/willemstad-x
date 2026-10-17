@@ -1,0 +1,25 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DC01B
+\ First-Level Main Elements \ Options for Ribbons
+\ No Ribbons
+──────────────────────────────────────────────────────────────────────────────── */
+body:where(.ssopt-sd-no-ribbon) {
+  /* OVERRIDES DA04-1 - ribbon shift once */
+
+  /* override DV01 accounting for default ribbon */
+}
+
+body:where(.ssopt-sd-no-ribbon) .workspace-ribbon {
+  display: none;
+}
+
+body:where(.ssopt-sd-no-ribbon):is(.mod-windows, .mod-linux) .mod-root, body:where(.ssopt-sd-no-ribbon):is(.mod-windows, .mod-linux) .mod-left-split {
+  left: 0;
+}
+
+body:where(.ssopt-sd-no-ribbon) .status-bar {
+  left: 0;
+}
+
+/* No Ribbon */
+

@@ -1,0 +1,41 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA02
+\ First-Level Main Elements \ Second Order Clickables
+───────────────────────────────────────────────────────────────────────────────────
+Primarily dealing with things inside an Inner Tab Container
+- so pin, close button, page icon
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* DA02-1 | RIGHT ICONS - CLOSE BUTTON, PIN BUTTON */
+.workspace-tab-header .workspace-tab-header-status-icon, .workspace-tab-header .workspace-tab-header-inner-close-button {
+  padding: calc(var(--header-padding) - var(--size-2-1));
+
+  /* tracks to the header-icon-size */
+}
+
+.workspace-tab-header .workspace-tab-header-status-icon > .svg-icon, .workspace-tab-header .workspace-tab-header-inner-close-button > .svg-icon {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+}
+
+/* set padding by math so that it tracks properly */
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  padding-right: var(--size-2-1);
+} /* aligns properly to the left and right, to be equidistant vs top and bottom */
+
+/* eschew use of --header-margin since it looks a bit odd when the margin > padding */
+
+/* DA02-2 | LEFT ICONS - PAGE ICON */
+.workspace .mod-root .workspace-tab-header-inner-icon {
+  padding-right: 0; /* unsets from padding-right 4px */
+
+  /* tracks to the header-icon-size */
+}
+
+.workspace .mod-root .workspace-tab-header-inner-icon > .svg-icon {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+}
+
+/* Second Order Clickables */
+

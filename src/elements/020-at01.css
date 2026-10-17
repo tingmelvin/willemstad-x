@@ -1,0 +1,10 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AT01
+\ Titlebar \ Hotfix
+──────────────────────────────────────────────────────────────────────────────── */
+body.is-frameless.is-hidden-frameless .titlebar {
+  height: calc(var(--header-height)); /* fixes the height of the titlebar */
+}
+
+/* Titlebar Hotfix */
+

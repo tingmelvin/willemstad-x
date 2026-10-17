@@ -1,0 +1,146 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AI05
+\ Interactives \ Input
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* AI05-1 | NO BORDER */
+textarea:focus, input[type="text"]:focus, input[type="search"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus, textarea:focus-visible, input[type="text"]:focus-visible, input[type="search"]:focus-visible, input[type="email"]:focus-visible, input[type="password"]:focus-visible, input[type="number"]:focus-visible {
+  box-shadow: none;
+}
+
+body {
+  --input-border-width: 0;
+}
+
+/* AI05-2 | RANGE with min max */
+input[type="range"] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 auto;
+  background-color: transparent; /* replace this with */
+  gap: 10px; /* gaps the before, after numbers, and the track); */ /* 10 gives more space */
+
+  /* since we removed the colour from the input itself, we apply it to the runnable track instead */
+}
+
+input[type="range"]::before, input[type="range"]::after {
+  display: block;
+  width: 20px; /* block it? */
+  color: var(--text-muted);
+  flex: 0 0 auto; /* preventing shrinking? */
+  text-align: center;
+}
+
+input[type="range"]::before {
+  content: attr(min);
+}
+
+input[type="range"]::after {
+  content: attr(max);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: none;
+  transform: translateY(-1.5px);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover, input[type="range"]::-webkit-slider-thumb:active {
+  /* border: var(--slider-thumb-border-width) solid var(--slider-thumb-border-color); */
+  border: calc(var(--slider-thumb-border-width) * (1 + 2 * var(--hover-frac))) solid var(--color-accent-1);
+  box-shadow: none;
+
+  /* BAD MATH
+  top: calc(var(--slider-thumb-y) - (0.5 * (1 + var(--hover-frac))) * var(--slider-thumb-height));
+  height: calc(var(--slider-thumb-height) * (1 + var(--hover-frac)));
+  width: calc(var(--slider-thumb-width) * (1 + var(--hover-frac))); */
+
+  /* idea is to move top up, so that height/width would fit nicely */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 3px; /* takes Obs own values */
+  background-color: var(--slider-track-background);
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track {
+  background-color: var(--background-modifier-border-hover);
+
+  /* since slider track bg is background-modifier-border */
+}
+
+body:not(.is-mobile) input[type="range"]:focus::-webkit-slider-thumb,
+body:not(.is-mobile) input[type="range"]:focus-visible::-webkit-slider-thumb {
+  box-shadow: none;
+}
+
+/* Range slider - OBS ORIGINAL */
+
+/*
+input[type='range'] {
+  width: 100px;!i;!;
+  -webkit-appearance: none;
+  background-color: var(--slider-track-background);
+  border-radius: var(--slider-track-height);
+  height: var(--slider-track-height);
+  padding: 0;
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 6px;
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: var(--slider-thumb-height);
+  width: var(--slider-thumb-width);
+  border-radius: var(--slider-thumb-radius);
+  cursor: default;
+  background: #FFF;
+  border: var(--slider-thumb-border-width) solid var(--slider-thumb-border-color);
+  position: relative;
+  top: var(--slider-thumb-y);
+  transition: all 0.1s linear;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.05), 0 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+input[type='range']::-webkit-slider-thumb:hover,
+input[type='range']::-webkit-slider-thumb:active {
+  background: white;
+  border-color: var(--background-modifier-border-focus);
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1), 0 2px 3px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s linear;
+}
+body:not(.is-mobile) input[type=range]:focus {
+  box-shadow: none;
+}
+body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05), 0 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
+  border-color: var(--background-modifier-border-focus);
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05), 0 2px 3px 0px rgba(0, 0, 0, 0.2), 0 0 0px 2px var(--background-modifier-border-focus);
+}
+*/
+.input-right-decorator {
+  inset-inline-end: 0;
+} /* flush to the end */
+
+/* AI05-3 | adding stuff app.css missed out */
+input[type="time"], input[type="tel"], input[type="week"],
+input[type="url"], input[type="month"], input[type="week"], input[type="file"] {
+  height: var(--input-height);
+  padding: var(--input-padding);
+  font-family: inherit;
+  font-size: var(--font-ui-small);
+  color: var(--text-normal);
+  border: var(--input-border-width) solid var(--background-modifier-border);
+  border-radius: var(--input-radius);
+  -webkit-app-region: no-drag;
+  background: var(--background-modifier-form-field);
+  outline: none;
+}
+
+/* Input */
+
+/* DISPARATE ELEMENTS */
+

@@ -1,0 +1,86 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> MA01
+\ Modals \ General \ General Fixes
+──────────────────────────────────────────────────────────────────────────────── */
+.theme-light, .theme-dark {
+  --padding-modal-side: var(--size-4-1);
+  --modal-radius: var(--radius-m);
+}
+
+/* backdrop background */
+.modal-bg {
+  backdrop-filter: var(--blur-8) var(--brightness-50);
+} /* lovely, the brightness solved everything */
+
+/* modal tabs
+remove margin-bottom */
+.modal {
+  /*     remove paddings    */
+}
+
+.modal .vertical-tab-nav-item {
+  margin-bottom: 1px;
+}
+
+.modal .vertical-tab-nav-item {
+  padding: var(--size-2-1) var(--size-4-3);
+}
+
+.modal .vertical-tab-header-group-title {
+  padding: var(--size-4-2) var(--size-2-3) var(--size-4-1) var(--size-2-3);
+}
+
+.modal .vertical-tab-header-group-title:first-of-type {
+  padding-top: var(--size-4-1); /* follows bottom */
+}
+
+.modal .vertical-tab-header {
+  padding: var(--padding-modal-side);
+}
+
+/* modal borders */
+.theme-light, .theme-dark {
+  --modal-border-width: 0;
+} /* outer border */
+.modal.mod-settings .vertical-tab-header,
+.community-plugin-search {
+  border-right: 0;
+} /* inner border */
+
+/* modal close button POOF */
+.modal-close-button {
+  z-index: var(--layer-modal);
+  transition: var(--anim-motion-smooth); /* to display */
+}
+
+body:not(.is-mobile, .is-tablet) .modal-close-button:not(:hover)::before {
+  color: transparent;
+}
+
+/* modal tab content padding */
+
+ /* NEEDS SS */
+.modal {
+  --padding-tab-content-L: var(--size-4-4);
+  --padding-tab-content-R: var(--size-4-4); /* weird for non-scrolls */ /* calc(var(--size-4-4) - var(--size-scrollbar-non-native)) */
+  --padding-tab-content-T: var(--size-4-3);
+  --padding-tab-content-B: var(--size-4-6);
+}
+
+.modal .horizontal-tab-content, .modal .vertical-tab-content {
+  padding-left: var(--padding-tab-content-L);
+  padding-right: var(--padding-tab-content-R);
+}
+
+.modal .vertical-tab-content {
+  padding-top: var(--padding-tab-content-T);
+  padding-bottom: var(--padding-tab-content-B);
+}
+
+/* make the modal sidebar setting item gap smaller from 8px */
+.community-modal-sidebar .setting-item {
+  gap: var(--size-4-1);
+}
+
+/* General Fixes */
+

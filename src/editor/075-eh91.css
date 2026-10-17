@@ -1,0 +1,185 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EH91
+\ Headers > Additions
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* EH91-1 | Make Header Hexes Smaller */
+body:is(.ssopt-smaller-header-hexes) {
+  --header-hex-size: 0.7em;
+}
+
+body:is(.ssopt-smaller-header-hexes) .HyperMD-header :where(.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6).cm-formatting-header {
+  font-size: var(--header-hex-size) !important; /* needs the important */
+}
+
+/* EH91-2 | Change Header Hexes Colours */
+body {
+  --col-header-hex: var(--col-header-hex-special);
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header {
+  color: var(--col-header-hex);
+} /* already is the case, text-faint but have to give them other options */
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-1 {
+  --col-header-hex-special: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-2 {
+  --col-header-hex-special: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-3 {
+  --col-header-hex-special: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-4 {
+  --col-header-hex-special: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-5 {
+  --col-header-hex-special: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-6 {
+  --col-header-hex-special: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+}
+
+/* EH91-3 | Add Header Number (like H1) at the side? */
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h1, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h2, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h3, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h4, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h5, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h6 {
+  position: relative;
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h1::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h2::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h3::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h4::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h5::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h6::before {
+  position: absolute;
+  top: calc(-1 * var(--padding-headers-td));
+  left: -20px;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  font-weight: var(--font-medium);
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5::before, body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6::before {
+  position: absolute;
+  top: calc(-1 * var(--padding-headers-td));
+  left: -20px;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  font-weight: var(--font-medium);
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h1::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1::before {
+  content: "H1";
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h2::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2::before {
+  content: "H2";
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h3::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3::before {
+  content: "H3";
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h4::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4::before {
+  content: "H4";
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h5::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5::before {
+  content: "H5";
+}
+
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] h6::before,
+body:is(.ssopt-add-header-number) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6::before {
+  content: "H6";
+}
+
+/* EH91-4 | Add Text Colours via Headers if no Background Coloring */
+
+/*
+body:is(.ssopt-no-coloured-headers) {
+    &.theme-light {
+        h1, .HyperMD-header-1 {
+            --h1-color: var(--h1-color-light);
+        }
+
+        h2, .HyperMD-header-2 {
+            --h2-color: var(--h2-color-light);
+        }
+
+        h3, .HyperMD-header-3 {
+            --h3-color: var(--h3-color-light);
+        }
+
+        h4, .HyperMD-header-4 {
+            --h4-color: var(--h4-color-light);
+        }
+
+        h5, .HyperMD-header-5 {
+            --h5-color: var(--h5-color-light);
+        }
+
+        h6, .HyperMD-header-6 {
+            --h6-color: var(--h6-color-light);
+        }
+    }
+
+    &.theme-dark {
+        h1, .HyperMD-header-1 {
+            --h1-color: var(--h1-color-dark);
+        }
+
+        h2, .HyperMD-header-2 {
+            --h2-color: var(--h2-color-dark);
+        }
+
+        h3, .HyperMD-header-3 {
+            --h3-color: var(--h3-color-dark);
+        }
+
+        h4, .HyperMD-header-4 {
+            --h4-color: var(--h4-color-dark);
+        }
+
+        h5, .HyperMD-header-5 {
+            --h5-color: var(--h5-color-dark);
+        }
+
+        h6, .HyperMD-header-6 {
+            --h6-color: var(--h6-color-dark);
+        }
+    }
+}
+*/
+
+/* duplicate but just to test before removing the above */
+body:is(.ssopt-no-coloured-headers).theme-light {
+  --h1-color: var(--h1-color-light);
+  --h2-color: var(--h2-color-light);
+  --h3-color: var(--h3-color-light);
+  --h4-color: var(--h4-color-light);
+  --h5-color: var(--h5-color-light);
+  --h6-color: var(--h6-color-light);
+}
+
+body:is(.ssopt-no-coloured-headers).theme-dark {
+  --h1-color: var(--h1-color-dark);
+  --h2-color: var(--h2-color-dark);
+  --h3-color: var(--h3-color-dark);
+  --h4-color: var(--h4-color-dark);
+  --h5-color: var(--h5-color-dark);
+  --h6-color: var(--h6-color-dark);
+}
+
+/* Headers Additions */
+

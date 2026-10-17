@@ -1,0 +1,46 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AB01-4 | Increase variation to --color-accent
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* My OLD colour policy is as follows:
+
+1. col-accent (5 colours, in a gradient) - light one is 00 and dark is 20
+2. a UI overall colour kinda thingamabob. the --background-primary, --background-secondary, and the alts
+3. headers. can be same as 1., can be something else. see how you deem fit.
+4. maybe main text? if you're doing something like Nord
+
+KEEP THESE COMPONENTS SEPARATE (each one have their own system) AND YOU WILL BE FINE
+
+*/
+
+/* NEW colour policy
+
+1. col-accent (3 is enough, so follow what kepano has set) - just color-accent, color-accent-1 and color-accent-2
+2. a UI overall colour kinda thingamabob, so to do so, set the entire range of --color-base
+
+Headers are covered by col-accent, else there are old headers if they want to use that
+Main text will be kept as it is. Since the text normal and stuff is set by color-base, influencing that is enough
+*/
+
+/* NEW NEW COLOUR POLICY */
+
+/* Backgrounds: Start at white and get slightly darker */
+
+/* Borders: Mid-range grays */
+
+/* Faint Text: Must be dark enough for readability */
+
+/* Muted Text: Darker for clear hierarchy */
+
+/* Normal Text: Very dark gray, not pure black */
+
+/*
+body {
+--color-accent: oklch(73.3% 0.225 343.0)    !important;  // the central glow
+--color-accent-1: oklch(80.0% 0.210 235.0)  !important;  // the main room-blue
+--color-accent-2: oklch(86.0% 0.200 180.0)  !important;  // the coolest floor-cyan
+}
+*/
+
+/* Set Colours and Colour Variables */
+

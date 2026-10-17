@@ -1,0 +1,142 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EF02
+\ Editor > Document Display > Frontmatter
+\ Properties / Metadata Cointainer
+───────────────────────────────────────────────────────────────────────────────────
+        X
+        ──────────────────────────────────────────────────────────────────────── */
+.metadata-container {
+  background-color: var(--background-primary-alt);
+  border-radius: var(--radius-s);
+}
+
+.metadata-properties-heading.is-collapsed {
+  margin-bottom: 0; /* collapse margin during collapsed state */
+}
+
+/* setting how it should look like */
+.metadata-property {
+  display: grid;
+  grid-template-areas: "info desc" "info desc"; /* oh bosh i wanted it to float up but OH WELLS */
+  grid-template-columns: auto 1fr;
+}
+
+.metadata-property .metadata-property-key {
+  grid-area: info;
+}
+
+.metadata-property .metadata-property-key .metadata-property-icon, .metadata-property .metadata-property-key .metadata-property-key-input {
+  align-self: center; /* else it floats up which is ugly on single lines */
+}
+
+.metadata-property .metadata-property-value {
+  grid-area: desc;
+}
+
+body {
+  --metadata-padding: 0.25em 0.25em; /* original 8px 0 */
+
+  /* hide Properties (full) in Reading Mode */
+
+  /* hide Properties (full) in Reading Mode */
+
+  /* hide Properties name in Reading and Live Preview mode */
+}
+
+body:is(.ssopt-hide-metadata-container) {
+  --metadata-display-reading: none;
+}
+
+body:is(.ssopt-hide-metadata-container-lp) {
+  --metadata-display-editing: none;
+}
+
+body:is(.ssopt-hide-properties-title) .metadata-properties-heading {
+  display: none;
+}
+
+body:not(.ssopt-properties-button-original) .metadata-add-button {
+  /* removes 'Add Property' text */
+}
+
+body:not(.ssopt-properties-button-original) .metadata-add-button .text-button-label {
+  display: none;
+}
+
+body:not(.ssopt-properties-button-original) .metadata-content {
+  position: relative;
+}
+
+body:not(.ssopt-properties-button-original) .metadata-content .metadata-add-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: var(--size-2-3); /* 6  18 */
+}
+
+body:not(.ssopt-properties-aliases-original) {
+  --padding-multi-select: 2px;
+}
+
+body:not(.ssopt-properties-aliases-original) .multi-select-container {
+  gap: var(--size-2-1) var(--size-2-1); /* takes that of the close button to text. since the close button is hidden that's our new gap */ /* we fixed the other one below so can take similar gap */
+  align-self: center;
+}
+
+body:not(.ssopt-properties-aliases-original) .multi-select-pill {
+  padding-right: var(--padding-multi-select);
+  background-color: var(--background-secondary);
+}
+
+body:not(.ssopt-properties-aliases-original) .multi-select-pill .multi-select-pill-remove-button {
+  opacity: 0;
+}
+
+body:not(.ssopt-properties-aliases-original) .multi-select-pill:hover .multi-select-pill-remove-button {
+  opacity: 1;
+}
+
+body:not(.ssopt-properties-aliases-original) .multi-select-pill-content {
+  padding: 2px 0 2px calc(var(--icon-xs) + var(--padding-multi-select)); /* math to fix L and R */
+  border-radius: var(--radius-s);
+  margin-inline-start: 0;
+}
+
+body:not(.ssopt-properties-aliases-original) .metadata-property-value .external-link.multi-select-pill-content {
+  padding-right: calc(1.125 * var(--font-text-size));
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> Y
+──────────────────────────────────────────────────────────────────────────── */
+body {
+  --metadata-property-radius: var(--radius-s);
+  --metadata-property-radius-focus: var(--radius-s);
+  --metadata-property-radius-hover: var(--radius-s);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>  MOVE PROPERTIES TO THE FRONT
+──────────────────────────────────────────────────────────────────────────── */
+.ssopt-frontmatter-in-front .markdown-reading-view .markdown-preview-section .mod-header.mod-ui {
+  display: grid;
+}
+
+.ssopt-frontmatter-in-front .markdown-reading-view .metadata-container {
+  order: -1;
+}
+
+.ssopt-frontmatter-in-front:not(.ssopt-hide-metadata-container) .markdown-reading-view .inline-title {
+  margin-block-start: var(--inline-title-margin-bottom);
+}
+
+.ssopt-frontmatter-in-front-lp .markdown-source-view .metadata-container {
+  order: -1;
+}
+
+.ssopt-frontmatter-in-front-lp:not(.ssopt-hide-metadata-container-lp) .markdown-source-view .inline-title {
+  margin-block-start: var(--inline-title-margin-bottom);
+}
+
+/* Frontmatter, Properties and Metadata Container (New) */
+

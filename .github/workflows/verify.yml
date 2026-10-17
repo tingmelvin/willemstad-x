@@ -1,0 +1,66 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# A new push to the same ref makes the previous run obsolete.
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # CI runs exactly the command a contributor runs locally, so "it passed on
+      # my machine" and "it passed in CI" cannot diverge. That is:
+      #
+      #   build:audit    no orphan partial (a file that exists but never ships)
+      #   build:check    src/ reproduces the committed theme.css byte-for-byte
+      #   check:version  manifest.json / versions.json / theme.css agree
+      #   lint:css       stylelint over src/, per-rule counts pinned
+      #   test           the whole suite
+      - name: Verify
+        run: pnpm run verify
+
+  extract-roundtrip:
+    name: extract is lossless
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # scripts/extract.mjs is the provenance record of the src/ refactor: it must
+      # keep producing a tree that rebuilds to the exact same theme.css. Without
+      # this job, src/ and extract.mjs could drift apart silently and the "the
+      # split changed nothing" claim would quietly stop being true.
+      #
+      # This job mutates the working tree, which is why it is separate from verify.
+      - name: Re-extract and compare
+        run: |
+          cp theme.css /tmp/theme.css.orig
+          node scripts/extract.mjs --force
+          node scripts/build.mjs --check
+          cmp /tmp/theme.css.orig theme.css
+          echo "extract round-trip is lossless"

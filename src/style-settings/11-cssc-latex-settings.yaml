@@ -1,0 +1,94 @@
+/*
+@settings
+name: " Display"
+id: cssc-latex-settings
+settings:
+    -
+        id: cssc-latex
+        title: " Display CSSClass"
+        description: "Transform your notes into beautiful LaTeX-style documents. Creates academic paper styling with proper typography, equation numbering, and LaTeX-like formatting for professional document presentation. To use LaTeX Display CSSClass, type `cssclasses: latex` in the document's YAML."
+        type: heading
+        level: 3
+        collapsed: false
+    -
+        id: documentation-cssclass-latex
+        title: Documentation for LaTeX Display CSSClass
+        type: info-text
+        description: "[Example](https://willemstad.cc/Features/Global+CSSClass/LaTeX+Display+Example) [Docs](https://willemstad.cc/Features/Global+CSSClass/LaTeX+Display)"
+        markdown: true
+    -
+        id: cssc-latex-font-size
+        title: "Font Size"
+        type: variable-number-slider
+        description: "Sets the base font size for the LaTeX document style."
+        default: 14
+        min: 10
+        max: 20
+        step: 0.5
+        format: 'pt'
+    -
+        id: cssc-latex-font-reading
+        title: "Reading Font Family"
+        type: variable-text
+        description: "Font family used for reading mode. Supports multiple fallbacks."
+        default: '"MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: cssc-latex-font-source
+        title: "Source/Editor Font Family"
+        type: variable-text
+        description: "Font family used in source/editor mode. Supports multiple fallbacks."
+        default: '"DM Mono", "MathJax Main", "MJXZERO", "MJXTEX"'
+    -
+        id: cssc-latex-text-indent
+        title: "Paragraph Text Indent"
+        type: variable-number-slider
+        description: "Sets the indentation for the first line of paragraphs."
+        default: 0
+        min: 0
+        max: 3
+        step: 0.1
+        format: 'em'
+    -
+        id: cssc-latex-table-preview-font-size
+        title: "Table Font Size (Preview)"
+        type: variable-number-slider
+        description: "Font size for tables in reading/preview mode."
+        default: 1
+        min: 0.7
+        max: 1.5
+        step: 0.05
+        format: 'em'
+    -
+        id: cssc-latex-table-editor-font-size
+        title: "Table Font Size (Editor)"
+        type: variable-number-slider
+        description: "Font size for tables in editor/live preview mode."
+        default: 0.8
+        min: 0.6
+        max: 1.2
+        step: 0.05
+        format: 'em'
+    -
+        id: cssc-latex-equation-counter-format
+        title: "Equation Number Format"
+        type: class-select
+        allowEmpty: false
+        default: default
+        description: "Format for equation numbering."
+        options:
+            -
+                label: 'Parentheses: (1)'
+                value: default
+            -
+                label: 'Brackets: [1]'
+                value: ssopt-cssc-latex-counter-brackets
+            -
+                label: 'Plain: 1'
+                value: ssopt-cssc-latex-counter-plain
+    -
+        id: ssopt-cssc-latex-preserve-bg-colour
+        title: "Preserve Theme Background Colour in LaTeX CSSClass PDF Exports"
+        type: class-toggle
+        description: "By default, LaTeX documents generally should be exported to white backgrounds, and thus this CSSClass overrides the print stylesheet available for the rest of Willemstad. Toggle this to force the LaTeX CSSClass document to take the background colour of the theme when exporting."
+        default: false
+*/

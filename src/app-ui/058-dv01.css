@@ -1,0 +1,190 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DV01
+\ Status Bar
+\ Spacing and Presentation Control
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --status-bar-position: absolute;
+  --status-bar-glass-blur: 4px; /* I control no-blur via here locally vs globally */
+
+  /* NEW VARIABLES */
+  --status-bar-max-width: 85%; /* SS this in order to let people change */
+
+  /* --status-bar-min-height: 18px; */
+
+ /* from app.css */
+  --status-bar-min-height: calc(2 * var(--elements-padding) + var(--status-bar-min-height-intermediary));
+  --status-bar-min-height-intermediary: calc(var(--line-height-tight) * var(--font-text-size) / 1.5);
+
+  /* this gets you the true height of each button from intermediary */
+  --status-bar-padding: var(--size-2-2); /* expose this? to SS? */
+
+  /* FOR FULL BAR ONLY */
+  --status-bar-full-justify-content: right;
+  --status-bar-shift-workspace-padding-bottom: calc(var(--status-bar-min-height) + var(--status-bar-padding) + var(--status-bar-padding) + var(--divider-width));
+}
+
+/*
+================================================================================
+  STATUS BAR MIXINS (SPECIFICITY PRESERVED)
+  - Encapsulates logic without altering the compiled CSS selectors.
+================================================================================
+*/
+
+/*
+================================================================================
+  .status-bar IMPLEMENTATION
+  - The final structure is now a clean list of includes that generates the exact
+    same complex CSS as the original.
+================================================================================
+*/
+.status-bar {
+  /*
+  @at-root body:is(.ssopt-status-bar-full) .workspace-split {
+      &.mod-root, &.mod-sidedock {
+          // padding-bottom: var(--status-bar-shift-workspace-padding-bottom);
+          border-bottom: calc(var(--status-bar-shift-workspace-padding-bottom) + var(--sbb-divider-width)) solid transparent;
+          background-clip: padding-box;
+      }
+  }
+  */
+}
+
+.status-bar {
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: var(--ribbon-padding);
+  gap: calc(0.5 * var(--header-margin));
+  max-width: var(--status-bar-max-width);
+  flex-wrap: wrap-reverse;
+  min-height: var(--status-bar-min-height);
+}
+
+body {
+  --sbb-divider-width: var(--divider-width);
+}
+
+body:not(.ssopt-status-bar-full):is(.ssopt-status-bar-borderless) {
+  --sbb-divider-width: 0px;
+}
+
+body:is(.ssopt-status-bar-full) .status-bar {
+  --status-bar-max-width: 100%;
+  --status-bar-border-width: var(--sbb-divider-width) 0 0 0;
+
+  justify-content: var(--status-bar-full-justify-content);
+  width: 100%;
+  border-radius: 0;
+}
+
+body:is(.ssopt-status-bar-full) :where(.app-container) {
+  --status-bar-position: relative;
+  --status-bar-glass-blur: 0px;
+
+  /*
+  & {
+      // padding-bottom: var(--status-bar-shift-workspace-padding-bottom);
+      border-bottom: calc(var(--status-bar-shift-workspace-padding-bottom) + var(--sbb-divider-width)) solid transparent;
+      background-clip: padding-box;
+  }
+      */
+}
+
+body:is(.ssopt-status-bar-full) :where(.app-container) {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: var(--status-bar-background);
+}
+
+body:is(.ssopt-status-bar-full) :where(.app-container) .horizontal-main-container {
+  grid-row: 1/2;
+}
+
+body:is(.ssopt-status-bar-full) :where(.app-container) .status-bar {
+  grid-row: 2/-1;
+}
+
+body:not(.ssopt-status-bar-full, .ssopt-status-bar-right) .status-bar {
+  --status-bar-border-width: var(--sbb-divider-width) var(--sbb-divider-width) 0 var(--sbb-divider-width);
+  --status-bar-radius: var(--radius-m) var(--radius-m) 0 0;
+
+  right: 0;
+  left: var(--ribbon-width);
+}
+
+body:not(.ssopt-status-bar-full):is(.ssopt-status-bar-right) .status-bar {
+  --status-bar-border-width: var(--sbb-divider-width) 0 0 var(--sbb-divider-width);
+  --status-bar-radius: var(--radius-m) 0 0 0;
+
+  right: 0;
+}
+
+body:not(.ssopt-status-bar-full):is(.ssopt-status-bar-right):is(.ssopt-status-bar-shift-workspace) .workspace-split.mod-right-split {
+  padding-bottom: var(--status-bar-shift-workspace-padding-bottom);
+}
+
+body {
+  --status-bar-bottom-float-margin: 8px;
+}
+
+body:not(.ssopt-status-bar-full, .ssopt-status-bar-full, .ssopt-status-bar-right, .ssopt-status-bar-float-not) .status-bar {
+  --status-bar-border-width: var(--sbb-divider-width);
+  --status-bar-radius: var(--radius-m);
+
+  right: 0;
+  left: var(--ribbon-width);
+  margin-bottom: var(--status-bar-bottom-float-margin);
+}
+
+body:not(.ssopt-status-bar-full, .ssopt-status-bar-full):is(.ssopt-status-bar-right):not(.ssopt-status-bar-float-not) .status-bar {
+  --status-bar-border-width: var(--sbb-divider-width) 0 var(--sbb-divider-width) var(--sbb-divider-width);
+  --status-bar-radius: var(--radius-m) 0 0 var(--radius-m);
+
+  right: 0;
+  margin-bottom: var(--status-bar-bottom-float-margin);
+}
+
+body:is(.ssopt-status-bar-glass):not(.no-blur) .status-bar {
+  backdrop-filter: blur(var(--status-bar-glass-blur));
+
+  --status-bar-background: transparent;
+}
+
+.status-bar-item {
+  line-height: var(--line-height-tight); /* overrides the 1 with 1.3 */
+  padding: var(--elements-padding);
+  white-space: nowrap; /* forces words in a line to be IN ONE LINE */
+
+  /* similar to the github button in comm MC03 and MD03 */
+
+ /* forces non-compliant icons to fit */
+}
+
+.status-bar-item > svg {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+}
+
+/* ensure consistency with the right side */
+body:not(.is-fullscreen) .status-bar {
+  padding: var(--ribbon-padding); /* unity */
+
+  /* padding: var (--header-padding); */
+}
+
+/* STATUS BAR SYNC BUTTON */
+.status-bar-item.plugin-editor-status, .status-bar-item.plugin-sync {
+  padding: var(--elements-padding);
+} /* to unify it */
+
+/* NOT THE BEST BUT UGH OB WENT WITH THIS. BETTER WAY IS TO USE GAP */
+.status-bar-item-segment {
+  margin-inline-end: 0; /* makes it twice of elements padding instead of a hardcoded one */
+} /* use gap instead calc(2 * var(--elements-padding)) */
+body.ssopt-no-status-bar .status-bar {
+  display: none;
+}
+
+/* Status Bar General Spacing and Presentation Control */
+

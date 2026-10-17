@@ -1,0 +1,180 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EX16A
+\ CSSClass
+\ Cornell Notes
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+Cornell Notes CSSClass for Obsidian
+Author: @tingmelvin
+Version: 0.2.0
+Last tested for Obsidian v1.0
+Last Updated: 2022-11-08
+
+Version: 0.3.0
+Tested for Obsidian v1.9
+Last Updated: 2025-06-20
+
+use `cssclass: cornell`
+
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --cssc-cornell-align-left: max(var(--cssc-cornell-aside-min), var(--cssc-cornell-aside-max));
+  --cssc-cornell-gap: var(--p-spacing-root); /* aligns to the p stuff */
+  --cssc-cornell-aside-min: 125px;
+  --cssc-cornell-aside-max: 25%; /* sets max width via clamp */
+  --cssc-cornell-text-align: justify;
+  --cssc-cornell-text-align-last: right;
+}
+
+.cornell {
+  /* FOR TABLE */
+
+  /* FOR PARAGRAPHS */
+
+  /* FOR HEADINGS AND HR */
+}
+
+.cornell div.el-table {
+  margin-left: var(--cssc-cornell-align-left);
+}
+
+.cornell div.el-table table {
+  margin-left: var(--cssc-cornell-gap);
+}
+
+.cornell div.el-p {
+  margin-left: var(--cssc-cornell-align-left);
+  text-align: var(--cssc-cornell-text-align);
+}
+
+.cornell div.el-p :where(p) {
+  margin-left: var(--cssc-cornell-gap);
+}
+
+.cornell div[class^="el-h"] {
+  margin-left: var(--cssc-cornell-align-left);
+}
+
+.cornell div[class^="el-h"] :where(h1, h2, h3, h4, h5, h6, hr) {
+  margin-left: var(--cssc-cornell-gap);
+}
+
+.cornell .callout p {
+  margin-left: unset;
+  text-align: var(--cssc-cornell-text-align);
+}
+
+.cornell .callout[data-callout-metadata="inline"] {
+  margin-left: calc(var(--cssc-cornell-align-left) + var(--cssc-cornell-gap));
+}
+
+.cornell div.el-pre {
+  margin-left: var(--cssc-cornell-align-left);
+}
+
+.cornell div.el-pre pre {
+  margin-left: var(--cssc-cornell-gap);
+}
+
+.cornell div.el-blockquote {
+  margin-left: var(--cssc-cornell-align-left);
+}
+
+.cornell div.el-blockquote blockquote {
+  margin-left: var(--cssc-cornell-gap);
+}
+
+.cornell div.el-ul, .cornell div.el-ol {
+  margin-left: calc(var(--cssc-cornell-align-left) + var(--cssc-cornell-gap));
+}
+
+.cornell div.callout[data-callout="aside"] {
+  max-width: var(--cssc-cornell-align-left);
+  min-width: var(--cssc-cornell-aside-min);
+  margin-top: 0;
+
+  /* OVERRIDES TO LEFT */
+  --aside-callout-float: left;
+  --aside-callout-margin-left: 0;
+
+  float: var(--aside-callout-float);
+  margin-left: var(--aside-callout-margin-left);
+  margin-right: var(--cssc-cornell-gap); /* aligns to the gap for the right side */
+}
+
+/* Live Preview so it goes across the page */
+.markdown-source-view.mod-cm6.cornell .callout[data-callout="aside"] {
+  max-width: unset;
+  min-width: unset;
+  float: unset;
+}
+
+.markdown-source-view.mod-cm6.cornell .callout[data-callout-metadata="inline"] {
+  margin-left: unset;
+}
+
+.print .cornell > div > .callout[data-callout-metadata="inline"],
+.print .cornell > div > h1, .print .cornell > div > h2, .print .cornell > div > h3, .print .cornell > div > h4, .print .cornell > div > h5, .print .cornell > div > h6, .print .cornell > div > hr,
+.print .cornell > div > pre, .print .cornell > div > blockquote, .print .cornell > div > ol, .print .cornell > div > ul, .print .cornell > div > table {
+  margin-left: calc(var(--cssc-cornell-align-left) + var(--cssc-cornell-gap));
+}
+
+.print .cornell {
+  --callout-blend-mode: normal;
+
+  position: relative;
+  isolation: isolate;
+  background: none !important;
+}
+
+.print .cornell > div:has(> p) {
+  max-width: calc(100% - var(--cssc-cornell-align-left) - var(--cssc-cornell-gap));
+  margin-left: calc(var(--cssc-cornell-align-left) + var(--cssc-cornell-gap));
+}
+
+.print .cornell .mod-frontmatter {
+  z-index: -5;
+}
+
+.print .cornell .mod-frontmatter::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  background: var(--background-primary);
+  box-sizing: border-box !important;
+}
+
+/* EXPERIMENTAL */
+
+/*@raw style-settings/12-cssc-cornell-settings.yaml */
+
+/* FOR PRINT */
+
+/* CSSClass > Cornell Notes */
+

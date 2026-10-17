@@ -1,0 +1,248 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EH01
+\ Headers > Setting the Base
+\ v3
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* EH01-1 |  Δ Heading Background and Text Colours */
+body {
+  /* for colour contrast - credits to Lea Verou */
+  --l-threshold: 0.7;
+  --l: clamp(0.3, (l / var(--l-threshold) - 1) * -infinity, 0.975);
+
+  /* we use 0.3 and 0.975 since we don't want to go full white or full black */
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 {
+  --h1-color: var(--col-h1);
+
+  color: var(--h1-color);
+  background-color: var(--col-h1-bg);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 a {
+  --link-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
+  --link-color-hover: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
+  --link-unresolved-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h1 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h1 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-1 a:hover {
+  color: var(--link-color-hover);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 {
+  --h2-color: var(--col-h2);
+
+  color: var(--h2-color);
+  background-color: var(--col-h2-bg);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 a {
+  --link-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
+  --link-color-hover: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
+  --link-unresolved-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h2 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h2 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-2 a:hover {
+  color: var(--link-color-hover);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 {
+  --h3-color: var(--col-h3);
+
+  color: var(--h3-color);
+  background-color: var(--col-h3-bg);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 a {
+  --link-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
+  --link-color-hover: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
+  --link-unresolved-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h3 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h3 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-3 a:hover {
+  color: var(--link-color-hover);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 {
+  --h4-color: var(--col-h4);
+
+  color: var(--h4-color);
+  background-color: var(--col-h4-bg);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 a {
+  --link-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
+  --link-color-hover: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
+  --link-unresolved-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h4 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h4 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-4 a:hover {
+  color: var(--link-color-hover);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 {
+  --h5-color: var(--col-h5);
+
+  color: var(--h5-color);
+  background-color: var(--col-h5-bg);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 a {
+  --link-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
+  --link-color-hover: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
+  --link-unresolved-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h5 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h5 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-5 a:hover {
+  color: var(--link-color-hover);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 {
+  --h6-color: var(--col-h6);
+
+  color: var(--h6-color);
+  background-color: var(--col-h6-bg);
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6 a, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 a {
+  --link-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+  --link-color-hover: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+  --link-unresolved-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] h6 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .markdown-rendered h6 a:hover, body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] .HyperMD-header-6 a:hover {
+  color: var(--link-color-hover);
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-1.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-1.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-1.cm-url {
+  --link-color: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-color-hover: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h1-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-unresolved-color: oklch(from var(--col-h1-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-2.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-2.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-2.cm-url {
+  --link-color: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-color-hover: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h2-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-unresolved-color: oklch(from var(--col-h2-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-3.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-3.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-3.cm-url {
+  --link-color: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-color-hover: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h3-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-unresolved-color: oklch(from var(--col-h3-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-4.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-4.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-4.cm-url {
+  --link-color: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-color-hover: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h4-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-unresolved-color: oklch(from var(--col-h4-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-5.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-5.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-5.cm-url {
+  --link-color: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-color-hover: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h5-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-unresolved-color: oklch(from var(--col-h5-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-6.cm-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-6.cm-hmd-internal-link, body:not(.ssopt-no-coloured-headers) .cm-s-obsidian span.cm-header-6.cm-url {
+  --link-color: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-color-hover: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-external-color: oklch(from var(--col-h6-bg) calc(var(--l) + (0.5 - var(--l)) * 0.2) 0.07 h);
+  --link-unresolved-color: oklch(from var(--col-h6-bg) var(--l) 0.03 h / calc(alpha - 0.1));
+}
+
+body:not(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad) {
+  /*
+  h1, .markdown-rendered h1, .HyperMD-header-1 {
+      // Conditionally define the text color variable
+      @include header-text-color(--col-h1-bg, --col-h1);
+  }
+  */
+  --col-h1: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
+
+  /*
+  h2, .markdown-rendered h2, .HyperMD-header-2 {
+      // Conditionally define the text color variable
+      @include header-text-color(--col-h2-bg, --col-h2);
+  }
+  */
+  --col-h2: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
+
+  /*
+  h3, .markdown-rendered h3, .HyperMD-header-3 {
+      // Conditionally define the text color variable
+      @include header-text-color(--col-h3-bg, --col-h3);
+  }
+  */
+  --col-h3: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
+
+  /*
+  h4, .markdown-rendered h4, .HyperMD-header-4 {
+      // Conditionally define the text color variable
+      @include header-text-color(--col-h4-bg, --col-h4);
+  }
+  */
+  --col-h4: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
+
+  /*
+  h5, .markdown-rendered h5, .HyperMD-header-5 {
+      // Conditionally define the text color variable
+      @include header-text-color(--col-h5-bg, --col-h5);
+  }
+  */
+  --col-h5: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
+
+  /*
+  h6, .markdown-rendered h6, .HyperMD-header-6 {
+      // Conditionally define the text color variable
+      @include header-text-color(--col-h6-bg, --col-h6);
+  }
+  */
+  --col-h6: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+}
+
+/* EH01-2 | Δ Heading Padding */
+body:not(.ssopt-no-coloured-headers) {
+  --padding-headers: var(--padding-headers-td) var(--padding-headers-lr); /* so that this can be changed */
+  --padding-headers-lr: 0.25em;
+  --padding-headers-td: 0.15em;
+
+  /* EH01-2A | Moving Collapse Indicators to accommodate for new padding */
+
+  /* Source Mode */
+
+  /* Preview Mode */
+}
+
+body:not(.ssopt-no-coloured-headers) .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  padding-right: calc(6px + var(--padding-headers-lr));
+}
+
+body:not(.ssopt-no-coloured-headers) .markdown-preview-view .heading-collapse-indicator {
+  margin-left: calc(-22px - var(--padding-headers-lr));
+}
+
+body:not(.ssopt-no-coloured-headers) .metadata-properties-heading .collapse-indicator {
+  inset-inline-start: calc(-28px + var(--padding-headers-lr));
+}
+
+body:not(.ssopt-no-coloured-headers) .workspace-leaf-content[data-type="markdown"] :where(h1, h2, h3, h4, h5, h6),
+body:not(.ssopt-no-coloured-headers) .markdown-source-view.mod-cm6 :is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3,
+.HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) {
+  padding: var(--padding-headers);
+}
+
+/* Headers > Setting the Base for Colours */
+

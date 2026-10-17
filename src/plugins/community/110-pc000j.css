@@ -1,0 +1,487 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000J
+\ Plugins > Community
+\ Style Settings
+\ High Level CSS Manipulations for Colours RealDisplay
+\ v4
+───────────────────────────────────────────────────────────────────────────────────
+Style Settings allows you some new HTML divs.
+Which means CSS could do funny things with it.
+The sky is the limit and we're testing it.
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* -----------------------------------------------------------------
+   0.  SASS MODULE IMPORTS
+----------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------
+   0.  SASS MODULE IMPORTS
+----------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------
+   1.  UNIVERSAL SWATCH MIXIN (linear-gradient preview)
+----------------------------------------------------------------- */
+
+/* ── UNIVERSAL SWATCH MIXIN (fixed) ───────────────────────────── */
+
+/* -----------------------------------------------------------------
+   2.  PALETTE-PREVIEW MIXINS
+----------------------------------------------------------------- */
+
+/* 1. Helpers — one rule, one direction */
+
+/* ==================================================================
+   CORRECT & FINAL CONDITIONAL MIXINS
+   ================================================================== */
+
+/* -----------------------------------------------------------------
+   3.  V1 WILLEMSTAD COLOUR-PANEL
+----------------------------------------------------------------- */
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container {
+  /* layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2%;
+  padding-left: 0;
+
+  /* <option> monospace */
+
+  /* headings that span both columns */
+
+  /* LIGHT group placement + dimming in dark UI */
+
+  /* DARK group placement + dimming in light UI */
+
+  /* ================================================================
+     ALL LIGHT + DARK GROUPS (shared styling + previews)
+  ================================================================ */
+
+  /* end TOTAL ALL block */
+
+  /* V2 heading tweak */
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container select option {
+  font-family: var(--font-monospace);
+  font-size: var(--code-size);
+}
+
+body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 0%;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading:not([data-id="willemstad-theme-colours-light"],
+[data-id="willemstad-theme-colours-dark"]) {
+  grid-column: 1/-1;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading:not([data-id="willemstad-theme-colours-light"],
+[data-id="willemstad-theme-colours-dark"]) + .style-settings-container {
+  grid-column: 1/-1;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-light"] {
+  grid-area: 1/1;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-light"] + .style-settings-container {
+  grid-area: 2/1;
+}
+
+body:is(.theme-dark) .style-settings-heading[data-id="willemstad-theme-colours-light"] {
+  background-color: var(--text-normal);
+}
+
+body:is(.theme-dark) .style-settings-heading[data-id="willemstad-theme-colours-light"] .setting-item-name,
+body:is(.theme-dark) .style-settings-heading[data-id="willemstad-theme-colours-light"] .setting-item-control .clickable-icon {
+  color: var(--background-primary);
+}
+
+body:is(.theme-dark) .style-settings-heading[data-id="willemstad-theme-colours-light"] .setting-item-description {
+  color: var(--background-secondary-alt);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-dark"] {
+  grid-area: 1/2;
+}
+
+body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-dark"] {
+  grid-area: 3/1;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-dark"] + .style-settings-container {
+  grid-area: 2/2;
+}
+
+body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id="willemstad-theme-colours-dark"] + .style-settings-container {
+  grid-area: 4/1;
+}
+
+body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-dark"] {
+  background-color: var(--text-normal);
+}
+
+body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-dark"] .setting-item-name,
+body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-dark"] .setting-item-control .clickable-icon {
+  color: var(--background-primary);
+}
+
+body:is(.theme-light) .style-settings-heading[data-id="willemstad-theme-colours-dark"] .setting-item-description {
+  color: var(--background-secondary-alt);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] {
+  padding: var(--padding-ss);
+  border: 1px solid var(--background-modifier-border);
+
+  /* end inner settings container */
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"].is-collapsed {
+  margin-bottom: 0;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container {
+  border-right: 1px solid var(--background-modifier-border);
+  padding-right: var(--padding-ss);
+  margin-bottom: 0;
+
+  /* small <select> under V3-base headings */
+
+  /* monospace labels for base & accent headings */
+
+  /* uniform swatch sizing */
+
+  /* text for selection */
+
+  /* ───────── SOLID PALETTE PREVIEWS ───────── */
+
+  /* CROSS-COLOURS | FOR CONTRAST PREVIEWS */
+
+  /* ───────── OPPOSITE (cross-theme) PREVIEWS ───────── */
+
+  /* BASE — opposite previews */
+
+  /* CONTRAST (BASE) - IF NO OPTION IS TURNED ON */
+
+  /* CONTRAST (USE OWN COLOURS BUT DIFF LIGHTNESS) */
+
+  /* ACCENT */
+
+  /* RAINBOW */
+
+  /* SELECTION */
+
+  /* nested .setting-item layout override */
+}
+
+body:is(.is-mobile) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container {
+  margin-bottom: var(--padding-ss);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-"] + .style-settings-container > .setting-item select {
+  font-size: var(--code-size);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-base-"] :where(.setting-item-info > .setting-item-name), .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-accent-"] :where(.setting-item-info > .setting-item-name), .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-selection-"] :where(.setting-item-info > .setting-item-name) {
+  font-family: var(--font-monospace);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-"] .setting-item-control::before {
+  content: "";
+  width: calc(4 * (var(--icon-m) + 2 * var(--size-2-2)));
+  height: calc(var(--icon-m) + 2 * var(--size-2-2));
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-selection"] .setting-item-control::before {
+  content: "Lorem Ipsum";
+  font-size: var(--code-size);
+  text-align: center;
+  align-content: center;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-selection"].style-settings-heading[data-id="V3-willemstad-color-selection-settings-light"] .setting-item-control::before {
+  color: black;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id^="V3-willemstad-color-selection"].style-settings-heading[data-id="V3-willemstad-color-selection-settings-dark"] .setting-item-control::before {
+  color: white;
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container {
+  /* light panel */
+
+  /* dark panel */
+
+  /* light panel */
+
+  /* dark panel */
+
+  /* light panel */
+
+  /* dark panel */
+
+  /* light panel */
+
+  /* dark panel */
+
+  /* light panel */
+
+  /* dark panel */
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) 33.3333333333%, var(--color-accent-1) 33.3333333333%, var(--color-accent-1) 66.6666666667%, var(--color-accent-2) 66.6666666667%, var(--color-accent-2) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) 33.3333333333%, var(--color-accent-1) 33.3333333333%, var(--color-accent-1) 66.6666666667%, var(--color-accent-2) 66.6666666667%, var(--color-accent-2) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-red) 0%, var(--color-red) 12.5%, var(--color-orange) 12.5%, var(--color-orange) 25%, var(--color-yellow) 25%, var(--color-yellow) 37.5%, var(--color-green) 37.5%, var(--color-green) 50%, var(--color-cyan) 50%, var(--color-cyan) 62.5%, var(--color-blue) 62.5%, var(--color-blue) 75%, var(--color-purple) 75%, var(--color-purple) 87.5%, var(--color-pink) 87.5%, var(--color-pink) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-red) 0%, var(--color-red) 12.5%, var(--color-orange) 12.5%, var(--color-orange) 25%, var(--color-yellow) 25%, var(--color-yellow) 37.5%, var(--color-green) 37.5%, var(--color-green) 50%, var(--color-cyan) 50%, var(--color-cyan) 62.5%, var(--color-blue) 62.5%, var(--color-blue) 75%, var(--color-purple) 75%, var(--color-purple) 87.5%, var(--color-pink) 87.5%, var(--color-pink) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--text-selection) 0%, var(--text-selection) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--text-selection) 0%, var(--text-selection) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body:where(.ssopt-theme-contrast-dark.theme-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container, body:where(.ssopt-theme-contrast-light.theme-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container {
+  /* light panel */
+
+  /* dark panel */
+}
+
+body:where(.ssopt-theme-contrast-dark.theme-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before, body:where(.ssopt-theme-contrast-light.theme-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--opp-background-primary) 0%, var(--opp-background-primary) 25%, var(--opp-background-primary-alt) 25%, var(--opp-background-primary-alt) 50%, var(--opp-background-secondary) 50%, var(--opp-background-secondary) 75%, var(--opp-background-secondary-alt) 75%, var(--opp-background-secondary-alt) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body:where(.ssopt-theme-contrast-dark.theme-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before, body:where(.ssopt-theme-contrast-light.theme-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--opp-background-primary) 0%, var(--opp-background-primary) 25%, var(--opp-background-primary-alt) 25%, var(--opp-background-primary-alt) 50%, var(--opp-background-secondary) 50%, var(--opp-background-secondary) 75%, var(--opp-background-secondary-alt) 75%, var(--opp-background-secondary-alt) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 0%, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-base-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 0%, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 0%, oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 25%, oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 50%, oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 75%, oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 0%, oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 25%, oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 50%, oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 75%, oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.ssopt-theme-contrast-dark.theme-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, oklch(calc(1 - var(--ch-color-base-d-l-00) + 0.1) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 0%, oklch(calc(1 - var(--ch-color-base-d-l-00) + 0.1) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00)) 25%, oklch(calc(1 - var(--ch-color-base-d-l-10) + 0.1) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 25%, oklch(calc(1 - var(--ch-color-base-d-l-10) + 0.1) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10)) 50%, oklch(calc(1 - var(--ch-color-base-d-l-20) + 0.1) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 50%, oklch(calc(1 - var(--ch-color-base-d-l-20) + 0.1) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20)) 75%, oklch(calc(1 - var(--ch-color-base-d-l-25) + 0.1) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 75%, oklch(calc(1 - var(--ch-color-base-d-l-25) + 0.1) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25)) 100%);
+}
+
+body.ssopt-theme-contrast-dark.theme-light.ssopt-tc-cross-d .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
+}
+
+body.ssopt-theme-contrast-light.theme-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, oklch(calc(1 - var(--ch-color-base-l-l-00) + 0.1) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 0%, oklch(calc(1 - var(--ch-color-base-l-l-00) + 0.1) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00)) 25%, oklch(calc(1 - var(--ch-color-base-l-l-10) + 0.1) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 25%, oklch(calc(1 - var(--ch-color-base-l-l-10) + 0.1) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10)) 50%, oklch(calc(1 - var(--ch-color-base-l-l-20) + 0.1) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 50%, oklch(calc(1 - var(--ch-color-base-l-l-20) + 0.1) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20)) 75%, oklch(calc(1 - var(--ch-color-base-l-l-25) + 0.1) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 75%, oklch(calc(1 - var(--ch-color-base-l-l-25) + 0.1) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25)) 100%);
+}
+
+body.ssopt-theme-contrast-light.theme-dark.ssopt-tc-cross-l .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-contrast-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 25%, var(--background-primary-alt) 25%, var(--background-primary-alt) 50%, var(--background-secondary) 50%, var(--background-secondary) 75%, var(--background-secondary-alt) 75%, var(--background-secondary-alt) 100%);
+}
+
+body.theme-light.ssopt-custom-colour-template-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-tmp-d-accent, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)))) 0%, var(--color-tmp-d-accent, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)))) 33.3333333333%, var(--color-tmp-d-accent-1, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)))) 33.3333333333%, var(--color-tmp-d-accent-1, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)))) 66.6666666667%, var(--color-tmp-d-accent-2, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)))) 66.6666666667%, var(--color-tmp-d-accent-2, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)))) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light.ssopt-custom-accent-colours-dark:not(.ssopt-custom-colour-template-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg))) 0%, var(--color-pax-d-accent, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg))) 33.3333333333%, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg))) 33.3333333333%, var(--color-pax-d-accent-1, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg))) 66.6666666667%, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg))) 66.6666666667%, var(--color-pax-d-accent-2, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg))) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light:not(.ssopt-custom-colour-template-dark, .ssopt-custom-accent-colours-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)) 0%, var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg)) 33.3333333333%, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)) 33.3333333333%, var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg)) 66.6666666667%, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)) 66.6666666667%, var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark.ssopt-custom-colour-template-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-tmp-l-accent, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)))) 0%, var(--color-tmp-l-accent, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)))) 33.3333333333%, var(--color-tmp-l-accent-1, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)))) 33.3333333333%, var(--color-tmp-l-accent-1, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)))) 66.6666666667%, var(--color-tmp-l-accent-2, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)))) 66.6666666667%, var(--color-tmp-l-accent-2, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)))) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark.ssopt-custom-accent-colours-light:not(.ssopt-custom-colour-template-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg))) 0%, var(--color-pax-l-accent, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg))) 33.3333333333%, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg))) 33.3333333333%, var(--color-pax-l-accent-1, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg))) 66.6666666667%, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg))) 66.6666666667%, var(--color-pax-l-accent-2, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg))) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark:not(.ssopt-custom-colour-template-light, .ssopt-custom-accent-colours-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-accent-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)) 0%, var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg)) 33.3333333333%, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)) 33.3333333333%, var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg)) 66.6666666667%, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)) 66.6666666667%, var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light.ssopt-custom-colour-template-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-tmp-d-red, var(--color-pax-d-red, var(--color-set-d-red, #fb464c))) 0%, var(--color-tmp-d-red, var(--color-pax-d-red, var(--color-set-d-red, #fb464c))) 12.5%, var(--color-tmp-d-orange, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f))) 12.5%, var(--color-tmp-d-orange, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f))) 25%, var(--color-tmp-d-yellow, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71))) 25%, var(--color-tmp-d-yellow, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71))) 37.5%, var(--color-tmp-d-green, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e))) 37.5%, var(--color-tmp-d-green, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e))) 50%, var(--color-tmp-d-cyan, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd))) 50%, var(--color-tmp-d-cyan, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd))) 62.5%, var(--color-tmp-d-blue, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff))) 62.5%, var(--color-tmp-d-blue, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff))) 75%, var(--color-tmp-d-purple, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff))) 75%, var(--color-tmp-d-purple, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff))) 87.5%, var(--color-tmp-d-pink, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd))) 87.5%, var(--color-tmp-d-pink, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd))) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light.ssopt-custom-rainbow-colours-dark:not(.ssopt-custom-colour-template-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-pax-d-red, var(--color-set-d-red, #fb464c)) 0%, var(--color-pax-d-red, var(--color-set-d-red, #fb464c)) 12.5%, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f)) 12.5%, var(--color-pax-d-orange, var(--color-set-d-orange, #e9973f)) 25%, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71)) 25%, var(--color-pax-d-yellow, var(--color-set-d-yellow, #e0de71)) 37.5%, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e)) 37.5%, var(--color-pax-d-green, var(--color-set-d-green, #44cf6e)) 50%, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd)) 50%, var(--color-pax-d-cyan, var(--color-set-d-cyan, #53dfdd)) 62.5%, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff)) 62.5%, var(--color-pax-d-blue, var(--color-set-d-blue, #027aff)) 75%, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff)) 75%, var(--color-pax-d-purple, var(--color-set-d-purple, #a882ff)) 87.5%, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd)) 87.5%, var(--color-pax-d-pink, var(--color-set-d-pink, #fa99cd)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light:not(.ssopt-custom-colour-template-dark, .ssopt-custom-rainbow-colours-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-dark"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-set-d-red, #fb464c) 0%, var(--color-set-d-red, #fb464c) 12.5%, var(--color-set-d-orange, #e9973f) 12.5%, var(--color-set-d-orange, #e9973f) 25%, var(--color-set-d-yellow, #e0de71) 25%, var(--color-set-d-yellow, #e0de71) 37.5%, var(--color-set-d-green, #44cf6e) 37.5%, var(--color-set-d-green, #44cf6e) 50%, var(--color-set-d-cyan, #53dfdd) 50%, var(--color-set-d-cyan, #53dfdd) 62.5%, var(--color-set-d-blue, #027aff) 62.5%, var(--color-set-d-blue, #027aff) 75%, var(--color-set-d-purple, #a882ff) 75%, var(--color-set-d-purple, #a882ff) 87.5%, var(--color-set-d-pink, #fa99cd) 87.5%, var(--color-set-d-pink, #fa99cd) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark.ssopt-custom-colour-template-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-tmp-l-red, var(--color-pax-l-red, var(--color-set-l-red, #e93147))) 0%, var(--color-tmp-l-red, var(--color-pax-l-red, var(--color-set-l-red, #e93147))) 12.5%, var(--color-tmp-l-orange, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500))) 12.5%, var(--color-tmp-l-orange, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500))) 25%, var(--color-tmp-l-yellow, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00))) 25%, var(--color-tmp-l-yellow, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00))) 37.5%, var(--color-tmp-l-green, var(--color-pax-l-green, var(--color-set-l-green, #08b94e))) 37.5%, var(--color-tmp-l-green, var(--color-pax-l-green, var(--color-set-l-green, #08b94e))) 50%, var(--color-tmp-l-cyan, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc))) 50%, var(--color-tmp-l-cyan, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc))) 62.5%, var(--color-tmp-l-blue, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd))) 62.5%, var(--color-tmp-l-blue, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd))) 75%, var(--color-tmp-l-purple, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee))) 75%, var(--color-tmp-l-purple, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee))) 87.5%, var(--color-tmp-l-pink, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984))) 87.5%, var(--color-tmp-l-pink, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984))) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark.ssopt-custom-rainbow-colours-light:not(.ssopt-custom-colour-template-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-pax-l-red, var(--color-set-l-red, #e93147)) 0%, var(--color-pax-l-red, var(--color-set-l-red, #e93147)) 12.5%, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500)) 12.5%, var(--color-pax-l-orange, var(--color-set-l-orange, #ec7500)) 25%, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00)) 25%, var(--color-pax-l-yellow, var(--color-set-l-yellow, #e0ac00)) 37.5%, var(--color-pax-l-green, var(--color-set-l-green, #08b94e)) 37.5%, var(--color-pax-l-green, var(--color-set-l-green, #08b94e)) 50%, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc)) 50%, var(--color-pax-l-cyan, var(--color-set-l-cyan, #00bfbc)) 62.5%, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd)) 62.5%, var(--color-pax-l-blue, var(--color-set-l-blue, #086ddd)) 75%, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee)) 75%, var(--color-pax-l-purple, var(--color-set-l-purple, #7852ee)) 87.5%, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984)) 87.5%, var(--color-pax-l-pink, var(--color-set-l-pink, #d53984)) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-dark:not(.ssopt-custom-colour-template-light, .ssopt-custom-rainbow-colours-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-rainbow-settings-light"] .setting-item-control::before {
+  background: linear-gradient(to right, var(--color-set-l-red, #e93147) 0%, var(--color-set-l-red, #e93147) 12.5%, var(--color-set-l-orange, #ec7500) 12.5%, var(--color-set-l-orange, #ec7500) 25%, var(--color-set-l-yellow, #e0ac00) 25%, var(--color-set-l-yellow, #e0ac00) 37.5%, var(--color-set-l-green, #08b94e) 37.5%, var(--color-set-l-green, #08b94e) 50%, var(--color-set-l-cyan, #00bfbc) 50%, var(--color-set-l-cyan, #00bfbc) 62.5%, var(--color-set-l-blue, #086ddd) 62.5%, var(--color-set-l-blue, #086ddd) 75%, var(--color-set-l-purple, #7852ee) 75%, var(--color-set-l-purple, #7852ee) 87.5%, var(--color-set-l-pink, #d53984) 87.5%, var(--color-set-l-pink, #d53984) 100%);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+}
+
+body.theme-light.ssopt-custom-colour-template-dark .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
+  background: var(--color-tmp-d-selection, var(--color-pax-d-selection, var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg))));
+}
+
+body.theme-light.ssopt-custom-selection-colours-dark:not(.ssopt-custom-colour-template-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
+  background: var(--color-pax-d-selection, var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg)));
+}
+
+body.theme-light:not(.ssopt-custom-colour-template-dark, .ssopt-custom-selection-colours-dark) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-dark"] .setting-item-control::before {
+  background: var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg));
+}
+
+body.theme-dark.ssopt-custom-colour-template-light .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
+  background: var(--color-tmp-l-selection, var(--color-pax-l-selection, var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg))));
+}
+
+body.theme-dark.ssopt-custom-selection-colours-light:not(.ssopt-custom-colour-template-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
+  background: var(--color-pax-l-selection, var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg)));
+}
+
+body.theme-dark:not(.ssopt-custom-colour-template-light, .ssopt-custom-selection-colours-light) .style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container > .style-settings-heading[data-id*="-selection-settings-light"] .setting-item-control::before {
+  background: var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg));
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="willemstad-theme-colours-"] + .style-settings-container .style-settings-heading + .style-settings-container > .setting-item {
+  grid-template-columns: unset;
+  grid-template-rows: 1fr max-content;
+  row-gap: var(--size-2-2);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Colours"] + .style-settings-container > .style-settings-heading[data-id^="V2-Willemstad-Colours"] {
+  margin-top: var(--padding-ss);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container {
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr 1fr;
+
+  /* All remaining items span full width and auto-place in new rows */
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-documentation"] {
+  grid-column: 1/2;
+  grid-row: 1;
+  border-left: 1px solid var(--background-modifier-border);
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-repository"] {
+  grid-column: 2/-1;
+  grid-row: 1;
+  border-top: none;
+  border-left: 1px solid var(--background-modifier-border);
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item.setting-item:not([data-id="info-theme-documentation"], [data-id="info-theme-repository"]) {
+  grid-column: 1/-1;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-documentation"], .style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-repository"] {
+  right: unset;
+  left: 0;
+  padding: 0.75em;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-documentation"] p, .style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-repository"] p {
+  display: block;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-documentation"] a.external-link, .style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-repository"] a.external-link {
+  bottom: 0%;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-documentation"] a.external-link::before, .style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-documentation"] a.external-link::after, .style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-repository"] a.external-link::before, .style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item[data-id="info-theme-repository"] a.external-link::after {
+  bottom: 0%;
+}
+
+.dropdown option[value^="no-stuff-break-"] {
+  color: var(--text-on-accent);
+  background-color: var(--color-base-50);
+  text-align: center;
+}
+
+.setting-item.setting-item .dropdown option[value^="no-stuff-break-"] {
+  font-size: 1em;
+}
+
+/* High Level CSS Manipulations for SS */
+

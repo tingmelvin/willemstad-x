@@ -1,0 +1,108 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CR01
+\ Colour \ HSL PhaseOut Reference \ OKLCH Replacements
+───────────────────────────────────────────────────────────────────────────────────
+HSL is outdated. Pulling all of it out.
+Updated to Obs 1.9.2
+───────────────────────────────────────────────────────────────────────────────── */
+body, .theme-dark, .theme-light {
+  /*
+      --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+      --color-accent-1: hsl(calc(var(--accent-h) - 1), calc(var(--accent-s) * 1.01), calc(var(--accent-l) * 1.075));
+      --color-accent-2: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
+  */
+}
+
+.pdf-container .textLayer ::selection,
+.markdown-source-view.mod-cm6 .pdf-container .textLayer ::selection {
+  background-color: oklch(from var(--color-accent) l c h);
+}
+
+.pdf-container .textLayer .highlight.selected {
+  background-color: oklch(from var(--interactive-accent) l c h);
+  box-shadow: 0 0 0 2px oklch(from var(--interactive-accent) l c h);
+}
+
+.theme-light {
+  --link-unresolved-decoration-color: oklch(from var(--interactive-accent) l c h / 30%);
+  --nav-item-background-selected: oklch(from var(--color-accent) l c h / 15%);
+  --table-selection: oklch(from var(--color-accent) l c h / 10%);
+  --tag-background: oklch(from var(--interactive-accent) l c h / 10%);
+  --tag-background-hover: oklch(from var(--interactive-accent) l c h / 20%);
+  --tag-border-color: oklch(from var(--interactive-accent) l c h / 15%);
+  --tag-border-color-hover: oklch(from var(--interactive-accent) l c h / 15%);
+
+  /* --background-modifier-active-hover: oklch(from var(--interactive-accent) l c h / 0.15); */
+
+  /* --text-selection: oklch(from var(--color-accent) l c h / 0.2); */
+}
+
+.theme-dark {
+  /* --text-selection: oklch(from var(--interactive-accent) l c h / 0.33); */
+}
+
+.drag-ghost-hidden::before {
+  background-color: oklch(from var(--interactive-accent) l c h/30%);
+}
+
+.view-header.is-highlighted::after {
+  background-color: oklch(from var(--interactive-accent) l c h/50%);
+}
+
+.workspace-leaf.is-highlighted::before {
+  background-color: oklch(from var(--interactive-accent) l c h/25%);
+}
+
+@media (hover: hover) {
+  .card.u-clickable:hover {
+    background-color: oklch(from var(--interactive-accent) l c h/10%);
+  }
+}
+
+.card.is-selected {
+  background-color: oklch(from var(--interactive-accent) l c h/20%);
+}
+
+.tree-item-self.is-being-dragged-over {
+  background: oklch(from var(--interactive-accent) l c h/10%);
+}
+
+.pdf-container .annotationLayer :is(.linkAnnotation, .buttonWidgetAnnotation.pushButton):not(.hasBorder) > a:hover {
+  background-color: oklch(from var(--color-accent) l c h/10%);
+}
+
+.pdf-container .annotationLayer .linkAnnotation.hasBorder:hover {
+  background-color: oklch(from var(--color-accent) l c h/10%);
+}
+
+.nav-folder.is-being-dragged-over {
+  background: oklch(from var(--interactive-accent) l c h/10%);
+}
+
+.file-tree .mod-changed.is-selected {
+  background-color: oklch(from var(--interactive-accent) l c h/20%);
+}
+
+.canvas-selection {
+  background-color: oklch(from var(--color-accent) l c h/10%);
+}
+
+.canvas-selection.mod-group-selection {
+  background-color: oklch(from var(--color-accent) l c h/3%);
+  border-color: oklch(from var(--color-accent) l c h/30%);
+}
+
+.canvas-node.is-dummy .canvas-node-container {
+  background-color: oklch(from var(--color-accent) l c h/20%);
+}
+
+.canvas-placeholder-message {
+  background: oklch(from var(--color-accent) l c h/10%);
+}
+
+.is-mobile.theme-dark {
+  --tag-background: oklch(from var(--interactive-accent) l c h / 20%);
+}
+
+/* replaces base Ob --hsl values where used via Relative OKLCH syntax - no need to set -hsl */
+

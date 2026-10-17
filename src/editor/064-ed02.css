@@ -1,0 +1,20 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ED02
+\ Editor > Document Display
+\ Clean Embeds
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ED02-1 | clean - no borders */
+body:not(.ssopt-not-seamless-embeds) .markdown-embed {
+  --embed-border-start: 0px;
+  --embed-padding: 0px;
+
+  /* ED02-2 | no scroll - no max height */
+}
+
+body:not(.ssopt-not-seamless-embeds) .markdown-embed .markdown-embed-content {
+  max-height: none;
+}
+
+/* Clean Embeds */
+

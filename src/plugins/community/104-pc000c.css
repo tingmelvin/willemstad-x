@@ -1,0 +1,1054 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000C
+\ Plugins > Community
+\ Style Settings
+\ Responsive Style Settings
+───────────────────────────────────────────────────────────────────────────────────
+Style Settings only appear when the right options are being selected!
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIXIN VALUES */
+
+/**
+ * Applies a set of styles to a setting item based on a
+ * conditional class on the <body> tag.
+ *
+ * @param {String} $data-id - The data-id of the setting item to target.
+ * @param {String} $class-to-check - The class selector to check for on the body tag.
+ * @param {String} $pseudo-class - The pseudo-class to use for the check ('not', 'is', etc.).
+                                   Defaults to 'not'.
+ */
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> SETTINGS VISIBILITY LOGIC
+──────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> SETTINGS VISIBILITY LOGIC: BLOCK WIDTHS (Hived Off)
+──────────────────────────────────────────────────────────────────────────── */
+
+/*
+ * NOTE: This section is separate because CSS @container queries are evaluated
+ * by the browser and cannot be nested inside a Sass mixin that is already
+ * being applied to a selector. This code should be at the top level of your stylesheet.
+ */
+@container whole-body (style(--global-block-width-mode: 0)) {
+  .setting-item.setting-item.setting-item:where([data-id="ssopt-bw-table-content-fit"], [data-id="magnifier-bw-table"], [data-id="ratio-bw-table-source"], [data-id="ratio-bw-table-reading"], [data-id="magnifier-bw-bases"], [data-id="ratio-bw-bases-source"], [data-id="ratio-bw-bases-reading"], [data-id="magnifier-bw-iframe"], [data-id="ratio-bw-iframe-source"], [data-id="ratio-bw-iframe-reading"], [data-id="aspect-ratio-bw-iframe"], [data-id="magnifier-bw-pdfembed"], [data-id="ratio-bw-pdfembed-source"], [data-id="ratio-bw-pdfembed-reading"]) {
+    display: none;
+  }
+
+  .setting-item.setting-item.setting-item:where([data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-iframe"], [data-id="ssopt-block-width-pdfembed"]) {
+    display: none;
+  }
+}
+
+@container whole-body (style(--global-block-width-mode: 1)) {
+  .setting-item.setting-item.setting-item:where([data-id="ssopt-bw-table-content-fit"], [data-id="magnifier-bw-table"], [data-id="ratio-bw-table-source"], [data-id="ratio-bw-table-reading"], [data-id="magnifier-bw-bases"], [data-id="ratio-bw-bases-source"], [data-id="ratio-bw-bases-reading"], [data-id="magnifier-bw-iframe"], [data-id="ratio-bw-iframe-source"], [data-id="ratio-bw-iframe-reading"], [data-id="aspect-ratio-bw-iframe"], [data-id="magnifier-bw-pdfembed"], [data-id="ratio-bw-pdfembed-source"], [data-id="ratio-bw-pdfembed-reading"]) {
+    display: grid;
+  }
+
+  .setting-item.setting-item.setting-item:where([data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-iframe"], [data-id="ssopt-block-width-pdfembed"]) {
+    display: none;
+  }
+}
+
+body:not(.ssopt-block-width-tables) .setting-item:where([data-id="ssopt-bw-table-content-fit"], [data-id="magnifier-bw-table"], [data-id="ratio-bw-table-source"], [data-id="ratio-bw-table-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-bases) .setting-item:where([data-id="magnifier-bw-bases"], [data-id="ratio-bw-bases-source"], [data-id="ratio-bw-bases-reading"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-iframe) .setting-item:where([data-id="magnifier-bw-iframe"], [data-id="ratio-bw-iframe-source"], [data-id="ratio-bw-iframe-reading"], [data-id="aspect-ratio-bw-iframe"]) {
+  display: none;
+}
+
+body:not(.ssopt-block-width-pdfembed) .setting-item:where([data-id="magnifier-bw-pdfembed"], [data-id="ratio-bw-pdfembed-source"], [data-id="ratio-bw-pdfembed-reading"]) {
+  display: none;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────── */
+
+/* required for content-view SS */
+.setting-item.setting-item {
+  /* 1. HIGHLIGHTS */
+
+  /* 2. STARTUP SCREEN */
+
+  /* 3. STATUS BAR */
+
+  /* 4. VARIABLE LINE LENGTHS  - NOW EMPTY */
+
+  /* 5. TITLEBAR */
+
+  /* 6. HEADERS */
+
+  /* 6A. HEADER TEXT COLOURS */
+
+  /* 7. RIBBONS */
+
+  /* 8. ADVANCED TABLES */
+
+  /* 9. KANBAN CANVAS BACKGROUND */
+
+  /* 10. MOBILE/NOT-MOBILE FONTS */
+
+  /* 11. WINDOWS AND LINUX ONLY */
+
+  /* 12. KANBAN STUFF */
+
+  /* 13. TABS STUFF */
+
+  /* 14. PROPERTIES/FRONTMATTER STUFF */
+
+  /* 15. ACTIVE LINE HIGHLIGHT STUFF */
+
+  /* 16. CALLOUTS STUFF */
+
+  /* 17. BLOCK WIDTHS STUFF */
+
+  /*
+  @container whole-body (style(--global-block-width-mode: 0)) {
+      @include where-data-ids(ssopt-bw-table-content-fit, magnifier-bw-table, ratio-bw-table-source, ratio-bw-table-reading,
+              magnifier-bw-bases, ratio-bw-bases-source, ratio-bw-bases-reading,
+              magnifier-bw-iframe, ratio-bw-iframe-source, ratio-bw-iframe-reading, aspect-ratio-bw-iframe,
+              magnifier-bw-pdfembed, ratio-bw-pdfembed-source, ratio-bw-pdfembed-reading) {
+
+          display: none;
+      }
+  }
+
+  @container whole-body (style(--global-block-width-mode: 1)) {
+      @include where-data-ids(ssopt-bw-table-content-fit, magnifier-bw-table, ratio-bw-table-source, ratio-bw-table-reading,
+              magnifier-bw-bases, ratio-bw-bases-source, ratio-bw-bases-reading,
+              magnifier-bw-iframe, ratio-bw-iframe-source, ratio-bw-iframe-reading, aspect-ratio-bw-iframe,
+              magnifier-bw-pdfembed, ratio-bw-pdfembed-source, ratio-bw-pdfembed-reading) {
+
+          display: grid;
+      }
+  }
+   */
+
+  /*
+  // TABLES
+  @include where-data-ids(ssopt-bw-table-content-fit, magnifier-bw-table, ratio-bw-table-source, ratio-bw-table-reading) {
+      body:not(.ssopt-block-width-tables) & {
+          display: none;
+      }
+  }
+
+  // BASES
+  @include where-data-ids(magnifier-bw-bases, ratio-bw-bases-source, ratio-bw-bases-reading) {
+      body:not(.ssopt-block-width-bases) & {
+          display: none;
+      }
+  }
+
+  // IFRAMES
+  @include where-data-ids(magnifier-bw-iframe, ratio-bw-iframe-source, ratio-bw-iframe-reading, aspect-ratio-bw-iframe) {
+      body:not(.ssopt-block-width-iframe) & {
+          display: none;
+      }
+  }
+
+  // PDF EMBEDS
+  @include where-data-ids(magnifier-bw-pdfembed, ratio-bw-pdfembed-source, ratio-bw-pdfembed-reading) {
+      body:not(.ssopt-block-width-pdfembed) & {
+          display: none;
+      }
+  }
+  */
+
+  /* 20. COLOURS STUFF */
+}
+
+body:is(.ssopt-typ-highlight-col-original) .setting-item.setting-item:where([data-id="col-highlight-0"], [data-id="col-highlight-1"], [data-id="col-highlight-2"], [data-id="col-highlight-3"]) {
+  display: none;
+}
+
+.setting-item.setting-item:where([data-id="col-highlight-0-org"], [data-id="col-highlight-1-org"], [data-id="col-highlight-2-org"], [data-id="col-highlight-3-org"]) {
+  display: none;
+}
+
+body:is(.ssopt-typ-highlight-col-original) .setting-item.setting-item:where([data-id="col-highlight-0-org"], [data-id="col-highlight-1-org"], [data-id="col-highlight-2-org"], [data-id="col-highlight-3-org"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="startup-obsidian-image"]) {
+  display: none;
+}
+
+body:not(.ssopt-startup-default) .setting-item.setting-item:where([data-id="startup-obsidian-image"]) {
+  display: grid;
+}
+
+body:is(.ssopt-status-bar-full) .setting-item.setting-item:where([data-id="ssopt-status-bar-borderless"], [data-id="ssopt-status-bar-glass"], [data-id="status-bar-glass-blur"]) {
+  display: none;
+}
+
+.setting-item.setting-item:where([data-id="status-bar-glass-blur"]) {
+  display: none;
+}
+
+body:is(.ssopt-status-bar-glass):not(.no-blur) .setting-item.setting-item:where([data-id="status-bar-glass-blur"]) {
+  display: grid;
+}
+
+body:is(.ssopt-status-bar-full) .setting-item.setting-item:where([data-id="status-bar-align"], [data-id="ssopt-status-bar-float-not"], [data-id="status-bar-max-width"], [data-id="ssopt-status-bar-shift-workspace"]) {
+  display: none;
+}
+
+.setting-item.setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+  display: none;
+}
+
+body:is(.ssopt-status-bar-full) .setting-item.setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="status-bar-bottom-float-margin"]) {
+  display: none;
+}
+
+body:not(.ssopt-status-bar-float-not, .ssopt-status-bar-full) .setting-item.setting-item:where([data-id="status-bar-bottom-float-margin"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"], [data-id="ssopt-tb-willemstad"], [data-id="ssopt-titlebar-use-accent"], [data-id="col-titlebar-accent"]) {
+  display: none;
+}
+
+body.is-frameless.is-hidden-frameless .setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) {
+  display: grid;
+}
+
+body.is-frameless:not(.is-hidden-frameless) .setting-item.setting-item:where([data-id="ssopt-tb-willemstad"]) {
+  display: grid;
+}
+
+body:is(.is-frameless) .setting-item.setting-item:where([data-id="ssopt-titlebar-use-accent"]) {
+  display: grid;
+}
+
+body.is-frameless.ssopt-titlebar-use-accent .setting-item.setting-item:where([data-id="col-titlebar-accent"]) {
+  display: grid;
+}
+
+body:is(.ssopt-headers-custom-colours, .ssopt-headers-old-willemstad) .setting-item.setting-item:where([data-id="ssopt-no-coloured-headers"]) {
+  display: none;
+}
+
+body:is(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad) .setting-item.setting-item:where([data-id="ssopt-headers-custom-colours"]) {
+  display: none;
+}
+
+body:is(.ssopt-no-coloured-headers, .ssopt-headers-custom-colours) .setting-item.setting-item:where([data-id="ssopt-headers-old-willemstad"]) {
+  display: none;
+}
+
+.setting-item.setting-item:where([data-id="col-accent-custom-headers-0"], [data-id="col-accent-custom-headers-1"], [data-id="col-accent-custom-headers-2"], [data-id="ssopt-headers-custom-colours-max"]) {
+  display: none;
+}
+
+body:not(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad):is(.ssopt-headers-custom-colours) .setting-item.setting-item:where([data-id="col-accent-custom-headers-0"], [data-id="col-accent-custom-headers-1"], [data-id="col-accent-custom-headers-2"], [data-id="ssopt-headers-custom-colours-max"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="col-accent-custom-headers-0B"], [data-id="col-accent-custom-headers-1B"], [data-id="col-accent-custom-headers-2B"], [data-id="col-custom-headers-H1"], [data-id="col-custom-headers-H2"], [data-id="col-custom-headers-H3"], [data-id="col-custom-headers-H4"], [data-id="col-custom-headers-H5"], [data-id="col-custom-headers-H6"]) {
+  display: none;
+}
+
+body:is(.ssopt-headers-custom-colours.ssopt-headers-custom-colours-max):not(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad) .setting-item.setting-item:where([data-id="col-accent-custom-headers-0B"], [data-id="col-accent-custom-headers-1B"], [data-id="col-accent-custom-headers-2B"], [data-id="col-custom-headers-H1"], [data-id="col-custom-headers-H2"], [data-id="col-custom-headers-H3"], [data-id="col-custom-headers-H4"], [data-id="col-custom-headers-H5"], [data-id="col-custom-headers-H6"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="ssopt-headers-old-style-col-palette"]) {
+  display: none;
+}
+
+body:is(.ssopt-headers-old-willemstad) .setting-item.setting-item:where([data-id="ssopt-headers-old-style-col-palette"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="header-hex-size"]) {
+  display: none;
+}
+
+body:is(.ssopt-smaller-header-hexes) .setting-item.setting-item:where([data-id="header-hex-size"]) {
+  display: grid;
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item.setting-item:where([data-id="header-text-colours"]) {
+  display: none;
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item.setting-item:where([data-id="header-text-colours"]) + .style-settings-container {
+  display: none;
+}
+
+body:is(.theme-dark) .setting-item.setting-item:where([data-id="header-text-colours-light"]) {
+  display: none;
+}
+
+body:is(.theme-dark) .setting-item.setting-item:where([data-id="header-text-colours-light"]) + .style-settings-container {
+  display: none;
+}
+
+body:is(.theme-light) .setting-item.setting-item:where([data-id="header-text-colours-dark"]) {
+  display: none;
+}
+
+body:is(.theme-light) .setting-item.setting-item:where([data-id="header-text-colours-dark"]) + .style-settings-container {
+  display: none;
+}
+
+.setting-item.setting-item:where([data-id="ssopt-ribbon-no-drag"]) {
+  display: none;
+}
+
+body:not(.ssopt-sd-no-ribbon, .ssopt-sd-float-ribbon) .setting-item.setting-item:where([data-id="ssopt-ribbon-no-drag"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="height-norm-sd"], [data-id="height-hover-sd"], [data-id="info-width-norm-sd"], [data-id="ssopt-sd-float-ribbon-blur"]) {
+  display: none;
+}
+
+body:is(.ssopt-sd-float-ribbon) .setting-item.setting-item:where([data-id="height-norm-sd"], [data-id="height-hover-sd"], [data-id="info-width-norm-sd"], [data-id="ssopt-sd-float-ribbon-blur"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="blur-floating-ribbon"]) {
+  display: none;
+}
+
+body.ssopt-sd-float-ribbon.ssopt-sd-float-ribbon-blur .setting-item.setting-item:where([data-id="blur-floating-ribbon"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="PComm007-toolbar-title-justification"]) {
+  display: none;
+}
+
+body:is(.PComm007-no-adv-tables-toolbar-tweaks) .setting-item.setting-item:where([data-id="PComm007-toolbar-title-justification"]) {
+  display: grid;
+}
+
+.setting-item.setting-item:where([data-id="PComm002-CB-bg-colour"], [data-id="PComm002-CB-dot-colour"], [data-id="PComm002-CB-dot-size"], [data-id="PComm002-CB-dot-spacing"]) {
+  display: none;
+}
+
+body:is(.PComm002-canvas-background) .setting-item.setting-item:where([data-id="PComm002-CB-bg-colour"], [data-id="PComm002-CB-dot-colour"], [data-id="PComm002-CB-dot-size"], [data-id="PComm002-CB-dot-spacing"]) {
+  display: grid;
+}
+
+body:not(.is-mobile) .setting-item.setting-item:where([data-id="font-editor-m"], [data-id="font-menu-m"], [data-id="font-ui-m"]) {
+  display: none;
+}
+
+body:is(.is-mobile) .setting-item.setting-item:where([data-id="font-editor"], [data-id="font-menu"], [data-id="font-ui"]) {
+  display: none;
+}
+
+body:is(.is-phone) .setting-item.setting-item:where([data-id="V1-Willemstad-UI"]) {
+  display: none;
+}
+
+body:is(.is-phone) .setting-item.setting-item:where([data-id="V1-Willemstad-UI"]) + .style-settings-container {
+  display: none;
+}
+
+body:is(.is-tablet) .setting-item.setting-item:where([data-id="titlebar"], [data-id="statusbar"], [data-id="ribbon-mwb-settings"], [data-id="file-explorer-settings"], [data-id="startup"]) {
+  display: none;
+}
+
+body:is(.is-tablet) .setting-item.setting-item:where([data-id="titlebar"], [data-id="statusbar"], [data-id="ribbon-mwb-settings"], [data-id="file-explorer-settings"], [data-id="startup"]) + .style-settings-container {
+  display: none;
+}
+
+body:not(.mod-windows, .mod-linux) .setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"], [data-id="ssopt-hidden-scrollbars"]) {
+  display: none;
+}
+
+body:not(.PComm002-sp-singlelane) .setting-item.setting-item:where([data-id="PComm002-sp-fitwidth"], [data-id="PComm002-sp-maxheight"]) {
+  display: none;
+}
+
+body:not(.PComm002-wp-singlelane) .setting-item.setting-item:where([data-id="PComm002-wp-fitwidth"], [data-id="PComm002-wp-maxheight"]) {
+  display: none;
+}
+
+body:is(.ssopt-tabs-square, .ssopt-tabs-underline, .ssopt-tabs-index-box, .ssopt-tabs-index-old) .setting-item.setting-item:where([data-id="ssopt-tabs-modern-borderless"]) {
+  display: none;
+}
+
+body:is(.ssopt-hide-metadata-container) .setting-item.setting-item:where([data-id="ssopt-frontmatter-in-front"]) {
+  display: none;
+}
+
+body:is(.ssopt-hide-metadata-container-lp) .setting-item.setting-item:where([data-id="ssopt-frontmatter-in-front-lp"]) {
+  display: none;
+}
+
+body:is(.ssopt-disable-alh.ssopt-disable-alh) .setting-item.setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
+  display: none;
+}
+
+body:is(.ssopt-callout-standard) .setting-item.setting-item:where([data-id="ssopt-callout-no-hover"], [data-id="callout-border-left-extra"], [data-id="callout-border-base-width-override"], [data-id="ssopt-callout-style"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-rainbow-colours-light) .setting-item.setting-item:where([data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-rainbow-colours-dark) .setting-item.setting-item:where([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-selection-colours-light) .setting-item.setting-item:where([data-id="color-pax-l-selection"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-selection-colours-dark) .setting-item.setting-item:where([data-id="color-pax-d-selection"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-light) .setting-item.setting-item:where([data-id="ch-color-base-l-c-pax-num"], [data-id="ch-color-base-l-h-pax-num"], [data-id="ssopt-enable-base-delta-light"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-light.ssopt-enable-base-delta-light) .setting-item.setting-item:where([data-id="ch-color-base-l-c-pax-delta"], [data-id="ch-color-base-l-h-pax-delta"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-dark) .setting-item.setting-item:where([data-id="ch-color-base-d-c-pax-num"], [data-id="ch-color-base-d-h-pax-num"], [data-id="ssopt-enable-base-delta-dark"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-dark.ssopt-enable-base-delta-dark) .setting-item.setting-item:where([data-id="ch-color-base-d-c-pax-delta"], [data-id="ch-color-base-d-h-pax-delta"]) {
+  display: none;
+}
+
+body .setting-item.setting-item:where([data-id="info-about-colour-theory-accent-l"], [data-id="color-pax-l-accent-h-shift"], [data-id="color-pax-l-accent-l-shift"], [data-id="color-pax-l-accent-picker"], [data-id="ssopt-custom-accent-textfield-light"], [data-id="color-pax-l-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-light"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-light) .setting-item.setting-item:where([data-id="info-about-colour-theory-accent-l"], [data-id="color-pax-l-accent-h-shift"], [data-id="color-pax-l-accent-l-shift"], [data-id="color-pax-l-accent-picker"], [data-id="ssopt-custom-accent-textfield-light"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light) .setting-item.setting-item:where([data-id="color-pax-l-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-light"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light) .setting-item.setting-item:where([data-id="color-pax-l-accent-picker"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light.ssopt-custom-accents-total-enable-light) .setting-item.setting-item:where([data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light.ssopt-custom-accents-total-enable-light) .setting-item.setting-item:where([data-id="color-pax-l-accent-h-shift"], [data-id="color-pax-l-accent-l-shift"]) {
+  display: none;
+}
+
+body .setting-item.setting-item:where([data-id="info-about-colour-theory-accent-d"], [data-id="color-pax-d-accent-h-shift"], [data-id="color-pax-d-accent-l-shift"], [data-id="color-pax-d-accent-picker"], [data-id="ssopt-custom-accent-textfield-dark"], [data-id="color-pax-d-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-dark"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-dark) .setting-item.setting-item:where([data-id="info-about-colour-theory-accent-d"], [data-id="color-pax-d-accent-h-shift"], [data-id="color-pax-d-accent-l-shift"], [data-id="color-pax-d-accent-picker"], [data-id="ssopt-custom-accent-textfield-dark"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark) .setting-item.setting-item:where([data-id="color-pax-d-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-dark"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark) .setting-item.setting-item:where([data-id="color-pax-d-accent-picker"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark.ssopt-custom-accents-total-enable-dark) .setting-item.setting-item:where([data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark.ssopt-custom-accents-total-enable-dark) .setting-item.setting-item:where([data-id="color-pax-d-accent-h-shift"], [data-id="color-pax-d-accent-l-shift"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-dark) .setting-item.setting-item:where([data-id="ssopt-tc-cross-d"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-dark.ssopt-tc-cross-d) .setting-item.setting-item:where([data-id="ssopt-tc-accent-cross-d"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-light) .setting-item.setting-item:where([data-id="ssopt-tc-cross-l"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .setting-item.setting-item:where([data-id="ssopt-tc-accent-cross-l"]) {
+  display: none;
+}
+
+body .setting-item.setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Typography"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
+  padding: 0 8px 0 4px; /* follows their own paddings */
+  font-family: Manrope;
+  color: var(--text-accent);
+  content: "Willemstad";
+  font-weight: 600;
+}
+
+body:not(.ssopt-titlebar-use-accent) .setting-item.setting-item:where([data-id="PComm011-no-sync-colours"]) {
+  cursor: not-allowed;
+}
+
+body:not(.ssopt-titlebar-use-accent) .setting-item.setting-item:where([data-id="PComm011-no-sync-colours"]) .setting-item-name {
+  font-style: oblique;
+  color: var(--text-muted);
+}
+
+body:not(.ssopt-titlebar-use-accent) .setting-item.setting-item:where([data-id="PComm011-no-sync-colours"]) .setting-item-control {
+  display: none;
+}
+
+body:not(.ssopt-titlebar-use-accent) .setting-item.setting-item:where([data-id="PComm011-no-sync-colours"]) .setting-item-description::before {
+  color: var(--text-warning);
+  font-weight: 500;
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-status-bar-glass"]) {
+  cursor: not-allowed;
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-status-bar-glass"]) .setting-item-name {
+  font-style: oblique;
+  color: var(--text-muted);
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-status-bar-glass"]) .setting-item-control {
+  display: none;
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-status-bar-glass"]) .setting-item-description::before {
+  color: var(--text-warning);
+  font-weight: 500;
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) {
+  cursor: not-allowed;
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) .setting-item-name {
+  font-style: oblique;
+  color: var(--text-muted);
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) .setting-item-control {
+  display: none;
+}
+
+body:is(.no-blur) .setting-item.setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) .setting-item-description::before {
+  color: var(--text-warning);
+  font-weight: 500;
+}
+
+/* needs extra specificity */
+.view-content .style-settings-container.style-settings-container .setting-item {
+  /* 1. HIGHLIGHTS */
+
+  /* 2. STARTUP SCREEN */
+
+  /* 3. STATUS BAR */
+
+  /* 4. VARIABLE LINE LENGTHS  - NOW EMPTY */
+
+  /* 5. TITLEBAR */
+
+  /* 6. HEADERS */
+
+  /* 6A. HEADER TEXT COLOURS */
+
+  /* 7. RIBBONS */
+
+  /* 8. ADVANCED TABLES */
+
+  /* 9. KANBAN CANVAS BACKGROUND */
+
+  /* 10. MOBILE/NOT-MOBILE FONTS */
+
+  /* 11. WINDOWS AND LINUX ONLY */
+
+  /* 12. KANBAN STUFF */
+
+  /* 13. TABS STUFF */
+
+  /* 14. PROPERTIES/FRONTMATTER STUFF */
+
+  /* 15. ACTIVE LINE HIGHLIGHT STUFF */
+
+  /* 16. CALLOUTS STUFF */
+
+  /* 17. BLOCK WIDTHS STUFF */
+
+  /*
+  @container whole-body (style(--global-block-width-mode: 0)) {
+      @include where-data-ids(ssopt-bw-table-content-fit, magnifier-bw-table, ratio-bw-table-source, ratio-bw-table-reading,
+              magnifier-bw-bases, ratio-bw-bases-source, ratio-bw-bases-reading,
+              magnifier-bw-iframe, ratio-bw-iframe-source, ratio-bw-iframe-reading, aspect-ratio-bw-iframe,
+              magnifier-bw-pdfembed, ratio-bw-pdfembed-source, ratio-bw-pdfembed-reading) {
+
+          display: none;
+      }
+  }
+
+  @container whole-body (style(--global-block-width-mode: 1)) {
+      @include where-data-ids(ssopt-bw-table-content-fit, magnifier-bw-table, ratio-bw-table-source, ratio-bw-table-reading,
+              magnifier-bw-bases, ratio-bw-bases-source, ratio-bw-bases-reading,
+              magnifier-bw-iframe, ratio-bw-iframe-source, ratio-bw-iframe-reading, aspect-ratio-bw-iframe,
+              magnifier-bw-pdfembed, ratio-bw-pdfembed-source, ratio-bw-pdfembed-reading) {
+
+          display: grid;
+      }
+  }
+   */
+
+  /*
+  // TABLES
+  @include where-data-ids(ssopt-bw-table-content-fit, magnifier-bw-table, ratio-bw-table-source, ratio-bw-table-reading) {
+      body:not(.ssopt-block-width-tables) & {
+          display: none;
+      }
+  }
+
+  // BASES
+  @include where-data-ids(magnifier-bw-bases, ratio-bw-bases-source, ratio-bw-bases-reading) {
+      body:not(.ssopt-block-width-bases) & {
+          display: none;
+      }
+  }
+
+  // IFRAMES
+  @include where-data-ids(magnifier-bw-iframe, ratio-bw-iframe-source, ratio-bw-iframe-reading, aspect-ratio-bw-iframe) {
+      body:not(.ssopt-block-width-iframe) & {
+          display: none;
+      }
+  }
+
+  // PDF EMBEDS
+  @include where-data-ids(magnifier-bw-pdfembed, ratio-bw-pdfembed-source, ratio-bw-pdfembed-reading) {
+      body:not(.ssopt-block-width-pdfembed) & {
+          display: none;
+      }
+  }
+  */
+
+  /* 20. COLOURS STUFF */
+}
+
+body:is(.ssopt-typ-highlight-col-original) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-highlight-0"], [data-id="col-highlight-1"], [data-id="col-highlight-2"], [data-id="col-highlight-3"]) {
+  display: none;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-highlight-0-org"], [data-id="col-highlight-1-org"], [data-id="col-highlight-2-org"], [data-id="col-highlight-3-org"]) {
+  display: none;
+}
+
+body:is(.ssopt-typ-highlight-col-original) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-highlight-0-org"], [data-id="col-highlight-1-org"], [data-id="col-highlight-2-org"], [data-id="col-highlight-3-org"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="startup-obsidian-image"]) {
+  display: none;
+}
+
+body:not(.ssopt-startup-default) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="startup-obsidian-image"]) {
+  display: grid;
+}
+
+body:is(.ssopt-status-bar-full) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-status-bar-borderless"], [data-id="ssopt-status-bar-glass"], [data-id="status-bar-glass-blur"]) {
+  display: none;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-glass-blur"]) {
+  display: none;
+}
+
+body:is(.ssopt-status-bar-glass):not(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-glass-blur"]) {
+  display: grid;
+}
+
+body:is(.ssopt-status-bar-full) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-align"], [data-id="ssopt-status-bar-float-not"], [data-id="status-bar-max-width"], [data-id="ssopt-status-bar-shift-workspace"]) {
+  display: none;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+  display: none;
+}
+
+body:is(.ssopt-status-bar-full) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-full-justify-content"], [data-id="ssopt-status-bar-full-style"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-bottom-float-margin"]) {
+  display: none;
+}
+
+body:not(.ssopt-status-bar-float-not, .ssopt-status-bar-full) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="status-bar-bottom-float-margin"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-exclude-titlebar-buttons"], [data-id="ssopt-tb-willemstad"], [data-id="ssopt-titlebar-use-accent"], [data-id="col-titlebar-accent"]) {
+  display: none;
+}
+
+body.is-frameless.is-hidden-frameless .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) {
+  display: grid;
+}
+
+body.is-frameless:not(.is-hidden-frameless) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tb-willemstad"]) {
+  display: grid;
+}
+
+body:is(.is-frameless) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-titlebar-use-accent"]) {
+  display: grid;
+}
+
+body.is-frameless.ssopt-titlebar-use-accent .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-titlebar-accent"]) {
+  display: grid;
+}
+
+body:is(.ssopt-headers-custom-colours, .ssopt-headers-old-willemstad) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-no-coloured-headers"]) {
+  display: none;
+}
+
+body:is(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-headers-custom-colours"]) {
+  display: none;
+}
+
+body:is(.ssopt-no-coloured-headers, .ssopt-headers-custom-colours) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-headers-old-willemstad"]) {
+  display: none;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-accent-custom-headers-0"], [data-id="col-accent-custom-headers-1"], [data-id="col-accent-custom-headers-2"], [data-id="ssopt-headers-custom-colours-max"]) {
+  display: none;
+}
+
+body:not(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad):is(.ssopt-headers-custom-colours) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-accent-custom-headers-0"], [data-id="col-accent-custom-headers-1"], [data-id="col-accent-custom-headers-2"], [data-id="ssopt-headers-custom-colours-max"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-accent-custom-headers-0B"], [data-id="col-accent-custom-headers-1B"], [data-id="col-accent-custom-headers-2B"], [data-id="col-custom-headers-H1"], [data-id="col-custom-headers-H2"], [data-id="col-custom-headers-H3"], [data-id="col-custom-headers-H4"], [data-id="col-custom-headers-H5"], [data-id="col-custom-headers-H6"]) {
+  display: none;
+}
+
+body:is(.ssopt-headers-custom-colours.ssopt-headers-custom-colours-max):not(.ssopt-no-coloured-headers, .ssopt-headers-old-willemstad) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-accent-custom-headers-0B"], [data-id="col-accent-custom-headers-1B"], [data-id="col-accent-custom-headers-2B"], [data-id="col-custom-headers-H1"], [data-id="col-custom-headers-H2"], [data-id="col-custom-headers-H3"], [data-id="col-custom-headers-H4"], [data-id="col-custom-headers-H5"], [data-id="col-custom-headers-H6"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-headers-old-style-col-palette"]) {
+  display: none;
+}
+
+body:is(.ssopt-headers-old-willemstad) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-headers-old-style-col-palette"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-hex-size"]) {
+  display: none;
+}
+
+body:is(.ssopt-smaller-header-hexes) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-hex-size"]) {
+  display: grid;
+}
+
+body:not(.ssopt-no-coloured-headers) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours"]) {
+  display: none;
+}
+
+body:not(.ssopt-no-coloured-headers) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours"]) + .style-settings-container {
+  display: none;
+}
+
+body:is(.theme-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-light"]) {
+  display: none;
+}
+
+body:is(.theme-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-light"]) + .style-settings-container {
+  display: none;
+}
+
+body:is(.theme-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-dark"]) {
+  display: none;
+}
+
+body:is(.theme-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="header-text-colours-dark"]) + .style-settings-container {
+  display: none;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-ribbon-no-drag"]) {
+  display: none;
+}
+
+body:not(.ssopt-sd-no-ribbon, .ssopt-sd-float-ribbon) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-ribbon-no-drag"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="height-norm-sd"], [data-id="height-hover-sd"], [data-id="info-width-norm-sd"], [data-id="ssopt-sd-float-ribbon-blur"]) {
+  display: none;
+}
+
+body:is(.ssopt-sd-float-ribbon) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="height-norm-sd"], [data-id="height-hover-sd"], [data-id="info-width-norm-sd"], [data-id="ssopt-sd-float-ribbon-blur"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="blur-floating-ribbon"]) {
+  display: none;
+}
+
+body.ssopt-sd-float-ribbon.ssopt-sd-float-ribbon-blur .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="blur-floating-ribbon"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm007-toolbar-title-justification"]) {
+  display: none;
+}
+
+body:is(.PComm007-no-adv-tables-toolbar-tweaks) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm007-toolbar-title-justification"]) {
+  display: grid;
+}
+
+.view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm002-CB-bg-colour"], [data-id="PComm002-CB-dot-colour"], [data-id="PComm002-CB-dot-size"], [data-id="PComm002-CB-dot-spacing"]) {
+  display: none;
+}
+
+body:is(.PComm002-canvas-background) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm002-CB-bg-colour"], [data-id="PComm002-CB-dot-colour"], [data-id="PComm002-CB-dot-size"], [data-id="PComm002-CB-dot-spacing"]) {
+  display: grid;
+}
+
+body:not(.is-mobile) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="font-editor-m"], [data-id="font-menu-m"], [data-id="font-ui-m"]) {
+  display: none;
+}
+
+body:is(.is-mobile) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="font-editor"], [data-id="font-menu"], [data-id="font-ui"]) {
+  display: none;
+}
+
+body:is(.is-phone) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-UI"]) {
+  display: none;
+}
+
+body:is(.is-phone) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-UI"]) + .style-settings-container {
+  display: none;
+}
+
+body:is(.is-tablet) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="titlebar"], [data-id="statusbar"], [data-id="ribbon-mwb-settings"], [data-id="file-explorer-settings"], [data-id="startup"]) {
+  display: none;
+}
+
+body:is(.is-tablet) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="titlebar"], [data-id="statusbar"], [data-id="ribbon-mwb-settings"], [data-id="file-explorer-settings"], [data-id="startup"]) + .style-settings-container {
+  display: none;
+}
+
+body:not(.mod-windows, .mod-linux) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-exclude-titlebar-buttons"], [data-id="ssopt-hidden-scrollbars"]) {
+  display: none;
+}
+
+body:not(.PComm002-sp-singlelane) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm002-sp-fitwidth"], [data-id="PComm002-sp-maxheight"]) {
+  display: none;
+}
+
+body:not(.PComm002-wp-singlelane) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm002-wp-fitwidth"], [data-id="PComm002-wp-maxheight"]) {
+  display: none;
+}
+
+body:is(.ssopt-tabs-square, .ssopt-tabs-underline, .ssopt-tabs-index-box, .ssopt-tabs-index-old) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tabs-modern-borderless"]) {
+  display: none;
+}
+
+body:is(.ssopt-hide-metadata-container) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-frontmatter-in-front"]) {
+  display: none;
+}
+
+body:is(.ssopt-hide-metadata-container-lp) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-frontmatter-in-front-lp"]) {
+  display: none;
+}
+
+body:is(.ssopt-disable-alh.ssopt-disable-alh) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="col-base-bg-alh"], [data-id="col-base-alpha-alh"]) {
+  display: none;
+}
+
+body:is(.ssopt-callout-standard) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-callout-no-hover"], [data-id="callout-border-left-extra"], [data-id="callout-border-base-width-override"], [data-id="ssopt-callout-style"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-rainbow-colours-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-rainbow-colours-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-selection-colours-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-l-selection"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-selection-colours-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-d-selection"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ch-color-base-l-c-pax-num"], [data-id="ch-color-base-l-h-pax-num"], [data-id="ssopt-enable-base-delta-light"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-light.ssopt-enable-base-delta-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ch-color-base-l-c-pax-delta"], [data-id="ch-color-base-l-h-pax-delta"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ch-color-base-d-c-pax-num"], [data-id="ch-color-base-d-h-pax-num"], [data-id="ssopt-enable-base-delta-dark"]) {
+  display: none;
+}
+
+body:not(.ssopt-custom-base-colours-dark.ssopt-enable-base-delta-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ch-color-base-d-c-pax-delta"], [data-id="ch-color-base-d-h-pax-delta"]) {
+  display: none;
+}
+
+body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="info-about-colour-theory-accent-l"], [data-id="color-pax-l-accent-h-shift"], [data-id="color-pax-l-accent-l-shift"], [data-id="color-pax-l-accent-picker"], [data-id="ssopt-custom-accent-textfield-light"], [data-id="color-pax-l-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-light"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="info-about-colour-theory-accent-l"], [data-id="color-pax-l-accent-h-shift"], [data-id="color-pax-l-accent-l-shift"], [data-id="color-pax-l-accent-picker"], [data-id="ssopt-custom-accent-textfield-light"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-l-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-light"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-l-accent-picker"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light.ssopt-custom-accents-total-enable-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-light.ssopt-custom-accent-textfield-light.ssopt-custom-accents-total-enable-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-l-accent-h-shift"], [data-id="color-pax-l-accent-l-shift"]) {
+  display: none;
+}
+
+body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="info-about-colour-theory-accent-d"], [data-id="color-pax-d-accent-h-shift"], [data-id="color-pax-d-accent-l-shift"], [data-id="color-pax-d-accent-picker"], [data-id="ssopt-custom-accent-textfield-dark"], [data-id="color-pax-d-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-dark"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="info-about-colour-theory-accent-d"], [data-id="color-pax-d-accent-h-shift"], [data-id="color-pax-d-accent-l-shift"], [data-id="color-pax-d-accent-picker"], [data-id="ssopt-custom-accent-textfield-dark"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-d-accent-textfield"], [data-id="ssopt-custom-accents-total-enable-dark"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-d-accent-picker"]) {
+  display: none;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark.ssopt-custom-accents-total-enable-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"]) {
+  display: grid;
+}
+
+body:is(.ssopt-custom-accent-colours-dark.ssopt-custom-accent-textfield-dark.ssopt-custom-accents-total-enable-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="color-pax-d-accent-h-shift"], [data-id="color-pax-d-accent-l-shift"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-dark) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-cross-d"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-dark.ssopt-tc-cross-d) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-accent-cross-d"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-light) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-cross-l"]) {
+  display: none;
+}
+
+body:not(.ssopt-theme-contrast-light.ssopt-tc-cross-l) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-tc-accent-cross-l"]) {
+  display: none;
+}
+
+body .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="V1-Willemstad-Info"], [data-id="V1-Willemstad-Root"], [data-id="V1-Willemstad-UI"], [data-id="V1-Willemstad-Editor"], [data-id="V1-Willemstad-Ancillaries"], [data-id="V1-Willemstad-Plugins"], [data-id="V1-Willemstad-Colours"], [data-id="V1-Willemstad-Typography"], [data-id="V1-Willemstad-Credits"]) .setting-item-name::before {
+  padding: 0 8px 0 4px; /* follows their own paddings */
+  font-family: Manrope;
+  color: var(--text-accent);
+  content: "Willemstad";
+  font-weight: 600;
+}
+
+body:not(.ssopt-titlebar-use-accent) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm011-no-sync-colours"]) {
+  cursor: not-allowed;
+}
+
+body:not(.ssopt-titlebar-use-accent) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm011-no-sync-colours"]) .setting-item-name {
+  font-style: oblique;
+  color: var(--text-muted);
+}
+
+body:not(.ssopt-titlebar-use-accent) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm011-no-sync-colours"]) .setting-item-control {
+  display: none;
+}
+
+body:not(.ssopt-titlebar-use-accent) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="PComm011-no-sync-colours"]) .setting-item-description::before {
+  color: var(--text-warning);
+  font-weight: 500;
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-status-bar-glass"]) {
+  cursor: not-allowed;
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-status-bar-glass"]) .setting-item-name {
+  font-style: oblique;
+  color: var(--text-muted);
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-status-bar-glass"]) .setting-item-control {
+  display: none;
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-status-bar-glass"]) .setting-item-description::before {
+  color: var(--text-warning);
+  font-weight: 500;
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) {
+  cursor: not-allowed;
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) .setting-item-name {
+  font-style: oblique;
+  color: var(--text-muted);
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) .setting-item-control {
+  display: none;
+}
+
+body:is(.no-blur) .view-content .style-settings-container.style-settings-container .setting-item:where([data-id="ssopt-sd-float-ribbon-blur"]) .setting-item-description::before {
+  color: var(--text-warning);
+  font-weight: 500;
+}
+
+/* needs the extra specificity */
+.dropdown option:is([value="ssopt-sd-no-ribbon"], [value="ssopt-no-status-bar"]) {
+  color: var(--text-on-accent);
+  background-color: var(--color-red);
+}
+
+/* Responsive Style Settings */
+

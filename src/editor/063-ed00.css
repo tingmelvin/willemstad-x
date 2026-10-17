@@ -1,0 +1,150 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ED00
+\ Editor > Document Display
+\ Elements
+───────────────────────────────────────────────────────────────────────────────────
+This means, from blockquotes to quote blocks to, uhm, code blocks, and
+everything in between.
+───────────────────────────────────────────────────────────────────────────────────
+        ED00-01 | Blockquotes
+        ───────────────────────────────────────────────────────────────────────────
+        > this is a blockquote
+        ──────────────────────────────────────────────────────────────────────── */
+
+/* SOURCE MODE */
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+  background-color: var(--background-primary-alt);
+}
+
+/* READING MODE */
+body {
+  --blockquote-background-color: var(--background-primary-alt);
+  --blockquote-border-thickness: var(--size-4-1);
+  --blockquote-border-color: var(--background-secondary-alt);
+}
+
+.markdown-rendered blockquote {
+  padding: var(--size-4-1) var(--size-4-2);
+  border-right: 1px solid var(--blockquote-border-color);
+  border-top: 1px solid var(--blockquote-border-color);
+  border-bottom: 1px solid var(--blockquote-border-color);
+  border-radius: var(--radius-s);
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ED00-02 | Code Blocks
+───────────────────────────────────────────────────────────────────────────
+```bash
+sass style.scss
+```
+──────────────────────────────────────────────────────────────────────── */
+
+/* SOURCE MODE */
+.markdown-source-view.mod-cm6 {
+  /* start */
+
+  /* end */
+}
+
+.markdown-source-view.mod-cm6 div.cm-line.HyperMD-codeblock-begin {
+  color: var(--color-red);
+  background-color: var(--background-secondary);
+}
+
+.markdown-source-view.mod-cm6 div.cm-line.HyperMD-codeblock-end {
+  color: var(--color-red);
+}
+
+/* READING MODE */
+
+/* 1 | OLD STYLE */
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre[class*="language-"]::before {
+  display: block;
+  font-size: var(--code-size);
+  color: var(--color-red);
+  content: attr(class);
+  text-align: right;
+}
+
+/* 2 | NEW STYLE */
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre[class*="language-"]::after {
+  position: absolute;
+  right: var(--size-4-2);
+  bottom: var(--size-4-2);
+  padding: var(--size-2-1) var(--size-4-1);
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  content: attr(class);
+}
+
+/* 3 | NONE STYLE */
+
+/* don't need to set */
+
+/* ────────────────────────────────────────────────────────────────────────
+ED00-03 | Inline Code
+───────────────────────────────────────────────────────────────────────────
+`this is inline code`
+──────────────────────────────────────────────────────────────────────── */
+.markdown-rendered code {
+  /* padding: var(--size-2-1) 0.2em; */
+
+ /* 2px is in parallel with Highlights */
+
+  /* doesn't seem like there's a diff */
+}
+
+:where(h1, h2, h3, h4, h5, h6),
+.markdown-rendered :where(h1, h2, h3, h4, h5, h6) {
+  margin-bottom: 0;
+}
+
+body {
+  --heading-spacing: 0;
+  --p-root-number: 0.75;
+  --p-spacing: calc(var(--p-root-number) * 1em);
+  --p-spacing-root: calc(var(--p-root-number) * 1rem); /* to use when i'm using root */
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+ED00-04 | hr
+───────────────────────────────────────────────────────────────────────────
+--------
+──────────────────────────────────────────────────────────────────────── */
+.el-hr {
+  padding: var(--p-spacing) 0;
+
+  /* closes gap in Reading Mode */
+}
+
+.el-hr hr {
+  margin: 0;
+}
+
+.el-hr + div:where(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) > :where(h1) {
+  margin-top: var(--p-spacing-root);
+}
+
+.el-hr + div:where(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) > :where(h2) {
+  margin-top: var(--p-spacing-root);
+}
+
+.el-hr + div:where(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) > :where(h3) {
+  margin-top: var(--p-spacing-root);
+}
+
+.el-hr + div:where(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) > :where(h4) {
+  margin-top: var(--p-spacing-root);
+}
+
+.el-hr + div:where(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) > :where(h5) {
+  margin-top: var(--p-spacing-root);
+}
+
+.el-hr + div:where(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6) > :where(h6) {
+  margin-top: var(--p-spacing-root);
+}
+
+/* Document Elements */
+

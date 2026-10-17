@@ -1,0 +1,43 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AJ01
+\ Disparate Elements
+\ Menu
+──────────────────────────────────────────────────────────────────────────────── */
+.menu-item:not(.is-disabled) {
+  /* for delete buttons, add colour */
+}
+
+.menu-item:not(.is-disabled).is-warning, .menu-item:not(.is-disabled).is-warning .menu-item-icon {
+  color: var(--text-error);
+}
+
+.menu-item:not(.is-disabled).is-warning.selected, .menu-item:not(.is-disabled).is-warning.selected .menu-item-icon, .menu-item:not(.is-disabled).is-warning.selected .menu-item-title, .menu-item:not(.is-disabled).is-warning:hover, .menu-item:not(.is-disabled).is-warning:hover .menu-item-icon, .menu-item:not(.is-disabled).is-warning:hover .menu-item-title {
+  /* light mode */
+
+  /* dark mode */
+}
+
+.theme-light .menu-item:not(.is-disabled).is-warning.selected, .theme-light .menu-item:not(.is-disabled).is-warning.selected .menu-item-icon, .theme-light .menu-item:not(.is-disabled).is-warning.selected .menu-item-title, .theme-light .menu-item:not(.is-disabled).is-warning:hover, .theme-light .menu-item:not(.is-disabled).is-warning:hover .menu-item-icon, .theme-light .menu-item:not(.is-disabled).is-warning:hover .menu-item-title {
+  color: var(--text-error-hover);
+}
+
+.theme-dark .menu-item:not(.is-disabled).is-warning.selected, .theme-dark .menu-item:not(.is-disabled).is-warning.selected .menu-item-icon, .theme-dark .menu-item:not(.is-disabled).is-warning.selected .menu-item-title, .theme-dark .menu-item:not(.is-disabled).is-warning:hover, .theme-dark .menu-item:not(.is-disabled).is-warning:hover .menu-item-icon, .theme-dark .menu-item:not(.is-disabled).is-warning:hover .menu-item-title {
+  color: var(--text-error-hover);
+}
+
+.menu-item:not(.is-disabled):hover .menu-item-icon, .menu-item:not(.is-disabled):hover .menu-item-title {
+  /* light mode */
+
+  /* dark mode */
+}
+
+.theme-light .menu-item:not(.is-disabled):hover .menu-item-icon, .theme-light .menu-item:not(.is-disabled):hover .menu-item-title {
+  color: var(--icon-color-hover);
+}
+
+.theme-dark .menu-item:not(.is-disabled):hover .menu-item-icon, .theme-dark .menu-item:not(.is-disabled):hover .menu-item-title {
+  color: var(--icon-color-hover);
+}
+
+/* Menu - the right-click thingy */
+

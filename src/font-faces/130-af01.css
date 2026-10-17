@@ -1,0 +1,29 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AF01
+\ Font Encoding, Base64
+\ INTER
+\\ transfonter did it incorrectly - did via base64.guru
+
+\\ DM Mono, DM Sans, Manrope, Inter & Crimson Pro are licensed under SIL Open Font License v1.1
+\\ RemixIcon is licensed under Apache License 2.0
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> Inter
+──────────────────────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Inter 4.1";
+  src: /*@font assets/fonts/inter-4-1-var-italic.woff2 */ format("woff2-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter 4.1";
+  src: /*@font assets/fonts/inter-4-1-var.woff2 */ format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+

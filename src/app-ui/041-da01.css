@@ -1,0 +1,122 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA01
+\ First-Level Main Elements \ Firefox-style Tabs
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --tab-focus-border-width: 1px;
+}
+
+body:is(.ssopt-tabs-modern-borderless) {
+  --tab-focus-border-width: 0px;
+}
+
+/* remove the | between the tabs */
+.workspace .mod-root .workspace-tab-header-inner::after {
+  background-color: transparent;
+}
+
+/**
+ * 1. Resets the ::before and ::after "curve" shadows for active tabs.
+ * This is a shared utility for both stacked and non-stacked views.
+ */
+
+/**
+ * 2. Styles for Non-Stacked Tabs (Firefox-like)
+ * This is the main, complex set of rules for the default tab appearance.
+ */
+
+/**
+ * 3. Styles for Stacked Tabs
+ * Defines the look when tabs are stacked vertically.
+ */
+
+/**
+ * 4. Pinned Tab Behavior
+ * Moves pinned tabs to the front of the container.
+ */
+
+/*
+================================================================================
+  TAB IMPLEMENTATION FOR FIREFOX-STYLE
+================================================================================
+*/
+body:not(.ssopt-tabs-index-old) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::before,
+body:not(.ssopt-tabs-index-old) .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tab-header.is-active::after,
+body:not(.ssopt-tabs-index-old) .workspace-split.mod-root .workspace-tab-header.is-active::before,
+body:not(.ssopt-tabs-index-old) .workspace-split.mod-root .workspace-tab-header.is-active::after {
+  box-shadow: none !important;
+}
+
+body:not(.ssopt-no-pin-tab-front) .workspace-tab-header-container-inner .workspace-tab-header:has(.mod-pinned) {
+  order: -1;
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  --tab-divider-color: transparent;
+
+  margin: var(--header-margin) var(--header-margin-half);
+  padding: 0;
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  padding: 0 var(--size-2-2);
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container {
+  padding-left: var(--header-margin-half);
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  margin: 0;
+  padding: 0;
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  background-color: unset;
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background-color: var(--background-primary);
+  box-shadow: 0 0 0 var(--tab-focus-border-width) var(--background-modifier-border-focus);
+  transition: var(--quicker-transition);
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  background-color: var(--background-secondary-alt);
+  transition: var(--quicker-transition);
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active) {
+  background-color: unset;
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner:hover {
+  transition: var(--quicker-transition);
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header::after {
+  right: 0;
+}
+
+.workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before {
+  left: 0;
+}
+
+:where(.mod-windows, .mod-linux) .is-hidden-frameless:not(.is-fullscreen) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container {
+  padding-left: var(--header-margin-half);
+}
+
+body {
+  --tab-stacked-shadow: -1px 0 0 0 var(--divider-color);
+}
+
+.workspace .mod-root .workspace-tabs:is(.mod-stacked) .workspace-tab-header-container .workspace-tab-header-container-inner {
+  padding: calc(0.5 * var(--header-margin-half));
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  background-color: var(--background-primary-alt);
+}
+
+/* Firefox-style Tabs | AS BASE */
+

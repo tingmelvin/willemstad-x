@@ -1,0 +1,245 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EE01
+\ Editor > Block Widths
+\ Bases and Tables
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* Global Block Width Mode + Feature Flags */
+body {
+  --global-block-width-mode: auto;
+}
+
+.app-container {
+  container-type: inline-size;
+  container-name: app-container;
+}
+
+body:is(.ssopt-block-width-tables) .app-container {
+  --ssopt-bw-table-enabled: 1;
+}
+
+body:is(.ssopt-block-width-bases) .app-container {
+  --ssopt-bw-bases-enabled: 1;
+}
+
+body:is(.ssopt-block-width-iframe) .app-container {
+  --ssopt-bw-iframe-enabled: 1;
+}
+
+body:is(.ssopt-block-width-pdfembed) .app-container {
+  --ssopt-bw-pdfembed-enabled: 1;
+}
+
+@container whole-body (style(--global-block-width-mode: 0)) {
+  .app-container {
+    --enable-bw-table: 0;
+    --enable-bw-bases: 0;
+    --enable-bw-iframe: 0;
+    --enable-bw-pdfembed: 0;
+  }
+}
+
+@container whole-body (style(--global-block-width-mode: auto)) {
+  .app-container {
+    --enable-bw-table: var(--ssopt-bw-table-enabled, 0);
+    --enable-bw-bases: var(--ssopt-bw-bases-enabled, 0);
+    --enable-bw-iframe: var(--ssopt-bw-iframe-enabled, 0);
+    --enable-bw-pdfembed: var(--ssopt-bw-pdfembed-enabled, 0);
+  }
+}
+
+@container whole-body (style(--global-block-width-mode: 1)) {
+  .app-container {
+    --enable-bw-table: 1;
+    --enable-bw-bases: 1;
+    --enable-bw-iframe: 1;
+    --enable-bw-pdfembed: 1;
+  }
+}
+
+/* Reading Mode Container */
+.markdown-reading-view .markdown-preview-view {
+  container-type: inline-size;
+  container-name: reading-mode;
+  scroll-behavior: smooth;
+}
+
+/* Live Preview Container */
+.view-content .cm-scroller {
+  container-type: inline-size;
+  container-name: live-preview;
+  scroll-behavior: smooth;
+}
+
+/* 1. TABLES */
+body {
+  --size-bw-table: size * var(--magnifier-bw-table);
+  --magnifier-bw-table: 1.5;
+  --ratio-bw-table-source: 1;
+  --ratio-bw-table-reading: 0.96;
+  --ssopt-bw-table-content-fit: 0;
+  --table-drag-handle-size: var(--size-4-4);
+}
+
+@container app-container (style(--enable-bw-table: 1)) {
+  @container live-preview (min-width: 0) {
+    .markdown-source-view.mod-cm6 .cm-table-widget {
+      /*
+      left: calc(50% + var(--ratio-bw-table-source) * max(0px, var(--file-margins) - var(--table-drag-handle-size)));
+       */
+      left: calc(50% + var(--size-4-4));
+      width: calc-size(auto, var(--size-bw-table));
+      padding: 0;
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-table-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
+    }
+
+    .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
+      margin: 0 auto;
+    }
+
+    @container whole-body style(--ssopt-bw-table-content-fit: 1) {
+      .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
+        min-width: calc(100% - var(--table-drag-handle-size));
+        margin: 0;
+      }
+    }
+
+    @container whole-body style(--ssopt-bw-table-content-fit: 2) {
+      .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper {
+        min-width: 100%;
+        margin: 0;
+      }
+    }
+
+    .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper table {
+      max-width: 100%;
+    }
+
+    @container whole-body style(--ssopt-bw-table-content-fit: 1) or style(--ssopt-bw-table-content-fit: 2) {
+      .markdown-source-view.mod-cm6 .cm-table-widget > .table-wrapper table {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  /* Reading Mode */
+  @container reading-mode (min-width: 0) {
+    .markdown-reading-view .el-table {
+      position: relative;
+      left: 50%;
+      width: calc-size(auto, var(--size-bw-table));
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-table-reading) * 100cqi + 2 * var(--file-margins));
+      overflow: unset;
+    }
+
+    .markdown-reading-view .el-table > table {
+      margin: 0 auto;
+    }
+
+    @container whole-body style(--ssopt-bw-table-content-fit: 1) or style(--ssopt-bw-table-content-fit: 2) {
+      .markdown-reading-view .el-table > table {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* BASES */
+body {
+  --size-bw-bases: size * var(--magnifier-bw-bases);
+  --magnifier-bw-bases: 1.5;
+  --ratio-bw-bases-source: 1;
+  --ratio-bw-bases-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-bases: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6 :where(.cm-content) > .bases-embed {
+      position: relative;
+      left: 50%;
+      width: calc-size(auto, var(--size-bw-bases));
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-bases-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
+    }
+  }
+
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view :where(.markdown-preview-section > .el-p > p) > .bases-embed {
+      position: relative;
+      left: 50%;
+      width: calc-size(auto, var(--size-bw-bases));
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-bases-reading) * 100cqi + 2 * var(--file-margins));
+    }
+  }
+}
+
+/* IFRAMES */
+body {
+  --size-bw-iframe: size * var(--magnifier-bw-iframe);
+  --magnifier-bw-iframe: 1.5;
+  --ratio-bw-iframe-source: 1;
+  --ratio-bw-iframe-reading: 0.96;
+  --aspect-ratio-bw-iframe: auto 16/9;
+}
+
+@container app-container (style(--enable-bw-iframe: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6 :where(.cm-html-embed) > iframe {
+      position: relative;
+      left: 50%;
+      width: calc-size(100%, var(--size-bw-iframe));
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-iframe-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
+      aspect-ratio: var(--aspect-ratio-bw-iframe);
+    }
+  }
+
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view :where(.markdown-preview-section > .el-iframe) > iframe {
+      position: relative;
+      left: 50%;
+      width: calc-size(100%, var(--size-bw-iframe)); /* calc-size(auto, var(--size-bw-iframe)); */
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-iframe-reading) * 100cqi + 2 * var(--file-margins));
+      aspect-ratio: var(--aspect-ratio-bw-iframe);
+    }
+  }
+}
+
+/* PDF Embeds */
+body {
+  --size-bw-pdfembed: size * var(--magnifier-bw-pdfembed);
+  --magnifier-bw-pdfembed: 1.5;
+  --ratio-bw-pdfembed-source: 1;
+  --ratio-bw-pdfembed-reading: 0.96;
+}
+
+@container app-container (style(--enable-bw-pdfembed: 1)) {
+  @container live-preview (min-width: 0) {
+    body .markdown-source-view.mod-cm6 :where(.cm-content) > .pdf-embed.pdf-embed {
+      position: relative;
+      left: 50%;
+      width: calc-size(auto, var(--size-bw-pdfembed));
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-pdfembed-source) * 100cqi + 2 * var(--file-margins) - 2 * var(--table-drag-handle-size));
+    }
+  }
+
+  @container reading-mode (min-width: 0) {
+    body .markdown-reading-view :where(.markdown-preview-section > .el-p > p) > .pdf-embed.pdf-embed {
+      position: relative;
+      left: 50%;
+      width: calc-size(auto, var(--size-bw-pdfembed)); /* calc-size(auto, var(--size-bw-pdfembed)); */
+      transform: translateX(-50%);
+      max-width: calc(var(--ratio-bw-pdfembed-reading) * 100cqi + 2 * var(--file-margins));
+    }
+  }
+}
+
+/* Block Widths - only Bases and Tables */
+

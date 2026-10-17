@@ -1,0 +1,64 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC001
+\ Plugins > Community
+\ General
+    \\ PComm001 | Calendar
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Calendar]
+\\ (NOMEN | PComm001)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> PC001-1 | (OPTION) Δ Colour for today's date, calendar year and 
+    add Colour for dots for writing stuff/completing checkboxes
+    ──────────────────────────────────────────────────────────────────────────── */
+.theme-light, .theme-dark {
+  --PComm001-col-year: var(--color-accent);
+  --PComm001-col-today: var(--color-accent);
+}
+
+.workspace-leaf-content[data-type="calendar"].workspace-leaf-content[data-type="calendar"] .container {
+  --color-text-today: var(--color-accent);
+}
+
+.workspace-leaf-content[data-type="calendar"].workspace-leaf-content[data-type="calendar"] .container .day.today {
+  /* --color-text-today */
+}
+
+.workspace-leaf-content[data-type="calendar"].workspace-leaf-content[data-type="calendar"] .container .year {
+  color: var(--PComm001-col-year);
+}
+
+.workspace-leaf-content[data-type="calendar"].workspace-leaf-content[data-type="calendar"] .title::before {
+  display: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>>> PC001-2 | Calendar in Sidepanes
+──────────────────────────────────────────────────────────────────────────────── */
+.mod-left-split .workspace-leaf-content[data-type="calendar"] .view-content, .mod-right-split .workspace-leaf-content[data-type="calendar"] .view-content {
+  padding: var(--header-margin); /* // to the rest of the sidepanes stuff from DB */
+}
+
+.mod-left-split .workspace-leaf-content[data-type="calendar"] .view-content .container, .mod-right-split .workspace-leaf-content[data-type="calendar"] .view-content .container {
+  padding: 0;
+}
+
+.mod-left-split .workspace-leaf-content[data-type="calendar"] .view-content .container .nav, .mod-right-split .workspace-leaf-content[data-type="calendar"] .view-content .container .nav {
+  /* margin: 0; */
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>>> PC001-3 | Ensures that the calendar dots don't warp
+\ actually meh it's ok
+──────────────────────────────────────────────────────────────────────────────── */
+.workspace-leaf-content[data-type="calendar"] .dot-container {
+  justify-items: center;
+
+  /* flex-wrap: nowrap */
+
+  /* ensures they don't warp */
+}
+
+/* Calendar */
+

@@ -1,0 +1,59 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DB04
+\ Generally Side Pane Elements \ Spacing Control
+\ Tags (a.tag)
+──────────────────────────────────────────────────────────────────────────────── */
+.tag-container {
+  padding: 0 var(--header-margin);
+  padding-right: calc(var(--header-margin) - var(--account-scrollbar-border));
+}
+
+/* change tag radius to the set --radius-s */
+body {
+  --tag-radius: var(--radius-s);
+
+  /* don't do tag padding but how to em then */
+}
+
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+  line-height: var(--line-height-tight); /* follows the other */
+  background-color: var(--tag-background);
+}
+
+.metadata-property[data-property-key="tags"] .multi-select-pill:hover {
+  background-color: var(--tag-background-hover);
+}
+
+.multi-select-pill {
+  --tag-padding-x: var(--pill-padding-x);
+  --tag-padding-y: var(--pill-padding-y);
+}
+
+/* override specificity in cm-s-obsidian span.cm-quote */
+.cm-s-obsidian span.cm-quote.cm-hashtag {
+  color: var(--tag-color);
+}
+
+/* FROM OBS PROPER
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+    --pill-color: var(--tag-color);
+    --pill-color-hover: var(--tag-color-hover);
+    --pill-color-remove: var(--tag-color);
+    --pill-color-remove-hover: var(--tag-color-hover);
+    --pill-decoration: var(--tag-decoration);
+    --pill-decoration-hover: var(--tag-decoration-hover);
+    --pill-background: var(--tag-background);
+    --pill-background-hover: var(--tag-background-hover);
+    --pill-border-color: var(--tag-border-color);
+    --pill-border-color-hover: var(--tag-border-color-hover);
+    --pill-border-width: var(--tag-border-width);
+    --pill-padding-x: var(--tag-padding-x);
+    --pill-padding-y: var(--tag-padding-y);
+    --pill-radius: var(--tag-radius);
+    --pill-weight: var(--tag-weight);
+    --pill-focus-width: 100%;
+    --pill-focus-left-adjust: 0;
+    cursor: var(--cursor-link);
+    line-height: 1;
+} */
+

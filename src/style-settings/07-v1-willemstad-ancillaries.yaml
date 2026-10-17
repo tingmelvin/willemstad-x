@@ -1,0 +1,475 @@
+/* @settings
+name: "Callouts, Inline CSSClass and Ancillaries" 
+id: V1-Willemstad-Ancillaries
+settings:
+    -
+        id: info-cssclasses-elsewhere
+        title: Note on Global CSSClass
+        type: class-toggle
+        description: "Please note that global CSSClasses (CSSClasses that affect the entire page, rather than just specific elements), are controlled in their separate Style Setting categories prefixed with 'Willemstad CSSClass'."
+        markdown: true
+    -
+        id: callouts-settings
+        title: Callouts
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: info-callouts
+            title: For more information about each specific callout type, please refer to the documentation links below.
+            type: info-text
+            markdown: true
+    -
+            id: callouts-metadata-classes
+            title: Global Metadata Classes
+            description: 'Metadata classes can be appended to the end of a callout syntax to produce certain effects. Replace "metadata-classes" in the following syntax, which is copyable, to test things out.'
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: documentation-callouts-metadata
+                title: Documentation for Global Metadata Classes
+                type: info-text
+                document: EW11-C-Metadata
+                description: "[Docs](https://willemstad.cc/Features/Callouts/Global+Metadata+Classes)"
+                markdown: true
+    -
+                id: syntax-callouts-metadata
+                title: Syntax for Global Metadata Classes
+                type: class-toggle
+                document: EW11-C-Metadata
+                description: ">[!callout-class|metadata-class]"
+                default: false
+    -
+                id: syntax-type-callouts-metadata
+                title: Types of Global Metadata Classes
+                type: class-toggle
+                document: EW11-C-Metadata
+                description: no-t, no-title; opp, opposite; no-bg, no-background; no-s, no-style; mono, monospace; fl, float-l, float-left, left; fr, float-r, float-right, right; no-m-t, no-margin-top; no-m-b, no-margin-btm, no-margin-bottom; no-m-l, no-margin-left; no-m-r, no-margin-right;
+                default: false
+    -
+            id: callouts-standard
+            title: Standard Callouts
+            description: To use standard callouts, use the following syntax below, which is also copyable for your own convenience. The types of standard callouts available in Willemstad is also listed below.
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: documentation-callouts-standard
+                title: Documentation for Standard Callouts
+                type: info-text
+                document: EW12-C-Standard
+                description: "[Docs](https://willemstad.cc/Features/Callouts/Callouts)"
+                markdown: true
+    -
+                id: syntax-callouts-standard
+                title: Syntax for Standard Callouts
+                type: class-toggle
+                document: EW12-C-Standard
+                description: ">[!note]"
+                default: false
+    -
+                id: syntax-type-callouts-standard
+                title: Types of Standard Callouts
+                type: class-toggle
+                document: EW12-C-Standard
+                description: note; abstract, summary, tldr; info, todo; tip, hint; check, done; question, help, faq; warning, caution, attention; failure, fail, missing; danger, error; bug; example; quote, cite; file, attachment; phone; email, mail; goal; success; important; code; positive, plus; negative, minus
+                default: false
+    -
+            id: ssopt-callout-style
+            title: Callout Style
+            type: variable-select
+            description: "Choose the visual style for callouts. 'Willemstad' is the default theme style. To use Obsidian's standard styling, please use the 'Revent to Original Obsidian Styling on Standard Callouts' toggle below this option."
+            allowEmpty: false
+            default: '0'
+            options:
+                -
+                    label: "Willemstad"
+                    value: '0'
+                -
+                    label: "IBM Carbon"
+                    value: '1'
+    -
+                id: ssopt-callout-standard
+                title: Revert to Original Obsidian Styling on Standard Callouts
+                type: class-toggle
+                document: EW01-CFixes
+                description: "Willemstad by default styles the callouts, toggle this in order to disable this and return to Obsidian's standard callouts appearance."
+                default: false
+    -
+                id: ssopt-callout-no-hover
+                title: "Disable Callout Border Hover/Always Show Callout Border"
+                type: class-toggle
+                description: "By default, the colored left border on callouts only appears on hover. When enabled, this makes the border permanently visible. If you do not want a border, toggle this to always show the border and set the callout border width below to zero."
+                default: false
+    -
+                id: callout-border-left-extra
+                title: "Callout Border Width (Left)"
+                type: variable-number-slider
+                description: "Controls the additional thickness of the colored left border on callouts, added to the base width. Set this and the base width to zero to hide the border completely. Default is 5px."
+                format: "px"
+                min: 0
+                max: 10
+                step: 1
+                default: 5
+    -
+                id: callout-border-base-width-override
+                title: "Callout Border Width (Base)"
+                type: variable-text
+                description: "Overrides the base border width for callouts. Accepts any valid CSS length (e.g., 1px, 0.25rem, 0) or variables that resolves to a length. The default is set in a way that the override will take the values of any presets set by the callout."
+                default: 'var(--callout-border-base-width-preset)'
+    -
+            id: callouts-infobox
+            title: Infobox Callouts
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: documentation-callouts-infobox
+                title: Documentation for Infobox Callouts
+                type: info-text
+                document: EW24-C-Infobox
+                description: "[Docs](https://willemstad.cc/Features/Callouts/Infobox)"
+                markdown: true
+    -
+                id: syntax-callouts-infobox
+                title: Syntax for Infobox Callouts
+                type: class-toggle
+                document: EW24-C-Infobox
+                description: ">[!infobox]"
+                default: false
+    -
+                id: infobox-title-font-size
+                title: Title Size of Infobox Callouts 
+                type: variable-select
+                document: EW24-C-Infobox
+                description: "Changes the font size of the infobox title, using the heading sizes defined in Willemstad."
+                default: var(--h2-size)
+                options:
+                    -
+                        label: Heading 1 (H1)
+                        value: var(--h1-size)
+                    -
+                        label: Heading 2 (H2)
+                        value: var(--h2-size)
+                    -
+                        label: Heading 3 (H3)
+                        value: var(--h3-size)
+                    -
+                        label: Heading 4 (H4)
+                        value: var(--h4-size)
+                    -
+                        label: Heading 5 (H5)
+                        value: var(--h5-size)
+                    -
+                        label: Heading 6 (H6)
+                        value: var(--h6-size)
+    -
+                id: infobox-max-width
+                title: Maximum Width of Infobox Callouts 
+                type: variable-number-slider
+                document: EW24-C-Infobox
+                description: "Sets the maximum width of the infobox relative to the pane size. The infobox will not grow larger than this percentage."
+                default: 50
+                min: 10
+                max: 75
+                step: 1
+                format: '%'
+    -
+                id: infobox-set-width
+                title: Ideal Width of Infobox Callouts
+                type: variable-text
+                document: EW24-C-Infobox
+                description: "Sets the ideal target width of the infobox. If this value is larger than the 'Maximum Width of Infobox Callouts', the maximum width will take precedence. You can use any valid CSS unit, such as 500px, 50%, 40vw, 30em, etc."
+                default: '50%'
+    -
+            id: callouts-aside
+            title: Aside Callouts
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: documentation-callouts-aside
+                title: Documentation for Aside Callouts
+                type: info-text
+                document: EW23-C-Aside
+                description: "[Docs](https://willemstad.cc/Features/Callouts/Aside)"
+                markdown: true
+    -
+                id: syntax-callouts-aside
+                title: Syntax for Aside Callouts
+                type: class-toggle
+                document: EW23-C-Aside
+                description: ">[!aside]"
+                default: false
+    -
+                id: ssopt-callout-aside-float-left
+                title: Float Aside Callouts Left
+                type: class-toggle
+                description: "The aside callouts float right by default. Toggle this option to change the float to left by default. You can float an aside left/right individually via global metadata classes 'fl', 'float-l', 'float-left' for left, and 'fr', 'float-r', 'float-right' for right."
+                default: false
+    -
+            id: callouts-columns
+            title: Columns Callouts
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: documentation-callouts-columns
+                title: Documentation for Columns Callouts
+                type: info-text
+                document: EW13-C-Columns
+                description: "[Docs](https://willemstad.cc/Features/Callouts/Columns)"
+                markdown: true
+    -
+                id: syntax-callouts-columns
+                title: Syntax for Columns Callouts
+                type: class-toggle
+                document: EW13-C-Columns
+                description: ">[!columns]"
+                default: false
+    -
+                id: syntax-callouts-columns-metadata
+                title: Syntax for Columns Metadata Classes
+                type: info-text
+                document: EW11-C-Metadata
+                description: ">[!columns|metadata-class]
+                  >
+                  >> [!callout-class|metadata-class]"
+                default: false
+    -
+                id: syntax-type-callouts-columns-metadata
+                title: Types of Columns Metadata Classes
+                type: class-toggle
+                document: EW13-C-Columns
+                description: w1, width-1; w2, width-2; w3, width-3; w4, width-4; w5, width-5;
+                default: false
+    -
+                id: callout-columns-margin-top
+                title: Top Margin of Column Callouts
+                type: variable-text
+                document: EW24-C-Columns
+                description: "Sets the margin above children callouts to create vertical space between the children callouts and the column callout title. You can use any valid CSS unit, or valid variables, such as 20px, 1.5em, 2vh, etc."
+                default: "var(--margin-callout)"
+    -
+            id: callouts-images
+            title: Image Callouts
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: ssopt-callouts-images-display
+                title: Default Title Display for Image Callouts
+                type: variable-select
+                description: "Controls whether the title is globally hidden for [!images] callouts. To show/hide the title on a per-callout basis, please use the relevant metadata classes."
+                allowEmpty: false
+                default: '0'
+                options:
+                    -
+                        label: "Hide Title (Default)"
+                        value: '0'
+                    -
+                        label: "Show Title"
+                        value: '1'
+    -
+            id: callouts-gallery
+            title: Gallery
+            type: heading
+            level: 4
+            collapsed: false
+    -
+                id: documentation-callouts-gallery
+                title: Documentation for Gallery-style Image Callouts
+                type: info-text
+                description: "[Docs](https://willemstad.cc/Features/Callouts/Gallery)"
+                markdown: true
+    -
+                id: syntax-callouts-gallery
+                title: Syntax for Gallery-style Image Callouts
+                type: class-toggle
+                description: ">[!images|gallery]"
+                default: false
+    -
+                id: radius-callouts-gallery
+                title: Image Border Radius in Gallery-style Image Callouts
+                type: variable-text
+                description: "Controls the border radius of images inside gallery-style callouts. Accepts any valid CSS radius value (e.g., 0, 4px, var(--radius-m))."
+                default: 'var(--radius-image)'
+    -
+            id: callouts-image-grid
+            title: Image Grid
+            type: heading
+            level: 4
+            collapsed: false
+    -
+                id: documentation-callouts-image-grid
+                title: Documentation for Grid-style Image Callouts
+                type: info-text
+                description: "[Docs](https://willemstad.cc/Features/Callouts/Image+Grid)"
+                markdown: true
+    -
+                id: syntax-callouts-image-grid
+                title: Syntax for Grid-style Image Callouts
+                type: class-toggle
+                description: ">[!images|grid]"
+                default: false
+    -
+                id: radius-callouts-img-grid
+                title: Image Border Radius in Grid-style Image Callouts
+                type: variable-text
+                description: "Controls the border radius of images inside gallery-style callouts. Accepts any valid CSS radius value (e.g., 0, 4px, var(--radius-m))."
+                default: 'var(--radius-image)'
+    -
+                id: gap-callouts-img-grid
+                title: Gap between Images in Grid-style Image Callouts
+                type: variable-text
+                description: "Controls the gap/spacing between images within an image grid callout. Accepts any valid CSS length (e.g., 4px, 0.5em, 1rem)."
+                default: '4px'
+    -
+        id: cssclass-inline
+        title: Inline CSSClass
+        description: 
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: cssclass-banner
+            title: Banner CSSClass
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: documentation-cssclass-banner
+                title: Documentation for Banner CSSClass
+                type: info-text
+                description: "[Docs](https://willemstad.cc/Features/Inline+CSSClass/Banner+CSSClass)"
+                markdown: true
+    -
+                id: syntax-cssclass-banner
+                title: Syntax for Banner CSSClass
+                type: class-toggle
+                description: "cssclasses: [banner]"
+                default: false
+    -
+            id: cssc-banner-height
+            title: Banner Height
+            type: variable-text
+            description: "Sets the height of the banner image. You can use any valid CSS unit (e.g., 200px, 25vh)."
+            default: "200px"
+    -
+            id: cssc-banner-residual
+            title: Banner Bottom Margin
+            type: variable-text
+            description: "Sets the margin below the banner image, creating space between the banner and the content below it. Accepts any valid CSS unit (e.g., 0px, 1em)."
+            default: "0px"
+    -
+            id: cssc-banner-gradient-mask
+            title: Banner Gradient Mask
+            type: variable-text
+            description: "Defines the linear gradient used to fade the bottom of the banner image. Modify this to change the fading effect."
+            default: "linear-gradient(to bottom, black 0%, black 50%, oklch(0 0 0 / 0.8) 75%, oklch(0 0 0 / 0.5) 80%, oklch(0 0 0 / 0.3) 85%, oklch(0 0 0 / 0.15) 90%, oklch(0 0 0 / 0.08) 95%, transparent 100%)"
+    -
+        id: html-features
+        title: HTML Features
+        description: 
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: html-progress-bars
+            title: Progress Bars
+            description: To use progress bars, use the following syntax below, which is also copyable for your own convenience. Change the value of the progress bar by changing the value attribute. Change the max value by changing the max attribute.
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: syntax-progress-bars
+                title: Syntax for Progress Bars
+                type: class-toggle
+                document: EY21-HTML-ProgressBar
+                description: <progress value="50" max="100"></progress>
+                default: false
+    -
+                id: ssopt-progress-bar-original
+                title: Use Original Progress Bar Styling
+                type: class-toggle
+                document: EY21-HTML-ProgressBar
+                description: "Willemstad changes the default Progress Bar styling, however this is only appropriate for Progress Bars using a 0-100 scale. Toggling this would result in the original Progress Bar colour styling used instead."
+                default: false
+    -
+            id: html-aside
+            title: HTML Aside
+            description: To use HTML Aside, use the following syntax below, which is also copyable for your own convenience. HTML Aside floats to the right by default, allowing you to add notes. Please note that markdown syntax DOES NOT work inside HTML Aside — instead, you must use HTML Syntax to reflect changes (for example, <b></b> instead of **** for bold text).
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: syntax-html-aside
+                title: Syntax for HTML Aside
+                type: class-toggle
+                document: EY13-HTML-Aside
+                description: <aside>text goes here</aside>
+                default: false
+    -
+                id: aside-text-align
+                title: Text Alignment for HTML Aside
+                type: variable-select
+                document: EY13-HTML-Aside
+                description: "This option allows one to change the text alignment and justification of the HTML Aside. By default, the text is aligned to the left."
+                default: left
+                options:
+                    -
+                        label: Left
+                        value: left
+                    -
+                        label: Center
+                        value: center
+                    -
+                        label: Right
+                        value: right
+                    -
+                        label: Justify
+                        value: justify
+    -
+                id: aside-float
+                title: Float Alignment for HTML Aside
+                type: variable-select
+                document: EY13-HTML-Aside
+                description: 'This option allows one to change the float alignment of the HTML Aside. By default, the aside is floated to the right. Should you choose to float it to the left, it is recommended to enable the "Overflow Fix" option.'
+                default: right
+                options:
+                    -
+                        label: Left
+                        value: left
+                    -
+                        label: Right
+                        value: right
+    -
+            id: html-infobox
+            title: HTML Infobox
+            description: To use HTML Infobox, use the following syntax below, which is also copyable for your own convenience. HTML Infobox is very similar to HTML Aside, except that the title in HTML Infobox is styled as well. Like in HTML Aside, markdown syntax DOES NOT work inside HTML Infobox — instead, you must use HTML Syntax to reflect changes (for example, <b></b> instead of **** for bold text).
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: syntax-html-infobox
+                title: Syntax for HTML Infobox
+                type: class-toggle
+                document: EY11-HTML-Infobox
+                description: <aside class=infobox><title>title goes here</title> text goes here</aside>
+                default: false
+    -
+                id: aside-infobox-float
+                title: Float Alignment for HTML Infobox
+                type: variable-select
+                document: EY11-HTML-Infobox
+                description: 'This option allows one to change the float alignment of the HTML Infobox. By default, the infobox is floated to the right. Should you choose to float it to the left, it is recommended to enable the "Overflow Fix" option.'
+                default: right
+                options:
+                    -
+                        label: Left
+                        value: left
+                    -
+                        label: Right
+                        value: right
+*/

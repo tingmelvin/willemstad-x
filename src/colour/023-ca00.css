@@ -1,0 +1,111 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CA00
+\ Colour \ Accent \ Set Accents \ User-set (Pax)
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ════════════════════════════════════════════════════════════════
+   LIGHT  – custom accent pipeline
+════════════════════════════════════════════════════════════════ */
+
+/* attach all rules to the helper class that means  
+   “I’m customising light accents” */
+body:is(.ssopt-custom-accent-colours-light) {
+  /* ── source colour ─────────────────────────────────────────── */
+
+  /* default → use picker value */
+
+  /* single accent fed from the text-field */
+
+  /* full trio fed from three text-fields */
+
+  /* ── derivations & shifts ───────────────────────────────────── */
+
+  /* (keep or remove these empty pickers as you wish) */
+  --color-pax-l-accent-picker: var(--color-set-l-accent);
+
+  /* user-tweakable shifts */
+  --color-pax-l-accent-h-shift: 0;
+  --color-pax-l-accent-l-shift: 0.1;
+
+  /* derived swatches */
+  --color-pax-l-accent-1: oklch(from var(--color-pax-l-accent)
+                          calc(l + var(--color-pax-l-accent-l-shift))
+                              c
+                          calc(h + var(--color-pax-l-accent-h-shift)));
+  --color-pax-l-accent-2: oklch(from var(--color-pax-l-accent)
+                          calc(l + 2*var(--color-pax-l-accent-l-shift))
+                              c
+                          calc(h + 2*var(--color-pax-l-accent-h-shift)));
+}
+
+body:is(.ssopt-custom-accent-colours-light):not(.ssopt-custom-accent-textfield-light) {
+  --color-pax-l-accent: var(--color-pax-l-accent-picker);
+}
+
+body:is(.ssopt-custom-accent-colours-light).ssopt-custom-accent-textfield-light {
+  --color-pax-l-accent: var(--color-pax-l-accent-textfield);
+}
+
+body:is(.ssopt-custom-accent-colours-light).ssopt-custom-accent-textfield-light.ssopt-custom-accents-total-enable-light {
+  --color-pax-l-accent: var(--color-pax-l-accent-textfield);
+  --color-pax-l-accent-1: var(--color-pax-l-accent-1-textfield);
+  --color-pax-l-accent-2: var(--color-pax-l-accent-2-textfield);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   DARK  – custom accent pipeline
+════════════════════════════════════════════════════════════════ */
+body:is(.ssopt-custom-accent-colours-dark) {
+  /* ── source colour ─────────────────────────────────────────── */
+
+  /* ── derivations & shifts ───────────────────────────────────── */
+  --color-pax-d-accent-picker: var(--color-set-d-accent);
+  --color-pax-d-accent-h-shift: 0;
+  --color-pax-d-accent-l-shift: 0.1;
+  --color-pax-d-accent-1: oklch(from var(--color-pax-d-accent)
+                          calc(l + var(--color-pax-d-accent-l-shift))
+                              c
+                          calc(h + var(--color-pax-d-accent-h-shift)));
+  --color-pax-d-accent-2: oklch(from var(--color-pax-d-accent)
+                          calc(l + 2*var(--color-pax-d-accent-l-shift))
+                              c
+                          calc(h + 2*var(--color-pax-d-accent-h-shift)));
+}
+
+body:is(.ssopt-custom-accent-colours-dark):not(.ssopt-custom-accent-textfield-dark) {
+  --color-pax-d-accent: var(--color-pax-d-accent-picker);
+}
+
+body:is(.ssopt-custom-accent-colours-dark).ssopt-custom-accent-textfield-dark {
+  --color-pax-d-accent: var(--color-pax-d-accent-textfield);
+}
+
+body:is(.ssopt-custom-accent-colours-dark).ssopt-custom-accent-textfield-dark.ssopt-custom-accents-total-enable-dark {
+  --color-pax-d-accent: var(--color-pax-d-accent-textfield);
+  --color-pax-d-accent-1: var(--color-pax-d-accent-1-textfield);
+  --color-pax-d-accent-2: var(--color-pax-d-accent-2-textfield);
+}
+
+.theme-light, .theme-dark {
+  --color-pax-d-accent-1: oklch(from var(--color-pax-d-accent) calc(l + var(--color-pax-d-accent-l-shift)) c calc(h + var(--color-pax-d-accent-h-shift)));
+  --color-pax-d-accent-2: oklch(from var(--color-pax-d-accent) calc(l + 2 * var(--color-pax-d-accent-l-shift)) c calc(h + 2 * var(--color-pax-d-accent-h-shift)));
+}
+
+.theme-dark, .theme-light {
+  --color-pax-l-accent-1: oklch(from var(--color-pax-l-accent) calc(l + var(--color-pax-l-accent-l-shift)) c calc(h + var(--color-pax-l-accent-h-shift)));
+  --color-pax-l-accent-2: oklch(from var(--color-pax-l-accent) calc(l + 2 * var(--color-pax-l-accent-l-shift)) c calc(h + 2 * var(--color-pax-l-accent-h-shift)));
+}
+
+/*  1   Monochromatic: 0° - 30°
+    2   Analogous: 30° - 60°
+    3   Tetradic: 85° - 95° (90° ± 5°)
+    4   Triadic: 105° - 135° (120° ± 15°)
+    5   Split-Complementary: 140° - 160° (150° ± 10°)
+    6   Complementary: 165° - 195° (180° ± 15°)
+    7   Custom: Everything else
+*/
+
+/* user-set accent controls (pax) */
+
+/* --color-base - background */
+

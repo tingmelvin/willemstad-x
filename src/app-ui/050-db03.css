@@ -1,0 +1,12 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DB03
+\ Generally Side Pane Elements \ Spacing Control
+\ Outline
+──────────────────────────────────────────────────────────────────────────────── */
+.outline {
+  padding: var(--header-margin);
+  padding-right: calc(var(--header-margin) - var(--account-scrollbar-border));
+}
+
+/* Outline */
+

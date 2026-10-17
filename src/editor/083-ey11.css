@@ -1,0 +1,29 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EY11
+\ Editor > HTML Features
+\ Infobox
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --aside-infobox-float: right;
+}
+
+aside.infobox {
+  max-width: 50%;
+  border: 1px solid var(--divider-color);
+  border-radius: var(--radius-s);
+  float: var(--aside-infobox-float);
+}
+
+aside.infobox title {
+  display: block;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px solid var(--col-h1-bg); /* takes the H1/H4 custom headers */
+  padding-bottom: var(--aside-padding);
+  margin-bottom: var(--aside-padding);
+}
+
+/* HTML Infobox */
+

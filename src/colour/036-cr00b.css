@@ -1,0 +1,134 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CR00B
+\ Colour \ RGB PhaseOut Reference \ OKLCH Replacements
+───────────────────────────────────────────────────────────────────────────────────
+RGB is outdated. Pulling all of it out.
+Updated to Obs 1.9.2
+
+Since 1.6.5 (E30/C124 - Obs skipped E29) - Relative OKLCH values have been
+supported. RGB values in Obs is therefore useless (and should be deprecated) 
+───────────────────────────────────────────────────────────────────────────────── */
+
+/*  THINGS REPLACED
+
+    --text-highlight-bg-rgb: ; // not touched since rgba set the hex for this
+    --background-modifier-error-rgb:;
+    --background-modifier-success-rgb: ;
+    --callout-color: ;
+    --callout-error: ;
+    --color-orange-rgb: ;
+    --canvas-color: ;
+    --color-green-rgb: ;
+*/
+
+/* ---------- diff ---------- */
+.diff-line.mod-left {
+  background-color: oklch(from var(--background-modifier-error) l c h/20%);
+}
+
+.diff-line.mod-left .diff-changed {
+  background-color: oklch(from var(--background-modifier-error) l c h/40%);
+}
+
+.diff-line.mod-right {
+  background-color: oklch(from var(--background-modifier-success) l c h/20%);
+}
+
+.diff-line.mod-right .diff-changed {
+  background-color: oklch(from var(--background-modifier-success) l c h/40%);
+}
+
+/* ---------- search / replace inputs ---------- */
+.document-search-input.mod-no-match,
+.document-replace-input.mod-no-match {
+  background-color: oklch(from var(--background-modifier-error) l c h/20%);
+}
+
+@media (hover: hover) {
+  .document-search-input.mod-no-match:hover,
+  .document-replace-input.mod-no-match:hover {
+    background-color: oklch(from var(--background-modifier-error) l c h/20%);
+  }
+}
+
+/* ---------- PDF find-bar ---------- */
+.pdf-findbar .mod-not-found {
+  --background-modifier-form-field: oklch(from var(--background-modifier-error) l c h / 10%);
+  --background-modifier-border-focus: oklch(from var(--background-modifier-error) l c h / 60%);
+}
+
+/* ---------- annotation highlight ---------- */
+.annotationLayer .mod-focused {
+  background-color: oklch(from var(--text-highlight-bg) l c h/10%);
+  border: var(--size-4-1) solid oklch(from var(--text-highlight-bg) l c h/80%);
+}
+
+/* ---------- callouts ---------- */
+.callout {
+  border-color: oklch(from var(--callout-color) l c h/var(--callout-border-opacity));
+  background-color: oklch(from var(--callout-color) l c h/10%);
+}
+
+.metadata-error-container {
+  background-color: oklch(from var(--callout-error) l c h/10%);
+}
+
+@media (hover: hover) {
+  .metadata-property-warning-icon:hover {
+    background-color: oklch(from var(--color-orange) l c h/15%);
+  }
+}
+
+/* ---------- file tree ---------- */
+.file-tree .mod-new.is-selected {
+  background-color: oklch(from var(--background-modifier-success) l c h/20%);
+}
+
+.file-tree .mod-deleted.is-selected,
+.file-tree .mod-to-delete.is-selected {
+  background-color: oklch(from var(--background-modifier-error) l c h/20%);
+}
+
+/* ---------- publish upload list ---------- */
+.publish-upload-item::before {
+  background-color: oklch(from var(--background-modifier-success) l c h/20%);
+}
+
+.publish-upload-item.mod-failed::before {
+  background-color: oklch(from var(--background-modifier-error) l c h/20%);
+}
+
+/* ---------- canvas ---------- */
+.canvas-node-placeholder::after {
+  background-color: oklch(from var(--canvas-color) l c h/10%);
+}
+
+.canvas-node.is-themed .canvas-node-container {
+  border-color: oklch(from var(--canvas-color) l c h/70%);
+  box-shadow: inset 0 0 0 1px oklch(from var(--canvas-color) l c h/70%), var(--shadow-stationary);
+}
+
+.canvas-node-group .canvas-node-content {
+  background-color: oklch(from var(--canvas-color) l c h/7%);
+}
+
+.canvas-group-label {
+  background-color: oklch(from var(--canvas-color) l c h/10%);
+}
+
+.canvas-node.is-themed .canvas-node-content {
+  background-color: oklch(from var(--canvas-color) l c h/7%);
+}
+
+.canvas-edges g.is-focused path.canvas-interaction-path,
+.canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
+  stroke: oklch(from var(--canvas-color) l c h/10%);
+}
+
+/* ---------- misc ---------- */
+.mobile-onboarding-radio-option-title .flair {
+  background-color: oklch(from var(--color-green) l c h/30%);
+}
+
+/* replaces base Ob --rgb values where used via Relative OKLCH syntax - no need to set -rgb */
+

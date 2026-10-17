@@ -1,0 +1,1196 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000F
+\ Plugins > Community
+\ Style Settings
+\ Notes
+
+Here, Style Settings coding to add Notes is done.
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* TO SET ALL THE CONTENT ITEMS WITH NOTES */
+
+/* ADD DESCRIPTIONS IN BEFORE */
+.setting-item.setting-item[data-id="ssopt-titlebar-use-accent"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-titlebar-use-accent"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Obsidian Frame and Frameless Mode only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="col-titlebar-accent"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="col-titlebar-accent"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Obsidian Frame and Frameless Mode only; \aRequires 'Use Accent Colour for Titlebar' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-exclude-titlebar-buttons"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-exclude-titlebar-buttons"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Windows and Linux, and in Frameless Mode";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-hidden-scrollbars"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-hidden-scrollbars"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Windows and Linux only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Source Mode only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-hide-metadata-container"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-hide-metadata-container"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Reading Mode only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-hide-metadata-container-lp"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Live Preview only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-hide-properties-title"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-hide-properties-title"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Live Preview and Reading Mode";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-properties-button-original"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-properties-button-original"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Live Preview and Reading Mode";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Live Preview and Reading Mode";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-bases-no-edit"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-bases-no-edit"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Reading Mode only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Mini'; \aRequires 'No Blur Backdrop Filter' under 'Root Options and Settings' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="status-bar-glass-blur"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="status-bar-glass-blur"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Mini'; \aRequires 'Frosted Glass Aesthetic' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Mini'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="startup-obsidian-image"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="startup-obsidian-image"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Revert to Default Startup Screen' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-tb-willemstad"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-tb-willemstad"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Obsidian Frame Mode only (not Frameless Mode)";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm011-no-sync-colours"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm011-no-sync-colours"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Use Accent Colour for Titlebar' under 'App UI > App Titlebar' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-show-urls"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-show-urls"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Source Mode only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="header-hex-size"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="header-hex-size"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Make Header Hexes Smaller' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-headers-old-willemstad"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-headers-old-willemstad"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'No Coloured Headers' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-headers-custom-colours"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-headers-custom-colours"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'No Coloured Headers' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-headers-old-style-col-palette"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-headers-old-style-col-palette"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'No Coloured Headers' disabled; \aRequires 'Old Willemstad Header Colours' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-ribbon-no-drag"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-ribbon-no-drag"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Disabled by default in Floating Ribbon Mode for usability reasons";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="sd-height-norm"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="sd-height-norm"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Floating Ribbon' ribbon style enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="sd-height-hover"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="sd-height-hover"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Floating Ribbon' ribbon style enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-sd-float-ribbon-blur"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-sd-float-ribbon-blur"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Floating Ribbon' ribbon style enabled; \aRequires 'No Blur Backdrop Filter' under 'Root Options and Settings' deactivated";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="blur-floating-ribbon"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="blur-floating-ribbon"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Blur for Floating Ribbon' enabled; \aRequires 'Floating Ribbon' ribbon style enabled; \aRequires 'No Blur Backdrop Filter' under 'Root Options and Settings' deactivated";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-overflow-hack"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-overflow-hack"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "For Reading Mode only";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-bg-colour"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-bg-colour"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Canvas-style Dotted Background for Kanban' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-dot-colour"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-dot-colour"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Canvas-style Dotted Background for Kanban' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-dot-size"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-dot-size"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Canvas-style Dotted Background for Kanban' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-dot-spacing"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-CB-dot-spacing"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Canvas-style Dotted Background for Kanban' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-float"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-float"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Mini'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="status-bar-align"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="status-bar-align"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Mini'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="status-bar-max-width"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="status-bar-max-width"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Mini'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-shift-workspace"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-shift-workspace"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Mini'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-status-bar-full-style"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Experimental; \aRequires 'Style of Status Bar' set to 'Full'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="status-bar-full-justify-content"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="status-bar-full-justify-content"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Style of Status Bar' set to 'Full'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="status-bar-bottom-float-margin"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="status-bar-bottom-float-margin"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Disable Floating Status Bar' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-sp-fitwidth"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-sp-fitwidth"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Vertical Scroll Kanbans in Side Panes' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-sp-maxheight"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-sp-maxheight"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Vertical Scroll Kanbans in Side Panes' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-wp-fitwidth"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-wp-fitwidth"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Vertical Scroll Kanbans in Main Workspace (Editor) Panes' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="PComm002-wp-maxheight"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="PComm002-wp-maxheight"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Vertical Scroll Kanbans in Main Workspace (Editor) Panes' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-tabs-modern-borderless"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-tabs-modern-borderless"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Tab Style' set to 'Modern (Default)'";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-custom-colour-template-light"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-custom-colour-template-light"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "This option is generally not recommended except for advanced users.";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-custom-colour-template-dark"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-custom-colour-template-dark"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "This option is generally not recommended except for advanced users.";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-frontmatter-in-front"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Hide Properties in Reading Mode' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-frontmatter-in-front-lp"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Hide Properties in Live Preview' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="col-base-bg-alh"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="col-base-bg-alh"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Disable Active Line Highlight' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="col-base-alpha-alh"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="col-base-alpha-alh"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Disable Active Line Highlight' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-callout-no-hover"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Revert to Original Obsidian Styling on Standard Callouts' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="callout-border-left-width"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="callout-border-left-width"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Revert to Original Obsidian Styling on Standard Callouts' disabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="header-text-colours"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="header-text-colours"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'No Background Coloured Headers' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for Tables' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="magnifier-bw-table"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="magnifier-bw-table"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for Tables' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-table-source"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-table-source"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for Tables' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-table-reading"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for Tables' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="magnifier-bw-bases"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="magnifier-bw-bases"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for Bases' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-bases-source"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for Bases' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-bases-reading"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for Bases' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="magnifier-bw-iframe"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="magnifier-bw-iframe"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for iFrames' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-iframe-source"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-iframe-source"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for iFrames' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-iframe-reading"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="ratio-bw-iframe-reading"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for iFrames' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.setting-item.setting-item[data-id="aspect-ratio-bw-iframe"] .setting-item-description {
+  position: relative;
+}
+
+.setting-item.setting-item[data-id="aspect-ratio-bw-iframe"] .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-4-1);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "Requires 'Enable Block Widths for iFrames' enabled";
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+/* SET NOTES - experimental or whatnot */
+.setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) {
+  /* ADD ALL THE STUFF HERE */
+}
+
+.setting-item.setting-item:where([data-id="ssopt-exclude-titlebar-buttons"]) .setting-item-name::after {
+  display: inline-flex;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  padding: var(--size-2-1) var(--size-2-3);
+  font-size: calc(0.85 * var(--font-ui-smaller));
+  color: var(--text-on-accent);
+  background-color: var(--color-accent-1);
+  border-radius: var(--radius-s);
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  align-items: center;
+  max-width: 100%;
+}
+
+/*
+.setting-item-name {
+    &::after {
+
+        .setting-item[data-id="ssopt-exclude-titlebar-buttons"] & {
+            content: "Experimental";
+        }
+    }
+}
+*/
+
+/* Notes Flair for SS */
+

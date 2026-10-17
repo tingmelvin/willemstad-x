@@ -1,0 +1,3219 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ED90
+\ Editor > Document Display
+\ Replacement for PrismJS language-
+───────────────────────────────────────────────────────────────────────────────────
+replaces language-xxxx with PrismJS specific stuff
+───────────────────────────────────────────────────────────────────────────────────
+follow https://prismjs.com/#supported-languages
+───────────────────────────────────────────────────────────────────────────────── */
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ignore::before {
+  content: ".ignore";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ignore::after {
+  content: ".ignore";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gitignore::before {
+  content: ".ignore";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gitignore::after {
+  content: ".ignore";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hgignore::before {
+  content: ".ignore";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hgignore::after {
+  content: ".ignore";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-npmignore::before {
+  content: ".ignore";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-npmignore::after {
+  content: ".ignore";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-properties::before {
+  content: ".properties";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-properties::after {
+  content: ".properties";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-asm6502::before {
+  content: "6502 Assembly";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-asm6502::after {
+  content: "6502 Assembly";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-abap::before {
+  content: "ABAP";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-abap::after {
+  content: "ABAP";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-abnf::before {
+  content: "ABNF";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-abnf::after {
+  content: "ABNF";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-al::before {
+  content: "AL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-al::after {
+  content: "AL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-antlr4::before {
+  content: "ANTLR4";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-antlr4::after {
+  content: "ANTLR4";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-g4::before {
+  content: "ANTLR4";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-g4::after {
+  content: "ANTLR4";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-apl::before {
+  content: "APL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-apl::after {
+  content: "APL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-aql::before {
+  content: "AQL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-aql::after {
+  content: "AQL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-arff::before {
+  content: "ARFF";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-arff::after {
+  content: "ARFF";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-armasm::before {
+  content: "ARM Assembly";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-armasm::after {
+  content: "ARM Assembly";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-arm-asm::before {
+  content: "ARM Assembly";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-arm-asm::after {
+  content: "ARM Assembly";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-aspnet::before {
+  content: "ASP.NET (C#)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-aspnet::after {
+  content: "ASP.NET (C#)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-awk::before {
+  content: "AWK";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-awk::after {
+  content: "AWK";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gawk::before {
+  content: "AWK";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gawk::after {
+  content: "AWK";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-actionscript::before {
+  content: "ActionScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-actionscript::after {
+  content: "ActionScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ada::before {
+  content: "Ada";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ada::after {
+  content: "Ada";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-agda::before {
+  content: "Agda";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-agda::after {
+  content: "Agda";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-apacheconf::before {
+  content: "Apache Configuration";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-apacheconf::after {
+  content: "Apache Configuration";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-apex::before {
+  content: "Apex";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-apex::after {
+  content: "Apex";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-applescript::before {
+  content: "AppleScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-applescript::after {
+  content: "AppleScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-arduino::before {
+  content: "Arduino";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-arduino::after {
+  content: "Arduino";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ino::before {
+  content: "Arduino";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ino::after {
+  content: "Arduino";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-arturo::before {
+  content: "Arturo";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-arturo::after {
+  content: "Arturo";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-art::before {
+  content: "Arturo";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-art::after {
+  content: "Arturo";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-asciidoc::before {
+  content: "AsciiDoc";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-asciidoc::after {
+  content: "AsciiDoc";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-adoc::before {
+  content: "AsciiDoc";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-adoc::after {
+  content: "AsciiDoc";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-asmatmel::before {
+  content: "Atmel AVR Assembly";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-asmatmel::after {
+  content: "Atmel AVR Assembly";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-autohotkey::before {
+  content: "AutoHotkey";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-autohotkey::after {
+  content: "AutoHotkey";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-autoit::before {
+  content: "AutoIt";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-autoit::after {
+  content: "AutoIt";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-avisynth::before {
+  content: "AviSynth";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-avisynth::after {
+  content: "AviSynth";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-avs::before {
+  content: "AviSynth";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-avs::after {
+  content: "AviSynth";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-avro-idl::before {
+  content: "Avro IDL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-avro-idl::after {
+  content: "Avro IDL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-avdl::before {
+  content: "Avro IDL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-avdl::after {
+  content: "Avro IDL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-basic::before {
+  content: "BASIC";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-basic::after {
+  content: "BASIC";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bbcode::before {
+  content: "BBcode";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bbcode::after {
+  content: "BBcode";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-shortcode::before {
+  content: "BBcode";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-shortcode::after {
+  content: "BBcode";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bbj::before {
+  content: "BBj";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bbj::after {
+  content: "BBj";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bnf::before {
+  content: "BNF";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bnf::after {
+  content: "BNF";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rbnf::before {
+  content: "BNF";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rbnf::after {
+  content: "BNF";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bqn::before {
+  content: "BQN";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bqn::after {
+  content: "BQN";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bsl::before {
+  content: "BSL (1C:Enterprise)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bsl::after {
+  content: "BSL (1C:Enterprise)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-oscript::before {
+  content: "BSL (1C:Enterprise)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-oscript::after {
+  content: "BSL (1C:Enterprise)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bash::before {
+  content: "Bash";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bash::after {
+  content: "Bash";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sh::before {
+  content: "Bash";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sh::after {
+  content: "Bash";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-shell::before {
+  content: "Bash";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-shell::after {
+  content: "Bash";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-batch::before {
+  content: "Batch";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-batch::after {
+  content: "Batch";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bicep::before {
+  content: "Bicep";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bicep::after {
+  content: "Bicep";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-birb::before {
+  content: "Birb";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-birb::after {
+  content: "Birb";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bison::before {
+  content: "Bison";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bison::after {
+  content: "Bison";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-brainfuck::before {
+  content: "Brainfuck";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-brainfuck::after {
+  content: "Brainfuck";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-brightscript::before {
+  content: "BrightScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-brightscript::after {
+  content: "BrightScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-bro::before {
+  content: "Bro";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-bro::after {
+  content: "Bro";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-c::before {
+  content: "C";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-c::after {
+  content: "C";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-csharp::before {
+  content: "C#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-csharp::after {
+  content: "C#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cs::before {
+  content: "C#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cs::after {
+  content: "C#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dotnet::before {
+  content: "C#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dotnet::after {
+  content: "C#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cpp::before {
+  content: "C++";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cpp::after {
+  content: "C++";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-clike::before {
+  content: "C-like";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-clike::after {
+  content: "C-like";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cfscript::before {
+  content: "CFScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cfscript::after {
+  content: "CFScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cfc::before {
+  content: "CFScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cfc::after {
+  content: "CFScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cil::before {
+  content: "CIL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cil::after {
+  content: "CIL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cmake::before {
+  content: "CMake";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cmake::after {
+  content: "CMake";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cobol::before {
+  content: "COBOL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cobol::after {
+  content: "COBOL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-css::before {
+  content: "CSS";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-css::after {
+  content: "CSS";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-css-extras::before {
+  content: "CSS Extras";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-css-extras::after {
+  content: "CSS Extras";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-csv::before {
+  content: "CSV";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-csv::after {
+  content: "CSV";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cue::before {
+  content: "CUE";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cue::after {
+  content: "CUE";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-chaiscript::before {
+  content: "ChaiScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-chaiscript::after {
+  content: "ChaiScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cilkc::before {
+  content: "Cilk/C";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cilkc::after {
+  content: "Cilk/C";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cilk-c::before {
+  content: "Cilk/C";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cilk-c::after {
+  content: "Cilk/C";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cilkcpp::before {
+  content: "Cilk/C++";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cilkcpp::after {
+  content: "Cilk/C++";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cilk-cpp::before {
+  content: "Cilk/C++";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cilk-cpp::after {
+  content: "Cilk/C++";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cilk::before {
+  content: "Cilk/C++";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cilk::after {
+  content: "Cilk/C++";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-clojure::before {
+  content: "Clojure";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-clojure::after {
+  content: "Clojure";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-coffeescript::before {
+  content: "CoffeeScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-coffeescript::after {
+  content: "CoffeeScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-coffee::before {
+  content: "CoffeeScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-coffee::after {
+  content: "CoffeeScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-concurnas::before {
+  content: "Concurnas";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-concurnas::after {
+  content: "Concurnas";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-conc::before {
+  content: "Concurnas";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-conc::after {
+  content: "Concurnas";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-csp::before {
+  content: "Content-Security-Policy";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-csp::after {
+  content: "Content-Security-Policy";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cooklang::before {
+  content: "Cooklang";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cooklang::after {
+  content: "Cooklang";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-coq::before {
+  content: "Coq";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-coq::after {
+  content: "Coq";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-crystal::before {
+  content: "Crystal";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-crystal::after {
+  content: "Crystal";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cypher::before {
+  content: "Cypher";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cypher::after {
+  content: "Cypher";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-d::before {
+  content: "D";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-d::after {
+  content: "D";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dax::before {
+  content: "DAX";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dax::after {
+  content: "DAX";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dns-zone-file::before {
+  content: "DNS zone file";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dns-zone-file::after {
+  content: "DNS zone file";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dns-zone::before {
+  content: "DNS zone file";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dns-zone::after {
+  content: "DNS zone file";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dot::before {
+  content: "DOT (Graphviz)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dot::after {
+  content: "DOT (Graphviz)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gv::before {
+  content: "DOT (Graphviz)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gv::after {
+  content: "DOT (Graphviz)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dart::before {
+  content: "Dart";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dart::after {
+  content: "Dart";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dataweave::before {
+  content: "DataWeave";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dataweave::after {
+  content: "DataWeave";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dhall::before {
+  content: "Dhall";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dhall::after {
+  content: "Dhall";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-diff::before {
+  content: "Diff";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-diff::after {
+  content: "Diff";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-django::before {
+  content: "Django/Jinja2";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-django::after {
+  content: "Django/Jinja2";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jinja2::before {
+  content: "Django/Jinja2";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jinja2::after {
+  content: "Django/Jinja2";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-docker::before {
+  content: "Docker";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-docker::after {
+  content: "Docker";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-dockerfile::before {
+  content: "Docker";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-dockerfile::after {
+  content: "Docker";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ebnf::before {
+  content: "EBNF";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ebnf::after {
+  content: "EBNF";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ejs::before {
+  content: "EJS";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ejs::after {
+  content: "EJS";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-eta::before {
+  content: "EJS";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-eta::after {
+  content: "EJS";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-erb::before {
+  content: "ERB";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-erb::after {
+  content: "ERB";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-editorconfig::before {
+  content: "EditorConfig";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-editorconfig::after {
+  content: "EditorConfig";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-eiffel::before {
+  content: "Eiffel";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-eiffel::after {
+  content: "Eiffel";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-elixir::before {
+  content: "Elixir";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-elixir::after {
+  content: "Elixir";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-elm::before {
+  content: "Elm";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-elm::after {
+  content: "Elm";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-etlua::before {
+  content: "Embedded Lua templating";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-etlua::after {
+  content: "Embedded Lua templating";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-erlang::before {
+  content: "Erlang";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-erlang::after {
+  content: "Erlang";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-excel-formula::before {
+  content: "Excel Formula";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-excel-formula::after {
+  content: "Excel Formula";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xlsx::before {
+  content: "Excel Formula";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xlsx::after {
+  content: "Excel Formula";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xls::before {
+  content: "Excel Formula";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xls::after {
+  content: "Excel Formula";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-fsharp::before {
+  content: "F#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-fsharp::after {
+  content: "F#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-factor::before {
+  content: "Factor";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-factor::after {
+  content: "Factor";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-false::before {
+  content: "False";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-false::after {
+  content: "False";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-firestore-security-rules::before {
+  content: "Firestore security rules";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-firestore-security-rules::after {
+  content: "Firestore security rules";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-flow::before {
+  content: "Flow";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-flow::after {
+  content: "Flow";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-fortran::before {
+  content: "Fortran";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-fortran::after {
+  content: "Fortran";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ftl::before {
+  content: "FreeMarker Template Language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ftl::after {
+  content: "FreeMarker Template Language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gcode::before {
+  content: "G-code";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gcode::after {
+  content: "G-code";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gap::before {
+  content: "GAP (CAS)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gap::after {
+  content: "GAP (CAS)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gdscript::before {
+  content: "GDScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gdscript::after {
+  content: "GDScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gedcom::before {
+  content: "GEDCOM";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gedcom::after {
+  content: "GEDCOM";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-glsl::before {
+  content: "GLSL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-glsl::after {
+  content: "GLSL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gn::before {
+  content: "GN";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gn::after {
+  content: "GN";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gni::before {
+  content: "GN";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gni::after {
+  content: "GN";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-linker-script::before {
+  content: "GNU Linker Script";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-linker-script::after {
+  content: "GNU Linker Script";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ld::before {
+  content: "GNU Linker Script";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ld::after {
+  content: "GNU Linker Script";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gml::before {
+  content: "GameMaker Language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gml::after {
+  content: "GameMaker Language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gamemakerlanguage::before {
+  content: "GameMaker Language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gamemakerlanguage::after {
+  content: "GameMaker Language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gherkin::before {
+  content: "Gherkin";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gherkin::after {
+  content: "Gherkin";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-git::before {
+  content: "Git";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-git::after {
+  content: "Git";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-go::before {
+  content: "Go";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-go::after {
+  content: "Go";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-go-module::before {
+  content: "Go module";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-go-module::after {
+  content: "Go module";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-go-mod::before {
+  content: "Go module";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-go-mod::after {
+  content: "Go module";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gradle::before {
+  content: "Gradle";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gradle::after {
+  content: "Gradle";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-graphql::before {
+  content: "GraphQL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-graphql::after {
+  content: "GraphQL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-groovy::before {
+  content: "Groovy";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-groovy::after {
+  content: "Groovy";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hcl::before {
+  content: "HCL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hcl::after {
+  content: "HCL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hlsl::before {
+  content: "HLSL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hlsl::after {
+  content: "HLSL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-http::before {
+  content: "HTTP";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-http::after {
+  content: "HTTP";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hpkp::before {
+  content: "HTTP Public-Key-Pins";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hpkp::after {
+  content: "HTTP Public-Key-Pins";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hsts::before {
+  content: "HTTP Strict-Transport-Security";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hsts::after {
+  content: "HTTP Strict-Transport-Security";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-haml::before {
+  content: "Haml";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-haml::after {
+  content: "Haml";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-handlebars::before {
+  content: "Handlebars";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-handlebars::after {
+  content: "Handlebars";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hbs::before {
+  content: "Handlebars";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hbs::after {
+  content: "Handlebars";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mustache::before {
+  content: "Handlebars";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mustache::after {
+  content: "Handlebars";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-haskell::before {
+  content: "Haskell";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-haskell::after {
+  content: "Haskell";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hs::before {
+  content: "Haskell";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hs::after {
+  content: "Haskell";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-haxe::before {
+  content: "Haxe";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-haxe::after {
+  content: "Haxe";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-hoon::before {
+  content: "Hoon";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-hoon::after {
+  content: "Hoon";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-icu-message-format::before {
+  content: "ICU Message Format";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-icu-message-format::after {
+  content: "ICU Message Format";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ichigojam::before {
+  content: "IchigoJam";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ichigojam::after {
+  content: "IchigoJam";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-icon::before {
+  content: "Icon";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-icon::after {
+  content: "Icon";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-idris::before {
+  content: "Idris";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-idris::after {
+  content: "Idris";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-idr::before {
+  content: "Idris";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-idr::after {
+  content: "Idris";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-inform7::before {
+  content: "Inform 7";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-inform7::after {
+  content: "Inform 7";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ini::before {
+  content: "Ini";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ini::after {
+  content: "Ini";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-io::before {
+  content: "Io";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-io::after {
+  content: "Io";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-j::before {
+  content: "J";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-j::after {
+  content: "J";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jq::before {
+  content: "JQ";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jq::after {
+  content: "JQ";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-js-extras::before {
+  content: "JS Extras";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-js-extras::after {
+  content: "JS Extras";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-js-templates::before {
+  content: "JS Templates";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-js-templates::after {
+  content: "JS Templates";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jsstacktrace::before {
+  content: "JS stack trace";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jsstacktrace::after {
+  content: "JS stack trace";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jsdoc::before {
+  content: "JSDoc";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jsdoc::after {
+  content: "JSDoc";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-json::before {
+  content: "JSON";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-json::after {
+  content: "JSON";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-webmanifest::before {
+  content: "JSON";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-webmanifest::after {
+  content: "JSON";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-json5::before {
+  content: "JSON5";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-json5::after {
+  content: "JSON5";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jsonp::before {
+  content: "JSONP";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jsonp::after {
+  content: "JSONP";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-java::before {
+  content: "Java";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-java::after {
+  content: "Java";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-javastacktrace::before {
+  content: "Java stack trace";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-javastacktrace::after {
+  content: "Java stack trace";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-javadoc::before {
+  content: "JavaDoc";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-javadoc::after {
+  content: "JavaDoc";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-javadoclike::before {
+  content: "JavaDoc-like";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-javadoclike::after {
+  content: "JavaDoc-like";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-javascript::before {
+  content: "JavaScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-javascript::after {
+  content: "JavaScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-js::before {
+  content: "JavaScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-js::after {
+  content: "JavaScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jexl::before {
+  content: "Jexl";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jexl::after {
+  content: "Jexl";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jolie::before {
+  content: "Jolie";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jolie::after {
+  content: "Jolie";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-julia::before {
+  content: "Julia";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-julia::after {
+  content: "Julia";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-keepalived::before {
+  content: "Keepalived Configure";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-keepalived::after {
+  content: "Keepalived Configure";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-keyman::before {
+  content: "Keyman";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-keyman::after {
+  content: "Keyman";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-kotlin::before {
+  content: "Kotlin";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-kotlin::after {
+  content: "Kotlin";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-kt::before {
+  content: "Kotlin";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-kt::after {
+  content: "Kotlin";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-kts::before {
+  content: "Kotlin";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-kts::after {
+  content: "Kotlin";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-kumir::before {
+  content: "KuMir (КуМир)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-kumir::after {
+  content: "KuMir (КуМир)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-kum::before {
+  content: "KuMir (КуМир)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-kum::after {
+  content: "KuMir (КуМир)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-kusto::before {
+  content: "Kusto";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-kusto::after {
+  content: "Kusto";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-llvm::before {
+  content: "LLVM IR";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-llvm::after {
+  content: "LLVM IR";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-lolcode::before {
+  content: "LOLCODE";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-lolcode::after {
+  content: "LOLCODE";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-latex::before {
+  content: "LaTeX";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-latex::after {
+  content: "LaTeX";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-tex::before {
+  content: "LaTeX";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-tex::after {
+  content: "LaTeX";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-context::before {
+  content: "LaTeX";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-context::after {
+  content: "LaTeX";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-latte::before {
+  content: "Latte";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-latte::after {
+  content: "Latte";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-less::before {
+  content: "Less";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-less::after {
+  content: "Less";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-lilypond::before {
+  content: "LilyPond";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-lilypond::after {
+  content: "LilyPond";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ly::before {
+  content: "LilyPond";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ly::after {
+  content: "LilyPond";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-liquid::before {
+  content: "Liquid";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-liquid::after {
+  content: "Liquid";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-lisp::before {
+  content: "Lisp";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-lisp::after {
+  content: "Lisp";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-emacs::before {
+  content: "Lisp";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-emacs::after {
+  content: "Lisp";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-elisp::before {
+  content: "Lisp";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-elisp::after {
+  content: "Lisp";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-emacs-lisp::before {
+  content: "Lisp";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-emacs-lisp::after {
+  content: "Lisp";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-livescript::before {
+  content: "LiveScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-livescript::after {
+  content: "LiveScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-log::before {
+  content: "Log file";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-log::after {
+  content: "Log file";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-lua::before {
+  content: "Lua";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-lua::after {
+  content: "Lua";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-matlab::before {
+  content: "MATLAB";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-matlab::after {
+  content: "MATLAB";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-maxscript::before {
+  content: "MAXScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-maxscript::after {
+  content: "MAXScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mel::before {
+  content: "MEL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mel::after {
+  content: "MEL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-metafont::before {
+  content: "METAFONT";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-metafont::after {
+  content: "METAFONT";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-magma::before {
+  content: "Magma (CAS)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-magma::after {
+  content: "Magma (CAS)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-makefile::before {
+  content: "Makefile";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-makefile::after {
+  content: "Makefile";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-markdown::before {
+  content: "Markdown";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-markdown::after {
+  content: "Markdown";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-md::before {
+  content: "Markdown";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-md::after {
+  content: "Markdown";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-markup::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-markup::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-html::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-html::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xml::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xml::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-svg::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-svg::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mathml::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mathml::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ssml::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ssml::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-atom::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-atom::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rss::before {
+  content: "Markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rss::after {
+  content: "Markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-markup-templating::before {
+  content: "Markup templating";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-markup-templating::after {
+  content: "Markup templating";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mata::before {
+  content: "Mata";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mata::after {
+  content: "Mata";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mermaid::before {
+  content: "Mermaid";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mermaid::after {
+  content: "Mermaid";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mizar::before {
+  content: "Mizar";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mizar::after {
+  content: "Mizar";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mongodb::before {
+  content: "MongoDB";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mongodb::after {
+  content: "MongoDB";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-monkey::before {
+  content: "Monkey";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-monkey::after {
+  content: "Monkey";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-moonscript::before {
+  content: "MoonScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-moonscript::after {
+  content: "MoonScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-moon::before {
+  content: "MoonScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-moon::after {
+  content: "MoonScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-n1ql::before {
+  content: "N1QL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-n1ql::after {
+  content: "N1QL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-n4js::before {
+  content: "N4JS";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-n4js::after {
+  content: "N4JS";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-n4jsd::before {
+  content: "N4JS";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-n4jsd::after {
+  content: "N4JS";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nasm::before {
+  content: "NASM";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nasm::after {
+  content: "NASM";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-neon::before {
+  content: "NEON";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-neon::after {
+  content: "NEON";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nsis::before {
+  content: "NSIS";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nsis::after {
+  content: "NSIS";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nand2tetris-hdl::before {
+  content: "Nand To Tetris HDL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nand2tetris-hdl::after {
+  content: "Nand To Tetris HDL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-naniscript::before {
+  content: "Naninovel Script";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-naniscript::after {
+  content: "Naninovel Script";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nani::before {
+  content: "Naninovel Script";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nani::after {
+  content: "Naninovel Script";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nevod::before {
+  content: "Nevod";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nevod::after {
+  content: "Nevod";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nim::before {
+  content: "Nim";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nim::after {
+  content: "Nim";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nix::before {
+  content: "Nix";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nix::after {
+  content: "Nix";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ocaml::before {
+  content: "OCaml";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ocaml::after {
+  content: "OCaml";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-objectivec::before {
+  content: "Objective-C";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-objectivec::after {
+  content: "Objective-C";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-objc::before {
+  content: "Objective-C";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-objc::after {
+  content: "Objective-C";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-odin::before {
+  content: "Odin";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-odin::after {
+  content: "Odin";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-opencl::before {
+  content: "OpenCL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-opencl::after {
+  content: "OpenCL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-openqasm::before {
+  content: "OpenQasm";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-openqasm::after {
+  content: "OpenQasm";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-qasm::before {
+  content: "OpenQasm";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-qasm::after {
+  content: "OpenQasm";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-oz::before {
+  content: "Oz";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-oz::after {
+  content: "Oz";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-parigp::before {
+  content: "PARI/GP";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-parigp::after {
+  content: "PARI/GP";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-psl::before {
+  content: "PATROL Scripting Language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-psl::after {
+  content: "PATROL Scripting Language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pcaxis::before {
+  content: "PC-Axis";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pcaxis::after {
+  content: "PC-Axis";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-px::before {
+  content: "PC-Axis";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-px::after {
+  content: "PC-Axis";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-php::before {
+  content: "PHP";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-php::after {
+  content: "PHP";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-php-extras::before {
+  content: "PHP Extras";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-php-extras::after {
+  content: "PHP Extras";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-phpdoc::before {
+  content: "PHPDoc";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-phpdoc::after {
+  content: "PHPDoc";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-plsql::before {
+  content: "PL/SQL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-plsql::after {
+  content: "PL/SQL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-parser::before {
+  content: "Parser";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-parser::after {
+  content: "Parser";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pascal::before {
+  content: "Pascal";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pascal::after {
+  content: "Pascal";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-objectpascal::before {
+  content: "Pascal";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-objectpascal::after {
+  content: "Pascal";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pascaligo::before {
+  content: "Pascaligo";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pascaligo::after {
+  content: "Pascaligo";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-peoplecode::before {
+  content: "PeopleCode";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-peoplecode::after {
+  content: "PeopleCode";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pcode::before {
+  content: "PeopleCode";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pcode::after {
+  content: "PeopleCode";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-perl::before {
+  content: "Perl";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-perl::after {
+  content: "Perl";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-plant-uml::before {
+  content: "PlantUML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-plant-uml::after {
+  content: "PlantUML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-plantuml::before {
+  content: "PlantUML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-plantuml::after {
+  content: "PlantUML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-powerquery::before {
+  content: "PowerQuery";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-powerquery::after {
+  content: "PowerQuery";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pq::before {
+  content: "PowerQuery";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pq::after {
+  content: "PowerQuery";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mscript::before {
+  content: "PowerQuery";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mscript::after {
+  content: "PowerQuery";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-powershell::before {
+  content: "PowerShell";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-powershell::after {
+  content: "PowerShell";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-processing::before {
+  content: "Processing";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-processing::after {
+  content: "Processing";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-prolog::before {
+  content: "Prolog";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-prolog::after {
+  content: "Prolog";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-promql::before {
+  content: "PromQL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-promql::after {
+  content: "PromQL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-protobuf::before {
+  content: "Protocol Buffers";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-protobuf::after {
+  content: "Protocol Buffers";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pug::before {
+  content: "Pug";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pug::after {
+  content: "Pug";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-puppet::before {
+  content: "Puppet";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-puppet::after {
+  content: "Puppet";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pure::before {
+  content: "Pure";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pure::after {
+  content: "Pure";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-purebasic::before {
+  content: "PureBasic";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-purebasic::after {
+  content: "PureBasic";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-pbfasm::before {
+  content: "PureBasic";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-pbfasm::after {
+  content: "PureBasic";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-purescript::before {
+  content: "PureScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-purescript::after {
+  content: "PureScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-purs::before {
+  content: "PureScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-purs::after {
+  content: "PureScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-python::before {
+  content: "Python";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-python::after {
+  content: "Python";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-py::before {
+  content: "Python";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-py::after {
+  content: "Python";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-q::before {
+  content: "Q (kdb+ database)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-q::after {
+  content: "Q (kdb+ database)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-qsharp::before {
+  content: "Q#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-qsharp::after {
+  content: "Q#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-qs::before {
+  content: "Q#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-qs::after {
+  content: "Q#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-qml::before {
+  content: "QML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-qml::after {
+  content: "QML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-qore::before {
+  content: "Qore";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-qore::after {
+  content: "Qore";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-r::before {
+  content: "R";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-r::after {
+  content: "R";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-racket::before {
+  content: "Racket";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-racket::after {
+  content: "Racket";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rkt::before {
+  content: "Racket";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rkt::after {
+  content: "Racket";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-cshtml::before {
+  content: "Razor C#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-cshtml::after {
+  content: "Razor C#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-razor::before {
+  content: "Razor C#";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-razor::after {
+  content: "Razor C#";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rescript::before {
+  content: "ReScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rescript::after {
+  content: "ReScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-res::before {
+  content: "ReScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-res::after {
+  content: "ReScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-jsx::before {
+  content: "React JSX";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-jsx::after {
+  content: "React JSX";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-tsx::before {
+  content: "React TSX";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-tsx::after {
+  content: "React TSX";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-reason::before {
+  content: "Reason";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-reason::after {
+  content: "Reason";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-regex::before {
+  content: "Regex";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-regex::after {
+  content: "Regex";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rego::before {
+  content: "Rego";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rego::after {
+  content: "Rego";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-renpy::before {
+  content: "Ren'py";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-renpy::after {
+  content: "Ren'py";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rpy::before {
+  content: "Ren'py";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rpy::after {
+  content: "Ren'py";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rip::before {
+  content: "Rip";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rip::after {
+  content: "Rip";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-roboconf::before {
+  content: "Roboconf";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-roboconf::after {
+  content: "Roboconf";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-robotframework::before {
+  content: "Robot Framework";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-robotframework::after {
+  content: "Robot Framework";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-robot::before {
+  content: "Robot Framework";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-robot::after {
+  content: "Robot Framework";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ruby::before {
+  content: "Ruby";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ruby::after {
+  content: "Ruby";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rb::before {
+  content: "Ruby";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rb::after {
+  content: "Ruby";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rust::before {
+  content: "Rust";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rust::after {
+  content: "Rust";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sas::before {
+  content: "SAS";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sas::after {
+  content: "SAS";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sml::before {
+  content: "SML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sml::after {
+  content: "SML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-smlnj::before {
+  content: "SML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-smlnj::after {
+  content: "SML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sparql::before {
+  content: "SPARQL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sparql::after {
+  content: "SPARQL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rq::before {
+  content: "SPARQL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rq::after {
+  content: "SPARQL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sqf::before {
+  content: "SQF: Status Quo Function (Arma 3)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sqf::after {
+  content: "SQF: Status Quo Function (Arma 3)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sql::before {
+  content: "SQL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sql::after {
+  content: "SQL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-scss::before {
+  content: "Sass (SCSS)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-scss::after {
+  content: "Sass (SCSS)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sass::before {
+  content: "Sass (Sass)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sass::after {
+  content: "Sass (Sass)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-scala::before {
+  content: "Scala";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-scala::after {
+  content: "Scala";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-scheme::before {
+  content: "Scheme";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-scheme::after {
+  content: "Scheme";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-shell-session::before {
+  content: "Shell session";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-shell-session::after {
+  content: "Shell session";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sh-session::before {
+  content: "Shell session";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sh-session::after {
+  content: "Shell session";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-shellsession::before {
+  content: "Shell session";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-shellsession::after {
+  content: "Shell session";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-smali::before {
+  content: "Smali";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-smali::after {
+  content: "Smali";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-smalltalk::before {
+  content: "Smalltalk";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-smalltalk::after {
+  content: "Smalltalk";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-smarty::before {
+  content: "Smarty";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-smarty::after {
+  content: "Smarty";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-solidity::before {
+  content: "Solidity (Ethereum)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-solidity::after {
+  content: "Solidity (Ethereum)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sol::before {
+  content: "Solidity (Ethereum)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sol::after {
+  content: "Solidity (Ethereum)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-solution-file::before {
+  content: "Solution file";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-solution-file::after {
+  content: "Solution file";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sln::before {
+  content: "Solution file";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sln::after {
+  content: "Solution file";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-soy::before {
+  content: "Soy (Closure Template)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-soy::after {
+  content: "Soy (Closure Template)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-splunk-spl::before {
+  content: "Splunk SPL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-splunk-spl::after {
+  content: "Splunk SPL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-squirrel::before {
+  content: "Squirrel";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-squirrel::after {
+  content: "Squirrel";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-stan::before {
+  content: "Stan";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-stan::after {
+  content: "Stan";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-stata::before {
+  content: "Stata Ado";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-stata::after {
+  content: "Stata Ado";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-iecst::before {
+  content: "Structured Text (IEC 61131-3)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-iecst::after {
+  content: "Structured Text (IEC 61131-3)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-stylus::before {
+  content: "Stylus";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-stylus::after {
+  content: "Stylus";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-supercollider::before {
+  content: "SuperCollider";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-supercollider::after {
+  content: "SuperCollider";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-sclang::before {
+  content: "SuperCollider";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-sclang::after {
+  content: "SuperCollider";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-swift::before {
+  content: "Swift";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-swift::after {
+  content: "Swift";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-systemd::before {
+  content: "Systemd configuration file";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-systemd::after {
+  content: "Systemd configuration file";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-t4-cs::before {
+  content: "T4 Text Templates (C#)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-t4-cs::after {
+  content: "T4 Text Templates (C#)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-t4::before {
+  content: "T4 Text Templates (C#)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-t4::after {
+  content: "T4 Text Templates (C#)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-t4-vb::before {
+  content: "T4 Text Templates (VB)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-t4-vb::after {
+  content: "T4 Text Templates (VB)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-t4-templating::before {
+  content: "T4 templating";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-t4-templating::after {
+  content: "T4 templating";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-tap::before {
+  content: "TAP";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-tap::after {
+  content: "TAP";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-toml::before {
+  content: "TOML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-toml::after {
+  content: "TOML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-tcl::before {
+  content: "Tcl";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-tcl::after {
+  content: "Tcl";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-tt2::before {
+  content: "Template Toolkit 2";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-tt2::after {
+  content: "Template Toolkit 2";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-textile::before {
+  content: "Textile";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-textile::after {
+  content: "Textile";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-tremor::before {
+  content: "Tremor";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-tremor::after {
+  content: "Tremor";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-trickle::before {
+  content: "Tremor";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-trickle::after {
+  content: "Tremor";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-troy::before {
+  content: "Tremor";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-troy::after {
+  content: "Tremor";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-turtle::before {
+  content: "Turtle";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-turtle::after {
+  content: "Turtle";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-trig::before {
+  content: "Turtle";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-trig::after {
+  content: "Turtle";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-twig::before {
+  content: "Twig";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-twig::after {
+  content: "Twig";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-typescript::before {
+  content: "TypeScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-typescript::after {
+  content: "TypeScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-ts::before {
+  content: "TypeScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-ts::after {
+  content: "TypeScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-typoscript::before {
+  content: "TypoScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-typoscript::after {
+  content: "TypoScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-tsconfig::before {
+  content: "TypoScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-tsconfig::after {
+  content: "TypoScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-uorazor::before {
+  content: "UO Razor Script";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-uorazor::after {
+  content: "UO Razor Script";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-uri::before {
+  content: "URI";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-uri::after {
+  content: "URI";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-url::before {
+  content: "URI";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-url::after {
+  content: "URI";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-unrealscript::before {
+  content: "UnrealScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-unrealscript::after {
+  content: "UnrealScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-uscript::before {
+  content: "UnrealScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-uscript::after {
+  content: "UnrealScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-uc::before {
+  content: "UnrealScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-uc::after {
+  content: "UnrealScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-v::before {
+  content: "V";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-v::after {
+  content: "V";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-vbnet::before {
+  content: "VB.Net";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-vbnet::after {
+  content: "VB.Net";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-vhdl::before {
+  content: "VHDL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-vhdl::after {
+  content: "VHDL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-vala::before {
+  content: "Vala";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-vala::after {
+  content: "Vala";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-velocity::before {
+  content: "Velocity";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-velocity::after {
+  content: "Velocity";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-verilog::before {
+  content: "Verilog";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-verilog::after {
+  content: "Verilog";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-visual-basic::before {
+  content: "Visual Basic";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-visual-basic::after {
+  content: "Visual Basic";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-vb::before {
+  content: "Visual Basic";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-vb::after {
+  content: "Visual Basic";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-vba::before {
+  content: "Visual Basic";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-vba::after {
+  content: "Visual Basic";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-wgsl::before {
+  content: "WGSL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-wgsl::after {
+  content: "WGSL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-warpscript::before {
+  content: "WarpScript";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-warpscript::after {
+  content: "WarpScript";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-web-idl::before {
+  content: "Web IDL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-web-idl::after {
+  content: "Web IDL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-webidl::before {
+  content: "Web IDL";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-webidl::after {
+  content: "Web IDL";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-wasm::before {
+  content: "WebAssembly";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-wasm::after {
+  content: "WebAssembly";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-wiki::before {
+  content: "Wiki markup";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-wiki::after {
+  content: "Wiki markup";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-wolfram::before {
+  content: "Wolfram language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-wolfram::after {
+  content: "Wolfram language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-mathematica::before {
+  content: "Wolfram language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-mathematica::after {
+  content: "Wolfram language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nb::before {
+  content: "Wolfram language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nb::after {
+  content: "Wolfram language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-wl::before {
+  content: "Wolfram language";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-wl::after {
+  content: "Wolfram language";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-wren::before {
+  content: "Wren";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-wren::after {
+  content: "Wren";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xml-doc::before {
+  content: "XML doc (.net)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xml-doc::after {
+  content: "XML doc (.net)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xquery::before {
+  content: "XQuery";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xquery::after {
+  content: "XQuery";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xeora::before {
+  content: "Xeora";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xeora::after {
+  content: "Xeora";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xeoracube::before {
+  content: "Xeora";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xeoracube::after {
+  content: "Xeora";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-xojo::before {
+  content: "Xojo (REALbasic)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-xojo::after {
+  content: "Xojo (REALbasic)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-yaml::before {
+  content: "YAML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-yaml::after {
+  content: "YAML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-yml::before {
+  content: "YAML";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-yml::after {
+  content: "YAML";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-yang::before {
+  content: "YANG";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-yang::after {
+  content: "YANG";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-zig::before {
+  content: "Zig";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-zig::after {
+  content: "Zig";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-gettext::before {
+  content: "gettext";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-gettext::after {
+  content: "gettext";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-po::before {
+  content: "gettext";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-po::after {
+  content: "gettext";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-nginx::before {
+  content: "nginx";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-nginx::after {
+  content: "nginx";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-rest::before {
+  content: "reST (reStructuredText)";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-rest::after {
+  content: "reST (reStructuredText)";
+}
+
+body:where(.ssopt-codeblock-lang-old) .markdown-rendered pre.language-vim::before {
+  content: "vim";
+}
+
+body:not(.ssopt-codeblock-lang-old, .ssopt-codeblock-lang-none) .markdown-rendered pre.language-vim::after {
+  content: "vim";
+}
+
+/* PrismJS Replace */
+

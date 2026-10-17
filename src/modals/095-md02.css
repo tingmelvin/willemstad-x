@@ -1,0 +1,86 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> MD02
+\ Modals \ Community Plugin Modal \ Store Grid Fixes
+──────────────────────────────────────────────────────────────────────────────── */
+.modal.mod-community-plugin {
+  /* GRID STUFF */
+}
+
+.modal.mod-community-plugin .community-item {
+  display: grid;
+  grid-template-columns: 4fr 1.5fr;
+  grid-template-rows: auto auto 5fr;
+  gap: var(--size-4-1) var(--size-4-2); /* gap? */ /* gap? */
+
+  /* grid-template-rows:  ; */
+  padding: var(--size-4-1) var(--size-2-3) var(--size-2-3) var(--size-2-3); /* 4-3 is too big */
+}
+
+.modal.mod-community-plugin .community-item .community-item-name {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  border-bottom: 1px solid var(--background-modifier-border); /* else var(--background-modifier-border) too light */
+  padding-bottom: var(--size-4-1); /* add margins to aid reading? */
+  display: grid;
+
+  /* grid-template-columns: 1.75fr 0.5fr; */
+
+ /* removes so there's no grid if there is no span.flair */
+}
+
+.modal.mod-community-plugin .community-item .community-item-name span.flair {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin: auto 0 auto auto; /* aligns to the right */
+}
+
+.modal.mod-community-plugin .community-item .community-item-name span.suggestion-highlight {
+  display: contents; /* ensures it doesn't conform to some weird gridding or flex-ing */
+}
+
+.modal.mod-community-plugin .community-item:hover .community-item-name {
+  border-bottom: 1px solid var(--text-faint);
+}
+
+.modal.mod-community-plugin .community-item .community-item-author {
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+  /* color: var(--text-faint); */
+}
+
+.modal.mod-community-plugin .community-item .community-item-downloads {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: right;
+  margin-bottom: 0; /* no margin! */
+}
+
+.modal.mod-community-plugin .community-item .community-item-downloads > span > .svg-icon {
+  display: none;
+}
+
+.modal.mod-community-plugin .community-item .community-item-downloads > span.community-item-downloads-text {
+  display: contents; /* move up */ /* upstreams the span to the parent span */
+}
+
+.modal.mod-community-plugin .community-item .community-item-desc {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  color: var(--text-muted);
+}
+
+.modal.mod-community-plugin .community-item .community-item-updated {
+  margin-bottom: 0; /* no margin! */
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  text-align: right; /* right align */
+  color: var(--text-faint);
+}
+
+.modal.mod-community-plugin .community-item .community-item-author::first-letter {
+  text-transform: lowercase;
+}
+
+/* Store Grid */
+

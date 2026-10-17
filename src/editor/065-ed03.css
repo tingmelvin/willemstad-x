@@ -1,0 +1,154 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ED03
+\ Editor > Document Display
+\ Active Line Highlight
+\ v2
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --col-background-activeline: oklch(from var(--col-base-bg-alh) l c h / calc(alpha - calc(1 - var(--col-base-alpha-alh))));
+  --col-base-bg-alh: var(--color-base-50);
+  --col-base-alpha-alh: 0.25;
+}
+
+/*
+body:not(.ssopt-disable-alh) {
+    // Prevent horizontal scroll at the workspace level
+    .workspace-leaf {
+        overflow-x: hidden;
+    }
+
+    .mod-active { // goes only for the active pane
+        .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
+        .cm-active:not(.cm-gutterElement):not(.HyperMD-quote):not(.HyperMD-header) {
+            background-color: var(--col-background-activeline);
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 50vw;
+                background-color: var(--col-background-activeline);
+                z-index: -1;
+            }
+            &::before {
+                right: 100%;
+            }
+            &::after {
+                left: 100%;
+            }
+        }
+
+        .cm-active.HyperMD-quote,
+        .cm-active.HyperMD-header {
+            background-color: transparent;
+            position: relative;
+
+            &::after {
+                content: '';
+                z-index: -1;
+                top: 0;
+                bottom: 0;
+                left: -50vw;
+                position: absolute;
+                width: 150vw;
+                background-color: var(--col-background-activeline);
+            }
+        }
+    }
+}
+*/
+
+/*
+body:not(.ssopt-disable-alh) {
+
+    --alh-ext-length: max(var(--file-margins), 50vw - calc(0.5 * var(--file-line-width)));
+
+        .mod-active { // goes only for the active pane
+
+            .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
+            .cm-active:not(.cm-gutterElement):not(.HyperMD-quote):not(.HyperMD-header),
+            .cm-active.HyperMD-quote,
+            .cm-active.HyperMD-header {
+                background-color: transparent;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    // width: calc(100% + var(--alh-ext-length));
+                    background-color: var(--col-background-activeline);
+                    z-index: -1;
+                    box-shadow: // calc(-1 * var(--file-folding-offset)) 0 0 0 var(--col-background-activeline), // the centre piece between gutters
+                    calc(-1 * var(--alh-ext-length)) 0 0 0 var(--col-background-activeline),
+                    var(--alh-ext-length) 0 0 0 var(--col-background-activeline); // the right side
+
+                }
+            }
+
+            .cm-gutters,
+            .cm-gutter {
+                overflow: visible;
+            }
+
+            .cm-active.cm-gutterElement {
+                background-color: var(--col-background-activeline);
+            }
+        }
+
+}
+*/
+body:not(.ssopt-disable-alh) {
+  --alh-ext-length: max(var(--file-margins), 50vw - calc(0.5 * var(--file-line-width)));
+}
+
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active:not(.cm-gutterElement, .HyperMD-quote, .HyperMD-header, .HyperMD-table-2),
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-quote,
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-header {
+  position: relative;
+  background-color: transparent;
+}
+
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line::after,
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active:not(.cm-gutterElement, .HyperMD-quote, .HyperMD-header, .HyperMD-table-2)::after,
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-quote::after,
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-header::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100vw;
+  background-color: var(--col-background-activeline);
+  box-shadow: 100vw 0 0 0 var(--col-background-activeline);
+  content: "";
+}
+
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-table-2 {
+  position: relative;
+  background-color: var(--col-background-activeline);
+}
+
+body:not(.ssopt-disable-alh) .mod-active :where(.markdown-source-view) .cm-active.HyperMD-table-2::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  box-shadow: 100vw 0 0 0 var(--col-background-activeline), -100vw 0 0 0 var(--col-background-activeline);
+  content: "";
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before {
+  z-index: -1;
+}
+
+/* Active Line Highlight */
+

@@ -1,0 +1,22 @@
+# stylelint ignore list — paths lint must never walk.
+#
+# The lint target is src/ only. Everything listed here is either generated from
+# src/, a historical snapshot, or a binary asset that the build embeds.
+
+# ---- generated artifacts -----------------------------------------------------
+# Byte-compared build output. Editing it by hand is a build:check failure, so
+# linting it would report on a file nobody is allowed to change.
+theme.css
+publish.css
+
+# ---- historical / frozen tracks ----------------------------------------------
+archive/
+
+# ---- binary assets -----------------------------------------------------------
+src/assets/
+
+# ---- non-stylesheet source files ---------------------------------------------
+# src/entries/theme.css is a *manifest*: @include/@font/@svg directives in
+# comments. It contains no rules of its own, so every rule that fires on it is
+# about the comment layout of the manifest, not about CSS.
+src/entries/theme.css

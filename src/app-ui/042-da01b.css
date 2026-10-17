@@ -1,0 +1,121 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA01B
+\ First-Level Main Elements \ Other Tab Styles
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --col-tab-style: var(--color-accent);
+}
+
+body:is(.ssopt-tabs-underline) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  --tab-radius: 0;
+  --tab-underline-height: 2px;
+}
+
+body:is(.ssopt-tabs-underline) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  box-shadow: inset 0 calc(-1 * var(--tab-underline-height)) var(--col-tab-style);
+  transition: var(--quick-transition);
+}
+
+body:is(.ssopt-tabs-underline) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  box-shadow: inset 0 calc(-1.5 * var(--tab-underline-height)) var(--col-tab-style);
+  transition: var(--quick-transition);
+}
+
+body:is(.ssopt-tabs-index-box) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  margin: var(--header-margin) 0 0;
+}
+
+body:is(.ssopt-tabs-index-box) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  --tab-radius: 0;
+}
+
+body:is(.ssopt-tabs-index-box) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header:first-of-type > .workspace-tab-header-inner {
+  padding-left: calc(var(--header-margin-half) + var(--size-2-2));
+}
+
+body:is(.ssopt-tabs-index-box) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container.workspace-tab-header-container.workspace-tab-header-container {
+  padding-left: 0;
+}
+
+body:is(.ssopt-tabs-index-box) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  box-shadow: unset;
+}
+
+body:is(.ssopt-tabs-index-box) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  box-shadow: unset;
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  margin: var(--header-margin) 0 0;
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0;
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.workspace-tab-header .workspace-tab-header-container {
+  padding-left: 0;
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  --tab-outline-width: 1px;
+  --tab-curve: var(--tab-radius);
+
+  z-index: 1;
+  box-shadow: unset;
+
+  /* no inset */
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover::before, body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover::after {
+  box-shadow: 0 0 0 var(--tab-radius) var(--tab-background-active-hover);
+  transition: var(--quicker-transition);
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active::before, body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active::after {
+  box-shadow: 0 0 0 var(--tab-radius) var(--tab-background-active);
+  transition: var(--quicker-transition);
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active::before {
+  left: calc(var(--tab-curve) * -2);
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active::after {
+  right: calc(var(--tab-curve) * -2);
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  box-shadow: unset;
+}
+
+body:is(.ssopt-tabs-index-old) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  box-shadow: unset;
+}
+
+body:is(.ssopt-tabs-square) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+  margin: 0;
+}
+
+body:is(.ssopt-tabs-square) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
+  --tab-radius: 0 !important;
+}
+
+body:is(.ssopt-tabs-square) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header:first-of-type > .workspace-tab-header-inner {
+  padding-left: calc(var(--header-margin-half) + var(--size-2-2));
+}
+
+body:is(.ssopt-tabs-square) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container.workspace-tab-header-container.workspace-tab-header-container {
+  padding-left: 0;
+}
+
+body:is(.ssopt-tabs-square) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  box-shadow: unset;
+}
+
+body:is(.ssopt-tabs-square) .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
+  box-shadow: unset;
+}
+
+/* Other Tab Styles */
+

@@ -1,0 +1,38 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AI01
+\ Interactives \ Buttons
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* AI01-1 */
+button {
+  transition: var(--quicker-transition);
+} /* animations for buttons */
+
+/* AI01-2 | Button input height */
+body {
+  --input-height: calc(var(--header-icon-size) + 2 * var(--header-padding));
+}
+
+/* AI01-2A | Callouts Edit Button | Live Preview */
+.markdown-source-view.mod-cm6 .code-block-flair {
+  padding: var(--header-padding);
+  line-height: 0;
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair svg {
+  --icon-size: var(--header-icon-size);
+}
+
+/* AI01-2B | Code Block Flair | Live Preview */
+.markdown-source-view.mod-cm6 .edit-block-button {
+  right: 6px; /* takes the above callouts one */
+  padding: var(--header-padding);
+  line-height: 0;
+}
+
+.markdown-source-view.mod-cm6 .edit-block-button svg {
+  --icon-size: var(--header-icon-size);
+}
+
+/* Buttons */
+

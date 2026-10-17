@@ -1,0 +1,92 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DC01C
+\ First-Level Main Elements \ Options for Ribbons
+\ Centre-Float Ribbons. Mac-style?
+───────────────────────────────────────────────────────────────────────────────────
+MEEDS WORK
+
+──────────────────────────────────────────────────────────────────────────────── */
+body:where(.ssopt-sd-centre-ribbon) {
+  /* END */
+
+  /* OVERRIDES DA04-1 - ribbon shift once */
+
+  /* override DV01 accounting for default ribbon */
+}
+
+body:where(.ssopt-sd-centre-ribbon) .workspace-ribbon.mod-left {
+  position: absolute;
+  top: 90vh;
+  right: 50%;
+  left: 50%;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  border-radius: var(--clickable-icon-radius);
+  transition: var(--medium-transition);
+  transform: translate(-50%, -50%); /* magic! */
+  opacity: 1;
+}
+
+body:where(.ssopt-sd-centre-ribbon) .workspace-ribbon.mod-left :where(.side-dock-actions) {
+  flex-direction: row;
+}
+
+body:where(.ssopt-sd-centre-ribbon) .workspace-ribbon {
+  /* DISABLE DRAGGABLE RIBBON */
+  -webkit-app-region: no-drag !important; /* I MUST important this before people do stuff to it. */
+
+  /* Draggable Ribbon + Ribbon Float and Increasing Ribbon Sizes? = Bad */
+
+  /* Things will be janky */
+
+  /* DC01-1 | COLOURS UNIFICATION FOR RIBBON */
+
+  /* OVERRIDES DA04-1 */
+
+  /* OVERRIDES DA02-1 */
+}
+
+body:where(.ssopt-sd-centre-ribbon) .workspace-ribbon {
+  background-color: var(--ribbon-float-color);
+}
+
+body:where(.ssopt-sd-centre-ribbon) .workspace-ribbon.mod-left::before {
+  background-color: var(--ribbon-float-color);
+}
+
+body:where(.ssopt-sd-centre-ribbon) .workspace-ribbon.mod-left {
+  box-shadow: 0 0 0 1px var(--divider-color);
+  margin-top: 0; /* unsets app.css 2007 */
+}
+
+body:where(.ssopt-sd-centre-ribbon) .workspace-ribbon .sidebar-toggle-button {
+  position: relative;
+  width: unset;
+  margin: 0;
+}
+
+body:where(.ssopt-sd-centre-ribbon):is(.mod-windows, .mod-linux) .workspace-ribbon {
+  /* OVERRIDES DA04-1 */
+}
+
+body:where(.ssopt-sd-centre-ribbon):is(.mod-windows, .mod-linux) .workspace-ribbon.mod-left {
+  box-shadow: 0 0 0 1px var(--divider-color);
+}
+
+body:where(.ssopt-sd-centre-ribbon):where(.sidebar-toggle-button) {
+  transform: rotate(90deg);
+}
+
+body:where(.ssopt-sd-centre-ribbon):is(.mod-windows, .mod-linux) .mod-root, body:where(.ssopt-sd-centre-ribbon):is(.mod-windows, .mod-linux) .mod-left-split {
+  left: 0;
+}
+
+body:where(.ssopt-sd-centre-ribbon) .status-bar {
+  left: 0;
+}
+
+/* Center Ribbon */
+
+/* startup screen */
+

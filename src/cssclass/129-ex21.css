@@ -1,0 +1,123 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EX21
+\ CSSClass
+\ Banners
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2025 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+Banners CSSClass for Obsidian
+Author: @tingmelvin
+Version: 0.1.0
+Last tested for Obsidian v1.9
+Last Updated: 2025-06-08
+
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --cssc-banner-height: 200px;
+  --cssc-banner-residual: 0px;
+  --cssc-banner-gradient-mask: linear-gradient(to bottom,
+  black 0%,
+  black 50%,
+  oklch(0% 0 0deg / 80%) 75%,
+  oklch(0% 0 0deg / 50%) 80%,
+  oklch(0% 0 0deg / 30%) 85%,
+  oklch(0% 0 0deg / 15%) 90%,
+  oklch(0% 0 0deg / 8%) 95%,
+  transparent 100%
+  ) ;
+}
+
+/* Reading Mode */
+@container reading-mode (min-width: 0) {
+  .markdown-preview-view:where(.banner) .markdown-preview-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) {
+    order: -1;
+    height: var(--cssc-banner-height);
+    margin: calc(-1 * var(--file-margins)) calc(-1 * var(--file-margins)) var(--cssc-banner-residual);
+  }
+
+  .markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) p {
+    margin-left: 0;
+  }
+
+  .markdown-preview-view:where(.banner) .mod-frontmatter + .el-p:has(img) img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: var(--cssc-banner-height);
+    mask: var(--cssc-banner-gradient-mask);
+  }
+}
+
+/* Markdown Live Preview */
+.banner.is-live-preview .cm-sizer {
+  padding-top: calc(var(--cssc-banner-height) - var(--file-margins) + var(--cssc-banner-residual));
+}
+
+.banner.is-live-preview .cm-contentContainer > .cm-content > :nth-child(1 of .image-embed) {
+  position: relative;
+  display: contents;
+
+  /* height: 18px; how do I fix the line number clumping together? */
+}
+
+.banner.is-live-preview .cm-contentContainer > .cm-content > :nth-child(1 of .image-embed) img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: var(--cssc-banner-height);
+  mask: var(--cssc-banner-gradient-mask);
+}
+
+/* Print? */
+.print .banner {
+  padding-top: var(--cssc-banner-height);
+}
+
+.print .banner .mod-frontmatter + div p:first-of-type img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: var(--cssc-banner-height);
+  mask: var(--cssc-banner-gradient-mask);
+}
+
+/* CSSClass > Banners */
+
+/* END OF FILE ITEMS */
+
+/* FONT FILES */
+
+/* SANS SERIF */
+

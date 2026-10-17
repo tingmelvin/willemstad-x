@@ -1,0 +1,386 @@
+/* @settings
+name: "Global Typography"
+id: V1-Willemstad-Typography
+settings:
+    -
+        id: info-global-typography-split
+        title: Note on Global Typography
+        type: info-text
+        description: "This section controls global typography settings like font sizes, underlines, bold, and italic styles, which affects every element within Obsidian. For settings specific to the editor, such as Markdown headers and Canvas typography options, please see the **Editor** section."
+        markdown: true
+    -
+        id: typography-typeface
+        title: Typeface
+        type: heading
+        description: "Typeface options for Willemstad. For CSSClass settings, please use their specific options in the specific CSSClass settings panel. Font settings set in core Obsidian (Appearance > Font) will override the settings set here."
+        level: 2
+        collapsed: false
+    -
+            id: font-monospace-theme
+            title: Font Typeface — Monospace
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"DM Mono"'
+    -
+            id: font-heading
+            title: Font Typeface — Headers
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"Manrope", "Inter 4.1", "DM Sans"'
+    -
+            id: font-editor
+            title: Font Typeface — Editor
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"Inter 4.1", "DM Sans", "Manrope"'
+    -
+            id: font-menu
+            title: Font Typeface — Menu
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"Manrope", "Inter 4.1", "DM Sans"'
+    -
+            id: font-ui
+            title: Font Typeface — User Interface (UI)
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"Manrope", "Inter 4.1", "DM Sans"'
+    -
+            id: font-editor-m
+            title: Font Typeface — Mobile Editor
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"Inter 4.1", "DM Sans", "Manrope"'
+    -
+            id: font-menu-m
+            title: Font Typeface — Mobile Menu
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"Manrope", "Inter 4.1", "DM Sans"'
+    -
+            id: font-ui-m
+            title: Font Typeface — Mobile User Interface (UI)
+            type: variable-text
+            document: AB02-Set-Typography
+            default: '"Manrope", "Inter 4.1", "DM Sans"'
+    -
+            id: font-mermaid
+            title: "Font Typeface — Mermaid.js"
+            type: variable-text
+            document: AB02-Set-Typography
+            description: Changes font for the in-built Mermaid.js visualisations in the theme.
+            default: '"Inter 4.1", "DM Sans", "Manrope"'
+    -
+        id: bold-italic-settings
+        title: Bold and Italic
+        type: heading
+        description: "Controls options for bold and italic text across Obsidian."
+        level: 2
+        collapsed: false
+    -
+        id: bold-color-settings
+        title: Bold Text
+        type: heading
+        level: 3
+        collapsed: false
+    -
+        id: bold-color-light
+        title: "Colour of Bold Text (Light Mode)"
+        type: variable-select
+        allowEmpty: false
+        default: 'inherit'
+        options:
+            -
+                label: "Default (Inherit)"
+                value: 'inherit'
+            -
+                label: "  Text Colours  "
+                value: 'no-stuff-break-text'
+            -
+                label: "Normal"
+                value: 'var(--text-normal)'
+            -
+                label: "Muted"
+                value: 'var(--text-muted)'
+            -
+                label: "Faint"
+                value: 'var(--text-faint)'
+            -
+                label: "  Accent Colours  "
+                value: 'no-stuff-break-accent'
+            -
+                label: "Accent"
+                value: 'var(--color-accent)'
+            -
+                label: "Accent 1"
+                value: 'var(--color-accent-1)'
+            -
+                label: "Accent 2"
+                value: 'var(--color-accent-2)'
+            -
+                label: "  Rainbow Colours  "
+                value: 'no-stuff-break-rainbow'
+            -
+                label: "Red"
+                value: 'var(--color-red)'
+            -
+                label: "Orange"
+                value: 'var(--color-orange)'
+            -
+                label: "Yellow"
+                value: 'var(--color-yellow)'
+            -
+                label: "Green"
+                value: 'var(--color-green)'
+            -
+                label: "Cyan"
+                value: 'var(--color-cyan)'
+            -
+                label: "Blue"
+                value: 'var(--color-blue)'
+            -
+                label: "Purple"
+                value: 'var(--color-purple)'
+            -
+                label: "Pink"
+                value: 'var(--color-pink)'
+    -
+        id: bold-color-dark
+        title: "Colour of Bold Text (Dark Mode)"
+        type: variable-select
+        allowEmpty: false
+        default: 'inherit'
+        options:
+            -
+                label: "Default (Inherit)"
+                value: 'inherit'
+            -
+                label: "  Text Colours  "
+                value: 'no-stuff-break-text'
+            -
+                label: "Normal"
+                value: 'var(--text-normal)'
+            -
+                label: "Muted"
+                value: 'var(--text-muted)'
+            -
+                label: "Faint"
+                value: 'var(--text-faint)'
+            -
+                label: "  Accent Colours  "
+                value: 'no-stuff-break-accent'
+            -
+                label: "Accent"
+                value: 'var(--color-accent)'
+            -
+                label: "Accent 1"
+                value: 'var(--color-accent-1)'
+            -
+                label: "Accent 2"
+                value: 'var(--color-accent-2)'
+            -
+                label: "  Rainbow Colours  "
+                value: 'no-stuff-break-rainbow'
+            -
+                label: "Red"
+                value: 'var(--color-red)'
+            -
+                label: "Orange"
+                value: 'var(--color-orange)'
+            -
+                label: "Yellow"
+                value: 'var(--color-yellow)'
+            -
+                label: "Green"
+                value: 'var(--color-green)'
+            -
+                label: "Cyan"
+                value: 'var(--color-cyan)'
+            -
+                label: "Blue"
+                value: 'var(--color-blue)'
+            -
+                label: "Purple"
+                value: 'var(--color-purple)'
+            -
+                label: "Pink"
+                value: 'var(--color-pink)'
+    -
+        id: italic-color-settings
+        title: Italic Text
+        type: heading
+        level: 3
+        collapsed: false
+    -
+        id: italic-color-light
+        title: "Colour of Italic Text (Light Mode)"
+        type: variable-select
+        allowEmpty: false
+        default: 'inherit'
+        options:
+            -
+                label: "Default (Inherit)"
+                value: 'inherit'
+            -
+                label: "  Text Colours  "
+                value: 'no-stuff-break-text'
+            -
+                label: "Normal"
+                value: 'var(--text-normal)'
+            -
+                label: "Muted"
+                value: 'var(--text-muted)'
+            -
+                label: "Faint"
+                value: 'var(--text-faint)'
+            -
+                label: "  Accent Colours  "
+                value: 'no-stuff-break-accent'
+            -
+                label: "Accent"
+                value: 'var(--color-accent)'
+            -
+                label: "Accent 1"
+                value: 'var(--color-accent-1)'
+            -
+                label: "Accent 2"
+                value: 'var(--color-accent-2)'
+            -
+                label: "  Rainbow Colours  "
+                value: 'no-stuff-break-rainbow'
+            -
+                label: "Red"
+                value: 'var(--color-red)'
+            -
+                label: "Orange"
+                value: 'var(--color-orange)'
+            -
+                label: "Yellow"
+                value: 'var(--color-yellow)'
+            -
+                label: "Green"
+                value: 'var(--color-green)'
+            -
+                label: "Cyan"
+                value: 'var(--color-cyan)'
+            -
+                label: "Blue"
+                value: 'var(--color-blue)'
+            -
+                label: "Purple"
+                value: 'var(--color-purple)'
+            -
+                label: "Pink"
+                value: 'var(--color-pink)'
+    -
+        id: italic-color-dark
+        title: "Colour of Bold Text (Dark Mode)"
+        type: variable-select
+        allowEmpty: false
+        default: 'inherit'
+        options:
+            -
+                label: "Default (Inherit)"
+                value: 'inherit'
+            -
+                label: "  Text Colours  "
+                value: 'no-stuff-break-text'
+            -
+                label: "Normal"
+                value: 'var(--text-normal)'
+            -
+                label: "Muted"
+                value: 'var(--text-muted)'
+            -
+                label: "Faint"
+                value: 'var(--text-faint)'
+            -
+                label: "  Accent Colours  "
+                value: 'no-stuff-break-accent'
+            -
+                label: "Accent"
+                value: 'var(--color-accent)'
+            -
+                label: "Accent 1"
+                value: 'var(--color-accent-1)'
+            -
+                label: "Accent 2"
+                value: 'var(--color-accent-2)'
+            -
+                label: "  Rainbow Colours  "
+                value: 'no-stuff-break-rainbow'
+            -
+                label: "Red"
+                value: 'var(--color-red)'
+            -
+                label: "Orange"
+                value: 'var(--color-orange)'
+            -
+                label: "Yellow"
+                value: 'var(--color-yellow)'
+            -
+                label: "Green"
+                value: 'var(--color-green)'
+            -
+                label: "Cyan"
+                value: 'var(--color-cyan)'
+            -
+                label: "Blue"
+                value: 'var(--color-blue)'
+            -
+                label: "Purple"
+                value: 'var(--color-purple)'
+            -
+                label: "Pink"
+                value: 'var(--color-pink)'
+    -
+        id: typography-underlines
+        title: Underlines
+        description: Options to shift underlines lower/increase underline spacing (to increase readability) or to retain it as per default.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: ssopt-typ-undl-skip-ink
+        title: Skip Ink for Underlines
+        type: class-toggle
+        document: ET12-Underlines
+        description: 'Willemstad by default does not have a space in the underline (also known as "skip ink") between interfering descenders (the bottom portion of letters "g, j, q, p, y"). This option restores the skip ink, which is also the original option in Obsidian.'
+        default: false
+    -
+        id: undl-text-norm
+        title: Underlines Spacing — Normal Text
+        type: class-select
+        document: ET12-Underlines
+        description: Choose which underline spacing you would like your normal text to have.
+        allowEmpty: false
+        default: default
+        options:
+            -
+                label: 🔴 Standard (Classic Obsidian Core/Classic Shimmering Focus style)
+                value: ssopt-typ-undl-nor-min
+            -
+                label: 🟡 Additional (Shimmering Focus style for hyperlinks)
+                value: ssopt-typ-undl-nor-add
+            -
+                label: 🟢 Maximum (Willemstad style) — Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                value: default
+    -
+        id: undl-hlink
+        title: Underlines Spacing — Hyperlinks
+        type: class-select
+        document: ET12-Underlines
+        description: Choose which underline spacing you would like your hyperlinks to have.
+        allowEmpty: false
+        default: default
+        options:
+            -
+                label: 🔴 Standard (Classic Obsidian style)
+                value: ssopt-typ-undl-hyp-min
+            -
+                label: 🟡 Additional (Shimmering Focus style)
+                value: ssopt-typ-undl-hyp-add
+            -
+                label: 🟢 Maximum (Willemstad style) — Does not cross descenders (the bottom portion of letters "g, j, q, p, y")
+                value: default
+*/

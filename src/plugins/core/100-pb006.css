@@ -1,0 +1,55 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PB006
+\ Plugins > Core
+\ Bases (and Tables)
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --table-header-background: var(--color-table-head); /* for inherits */
+  --table-header-background-hover: var(--color-table-head-hover); /* doesn't work but do we really need hovers for static table */
+  --bases-table-header-background-hover: var(--color-table-head-hover);
+
+  /* when static tables finally can be sorted by content - use td to add hover */
+  --color-table-odd: var(--background-primary);
+  --color-table-even: var(--background-primary-alt);
+  --color-table-head: var(--background-secondary);
+  --color-table-head-hover: var(--background-modifier-hover);
+}
+
+/* PB006-01A | Auto Alternating Colours for Tables */
+body:not(.ssopt-no-table-colours) :where(.cm-html-embed, .markdown-rendered) thead tr {
+  background-color: var(--color-table-head);
+}
+
+body:not(.ssopt-no-table-colours) :where(.cm-html-embed, .markdown-rendered) tbody tr:nth-child(odd) {
+  background-color: var(--color-table-odd);
+}
+
+body:not(.ssopt-no-table-colours) :where(.cm-html-embed, .markdown-rendered) tbody tr:nth-child(even) {
+  background-color: var(--color-table-even);
+}
+
+/* PB006-01B | Auto Alternating Colours for Bases */
+body:not(.ssopt-standard-bases-colours) .bases-tr {
+  box-shadow: none;
+}
+
+body:not(.ssopt-standard-bases-colours) .bases-thead .bases-tr {
+  background-color: var(--color-table-head);
+}
+
+body:not(.ssopt-standard-bases-colours) .bases-tbody .bases-tr:nth-child(odd) {
+  background-color: var(--color-table-odd);
+}
+
+body:not(.ssopt-standard-bases-colours) .bases-tbody .bases-tr:nth-child(even) {
+  background-color: var(--color-table-even);
+}
+
+/* PB006-02 | Bases Read-only Mode in Reading View */
+body:is(.ssopt-bases-no-edit) .bases-td .multi-select-container, body:is(.ssopt-bases-no-edit) .bases-td [class^="metadata-input"] {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Bases */
+

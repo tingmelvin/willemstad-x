@@ -1,0 +1,130 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000B
+\ Plugins > Community
+\ Style Settings
+\ Opinionated Global Edits
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --padding-ss: 0.75em;
+}
+
+.style-settings-container > .setting-item-heading:not(.style-settings-heading) .setting-item-name {
+  font-weight: var(--font-medium);
+  display: flex;
+  gap: var(--size-4-1); /* ensures the ::after pills work properly */
+}
+
+.style-settings-container .style-settings-heading .setting-item-name {
+  font-weight: var(--font-semibold);
+}
+
+/* slightly bolder font for names */
+
+/* PC000B-2 | Add Lines to Style Settings */
+.style-settings-heading[data-level="0"] + .style-settings-container {
+  padding-left: var(--size-4-4);
+
+  /*
+  padding-left: 0.75em; 
+  border-left: 1px solid var(--background-modifier-border);
+  */
+}
+
+.is-phone .style-settings-heading[data-level="0"] + .style-settings-container {
+  padding-left: 0;
+}
+
+/* from Style Settings own things - padding-left: 0.75em */
+div.style-settings-heading[data-level="1"],
+div.style-settings-heading[data-level="2"],
+div.style-settings-heading[data-level="3"],
+div.style-settings-heading[data-level="4"],
+div.style-settings-heading[data-level="5"],
+div.style-settings-heading[data-level="6"] {
+  margin-bottom: 0;
+}
+
+div.style-settings-heading[data-level="1"] + .style-settings-container,
+div.style-settings-heading[data-level="2"] + .style-settings-container,
+div.style-settings-heading[data-level="3"] + .style-settings-container,
+div.style-settings-heading[data-level="4"] + .style-settings-container,
+div.style-settings-heading[data-level="5"] + .style-settings-container,
+div.style-settings-heading[data-level="6"] + .style-settings-container {
+  padding-left: var(--padding-ss);
+  padding-top: var(--padding-ss);
+  padding-bottom: 0;
+  margin-left: 0;
+  border-left: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
+
+  /* seems to cause trouble */
+}
+
+.is-phone div.style-settings-heading[data-level="1"] + .style-settings-container,
+.is-phone div.style-settings-heading[data-level="2"] + .style-settings-container,
+.is-phone div.style-settings-heading[data-level="3"] + .style-settings-container,
+.is-phone div.style-settings-heading[data-level="4"] + .style-settings-container,
+.is-phone div.style-settings-heading[data-level="5"] + .style-settings-container,
+.is-phone div.style-settings-heading[data-level="6"] + .style-settings-container {
+  padding-top: 0;
+}
+
+.is-phone div.style-settings-heading[data-level="2"]:where(:not([data-id^="willemstad-theme-colours"])) + .style-settings-container > .setting-item:where(:not(.style-settings-info-text)):first-of-type {
+  padding-top: 0;
+}
+
+div.style-settings-heading[data-level="1"] + .style-settings-container .setting-item:last-of-type,
+div.style-settings-heading[data-level="2"] + .style-settings-container .setting-item:last-of-type,
+div.style-settings-heading[data-level="3"] + .style-settings-container .setting-item:last-of-type,
+div.style-settings-heading[data-level="4"] + .style-settings-container .setting-item:last-of-type,
+div.style-settings-heading[data-level="5"] + .style-settings-container .setting-item:last-of-type,
+div.style-settings-heading[data-level="6"] + .style-settings-container .setting-item:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: var(--padding-ss); /* shifts this to the above padding-bottom in .style-settings-container */
+}
+
+div.style-settings-heading[data-level="1"] + .style-settings-container > .setting-item-info > .setting-item-name,
+div.style-settings-heading[data-level="2"] + .style-settings-container > .setting-item-info > .setting-item-name,
+div.style-settings-heading[data-level="3"] + .style-settings-container > .setting-item-info > .setting-item-name,
+div.style-settings-heading[data-level="4"] + .style-settings-container > .setting-item-info > .setting-item-name,
+div.style-settings-heading[data-level="5"] + .style-settings-container > .setting-item-info > .setting-item-name,
+div.style-settings-heading[data-level="6"] + .style-settings-container > .setting-item-info > .setting-item-name {
+  padding-left: var(--padding-ss);
+}
+
+div.style-settings-heading[data-level="1"].is-collapsed,
+div.style-settings-heading[data-level="2"].is-collapsed,
+div.style-settings-heading[data-level="3"].is-collapsed,
+div.style-settings-heading[data-level="4"].is-collapsed,
+div.style-settings-heading[data-level="5"].is-collapsed,
+div.style-settings-heading[data-level="6"].is-collapsed {
+  margin-bottom: var(--padding-ss);
+}
+
+div.style-settings-heading[data-level="2"] + .style-settings-container,
+div.style-settings-heading[data-level="3"] + .style-settings-container,
+div.style-settings-heading[data-level="4"] + .style-settings-container,
+div.style-settings-heading[data-level="5"] + .style-settings-container,
+div.style-settings-heading[data-level="6"] + .style-settings-container {
+  margin-bottom: var(--padding-ss); /* does this work instead??? */
+}
+
+div.style-settings-heading[data-level="2"] + .style-settings-container + .style-settings-heading,
+div.style-settings-heading[data-level="3"] + .style-settings-container + .style-settings-heading,
+div.style-settings-heading[data-level="4"] + .style-settings-container + .style-settings-heading,
+div.style-settings-heading[data-level="5"] + .style-settings-container + .style-settings-heading,
+div.style-settings-heading[data-level="6"] + .style-settings-container + .style-settings-heading {
+  padding-top: 0; /* covered by margins */
+}
+
+.setting-item + div > .style-settings-heading.setting-item-heading {
+  margin-top: 0;
+}
+
+/* extra specificity and style-settings-heading to prevent errors */
+.style-settings-heading[data-level="0"] + .style-settings-container {
+  padding-bottom: 0;
+}
+
+/* Opinionated Global Tweaks */
+

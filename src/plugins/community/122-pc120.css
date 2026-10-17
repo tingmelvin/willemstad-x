@@ -1,0 +1,315 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC120
+\ Plugins > Community
+\ Smaller General
+    \\ PComm120 | Footnote & Citation Indicator (?)
+    \\ PComm121 | 
+    \\ PComm122 | Highlightr
+    \\ PComm123 | CookLang Editor
+    \\ PComm124 | Emoji Toolbar
+    \\ PComm125 | Maps of Content
+    \\ PComm126 | cMenu (PLUGIN CURRENTLY OBSOLETE)
+    \\ PComm127 | Pane Relief
+    \\ PComm128 | Settings Search
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Highlightr by Chetachi]
+\\ (NOMEN | PComm122)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Remove ET11 Highlights Addition for Highlightr marks
+    ──────────────────────────────────────────────────────────────────────────── */
+body[class*="highlightr-"] :is(mark, mark .internal-link) {
+  box-shadow: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | CookLang Editor]
+\\ (NOMEN | PComm123)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Rounded Borders + Hide Borders
+    ──────────────────────────────────────────────────────────────────────────── */
+.workspace-leaf-content[data-type="cook"] .view-content {
+  padding: var(--file-margins);
+
+  /* for source view */
+
+  /* fixing the .CodeMirror-wrap not coming out */
+}
+
+.workspace-leaf-content[data-type="cook"] .view-content .CodeMirror-lines {
+  padding-top: 0;
+}
+
+.workspace-leaf-content[data-type="cook"] .view-content .CodeMirror-sizer {
+  min-width: unset !important;
+}
+
+.workspace-leaf-content[data-type="cook"] .view-content .CodeMirror .CodeMirror-line,
+.workspace-leaf-content[data-type="cook"] .view-content .CodeMirror .CodeMirror-line-like {
+  /*
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+  */
+  padding: 0; /* important!! */
+}
+
+.workspace-leaf-content[data-type="cook"] .view-content .CodeMirror-code {
+  padding-right: 0;
+}
+
+.workspace-leaf-content[data-type="cook"] .cook-source-view {
+  overflow-wrap: break-word;
+}
+
+.workspace-leaf-content[data-type="cook"] .cook-preview-view {
+  /* for preview view */
+}
+
+.workspace-leaf-content[data-type="cook"] .cook-preview-view h2:first-of-type {
+  margin-block-start: 0;
+}
+
+.workspace-leaf-content[data-type="cook"] .cook-preview-view ul {
+  column-count: 1; /* this is because 2 means it'll eat into each other */
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Emoji Toolbar]
+\\ (NOMEN | PComm124)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Rounded Borders + Hide Borders
+    ──────────────────────────────────────────────────────────────────────────── */
+body .emoji-mart-anchors {
+  border-radius: 0 var(--radius-m);
+}
+
+body .emoji-mart-preview {
+  border-radius: var(--radius-m) 0;
+}
+
+body .emoji-mart {
+  border: var(--modal-border-width) solid var(--modal-border-color); /* unify borders */
+  border-radius: var(--radius-m);
+}
+
+#emoji-modal {
+  border: 0;
+  border-radius: var(--radius-m);
+}
+
+body .emoji-mart-bar:first-child {
+  /* border-bottom-width: var(--modal-border-width); */
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> Hide the weird purple
+──────────────────────────────────────────────────────────────────────────── */
+body .emoji-mart-anchor-bar {
+  height: 0;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> Δ the UGH PURPLE | CAN PEOPLE STOP HARDCODING STUFF INTO ELEMENT.STYLE
+──────────────────────────────────────────────────────────────────────────── */
+button.emoji-mart-anchor.emoji-mart-anchor-selected > div.emoji-mart-anchor-icon {
+  color: var(--text-accent) !important;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> Hide Default "Emoji Mart" Text
+──────────────────────────────────────────────────────────────────────────── */
+body .emoji-mart-title-label {
+  font-size: 0;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> Δ Default emoticon to something nicer (yes, it's background position)
+
+──────────────────────────────────────────────────────────────────────────── */
+span#emoji-mart-department_store.emoji-mart-emoji > span {
+  background-position: 17.8571% 76.7857% !important;
+} /* use the houses one for Willemstad */ /* what freaking era is this - sprites?! */
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> Δ Emoji Toolbar to default UI font
+──────────────────────────────────────────────────────────────────────────── */
+:is(.emoji-mart, .emoji-mart-search input) .emoji-mart-category-label span {
+  font-family: var(--font-interface);
+  border: 0;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>>> Δ Search Bar to grid layout
+──────────────────────────────────────────────────────────────────────────── */
+body .emoji-mart-search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+
+  /* align the search icon */
+}
+
+body .emoji-mart-search > button {
+  display: none; /* get rid of it, what a nuisance */
+  grid-column: 2/3; /* latter bit */
+}
+
+body .emoji-mart-search > button > svg {
+  width: var(--tab-list-icon-size);
+  height: var(--tab-list-icon-size);
+}
+
+body .emoji-mart-anchors {
+  padding: 0 1px; /* removes side extraneous padding */
+
+  /* align the top buttons */
+}
+
+body .emoji-mart-anchors > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--size-2-1) 1px !important; /* sides to half of 2 since they kinda "overlap" */
+  padding: 0 !important; /* needs it to override */
+}
+
+body .emoji-mart-anchors > button:hover {
+  color: var(--icon-color-hover);
+  background-color: var(--background-modifier-hover) !important; /* needs the impt */
+  border-radius: var(--clickable-icon-radius); /* copied from the comm plugin button */ /* gives look and feel of other buttons */
+  transition: opacity 0.15s ease-in-out;
+  opacity: var(--icon-opacity-hover);
+}
+
+/* change the category list/icon list to the same icon hovers */
+body .emoji-mart-category-list tr {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* there are 9 items */
+  grid-template-rows: 1fr;
+  column-gap: 0;
+}
+
+body button.emoji-mart-emoji.emoji-mart-emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--size-2-1) 1px !important; /* sides to half of 2 since they kinda "overlap" */
+  padding: 5px !important; /* needs it to override */ /* this is such janky stuff that I want to barf. can someone rewrite it as a proper grid??? */
+}
+
+body button.emoji-mart-emoji.emoji-mart-emoji:hover {
+  color: var(--icon-color-hover);
+  background-color: var(--background-modifier-hover) !important; /* needs the impt */
+  border-radius: var(--clickable-icon-radius); /* copied from the comm plugin button */ /* gives look and feel of other buttons */
+  transition: opacity 0.15s ease-in-out;
+  opacity: var(--icon-opacity-hover);
+}
+
+body button.emoji-mart-emoji.emoji-mart-emoji::before {
+  display: none; /* get rid of it, what a nuisance */
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Maps of Content]
+\\ (NOMEN | PComm125)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Apply Obsidian Styling (hover darkens, etc)
+    ──────────────────────────────────────────────────────────────────────────── */
+.workspace-leaf-content[data-type="map-of-content"] code {
+  font-family: var(--font-monospace);
+}
+
+.workspace-leaf-content[data-type="map-of-content"] div#all-container div.action.action.action svg {
+  --icon-size: var(--header-icon-size);
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: var(--icon-color);
+}
+
+.workspace-leaf-content[data-type="map-of-content"] div#all-container div.action.action.action {
+  width: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  height: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  margin: unset;
+  padding: var(--header-padding);
+  border-radius: var(--radius-s);
+}
+
+.workspace-leaf-content[data-type="map-of-content"] div#all-container div.action.action.action:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.workspace-leaf-content[data-type="map-of-content"] div#all-container div#top-bar#top-bar,
+.workspace-leaf-content[data-type="map-of-content"] div#all-container div#top-bar-flex#top-bar-flex {
+  min-height: unset;
+}
+
+.workspace-leaf-content[data-type="map-of-content"] div#all-container div#top-bar-flex#top-bar-flex {
+  gap: var(--header-margin);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | cMenu]
+\\ (NOMEN | PComm126)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> ROUND BORDERS + REMOVE SHADOWS + PADDING STUFF
+    ──────────────────────────────────────────────────────────────────────────── */
+.menu.cMenu-statusbar-menu {
+  border-radius: var(--radius-m);
+  box-shadow: none;
+}
+
+#cMenuModalBar {
+  padding: var(--ribbon-padding); /* UNIFY */
+  box-shadow: none;
+  gap: var(--header-margin);
+
+  /* unify size with other status bar buttons */
+}
+
+#cMenuModalBar .cMenuCommandItem {
+  margin: 0;
+  padding: var(--elements-padding);
+}
+
+#cMenuModalBar button.cMenuCommandItem svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  --icon-size: var(--header-icon-size);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Pane Relief]
+\\ (NOMEN | PComm127)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Change how numbers/counts are displayed in order to make it fit with the rest of the UI
+    ──────────────────────────────────────────────────────────────────────────── */
+body:not(.pane-relief-disable-counts) .view-header-nav-buttons button:first-child::before {
+  display: inline-flex;
+  justify-content: flex-end;
+  height: var(--header-icon-size);
+  align-items: center;
+}
+
+body:not(.pane-relief-disable-counts) .view-header-nav-buttons button:last-child::after {
+  display: inline-flex;
+  justify-content: flex-start;
+  height: var(--header-icon-size);
+  align-items: center;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Settings Search]
+\\ (NOMEN | PComm128)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> No padding so that it fits with the other search input boxes
+    ──────────────────────────────────────────────────────────────────────────── */
+.vertical-tab-nav-item.settings-search-input {
+  padding: 0;
+}
+
+/* PComm120-series */
+

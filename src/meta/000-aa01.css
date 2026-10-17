@@ -1,0 +1,79 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AA01
+\ License
+\ Willemstad-Specific Styling
+──────────────────────────────────────────────────────────────────────────────── */
+
+/*!
+Apps > Obsidian.md > Theme
+───────────────────────────────────────────────────────────────────────────────────
+
+Willemstad | v1.11.1 Newfoundland
+by @tingmelvin
+https://github.com/tingmelvin/willemstad-x
+
+───────────────────────────────────────────────────────────────────────────────────
+> Copyright
+    \\ Specific Callouts, CSSClasses, and other items 
+    \\ might be licensed under a different license
+    \\ please check.
+───────────────────────────────────────────────────────────────────────────────────
+GNU General Public License version 3.0 (GPL3.0)
+
+Copyright 2022-2025 Melvin Ting (@tingmelvin)
+
+    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>. 
+
+/* ────────────────────────────────────────────────────────────────────────────────
+> Willemstad Specific Styling
+───────────────────────────────────────────────────────────────────────────────────
+    >> Titlebar
+    ───────────────────────────────────────────────────────────────────────────────
+        >>> add Willemstad Version Number
+        ──────────────────────────────────────────────────────────────────────── */
+
+/* AA01-1-1 */
+div.titlebar-text::after {
+  white-space: pre;
+  content: "  /  Willemstad v1.11.1 Newfoundland";
+
+  /* for title bar */
+}
+
+.ssopt-tb-willemstad div.titlebar-text::after {
+  content: none;
+
+  /* [OPTION] if the Titlebar > Willemstad-specfic bit is turned off */
+}
+
+.community-item.mod-active .community-item-name {
+  /*
+  & {
+      border-bottom: 1px solid var(--interactive-accent);
+
+      &:hover {
+          color: var(--text-accent);
+          border-bottom: 1px solid var(--interactive-accent-hover);
+
+          &:after {
+              color: var(--text-normal);
+          }
+      }
+  } */ /* Hover colours */
+
+  /* AA01-1-2 */
+}
+
+.community-item.mod-active .community-item-name::after {
+  content: "\av1.11.1 Newfoundland"; /* prints version number */
+  font-size: var(--font-ui-small);
+
+  /* color: var(--text-muted); */
+}
+
+/* License */
+

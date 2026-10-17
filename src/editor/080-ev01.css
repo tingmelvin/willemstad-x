@@ -1,0 +1,35 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EV01
+\ Editor > Viewers > PDF Viewer
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* fix button widths/padding */
+.pdf-toolbar {
+  padding: var(--header-margin) calc(1.5 * var(--header-margin));
+
+  /* follows .workspace-leaf-content .view-header */
+
+  /* still confused about .nav-header */
+
+  /* huh why is the 1.5 * margin = padding */
+}
+
+.pdf-toolbar .clickable-icon {
+  padding: var(--header-padding);
+
+  --icon-size: var(--header-icon-size);
+}
+
+/* PDF dark mode invert manipulation */
+.theme-dark.ssopt-invert-pdf-dark .pdfViewer {
+  filter: invert(1) hue-rotate(180deg) brightness(1.1);
+}
+
+/* PDF Embed Buttons */
+.markdown-source-view.mod-cm6 .pdf-embed .edit-block-button {
+  top: var(--size-2-2);
+  right: var(--size-2-2);
+}
+
+/* PDF Viewer */
+

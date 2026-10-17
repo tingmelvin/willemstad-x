@@ -1,0 +1,12 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DB05
+\ Generally Side Pane Elements \ Spacing Control
+\ Backlinks
+──────────────────────────────────────────────────────────────────────────────── */
+.backlink-pane, .outgoing-link-pane {
+  padding: var(--header-margin);
+  padding-right: calc(var(--header-margin) - var(--account-scrollbar-border));
+}
+
+/* Colour Application */
+

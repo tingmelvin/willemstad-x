@@ -1,0 +1,26 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AI03
+\ Interactives \ Dropdown
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* AI03-1
+
+dropdown borders
+1px when not focused
+2px when focused
+*/
+:is(select, .dropdown) {
+  box-shadow: 0 0 0 0 var(--background-modifier-border-focus);
+}
+
+:is(select, .dropdown):hover {
+  box-shadow: 0 0 0 1px var(--background-modifier-border-focus);
+}
+
+:is(select, .dropdown):focus {
+  background-color: var(--interactive-focus);
+  box-shadow: 0 0 0 1px var(--background-modifier-border-focus);
+}
+
+/* Dropdown */
+

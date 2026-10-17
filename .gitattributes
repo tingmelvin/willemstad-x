@@ -1,7 +1,53 @@
-old/** linguist-vendored
-build/remixicon.css linguist-vendored
-src/Z-NonTheme/** linguist-vendored
-snippet.css linguist-vendored
-publish.css linguist-vendored
-theme.css linguist-vendored
-obsidian.css linguist-vendored
+# =============================================================================
+# Willemstad-X fork —— 换行与语言统计规则
+# -----------------------------------------------------------------------------
+# 只有两个文件是 CRLF：theme.css / publish.css。
+#
+# 原因：它们是 Obsidian 直接加载的产物，scripts/build.mjs --check 对磁盘文件与
+# 构建结果做 **字节级** 比对，输出固定为 CRLF。换行一变，--check 就误报漂移。
+#
+# 其余所有文本文件（src/ 分片、style-settings YAML、脚本、文档、配置）一律 LF：
+# 它们是源码，不是产物。build.mjs 读源码时先归一化为 LF 再拼接，输出时单点转
+# CRLF，所以源码换行不影响产物字节。锁 LF 可以避免跨平台 checkout 抖动。
+#
+# 反过来说：**不要用 `*.css text eol=crlf` 这种全局规则**——它会把 src/ 分片也
+# 变成 CRLF，造成无意义的 diff 噪音，并且让「重新 extract 一遍」的结果与仓库
+# 里的文件字节不一致。
+# =============================================================================
+
+# 默认：文本按内容自动判定，但不做换行转换（换行由下面的具体规则决定）
+* text=auto eol=lf
+
+# ---- 产物：CRLF --------------------------------------------------------------
+theme.css    text eol=crlf
+publish.css  text eol=crlf
+
+# ---- 源码与配置：LF ----------------------------------------------------------
+# 显式声明一遍，避免 `* text=auto` 在某些平台/工具上按 CRLF 规范化。
+src/**/*.css  text eol=lf
+src/**/*.yaml text eol=lf
+*.mjs         text eol=lf
+*.json        text eol=lf
+*.md          text eol=lf
+.gitattributes text eol=lf
+.gitignore     text eol=lf
+.stylelintignore text eol=lf
+
+# ---- 二进制资产：禁止任何换行转换 -------------------------------------------
+*.woff2 binary
+*.woff  binary
+*.ttf   binary
+*.otf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+
+# ---- GitHub Linguist：构建产物与归档不计入仓库语言统计 ----------------------
+# 注：V1.9/ 与 old/ 已移入 archive/，旧规则里的 build/remixicon.css、
+# src/Z-NonTheme/**、snippet.css、obsidian.css 均已失效，故移除。
+theme.css    linguist-vendored
+publish.css  linguist-vendored
+archive/**   linguist-vendored

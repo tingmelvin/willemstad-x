@@ -1,0 +1,92 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AB02
+\ Root \ Settings \ Typography and Font Typefaces
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+AB02-1 > Base Settings
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  text-rendering: optimizelegibility;
+
+  --font-interface-theme: var(--font-ui); /* my changes to stick */
+  --font-interface: var(--font-interface-override), var(--font-interface-theme), var(--default-font); /* replace this with font-interface in 0.14.5 */
+  --font-text-theme: var(--font-editor); /* my changes to stick */
+  --font-text: var(--font-text-override), var(--font-text-theme), var(--font-interface), var(--default-font); /* change in 0.14.5 */
+
+  /* --font-monospace-theme: see below */
+  --font-monospace: var(--font-monospace-override), var(--font-monospace-theme), "DM Mono";
+}
+
+body:not(.is-mobile) {
+  --default-font: var(--font-editor);
+  --menu-font: var(--font-menu);
+  --ui-font: var(--font-ui);
+}
+
+body.is-mobile {
+  --default-font: var(--font-editor-m);
+  --menu-font: var(--font-menu-m);
+  --ui-font: var(--font-ui-m);
+}
+
+.theme-light, .theme-dark {
+  /* ────────────────────────────────────────────────────────────────────────
+  >>> FONT TYPEFACE > Obsidian Core > Set + Enable changes
+  ──────────────────────────────────────────────────────────────────────── */
+
+  /* to edit --default-font, edit the mobile/desktop equivalents (--font-editor-m) and (--font-editor) */
+  --font-monospace-theme: "DM Mono";
+  --font-heading: "Manrope", "Inter 4.1", "DM Sans";
+
+  /* to edit --menu-font, edit the mobile/desktop equivalents (--font-menu-m) and (--font-menu) */
+
+  /* to edit --ui-font, edit the mobile/desktop equivalents (--font-ui-m) and (--font-ui) */
+  --smallcap-font: "Inter 4.1", "DM Sans", "Manrope"; /* what is this for again? */
+  --setting-heading: "Inter 4.1", "DM Sans", "Manrope"; /* what is this for again? */
+  --font-mermaid: "Inter 4.1", "DM Sans", "Manrope"; /* for Mermaid.js */
+  --font-reveal: "Inter 4.1", "DM Sans", "Manrope"; /* for Slides core plugin - not in use atm */
+
+  /* ──────────────────────────────────────────────────────────────────────
+  >>> FONT TYPEFACE > Desktop
+  ────────────────────────────────────────────────────────────────────── */
+  --font-editor: "Inter 4.1", "DM Sans", "Inter 4.1", "Manrope";
+  --font-menu: "Manrope", "Inter 4.1", "DM Sans";
+  --font-ui: "Manrope", "Inter 4.1", "DM Sans";
+
+  /* ──────────────────────────────────────────────────────────────────────
+  >>> FONT TYPEFACE > Mobile
+  ────────────────────────────────────────────────────────────────────── */
+  --font-editor-m: "Inter 4.1", "DM Sans", "Manrope";
+  --font-menu-m: "Manrope", "Inter 4.1", "DM Sans";
+  --font-ui-m: "Manrope", "Inter 4.1", "DM Sans";
+
+  /* ──────────────────────────────────────────────────────────────────────
+  >>> HEADINGS > Size | a la Shimmering Focus | thanks @pseudometa
+  ────────────────────────────────────────────────────────────────────── */
+  --h1-size: 1.8em;
+  --h2-size: 1.6em;
+  --h3-size: 1.45em;
+  --h4-size: 1.3em;
+  --h5-size: 1.15em;
+  --h6-size: 1.05em;
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 500;
+  --h5-weight: 500;
+  --h6-weight: 500;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+AB02-2 > Headers get --font-heading 
+──────────────────────────────────────────────────────────────────────────────── */
+:is(h1, h2, h3, h4, h5, h6),
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6,
+.HyperMD-list-line :is(.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6) {
+  font-family: var(--font-heading);
+}
+
+/* Set Font/Typography */
+

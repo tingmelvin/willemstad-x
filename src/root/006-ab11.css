@@ -1,0 +1,18 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AB11
+\ Root \ Settings \ Radius
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --shape-roundish: var(--size-2-3); /* 6px, changed from 0.40rem = 6.4px */
+  --pill-radius: var(--radius-s); /* lol but i really dislike pills */
+}
+
+.theme-light, .theme-dark {
+  --radius-s: calc(var(--shape-roundish) * 0.5);
+  --radius-m: calc(var(--shape-roundish) * 1);
+  --radius-l: calc(var(--shape-roundish) * 1.5);
+  --input-radius: var(--radius-s);
+}
+
+/* Sets Radius */
+

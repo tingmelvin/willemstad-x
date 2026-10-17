@@ -1,0 +1,28 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA11
+\ First-Level Main Elements \ Colour Appearance \ Colour Hotfixes
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* DA11-1 | Fix Workspace Leaf colours to --background-primary-alt from --background-secondary */
+.workspace-tabs .workspace-leaf {
+  background-color: var(--background-primary-alt);
+} /* gives it more contrast */
+:where(.mod-windows, .mod-linux) {
+  /* this is needed to ensure that the transition doesn't happen when theme is changed from dark to light and vice versa */
+
+  /* parity to colour of collapsed ribbon background */
+
+ /* ONLY FOR WINDOWS AND LINUX AND NO BUTTON MACOS */
+}
+
+:where(.mod-windows, .mod-linux) .no-transition .workspace-ribbon.mod-left.is-collapsed::before {
+  transition: none;
+}
+
+:where(.mod-windows, .mod-linux) .workspace-ribbon.mod-left.is-collapsed::before {
+  background-color: var(--ribbon-background-collapsed);
+  transition: background-color 250ms 95ms ease-in-out; /* do I need this */ /* copies app.css:2034 */
+}
+
+/* Colour Hotfix */
+

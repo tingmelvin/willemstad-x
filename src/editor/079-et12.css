@@ -1,0 +1,124 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ET12
+\ Editor > Typography
+\ Readable Underlines
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* NO SKIP INKS 
+    see https://discord.com/channels/686053708261228577/931552763467411487/1034886252631175369 */
+body:not(.ssopt-typ-undl-skip-ink) u,
+body:not(.ssopt-typ-undl-skip-ink) :where(.cm-url.cm-url:not(.cm-formatting),
+.cm-hmd-internal-link.cm-hmd-internal-link.cm-hmd-internal-link,
+.modal-content a:not(.tag),
+a:not(.tag),
+.footnote-link,
+.internal-link.internal-link.internal-link,
+.external-link,
+.cm-link.cm-link) {
+  text-decoration-skip-ink: none;
+}
+
+/* removes underline skipping inking because of an interfering descender */
+
+/*  ──────────────────────────────────────────────────────────────────────────
+>> Normal Readable Underlines
+/// thanks to Cecilia May for suggestions re: "u" and streamlining code!
+───────────────────────────────────────────────────────────────────────────────
+    >>> (OPTIONS) Δ NORMAL TEXT | thanks @ceciliamay for assistance
+    ───────────────────────────────────────────────────────────────────────────
+        >>>> (1) NORMAL
+        ──────────────────────────────────────────────────────────────────── */
+.ssopt-typ-undl-nor-min u {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 0;
+}
+
+/* ────────────────────────────────────────────────────────────────────
+>>>> (2) ADDITIONAL, stijl Classic SF
+──────────────────────────────────────────────────────────────────── */
+.ssopt-typ-undl-nor-add u {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 1px;
+}
+
+/* ────────────────────────────────────────────────────────────────────
+>>>> (3) MAXIMUM, stijl Willemstad
+──────────────────────────────────────────────────────────────────── */
+
+/* .ssopt-typ-undl-nor-max */
+u {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: 1px;
+}
+
+/*  ───────────────────────────────────────────────────────────────────────
+>>> (OPTIONS) Δ HYPERLINKS | thanks @pseudometa
+/// in case I forget | note: Breadcrumbs links ALREADY covered by hyperlinks fiddling
+──────────────────────────────────────────────────────────────────────── */
+:where(.cm-url.cm-url:not(.cm-formatting),
+.cm-hmd-internal-link.cm-hmd-internal-link.cm-hmd-internal-link,
+.modal-content a:not(.tag),
+a:not(.tag),
+.footnote-link,
+.internal-link.internal-link.internal-link,
+.external-link,
+.cm-link.cm-link) {
+  /* ────────────────────────────────────────────────────────────────────    
+  >>>> (1) NORMAL
+  ──────────────────────────────────────────────────────────────────── */
+
+  /* ────────────────────────────────────────────────────────────────────
+  >>>> (2) ADDITIONAL, stijl Classic SF
+  ──────────────────────────────────────────────────────────────────── */
+
+  /* ────────────────────────────────────────────────────────────────────
+  >>>> (3) MAXIMUM, stijl Willemstad
+  ──────────────────────────────────────────────────────────────────── */
+
+  /* .ssopt-typ-undl-hyp-max */
+}
+
+.ssopt-typ-undl-hyp-min :where(.cm-url.cm-url:not(.cm-formatting),
+.cm-hmd-internal-link.cm-hmd-internal-link.cm-hmd-internal-link,
+.modal-content a:not(.tag),
+a:not(.tag),
+.footnote-link,
+.internal-link.internal-link.internal-link,
+.external-link,
+.cm-link.cm-link) {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 0;
+}
+
+.ssopt-typ-undl-hyp-add :where(.cm-url.cm-url:not(.cm-formatting),
+.cm-hmd-internal-link.cm-hmd-internal-link.cm-hmd-internal-link,
+.modal-content a:not(.tag),
+a:not(.tag),
+.footnote-link,
+.internal-link.internal-link.internal-link,
+.external-link,
+.cm-link.cm-link) {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 1px;
+}
+
+:where(.cm-url.cm-url:not(.cm-formatting),
+.cm-hmd-internal-link.cm-hmd-internal-link.cm-hmd-internal-link,
+.modal-content a:not(.tag),
+a:not(.tag),
+.footnote-link,
+.internal-link.internal-link.internal-link,
+.external-link,
+.cm-link.cm-link) {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: 1px;
+}
+
+/* Readable Underlines */
+

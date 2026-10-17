@@ -1,0 +1,311 @@
+/* @settings
+name: "Plugins" 
+id: V1-Willemstad-Plugins
+settings:
+    -
+        id: PComm001-settings
+        title: Calendar
+        description:
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: color-text-today
+            title: Colour for Today's Date
+            type: variable-select
+            document: PC001-Calendar
+            description: "This option allows one to choose one of the accent colours for today's date in the Calendar plugin."
+            default: var(--color-accent)
+            options:
+                -
+                    label: color-accent
+                    value: var(--color-accent)
+                -
+                    label: color-accent-1
+                    value: var(--color-accent-1)
+                -
+                    label: color-accent-2
+                    value: var(--color-accent-2)
+    -
+            id: PComm001-col-year
+            title: Colour for Year
+            type: variable-select
+            document: PC001-Calendar
+            description: "This option allows one to choose one of the accent colours for the year in the Calendar plugin."
+            default: var(--color-accent)
+            options:
+                -
+                    label: color-accent
+                    value: var(--color-accent)
+                -
+                    label: color-accent-1
+                    value: var(--color-accent-1)
+                -
+                    label: color-accent-2
+                    value: var(--color-accent-2)
+    -
+        id: PComm002-settings
+        title: Kanban
+        description: 
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: PComm002-sp-singlelane
+            title: Vertical Scroll Kanbans in Side Panes
+            note: Kanban
+            type: class-toggle
+            document: PC002-Kanban
+            description: When enabled, multiple kanban lanes in the side panes can be navigated via scrolling vertically rather than scrolling horizontally.
+            default: false
+    -
+            id: PComm002-sp-fitwidth
+            title: Fit to Width of Side Panes
+            note: Kanban
+            type: class-toggle
+            document: PC002-Kanban
+            description: When enabled, the kanban lanes in the side panes will fit to the width of the side panes.
+            default: false
+    -
+            id: PComm002-sp-maxheight
+            title: Max Height of Vertical Kanban Lane in Side Panes
+            note: Kanban
+            type: variable-number-slider
+            document: PC002-Kanban
+            description: "Set the maximum height of each kanban lane in the side panes, when vertical."
+            default: 33
+            min: 5
+            max: 100
+            step: 1
+            format: 'vh'
+    -
+            id: PComm002-wp-singlelane
+            title: 'Vertical Scroll Kanbans in Main Workspace (Editor) Panes'
+            note: Kanban
+            type: class-toggle
+            document: PC002-Kanban
+            description: When enabled, multiple kanban lanes in the main workspace panes can be navigated via scrolling vertically rather than scrolling horizontally.
+            default: false
+    -
+            id: PComm002-wp-fitwidth
+            title: 'Fit to Width of Main Workspace (Editor) Panes'
+            note: Kanban
+            type: class-toggle
+            document: PC002-Kanban
+            description: When enabled, the kanban lanes in the main workspace panes will fit to the width of the pane.
+            default: false
+    -
+            id: PComm002-wp-maxheight
+            title: 'Max Height of Vertical Kanban Lane in Main Workspace (Editor) Panes'
+            note: Kanban
+            type: variable-number-slider
+            document: PC002-Kanban
+            description: "Set the maximum height of each kanban lane in the main workspace panes, when vertical."
+            default: 33
+            min: 5
+            max: 100
+            step: 1
+            format: 'vh'
+    -
+            id: PComm002-canvas-background
+            title: Enable Canvas-style Dotted Background for Kanban
+            note: Kanban
+            type: class-toggle
+            document: PC002-Kanban
+            description: When enabled, the kanban views will have a canvas-style dotted background.
+            default: false
+    -
+            id: PComm002-CB-bg-colour
+            title: Background Colour (Canvas-style Background)
+            note: Kanban
+            note2: (Requires 'Enable Canvas-style Dotted Background for Kanban' enabled)
+            type: variable-select
+            document: PC002-Kanban
+            description: "This option allows one to choose one of the global accent and background colours for the canvas-style background."
+            allowEmpty: false
+            default: var(--background-primary)
+            options:
+                -
+                    label: background-primary
+                    value: var(--background-primary)
+                -
+                    label: background-primary-alt
+                    value: var(--background-primary-alt)
+                -
+                    label: background-secondary
+                    value: var(--background-secondary)
+                -
+                    label: background-secondary-alt
+                    value: var(--background-secondary-alt)
+                -
+                    label: color-accent
+                    value: var(--color-accent)
+                -
+                    label: color-accent-1
+                    value: var(--color-accent-1)
+                -
+                    label: color-accent-2
+                    value: var(--color-accent-2)
+    -
+            id: PComm002-CB-dot-colour
+            title: Dot Colour (Canvas-style Background)
+            note: Kanban
+            note2: (Requires 'Enable Canvas-style Dotted Background for Kanban' enabled)
+            type: variable-select
+            document: PC002-Kanban
+            description: "This option allows one to choose one of the global accent and background colours for the dots in the canvas-style background."
+            allowEmpty: false
+            default: var(--background-secondary-alt)
+            options:
+                -
+                    label: background-primary
+                    value: var(--background-primary)
+                -
+                    label: background-primary-alt
+                    value: var(--background-primary-alt)
+                -
+                    label: background-secondary
+                    value: var(--background-secondary)
+                -
+                    label: background-secondary-alt
+                    value: var(--background-secondary-alt)
+                -
+                    label: color-accent
+                    value: var(--color-accent)
+                -
+                    label: color-accent-1
+                    value: var(--color-accent-1)
+                -
+                    label: color-accent-2
+                    value: var(--color-accent-2)
+    -
+            id: PComm002-CB-dot-size
+            title: Dot Size (Canvas-style Background)
+            note: Kanban
+            note2: (Requires 'Enable Canvas-style Dotted Background for Kanban' enabled)
+            type: variable-number-slider
+            document: PC002-Kanban
+            description: "Set the size of the dots in the canvas-style background."
+            default: 1
+            min: 0
+            max: 5
+            step: 0.1
+            format: 'px'
+    -
+            id: PComm002-CB-dot-spacing
+            title: Dot Spacing (Canvas-style Background)
+            note: Kanban
+            note2: (Requires 'Enable Canvas-style Dotted Background for Kanban' enabled)
+            type: variable-number-slider
+            document: PC002-Kanban
+            description: "Set the spacing of the dots in the canvas-style background."
+            default: 12
+            min: 0
+            max: 50
+            step: 1
+            format: 'px'
+    -
+        id: PComm005-settings
+        title: Templater
+        description: 
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: PComm005-no-templater-tweaks
+            title: Remove Willemstad-Set Templater Tweaks
+            type: class-toggle
+            document: PC005-Templater
+            description: "Willemstad by default adds certain tweaks to the Templater plugin, including setting the same font-type and the disabling of text decoration for non-Templater items inline within a series of Templater code. When enabled, these tweaks will be removed."
+    -
+        id: PComm007-settings
+        title: Advanced Tables
+        description:
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: PComm007-no-adv-tables-toolbar-tweaks
+            title: Remove Willemstad-Set Toolbar Tweaks
+            type: class-toggle
+            document: PC007-AdvancedTables
+            description: "By default, Willemstad tweaks the Advanced Tables toolbar to remove the prefixed explanations and the Advanced Tables toolbar title. This option allows you to remove these tweaks and restore the plugin's original toolbar appearance."
+            default: false
+    -
+            id: PComm007-toolbar-justification
+            title: Toolbar Justification
+            type: variable-select
+            document: PC007-AdvancedTables
+            description: "This option allows you to change the justification of the Advanced Tables Toolbar"
+            default: left
+            options:
+                -
+                    label: Left
+                    value: left
+                -
+                    label: Center
+                    value: center
+                -
+                    label: Right
+                    value: right
+    -
+            id: PComm007-toolbar-title-justification
+            title: Toolbar Title Justification
+            type: variable-select
+            document: PC007-AdvancedTables
+            description: "This option allows you to change the justification of the Advanced Tables Toolbar"
+            default: 0 auto 0 0
+            options:
+                -
+                    label: Left
+                    value: 0 auto 0 0
+                -
+                    label: Center
+                    value: 0 auto
+                -
+                    label: Right
+                    value: 0 0 0 auto
+    -
+        id: PComm009-settings
+        title: Full Calendar
+        description: 
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: PComm009-no-halfhour-grid
+            title: Remove Half-Hour Demarcation Lines
+            type: class-toggle
+            document: PC009-FullCalendar
+            description: "The Full Calendar plugin has half-hour lines by default. When this option is enabled, the half-hour demarcation lines will be removed."
+    -
+        id: PComm010-settings
+        title: Excalidraw
+        description: 
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: PComm010-original-colours
+            title: Use Original Excalidraw Colour Styling
+            type: class-toggle
+            document: PC010-Excalidraw
+            description: "Willemstad changes the default Excalidraw colour styling to match the theme. When enabled, the original Excalidraw colour styling will be used."
+            default: false
+    -
+        id: PComm011-settings
+        title: Hover Editor
+        description: 
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: PComm011-no-sync-colours
+            title: Use Non-Coloured Titlebar Styling
+            type: class-toggle
+            document: PComm011-HoverEditor
+            note: (Requires 'Use Accent Colour for Titlebar' enabled)
+            description: "Willemstad changes the titlebar colour to match the theme. This means that the titlebar colour for Hover Editor also changes, whilst 'Use Accent Colour for Titlebar' is enabled. When this option is enabled, the original tab bar colour will be used instead."
+            default: false
+
+*/

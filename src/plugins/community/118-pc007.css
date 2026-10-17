@@ -1,0 +1,81 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC007
+\ Plugins > Community
+\ General
+    \\ PComm007 | Advanced Tables
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Advanced Tables]
+\\ (NOMEN | PComm007)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Make the Advanced Tables Toolbar work better
+    ──────────────────────────────────────────────────────────────────────────── */
+body {
+  --PComm007-toolbar-justification: left;
+  --PComm007-toolbar-title-justification: 0 auto 0 0;
+  --advanced-tables-helper-size: calc(var(--header-icon-size) + 2 * var(--header-padding));
+}
+
+/* took it out from below so this can be used even when the toolbar tweaks are removed */
+body:is(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .nav-header .nav-buttons-container {
+  justify-content: var(--PComm007-toolbar-justification);
+}
+
+body:is(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .advanced-tables-buttons > div:not(.nav-header) {
+  display: table;
+  margin: var(--PComm007-toolbar-title-justification);
+  padding: var(--header-margin); /* parity with all nav items */
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) [data-type="advanced-tables-toolbar"] .nav-buttons-container {
+  margin: 0;
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+  padding: 0; /* overrides so that it will flush left? */
+
+  /* a la header icons */
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .advanced-tables-buttons .title {
+  display: none;
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .nav-header {
+  display: grid;
+  gap: var(--header-margin);
+
+  /* ensures parity with the other icons in the heading etc. */
+
+  /* ensures parity with the other icons in the heading etc. */
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .nav-header .nav-buttons-container {
+  justify-content: var(--PComm007-toolbar-justification);
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .nav-header .nav-buttons-container .advanced-tables-row-label {
+  display: none;
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .nav-header .widget-icon {
+  --icon-size: var(--header-icon-size);
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: var(--icon-color);
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .nav-header .nav-action-button {
+  height: var(--advanced-tables-helper-size); /* not sure why the height is weird */
+  padding: var(--header-padding);
+  border-radius: var(--radius-s);
+}
+
+body:not(.PComm007-no-adv-tables-toolbar-tweaks) .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content .nav-header .nav-action-button:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+/* Advanced Tables */
+

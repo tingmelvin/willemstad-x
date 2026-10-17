@@ -1,0 +1,68 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EH11
+\ Headers > Colours
+\ Standard
+──────────────────────────────────────────────────────────────────────────────── */
+.theme-light, .theme-dark {
+  --col-h1-bg: var(--color-accent);
+  --col-h2-bg: var(--color-accent-1);
+  --col-h3-bg: var(--color-accent-2);
+  --col-h4-bg: var(--color-accent);
+  --col-h5-bg: var(--color-accent-1);
+  --col-h6-bg: var(--color-accent-2);
+
+  /*
+  --col-h1: var(--text-on-accent);
+  --col-h2: var(--text-on-accent);
+  --col-h3: var(--text-on-accent);
+  --col-h4: var(--text-on-accent);
+  --col-h5: var(--text-on-accent);
+  --col-h6: var(--text-on-accent);
+  */
+}
+
+.theme-light {
+  --col-h1: rgb(var(--mono-rgb-0));
+  --col-h2: rgb(var(--mono-rgb-0));
+  --col-h3: oklch(from rgb(var(--mono-rgb-100)) l c h / calc(alpha - 0.3));
+  --col-h4: rgb(var(--mono-rgb-0));
+  --col-h5: rgb(var(--mono-rgb-0));
+  --col-h6: oklch(from rgb(var(--mono-rgb-100)) l c h / calc(alpha - 0.3));
+}
+
+.theme-dark {
+  --col-h1: rgb(var(--mono-rgb-100));
+  --col-h2: rgb(var(--mono-rgb-100));
+  --col-h3: oklch(from rgb(var(--mono-rgb-0)) l c h / calc(alpha - 0.3));
+  --col-h4: rgb(var(--mono-rgb-100));
+  --col-h5: rgb(var(--mono-rgb-100));
+  --col-h6: oklch(from rgb(var(--mono-rgb-0)) l c h / calc(alpha - 0.3));
+}
+
+/*  --col-h1-bg: var(--col-accent-custom-headers-0);
+    --col-h2-bg: var(--col-accent-custom-headers-1);
+    --col-h3-bg: var(--col-accent-custom-headers-2);
+    --col-h4-bg: var(--col-accent-custom-headers-0);
+    --col-h5-bg: var(--col-accent-custom-headers-1);
+    --col-h6-bg: var(--col-accent-custom-headers-2);
+
+    &:where(.ssopt-headers-custom-colours-max) {
+        --col-accent-custom-headers-0B: hsl(211, 100%, 19%);
+        --col-accent-custom-headers-1B: hsl(181, 100%, 32%);
+        --col-accent-custom-headers-2B: hsl(161, 100%, 41%);
+
+        --col-h4-bg: var(--col-accent-custom-headers-0B);
+        --col-h5-bg: var(--col-accent-custom-headers-1B);
+        --col-h6-bg: var(--col-accent-custom-headers-2B);
+
+        --col-custom-headers-H1: var(--text-on-accent);
+        --col-custom-headers-H2: var(--text-on-accent);
+        --col-custom-headers-H3: var(--text-on-accent);
+        --col-custom-headers-H4: var(--text-on-accent);
+        --col-custom-headers-H5: var(--text-on-accent);
+        --col-custom-headers-H6: var(--text-on-accent);
+
+*/
+
+/* Headers Colours > Standard */
+

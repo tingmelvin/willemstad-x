@@ -1,0 +1,51 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA00
+\ First-Level Main Elements \ Set Tab Variables
+──────────────────────────────────────────────────────────────────────────────── */
+.theme-light, .theme-dark {
+  /* ICON SIZE */
+  --sidebar-icon-size: 18px;
+  --header-icon-size: 16px;
+  --tab-icon-size: 14px;
+  --icon-diff-sidebar: calc(var(--sidebar-icon-size) - var(--header-icon-size)); /* MATH, DO NOT TOUCH */
+  --icon-diff: calc(var(--header-icon-size) - var(--tab-icon-size)); /* MATH, DO NOT TOUCH */
+
+  /* PADDING */
+  --elements-padding: var(--size-4-1); /* this is for stuff NOT in main app UI like status bar and github button */
+  --header-padding: var(--size-2-3);
+  --tab-padding: calc(var(--header-padding) + 0.5 * var(--icon-diff)); /* 0.5 since icon diff have to be split half */
+  --sidebar-icon-padding: calc(var(--header-padding) - 0.5 * var(--icon-diff-sidebar));
+  --ribbon-padding: var(--header-margin);
+
+  /* HEIGHTS/WIDTH */
+  --ribbon-width: var(--header-height);
+  --header-height: calc(var(--header-icon-size) + var(--header-padding) * 2 + var(--header-margin) * 2); /* 1 + 2 */ /* MATH, DO NOT TOUCH */
+
+  /* MARGIN */
+  --header-margin: var(--size-4-1);
+  --header-margin-half: calc(0.5 * var(--header-margin)); /* because of neighbouring elements */
+
+  /* TAB OUTLINE WIDTH BORDER */
+  --tab-outline-width: 0px; /* NO TO BORDER BOXES */
+
+  /* need to add a Style Settings thingum for below to turn off hover math I assume? */
+
+  /* HOVER MATH */
+  --hover-frac: 0.25; /* this can be SS itself. 0 to turn it off, 1 to. uhm. go mad lol. */
+  --hover-diff: calc(var(--hover-frac) * var(--header-padding)); /* differential. the number inside can be changed - can be a style settings/var too. between 0-1 */
+  --header-icon-size-hover: calc(var(--header-icon-size) + 2 * var(--hover-diff)); /* HOVER MATH DO NOT TOUCH */
+  --header-padding-hover: calc(var(--header-padding) - var(--hover-diff)); /* HOVER MATH DO NOT TOUCH */
+  --hover-frac-sidebar: var(--hover-frac); /* can be delinked from --hover-frace through more specific SS options */
+  --hover-diff-sidebar: calc(var(--hover-frac-sidebar) * var(--sidebar-icon-padding));
+  --sidebar-icon-size-hover: calc(var(--sidebar-icon-size) + 2 * var(--hover-diff-sidebar));
+  --sidebar-padding-hover: calc(var(--sidebar-icon-padding) - var(--hover-diff-sidebar));
+  --hover-frac-tab: var(--hover-frac);
+  --hover-diff-tab: calc(var(--hover-frac-tab) * var(--tab-padding));
+  --tab-icon-size-hover: calc(var(--tab-icon-size) + 2 * var(--hover-diff-tab));
+  --tab-padding-hover: calc(var(--tab-padding) - var(--hover-diff-tab));
+}
+
+/* Set Tab Variables */
+
+/* generals */
+

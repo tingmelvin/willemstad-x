@@ -1,0 +1,1127 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AB01-1 | ADD (AND EDIT) NEW GLOBAL COLOUR VARIABLES
+──────────────────────────────────────────────────────────────────────────────── */
+.theme-light {
+  --color-red: var(--color-set-l-red, #e93147);
+  --color-orange: var(--color-set-l-orange, #ec7500);
+  --color-yellow: var(--color-set-l-yellow, #e0ac00);
+  --color-green: var(--color-set-l-green, #08b94e);
+  --color-cyan: var(--color-set-l-cyan, #00bfbc);
+  --color-blue: var(--color-set-l-blue, #086ddd);
+  --color-purple: var(--color-set-l-purple, #7852ee);
+  --color-pink: var(--color-set-l-pink, #d53984);
+  --color-accent: var(--color-set-l-accent, oklch(40.14% 0.0638 202.51deg));
+  --color-accent-1: var(--color-set-l-accent-1, oklch(70.7% 0.1737 155.3deg));
+  --color-accent-2: var(--color-set-l-accent-2, oklch(82.77% 0.1667 79.6deg));
+  --color-selection: var(--color-set-l-selection, oklch(80.92% 0.170357 75.4802deg));
+}
+
+.theme-dark {
+  --color-red: var(--color-set-d-red, #fb464c);
+  --color-orange: var(--color-set-d-orange, #e9973f);
+  --color-yellow: var(--color-set-d-yellow, #e0de71);
+  --color-green: var(--color-set-d-green, #44cf6e);
+  --color-cyan: var(--color-set-d-cyan, #53dfdd);
+  --color-blue: var(--color-set-d-blue, #027aff);
+  --color-purple: var(--color-set-d-purple, #a882ff);
+  --color-pink: var(--color-set-d-pink, #fa99cd);
+  --color-accent: var(--color-set-d-accent, oklch(40.14% 0.0638 202.51deg));
+  --color-accent-1: var(--color-set-d-accent-1, oklch(70.7% 0.1737 155.3deg));
+  --color-accent-2: var(--color-set-d-accent-2, oklch(82.77% 0.1667 79.6deg));
+  --color-selection: var(--color-set-d-selection, oklch(80.92% 0.170357 75.4802deg));
+}
+
+:where(.ssopt-custom-accent-colours-light),
+.ssopt-custom-accent-colours-light .theme-light,
+.ssopt-custom-accent-colours-light.theme-light {
+  --color-accent:
+                  var(--color-pax-l-accent,
+                      var(--color-set-l-accent,
+                      oklch(40.14% 0.0638 202.51deg)
+                      )
+                  );
+  --color-accent-1:
+                  var(--color-pax-l-accent-1,
+                      var(--color-set-l-accent-1,
+                      oklch(70.7% 0.1737 155.3deg)
+                      )
+                  );
+  --color-accent-2:
+                  var(--color-pax-l-accent-2,
+                      var(--color-set-l-accent-2,
+                      oklch(82.77% 0.1667 79.6deg)
+                      )
+                  );
+}
+
+:where(.ssopt-custom-accent-colours-dark),
+.ssopt-custom-accent-colours-dark .theme-dark,
+.ssopt-custom-accent-colours-dark.theme-dark {
+  --color-accent:
+                  var(--color-pax-d-accent,
+                      var(--color-set-d-accent,
+                      oklch(40.14% 0.0638 202.51deg)
+                      )
+                  );
+  --color-accent-1:
+                  var(--color-pax-d-accent-1,
+                      var(--color-set-d-accent-1,
+                      oklch(70.7% 0.1737 155.3deg)
+                      )
+                  );
+  --color-accent-2:
+                  var(--color-pax-d-accent-2,
+                      var(--color-set-d-accent-2,
+                      oklch(82.77% 0.1667 79.6deg)
+                      )
+                  );
+}
+
+:where(.ssopt-custom-rainbow-colours-light),
+.ssopt-custom-rainbow-colours-light .theme-light,
+.ssopt-custom-rainbow-colours-light.theme-light {
+  --color-red:
+                  var(--color-pax-l-red,
+                      var(--color-set-l-red,
+                      #e93147
+                      )
+                  );
+  --color-orange:
+                  var(--color-pax-l-orange,
+                      var(--color-set-l-orange,
+                      #ec7500
+                      )
+                  );
+  --color-yellow:
+                  var(--color-pax-l-yellow,
+                      var(--color-set-l-yellow,
+                      #e0ac00
+                      )
+                  );
+  --color-green:
+                  var(--color-pax-l-green,
+                      var(--color-set-l-green,
+                      #08b94e
+                      )
+                  );
+  --color-cyan:
+                  var(--color-pax-l-cyan,
+                      var(--color-set-l-cyan,
+                      #00bfbc
+                      )
+                  );
+  --color-blue:
+                  var(--color-pax-l-blue,
+                      var(--color-set-l-blue,
+                      #086ddd
+                      )
+                  );
+  --color-purple:
+                  var(--color-pax-l-purple,
+                      var(--color-set-l-purple,
+                      #7852ee
+                      )
+                  );
+  --color-pink:
+                  var(--color-pax-l-pink,
+                      var(--color-set-l-pink,
+                      #d53984
+                      )
+                  );
+}
+
+:where(.ssopt-custom-rainbow-colours-dark),
+.ssopt-custom-rainbow-colours-dark .theme-dark,
+.ssopt-custom-rainbow-colours-dark.theme-dark {
+  --color-red:
+                  var(--color-pax-d-red,
+                      var(--color-set-d-red,
+                      #fb464c
+                      )
+                  );
+  --color-orange:
+                  var(--color-pax-d-orange,
+                      var(--color-set-d-orange,
+                      #e9973f
+                      )
+                  );
+  --color-yellow:
+                  var(--color-pax-d-yellow,
+                      var(--color-set-d-yellow,
+                      #e0de71
+                      )
+                  );
+  --color-green:
+                  var(--color-pax-d-green,
+                      var(--color-set-d-green,
+                      #44cf6e
+                      )
+                  );
+  --color-cyan:
+                  var(--color-pax-d-cyan,
+                      var(--color-set-d-cyan,
+                      #53dfdd
+                      )
+                  );
+  --color-blue:
+                  var(--color-pax-d-blue,
+                      var(--color-set-d-blue,
+                      #027aff
+                      )
+                  );
+  --color-purple:
+                  var(--color-pax-d-purple,
+                      var(--color-set-d-purple,
+                      #a882ff
+                      )
+                  );
+  --color-pink:
+                  var(--color-pax-d-pink,
+                      var(--color-set-d-pink,
+                      #fa99cd
+                      )
+                  );
+}
+
+:where(.ssopt-custom-selection-colours-light),
+.ssopt-custom-selection-colours-light .theme-light,
+.ssopt-custom-selection-colours-light.theme-light {
+  --color-selection:
+                  var(--color-pax-l-selection,
+                      var(--color-set-l-selection,
+                      oklch(80.92% 0.170357 75.4802deg)
+                      )
+                  );
+}
+
+:where(.ssopt-custom-selection-colours-dark),
+.ssopt-custom-selection-colours-dark .theme-dark,
+.ssopt-custom-selection-colours-dark.theme-dark {
+  --color-selection:
+                  var(--color-pax-d-selection,
+                      var(--color-set-d-selection,
+                      oklch(80.92% 0.170357 75.4802deg)
+                      )
+                  );
+}
+
+:where(.ssopt-custom-colour-template-light),
+.ssopt-custom-colour-template-light .theme-light,
+.ssopt-custom-colour-template-light.theme-light {
+  --color-red: var(--color-tmp-l-red,
+                  var(--color-pax-l-red,
+                      var(--color-set-l-red,
+                      #e93147
+                      )
+                  )
+                  );
+  --color-orange: var(--color-tmp-l-orange,
+                  var(--color-pax-l-orange,
+                      var(--color-set-l-orange,
+                      #ec7500
+                      )
+                  )
+                  );
+  --color-yellow: var(--color-tmp-l-yellow,
+                  var(--color-pax-l-yellow,
+                      var(--color-set-l-yellow,
+                      #e0ac00
+                      )
+                  )
+                  );
+  --color-green: var(--color-tmp-l-green,
+                  var(--color-pax-l-green,
+                      var(--color-set-l-green,
+                      #08b94e
+                      )
+                  )
+                  );
+  --color-cyan: var(--color-tmp-l-cyan,
+                  var(--color-pax-l-cyan,
+                      var(--color-set-l-cyan,
+                      #00bfbc
+                      )
+                  )
+                  );
+  --color-blue: var(--color-tmp-l-blue,
+                  var(--color-pax-l-blue,
+                      var(--color-set-l-blue,
+                      #086ddd
+                      )
+                  )
+                  );
+  --color-purple: var(--color-tmp-l-purple,
+                  var(--color-pax-l-purple,
+                      var(--color-set-l-purple,
+                      #7852ee
+                      )
+                  )
+                  );
+  --color-pink: var(--color-tmp-l-pink,
+                  var(--color-pax-l-pink,
+                      var(--color-set-l-pink,
+                      #d53984
+                      )
+                  )
+                  );
+  --color-accent: var(--color-tmp-l-accent,
+                  var(--color-pax-l-accent,
+                      var(--color-set-l-accent,
+                      oklch(40.14% 0.0638 202.51deg)
+                      )
+                  )
+                  );
+  --color-accent-1: var(--color-tmp-l-accent-1,
+                  var(--color-pax-l-accent-1,
+                      var(--color-set-l-accent-1,
+                      oklch(70.7% 0.1737 155.3deg)
+                      )
+                  )
+                  );
+  --color-accent-2: var(--color-tmp-l-accent-2,
+                  var(--color-pax-l-accent-2,
+                      var(--color-set-l-accent-2,
+                      oklch(82.77% 0.1667 79.6deg)
+                      )
+                  )
+                  );
+  --color-selection: var(--color-tmp-l-selection,
+                  var(--color-pax-l-selection,
+                      var(--color-set-l-selection,
+                      oklch(80.92% 0.170357 75.4802deg)
+                      )
+                  )
+                  );
+}
+
+:where(.ssopt-custom-colour-template-dark),
+.ssopt-custom-colour-template-dark .theme-dark,
+.ssopt-custom-colour-template-dark.theme-dark {
+  --color-red: var(--color-tmp-d-red,
+                  var(--color-pax-d-red,
+                      var(--color-set-d-red,
+                      #fb464c
+                      )
+                  )
+                  );
+  --color-orange: var(--color-tmp-d-orange,
+                  var(--color-pax-d-orange,
+                      var(--color-set-d-orange,
+                      #e9973f
+                      )
+                  )
+                  );
+  --color-yellow: var(--color-tmp-d-yellow,
+                  var(--color-pax-d-yellow,
+                      var(--color-set-d-yellow,
+                      #e0de71
+                      )
+                  )
+                  );
+  --color-green: var(--color-tmp-d-green,
+                  var(--color-pax-d-green,
+                      var(--color-set-d-green,
+                      #44cf6e
+                      )
+                  )
+                  );
+  --color-cyan: var(--color-tmp-d-cyan,
+                  var(--color-pax-d-cyan,
+                      var(--color-set-d-cyan,
+                      #53dfdd
+                      )
+                  )
+                  );
+  --color-blue: var(--color-tmp-d-blue,
+                  var(--color-pax-d-blue,
+                      var(--color-set-d-blue,
+                      #027aff
+                      )
+                  )
+                  );
+  --color-purple: var(--color-tmp-d-purple,
+                  var(--color-pax-d-purple,
+                      var(--color-set-d-purple,
+                      #a882ff
+                      )
+                  )
+                  );
+  --color-pink: var(--color-tmp-d-pink,
+                  var(--color-pax-d-pink,
+                      var(--color-set-d-pink,
+                      #fa99cd
+                      )
+                  )
+                  );
+  --color-accent: var(--color-tmp-d-accent,
+                  var(--color-pax-d-accent,
+                      var(--color-set-d-accent,
+                      oklch(40.14% 0.0638 202.51deg)
+                      )
+                  )
+                  );
+  --color-accent-1: var(--color-tmp-d-accent-1,
+                  var(--color-pax-d-accent-1,
+                      var(--color-set-d-accent-1,
+                      oklch(70.7% 0.1737 155.3deg)
+                      )
+                  )
+                  );
+  --color-accent-2: var(--color-tmp-d-accent-2,
+                  var(--color-pax-d-accent-2,
+                      var(--color-set-d-accent-2,
+                      oklch(82.77% 0.1667 79.6deg)
+                      )
+                  )
+                  );
+  --color-selection: var(--color-tmp-l-selection,
+                  var(--color-pax-l-selection,
+                      var(--color-set-l-selection,
+                      oklch(80.92% 0.170357 75.4802deg)
+                      )
+                  )
+                  );
+}
+
+/*
+--color-set-l-red - see CA00 Accents and CC00 Rainbows
+
+User to define:
+--color-pax-l-red: some-color;
+
+And a template to define:
+--color-tmp-l-red: some-color;
+*/
+
+/**
+* Generates ONLY the L, C, and H component CSS variables for a theme.
+*
+* @param {String} $theme-name - 'light' or 'dark'.
+* @param {String} $fallback-level - 'set' | 'pax' | 'full'. Controls the fallback depth.
+*/
+
+/**
+* Generates ONLY the composite --color-base variables from the LCH components.
+* This should be used in a context where the LCH variables from above already exist.
+*
+* @param {String} $theme-name - 'light' or 'dark'.
+*/
+.theme-light,
+.is-mobile.theme-light {
+  --ch-color-base-d-l-00: var(--ch-color-base-d-l-00-set, 13%);
+  --ch-color-base-d-c-00: var(--ch-color-base-d-c-00-set, 0);
+  --ch-color-base-d-h-00: var(--ch-color-base-d-h-00-set, 0);
+  --ch-color-base-d-l-05: var(--ch-color-base-d-l-05-set, 15%);
+  --ch-color-base-d-c-05: var(--ch-color-base-d-c-05-set, 0);
+  --ch-color-base-d-h-05: var(--ch-color-base-d-h-05-set, 0);
+  --ch-color-base-d-l-10: var(--ch-color-base-d-l-10-set, 17%);
+  --ch-color-base-d-c-10: var(--ch-color-base-d-c-10-set, 0);
+  --ch-color-base-d-h-10: var(--ch-color-base-d-h-10-set, 0);
+  --ch-color-base-d-l-15: var(--ch-color-base-d-l-15-set, 18%);
+  --ch-color-base-d-c-15: var(--ch-color-base-d-c-15-set, 0);
+  --ch-color-base-d-h-15: var(--ch-color-base-d-h-15-set, 0);
+  --ch-color-base-d-l-20: var(--ch-color-base-d-l-20-set, 19%);
+  --ch-color-base-d-c-20: var(--ch-color-base-d-c-20-set, 0);
+  --ch-color-base-d-h-20: var(--ch-color-base-d-h-20-set, 0);
+  --ch-color-base-d-l-25: var(--ch-color-base-d-l-25-set, 21%);
+  --ch-color-base-d-c-25: var(--ch-color-base-d-c-25-set, 0);
+  --ch-color-base-d-h-25: var(--ch-color-base-d-h-25-set, 0);
+  --ch-color-base-d-l-30: var(--ch-color-base-d-l-30-set, 24%);
+  --ch-color-base-d-c-30: var(--ch-color-base-d-c-30-set, 0);
+  --ch-color-base-d-h-30: var(--ch-color-base-d-h-30-set, 0);
+  --ch-color-base-d-l-35: var(--ch-color-base-d-l-35-set, 30%);
+  --ch-color-base-d-c-35: var(--ch-color-base-d-c-35-set, 0);
+  --ch-color-base-d-h-35: var(--ch-color-base-d-h-35-set, 0);
+  --ch-color-base-d-l-40: var(--ch-color-base-d-l-40-set, 38%);
+  --ch-color-base-d-c-40: var(--ch-color-base-d-c-40-set, 0);
+  --ch-color-base-d-h-40: var(--ch-color-base-d-h-40-set, 0);
+  --ch-color-base-d-l-45: var(--ch-color-base-d-l-45-set, 48%);
+  --ch-color-base-d-c-45: var(--ch-color-base-d-c-45-set, 0);
+  --ch-color-base-d-h-45: var(--ch-color-base-d-h-45-set, 0);
+  --ch-color-base-d-l-50: var(--ch-color-base-d-l-50-set, 58%);
+  --ch-color-base-d-c-50: var(--ch-color-base-d-c-50-set, 0);
+  --ch-color-base-d-h-50: var(--ch-color-base-d-h-50-set, 0);
+  --ch-color-base-d-l-55: var(--ch-color-base-d-l-55-set, 63%);
+  --ch-color-base-d-c-55: var(--ch-color-base-d-c-55-set, 0);
+  --ch-color-base-d-h-55: var(--ch-color-base-d-h-55-set, 0);
+  --ch-color-base-d-l-60: var(--ch-color-base-d-l-60-set, 68%);
+  --ch-color-base-d-c-60: var(--ch-color-base-d-c-60-set, 0);
+  --ch-color-base-d-h-60: var(--ch-color-base-d-h-60-set, 0);
+  --ch-color-base-d-l-65: var(--ch-color-base-d-l-65-set, 78%);
+  --ch-color-base-d-c-65: var(--ch-color-base-d-c-65-set, 0);
+  --ch-color-base-d-h-65: var(--ch-color-base-d-h-65-set, 0);
+  --ch-color-base-d-l-70: var(--ch-color-base-d-l-70-set, 86%);
+  --ch-color-base-d-c-70: var(--ch-color-base-d-c-70-set, 0);
+  --ch-color-base-d-h-70: var(--ch-color-base-d-h-70-set, 0);
+  --ch-color-base-d-l-75: var(--ch-color-base-d-l-75-set, 90%);
+  --ch-color-base-d-c-75: var(--ch-color-base-d-c-75-set, 0);
+  --ch-color-base-d-h-75: var(--ch-color-base-d-h-75-set, 0);
+  --ch-color-base-d-l-80: var(--ch-color-base-d-l-80-set, 92%);
+  --ch-color-base-d-c-80: var(--ch-color-base-d-c-80-set, 0);
+  --ch-color-base-d-h-80: var(--ch-color-base-d-h-80-set, 0);
+  --ch-color-base-d-l-85: var(--ch-color-base-d-l-85-set, 94%);
+  --ch-color-base-d-c-85: var(--ch-color-base-d-c-85-set, 0);
+  --ch-color-base-d-h-85: var(--ch-color-base-d-h-85-set, 0);
+  --ch-color-base-d-l-90: var(--ch-color-base-d-l-90-set, 95%);
+  --ch-color-base-d-c-90: var(--ch-color-base-d-c-90-set, 0);
+  --ch-color-base-d-h-90: var(--ch-color-base-d-h-90-set, 0);
+  --ch-color-base-d-l-95: var(--ch-color-base-d-l-95-set, 96%);
+  --ch-color-base-d-c-95: var(--ch-color-base-d-c-95-set, 0);
+  --ch-color-base-d-h-95: var(--ch-color-base-d-h-95-set, 0);
+  --ch-color-base-d-l-100: var(--ch-color-base-d-l-100-set, 98%);
+  --ch-color-base-d-c-100: var(--ch-color-base-d-c-100-set, 0);
+  --ch-color-base-d-h-100: var(--ch-color-base-d-h-100-set, 0);
+
+  /* include dark to ensure the opposite base-col appears */
+  --ch-color-base-l-l-00: var(--ch-color-base-l-l-00-set, 100%);
+  --ch-color-base-l-c-00: var(--ch-color-base-l-c-00-set, 0);
+  --ch-color-base-l-h-00: var(--ch-color-base-l-h-00-set, 0);
+  --ch-color-base-l-l-05: var(--ch-color-base-l-l-05-set, 99%);
+  --ch-color-base-l-c-05: var(--ch-color-base-l-c-05-set, 0);
+  --ch-color-base-l-h-05: var(--ch-color-base-l-h-05-set, 0);
+  --ch-color-base-l-l-10: var(--ch-color-base-l-l-10-set, 98%);
+  --ch-color-base-l-c-10: var(--ch-color-base-l-c-10-set, 0);
+  --ch-color-base-l-h-10: var(--ch-color-base-l-h-10-set, 0);
+  --ch-color-base-l-l-15: var(--ch-color-base-l-l-15-set, 97%);
+  --ch-color-base-l-c-15: var(--ch-color-base-l-c-15-set, 0);
+  --ch-color-base-l-h-15: var(--ch-color-base-l-h-15-set, 0);
+  --ch-color-base-l-l-20: var(--ch-color-base-l-l-20-set, 95%);
+  --ch-color-base-l-c-20: var(--ch-color-base-l-c-20-set, 0);
+  --ch-color-base-l-h-20: var(--ch-color-base-l-h-20-set, 0);
+  --ch-color-base-l-l-25: var(--ch-color-base-l-l-25-set, 93%);
+  --ch-color-base-l-c-25: var(--ch-color-base-l-c-25-set, 0);
+  --ch-color-base-l-h-25: var(--ch-color-base-l-h-25-set, 0);
+  --ch-color-base-l-l-30: var(--ch-color-base-l-l-30-set, 88%);
+  --ch-color-base-l-c-30: var(--ch-color-base-l-c-30-set, 0);
+  --ch-color-base-l-h-30: var(--ch-color-base-l-h-30-set, 0);
+  --ch-color-base-l-l-35: var(--ch-color-base-l-l-35-set, 80%);
+  --ch-color-base-l-c-35: var(--ch-color-base-l-c-35-set, 0);
+  --ch-color-base-l-h-35: var(--ch-color-base-l-h-35-set, 0);
+  --ch-color-base-l-l-40: var(--ch-color-base-l-l-40-set, 70%);
+  --ch-color-base-l-c-40: var(--ch-color-base-l-c-40-set, 0);
+  --ch-color-base-l-h-40: var(--ch-color-base-l-h-40-set, 0);
+  --ch-color-base-l-l-45: var(--ch-color-base-l-l-45-set, 60%);
+  --ch-color-base-l-c-45: var(--ch-color-base-l-c-45-set, 0);
+  --ch-color-base-l-h-45: var(--ch-color-base-l-h-45-set, 0);
+  --ch-color-base-l-l-50: var(--ch-color-base-l-l-50-set, 50%);
+  --ch-color-base-l-c-50: var(--ch-color-base-l-c-50-set, 0);
+  --ch-color-base-l-h-50: var(--ch-color-base-l-h-50-set, 0);
+  --ch-color-base-l-l-55: var(--ch-color-base-l-l-55-set, 40%);
+  --ch-color-base-l-c-55: var(--ch-color-base-l-c-55-set, 0);
+  --ch-color-base-l-h-55: var(--ch-color-base-l-h-55-set, 0);
+  --ch-color-base-l-l-60: var(--ch-color-base-l-l-60-set, 30%);
+  --ch-color-base-l-c-60: var(--ch-color-base-l-c-60-set, 0);
+  --ch-color-base-l-h-60: var(--ch-color-base-l-h-60-set, 0);
+  --ch-color-base-l-l-65: var(--ch-color-base-l-l-65-set, 20%);
+  --ch-color-base-l-c-65: var(--ch-color-base-l-c-65-set, 0);
+  --ch-color-base-l-h-65: var(--ch-color-base-l-h-65-set, 0);
+  --ch-color-base-l-l-70: var(--ch-color-base-l-l-70-set, 12%);
+  --ch-color-base-l-c-70: var(--ch-color-base-l-c-70-set, 0);
+  --ch-color-base-l-h-70: var(--ch-color-base-l-h-70-set, 0);
+  --ch-color-base-l-l-75: var(--ch-color-base-l-l-75-set, 7%);
+  --ch-color-base-l-c-75: var(--ch-color-base-l-c-75-set, 0);
+  --ch-color-base-l-h-75: var(--ch-color-base-l-h-75-set, 0);
+  --ch-color-base-l-l-80: var(--ch-color-base-l-l-80-set, 5%);
+  --ch-color-base-l-c-80: var(--ch-color-base-l-c-80-set, 0);
+  --ch-color-base-l-h-80: var(--ch-color-base-l-h-80-set, 0);
+  --ch-color-base-l-l-85: var(--ch-color-base-l-l-85-set, 3%);
+  --ch-color-base-l-c-85: var(--ch-color-base-l-c-85-set, 0);
+  --ch-color-base-l-h-85: var(--ch-color-base-l-h-85-set, 0);
+  --ch-color-base-l-l-90: var(--ch-color-base-l-l-90-set, 2%);
+  --ch-color-base-l-c-90: var(--ch-color-base-l-c-90-set, 0);
+  --ch-color-base-l-h-90: var(--ch-color-base-l-h-90-set, 0);
+  --ch-color-base-l-l-95: var(--ch-color-base-l-l-95-set, 1%);
+  --ch-color-base-l-c-95: var(--ch-color-base-l-c-95-set, 0);
+  --ch-color-base-l-h-95: var(--ch-color-base-l-h-95-set, 0);
+  --ch-color-base-l-l-100: var(--ch-color-base-l-l-100-set, 0%);
+  --ch-color-base-l-c-100: var(--ch-color-base-l-c-100-set, 0);
+  --ch-color-base-l-h-100: var(--ch-color-base-l-h-100-set, 0);
+  --color-base-00: oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00));
+  --color-base-05: oklch(var(--ch-color-base-l-l-05) var(--ch-color-base-l-c-05) var(--ch-color-base-l-h-05));
+  --color-base-10: oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10));
+  --color-base-15: oklch(var(--ch-color-base-l-l-15) var(--ch-color-base-l-c-15) var(--ch-color-base-l-h-15));
+  --color-base-20: oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20));
+  --color-base-25: oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25));
+  --color-base-30: oklch(var(--ch-color-base-l-l-30) var(--ch-color-base-l-c-30) var(--ch-color-base-l-h-30));
+  --color-base-35: oklch(var(--ch-color-base-l-l-35) var(--ch-color-base-l-c-35) var(--ch-color-base-l-h-35));
+  --color-base-40: oklch(var(--ch-color-base-l-l-40) var(--ch-color-base-l-c-40) var(--ch-color-base-l-h-40));
+  --color-base-45: oklch(var(--ch-color-base-l-l-45) var(--ch-color-base-l-c-45) var(--ch-color-base-l-h-45));
+  --color-base-50: oklch(var(--ch-color-base-l-l-50) var(--ch-color-base-l-c-50) var(--ch-color-base-l-h-50));
+  --color-base-55: oklch(var(--ch-color-base-l-l-55) var(--ch-color-base-l-c-55) var(--ch-color-base-l-h-55));
+  --color-base-60: oklch(var(--ch-color-base-l-l-60) var(--ch-color-base-l-c-60) var(--ch-color-base-l-h-60));
+  --color-base-65: oklch(var(--ch-color-base-l-l-65) var(--ch-color-base-l-c-65) var(--ch-color-base-l-h-65));
+  --color-base-70: oklch(var(--ch-color-base-l-l-70) var(--ch-color-base-l-c-70) var(--ch-color-base-l-h-70));
+  --color-base-75: oklch(var(--ch-color-base-l-l-75) var(--ch-color-base-l-c-75) var(--ch-color-base-l-h-75));
+  --color-base-80: oklch(var(--ch-color-base-l-l-80) var(--ch-color-base-l-c-80) var(--ch-color-base-l-h-80));
+  --color-base-85: oklch(var(--ch-color-base-l-l-85) var(--ch-color-base-l-c-85) var(--ch-color-base-l-h-85));
+  --color-base-90: oklch(var(--ch-color-base-l-l-90) var(--ch-color-base-l-c-90) var(--ch-color-base-l-h-90));
+  --color-base-95: oklch(var(--ch-color-base-l-l-95) var(--ch-color-base-l-c-95) var(--ch-color-base-l-h-95));
+  --color-base-100: oklch(var(--ch-color-base-l-l-100) var(--ch-color-base-l-c-100) var(--ch-color-base-l-h-100));
+}
+
+.theme-dark,
+.is-mobile.theme-dark {
+  --ch-color-base-d-l-00: var(--ch-color-base-d-l-00-set, 13%);
+  --ch-color-base-d-c-00: var(--ch-color-base-d-c-00-set, 0);
+  --ch-color-base-d-h-00: var(--ch-color-base-d-h-00-set, 0);
+  --ch-color-base-d-l-05: var(--ch-color-base-d-l-05-set, 15%);
+  --ch-color-base-d-c-05: var(--ch-color-base-d-c-05-set, 0);
+  --ch-color-base-d-h-05: var(--ch-color-base-d-h-05-set, 0);
+  --ch-color-base-d-l-10: var(--ch-color-base-d-l-10-set, 17%);
+  --ch-color-base-d-c-10: var(--ch-color-base-d-c-10-set, 0);
+  --ch-color-base-d-h-10: var(--ch-color-base-d-h-10-set, 0);
+  --ch-color-base-d-l-15: var(--ch-color-base-d-l-15-set, 18%);
+  --ch-color-base-d-c-15: var(--ch-color-base-d-c-15-set, 0);
+  --ch-color-base-d-h-15: var(--ch-color-base-d-h-15-set, 0);
+  --ch-color-base-d-l-20: var(--ch-color-base-d-l-20-set, 19%);
+  --ch-color-base-d-c-20: var(--ch-color-base-d-c-20-set, 0);
+  --ch-color-base-d-h-20: var(--ch-color-base-d-h-20-set, 0);
+  --ch-color-base-d-l-25: var(--ch-color-base-d-l-25-set, 21%);
+  --ch-color-base-d-c-25: var(--ch-color-base-d-c-25-set, 0);
+  --ch-color-base-d-h-25: var(--ch-color-base-d-h-25-set, 0);
+  --ch-color-base-d-l-30: var(--ch-color-base-d-l-30-set, 24%);
+  --ch-color-base-d-c-30: var(--ch-color-base-d-c-30-set, 0);
+  --ch-color-base-d-h-30: var(--ch-color-base-d-h-30-set, 0);
+  --ch-color-base-d-l-35: var(--ch-color-base-d-l-35-set, 30%);
+  --ch-color-base-d-c-35: var(--ch-color-base-d-c-35-set, 0);
+  --ch-color-base-d-h-35: var(--ch-color-base-d-h-35-set, 0);
+  --ch-color-base-d-l-40: var(--ch-color-base-d-l-40-set, 38%);
+  --ch-color-base-d-c-40: var(--ch-color-base-d-c-40-set, 0);
+  --ch-color-base-d-h-40: var(--ch-color-base-d-h-40-set, 0);
+  --ch-color-base-d-l-45: var(--ch-color-base-d-l-45-set, 48%);
+  --ch-color-base-d-c-45: var(--ch-color-base-d-c-45-set, 0);
+  --ch-color-base-d-h-45: var(--ch-color-base-d-h-45-set, 0);
+  --ch-color-base-d-l-50: var(--ch-color-base-d-l-50-set, 58%);
+  --ch-color-base-d-c-50: var(--ch-color-base-d-c-50-set, 0);
+  --ch-color-base-d-h-50: var(--ch-color-base-d-h-50-set, 0);
+  --ch-color-base-d-l-55: var(--ch-color-base-d-l-55-set, 63%);
+  --ch-color-base-d-c-55: var(--ch-color-base-d-c-55-set, 0);
+  --ch-color-base-d-h-55: var(--ch-color-base-d-h-55-set, 0);
+  --ch-color-base-d-l-60: var(--ch-color-base-d-l-60-set, 68%);
+  --ch-color-base-d-c-60: var(--ch-color-base-d-c-60-set, 0);
+  --ch-color-base-d-h-60: var(--ch-color-base-d-h-60-set, 0);
+  --ch-color-base-d-l-65: var(--ch-color-base-d-l-65-set, 78%);
+  --ch-color-base-d-c-65: var(--ch-color-base-d-c-65-set, 0);
+  --ch-color-base-d-h-65: var(--ch-color-base-d-h-65-set, 0);
+  --ch-color-base-d-l-70: var(--ch-color-base-d-l-70-set, 86%);
+  --ch-color-base-d-c-70: var(--ch-color-base-d-c-70-set, 0);
+  --ch-color-base-d-h-70: var(--ch-color-base-d-h-70-set, 0);
+  --ch-color-base-d-l-75: var(--ch-color-base-d-l-75-set, 90%);
+  --ch-color-base-d-c-75: var(--ch-color-base-d-c-75-set, 0);
+  --ch-color-base-d-h-75: var(--ch-color-base-d-h-75-set, 0);
+  --ch-color-base-d-l-80: var(--ch-color-base-d-l-80-set, 92%);
+  --ch-color-base-d-c-80: var(--ch-color-base-d-c-80-set, 0);
+  --ch-color-base-d-h-80: var(--ch-color-base-d-h-80-set, 0);
+  --ch-color-base-d-l-85: var(--ch-color-base-d-l-85-set, 94%);
+  --ch-color-base-d-c-85: var(--ch-color-base-d-c-85-set, 0);
+  --ch-color-base-d-h-85: var(--ch-color-base-d-h-85-set, 0);
+  --ch-color-base-d-l-90: var(--ch-color-base-d-l-90-set, 95%);
+  --ch-color-base-d-c-90: var(--ch-color-base-d-c-90-set, 0);
+  --ch-color-base-d-h-90: var(--ch-color-base-d-h-90-set, 0);
+  --ch-color-base-d-l-95: var(--ch-color-base-d-l-95-set, 96%);
+  --ch-color-base-d-c-95: var(--ch-color-base-d-c-95-set, 0);
+  --ch-color-base-d-h-95: var(--ch-color-base-d-h-95-set, 0);
+  --ch-color-base-d-l-100: var(--ch-color-base-d-l-100-set, 98%);
+  --ch-color-base-d-c-100: var(--ch-color-base-d-c-100-set, 0);
+  --ch-color-base-d-h-100: var(--ch-color-base-d-h-100-set, 0);
+  --ch-color-base-l-l-00: var(--ch-color-base-l-l-00-set, 100%);
+  --ch-color-base-l-c-00: var(--ch-color-base-l-c-00-set, 0);
+  --ch-color-base-l-h-00: var(--ch-color-base-l-h-00-set, 0);
+  --ch-color-base-l-l-05: var(--ch-color-base-l-l-05-set, 99%);
+  --ch-color-base-l-c-05: var(--ch-color-base-l-c-05-set, 0);
+  --ch-color-base-l-h-05: var(--ch-color-base-l-h-05-set, 0);
+  --ch-color-base-l-l-10: var(--ch-color-base-l-l-10-set, 98%);
+  --ch-color-base-l-c-10: var(--ch-color-base-l-c-10-set, 0);
+  --ch-color-base-l-h-10: var(--ch-color-base-l-h-10-set, 0);
+  --ch-color-base-l-l-15: var(--ch-color-base-l-l-15-set, 97%);
+  --ch-color-base-l-c-15: var(--ch-color-base-l-c-15-set, 0);
+  --ch-color-base-l-h-15: var(--ch-color-base-l-h-15-set, 0);
+  --ch-color-base-l-l-20: var(--ch-color-base-l-l-20-set, 95%);
+  --ch-color-base-l-c-20: var(--ch-color-base-l-c-20-set, 0);
+  --ch-color-base-l-h-20: var(--ch-color-base-l-h-20-set, 0);
+  --ch-color-base-l-l-25: var(--ch-color-base-l-l-25-set, 93%);
+  --ch-color-base-l-c-25: var(--ch-color-base-l-c-25-set, 0);
+  --ch-color-base-l-h-25: var(--ch-color-base-l-h-25-set, 0);
+  --ch-color-base-l-l-30: var(--ch-color-base-l-l-30-set, 88%);
+  --ch-color-base-l-c-30: var(--ch-color-base-l-c-30-set, 0);
+  --ch-color-base-l-h-30: var(--ch-color-base-l-h-30-set, 0);
+  --ch-color-base-l-l-35: var(--ch-color-base-l-l-35-set, 80%);
+  --ch-color-base-l-c-35: var(--ch-color-base-l-c-35-set, 0);
+  --ch-color-base-l-h-35: var(--ch-color-base-l-h-35-set, 0);
+  --ch-color-base-l-l-40: var(--ch-color-base-l-l-40-set, 70%);
+  --ch-color-base-l-c-40: var(--ch-color-base-l-c-40-set, 0);
+  --ch-color-base-l-h-40: var(--ch-color-base-l-h-40-set, 0);
+  --ch-color-base-l-l-45: var(--ch-color-base-l-l-45-set, 60%);
+  --ch-color-base-l-c-45: var(--ch-color-base-l-c-45-set, 0);
+  --ch-color-base-l-h-45: var(--ch-color-base-l-h-45-set, 0);
+  --ch-color-base-l-l-50: var(--ch-color-base-l-l-50-set, 50%);
+  --ch-color-base-l-c-50: var(--ch-color-base-l-c-50-set, 0);
+  --ch-color-base-l-h-50: var(--ch-color-base-l-h-50-set, 0);
+  --ch-color-base-l-l-55: var(--ch-color-base-l-l-55-set, 40%);
+  --ch-color-base-l-c-55: var(--ch-color-base-l-c-55-set, 0);
+  --ch-color-base-l-h-55: var(--ch-color-base-l-h-55-set, 0);
+  --ch-color-base-l-l-60: var(--ch-color-base-l-l-60-set, 30%);
+  --ch-color-base-l-c-60: var(--ch-color-base-l-c-60-set, 0);
+  --ch-color-base-l-h-60: var(--ch-color-base-l-h-60-set, 0);
+  --ch-color-base-l-l-65: var(--ch-color-base-l-l-65-set, 20%);
+  --ch-color-base-l-c-65: var(--ch-color-base-l-c-65-set, 0);
+  --ch-color-base-l-h-65: var(--ch-color-base-l-h-65-set, 0);
+  --ch-color-base-l-l-70: var(--ch-color-base-l-l-70-set, 12%);
+  --ch-color-base-l-c-70: var(--ch-color-base-l-c-70-set, 0);
+  --ch-color-base-l-h-70: var(--ch-color-base-l-h-70-set, 0);
+  --ch-color-base-l-l-75: var(--ch-color-base-l-l-75-set, 7%);
+  --ch-color-base-l-c-75: var(--ch-color-base-l-c-75-set, 0);
+  --ch-color-base-l-h-75: var(--ch-color-base-l-h-75-set, 0);
+  --ch-color-base-l-l-80: var(--ch-color-base-l-l-80-set, 5%);
+  --ch-color-base-l-c-80: var(--ch-color-base-l-c-80-set, 0);
+  --ch-color-base-l-h-80: var(--ch-color-base-l-h-80-set, 0);
+  --ch-color-base-l-l-85: var(--ch-color-base-l-l-85-set, 3%);
+  --ch-color-base-l-c-85: var(--ch-color-base-l-c-85-set, 0);
+  --ch-color-base-l-h-85: var(--ch-color-base-l-h-85-set, 0);
+  --ch-color-base-l-l-90: var(--ch-color-base-l-l-90-set, 2%);
+  --ch-color-base-l-c-90: var(--ch-color-base-l-c-90-set, 0);
+  --ch-color-base-l-h-90: var(--ch-color-base-l-h-90-set, 0);
+  --ch-color-base-l-l-95: var(--ch-color-base-l-l-95-set, 1%);
+  --ch-color-base-l-c-95: var(--ch-color-base-l-c-95-set, 0);
+  --ch-color-base-l-h-95: var(--ch-color-base-l-h-95-set, 0);
+  --ch-color-base-l-l-100: var(--ch-color-base-l-l-100-set, 0%);
+  --ch-color-base-l-c-100: var(--ch-color-base-l-c-100-set, 0);
+  --ch-color-base-l-h-100: var(--ch-color-base-l-h-100-set, 0);
+
+  /* include light to ensure the opposite base-col appears */
+  --color-base-00: oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00));
+  --color-base-05: oklch(var(--ch-color-base-d-l-05) var(--ch-color-base-d-c-05) var(--ch-color-base-d-h-05));
+  --color-base-10: oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10));
+  --color-base-15: oklch(var(--ch-color-base-d-l-15) var(--ch-color-base-d-c-15) var(--ch-color-base-d-h-15));
+  --color-base-20: oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20));
+  --color-base-25: oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25));
+  --color-base-30: oklch(var(--ch-color-base-d-l-30) var(--ch-color-base-d-c-30) var(--ch-color-base-d-h-30));
+  --color-base-35: oklch(var(--ch-color-base-d-l-35) var(--ch-color-base-d-c-35) var(--ch-color-base-d-h-35));
+  --color-base-40: oklch(var(--ch-color-base-d-l-40) var(--ch-color-base-d-c-40) var(--ch-color-base-d-h-40));
+  --color-base-45: oklch(var(--ch-color-base-d-l-45) var(--ch-color-base-d-c-45) var(--ch-color-base-d-h-45));
+  --color-base-50: oklch(var(--ch-color-base-d-l-50) var(--ch-color-base-d-c-50) var(--ch-color-base-d-h-50));
+  --color-base-55: oklch(var(--ch-color-base-d-l-55) var(--ch-color-base-d-c-55) var(--ch-color-base-d-h-55));
+  --color-base-60: oklch(var(--ch-color-base-d-l-60) var(--ch-color-base-d-c-60) var(--ch-color-base-d-h-60));
+  --color-base-65: oklch(var(--ch-color-base-d-l-65) var(--ch-color-base-d-c-65) var(--ch-color-base-d-h-65));
+  --color-base-70: oklch(var(--ch-color-base-d-l-70) var(--ch-color-base-d-c-70) var(--ch-color-base-d-h-70));
+  --color-base-75: oklch(var(--ch-color-base-d-l-75) var(--ch-color-base-d-c-75) var(--ch-color-base-d-h-75));
+  --color-base-80: oklch(var(--ch-color-base-d-l-80) var(--ch-color-base-d-c-80) var(--ch-color-base-d-h-80));
+  --color-base-85: oklch(var(--ch-color-base-d-l-85) var(--ch-color-base-d-c-85) var(--ch-color-base-d-h-85));
+  --color-base-90: oklch(var(--ch-color-base-d-l-90) var(--ch-color-base-d-c-90) var(--ch-color-base-d-h-90));
+  --color-base-95: oklch(var(--ch-color-base-d-l-95) var(--ch-color-base-d-c-95) var(--ch-color-base-d-h-95));
+  --color-base-100: oklch(var(--ch-color-base-d-l-100) var(--ch-color-base-d-c-100) var(--ch-color-base-d-h-100));
+}
+
+:where(.ssopt-custom-base-colours-light),
+:where(.ssopt-custom-base-colours-light.theme-dark) :where(.setting-item[data-id^="V3-willemstad-color-base-settings-"]).setting-item-control::before,
+.ssopt-custom-base-colours-light .theme-light,
+.ssopt-custom-base-colours-light.theme-light {
+  --ch-color-base-l-l-00: var(--ch-color-base-l-l-00-pax, var(--ch-color-base-l-l-00-set, 100%));
+  --ch-color-base-l-c-00: var(--ch-color-base-l-c-00-pax, var(--ch-color-base-l-c-00-set, 0));
+  --ch-color-base-l-h-00: var(--ch-color-base-l-h-00-pax, var(--ch-color-base-l-h-00-set, 0));
+  --ch-color-base-l-l-05: var(--ch-color-base-l-l-05-pax, var(--ch-color-base-l-l-05-set, 99%));
+  --ch-color-base-l-c-05: var(--ch-color-base-l-c-05-pax, var(--ch-color-base-l-c-05-set, 0));
+  --ch-color-base-l-h-05: var(--ch-color-base-l-h-05-pax, var(--ch-color-base-l-h-05-set, 0));
+  --ch-color-base-l-l-10: var(--ch-color-base-l-l-10-pax, var(--ch-color-base-l-l-10-set, 98%));
+  --ch-color-base-l-c-10: var(--ch-color-base-l-c-10-pax, var(--ch-color-base-l-c-10-set, 0));
+  --ch-color-base-l-h-10: var(--ch-color-base-l-h-10-pax, var(--ch-color-base-l-h-10-set, 0));
+  --ch-color-base-l-l-15: var(--ch-color-base-l-l-15-pax, var(--ch-color-base-l-l-15-set, 97%));
+  --ch-color-base-l-c-15: var(--ch-color-base-l-c-15-pax, var(--ch-color-base-l-c-15-set, 0));
+  --ch-color-base-l-h-15: var(--ch-color-base-l-h-15-pax, var(--ch-color-base-l-h-15-set, 0));
+  --ch-color-base-l-l-20: var(--ch-color-base-l-l-20-pax, var(--ch-color-base-l-l-20-set, 95%));
+  --ch-color-base-l-c-20: var(--ch-color-base-l-c-20-pax, var(--ch-color-base-l-c-20-set, 0));
+  --ch-color-base-l-h-20: var(--ch-color-base-l-h-20-pax, var(--ch-color-base-l-h-20-set, 0));
+  --ch-color-base-l-l-25: var(--ch-color-base-l-l-25-pax, var(--ch-color-base-l-l-25-set, 93%));
+  --ch-color-base-l-c-25: var(--ch-color-base-l-c-25-pax, var(--ch-color-base-l-c-25-set, 0));
+  --ch-color-base-l-h-25: var(--ch-color-base-l-h-25-pax, var(--ch-color-base-l-h-25-set, 0));
+  --ch-color-base-l-l-30: var(--ch-color-base-l-l-30-pax, var(--ch-color-base-l-l-30-set, 88%));
+  --ch-color-base-l-c-30: var(--ch-color-base-l-c-30-pax, var(--ch-color-base-l-c-30-set, 0));
+  --ch-color-base-l-h-30: var(--ch-color-base-l-h-30-pax, var(--ch-color-base-l-h-30-set, 0));
+  --ch-color-base-l-l-35: var(--ch-color-base-l-l-35-pax, var(--ch-color-base-l-l-35-set, 80%));
+  --ch-color-base-l-c-35: var(--ch-color-base-l-c-35-pax, var(--ch-color-base-l-c-35-set, 0));
+  --ch-color-base-l-h-35: var(--ch-color-base-l-h-35-pax, var(--ch-color-base-l-h-35-set, 0));
+  --ch-color-base-l-l-40: var(--ch-color-base-l-l-40-pax, var(--ch-color-base-l-l-40-set, 70%));
+  --ch-color-base-l-c-40: var(--ch-color-base-l-c-40-pax, var(--ch-color-base-l-c-40-set, 0));
+  --ch-color-base-l-h-40: var(--ch-color-base-l-h-40-pax, var(--ch-color-base-l-h-40-set, 0));
+  --ch-color-base-l-l-45: var(--ch-color-base-l-l-45-pax, var(--ch-color-base-l-l-45-set, 60%));
+  --ch-color-base-l-c-45: var(--ch-color-base-l-c-45-pax, var(--ch-color-base-l-c-45-set, 0));
+  --ch-color-base-l-h-45: var(--ch-color-base-l-h-45-pax, var(--ch-color-base-l-h-45-set, 0));
+  --ch-color-base-l-l-50: var(--ch-color-base-l-l-50-pax, var(--ch-color-base-l-l-50-set, 50%));
+  --ch-color-base-l-c-50: var(--ch-color-base-l-c-50-pax, var(--ch-color-base-l-c-50-set, 0));
+  --ch-color-base-l-h-50: var(--ch-color-base-l-h-50-pax, var(--ch-color-base-l-h-50-set, 0));
+  --ch-color-base-l-l-55: var(--ch-color-base-l-l-55-pax, var(--ch-color-base-l-l-55-set, 40%));
+  --ch-color-base-l-c-55: var(--ch-color-base-l-c-55-pax, var(--ch-color-base-l-c-55-set, 0));
+  --ch-color-base-l-h-55: var(--ch-color-base-l-h-55-pax, var(--ch-color-base-l-h-55-set, 0));
+  --ch-color-base-l-l-60: var(--ch-color-base-l-l-60-pax, var(--ch-color-base-l-l-60-set, 30%));
+  --ch-color-base-l-c-60: var(--ch-color-base-l-c-60-pax, var(--ch-color-base-l-c-60-set, 0));
+  --ch-color-base-l-h-60: var(--ch-color-base-l-h-60-pax, var(--ch-color-base-l-h-60-set, 0));
+  --ch-color-base-l-l-65: var(--ch-color-base-l-l-65-pax, var(--ch-color-base-l-l-65-set, 20%));
+  --ch-color-base-l-c-65: var(--ch-color-base-l-c-65-pax, var(--ch-color-base-l-c-65-set, 0));
+  --ch-color-base-l-h-65: var(--ch-color-base-l-h-65-pax, var(--ch-color-base-l-h-65-set, 0));
+  --ch-color-base-l-l-70: var(--ch-color-base-l-l-70-pax, var(--ch-color-base-l-l-70-set, 12%));
+  --ch-color-base-l-c-70: var(--ch-color-base-l-c-70-pax, var(--ch-color-base-l-c-70-set, 0));
+  --ch-color-base-l-h-70: var(--ch-color-base-l-h-70-pax, var(--ch-color-base-l-h-70-set, 0));
+  --ch-color-base-l-l-75: var(--ch-color-base-l-l-75-pax, var(--ch-color-base-l-l-75-set, 7%));
+  --ch-color-base-l-c-75: var(--ch-color-base-l-c-75-pax, var(--ch-color-base-l-c-75-set, 0));
+  --ch-color-base-l-h-75: var(--ch-color-base-l-h-75-pax, var(--ch-color-base-l-h-75-set, 0));
+  --ch-color-base-l-l-80: var(--ch-color-base-l-l-80-pax, var(--ch-color-base-l-l-80-set, 5%));
+  --ch-color-base-l-c-80: var(--ch-color-base-l-c-80-pax, var(--ch-color-base-l-c-80-set, 0));
+  --ch-color-base-l-h-80: var(--ch-color-base-l-h-80-pax, var(--ch-color-base-l-h-80-set, 0));
+  --ch-color-base-l-l-85: var(--ch-color-base-l-l-85-pax, var(--ch-color-base-l-l-85-set, 3%));
+  --ch-color-base-l-c-85: var(--ch-color-base-l-c-85-pax, var(--ch-color-base-l-c-85-set, 0));
+  --ch-color-base-l-h-85: var(--ch-color-base-l-h-85-pax, var(--ch-color-base-l-h-85-set, 0));
+  --ch-color-base-l-l-90: var(--ch-color-base-l-l-90-pax, var(--ch-color-base-l-l-90-set, 2%));
+  --ch-color-base-l-c-90: var(--ch-color-base-l-c-90-pax, var(--ch-color-base-l-c-90-set, 0));
+  --ch-color-base-l-h-90: var(--ch-color-base-l-h-90-pax, var(--ch-color-base-l-h-90-set, 0));
+  --ch-color-base-l-l-95: var(--ch-color-base-l-l-95-pax, var(--ch-color-base-l-l-95-set, 1%));
+  --ch-color-base-l-c-95: var(--ch-color-base-l-c-95-pax, var(--ch-color-base-l-c-95-set, 0));
+  --ch-color-base-l-h-95: var(--ch-color-base-l-h-95-pax, var(--ch-color-base-l-h-95-set, 0));
+  --ch-color-base-l-l-100: var(--ch-color-base-l-l-100-pax, var(--ch-color-base-l-l-100-set, 0%));
+  --ch-color-base-l-c-100: var(--ch-color-base-l-c-100-pax, var(--ch-color-base-l-c-100-set, 0));
+  --ch-color-base-l-h-100: var(--ch-color-base-l-h-100-pax, var(--ch-color-base-l-h-100-set, 0));
+  --color-base-00: oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00));
+  --color-base-05: oklch(var(--ch-color-base-l-l-05) var(--ch-color-base-l-c-05) var(--ch-color-base-l-h-05));
+  --color-base-10: oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10));
+  --color-base-15: oklch(var(--ch-color-base-l-l-15) var(--ch-color-base-l-c-15) var(--ch-color-base-l-h-15));
+  --color-base-20: oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20));
+  --color-base-25: oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25));
+  --color-base-30: oklch(var(--ch-color-base-l-l-30) var(--ch-color-base-l-c-30) var(--ch-color-base-l-h-30));
+  --color-base-35: oklch(var(--ch-color-base-l-l-35) var(--ch-color-base-l-c-35) var(--ch-color-base-l-h-35));
+  --color-base-40: oklch(var(--ch-color-base-l-l-40) var(--ch-color-base-l-c-40) var(--ch-color-base-l-h-40));
+  --color-base-45: oklch(var(--ch-color-base-l-l-45) var(--ch-color-base-l-c-45) var(--ch-color-base-l-h-45));
+  --color-base-50: oklch(var(--ch-color-base-l-l-50) var(--ch-color-base-l-c-50) var(--ch-color-base-l-h-50));
+  --color-base-55: oklch(var(--ch-color-base-l-l-55) var(--ch-color-base-l-c-55) var(--ch-color-base-l-h-55));
+  --color-base-60: oklch(var(--ch-color-base-l-l-60) var(--ch-color-base-l-c-60) var(--ch-color-base-l-h-60));
+  --color-base-65: oklch(var(--ch-color-base-l-l-65) var(--ch-color-base-l-c-65) var(--ch-color-base-l-h-65));
+  --color-base-70: oklch(var(--ch-color-base-l-l-70) var(--ch-color-base-l-c-70) var(--ch-color-base-l-h-70));
+  --color-base-75: oklch(var(--ch-color-base-l-l-75) var(--ch-color-base-l-c-75) var(--ch-color-base-l-h-75));
+  --color-base-80: oklch(var(--ch-color-base-l-l-80) var(--ch-color-base-l-c-80) var(--ch-color-base-l-h-80));
+  --color-base-85: oklch(var(--ch-color-base-l-l-85) var(--ch-color-base-l-c-85) var(--ch-color-base-l-h-85));
+  --color-base-90: oklch(var(--ch-color-base-l-l-90) var(--ch-color-base-l-c-90) var(--ch-color-base-l-h-90));
+  --color-base-95: oklch(var(--ch-color-base-l-l-95) var(--ch-color-base-l-c-95) var(--ch-color-base-l-h-95));
+  --color-base-100: oklch(var(--ch-color-base-l-l-100) var(--ch-color-base-l-c-100) var(--ch-color-base-l-h-100));
+}
+
+:where(.ssopt-custom-base-colours-dark),
+:where(.ssopt-custom-base-colours-dark.theme-light) :where(.setting-item[data-id^="V3-willemstad-color-base-settings-"]) .setting-item-control::before,
+.ssopt-custom-base-colours-dark .theme-dark,
+.ssopt-custom-base-colours-dark.theme-dark {
+  --ch-color-base-d-l-00: var(--ch-color-base-d-l-00-pax, var(--ch-color-base-d-l-00-set, 13%));
+  --ch-color-base-d-c-00: var(--ch-color-base-d-c-00-pax, var(--ch-color-base-d-c-00-set, 0));
+  --ch-color-base-d-h-00: var(--ch-color-base-d-h-00-pax, var(--ch-color-base-d-h-00-set, 0));
+  --ch-color-base-d-l-05: var(--ch-color-base-d-l-05-pax, var(--ch-color-base-d-l-05-set, 15%));
+  --ch-color-base-d-c-05: var(--ch-color-base-d-c-05-pax, var(--ch-color-base-d-c-05-set, 0));
+  --ch-color-base-d-h-05: var(--ch-color-base-d-h-05-pax, var(--ch-color-base-d-h-05-set, 0));
+  --ch-color-base-d-l-10: var(--ch-color-base-d-l-10-pax, var(--ch-color-base-d-l-10-set, 17%));
+  --ch-color-base-d-c-10: var(--ch-color-base-d-c-10-pax, var(--ch-color-base-d-c-10-set, 0));
+  --ch-color-base-d-h-10: var(--ch-color-base-d-h-10-pax, var(--ch-color-base-d-h-10-set, 0));
+  --ch-color-base-d-l-15: var(--ch-color-base-d-l-15-pax, var(--ch-color-base-d-l-15-set, 18%));
+  --ch-color-base-d-c-15: var(--ch-color-base-d-c-15-pax, var(--ch-color-base-d-c-15-set, 0));
+  --ch-color-base-d-h-15: var(--ch-color-base-d-h-15-pax, var(--ch-color-base-d-h-15-set, 0));
+  --ch-color-base-d-l-20: var(--ch-color-base-d-l-20-pax, var(--ch-color-base-d-l-20-set, 19%));
+  --ch-color-base-d-c-20: var(--ch-color-base-d-c-20-pax, var(--ch-color-base-d-c-20-set, 0));
+  --ch-color-base-d-h-20: var(--ch-color-base-d-h-20-pax, var(--ch-color-base-d-h-20-set, 0));
+  --ch-color-base-d-l-25: var(--ch-color-base-d-l-25-pax, var(--ch-color-base-d-l-25-set, 21%));
+  --ch-color-base-d-c-25: var(--ch-color-base-d-c-25-pax, var(--ch-color-base-d-c-25-set, 0));
+  --ch-color-base-d-h-25: var(--ch-color-base-d-h-25-pax, var(--ch-color-base-d-h-25-set, 0));
+  --ch-color-base-d-l-30: var(--ch-color-base-d-l-30-pax, var(--ch-color-base-d-l-30-set, 24%));
+  --ch-color-base-d-c-30: var(--ch-color-base-d-c-30-pax, var(--ch-color-base-d-c-30-set, 0));
+  --ch-color-base-d-h-30: var(--ch-color-base-d-h-30-pax, var(--ch-color-base-d-h-30-set, 0));
+  --ch-color-base-d-l-35: var(--ch-color-base-d-l-35-pax, var(--ch-color-base-d-l-35-set, 30%));
+  --ch-color-base-d-c-35: var(--ch-color-base-d-c-35-pax, var(--ch-color-base-d-c-35-set, 0));
+  --ch-color-base-d-h-35: var(--ch-color-base-d-h-35-pax, var(--ch-color-base-d-h-35-set, 0));
+  --ch-color-base-d-l-40: var(--ch-color-base-d-l-40-pax, var(--ch-color-base-d-l-40-set, 38%));
+  --ch-color-base-d-c-40: var(--ch-color-base-d-c-40-pax, var(--ch-color-base-d-c-40-set, 0));
+  --ch-color-base-d-h-40: var(--ch-color-base-d-h-40-pax, var(--ch-color-base-d-h-40-set, 0));
+  --ch-color-base-d-l-45: var(--ch-color-base-d-l-45-pax, var(--ch-color-base-d-l-45-set, 48%));
+  --ch-color-base-d-c-45: var(--ch-color-base-d-c-45-pax, var(--ch-color-base-d-c-45-set, 0));
+  --ch-color-base-d-h-45: var(--ch-color-base-d-h-45-pax, var(--ch-color-base-d-h-45-set, 0));
+  --ch-color-base-d-l-50: var(--ch-color-base-d-l-50-pax, var(--ch-color-base-d-l-50-set, 58%));
+  --ch-color-base-d-c-50: var(--ch-color-base-d-c-50-pax, var(--ch-color-base-d-c-50-set, 0));
+  --ch-color-base-d-h-50: var(--ch-color-base-d-h-50-pax, var(--ch-color-base-d-h-50-set, 0));
+  --ch-color-base-d-l-55: var(--ch-color-base-d-l-55-pax, var(--ch-color-base-d-l-55-set, 63%));
+  --ch-color-base-d-c-55: var(--ch-color-base-d-c-55-pax, var(--ch-color-base-d-c-55-set, 0));
+  --ch-color-base-d-h-55: var(--ch-color-base-d-h-55-pax, var(--ch-color-base-d-h-55-set, 0));
+  --ch-color-base-d-l-60: var(--ch-color-base-d-l-60-pax, var(--ch-color-base-d-l-60-set, 68%));
+  --ch-color-base-d-c-60: var(--ch-color-base-d-c-60-pax, var(--ch-color-base-d-c-60-set, 0));
+  --ch-color-base-d-h-60: var(--ch-color-base-d-h-60-pax, var(--ch-color-base-d-h-60-set, 0));
+  --ch-color-base-d-l-65: var(--ch-color-base-d-l-65-pax, var(--ch-color-base-d-l-65-set, 78%));
+  --ch-color-base-d-c-65: var(--ch-color-base-d-c-65-pax, var(--ch-color-base-d-c-65-set, 0));
+  --ch-color-base-d-h-65: var(--ch-color-base-d-h-65-pax, var(--ch-color-base-d-h-65-set, 0));
+  --ch-color-base-d-l-70: var(--ch-color-base-d-l-70-pax, var(--ch-color-base-d-l-70-set, 86%));
+  --ch-color-base-d-c-70: var(--ch-color-base-d-c-70-pax, var(--ch-color-base-d-c-70-set, 0));
+  --ch-color-base-d-h-70: var(--ch-color-base-d-h-70-pax, var(--ch-color-base-d-h-70-set, 0));
+  --ch-color-base-d-l-75: var(--ch-color-base-d-l-75-pax, var(--ch-color-base-d-l-75-set, 90%));
+  --ch-color-base-d-c-75: var(--ch-color-base-d-c-75-pax, var(--ch-color-base-d-c-75-set, 0));
+  --ch-color-base-d-h-75: var(--ch-color-base-d-h-75-pax, var(--ch-color-base-d-h-75-set, 0));
+  --ch-color-base-d-l-80: var(--ch-color-base-d-l-80-pax, var(--ch-color-base-d-l-80-set, 92%));
+  --ch-color-base-d-c-80: var(--ch-color-base-d-c-80-pax, var(--ch-color-base-d-c-80-set, 0));
+  --ch-color-base-d-h-80: var(--ch-color-base-d-h-80-pax, var(--ch-color-base-d-h-80-set, 0));
+  --ch-color-base-d-l-85: var(--ch-color-base-d-l-85-pax, var(--ch-color-base-d-l-85-set, 94%));
+  --ch-color-base-d-c-85: var(--ch-color-base-d-c-85-pax, var(--ch-color-base-d-c-85-set, 0));
+  --ch-color-base-d-h-85: var(--ch-color-base-d-h-85-pax, var(--ch-color-base-d-h-85-set, 0));
+  --ch-color-base-d-l-90: var(--ch-color-base-d-l-90-pax, var(--ch-color-base-d-l-90-set, 95%));
+  --ch-color-base-d-c-90: var(--ch-color-base-d-c-90-pax, var(--ch-color-base-d-c-90-set, 0));
+  --ch-color-base-d-h-90: var(--ch-color-base-d-h-90-pax, var(--ch-color-base-d-h-90-set, 0));
+  --ch-color-base-d-l-95: var(--ch-color-base-d-l-95-pax, var(--ch-color-base-d-l-95-set, 96%));
+  --ch-color-base-d-c-95: var(--ch-color-base-d-c-95-pax, var(--ch-color-base-d-c-95-set, 0));
+  --ch-color-base-d-h-95: var(--ch-color-base-d-h-95-pax, var(--ch-color-base-d-h-95-set, 0));
+  --ch-color-base-d-l-100: var(--ch-color-base-d-l-100-pax, var(--ch-color-base-d-l-100-set, 98%));
+  --ch-color-base-d-c-100: var(--ch-color-base-d-c-100-pax, var(--ch-color-base-d-c-100-set, 0));
+  --ch-color-base-d-h-100: var(--ch-color-base-d-h-100-pax, var(--ch-color-base-d-h-100-set, 0));
+  --color-base-00: oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00));
+  --color-base-05: oklch(var(--ch-color-base-d-l-05) var(--ch-color-base-d-c-05) var(--ch-color-base-d-h-05));
+  --color-base-10: oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10));
+  --color-base-15: oklch(var(--ch-color-base-d-l-15) var(--ch-color-base-d-c-15) var(--ch-color-base-d-h-15));
+  --color-base-20: oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20));
+  --color-base-25: oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25));
+  --color-base-30: oklch(var(--ch-color-base-d-l-30) var(--ch-color-base-d-c-30) var(--ch-color-base-d-h-30));
+  --color-base-35: oklch(var(--ch-color-base-d-l-35) var(--ch-color-base-d-c-35) var(--ch-color-base-d-h-35));
+  --color-base-40: oklch(var(--ch-color-base-d-l-40) var(--ch-color-base-d-c-40) var(--ch-color-base-d-h-40));
+  --color-base-45: oklch(var(--ch-color-base-d-l-45) var(--ch-color-base-d-c-45) var(--ch-color-base-d-h-45));
+  --color-base-50: oklch(var(--ch-color-base-d-l-50) var(--ch-color-base-d-c-50) var(--ch-color-base-d-h-50));
+  --color-base-55: oklch(var(--ch-color-base-d-l-55) var(--ch-color-base-d-c-55) var(--ch-color-base-d-h-55));
+  --color-base-60: oklch(var(--ch-color-base-d-l-60) var(--ch-color-base-d-c-60) var(--ch-color-base-d-h-60));
+  --color-base-65: oklch(var(--ch-color-base-d-l-65) var(--ch-color-base-d-c-65) var(--ch-color-base-d-h-65));
+  --color-base-70: oklch(var(--ch-color-base-d-l-70) var(--ch-color-base-d-c-70) var(--ch-color-base-d-h-70));
+  --color-base-75: oklch(var(--ch-color-base-d-l-75) var(--ch-color-base-d-c-75) var(--ch-color-base-d-h-75));
+  --color-base-80: oklch(var(--ch-color-base-d-l-80) var(--ch-color-base-d-c-80) var(--ch-color-base-d-h-80));
+  --color-base-85: oklch(var(--ch-color-base-d-l-85) var(--ch-color-base-d-c-85) var(--ch-color-base-d-h-85));
+  --color-base-90: oklch(var(--ch-color-base-d-l-90) var(--ch-color-base-d-c-90) var(--ch-color-base-d-h-90));
+  --color-base-95: oklch(var(--ch-color-base-d-l-95) var(--ch-color-base-d-c-95) var(--ch-color-base-d-h-95));
+  --color-base-100: oklch(var(--ch-color-base-d-l-100) var(--ch-color-base-d-c-100) var(--ch-color-base-d-h-100));
+}
+
+:where(.ssopt-custom-colour-template-light),
+.ssopt-custom-colour-template-light.ssopt-custom-colour-template-light.ssopt-custom-colour-template-light .theme-light,
+.ssopt-custom-colour-template-light.ssopt-custom-colour-template-light.ssopt-custom-colour-template-light.theme-light {
+  --ch-color-base-l-l-00: var(--ch-color-base-l-l-00-tmp, var(--ch-color-base-l-l-00-pax, var(--ch-color-base-l-l-00-set, 100%)));
+  --ch-color-base-l-c-00: var(--ch-color-base-l-c-00-tmp, var(--ch-color-base-l-c-00-pax, var(--ch-color-base-l-c-00-set, 0)));
+  --ch-color-base-l-h-00: var(--ch-color-base-l-h-00-tmp, var(--ch-color-base-l-h-00-pax, var(--ch-color-base-l-h-00-set, 0)));
+  --ch-color-base-l-l-05: var(--ch-color-base-l-l-05-tmp, var(--ch-color-base-l-l-05-pax, var(--ch-color-base-l-l-05-set, 99%)));
+  --ch-color-base-l-c-05: var(--ch-color-base-l-c-05-tmp, var(--ch-color-base-l-c-05-pax, var(--ch-color-base-l-c-05-set, 0)));
+  --ch-color-base-l-h-05: var(--ch-color-base-l-h-05-tmp, var(--ch-color-base-l-h-05-pax, var(--ch-color-base-l-h-05-set, 0)));
+  --ch-color-base-l-l-10: var(--ch-color-base-l-l-10-tmp, var(--ch-color-base-l-l-10-pax, var(--ch-color-base-l-l-10-set, 98%)));
+  --ch-color-base-l-c-10: var(--ch-color-base-l-c-10-tmp, var(--ch-color-base-l-c-10-pax, var(--ch-color-base-l-c-10-set, 0)));
+  --ch-color-base-l-h-10: var(--ch-color-base-l-h-10-tmp, var(--ch-color-base-l-h-10-pax, var(--ch-color-base-l-h-10-set, 0)));
+  --ch-color-base-l-l-15: var(--ch-color-base-l-l-15-tmp, var(--ch-color-base-l-l-15-pax, var(--ch-color-base-l-l-15-set, 97%)));
+  --ch-color-base-l-c-15: var(--ch-color-base-l-c-15-tmp, var(--ch-color-base-l-c-15-pax, var(--ch-color-base-l-c-15-set, 0)));
+  --ch-color-base-l-h-15: var(--ch-color-base-l-h-15-tmp, var(--ch-color-base-l-h-15-pax, var(--ch-color-base-l-h-15-set, 0)));
+  --ch-color-base-l-l-20: var(--ch-color-base-l-l-20-tmp, var(--ch-color-base-l-l-20-pax, var(--ch-color-base-l-l-20-set, 95%)));
+  --ch-color-base-l-c-20: var(--ch-color-base-l-c-20-tmp, var(--ch-color-base-l-c-20-pax, var(--ch-color-base-l-c-20-set, 0)));
+  --ch-color-base-l-h-20: var(--ch-color-base-l-h-20-tmp, var(--ch-color-base-l-h-20-pax, var(--ch-color-base-l-h-20-set, 0)));
+  --ch-color-base-l-l-25: var(--ch-color-base-l-l-25-tmp, var(--ch-color-base-l-l-25-pax, var(--ch-color-base-l-l-25-set, 93%)));
+  --ch-color-base-l-c-25: var(--ch-color-base-l-c-25-tmp, var(--ch-color-base-l-c-25-pax, var(--ch-color-base-l-c-25-set, 0)));
+  --ch-color-base-l-h-25: var(--ch-color-base-l-h-25-tmp, var(--ch-color-base-l-h-25-pax, var(--ch-color-base-l-h-25-set, 0)));
+  --ch-color-base-l-l-30: var(--ch-color-base-l-l-30-tmp, var(--ch-color-base-l-l-30-pax, var(--ch-color-base-l-l-30-set, 88%)));
+  --ch-color-base-l-c-30: var(--ch-color-base-l-c-30-tmp, var(--ch-color-base-l-c-30-pax, var(--ch-color-base-l-c-30-set, 0)));
+  --ch-color-base-l-h-30: var(--ch-color-base-l-h-30-tmp, var(--ch-color-base-l-h-30-pax, var(--ch-color-base-l-h-30-set, 0)));
+  --ch-color-base-l-l-35: var(--ch-color-base-l-l-35-tmp, var(--ch-color-base-l-l-35-pax, var(--ch-color-base-l-l-35-set, 80%)));
+  --ch-color-base-l-c-35: var(--ch-color-base-l-c-35-tmp, var(--ch-color-base-l-c-35-pax, var(--ch-color-base-l-c-35-set, 0)));
+  --ch-color-base-l-h-35: var(--ch-color-base-l-h-35-tmp, var(--ch-color-base-l-h-35-pax, var(--ch-color-base-l-h-35-set, 0)));
+  --ch-color-base-l-l-40: var(--ch-color-base-l-l-40-tmp, var(--ch-color-base-l-l-40-pax, var(--ch-color-base-l-l-40-set, 70%)));
+  --ch-color-base-l-c-40: var(--ch-color-base-l-c-40-tmp, var(--ch-color-base-l-c-40-pax, var(--ch-color-base-l-c-40-set, 0)));
+  --ch-color-base-l-h-40: var(--ch-color-base-l-h-40-tmp, var(--ch-color-base-l-h-40-pax, var(--ch-color-base-l-h-40-set, 0)));
+  --ch-color-base-l-l-45: var(--ch-color-base-l-l-45-tmp, var(--ch-color-base-l-l-45-pax, var(--ch-color-base-l-l-45-set, 60%)));
+  --ch-color-base-l-c-45: var(--ch-color-base-l-c-45-tmp, var(--ch-color-base-l-c-45-pax, var(--ch-color-base-l-c-45-set, 0)));
+  --ch-color-base-l-h-45: var(--ch-color-base-l-h-45-tmp, var(--ch-color-base-l-h-45-pax, var(--ch-color-base-l-h-45-set, 0)));
+  --ch-color-base-l-l-50: var(--ch-color-base-l-l-50-tmp, var(--ch-color-base-l-l-50-pax, var(--ch-color-base-l-l-50-set, 50%)));
+  --ch-color-base-l-c-50: var(--ch-color-base-l-c-50-tmp, var(--ch-color-base-l-c-50-pax, var(--ch-color-base-l-c-50-set, 0)));
+  --ch-color-base-l-h-50: var(--ch-color-base-l-h-50-tmp, var(--ch-color-base-l-h-50-pax, var(--ch-color-base-l-h-50-set, 0)));
+  --ch-color-base-l-l-55: var(--ch-color-base-l-l-55-tmp, var(--ch-color-base-l-l-55-pax, var(--ch-color-base-l-l-55-set, 40%)));
+  --ch-color-base-l-c-55: var(--ch-color-base-l-c-55-tmp, var(--ch-color-base-l-c-55-pax, var(--ch-color-base-l-c-55-set, 0)));
+  --ch-color-base-l-h-55: var(--ch-color-base-l-h-55-tmp, var(--ch-color-base-l-h-55-pax, var(--ch-color-base-l-h-55-set, 0)));
+  --ch-color-base-l-l-60: var(--ch-color-base-l-l-60-tmp, var(--ch-color-base-l-l-60-pax, var(--ch-color-base-l-l-60-set, 30%)));
+  --ch-color-base-l-c-60: var(--ch-color-base-l-c-60-tmp, var(--ch-color-base-l-c-60-pax, var(--ch-color-base-l-c-60-set, 0)));
+  --ch-color-base-l-h-60: var(--ch-color-base-l-h-60-tmp, var(--ch-color-base-l-h-60-pax, var(--ch-color-base-l-h-60-set, 0)));
+  --ch-color-base-l-l-65: var(--ch-color-base-l-l-65-tmp, var(--ch-color-base-l-l-65-pax, var(--ch-color-base-l-l-65-set, 20%)));
+  --ch-color-base-l-c-65: var(--ch-color-base-l-c-65-tmp, var(--ch-color-base-l-c-65-pax, var(--ch-color-base-l-c-65-set, 0)));
+  --ch-color-base-l-h-65: var(--ch-color-base-l-h-65-tmp, var(--ch-color-base-l-h-65-pax, var(--ch-color-base-l-h-65-set, 0)));
+  --ch-color-base-l-l-70: var(--ch-color-base-l-l-70-tmp, var(--ch-color-base-l-l-70-pax, var(--ch-color-base-l-l-70-set, 12%)));
+  --ch-color-base-l-c-70: var(--ch-color-base-l-c-70-tmp, var(--ch-color-base-l-c-70-pax, var(--ch-color-base-l-c-70-set, 0)));
+  --ch-color-base-l-h-70: var(--ch-color-base-l-h-70-tmp, var(--ch-color-base-l-h-70-pax, var(--ch-color-base-l-h-70-set, 0)));
+  --ch-color-base-l-l-75: var(--ch-color-base-l-l-75-tmp, var(--ch-color-base-l-l-75-pax, var(--ch-color-base-l-l-75-set, 7%)));
+  --ch-color-base-l-c-75: var(--ch-color-base-l-c-75-tmp, var(--ch-color-base-l-c-75-pax, var(--ch-color-base-l-c-75-set, 0)));
+  --ch-color-base-l-h-75: var(--ch-color-base-l-h-75-tmp, var(--ch-color-base-l-h-75-pax, var(--ch-color-base-l-h-75-set, 0)));
+  --ch-color-base-l-l-80: var(--ch-color-base-l-l-80-tmp, var(--ch-color-base-l-l-80-pax, var(--ch-color-base-l-l-80-set, 5%)));
+  --ch-color-base-l-c-80: var(--ch-color-base-l-c-80-tmp, var(--ch-color-base-l-c-80-pax, var(--ch-color-base-l-c-80-set, 0)));
+  --ch-color-base-l-h-80: var(--ch-color-base-l-h-80-tmp, var(--ch-color-base-l-h-80-pax, var(--ch-color-base-l-h-80-set, 0)));
+  --ch-color-base-l-l-85: var(--ch-color-base-l-l-85-tmp, var(--ch-color-base-l-l-85-pax, var(--ch-color-base-l-l-85-set, 3%)));
+  --ch-color-base-l-c-85: var(--ch-color-base-l-c-85-tmp, var(--ch-color-base-l-c-85-pax, var(--ch-color-base-l-c-85-set, 0)));
+  --ch-color-base-l-h-85: var(--ch-color-base-l-h-85-tmp, var(--ch-color-base-l-h-85-pax, var(--ch-color-base-l-h-85-set, 0)));
+  --ch-color-base-l-l-90: var(--ch-color-base-l-l-90-tmp, var(--ch-color-base-l-l-90-pax, var(--ch-color-base-l-l-90-set, 2%)));
+  --ch-color-base-l-c-90: var(--ch-color-base-l-c-90-tmp, var(--ch-color-base-l-c-90-pax, var(--ch-color-base-l-c-90-set, 0)));
+  --ch-color-base-l-h-90: var(--ch-color-base-l-h-90-tmp, var(--ch-color-base-l-h-90-pax, var(--ch-color-base-l-h-90-set, 0)));
+  --ch-color-base-l-l-95: var(--ch-color-base-l-l-95-tmp, var(--ch-color-base-l-l-95-pax, var(--ch-color-base-l-l-95-set, 1%)));
+  --ch-color-base-l-c-95: var(--ch-color-base-l-c-95-tmp, var(--ch-color-base-l-c-95-pax, var(--ch-color-base-l-c-95-set, 0)));
+  --ch-color-base-l-h-95: var(--ch-color-base-l-h-95-tmp, var(--ch-color-base-l-h-95-pax, var(--ch-color-base-l-h-95-set, 0)));
+  --ch-color-base-l-l-100: var(--ch-color-base-l-l-100-tmp, var(--ch-color-base-l-l-100-pax, var(--ch-color-base-l-l-100-set, 0%)));
+  --ch-color-base-l-c-100: var(--ch-color-base-l-c-100-tmp, var(--ch-color-base-l-c-100-pax, var(--ch-color-base-l-c-100-set, 0)));
+  --ch-color-base-l-h-100: var(--ch-color-base-l-h-100-tmp, var(--ch-color-base-l-h-100-pax, var(--ch-color-base-l-h-100-set, 0)));
+  --color-base-00: oklch(var(--ch-color-base-l-l-00) var(--ch-color-base-l-c-00) var(--ch-color-base-l-h-00));
+  --color-base-05: oklch(var(--ch-color-base-l-l-05) var(--ch-color-base-l-c-05) var(--ch-color-base-l-h-05));
+  --color-base-10: oklch(var(--ch-color-base-l-l-10) var(--ch-color-base-l-c-10) var(--ch-color-base-l-h-10));
+  --color-base-15: oklch(var(--ch-color-base-l-l-15) var(--ch-color-base-l-c-15) var(--ch-color-base-l-h-15));
+  --color-base-20: oklch(var(--ch-color-base-l-l-20) var(--ch-color-base-l-c-20) var(--ch-color-base-l-h-20));
+  --color-base-25: oklch(var(--ch-color-base-l-l-25) var(--ch-color-base-l-c-25) var(--ch-color-base-l-h-25));
+  --color-base-30: oklch(var(--ch-color-base-l-l-30) var(--ch-color-base-l-c-30) var(--ch-color-base-l-h-30));
+  --color-base-35: oklch(var(--ch-color-base-l-l-35) var(--ch-color-base-l-c-35) var(--ch-color-base-l-h-35));
+  --color-base-40: oklch(var(--ch-color-base-l-l-40) var(--ch-color-base-l-c-40) var(--ch-color-base-l-h-40));
+  --color-base-45: oklch(var(--ch-color-base-l-l-45) var(--ch-color-base-l-c-45) var(--ch-color-base-l-h-45));
+  --color-base-50: oklch(var(--ch-color-base-l-l-50) var(--ch-color-base-l-c-50) var(--ch-color-base-l-h-50));
+  --color-base-55: oklch(var(--ch-color-base-l-l-55) var(--ch-color-base-l-c-55) var(--ch-color-base-l-h-55));
+  --color-base-60: oklch(var(--ch-color-base-l-l-60) var(--ch-color-base-l-c-60) var(--ch-color-base-l-h-60));
+  --color-base-65: oklch(var(--ch-color-base-l-l-65) var(--ch-color-base-l-c-65) var(--ch-color-base-l-h-65));
+  --color-base-70: oklch(var(--ch-color-base-l-l-70) var(--ch-color-base-l-c-70) var(--ch-color-base-l-h-70));
+  --color-base-75: oklch(var(--ch-color-base-l-l-75) var(--ch-color-base-l-c-75) var(--ch-color-base-l-h-75));
+  --color-base-80: oklch(var(--ch-color-base-l-l-80) var(--ch-color-base-l-c-80) var(--ch-color-base-l-h-80));
+  --color-base-85: oklch(var(--ch-color-base-l-l-85) var(--ch-color-base-l-c-85) var(--ch-color-base-l-h-85));
+  --color-base-90: oklch(var(--ch-color-base-l-l-90) var(--ch-color-base-l-c-90) var(--ch-color-base-l-h-90));
+  --color-base-95: oklch(var(--ch-color-base-l-l-95) var(--ch-color-base-l-c-95) var(--ch-color-base-l-h-95));
+  --color-base-100: oklch(var(--ch-color-base-l-l-100) var(--ch-color-base-l-c-100) var(--ch-color-base-l-h-100));
+}
+
+:where(.ssopt-custom-colour-template-dark),
+.ssopt-custom-colour-template-dark.ssopt-custom-colour-template-dark.ssopt-custom-colour-template-dark .theme-dark,
+.ssopt-custom-colour-template-dark.ssopt-custom-colour-template-dark.ssopt-custom-colour-template-dark.theme-dark {
+  --ch-color-base-d-l-00: var(--ch-color-base-d-l-00-tmp, var(--ch-color-base-d-l-00-pax, var(--ch-color-base-d-l-00-set, 13%)));
+  --ch-color-base-d-c-00: var(--ch-color-base-d-c-00-tmp, var(--ch-color-base-d-c-00-pax, var(--ch-color-base-d-c-00-set, 0)));
+  --ch-color-base-d-h-00: var(--ch-color-base-d-h-00-tmp, var(--ch-color-base-d-h-00-pax, var(--ch-color-base-d-h-00-set, 0)));
+  --ch-color-base-d-l-05: var(--ch-color-base-d-l-05-tmp, var(--ch-color-base-d-l-05-pax, var(--ch-color-base-d-l-05-set, 15%)));
+  --ch-color-base-d-c-05: var(--ch-color-base-d-c-05-tmp, var(--ch-color-base-d-c-05-pax, var(--ch-color-base-d-c-05-set, 0)));
+  --ch-color-base-d-h-05: var(--ch-color-base-d-h-05-tmp, var(--ch-color-base-d-h-05-pax, var(--ch-color-base-d-h-05-set, 0)));
+  --ch-color-base-d-l-10: var(--ch-color-base-d-l-10-tmp, var(--ch-color-base-d-l-10-pax, var(--ch-color-base-d-l-10-set, 17%)));
+  --ch-color-base-d-c-10: var(--ch-color-base-d-c-10-tmp, var(--ch-color-base-d-c-10-pax, var(--ch-color-base-d-c-10-set, 0)));
+  --ch-color-base-d-h-10: var(--ch-color-base-d-h-10-tmp, var(--ch-color-base-d-h-10-pax, var(--ch-color-base-d-h-10-set, 0)));
+  --ch-color-base-d-l-15: var(--ch-color-base-d-l-15-tmp, var(--ch-color-base-d-l-15-pax, var(--ch-color-base-d-l-15-set, 18%)));
+  --ch-color-base-d-c-15: var(--ch-color-base-d-c-15-tmp, var(--ch-color-base-d-c-15-pax, var(--ch-color-base-d-c-15-set, 0)));
+  --ch-color-base-d-h-15: var(--ch-color-base-d-h-15-tmp, var(--ch-color-base-d-h-15-pax, var(--ch-color-base-d-h-15-set, 0)));
+  --ch-color-base-d-l-20: var(--ch-color-base-d-l-20-tmp, var(--ch-color-base-d-l-20-pax, var(--ch-color-base-d-l-20-set, 19%)));
+  --ch-color-base-d-c-20: var(--ch-color-base-d-c-20-tmp, var(--ch-color-base-d-c-20-pax, var(--ch-color-base-d-c-20-set, 0)));
+  --ch-color-base-d-h-20: var(--ch-color-base-d-h-20-tmp, var(--ch-color-base-d-h-20-pax, var(--ch-color-base-d-h-20-set, 0)));
+  --ch-color-base-d-l-25: var(--ch-color-base-d-l-25-tmp, var(--ch-color-base-d-l-25-pax, var(--ch-color-base-d-l-25-set, 21%)));
+  --ch-color-base-d-c-25: var(--ch-color-base-d-c-25-tmp, var(--ch-color-base-d-c-25-pax, var(--ch-color-base-d-c-25-set, 0)));
+  --ch-color-base-d-h-25: var(--ch-color-base-d-h-25-tmp, var(--ch-color-base-d-h-25-pax, var(--ch-color-base-d-h-25-set, 0)));
+  --ch-color-base-d-l-30: var(--ch-color-base-d-l-30-tmp, var(--ch-color-base-d-l-30-pax, var(--ch-color-base-d-l-30-set, 24%)));
+  --ch-color-base-d-c-30: var(--ch-color-base-d-c-30-tmp, var(--ch-color-base-d-c-30-pax, var(--ch-color-base-d-c-30-set, 0)));
+  --ch-color-base-d-h-30: var(--ch-color-base-d-h-30-tmp, var(--ch-color-base-d-h-30-pax, var(--ch-color-base-d-h-30-set, 0)));
+  --ch-color-base-d-l-35: var(--ch-color-base-d-l-35-tmp, var(--ch-color-base-d-l-35-pax, var(--ch-color-base-d-l-35-set, 30%)));
+  --ch-color-base-d-c-35: var(--ch-color-base-d-c-35-tmp, var(--ch-color-base-d-c-35-pax, var(--ch-color-base-d-c-35-set, 0)));
+  --ch-color-base-d-h-35: var(--ch-color-base-d-h-35-tmp, var(--ch-color-base-d-h-35-pax, var(--ch-color-base-d-h-35-set, 0)));
+  --ch-color-base-d-l-40: var(--ch-color-base-d-l-40-tmp, var(--ch-color-base-d-l-40-pax, var(--ch-color-base-d-l-40-set, 38%)));
+  --ch-color-base-d-c-40: var(--ch-color-base-d-c-40-tmp, var(--ch-color-base-d-c-40-pax, var(--ch-color-base-d-c-40-set, 0)));
+  --ch-color-base-d-h-40: var(--ch-color-base-d-h-40-tmp, var(--ch-color-base-d-h-40-pax, var(--ch-color-base-d-h-40-set, 0)));
+  --ch-color-base-d-l-45: var(--ch-color-base-d-l-45-tmp, var(--ch-color-base-d-l-45-pax, var(--ch-color-base-d-l-45-set, 48%)));
+  --ch-color-base-d-c-45: var(--ch-color-base-d-c-45-tmp, var(--ch-color-base-d-c-45-pax, var(--ch-color-base-d-c-45-set, 0)));
+  --ch-color-base-d-h-45: var(--ch-color-base-d-h-45-tmp, var(--ch-color-base-d-h-45-pax, var(--ch-color-base-d-h-45-set, 0)));
+  --ch-color-base-d-l-50: var(--ch-color-base-d-l-50-tmp, var(--ch-color-base-d-l-50-pax, var(--ch-color-base-d-l-50-set, 58%)));
+  --ch-color-base-d-c-50: var(--ch-color-base-d-c-50-tmp, var(--ch-color-base-d-c-50-pax, var(--ch-color-base-d-c-50-set, 0)));
+  --ch-color-base-d-h-50: var(--ch-color-base-d-h-50-tmp, var(--ch-color-base-d-h-50-pax, var(--ch-color-base-d-h-50-set, 0)));
+  --ch-color-base-d-l-55: var(--ch-color-base-d-l-55-tmp, var(--ch-color-base-d-l-55-pax, var(--ch-color-base-d-l-55-set, 63%)));
+  --ch-color-base-d-c-55: var(--ch-color-base-d-c-55-tmp, var(--ch-color-base-d-c-55-pax, var(--ch-color-base-d-c-55-set, 0)));
+  --ch-color-base-d-h-55: var(--ch-color-base-d-h-55-tmp, var(--ch-color-base-d-h-55-pax, var(--ch-color-base-d-h-55-set, 0)));
+  --ch-color-base-d-l-60: var(--ch-color-base-d-l-60-tmp, var(--ch-color-base-d-l-60-pax, var(--ch-color-base-d-l-60-set, 68%)));
+  --ch-color-base-d-c-60: var(--ch-color-base-d-c-60-tmp, var(--ch-color-base-d-c-60-pax, var(--ch-color-base-d-c-60-set, 0)));
+  --ch-color-base-d-h-60: var(--ch-color-base-d-h-60-tmp, var(--ch-color-base-d-h-60-pax, var(--ch-color-base-d-h-60-set, 0)));
+  --ch-color-base-d-l-65: var(--ch-color-base-d-l-65-tmp, var(--ch-color-base-d-l-65-pax, var(--ch-color-base-d-l-65-set, 78%)));
+  --ch-color-base-d-c-65: var(--ch-color-base-d-c-65-tmp, var(--ch-color-base-d-c-65-pax, var(--ch-color-base-d-c-65-set, 0)));
+  --ch-color-base-d-h-65: var(--ch-color-base-d-h-65-tmp, var(--ch-color-base-d-h-65-pax, var(--ch-color-base-d-h-65-set, 0)));
+  --ch-color-base-d-l-70: var(--ch-color-base-d-l-70-tmp, var(--ch-color-base-d-l-70-pax, var(--ch-color-base-d-l-70-set, 86%)));
+  --ch-color-base-d-c-70: var(--ch-color-base-d-c-70-tmp, var(--ch-color-base-d-c-70-pax, var(--ch-color-base-d-c-70-set, 0)));
+  --ch-color-base-d-h-70: var(--ch-color-base-d-h-70-tmp, var(--ch-color-base-d-h-70-pax, var(--ch-color-base-d-h-70-set, 0)));
+  --ch-color-base-d-l-75: var(--ch-color-base-d-l-75-tmp, var(--ch-color-base-d-l-75-pax, var(--ch-color-base-d-l-75-set, 90%)));
+  --ch-color-base-d-c-75: var(--ch-color-base-d-c-75-tmp, var(--ch-color-base-d-c-75-pax, var(--ch-color-base-d-c-75-set, 0)));
+  --ch-color-base-d-h-75: var(--ch-color-base-d-h-75-tmp, var(--ch-color-base-d-h-75-pax, var(--ch-color-base-d-h-75-set, 0)));
+  --ch-color-base-d-l-80: var(--ch-color-base-d-l-80-tmp, var(--ch-color-base-d-l-80-pax, var(--ch-color-base-d-l-80-set, 92%)));
+  --ch-color-base-d-c-80: var(--ch-color-base-d-c-80-tmp, var(--ch-color-base-d-c-80-pax, var(--ch-color-base-d-c-80-set, 0)));
+  --ch-color-base-d-h-80: var(--ch-color-base-d-h-80-tmp, var(--ch-color-base-d-h-80-pax, var(--ch-color-base-d-h-80-set, 0)));
+  --ch-color-base-d-l-85: var(--ch-color-base-d-l-85-tmp, var(--ch-color-base-d-l-85-pax, var(--ch-color-base-d-l-85-set, 94%)));
+  --ch-color-base-d-c-85: var(--ch-color-base-d-c-85-tmp, var(--ch-color-base-d-c-85-pax, var(--ch-color-base-d-c-85-set, 0)));
+  --ch-color-base-d-h-85: var(--ch-color-base-d-h-85-tmp, var(--ch-color-base-d-h-85-pax, var(--ch-color-base-d-h-85-set, 0)));
+  --ch-color-base-d-l-90: var(--ch-color-base-d-l-90-tmp, var(--ch-color-base-d-l-90-pax, var(--ch-color-base-d-l-90-set, 95%)));
+  --ch-color-base-d-c-90: var(--ch-color-base-d-c-90-tmp, var(--ch-color-base-d-c-90-pax, var(--ch-color-base-d-c-90-set, 0)));
+  --ch-color-base-d-h-90: var(--ch-color-base-d-h-90-tmp, var(--ch-color-base-d-h-90-pax, var(--ch-color-base-d-h-90-set, 0)));
+  --ch-color-base-d-l-95: var(--ch-color-base-d-l-95-tmp, var(--ch-color-base-d-l-95-pax, var(--ch-color-base-d-l-95-set, 96%)));
+  --ch-color-base-d-c-95: var(--ch-color-base-d-c-95-tmp, var(--ch-color-base-d-c-95-pax, var(--ch-color-base-d-c-95-set, 0)));
+  --ch-color-base-d-h-95: var(--ch-color-base-d-h-95-tmp, var(--ch-color-base-d-h-95-pax, var(--ch-color-base-d-h-95-set, 0)));
+  --ch-color-base-d-l-100: var(--ch-color-base-d-l-100-tmp, var(--ch-color-base-d-l-100-pax, var(--ch-color-base-d-l-100-set, 98%)));
+  --ch-color-base-d-c-100: var(--ch-color-base-d-c-100-tmp, var(--ch-color-base-d-c-100-pax, var(--ch-color-base-d-c-100-set, 0)));
+  --ch-color-base-d-h-100: var(--ch-color-base-d-h-100-tmp, var(--ch-color-base-d-h-100-pax, var(--ch-color-base-d-h-100-set, 0)));
+  --color-base-00: oklch(var(--ch-color-base-d-l-00) var(--ch-color-base-d-c-00) var(--ch-color-base-d-h-00));
+  --color-base-05: oklch(var(--ch-color-base-d-l-05) var(--ch-color-base-d-c-05) var(--ch-color-base-d-h-05));
+  --color-base-10: oklch(var(--ch-color-base-d-l-10) var(--ch-color-base-d-c-10) var(--ch-color-base-d-h-10));
+  --color-base-15: oklch(var(--ch-color-base-d-l-15) var(--ch-color-base-d-c-15) var(--ch-color-base-d-h-15));
+  --color-base-20: oklch(var(--ch-color-base-d-l-20) var(--ch-color-base-d-c-20) var(--ch-color-base-d-h-20));
+  --color-base-25: oklch(var(--ch-color-base-d-l-25) var(--ch-color-base-d-c-25) var(--ch-color-base-d-h-25));
+  --color-base-30: oklch(var(--ch-color-base-d-l-30) var(--ch-color-base-d-c-30) var(--ch-color-base-d-h-30));
+  --color-base-35: oklch(var(--ch-color-base-d-l-35) var(--ch-color-base-d-c-35) var(--ch-color-base-d-h-35));
+  --color-base-40: oklch(var(--ch-color-base-d-l-40) var(--ch-color-base-d-c-40) var(--ch-color-base-d-h-40));
+  --color-base-45: oklch(var(--ch-color-base-d-l-45) var(--ch-color-base-d-c-45) var(--ch-color-base-d-h-45));
+  --color-base-50: oklch(var(--ch-color-base-d-l-50) var(--ch-color-base-d-c-50) var(--ch-color-base-d-h-50));
+  --color-base-55: oklch(var(--ch-color-base-d-l-55) var(--ch-color-base-d-c-55) var(--ch-color-base-d-h-55));
+  --color-base-60: oklch(var(--ch-color-base-d-l-60) var(--ch-color-base-d-c-60) var(--ch-color-base-d-h-60));
+  --color-base-65: oklch(var(--ch-color-base-d-l-65) var(--ch-color-base-d-c-65) var(--ch-color-base-d-h-65));
+  --color-base-70: oklch(var(--ch-color-base-d-l-70) var(--ch-color-base-d-c-70) var(--ch-color-base-d-h-70));
+  --color-base-75: oklch(var(--ch-color-base-d-l-75) var(--ch-color-base-d-c-75) var(--ch-color-base-d-h-75));
+  --color-base-80: oklch(var(--ch-color-base-d-l-80) var(--ch-color-base-d-c-80) var(--ch-color-base-d-h-80));
+  --color-base-85: oklch(var(--ch-color-base-d-l-85) var(--ch-color-base-d-c-85) var(--ch-color-base-d-h-85));
+  --color-base-90: oklch(var(--ch-color-base-d-l-90) var(--ch-color-base-d-c-90) var(--ch-color-base-d-h-90));
+  --color-base-95: oklch(var(--ch-color-base-d-l-95) var(--ch-color-base-d-c-95) var(--ch-color-base-d-h-95));
+  --color-base-100: oklch(var(--ch-color-base-d-l-100) var(--ch-color-base-d-c-100) var(--ch-color-base-d-h-100));
+}
+
+/*
+This correctly generates the base themes to be ready for your preset,
+pax, and tmp variables, which will be defined in other files/stylesheets.
+*/
+.theme-light {
+  --color-red-2: oklch(from var(--color-red) calc(l - 0.1) c calc(h + 4));
+  --text-error-hover: var(--color-red-2);
+  --background-modifier-message: rgb(0 0 0 / 80%);
+  --background-primary: var(--color-base-00);
+  --background-primary-alt: var(--color-base-10);
+  --background-secondary: var(--color-base-20);
+  --background-secondary-alt: var(--color-base-25);
+  --interactive-normal: var(--color-base-20);
+  --interactive-hover: var(--color-base-30);
+  --interactive-focus: var(--color-base-40);
+  --background-modifier-border: var(--color-base-35);
+  --background-modifier-border-hover: var(--color-base-40);
+  --background-modifier-border-focus: var(--color-base-45);
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-60);
+  --text-faint: var(--color-base-45);
+  --text-highlight-bg: var(--col-highlight-0);
+  --text-highlight-bg-active: var(--col-highlight-1);
+  --text-selection: var(--color-selection);
+  --code-background: var(--color-base-15);
+  --background-modifier-form-field: var(--color-base-05);
+  --background-modifier-active-hover: oklch(from var(--color-accent) l c h / 10%);
+}
+
+.theme-dark {
+  --color-red-2: oklch(from var(--color-red) calc(l - 0.1) c calc(h + 4));
+  --text-error-hover: var(--color-red-2);
+  --background-modifier-message: rgb(0 0 0 / 80%);
+  --background-primary: var(--color-base-00);
+  --background-primary-alt: var(--color-base-10);
+  --background-secondary: var(--color-base-20);
+  --background-secondary-alt: var(--color-base-25);
+  --interactive-normal: var(--color-base-20);
+  --interactive-hover: var(--color-base-30);
+  --interactive-focus: var(--color-base-40);
+  --background-modifier-border: var(--color-base-35);
+  --background-modifier-border-hover: var(--color-base-40);
+  --background-modifier-border-focus: var(--color-base-45);
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-60);
+  --text-faint: var(--color-base-45);
+  --text-highlight-bg: var(--col-highlight-0);
+  --text-highlight-bg-active: var(--col-highlight-1);
+  --text-selection: var(--color-selection);
+  --code-background: var(--color-base-15);
+  --background-modifier-form-field: var(--color-base-05);
+  --background-modifier-active-hover: oklch(from var(--color-accent) l c h / 10%);
+  --background-modifier-error-hover: var(--color-red-2);
+}
+

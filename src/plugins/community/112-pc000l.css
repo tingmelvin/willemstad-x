@@ -1,0 +1,194 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000L
+\ Plugins > Community
+\ Style Settings
+\ Icons Elsewhere
+───────────────────────────────────────────────────────────────────────────────────
+CSS-ing the Credits section
+──────────────────────────────────────────────────────────────────────────────── */
+.setting-item {
+  /* build a comma-separated list of [data-id="…"] */
+
+  /* inject the selector and yield */
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) {
+  column-gap: 0;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) {
+  overflow: auto;
+  overflow-wrap: anywhere;
+  border-left: 1px solid var(--background-modifier-border);
+  border-right: 1px solid var(--background-modifier-border);
+  padding: 0.5em 0.5em 0.5em 0.75em; /* used to be 0.75em and 0 */ /* more space to the left for uniformity */
+  background-color: var(--background-primary-alt);
+  text-align: justify;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]).style-settings-info-text {
+  column-gap: 0;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) .setting-item-description {
+  color: var(--text-accent);
+  text-align: justify;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) p {
+  overflow: visible;
+  display: grid;
+  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  column-gap: var(--header-margin);
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link {
+  float: right;
+  background-image: none;
+  padding-inline-end: 0;
+  width: calc(var(--header-icon-size) + 2 * var(--header-padding));
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link.external-link {
+  margin-top: var(--header-margin);
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link:first-of-type {
+  padding-inline-end: 0;
+  margin-left: 10px;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href*="willemstad.cc"] {
+  position: relative;
+  display: block;
+  font-size: 0;
+  flex: 0 0 auto;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href*="willemstad.cc"]:hover::before {
+  background-color: var(--background-secondary-alt);
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href*="willemstad.cc"]::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  padding: var(--header-padding);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  transition: background-color 0.2s ease-in-out;
+  content: " ";
+  flex-shrink: 0;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href*="willemstad.cc"]::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  margin: var(--header-padding);
+  background-color: var(--icon-color);
+  content: " ";
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M12 2C15.866 2 19 5.13401 19 9C19 9.11351 18.9973 9.22639 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 18.3137 20.3137 21 17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 5.13401 8.13401 2 12 2ZM12 4C9.23858 4 7 6.23858 7 9C7 9.08147 7.00193 9.16263 7.00578 9.24344L7.07662 10.7309L5.67183 11.2252C4.0844 11.7837 3 13.2889 3 15C3 17.2091 4.79086 19 7 19H17C19.2091 19 21 17.2091 21 15C21 12.79 19.21 11 17 11C15.233 11 13.7337 12.1457 13.2042 13.7347L11.3064 13.1021C12.1005 10.7185 14.35 9 17 9C17 6.23858 14.7614 4 12 4Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href*="willemstad.cc"]:hover::after {
+  background-color: var(--icon-color-hover);
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href$="Example"] {
+  position: relative;
+  display: block;
+  font-size: 0;
+  flex: 0 0 auto;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href$="Example"]:hover::before {
+  background-color: var(--background-secondary-alt);
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href$="Example"]::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  padding: var(--header-padding);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  transition: background-color 0.2s ease-in-out;
+  content: " ";
+  flex-shrink: 0;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href$="Example"]::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  margin: var(--header-padding);
+  background-color: var(--icon-color);
+  content: " ";
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M19 4H5V20H19V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H19.9997C20.5519 2 20.9996 2.44772 20.9997 3L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918ZM11.2929 13.1213L15.5355 8.87868L16.9497 10.2929L11.2929 15.9497L7.40381 12.0607L8.81802 10.6464L11.2929 13.1213Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link[href$="Example"]:hover::after {
+  background-color: var(--icon-color-hover);
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link {
+  display: flex;
+  width: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
+  height: calc(var(--sidebar-icon-size) + 2 * var(--header-padding));
+  align-self: start;
+  margin-left: 5px;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link.external-link::before, .setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) a.external-link.external-link::after {
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) .setting-item-info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2%;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) .setting-item-description {
+  padding-top: 0;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) .setting-item-description > p {
+  column-gap: unset;
+}
+
+.setting-item:is([data-id="documentation-callouts-metadata"], [data-id="documentation-callouts-standard"], [data-id="documentation-callouts-infobox"], [data-id="documentation-callouts-aside"], [data-id="documentation-callouts-columns"], [data-id="documentation-cssclass-banner"], [data-id="documentation-cssclass-cornell"], [data-id="documentation-cssclass-latex"], [data-id="documentation-cssclass-magazine"], [data-id="documentation-callouts-gallery"], [data-id="documentation-callouts-image-grid"]) .setting-item-description a.external-link {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* Icons Elsewhere (usually Documentations) */
+

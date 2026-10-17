@@ -1,0 +1,707 @@
+/* @settings
+name: "App UI" 
+id: V1-Willemstad-UI
+settings:
+    -
+        id: startup
+        title: Startup Screen
+        description: "Options to modify the startup screen."
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: info-startup
+            title: Note on Startup Screen Customisations
+            type: class-toggle
+            document: DS01-Startup-DefaultN
+            description: "Please note as Style Settings loads slightly after the Obsidian startup screen first loads, there will be a slight delay before the customisations take effect."
+            default: false
+    -
+            id: ssopt-startup-default
+            title: Revert to Default Startup Screen
+            type: class-toggle
+            document: DS01-Startup-DefaultN
+            description: "When enabled, this reverts the startup screen to the default Obsidian startup screen."
+            default: false
+    -
+            id: startup-obsidian-image
+            title: Select Obsidian Startup Icon
+            type: variable-select
+            document: DS01-Startup-DefaultN
+            notes: (Requires 'Revert to Default Startup Screen' enabled)
+            description: "This changes the Obsidian icon displayed on the startup screen. The default is the 3D version of the current logo."
+            allowEmpty: false
+            default: var(--logo-icon-filled-flat)
+            options:
+                -
+                    label: 3D Logo Icon
+                    value: var(--logo-icon-filled-new)
+                -
+                    label: Current Line Icon
+                    value: var(--logo-icon-line-new)
+                -
+                    label: Current Flat Icon (Default)
+                    value: var(--logo-icon-filled-flat)
+                -
+                    label: Previous Line Icon (Gemmy)
+                    value: var(--logo-icon-line)
+                -
+                    label: Previous Filled Icon (Gemmy)
+                    value: var(--logo-icon-filled)
+    -
+        id: titlebar
+        title: App Titlebar
+        description: Options to manipulate and control the titlebar.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-titlebar-use-accent
+            title: Use Accent Colour for Titlebar
+            type: class-toggle
+            document: DA12-AppliedColours
+            notes: (For Obsidian Frame and Frameless Mode only)
+            description: "When enabled, this changes the titlebar colour to use the accent colours."
+            addCommand: true
+    -
+            id: col-titlebar-accent
+            title: Titlebar Accent Colour
+            type: variable-select
+            document: DA12-AppliedColours
+            notes: (For Obsidian Frame and Frameless Mode only; Requires 'Use Accent Colour for Titlebar' enabled)
+            description: "Select the specific accent colour to be used for the titlebar here."
+            allowEmpty: false
+            default: var(--color-accent)
+            options:
+                -
+                    label: color-accent
+                    value: var(--color-accent)
+                -
+                    label: color-accent-1
+                    value: var(--color-accent-1)
+                -
+                    label: color-accent-2
+                    value: var(--color-accent-2)
+    -
+            id: ssopt-exclude-titlebar-buttons
+            title: Disable Titlebar Control Buttons
+            type: class-toggle
+            document: AT02-Opt-Titlebar
+            notes: (For Windows and Linux, and in Frameless Mode)
+            description: "When enabled, the three control buttons (minimise, maximise and close) on the right side of the titlebar will be omitted. Drag the left sidebar to move the Obsidian window around your screen, double-click to minimise/expand, and Alt-F4 (Windows) to close."
+            default: false
+            addCommand: true
+    -
+            id: ssopt-tb-willemstad
+            title: Remove Willemstad Version Number Suffix
+            type: class-toggle
+            document: AA01-License
+            notes: (For Obsidian Frame Mode only)
+            description: "When enabled, the Willemstad version number suffix is removed from the titlebar, from the end of the Obsidian version number."
+    -
+        id: statusbar
+        title: Status Bar
+        description: Options to manipulate and control the status bar.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-status-bar-size
+            title: Style of Status Bar
+            type: class-select
+            document: DV01-StatusBar
+            description: Choose the format your status bar should take in Obsidian.
+            allowEmpty: false
+            default: default
+            options:
+                -
+                    label: 'Full'
+                    value: ssopt-status-bar-full
+                -
+                    label: 'Mini (Default Obsidian)'
+                    value: default
+                -
+                    label: ⚠ NUCLEAR OPTION — No Status Bar
+                    value: ssopt-no-status-bar
+    -
+            id: status-bar-full-justify-content
+            title: Content Justification in Full Status Bar
+            type: variable-select
+            document: DV01-StatusBar
+            note: (Requires 'Style of Status Bar' set to 'Full')
+            description: Choose the justification of the content in the full-sized status bar. The default option is right-aligned.
+            default: right
+            options:
+                -
+                    label: Left-Aligned
+                    value: left
+                -
+                    label: Centre-Aligned
+                    value: center
+                -
+                    label: Right-Aligned
+                    value: right           
+    -
+            id: status-bar-align
+            title: Alignment of Mini Status Bar
+            type: class-select
+            document: DV01-StatusBar
+            note: (Requires 'Style of Status Bar' set to 'Mini')
+            description: Choose the position and alignment you would like to use for the mini-sized status bar in Obsidian.
+            allowEmpty: false
+            default: default
+            options:
+                -
+                    label: 'Centre-Aligned (Default Willemstad)'
+                    value: default
+                -
+                    label: 'Right-Aligned (Default Obsidian)'
+                    value: ssopt-status-bar-right
+    -
+            id: ssopt-status-bar-full-style
+            title: Coverage of Full Status Bar
+            type: variable-select
+            description: "Determine whether the Full Status Bar should be full-width, or whether the ribbon should be full-height."
+            note: (Requires 'Style of Status Bar' set to 'Full')
+            allowEmpty: false
+            default: '1'
+            options:
+                -
+                    label: "Stylised (excludes space under left ribbon)"
+                    value: '1'
+                -
+                    label: "Full-Width (including space under left ribbon)"
+                    value: '0'
+    -
+            id: ssopt-status-bar-float-not
+            title: Disable Floating Status Bar
+            type: class-toggle
+            document: DV01-StatusBar
+            note: (Requites 'Style of Status Bar' set to 'Mini')
+            description: "By default, the status bar will float away from the bottom edge of the application. This option allows you to anchor the status bar to the bottom of the screen."
+            default: false
+    -
+            id: status-bar-bottom-float-margin
+            title: Floating Bar Distance from Bottom
+            type: variable-number-slider
+            document: DV01-StatusBar
+            notes: (Requires 'Floating Status Bar' enabled)
+            description: "Controls how far the floating status bar is from the bottom edge of the screen. The default value is 8px."
+            format: 'px'
+            default: 8
+            min: 1
+            max: 30
+            step: 1
+    -
+            id: ssopt-status-bar-shift-workspace
+            title: Account for Status Bar in Workspace
+            type: class-toggle
+            document: DV01-StatusBar
+            note: (Requires 'Style of Status Bar' set to 'Mini')
+            description: "By default, Willemstad does not account for space required for the mini status bar in the workspace. When this option is enabled, additional padding will be added to selected workspace elements to account for the status bar."
+            default: false
+    -
+            id: ssopt-status-bar-glass
+            title: Frosted Glass Aesthetic
+            type: class-toggle
+            document: DV01-StatusBar
+            notes: (Requires 'No Blur Backdrop Filter' deactivated) 
+            description: "When enabled, the status bar will adopt a frosted glass aesthetic."
+            default: false
+    -
+            id: status-bar-glass-blur
+            title: Blur Intensity of Frosted Glass Aesthetic
+            type: variable-number-slider
+            document: DV01-StatusBar
+            notes: (Requires 'Frosted Glass Aesthetic' enabled) 
+            description: "Change the amount of blur/frost applied to the status bar. The original settings is 4px."
+            format: px
+            default: 4
+            min: 0
+            max: 12
+            step: 1
+    -
+            id: status-bar-max-width
+            title: Max Width of Status Bar
+            type: variable-number-slider
+            document: DV01-StatusBar
+            note: (Requires 'Style of Status Bar' set to 'Mini')
+            description: "Change the maximum width of the status bar. The original settings is 85%."
+            format: '%'
+            default: 85
+            min: 20
+            max: 100
+            step: 1
+    -
+            id: ssopt-status-bar-borderless
+            title: Borderless Status Bar
+            type: class-toggle
+            document: DV01-StatusBar
+            description: "When enabled, the status bar will have no borders applied to it."
+            default: false
+    -
+        id: ribbon-mwb-settings
+        title: Ribbon and Main Workspace Buttons
+        description: Options to manipulate and control the general Obsidian app interface.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ribbon
+            title: Ribbon
+            description:
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: ribbon-select
+                title: Ribbon Style
+                type: class-select
+                document: DC01A-Opt-Ribbon-Float, DC01B-Opt-Ribbon-No
+                description: Choose which ribbon/sidebar/side docks style you would like to use for Obsidian.
+                allowEmpty: false
+                default: default
+                options:
+                    -
+                        label: Default Ribbon
+                        value: default
+                    -
+                        label: Floating Ribbon
+                        value: ssopt-sd-float-ribbon
+                    -
+                        label: ⚠ NUCLEAR OPTION — No Ribbon
+                        value: ssopt-sd-no-ribbon
+    -
+                id: ssopt-ribbon-no-drag
+                title: Disable Draggable Ribbon
+                type: class-toggle
+                document: DA02-FirstOrder (DA02-2 | SR Side Dock Ribbon)
+                notes: (Disabled by default in Floating Ribbon Mode for usability reasons)
+                description: "Willemstad sets the ribbon as draggable by default. This option allows the user to disable this feature."
+                default: false
+    -
+                    id: height-norm-sd
+                    title: 'Floating Ribbon Height, when not hovered'
+                    type: variable-number-slider
+                    document: DC01A-Opt-Ribbon-Float
+                    notes: (Requires 'Floating Ribbon' ribbon style enabled)
+                    description: 'Set the height of the tabs for the Floating Ribbon, when not hovered.'
+                    format: '%'
+                    default: 25
+                    min: 5
+                    max: 100
+                    step: 1
+    -
+                    id: height-hover-sd
+                    title: 'Floating Ribbon Height, when hovered'
+                    type: variable-number-slider
+                    document: DC01A-Opt-Ribbon-Float
+                    notes: (Requires 'Floating Ribbon' ribbon style enabled)
+                    description: 'Set the height of the tabs for the Floating Ribbon, when hovered.'
+                    format: '%'
+                    default: 50
+                    min: 5
+                    max: 100
+                    step: 1
+    -
+                    id: info-width-norm-sd
+                    title: Note on Floating Ribbon Width
+                    type: class-toggle
+                    document: DC01A-Opt-Ribbon-Float
+                    description: As the width of the floating ribbon is set via the original ribbon width, this is not controllable by its own. However, this can be changed via the icon sizes, paddings, and margins controls available below in Main Workspace Buttons.
+                    default: false
+    -
+                id: ssopt-sd-float-ribbon-blur
+                title: Enable Blur for Floating Ribbon
+                type: class-toggle
+                document: DC01A-Opt-Ribbon-Float
+                notes: (Requires 'Floating Ribbon' ribbon style enabled)
+                description: "Willemstad sets the ribbon as draggable by default. This option allows the user to disable this feature."
+                default: false
+    -
+                id: blur-floating-ribbon
+                title: Blur Intensity of Floating Ribbon
+                type: variable-select
+                document: DC01A-Opt-Ribbon-Float
+                notes: (Requires 'Enable Blur for Floating Ribbon' enabled; Requires 'Floating Ribbon' ribbon style enabled;                 Requires 'No Blur Backdrop Filter' deactivated)
+                description: "This option allows one to adjust the blur intensity of the floating ribbon."
+                default: var(--blur-4)
+                options:
+                    -
+                        label: blur-1
+                        value: var(--blur-1)
+                    -
+                        label: blur-2
+                        value: var(--blur-2)
+                    -
+                        label: blur-4
+                        value: var(--blur-4)
+                    -
+                        label: blur-8
+                        value: var(--blur-8)       
+    -
+            id: mwb-settings
+            title: Main Workspace Buttons
+            description:
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: ssopt-sidebar-toggle-button-no-colour
+                title: Disable Colour of Sidebar Toggle Buttons
+                type: class-toggle
+                document: DA12-AppliedColours (DA12-3)
+                description: "By default, Willemstad sets the sidebar toggle buttons to be coloured when the sidebars are expanded. This option allows the user to disable this feature."
+                default: false
+    -
+                id: icon-width-sidebar
+                title: Change Width of Rectangle in Opened Sidebar Toggle Buttons
+                type: variable-number-slider
+                document: DA02-FirstOrder | SB
+                description: "Change how expanded the centre window should be on the sidebar toggle buttons. The original settings are 24%."
+                format: '%'
+                default: 24
+                min: 10
+                max: 67
+                step: 1
+    -
+                id: info-ribbon-width-header-height
+                title: Note on Ribbon Width and Header Height
+                type: class-toggle
+                document: DA02-FirstOrder
+                description: "Willemstad controls both the ribbon width and the header height via the icon sizes, paddings, and margins controls available below. As such, the ribbon width and header heights are not directly controllable here." 
+                default: false
+    -
+                id: info-icon-sizes
+                title: Note on Icon Sizes
+                type: class-toggle
+                document: DA02-FirstOrder
+                description: "Willemstad uses complex math to control icon sizes, paddings, and margin throughout the app interface. You are recommended to stick to the suggested icon and padding sizes, and to use Ctrl (Windows and Linux) or Cmd ⌘ (Mac) + Plus/Minus-key (+/-) to zoom in/out."  
+                default: false    
+    -
+                id: sidebar-icon-size
+                title: Icon Size — Sidebar Toggle Buttons
+                type: variable-number-slider
+                document: DA02-FirstOrder
+                description: "The original settings are 18px."
+                format: px
+                default: 18
+                min: 10
+                max: 24
+                step: 1
+    -
+                id: header-icon-size
+                title: Icon Size — Header Buttons
+                type: variable-number-slider
+                document: DA02-FirstOrder
+                description: "The original settings are 16px."
+                format: px
+                default: 16
+                min: 10
+                max: 24
+                step: 1
+    -
+                id: tab-icon-size
+                title: Icon Size — Tab Buttons
+                type: variable-number-slider
+                document: DA02-FirstOrder
+                description: "The original settings are 14px."
+                format: px
+                default: 14
+                min: 10
+                max: 24
+                step: 1
+    -
+                id: header-padding
+                title: Padding — Header Buttons
+                type: variable-number-slider
+                document: DA02-FirstOrder
+                description: "The original settings are 6px. Math calculations sets the padding of tab and header buttons from this value."
+                format: px
+                default: 6
+                min: 0
+                max: 12
+                step: 1
+    -
+                id: header-margin
+                title: Margin
+                type: variable-number-slider
+                document: DA02-FirstOrder
+                description: "This sets many margin values in the UI, and works because of math magic. The original settings are 4px."
+                format: px
+                default: 4
+                min: 0
+                max: 12
+                step: 1
+    -
+                id: hover-frac
+                title: Hover Fraction for Buttons
+                type: variable-number-slider
+                document: DA02-FirstOrder
+                description: "Set the magnitude in which the icons in the ribbon and main workspace buttons should increase in size when hovered over, with respect to the total button space. The default value is 0.25."
+                default: 0.25
+                min: 0
+                max: 1
+                step: 0.05
+    -
+        id: vault-profile-settings
+        title: Vault Profile
+        type: heading
+        description: "Options to control the vault profile drawer at the bottom of the left sidebar."
+        level: 2
+        collapsed: false
+    -
+        id: ssopt-drawer-bg
+        title: Vault Profile Background Colour
+        type: variable-select
+        description: "Changes the background colour of the vault profile drawer."
+        allowEmpty: false
+        default: '0'
+        options:
+            -
+                label: "background-secondary (Default)"
+                value: '0'
+            -
+                label: "background-primary-alt (Flushes with Left Sidepane)"
+                value: '1'
+    -
+        id: editor-workspace-tab-settings
+        title: Tabs in Editor Workspace
+        description: Options to manipulate and control the tabs in the editor workspace tab headers.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-no-pin-tab-front
+            title: Disable Pinning Tabs to Front
+            type: class-toggle
+            document: DA01-FirefoxTabs
+            description: "By default, pinned tabs in Willemstad are pinned to the front. This option allows one to disable this feature."
+            default: false
+    -
+            id: workspace-tabs-style-select
+            title: Tab Style
+            type: class-select
+            document: DA02-OtherTabs
+            description: 'Choose the visual style for the main editor tabs.'
+            allowEmpty: false
+            default: default
+            options:
+                -
+                    label: Modern (Default)
+                    value: default
+                -
+                    label: Square
+                    value: ssopt-tabs-square
+                -
+                    label: Underline
+                    value: ssopt-tabs-underline
+                -
+                    label: Box Index
+                    value: ssopt-tabs-index-box
+                -
+                    label: Classic Index
+                    value: ssopt-tabs-index-old
+    -
+            id: ssopt-tabs-modern-borderless
+            title: Borderless Active Tabs
+            type: class-toggle
+            document: DA01-FirefoxTabs
+            description: "By default, Willemstad's modern tabs have a border around active modern tabs. This option allows one to disable this feature."
+            default: false
+    -
+        id: file-explorer-settings
+        title: File Explorer
+        type: heading
+        description: 'Options to manipulate and control the file explorer/navigation sidepane.'
+        level: 2
+        collapsed: false
+    -
+            id: nav-title-margin
+            title: Spacing between Titles in File Explorer
+            type: variable-number-slider
+            document: DV01-StatusBar
+            description: "Adjusts the vertical spacing between navigation titles. The default is 2px."
+            format: px
+            default: 2
+            min: 0
+            max: 5
+            step: 1
+    -
+            id: ssopt-sticky-nav-folder-title
+            title: Sticky Folder Titles
+            type: class-toggle
+            description: "When enabled, folder titles in the File Explorer will stick to the top of the pane as you scroll."
+            default: false
+    -
+            id: ssopt-disable-nav-icons
+            title: Disable Custom File Extension Icons in File Explorer
+            type: class-toggle
+            document: X102
+            description: "Willemstad changes the file extension text in the file explorer to icons. Toggle this to disable the change and revert back to the Obsidian default."
+    -
+        id: nav-header-settings
+        title: Navigation Header
+        type: heading
+        description: 'Options to manipulate and control items within the navigation header, which is generally located at the top of panes such as File Explorer and Bookmarks.'
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-nav-align
+            title: "Alignment of Nav Buttons"
+            type: variable-select
+            description: "Controls the alignment of the buttons (e.g., New Note, New Folder) in the navigation header."
+            allowEmpty: false
+            default: 'left'
+            options:
+                -
+                    label: "Left (Default)"
+                    value: 'left'
+                -
+                    label: "Center"
+                    value: 'center'
+                -
+                    label: "Right"
+                    value: 'right'
+                -
+                    label: "Stretch"
+                    value: 'stretch'
+    -
+        id: modals
+        title: Modals
+        type: heading
+        description: 'Change the widths and heights of modals (the settings/community plugins/themes/Publish menus).'
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-revert-mod-community
+            title: Revert Community Modals to Default
+            type: class-toggle
+            description: "When enabled, this disables the theme's custom layout for the Community Plugin and Theme store modals, reverting them to the standard Obsidian appearance."
+            default: false
+    -
+            id: grid-columns-container-comm-modal
+            title: Community Modals Container Readme Per-Row Items 
+            type: variable-number-slider
+            document: MA02-CommWideFixes
+            description: "In the Readme for Plugins and Themes in their respective stores, there are buttons to, for example, disable and uninstall the plugin/theme. This option allows one to adjust how many items should appear per row. The original settings are 5 columns."
+            format: ''
+            default: 5
+            min: 1
+            max: 7
+    -
+            id: settings-modal
+            title: Settings Modal
+            type: heading
+            description:
+            level: 3
+            collapsed: false
+    -
+                id: mod-settings-left-column-spacing
+                title: 'Spacing between Settings Left Column Navigation Items'
+                type: variable-text
+                default: '0px'
+                description: "Adjusts the spacing of the settings left column sections, in between 'Options', 'Core Plugins' and 'Community Plugins' segments. Accepts any valid CSS unit (px, em, rem, %, etc.)."
+    -
+                id: ssopt-add-mod-settings-left-column-border
+                title: "Add Border for Settings Left Column Navigation Items"
+                type: class-toggle
+                description: "Adds a bottom border to the settings left column section titles (Options, Core Plugins, Community Plugins)."
+                default: false
+    -
+            id: modal-widths
+            title: Modal Widths
+            type: heading
+            description:
+            level: 3
+            collapsed: false
+    -
+                id: modal-width-settings
+                title: Modal Widths — Settings
+                type: variable-number-slider
+                document: MA11-ModalSizingControls
+                format: 'vw'
+                default: 90
+                min: 45
+                max: 98
+                step: 1
+    -
+                id: modal-width-community-plugin
+                title: Modal Widths — Community Plugin Store
+                type: variable-number-slider
+                document: MA11-ModalSizingControls
+                format: 'vw'
+                default: 90
+                min: 45
+                max: 98
+                step: 1
+    -
+                id: modal-width-community-theme
+                title: Modal Widths — Community Theme Store
+                type: variable-number-slider
+                document: MA11-ModalSizingControls
+                format: 'vw'
+                default: 90
+                min: 45
+                max: 98
+                step: 1
+    -
+                id: modal-width-publish
+                title: Modal Widths — Publish
+                type: variable-number-slider
+                document: PB005-Publish
+                format: 'vw'
+                default: 90
+                min: 45
+                max: 98
+                step: 1
+    -
+            id: modal-heights
+            title: Modal Heights
+            type: heading
+            document: MA11-ModalSizingControls
+            description:
+            level: 3
+            collapsed: false
+    -
+                id: modal-height-settings
+                title: Modal Heights — Settings
+                type: variable-number-slider
+                document: MA11-ModalSizingControls
+                format: 'vh'
+                default: 85
+                min: 40
+                max: 98
+                step: 1
+    -
+                id: modal-height-community-plugin
+                title: Modal Heights — Community Plugin Store
+                type: variable-number-slider
+                document: MA11-ModalSizingControls
+                format: 'vh'
+                default: 85
+                min: 40
+                max: 98
+                step: 1
+    -
+                id: modal-height-community-theme
+                title: Modal Heights — Community Theme Store
+                type: variable-number-slider
+                document: MA11-ModalSizingControls
+                format: 'vh'
+                default: 85
+                min: 40
+                max: 98
+                step: 1
+    -
+                id: modal-height-publish
+                title: Modal Heights — Publish
+                type: variable-number-slider
+                document: PB005-Publish
+                format: 'vh'
+                default: 85
+                min: 40
+                max: 98
+                step: 1
+
+*/

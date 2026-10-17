@@ -1,0 +1,234 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000A
+\ Plugins > Community
+\ Style Settings
+\ Fixing Egregrious Issues
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* PC000A-1 | Fix the Colour Picker */
+.style-settings-container {
+  /* fix the color picker */
+}
+
+.style-settings-container .themed-color-wrapper {
+  display: grid;
+  gap: var(--size-4-2);
+
+  /* wtheck */
+}
+
+.style-settings-container .themed-color-wrapper > div + div {
+  margin-top: 0; /* no! use grid-gap */
+}
+
+.style-settings-container .themed-color-wrapper div {
+  padding: 0;
+  border-radius: var(--radius-s);
+}
+
+.style-settings-container .themed-color-wrapper > div {
+  padding: var(--size-2-1);
+  padding-left: var(--size-4-1);
+}
+
+.style-settings-container .themed-color-wrapper > :where(.theme-light, .theme-dark) {
+  border: 1px solid var(--divider-color);
+}
+
+.style-settings-container .pickr-reset > button {
+  margin-left: var(--size-4-1);
+  padding: 0 var(--size-4-1);
+}
+
+/* PC000A-2 | Fix the View Content bit for Colour Picker */
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) .themed-color-wrapper {
+  display: grid;
+}
+
+/* PC000A-3 | Margin-bottom for the .style-settings-heading[data-level="0"] */
+.style-settings-heading[data-level="0"]:not(.is-collapsed) {
+  margin-bottom: var(--size-4-3); /* used to be 26px */
+}
+
+/* PC000A-4 | Add a border-top for style-settings-headings which isn't the first thing innit */
+.setting-item + .style-settings-heading {
+  border-top: 1px solid var(--divider-color);
+}
+
+.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+  margin-left: -16px;
+} /* move 1px from -17px */
+
+/* PC000A-5 | Fix flex for setting items */
+
+/* using flex */
+.style-settings-container .setting-item {
+  column-gap: 2%; /* var(--size-4-4); original obs setting */ /* remove padding */
+}
+
+.style-settings-container .setting-item > .setting-item-info {
+  margin-inline-end: 0;
+  flex: 1 1 84%; /* keeps a steady 70% */ /* one flex-grow for things without description - for the icons */ /* but won't shrink */
+}
+
+.style-settings-container .setting-item > .setting-item-description, .style-settings-container .setting-item > .setting-item-control {
+  flex: 1 1 14%;
+}
+
+/* using grid */
+
+/*
+.style-settings-container {
+    .setting-item {
+        display: grid;
+        grid-template-columns: 1fr minmax(20%, 39%);
+        grid-template-rows: auto;
+        column-gap: 2%;
+
+
+        & > .setting-item-info {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+        }
+
+        & > .setting-item-control {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+        }
+
+    }
+
+/*
+    /* PARTICULAR FIXES FOR TOO-LONG STUFF */
+
+/*
+    .setting-item[data-id="ssopt-codeblock-language"],
+    .setting-item[data-id="undl-text-norm"],
+    .setting-item[data-id="undl-hlink"] {
+        & > .setting-item-info {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+        }
+        & > .setting-item-control {
+            grid-column: 1 / span 2;
+            grid-row: 2;
+        }
+    }
+}
+    */
+
+/* PC000A-6 | fix view style settings in the editor */
+
+ /* LMFAOOOO THIS IS FIXING EVERYTHING */
+.view-content .style-settings-container {
+  display: grid;
+
+  /* needs the specificity to override mgmeyers' settings */
+}
+
+.view-content .style-settings-container :where(.setting-item:not(.setting-item-heading)) {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+body:is(.is-phone) .view-content .style-settings-container :where(.setting-item:not(.setting-item-heading)) {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+:where(.style-settings-container) .setting-item:not(.setting-item-heading), .vertical-tab-content:has(.installed-plugins-container) .setting-item:not(.setting-item-heading) {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+body:is(.is-phone) :where(.style-settings-container) .setting-item:not(.setting-item-heading), body:is(.is-phone) .vertical-tab-content:has(.installed-plugins-container) .setting-item:not(.setting-item-heading) {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.community-modal-controls .setting-item:not(.setting-item-heading) {
+  display: flex; /* fixes things */
+}
+
+/* PC000A-7 | fix dropdown and input.select inside the griddd */
+.setting-item-control input, .setting-item-control select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.setting-item-control input, .setting-item-control select {
+  display: block;
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* PC000A-8 | Style Settings Import and Export Button */
+.setting-item-control .style-settings-import, .setting-item-control .style-settings-export {
+  height: var(--input-height); /* copies app.css */
+  padding: var(--size-4-1) var(--size-4-3); /* copies app.css */
+  font-size: var(--font-ui-small);
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
+  border-radius: var(--button-radius);
+  margin-right: 0;
+  text-decoration: none;
+  font-weight: var(--input-font-weight);
+  align-content: center;
+}
+
+.setting-item-control .style-settings-import:hover, .setting-item-control .style-settings-export:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+/* PC000A-9 | A bit more transition? */
+
+/*
+body:not(.no-animations) .setting-item {
+    transition: 0.2s ease-out;
+
+    .style-settings-container {
+        transition: 0.2s ease-out;
+    }
+}
+*/
+.style-settings-container .setting-item-control input:not(.slider) {
+  font-family: "DM Mono";
+  font-size: var(--font-smallest);
+  letter-spacing: -0.05em;
+}
+
+/* PC000A-10 | Ugh Obsidian 1.11 */
+div.style-settings-heading[data-level="1"] + .style-settings-container .setting-item:last-of-type, div.style-settings-heading[data-level="2"] + .style-settings-container .setting-item:last-of-type,
+div.style-settings-heading[data-level="3"] + .style-settings-container .setting-item:last-of-type, div.style-settings-heading[data-level="4"] + .style-settings-container .setting-item:last-of-type,
+div.style-settings-heading[data-level="5"] + .style-settings-container .setting-item:last-of-type, div.style-settings-heading[data-level="6"] + .style-settings-container .setting-item:last-of-type {
+  padding-bottom: var(--padding-ss);
+}
+
+.setting-item:where([data-id="V1-Willemstad-Credits"]),
+.is-phone .setting-item:where([data-id="V1-Willemstad-Credits"]) {
+  padding-top: 0.75em;
+}
+
+.style-settings-heading {
+  padding: var(--size-2-3) var(--size-4-4);
+}
+
+.setting-item {
+  padding: 0.5em;
+}
+
+.setting-item.setting-item:where([data-id^="documentation"]:has(~ [data-id^="syntax"])),
+.setting-item.setting-item:where([data-id^="syntax"]:has(~ [data-id^="syntax"])) {
+  margin-bottom: 0;
+}
+
+/*
+.style-settings-container > .setting-item:where(:has(~ .setting-item)) {
+    margin-bottom: 0px;
+}
+ */
+
+/* Fixing Style Settings issues */
+

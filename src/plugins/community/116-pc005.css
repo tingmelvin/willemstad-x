@@ -1,0 +1,29 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC005
+\ Plugins > Community
+\ General
+    \\ PComm005 | Templater
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Templater]
+\\ (NOMEN | PComm005)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Experimental stuff for when Chromium 104 and :has() arrives
+    >>> gets rid of all the formatting so that like, highlights and all won't get in the way
+    >>> wait I don't need has. there is templater-inline
+    ──────────────────────────────────────────────────────────────────────────── */
+body:not(.PComm005-no-templater-tweaks) .cm-s-obsidian .templater-inline.templater-inline > * {
+  font-family: var(--font-monospace); /* makes sure it fits and turns all the sans serif away too */
+
+  /* still allows a bit of highlight to peek through top and bottom, so I guess that works */
+
+  /* follow Templater */
+  font-size: 0.85em;
+  background-color: var(--background-primary-alt); /* follows templater-inline */
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+/* Templater */
+

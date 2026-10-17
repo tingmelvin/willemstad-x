@@ -1,0 +1,333 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EL01
+\ Lists \ List Checkbox
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* NOT UI CHECKBOX!!! */
+body {
+  --checkbox-radius: 50rem;
+}
+
+/*
+.task-list-item:not(.is-checked) > .task-list-item-checkbox {
+    & {
+    box-shadow: inset 0 0 0 1px var(--checkbox-border-color);
+    }
+}
+    */
+input[type="checkbox"]:checked::after {
+  mask-position: center; /* effectively 50% 50% */
+  mask-image: /*@svg assets/icons/icon.svg */;
+  mask-size: 100%;
+  width: calc(var(--checkbox-size) - 2 * var(--size-2-1));
+  height: calc(var(--checkbox-size) - 2 * var(--size-2-1));
+  margin: var(--size-2-1);
+
+  /* accounts for borders? */
+} /* tweaks it slightly from 52% 52% to centre it and make it nicer */
+
+/* Lists > Checkbox */
+
+/*  AI02B
+
+    Alternative Checkboxes Reference Set (Version: 1.0.0) 
+    Initiative created by Damian Korcz <https://github.com/damiankorcz>.
+
+    Initiative Repository: https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set
+    Usage Guide: https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set/blob/main/Usage%20Guide.md
+    Research Vault: https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set/tree/main/Research%20Vault
+
+    The following CSS Snippet is designed to serve as a Reference for how to implement the commonly used
+    Alternative Checkboxes feature in themes and CSS Snippets. The Checkbox syntax in conjunction with the
+    meaning are based on the same set as the Minimal theme, since that is the most common set among all themes
+    which implement the feature.
+
+    More on that here:
+    https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set/blob/main/Research%20Vault/06%20Syntax%20and%20Meaning%20Review.md
+
+    The icon set used for this Reference Set is Lucide (same icon set as used in the Obsidian UI). Lucide icons are
+    distributed under the ISC License: https://lucide.dev/license
+
+    Each icon uses the `Copy Data URL` option on the website which provides a Base64 embeded SVG for the icon.
+    Properties for the Lucide icons used:
+    - Stroke width = 1.75px
+    - Size = 16px
+    - Absolute Stroke width = on
+
+    This snippet's code is distributed under the Unlicense License.
+    See https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set/blob/main/LICENSE for more information.
+*/
+
+/*  --------------------------------------------------------------------------------------------
+    Section 1
+    Definining each Alternative Checkbox with a simple selectors and a set of CSS Variables.
+*/
+body:is(.ssopt-acrs-enable) {
+  /* - [/] Incomplete */
+
+  /* - [-] Cancelled */
+
+  /* - [>] Forwarded */
+
+  /* - [<] Scheduling */
+
+  /* - [?] Question */
+
+  /* - [!] Important */
+
+  /* - [*] Star */
+
+  /* - ["] Quote */
+
+  /* - [l] Location */
+
+  /* - [b] Bookmark */
+
+  /* - [i] Information */
+
+  /* - [S] Savings */
+
+  /* - [I] Idea */
+
+  /* - [p] Pros */
+
+  /* - [c] Cons */
+
+  /* - [f] Fire */
+
+  /* - [k] Key */
+
+  /* - [w] Win */
+
+  /* - [u] Up */
+
+  /* - [d] Down */
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="/"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="/"] {
+  /* Icon used: https://lucide.dev/icons/square-dashed */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="-"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="-"] {
+  /* Icon used: https://lucide.dev/icons/ban */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-2.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task=">"],
+body:is(.ssopt-acrs-enable) ul > li[data-task=">"] {
+  /* Icon used: https://lucide.dev/icons/send-horizontal */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-3.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="<"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="<"] {
+  /* Icon used: https://lucide.dev/icons/calendar */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-4.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="?"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="?"] {
+  /* Icon used: https://lucide.dev/icons/circle-help */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-5.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="!"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="!"] {
+  /* Icon used: https://lucide.dev/icons/triangle-alert */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-6.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="*"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="*"] {
+  /* Icon used: https://lucide.dev/icons/star */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-7.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task='"'],
+body:is(.ssopt-acrs-enable) ul > li[data-task='"'] {
+  /* Icon used: https://lucide.dev/icons/quote */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-8.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="l"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="l"] {
+  /* Icon used: https://lucide.dev/icons/map-pin */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-9.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="b"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="b"] {
+  /* Icon used: https://lucide.dev/icons/bookmark */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-10.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="i"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="i"] {
+  /* Icon used: https://lucide.dev/icons/info */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-11.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="S"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="S"] {
+  /* Icon used: https://lucide.dev/icons/dollar-sign */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-12.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="I"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="I"] {
+  /* Icon used: https://lucide.dev/icons/lightbulb */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-13.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="p"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="p"] {
+  /* Icon used: https://lucide.dev/icons/thumbs-up */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-14.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="c"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="c"] {
+  /* Icon used: https://lucide.dev/icons/thumbs-down */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-15.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="f"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="f"] {
+  /* Icon used: https://lucide.dev/icons/flame */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-16.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="k"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="k"] {
+  /* Icon used: https://lucide.dev/icons/key-round */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-17.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="w"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="w"] {
+  /* Icon used: https://lucide.dev/icons/trophy */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-18.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="u"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="u"] {
+  /* Icon used: https://lucide.dev/icons/trending-up */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-19.svg */;
+}
+
+body:is(.ssopt-acrs-enable) div.HyperMD-task-line[data-task="d"],
+body:is(.ssopt-acrs-enable) ul > li[data-task="d"] {
+  /* Icon used: https://lucide.dev/icons/trending-down */
+  --icon-mask-image: /*@svg assets/icons/icon-mask-image-20.svg */;
+}
+
+/*  --------------------------------------------------------------------------------------------
+    Section 2
+    The following code should remain untouched. It serves as a template for checkbox definitions
+    above. It leaves the default unchecked and checked checkboxes untouched; those are styled 
+    according to the theme used.
+*/
+
+/*
+    Disables Theme's Alternative Checkboxes that don't use Style Settings and implemented
+    the `@container style()` query.
+*/
+body {
+  --theme-alternative-checkboxes: disable;
+}
+
+/*
+    Custom Default Variables - Reduces repetition and simplifies the implementation above.
+    If you want different defaults for all Alternative Checkboxes you can change them here. 
+*/
+body:is(.ssopt-acrs-enable) {
+  /* Swapping margin for padding to allow background color to apply in Reading view the same
+  as in Live Preview */
+
+  /*
+  .task-list-item.is-checked {
+      margin-inline-start: unset;
+      padding-inline-start: var(--list-indent);
+  } */
+
+  /* based on app.css */
+}
+
+body:is(.ssopt-acrs-enable) .HyperMD-task-line:not([data-task="x"], [data-task="X"], [data-task=" "]),
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) {
+  --icon-mask-image: unset;
+  --icon-mask-color: var(--text-normal);
+  --icon-content: "";
+  --icon-content-font: var(--font-monospace);
+  --icon-content-weight: var(--font-bold);
+  --icon-content-color: var(--text-normal);
+  --icon-background: transparent;
+  --icon-background-hover: transparent;
+  --icon-border: unset;
+  --icon-border-radius: unset;
+  --line-text-color: inherit;
+  --line-background: unset;
+  --line-border: unset;
+  --line-border-radius: unset;
+}
+
+body:is(.ssopt-acrs-enable) .HyperMD-task-line:not([data-task="x"], [data-task="X"], [data-task=" "]),
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]).is-checked {
+  color: var(--line-text-color);
+  background: var(--line-background);
+  border: var(--line-border);
+  border-radius: var(--line-border-radius);
+}
+
+body:is(.ssopt-acrs-enable) .markdown-rendered .task-list-item.is-checked :where(ol ol > li, ul ul > li) {
+  margin-inline-start: unset;
+  padding-inline-start: var(--list-indent);
+}
+
+body:is(.ssopt-acrs-enable) div.is-live-preview label > input[type="checkbox"]:not([data-task="x"], [data-task="X"], [data-task=" "]):checked,
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > input[type="checkbox"]:checked,
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > p > input[type="checkbox"]:checked {
+  --checkbox-marker-color: transparent;
+
+  border: var(--icon-border);
+  border-radius: var(--icon-border-radius);
+  background: var(--icon-background);
+}
+
+body:is(.ssopt-acrs-enable) div.is-live-preview label > input[type="checkbox"]:not([data-task="x"], [data-task="X"], [data-task=" "]):checked:hover,
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > input[type="checkbox"]:checked:hover,
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > p > input[type="checkbox"]:checked:hover {
+  background: var(--icon-background-hover);
+}
+
+body:is(.ssopt-acrs-enable) div.is-live-preview label > input[type="checkbox"]:not([data-task="x"], [data-task="X"], [data-task=" "]):checked::after,
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > input[type="checkbox"]:checked::after,
+body:is(.ssopt-acrs-enable) li:not([data-task="x"], [data-task="X"], [data-task=" "]) > p > input[type="checkbox"]:checked::after {
+  display: flex;
+  justify-content: center;
+
+  /* Allows icons to remain scaled correctly within the checkbox when using a border */
+  width: -webkit-fill-available;
+  width: fill-available; /* Fallback for Safari */
+  height: -webkit-fill-available;
+  height: fill-available; /* Fallback for Safari */
+  font-family: var(--icon-content-font);
+  font-size: 1rem;
+  color: var(--icon-content-color);
+  background-color: var(--icon-mask-color);
+  mask-image: var(--icon-mask-image);
+  mask-size: contain;
+  mask-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: var(--icon-content);
+  text-align: center;
+  font-weight: var(--icon-content-weight);
+  align-items: center;
+}
+
+/* Lists > Alternative Checkboxes Reference Set */
+

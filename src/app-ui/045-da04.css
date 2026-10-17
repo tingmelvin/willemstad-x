@@ -1,0 +1,30 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA04
+\ First-Level Main Elements \ Space Control \ App UI Border Fixes
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* since box-sizing are border-box, we need to fix the border width */
+
+/* DA04-1 | SR  RIBBON */
+.workspace-ribbon {
+  border-right: 0;
+}
+
+.workspace-ribbon.mod-left {
+  box-shadow: var(--divider-width) 0 var(--divider-color); /* adds a right border with box shadow */
+}
+
+:is(.mod-windows, .mod-linux) .workspace-ribbon.mod-left {
+  box-shadow: var(--divider-width) 0 var(--divider-color), var(--divider-width) calc(-1 * (var(--header-height) - var(--tab-outline-width))) var(--divider-color);
+}
+
+:not(.is-popout-window):is(.mod-windows, .mod-linux) .mod-root {
+  left: calc(var(--divider-width)); /* shifts rightwards by divider width, since it is now the border. cannot shift more since it will leave a gap */
+}
+
+:not(.is-popout-window):is(.mod-windows, .mod-linux) .mod-left-split {
+  left: calc(var(--divider-width)); /* shifts rightwards by divider width, since it is now the border. cannot shift more since it will leave a gap */
+} /* doesn't set it when it's a popout window */
+
+/* UI Border Fixes */
+

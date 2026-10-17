@@ -1,0 +1,145 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PB004
+\ Plugins > Core
+\ Canvas
+──────────────────────────────────────────────────────────────────────────────── */
+body .canvas-menu, body .canvas-submenu, body .canvas-card-menu {
+  border-radius: var(--radius-m); /* as per the rest? */
+}
+
+/* CANVAS MENU - WHEN YOU PRESS A CANVAS ITEM */
+.canvas-menu {
+  padding: var(--ribbon-padding);
+  background-color: var(--background-primary-alt); /* I can't decide if this is better than the original app.css white */
+  box-shadow: none; /* as is typical for Willemstad */
+  gap: var(--header-margin);
+}
+
+.canvas-menu .clickable-icon {
+  padding: var(--header-padding); /* as is usual */
+}
+
+.canvas-menu .clickable-icon svg {
+  --icon-size: var(--header-icon-size);
+}
+
+.canvas-menu .clickable-icon:hover {
+  padding: var(--header-padding-hover);
+}
+
+.canvas-menu .clickable-icon:hover svg {
+  --icon-size: var(--header-icon-size-hover);
+}
+
+.canvas-submenu {
+  padding: var(--ribbon-padding);
+  box-shadow: none;
+}
+
+/* CANVAS CONTROL */
+.canvas-control-group {
+  /*
+  padding: var(--ribbon-padding);
+  background-color: var(--interactive-normal);
+  */
+}
+
+.canvas-control-item {
+  gap: var(--header-margin);
+
+  --icon-size: var(--header-icon-size); /* similar to headers */
+
+  padding: var(--header-padding);
+
+  --icon-stroke: var(--icon-s-stroke-width);
+
+  border-bottom: none; /* remove border */
+}
+
+.canvas-control-item:hover {
+  --icon-size: var(--header-icon-size-hover);
+
+  padding: var(--header-padding-hover);
+  opacity: var(--icon-opacity-hover);
+  color: var(--icon-color-hover); /* hover stuff! */
+}
+
+/* BOTTOM THREE BUTTONS */
+.canvas-wrapper {
+  --shadow-stationary: none;
+  --shadow-drag: none;
+  --shadow-border-accent: none;
+}
+
+@media (hover: hover) {
+  .canvas-card-menu .canvas-card-menu-button.mod-draggable:hover svg {
+    filter: none; /* NO SHADOWS! */
+    transform: translateY(calc(-0.5 * (2 * var(--header-padding) + var(--header-icon-size) + 2 * var(--ribbon-padding)))); /* half of the total padding + whatnot */
+  }
+}
+
+.canvas-card-menu {
+  padding: var(--ribbon-padding);
+  background-color: var(--interactive-normal);
+  border: 1px solid var(--background-modifier-border); /* follows app.css for .canvas-control-group */
+  border-radius: var(--radius-s);
+  transition: 90ms transform ease-out; /* as per hardcoded in app.css */
+  gap: var(--header-margin);
+}
+
+.canvas-card-menu .canvas-card-menu-button {
+  --icon-size: var(--header-icon-size); /* similar to headers */
+
+  padding: var(--header-padding);
+  border-radius: var(--clickable-icon-radius);
+
+  --icon-stroke: var(--icon-s-stroke-width);
+}
+
+.canvas-card-menu .canvas-card-menu-button:hover {
+  --icon-size: var(--header-icon-size-hover);
+
+  padding: var(--header-padding-hover);
+  background-color: var(--background-modifier-hover);
+}
+
+/* CANVAS INTERACTION PATH */
+.canvas-edges g.is-focused path.canvas-interaction-path,
+.canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
+  stroke: none; /* remove weird extra shadow */
+}
+
+/* -----------------------------------------------------------------
+   Canvas Settings
+----------------------------------------------------------------- */
+body {
+  --canvas-dot-size: 0.7;
+  --canvas-group-font-size: 1.5em;
+  --canvas-node-font-size: 1em;
+}
+
+.ssopt-canvas-hide-node-labels .canvas-node-label {
+  display: none;
+}
+
+.ssopt-canvas-hide-group-labels .canvas-group-label {
+  display: none;
+}
+
+.canvas-group-label {
+  font-size: var(--canvas-group-font-size);
+}
+
+.canvas-node-label {
+  font-size: var(--canvas-node-font-size);
+}
+
+.canvas-background > pattern > circle {
+  r: var(--canvas-dot-size);
+  cx: var(--canvas-dot-size);
+  cy: var(--canvas-dot-size);
+  fill: var(--canvas-dot-pattern);
+}
+
+/* Canvas */
+

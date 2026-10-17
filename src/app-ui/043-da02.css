@@ -1,0 +1,314 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA02
+\ First-Level Main Elements \ First Order Clickables
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+LE MAP
+───────────────────────────────────────────────────────────────────────────────────
+
+
+SB TH TH TH <TAB CL><TAB PN><NT>       TL   SB
+SR NV NV NV ----------------------------------
+SR          TITLE
+SR          ----------------------------------
+SR
+SR
+SR
+SR
+SR
+SR WD WD WD
+
+
+
+──────────────────────────────────────────────────────────────────────────────── */
+.side-dock-settings,
+.side-dock-actions,
+.mod-left-split .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container-inner {
+  gap: var(--header-margin); /* NOTE-4 */
+} /* makes the gap uniform so that the icons look pwetty */
+
+/*
+.mod-top-left-space.mod-top-left-space.mod-top-left-space.workspace-tabs
+    .workspace-tab-header-container {
+        padding: 0;
+} */ /* diff from NV logic? why? 2025 addition */ /* need specificity to fix the mod-top-left-space */
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: var(--frame-left-space);
+}
+
+/* DA02-1 | SB   Sidebar Toggle Button */
+body:is(.is-tablet) .sidebar-toggle-button,
+.sidebar-toggle-button {
+  --icon-size: var(--header-icon-size); /* GRRRR WHO thought about this */
+
+  /* HEIGHT CONTROL */
+}
+
+body:is(.is-tablet) .sidebar-toggle-button .clickable-icon,
+.sidebar-toggle-button .clickable-icon {
+  padding: var(--header-padding);
+}
+
+body:is(.is-tablet) .sidebar-toggle-button,
+.sidebar-toggle-button {
+  height: calc(var(--header-icon-size) + var(--header-padding) * 2); /* needs a margin */ /* NOTE-1 */
+  margin: var(--header-margin) var(--header-margin); /* NOTE-2 */
+  padding: 0; /* gives off control to the icon */
+}
+
+body:is(.is-tablet) .sidebar-toggle-button.mod-right,
+.sidebar-toggle-button.mod-right {
+  --icon-size: var(--sidebar-icon-size);
+
+  margin-left: var(--header-margin-half);
+}
+
+body:is(.is-tablet) .sidebar-toggle-button.mod-right .clickable-icon,
+.sidebar-toggle-button.mod-right .clickable-icon {
+  padding: var(--sidebar-icon-padding);
+}
+
+body:is(.is-tablet) .sidebar-toggle-button.mod-right .clickable-icon:hover,
+.sidebar-toggle-button.mod-right .clickable-icon:hover {
+  --icon-size: var(--sidebar-icon-size-hover);
+
+  padding: var(--sidebar-padding-hover);
+}
+
+body:is(.is-tablet) .sidebar-toggle-button.mod-left,
+.sidebar-toggle-button.mod-left {
+  --icon-size: var(--sidebar-icon-size);
+
+  margin: var(--header-margin) 0;
+
+  /* margin-right: var(--header-margin-half); */
+
+ /* don't need? */
+}
+
+body:is(.is-tablet) .sidebar-toggle-button.mod-left .clickable-icon,
+.sidebar-toggle-button.mod-left .clickable-icon {
+  padding: var(--sidebar-icon-padding);
+}
+
+body:is(.is-tablet) .sidebar-toggle-button.mod-left .clickable-icon:hover,
+.sidebar-toggle-button.mod-left .clickable-icon:hover {
+  --icon-size: var(--sidebar-icon-size-hover);
+
+  padding: var(--sidebar-padding-hover);
+}
+
+body:not(.show-ribbon) .sidebar-toggle-button.mod-left .clickable-icon {
+  padding-right: calc(var(--header-padding) - 0.5 * var(--icon-diff-sidebar) + var(--header-padding));
+}
+
+body {
+  --icon-width-sidebar: 24%;
+} /* obs set */
+.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left .sidebar-toggle-icon-inner,
+.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right .clickable-icon .sidebar-toggle-icon-inner {
+  width: var(--icon-width-sidebar);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+/* DA02-2 | SR   Side Dock Ribbon */
+.clickable-icon.side-dock-ribbon-action,
+.mod-left-split .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header-inner-icon {
+  /* hover stuff! */
+
+  /* so that the icon total size won't change. NEEDS STYLE SETTINGS FOR THIS? to turn it off? */
+}
+
+.clickable-icon.side-dock-ribbon-action .svg-icon,
+.mod-left-split .workspace-tab-header-inner-icon .svg-icon,
+.mod-right-split .workspace-tab-header-inner-icon .svg-icon {
+  --icon-size: var(--header-icon-size);
+}
+
+.clickable-icon.side-dock-ribbon-action,
+.mod-left-split .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header-inner-icon {
+  padding: var(--header-padding);
+}
+
+.clickable-icon.side-dock-ribbon-action:hover .svg-icon,
+.mod-left-split .workspace-tab-header-inner-icon:hover .svg-icon,
+.mod-right-split .workspace-tab-header-inner-icon:hover .svg-icon {
+  --icon-size: var(--header-icon-size-hover);
+
+  /* increases the size of the icon when hovered. MATH! */
+}
+
+.clickable-icon.side-dock-ribbon-action:hover,
+.mod-left-split .workspace-tab-header-inner-icon:hover,
+.mod-right-split .workspace-tab-header-inner-icon:hover {
+  padding: var(--header-padding-hover);
+}
+
+.workspace-tab-header-tab-list .clickable-icon, .workspace-tab-header-new-tab .clickable-icon,
+.workspace-tab-header-inner-close-button .clickable-icon {
+  --icon-size: var(--tab-icon-size);
+
+  padding: var(--tab-padding);
+}
+
+.workspace-tab-header-tab-list .clickable-icon:hover, .workspace-tab-header-new-tab .clickable-icon:hover,
+.workspace-tab-header-inner-close-button .clickable-icon:hover {
+  --icon-size: var(--tab-icon-size-hover);
+
+  padding: var(--tab-padding-hover);
+}
+
+body:not(.ssopt-ribbon-no-drag) .workspace-ribbon.side-dock-ribbon.mod-left {
+  -webkit-app-region: drag;
+}
+
+body:not(.ssopt-ribbon-no-drag) .workspace-ribbon.side-dock-ribbon.mod-left > * {
+  -webkit-app-region: no-drag;
+}
+
+/* setting it to be draggable */
+
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+/* DA02-3 | TL   Workspace Tab List Button */
+
+/* DA02-4 | NT   Workspace New Tab Button */
+.workspace-tab-header-tab-list,
+.workspace-tab-header-new-tab {
+  margin: var(--header-margin) var(--header-margin-half); /* follows NOTE-2 */
+  padding: 0; /* removes padding */
+}
+
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+/* DA02-5 | TH   Workspace Tab Header */
+.workspace-tab-header-inner {
+  padding: 0;
+
+  /*
+  &:has(.workspace-tab-header-inner-icon) {
+      padding: var(--header-padding);
+  }
+   */
+}
+
+.workspace-tab-header-container {
+  padding: 0;
+}
+
+:is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
+  margin: var(--header-margin) var(--header-margin) !important; /* NOTE-2 */
+  padding: 0 !important;
+}
+
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+/* DA02-6 | NV   Nav Button */
+.nav-header {
+  padding: var(--header-margin) !important; /* follows NOTE-2 */
+}
+
+.nav-header .nav-buttons-container {
+  justify-content: left;
+  gap: var(--header-margin); /* NOTE-4 */
+}
+
+.nav-header .nav-buttons-container .nav-action-button {
+  /* increases the size of the icon when hovered. MATH! */
+}
+
+.nav-header .nav-buttons-container .nav-action-button .svg-icon {
+  --icon-size: var(--header-icon-size);
+}
+
+.nav-header .nav-buttons-container .nav-action-button:hover .svg-icon {
+  --icon-size: var(--header-icon-size-hover);
+}
+
+.nav-header .nav-buttons-container .clickable-icon {
+  padding: var(--header-padding);
+}
+
+.nav-header .nav-buttons-container .clickable-icon:hover {
+  padding: var(--header-padding-hover);
+}
+
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+/* DA02-7 | WD   Workspace Sidedock/Drawer Vault */
+body .workspace-split.workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  gap: var(--header-margin); /* NOTE-4 */
+  padding: var(--header-margin) var(--header-margin); /* follows NOTE-2 */
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  background-color: var(--vault-drawer-background-color);
+
+  --vault-drawer-background-color: var(--background-secondary);
+}
+
+@container whole-body (style(--ssopt-drawer-bg: 1)) {
+  body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    /* It overrides ONLY the variable's value */
+    --vault-drawer-background-color: var(--background-primary-alt);
+  }
+}
+
+.workspace-drawer-vault-actions {
+  gap: var(--header-margin); /* NOTE-4 */
+
+  /* hover stuff! */
+
+  /* so that the icon total size won't change cuz 1-0.25, then 0.25*2 for the icon-size. NEEDS STYLE SETTINGS FOR THIS? to turn it off? */
+}
+
+.workspace-drawer-vault-actions .clickable-icon {
+  padding: var(--header-padding); /* NOTE-5 */
+}
+
+.workspace-drawer-vault-actions .svg-icon {
+  --icon-size: var(--header-icon-size);
+}
+
+.workspace-drawer-vault-actions .clickable-icon:hover .svg-icon {
+  --icon-size: var(--header-icon-size-hover);
+
+  /* increases the size of the icon when hovered. MATH! */
+}
+
+.workspace-drawer-vault-actions .clickable-icon:hover {
+  padding: var(--header-padding-hover);
+}
+
+/* HOVERS FOR VAULT SWITCHER */
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  gap: var(--header-padding);
+  padding: var(--header-padding);
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:hover {
+  padding: var(--header-padding-hover) var(--header-padding) var(--header-padding-hover) var(--header-padding-hover); /* no need for the rightmost to adapt */
+  gap: var(--header-padding-hover); /* MATH! do not touch */
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher:hover .svg-icon {
+  --icon-size: var(--header-icon-size-hover);
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  flex: 1; /* fits 100% height */
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher .workspace-drawer-vault-name {
+  max-height: var(--header-icon-size); /* forces to adjacent icon sizes so that it will always fit without murmur */
+}
+
+/* ───────────────────────────────────────────────────────────────────────────── */
+
+/* First Order Clickables */
+

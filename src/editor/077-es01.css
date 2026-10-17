@@ -1,0 +1,200 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ES01
+\ Editor > Empty State Screen
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* Welcome | NOT IN USE */
+
+/* see snippet in archive */
+
+/* ─────────────────────────────────────────────────────────────────────────────── */
+body .empty-state {
+  font-size: var(--font-text-size); /* need to set this for it to work */
+}
+
+body:not(.ssopt-empty-state-original) {
+  --empty-state-background: var(--background-primary-alt);
+
+  /* add icon for NO FILE IS OPEN */
+}
+
+body:not(.ssopt-empty-state-original) .workspace-leaf-content[data-type="empty"] .view-header {
+  background-color: var(--empty-state-background);
+}
+
+body:not(.ssopt-empty-state-original) .workspace-leaf-content[data-type="empty"] .view-header-title-container:not(.mod-at-end)::after {
+  display: none;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state {
+  background-color: var(--empty-state-background);
+
+  --margin-inter-empty-state: var(--size-4-1);
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-container {
+  /* text-align: left; */
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-title {
+  margin-bottom: var(--margin-inter-empty-state);
+
+  /* font-size: calc(var(--h2-size) * var(--font-text-size)); */
+
+ /* somehow h2 doesn't work */
+
+ /* see above in font-size for my soln */
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list {
+  margin-top: var(--margin-inter-empty-state); /* linked to above */
+  padding-right: 0 var(--size-4-2); /* left zero for icons */
+  display: grid;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action.mod-close {
+  color: var(--text-error);
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action.mod-close:hover {
+  color: var(--text-error-hover);
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-title {
+  /* display: flex; */
+  display: none;
+  justify-content: space-between;
+  padding: var(--size-4-2);
+
+  /* forces icon as second */
+
+  /* hovering colours and radiuses */
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-m);
+
+  /* display: grid; */
+  grid-template-columns: 5fr auto; /* not sure why this works better than flex, it makes sure that the Ob logo doesn't get cut off */
+  align-items: center;
+  gap: var(--size-4-1); /* gap between Ob logo and text */
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-title:hover {
+  background-color: var(--background-secondary-alt);
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action {
+  line-height: calc(1.5 * var(--font-text-size));
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  height: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  border-radius: var(--radius-s);
+  content: "";
+  opacity: 0.85;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action:hover::before {
+  background-color: var(--background-modifier-hover);
+  opacity: 1;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list {
+  grid-auto-flow: column;
+  gap: var(--header-margin); /* NOTE IDK WHAT. 5? */
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action {
+  width: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  height: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  padding: var(--header-padding); /* adding ::before changes things */
+  font-size: 0;
+  border-radius: var(--clickable-icon-radius);
+  transition: opacity 0.15s ease-in-out;
+  mask-repeat: no-repeat;
+  mask-size: var(--header-icon-size);
+  mask-size: var(--header-icon-size);
+
+ /* uses headers size */
+  mask-position: center;
+  mask-position: center;
+  line-height: 0;
+
+  /* ICONS */
+
+  /* fixes an edge case where Webviewer is enabled but Obsidian is just open and have no notes - so this ensures Webviewer icon appears when this is the case */
+
+ /* if Obsidian is open with notes, then we have 4 at least. 5 with Webviewer. but if it has no notes, 2, 3 with Webviewer. so 2nd must be Webviewer in that case */
+
+  /* change the text to icons */
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* ABOVEEE */
+  display: block;
+  width: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  height: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  background-color: var(--icon-color); /* does this work? */
+  content: "";
+  mask-repeat: no-repeat;
+  mask-size: var(--header-icon-size); /* uses headers size */
+  mask-position: center;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action:hover::after, body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action.mod-close:hover::after {
+  mask-size: calc(var(--header-icon-size) + 0.5 * var(--header-padding));
+  mask-size: calc(var(--header-icon-size) + 0.5 * var(--header-padding));
+
+ /* FOLLOWS DA02-2 hover sizes */
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action:hover::after {
+  background-color: var(--icon-color-hover); /* OMG */
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action.mod-close:hover::after {
+  background-color: var(--text-error-hover);
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action:nth-of-type(1)::after {
+  mask-image: /*@svg assets/icons/icon-2.svg */;
+  mask-image: /*@svg assets/icons/icon-2.svg */;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action:nth-of-type(2)::after {
+  mask-image: /*@svg assets/icons/icon-3.svg */;
+  mask-image: /*@svg assets/icons/icon-3.svg */;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action:nth-of-type(3)::after {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-icon lucide-clock'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-icon lucide-clock'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action:nth-of-type(4):nth-last-of-type(2)::after, body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action:nth-of-type(2):nth-last-of-type(2)::after {
+  mask-image: /*@svg assets/icons/icon-4.svg */;
+  mask-image: /*@svg assets/icons/icon-4.svg */;
+}
+
+body:not(.ssopt-empty-state-original) .empty-state-action-list .empty-state-action.mod-close::after {
+  mask-image: /*@svg assets/icons/icon-5.svg */;
+  mask-image: /*@svg assets/icons/icon-5.svg */;
+  background: var(--text-error);
+}
+
+/* Empty State */
+

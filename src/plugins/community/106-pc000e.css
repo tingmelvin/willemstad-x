@@ -1,0 +1,120 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000E
+\ Plugins > Community
+\ Style Settings
+\ Information Settings
+
+Here, Style Settings coding to turn certain settings into Information Boxes are done.
+──────────────────────────────────────────────────────────────────────────────── */
+.setting-item.setting-item {
+  /* build a comma-separated list of [data-id="…"] */
+
+  /* inject the selector and yield */
+
+  /* build a comma-separated list of [data-id="…"] */
+
+  /* inject the selector and yield */
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+  /* overrides whatever first child settings there is */
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) .setting-item-control {
+  display: none;
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+  padding: 0.75em; /* used to be 0.75em and 0 */
+  background-color: var(--background-secondary);
+  border-left: 1px solid var(--background-modifier-border);
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) .setting-item-description {
+  color: var(--text-accent);
+  text-align: justify;
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-about-colour-theory-accent-l"], [data-id="info-about-colour-theory-accent-d"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]):first-child {
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: var(--padding-ss);
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+  /* INFO ICON */
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]) {
+  /* add icon? */
+
+  /* add hover color change */
+}
+
+.setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"])::after {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22lucide%20lucide-info-icon%20lucide-info%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22/%3E%3Cpath%20d%3D%22M12%2016v-4%22/%3E%3Cpath%20d%3D%22M12%208h.01%22/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background: var(--icon-color);
+  content: "";
+  justify-self: right;
+}
+
+.theme-light .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]):hover::after {
+  background: oklch(from var(--icon-color) calc(l - 0.2) c h);
+}
+
+.theme-dark .setting-item.setting-item:where([data-id="info-ribbon-width-header-height"], [data-id="info-icon-sizes"], [data-id="info-startup"], [data-id="info-coloured-headers"], [data-id="info-coloured-headers-text"], [data-id="info-theme-settings-search"], [data-id="info-theme-mobile-support"], [data-id="info-theme-macos-support"], [data-id="info-width-norm-sd"], [data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"], [data-id="info-tab-stacked-text"], [data-id="info-cssc-cornell-2-comments"], [data-id="info-cssclasses-elsewhere"], [data-id="info-redirect-coloured-headers"], [data-id="info-immersive-editing-modes"], [data-id="info-editor-typography-split"], [data-id="info-editor-block-widths"], [data-id="info-global-typography-split"]):hover::after {
+  background: oklch(from var(--icon-color) calc(l + 0.2) c h);
+}
+
+/* just this to make sure it closes the bottom off for the main infobox for CSSClass */
+.setting-item.setting-item {
+  /* build a comma-separated list of [data-id="…"] */
+
+  /* inject the selector and yield */
+}
+
+.setting-item.setting-item:where([data-id="info-cssclass"]) {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.setting-item.setting-item {
+  /* build a comma-separated list of [data-id="…"] */
+
+  /* inject the selector and yield */
+
+  /* build a comma-separated list of [data-id="…"] */
+
+  /* inject the selector and yield */
+}
+
+.setting-item.setting-item:where([data-id="global-block-width-mode"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-iframe"], [data-id="ssopt-block-width-pdfembed"]) .setting-item-name {
+  font-weight: 500;
+}
+
+.setting-item.setting-item:where([data-id="global-block-width-mode"], [data-id="ssopt-block-width-tables"], [data-id="ssopt-block-width-bases"], [data-id="ssopt-block-width-iframe"], [data-id="ssopt-block-width-pdfembed"]) .setting-item-name::after {
+  display: inline-flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  font-family: remixicon;
+  color: var(--text-accent);
+  content: "\efbf";
+  margin-left: 4px;
+}
+
+.setting-item.setting-item:where([data-id="ssopt-bw-table-content-fit"], [data-id="magnifier-bw-table"], [data-id="ratio-bw-table-source"], [data-id="ratio-bw-table-reading"], [data-id="magnifier-bw-bases"], [data-id="ratio-bw-bases-source"], [data-id="ratio-bw-bases-reading"], [data-id="magnifier-bw-iframe"], [data-id="ratio-bw-iframe-source"], [data-id="ratio-bw-iframe-reading"], [data-id="aspect-ratio-bw-iframe"], [data-id="magnifier-bw-pdfembed"], [data-id="ratio-bw-pdfembed-source"], [data-id="ratio-bw-pdfembed-reading"]) {
+  border-inline-start: 2px solid var(--color-accent);
+  padding-left: 0.5em;
+}
+
+/* Information Settings for SS */
+

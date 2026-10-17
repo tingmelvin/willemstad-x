@@ -1,0 +1,59 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AI02
+\ Interactives \ Checkbox
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* WELL. SO THIS CHECKBOX IS FOR THINGS YOU CAN CLICKY ON UI. NOT EDITOR! */
+
+/* AI02-1 */
+
+/* checkbox-container change shape */
+.checkbox-container {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  background-color: var(--color-base-30);
+
+  /* border: 0.125rem solid var(--interactive-border-color);
+  border-radius: 50rem; */
+  transition: var(--quicker-transition);
+
+  /* height: 1.25rem;
+  width: 1.25rem; */ /* what are these for actually?? */ /* yeah like why 1.25rem */
+}
+
+.checkbox-container::after {
+  display: none;
+}
+
+.checkbox-container, .checkbox-container:hover, .checkbox-container:focus {
+  box-shadow: 0 0 0 0 var(--background-modifier-border-focus);
+}
+
+.checkbox-container:hover {
+  background-color: var(--color-base-50);
+}
+
+.checkbox-container.is-enabled:hover {
+  background-color: var(--color-accent-2);
+}
+
+.checkbox-container:focus {
+  background-color: var(--interactive-focus);
+}
+
+.checkbox-container.mod-small {
+  width: calc(var(--toggle-s-thumb-height) + var(--toggle-s-border-width) * 2); /* sama sama */
+}
+
+/* AI02-2 | remove weird outlines */
+body {
+  --toggle-s-border-width: 0px;
+}
+
+.checkbox-container:focus-within,
+.checkbox-container.mod-small:focus-within {
+  outline: none;
+} /* extraneous but to make sure */
+
+/* Checkbox Container */
+

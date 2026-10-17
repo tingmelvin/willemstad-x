@@ -1,0 +1,28 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> MB01
+\ Modals \ Settings Modal \ Settings Modal-specific Fixes and Customisation
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --mod-settings-left-column-spacing: 0px;
+}
+
+.modal.mod-settings {
+  /* NO PADDINGS */
+
+  /* UPPERCASE modal headers */
+}
+
+.modal.mod-settings .vertical-tab-header-group {
+  padding: 0 0 var(--mod-settings-left-column-spacing) 0;
+}
+
+:where(.ssopt-add-mod-settings-left-column-border) .modal.mod-settings .vertical-tab-header-group-title {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.modal.mod-settings .vertical-tab-header-group-title {
+  text-transform: uppercase;
+}
+
+/* Fixes and Customisations */
+

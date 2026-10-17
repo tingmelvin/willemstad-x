@@ -1,0 +1,60 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EF01
+\ Editor > Frontmatter
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+>> EF01-1 | Colours
+───────────────────────────────────────────────────────────────────────────── */
+
+/* default Coloured YAML colours */
+.theme-light, .theme-dark {
+  --col-frontmatter-default: var(--color-accent-2);
+  --col-frontmatter-atom: var(--color-accent);
+  --col-frontmatter-meta: var(--color-accent-1);
+  --col-frontmatter-number: var(--color-accent-2);
+}
+
+/* if Coloured YAML not turned off */
+body:not(.ssopt-yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter {
+  color: var(--col-frontmatter-default); /* general frontmatter */
+}
+
+body:not(.ssopt-yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter.cm-atom {
+  color: var(--col-frontmatter-atom);
+  font-weight: bold;
+}
+
+body:not(.ssopt-yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter.cm-meta {
+  color: var(--col-frontmatter-meta);
+}
+
+body:not(.ssopt-yaml-no-colour) .cm-s-obsidian .cm-hmd-frontmatter.cm-number {
+  color: var(--col-frontmatter-number);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+>> EF01-2 | removes the weird yaml bit from Reading View
+───────────────────────────────────────────────────────────────────────────── */
+
+/* removes the weird yaml bit from Reading View */
+
+/* LEGACY CODE */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+>> EF01-3 | Frontmatter Container (Alias and Tags styling)
+───────────────────────────────────────────────────────────────────────────── */
+.frontmatter-container :is(.frontmatter-section-aliases, .frontmatter-section-tags) {
+  gap: var(--size-2-3) var(--size-4-2); /* replaces padding-right */
+}
+
+.frontmatter-container .frontmatter-alias {
+  padding-right: 0;
+}
+
+.frontmatter-container .frontmatter-section-tags {
+  /* do it on a tag side? */
+}
+
+/* Frontmatter (Legacy pre-0.16) */
+

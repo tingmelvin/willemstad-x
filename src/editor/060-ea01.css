@@ -1,0 +1,32 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EA01
+\ Editor > Document Titlebar
+\ Titlebar Proper
+───────────────────────────────────────────────────────────────────────────────────
+
+        ──────────────────────────────────────────────────────────────────────── */
+.view-header-title-container:not(.mod-at-end)::after {
+  display: none;
+} /* gets rid of the fade */
+
+/* STUFF TO GO ELSEWHERE */
+.view-header-title-container {
+  height: auto;
+  min-height: unset;
+  align-self: center; /* collapse extra space */
+}
+
+.view-header-left,
+.view-header > .view-actions {
+  align-self: center; /* collapse extra space */
+}
+
+body {
+  --header-height: calc(var(--header-icon-size) + 2 * var(--header-padding) + 2 * var(--header-margin));
+} /* THE MATH */
+body {
+  --file-header-border: 0px; /* override */
+}
+
+/* Titlebar Proper */
+

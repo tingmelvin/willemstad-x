@@ -1,0 +1,41 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EH13
+\ Headers > Colours
+\ Custom Colours Variables
+──────────────────────────────────────────────────────────────────────────────── */
+body:where(.ssopt-headers-custom-colours):not(.ssopt-headers-old-willemstad, .ssopt-no-coloured-headers) {
+  /* HARDCODED so that it can work better with Style Settings */
+  --col-accent-custom-headers-0: hsl(211deg 100% 19%);
+  --col-accent-custom-headers-1: hsl(181deg 100% 32%);
+  --col-accent-custom-headers-2: hsl(161deg 100% 41%);
+  --col-h1-bg: var(--col-accent-custom-headers-0);
+  --col-h2-bg: var(--col-accent-custom-headers-1);
+  --col-h3-bg: var(--col-accent-custom-headers-2);
+  --col-h4-bg: var(--col-accent-custom-headers-0);
+  --col-h5-bg: var(--col-accent-custom-headers-1);
+  --col-h6-bg: var(--col-accent-custom-headers-2);
+}
+
+body:where(.ssopt-headers-custom-colours):not(.ssopt-headers-old-willemstad, .ssopt-no-coloured-headers):where(.ssopt-headers-custom-colours-max) {
+  --col-accent-custom-headers-0B: hsl(211deg 100% 19%);
+  --col-accent-custom-headers-1B: hsl(181deg 100% 32%);
+  --col-accent-custom-headers-2B: hsl(161deg 100% 41%);
+  --col-h4-bg: var(--col-accent-custom-headers-0B);
+  --col-h5-bg: var(--col-accent-custom-headers-1B);
+  --col-h6-bg: var(--col-accent-custom-headers-2B);
+  --col-custom-headers-H1: var(--text-on-accent);
+  --col-custom-headers-H2: var(--text-on-accent);
+  --col-custom-headers-H3: var(--text-on-accent);
+  --col-custom-headers-H4: var(--text-on-accent);
+  --col-custom-headers-H5: var(--text-on-accent);
+  --col-custom-headers-H6: var(--text-on-accent);
+  --col-h1: var(--col-custom-headers-H1);
+  --col-h2: var(--col-custom-headers-H2);
+  --col-h3: var(--col-custom-headers-H3);
+  --col-h4: var(--col-custom-headers-H4);
+  --col-h5: var(--col-custom-headers-H5);
+  --col-h6: var(--col-custom-headers-H6);
+}
+
+/* Headers Colours > Custom Colours */
+

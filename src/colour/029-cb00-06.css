@@ -1,0 +1,707 @@
+/* =================================================================== */
+
+/* CB00-06 | Lightness Palette Override Classes */
+
+/* =================================================================== */
+.ssopt-col-base-lightness-l-high-contrast,
+.ssopt-col-base-lightness-l-high-contrast .theme-light,
+.ssopt-col-base-lightness-l-high-contrast.theme-light {
+  --ch-color-base-l-l-00-set: 1;
+  --ch-color-base-l-l-05-set: 0.98;
+  --ch-color-base-l-l-10-set: 0.95;
+  --ch-color-base-l-l-15-set: 0.92;
+  --ch-color-base-l-l-20-set: 0.88;
+  --ch-color-base-l-l-25-set: 0.82;
+  --ch-color-base-l-l-30-set: 0.75;
+  --ch-color-base-l-l-35-set: 0.65;
+  --ch-color-base-l-l-40-set: 0.55;
+  --ch-color-base-l-l-45-set: 0.45;
+  --ch-color-base-l-l-50-set: 0.38;
+  --ch-color-base-l-l-55-set: 0.3;
+  --ch-color-base-l-l-60-set: 0.22;
+  --ch-color-base-l-l-65-set: 0.15;
+  --ch-color-base-l-l-70-set: 0.1;
+  --ch-color-base-l-l-75-set: 0.07;
+  --ch-color-base-l-l-80-set: 0.05;
+  --ch-color-base-l-l-85-set: 0.03;
+  --ch-color-base-l-l-90-set: 0.02;
+  --ch-color-base-l-l-95-set: 0.01;
+  --ch-color-base-l-l-100-set: 0;
+}
+
+.ssopt-col-base-lightness-l-low-contrast,
+.ssopt-col-base-lightness-l-low-contrast .theme-light,
+.ssopt-col-base-lightness-l-low-contrast.theme-light {
+  --ch-color-base-l-l-00-set: 0.98;
+  --ch-color-base-l-l-05-set: 0.96;
+  --ch-color-base-l-l-10-set: 0.94;
+  --ch-color-base-l-l-15-set: 0.91;
+  --ch-color-base-l-l-20-set: 0.87;
+  --ch-color-base-l-l-25-set: 0.83;
+  --ch-color-base-l-l-30-set: 0.78;
+  --ch-color-base-l-l-35-set: 0.72;
+  --ch-color-base-l-l-40-set: 0.65;
+  --ch-color-base-l-l-45-set: 0.58;
+  --ch-color-base-l-l-50-set: 0.52;
+  --ch-color-base-l-l-55-set: 0.46;
+  --ch-color-base-l-l-60-set: 0.4;
+  --ch-color-base-l-l-65-set: 0.35;
+  --ch-color-base-l-l-70-set: 0.3;
+  --ch-color-base-l-l-75-set: 0.25;
+  --ch-color-base-l-l-80-set: 0.2;
+  --ch-color-base-l-l-85-set: 0.15;
+  --ch-color-base-l-l-90-set: 0.1;
+  --ch-color-base-l-l-95-set: 0.05;
+  --ch-color-base-l-l-100-set: 0.02;
+}
+
+.ssopt-col-base-lightness-l-ultra-low-contrast,
+.ssopt-col-base-lightness-l-ultra-low-contrast .theme-light,
+.ssopt-col-base-lightness-l-ultra-low-contrast.theme-light {
+  --ch-color-base-l-l-00-set: 0.951;
+  --ch-color-base-l-l-05-set: 0.942;
+  --ch-color-base-l-l-10-set: 0.933;
+  --ch-color-base-l-l-15-set: 0.916;
+  --ch-color-base-l-l-20-set: 0.899;
+  --ch-color-base-l-l-25-set: 0.86;
+  --ch-color-base-l-l-30-set: 0.82;
+  --ch-color-base-l-l-35-set: 0.75;
+  --ch-color-base-l-l-40-set: 0.65;
+  --ch-color-base-l-l-45-set: 0.55;
+  --ch-color-base-l-l-50-set: 0.45;
+  --ch-color-base-l-l-55-set: 0.38;
+  --ch-color-base-l-l-60-set: 0.32;
+  --ch-color-base-l-l-65-set: 0.26;
+  --ch-color-base-l-l-70-set: 0.2;
+  --ch-color-base-l-l-75-set: 0.15;
+  --ch-color-base-l-l-80-set: 0.12;
+  --ch-color-base-l-l-85-set: 0.09;
+  --ch-color-base-l-l-90-set: 0.06;
+  --ch-color-base-l-l-95-set: 0.03;
+  --ch-color-base-l-l-100-set: 0.01;
+}
+
+.ssopt-col-base-lightness-l-cinematic,
+.ssopt-col-base-lightness-l-cinematic .theme-light,
+.ssopt-col-base-lightness-l-cinematic.theme-light {
+  --ch-color-base-l-l-00-set: 0.99;
+  --ch-color-base-l-l-05-set: 0.97;
+  --ch-color-base-l-l-10-set: 0.94;
+  --ch-color-base-l-l-15-set: 0.9;
+  --ch-color-base-l-l-20-set: 0.85;
+  --ch-color-base-l-l-25-set: 0.78;
+  --ch-color-base-l-l-30-set: 0.7;
+  --ch-color-base-l-l-35-set: 0.6;
+  --ch-color-base-l-l-40-set: 0.5;
+  --ch-color-base-l-l-45-set: 0.4;
+  --ch-color-base-l-l-50-set: 0.32;
+  --ch-color-base-l-l-55-set: 0.25;
+  --ch-color-base-l-l-60-set: 0.19;
+  --ch-color-base-l-l-65-set: 0.14;
+  --ch-color-base-l-l-70-set: 0.1;
+  --ch-color-base-l-l-75-set: 0.07;
+  --ch-color-base-l-l-80-set: 0.05;
+  --ch-color-base-l-l-85-set: 0.04;
+  --ch-color-base-l-l-90-set: 0.03;
+  --ch-color-base-l-l-95-set: 0.02;
+  --ch-color-base-l-l-100-set: 0.015;
+}
+
+.ssopt-col-base-lightness-l-paper,
+.ssopt-col-base-lightness-l-paper .theme-light,
+.ssopt-col-base-lightness-l-paper.theme-light {
+  --ch-color-base-l-l-00-set: 0.97;
+  --ch-color-base-l-l-05-set: 0.95;
+  --ch-color-base-l-l-10-set: 0.93;
+  --ch-color-base-l-l-15-set: 0.9;
+  --ch-color-base-l-l-20-set: 0.86;
+  --ch-color-base-l-l-25-set: 0.81;
+  --ch-color-base-l-l-30-set: 0.75;
+  --ch-color-base-l-l-35-set: 0.68;
+  --ch-color-base-l-l-40-set: 0.6;
+  --ch-color-base-l-l-45-set: 0.52;
+  --ch-color-base-l-l-50-set: 0.45;
+  --ch-color-base-l-l-55-set: 0.4;
+  --ch-color-base-l-l-60-set: 0.35;
+  --ch-color-base-l-l-65-set: 0.3;
+  --ch-color-base-l-l-70-set: 0.26;
+  --ch-color-base-l-l-75-set: 0.23;
+  --ch-color-base-l-l-80-set: 0.21;
+  --ch-color-base-l-l-85-set: 0.19;
+  --ch-color-base-l-l-90-set: 0.17;
+  --ch-color-base-l-l-95-set: 0.15;
+  --ch-color-base-l-l-100-set: 0.14;
+}
+
+.ssopt-col-base-lightness-l-vivid,
+.ssopt-col-base-lightness-l-vivid .theme-light,
+.ssopt-col-base-lightness-l-vivid.theme-light {
+  --ch-color-base-l-l-00-set: 0.96;
+  --ch-color-base-l-l-05-set: 0.94;
+  --ch-color-base-l-l-10-set: 0.92;
+  --ch-color-base-l-l-15-set: 0.88;
+  --ch-color-base-l-l-20-set: 0.83;
+  --ch-color-base-l-l-25-set: 0.77;
+  --ch-color-base-l-l-30-set: 0.7;
+  --ch-color-base-l-l-35-set: 0.62;
+  --ch-color-base-l-l-40-set: 0.54;
+  --ch-color-base-l-l-45-set: 0.47;
+  --ch-color-base-l-l-50-set: 0.41;
+  --ch-color-base-l-l-55-set: 0.36;
+  --ch-color-base-l-l-60-set: 0.31;
+  --ch-color-base-l-l-65-set: 0.27;
+  --ch-color-base-l-l-70-set: 0.24;
+  --ch-color-base-l-l-75-set: 0.21;
+  --ch-color-base-l-l-80-set: 0.19;
+  --ch-color-base-l-l-85-set: 0.17;
+  --ch-color-base-l-l-90-set: 0.15;
+  --ch-color-base-l-l-95-set: 0.13;
+  --ch-color-base-l-l-100-set: 0.12;
+}
+
+.ssopt-col-base-lightness-l-analog,
+.ssopt-col-base-lightness-l-analog .theme-light,
+.ssopt-col-base-lightness-l-analog.theme-light {
+  --ch-color-base-l-l-00-set: 0.96;
+  --ch-color-base-l-l-05-set: 0.94;
+  --ch-color-base-l-l-10-set: 0.92;
+  --ch-color-base-l-l-15-set: 0.88;
+  --ch-color-base-l-l-20-set: 0.83;
+  --ch-color-base-l-l-25-set: 0.78;
+  --ch-color-base-l-l-30-set: 0.72;
+  --ch-color-base-l-l-35-set: 0.66;
+  --ch-color-base-l-l-40-set: 0.6;
+  --ch-color-base-l-l-45-set: 0.54;
+  --ch-color-base-l-l-50-set: 0.48;
+  --ch-color-base-l-l-55-set: 0.43;
+  --ch-color-base-l-l-60-set: 0.38;
+  --ch-color-base-l-l-65-set: 0.34;
+  --ch-color-base-l-l-70-set: 0.3;
+  --ch-color-base-l-l-75-set: 0.27;
+  --ch-color-base-l-l-80-set: 0.25;
+  --ch-color-base-l-l-85-set: 0.23;
+  --ch-color-base-l-l-90-set: 0.22;
+  --ch-color-base-l-l-95-set: 0.21;
+  --ch-color-base-l-l-100-set: 0.2;
+}
+
+.ssopt-col-base-lightness-l-structural,
+.ssopt-col-base-lightness-l-structural .theme-light,
+.ssopt-col-base-lightness-l-structural.theme-light {
+  --ch-color-base-l-l-00-set: 1;
+  --ch-color-base-l-l-05-set: 0.96;
+  --ch-color-base-l-l-10-set: 0.96;
+  --ch-color-base-l-l-15-set: 0.96;
+  --ch-color-base-l-l-20-set: 0.92;
+  --ch-color-base-l-l-25-set: 0.92;
+  --ch-color-base-l-l-30-set: 0.8;
+  --ch-color-base-l-l-35-set: 0.8;
+  --ch-color-base-l-l-40-set: 0.65;
+  --ch-color-base-l-l-45-set: 0.65;
+  --ch-color-base-l-l-50-set: 0.5;
+  --ch-color-base-l-l-55-set: 0.48;
+  --ch-color-base-l-l-60-set: 0.35;
+  --ch-color-base-l-l-65-set: 0.35;
+  --ch-color-base-l-l-70-set: 0.2;
+  --ch-color-base-l-l-75-set: 0.2;
+  --ch-color-base-l-l-80-set: 0.08;
+  --ch-color-base-l-l-85-set: 0.08;
+  --ch-color-base-l-l-90-set: 0.04;
+  --ch-color-base-l-l-95-set: 0.04;
+  --ch-color-base-l-l-100-set: 0.02;
+}
+
+.ssopt-col-base-lightness-l-glow,
+.ssopt-col-base-lightness-l-glow .theme-light,
+.ssopt-col-base-lightness-l-glow.theme-light {
+  --ch-color-base-l-l-00-set: 0.98;
+  --ch-color-base-l-l-05-set: 0.97;
+  --ch-color-base-l-l-10-set: 0.96;
+  --ch-color-base-l-l-15-set: 0.94;
+  --ch-color-base-l-l-20-set: 0.91;
+  --ch-color-base-l-l-25-set: 0.87;
+  --ch-color-base-l-l-30-set: 0.82;
+  --ch-color-base-l-l-35-set: 0.76;
+  --ch-color-base-l-l-40-set: 0.7;
+  --ch-color-base-l-l-45-set: 0.64;
+  --ch-color-base-l-l-50-set: 0.58;
+  --ch-color-base-l-l-55-set: 0.53;
+  --ch-color-base-l-l-60-set: 0.49;
+  --ch-color-base-l-l-65-set: 0.45;
+  --ch-color-base-l-l-70-set: 0.42;
+  --ch-color-base-l-l-75-set: 0.4;
+  --ch-color-base-l-l-80-set: 0.38;
+  --ch-color-base-l-l-85-set: 0.37;
+  --ch-color-base-l-l-90-set: 0.36;
+  --ch-color-base-l-l-95-set: 0.355;
+  --ch-color-base-l-l-100-set: 0.35;
+}
+
+.ssopt-col-base-lightness-l-catppuccin,
+.ssopt-col-base-lightness-l-catppuccin .theme-light,
+.ssopt-col-base-lightness-l-catppuccin.theme-light {
+  --ch-color-base-l-l-00-set: 0.96;
+  --ch-color-base-l-l-05-set: 0.945;
+  --ch-color-base-l-l-10-set: 0.93;
+  --ch-color-base-l-l-15-set: 0.9;
+  --ch-color-base-l-l-20-set: 0.85;
+  --ch-color-base-l-l-25-set: 0.8;
+  --ch-color-base-l-l-30-set: 0.74;
+  --ch-color-base-l-l-35-set: 0.67;
+  --ch-color-base-l-l-40-set: 0.6;
+  --ch-color-base-l-l-45-set: 0.53;
+  --ch-color-base-l-l-50-set: 0.47;
+  --ch-color-base-l-l-55-set: 0.42;
+  --ch-color-base-l-l-60-set: 0.37;
+  --ch-color-base-l-l-65-set: 0.33;
+  --ch-color-base-l-l-70-set: 0.29;
+  --ch-color-base-l-l-75-set: 0.25;
+  --ch-color-base-l-l-80-set: 0.22;
+  --ch-color-base-l-l-85-set: 0.19;
+  --ch-color-base-l-l-90-set: 0.16;
+  --ch-color-base-l-l-95-set: 0.13;
+  --ch-color-base-l-l-100-set: 0.1;
+}
+
+.ssopt-col-base-lightness-l-writing,
+.ssopt-col-base-lightness-l-writing .theme-light,
+.ssopt-col-base-lightness-l-writing.theme-light {
+  --ch-color-base-l-l-00-set: 0.98;
+  --ch-color-base-l-l-05-set: 0.965;
+  --ch-color-base-l-l-10-set: 0.94;
+  --ch-color-base-l-l-15-set: 0.91;
+  --ch-color-base-l-l-20-set: 0.87;
+  --ch-color-base-l-l-25-set: 0.82;
+  --ch-color-base-l-l-30-set: 0.76;
+  --ch-color-base-l-l-35-set: 0.69;
+  --ch-color-base-l-l-40-set: 0.62;
+  --ch-color-base-l-l-45-set: 0.55;
+  --ch-color-base-l-l-50-set: 0.48;
+  --ch-color-base-l-l-55-set: 0.44;
+  --ch-color-base-l-l-60-set: 0.4;
+  --ch-color-base-l-l-65-set: 0.36;
+  --ch-color-base-l-l-70-set: 0.52;
+  --ch-color-base-l-l-75-set: 0.46;
+  --ch-color-base-l-l-80-set: 0.4;
+  --ch-color-base-l-l-85-set: 0.36;
+  --ch-color-base-l-l-90-set: 0.33;
+  --ch-color-base-l-l-95-set: 0.315;
+  --ch-color-base-l-l-100-set: 0.3;
+}
+
+.ssopt-col-base-lightness-l-solarized,
+.ssopt-col-base-lightness-l-solarized .theme-light,
+.ssopt-col-base-lightness-l-solarized.theme-light {
+  --ch-color-base-l-l-00-set: 0.974;
+  --ch-color-base-l-l-05-set: 0.974;
+  --ch-color-base-l-l-10-set: 0.974;
+  --ch-color-base-l-l-15-set: 0.953;
+  --ch-color-base-l-l-20-set: 0.931;
+  --ch-color-base-l-l-25-set: 0.931;
+  --ch-color-base-l-l-30-set: 0.858;
+  --ch-color-base-l-l-35-set: 0.786;
+  --ch-color-base-l-l-40-set: 0.713;
+  --ch-color-base-l-l-45-set: 0.641;
+  --ch-color-base-l-l-50-set: 0.568;
+  --ch-color-base-l-l-55-set: 0.557;
+  --ch-color-base-l-l-60-set: 0.546;
+  --ch-color-base-l-l-65-set: 0.534;
+  --ch-color-base-l-l-70-set: 0.523;
+  --ch-color-base-l-l-75-set: 0.48;
+  --ch-color-base-l-l-80-set: 0.438;
+  --ch-color-base-l-l-85-set: 0.395;
+  --ch-color-base-l-l-90-set: 0.352;
+  --ch-color-base-l-l-95-set: 0.31;
+  --ch-color-base-l-l-100-set: 0.267;
+}
+
+.ssopt-col-base-lightness-l-flexoki,
+.ssopt-col-base-lightness-l-flexoki .theme-light,
+.ssopt-col-base-lightness-l-flexoki.theme-light {
+  --ch-color-base-l-l-00-set: 0.986;
+  --ch-color-base-l-l-05-set: 0.986;
+  --ch-color-base-l-l-10-set: 0.954;
+  --ch-color-base-l-l-15-set: 0.954;
+  --ch-color-base-l-l-20-set: 0.954;
+  --ch-color-base-l-l-25-set: 0.917;
+  --ch-color-base-l-l-30-set: 0.917;
+  --ch-color-base-l-l-35-set: 0.881;
+  --ch-color-base-l-l-40-set: 0.846;
+  --ch-color-base-l-l-45-set: 0.809;
+  --ch-color-base-l-l-50-set: 0.772;
+  --ch-color-base-l-l-55-set: 0.694;
+  --ch-color-base-l-l-60-set: 0.617;
+  --ch-color-base-l-l-65-set: 0.578;
+  --ch-color-base-l-l-70-set: 0.538;
+  --ch-color-base-l-l-75-set: 0.477;
+  --ch-color-base-l-l-80-set: 0.415;
+  --ch-color-base-l-l-85-set: 0.354;
+  --ch-color-base-l-l-90-set: 0.293;
+  --ch-color-base-l-l-95-set: 0.231;
+  --ch-color-base-l-l-100-set: 0.17;
+}
+
+.ssopt-col-base-lightness-d-high-contrast,
+.ssopt-col-base-lightness-d-high-contrast .theme-dark,
+.ssopt-col-base-lightness-d-high-contrast.theme-dark {
+  --ch-color-base-d-l-00-set: 0.1;
+  --ch-color-base-d-l-05-set: 0.13;
+  --ch-color-base-d-l-10-set: 0.15;
+  --ch-color-base-d-l-15-set: 0.16;
+  --ch-color-base-d-l-20-set: 0.17;
+  --ch-color-base-d-l-25-set: 0.19;
+  --ch-color-base-d-l-30-set: 0.22;
+  --ch-color-base-d-l-35-set: 0.28;
+  --ch-color-base-d-l-40-set: 0.36;
+  --ch-color-base-d-l-45-set: 0.46;
+  --ch-color-base-d-l-50-set: 0.56;
+  --ch-color-base-d-l-55-set: 0.61;
+  --ch-color-base-d-l-60-set: 0.66;
+  --ch-color-base-d-l-65-set: 0.76;
+  --ch-color-base-d-l-70-set: 0.84;
+  --ch-color-base-d-l-75-set: 0.88;
+  --ch-color-base-d-l-80-set: 0.9;
+  --ch-color-base-d-l-85-set: 0.92;
+  --ch-color-base-d-l-90-set: 0.94;
+  --ch-color-base-d-l-95-set: 0.97;
+  --ch-color-base-d-l-100-set: 0.99;
+}
+
+.ssopt-col-base-lightness-d-true-black,
+.ssopt-col-base-lightness-d-true-black .theme-dark,
+.ssopt-col-base-lightness-d-true-black.theme-dark {
+  --ch-color-base-d-l-00-set: 0;
+  --ch-color-base-d-l-05-set: 0.03;
+  --ch-color-base-d-l-10-set: 0.05;
+  --ch-color-base-d-l-15-set: 0.06;
+  --ch-color-base-d-l-20-set: 0.07;
+  --ch-color-base-d-l-25-set: 0.09;
+  --ch-color-base-d-l-30-set: 0.12;
+  --ch-color-base-d-l-35-set: 0.18;
+  --ch-color-base-d-l-40-set: 0.26;
+  --ch-color-base-d-l-45-set: 0.36;
+  --ch-color-base-d-l-50-set: 0.51;
+  --ch-color-base-d-l-55-set: 0.66;
+  --ch-color-base-d-l-60-set: 0.7;
+  --ch-color-base-d-l-65-set: 0.72;
+  --ch-color-base-d-l-70-set: 0.76;
+  --ch-color-base-d-l-75-set: 0.82;
+  --ch-color-base-d-l-80-set: 0.88;
+  --ch-color-base-d-l-85-set: 0.93;
+  --ch-color-base-d-l-90-set: 0.95;
+  --ch-color-base-d-l-95-set: 0.98;
+  --ch-color-base-d-l-100-set: 0.99;
+}
+
+.ssopt-col-base-lightness-d-low-contrast,
+.ssopt-col-base-lightness-d-low-contrast .theme-dark,
+.ssopt-col-base-lightness-d-low-contrast.theme-dark {
+  --ch-color-base-d-l-00-set: 0.15;
+  --ch-color-base-d-l-05-set: 0.17;
+  --ch-color-base-d-l-10-set: 0.19;
+  --ch-color-base-d-l-15-set: 0.21;
+  --ch-color-base-d-l-20-set: 0.23;
+  --ch-color-base-d-l-25-set: 0.25;
+  --ch-color-base-d-l-30-set: 0.28;
+  --ch-color-base-d-l-35-set: 0.32;
+  --ch-color-base-d-l-40-set: 0.38;
+  --ch-color-base-d-l-45-set: 0.44;
+  --ch-color-base-d-l-50-set: 0.5;
+  --ch-color-base-d-l-55-set: 0.56;
+  --ch-color-base-d-l-60-set: 0.62;
+  --ch-color-base-d-l-65-set: 0.68;
+  --ch-color-base-d-l-70-set: 0.74;
+  --ch-color-base-d-l-75-set: 0.8;
+  --ch-color-base-d-l-80-set: 0.85;
+  --ch-color-base-d-l-85-set: 0.88;
+  --ch-color-base-d-l-90-set: 0.91;
+  --ch-color-base-d-l-95-set: 0.94;
+  --ch-color-base-d-l-100-set: 0.96;
+}
+
+.ssopt-col-base-lightness-d-ultra-low-contrast,
+.ssopt-col-base-lightness-d-ultra-low-contrast .theme-dark,
+.ssopt-col-base-lightness-d-ultra-low-contrast.theme-dark {
+  --ch-color-base-d-l-00-set: 0.324;
+  --ch-color-base-d-l-05-set: 0.351;
+  --ch-color-base-d-l-10-set: 0.379;
+  --ch-color-base-d-l-15-set: 0.398;
+  --ch-color-base-d-l-20-set: 0.416;
+  --ch-color-base-d-l-25-set: 0.452;
+  --ch-color-base-d-l-30-set: 0.476;
+  --ch-color-base-d-l-35-set: 0.5;
+  --ch-color-base-d-l-40-set: 0.55;
+  --ch-color-base-d-l-45-set: 0.6;
+  --ch-color-base-d-l-50-set: 0.65;
+  --ch-color-base-d-l-55-set: 0.7;
+  --ch-color-base-d-l-60-set: 0.75;
+  --ch-color-base-d-l-65-set: 0.8;
+  --ch-color-base-d-l-70-set: 0.83;
+  --ch-color-base-d-l-75-set: 0.86;
+  --ch-color-base-d-l-80-set: 0.89;
+  --ch-color-base-d-l-85-set: 0.91;
+  --ch-color-base-d-l-90-set: 0.93;
+  --ch-color-base-d-l-95-set: 0.95;
+  --ch-color-base-d-l-100-set: 0.97;
+}
+
+.ssopt-col-base-lightness-d-cinematic,
+.ssopt-col-base-lightness-d-cinematic .theme-dark,
+.ssopt-col-base-lightness-d-cinematic.theme-dark {
+  --ch-color-base-d-l-00-set: 0.05;
+  --ch-color-base-d-l-05-set: 0.07;
+  --ch-color-base-d-l-10-set: 0.09;
+  --ch-color-base-d-l-15-set: 0.12;
+  --ch-color-base-d-l-20-set: 0.16;
+  --ch-color-base-d-l-25-set: 0.22;
+  --ch-color-base-d-l-30-set: 0.29;
+  --ch-color-base-d-l-35-set: 0.38;
+  --ch-color-base-d-l-40-set: 0.48;
+  --ch-color-base-d-l-45-set: 0.58;
+  --ch-color-base-d-l-50-set: 0.66;
+  --ch-color-base-d-l-55-set: 0.73;
+  --ch-color-base-d-l-60-set: 0.79;
+  --ch-color-base-d-l-65-set: 0.84;
+  --ch-color-base-d-l-70-set: 0.88;
+  --ch-color-base-d-l-75-set: 0.91;
+  --ch-color-base-d-l-80-set: 0.93;
+  --ch-color-base-d-l-85-set: 0.95;
+  --ch-color-base-d-l-90-set: 0.96;
+  --ch-color-base-d-l-95-set: 0.97;
+  --ch-color-base-d-l-100-set: 0.98;
+}
+
+.ssopt-col-base-lightness-d-paper,
+.ssopt-col-base-lightness-d-paper .theme-dark,
+.ssopt-col-base-lightness-d-paper.theme-dark {
+  --ch-color-base-d-l-00-set: 0.18;
+  --ch-color-base-d-l-05-set: 0.2;
+  --ch-color-base-d-l-10-set: 0.22;
+  --ch-color-base-d-l-15-set: 0.24;
+  --ch-color-base-d-l-20-set: 0.27;
+  --ch-color-base-d-l-25-set: 0.31;
+  --ch-color-base-d-l-30-set: 0.36;
+  --ch-color-base-d-l-35-set: 0.42;
+  --ch-color-base-d-l-40-set: 0.49;
+  --ch-color-base-d-l-45-set: 0.56;
+  --ch-color-base-d-l-50-set: 0.63;
+  --ch-color-base-d-l-55-set: 0.68;
+  --ch-color-base-d-l-60-set: 0.73;
+  --ch-color-base-d-l-65-set: 0.78;
+  --ch-color-base-d-l-70-set: 0.82;
+  --ch-color-base-d-l-75-set: 0.85;
+  --ch-color-base-d-l-80-set: 0.88;
+  --ch-color-base-d-l-85-set: 0.9;
+  --ch-color-base-d-l-90-set: 0.92;
+  --ch-color-base-d-l-95-set: 0.94;
+  --ch-color-base-d-l-100-set: 0.95;
+}
+
+.ssopt-col-base-lightness-d-vivid,
+.ssopt-col-base-lightness-d-vivid .theme-dark,
+.ssopt-col-base-lightness-d-vivid.theme-dark {
+  --ch-color-base-d-l-00-set: 0.15;
+  --ch-color-base-d-l-05-set: 0.17;
+  --ch-color-base-d-l-10-set: 0.19;
+  --ch-color-base-d-l-15-set: 0.22;
+  --ch-color-base-d-l-20-set: 0.26;
+  --ch-color-base-d-l-25-set: 0.32;
+  --ch-color-base-d-l-30-set: 0.39;
+  --ch-color-base-d-l-35-set: 0.47;
+  --ch-color-base-d-l-40-set: 0.55;
+  --ch-color-base-d-l-45-set: 0.62;
+  --ch-color-base-d-l-50-set: 0.68;
+  --ch-color-base-d-l-55-set: 0.73;
+  --ch-color-base-d-l-60-set: 0.78;
+  --ch-color-base-d-l-65-set: 0.82;
+  --ch-color-base-d-l-70-set: 0.85;
+  --ch-color-base-d-l-75-set: 0.88;
+  --ch-color-base-d-l-80-set: 0.9;
+  --ch-color-base-d-l-85-set: 0.92;
+  --ch-color-base-d-l-90-set: 0.94;
+  --ch-color-base-d-l-95-set: 0.96;
+  --ch-color-base-d-l-100-set: 0.97;
+}
+
+.ssopt-col-base-lightness-d-analog,
+.ssopt-col-base-lightness-d-analog .theme-dark,
+.ssopt-col-base-lightness-d-analog.theme-dark {
+  --ch-color-base-d-l-00-set: 0.2;
+  --ch-color-base-d-l-05-set: 0.22;
+  --ch-color-base-d-l-10-set: 0.24;
+  --ch-color-base-d-l-15-set: 0.27;
+  --ch-color-base-d-l-20-set: 0.31;
+  --ch-color-base-d-l-25-set: 0.35;
+  --ch-color-base-d-l-30-set: 0.4;
+  --ch-color-base-d-l-35-set: 0.46;
+  --ch-color-base-d-l-40-set: 0.52;
+  --ch-color-base-d-l-45-set: 0.58;
+  --ch-color-base-d-l-50-set: 0.64;
+  --ch-color-base-d-l-55-set: 0.69;
+  --ch-color-base-d-l-60-set: 0.74;
+  --ch-color-base-d-l-65-set: 0.78;
+  --ch-color-base-d-l-70-set: 0.82;
+  --ch-color-base-d-l-75-set: 0.85;
+  --ch-color-base-d-l-80-set: 0.87;
+  --ch-color-base-d-l-85-set: 0.89;
+  --ch-color-base-d-l-90-set: 0.91;
+  --ch-color-base-d-l-95-set: 0.93;
+  --ch-color-base-d-l-100-set: 0.94;
+}
+
+.ssopt-col-base-lightness-d-structural,
+.ssopt-col-base-lightness-d-structural .theme-dark,
+.ssopt-col-base-lightness-d-structural.theme-dark {
+  --ch-color-base-d-l-00-set: 0.08;
+  --ch-color-base-d-l-05-set: 0.12;
+  --ch-color-base-d-l-10-set: 0.12;
+  --ch-color-base-d-l-15-set: 0.12;
+  --ch-color-base-d-l-20-set: 0.16;
+  --ch-color-base-d-l-25-set: 0.16;
+  --ch-color-base-d-l-30-set: 0.25;
+  --ch-color-base-d-l-35-set: 0.25;
+  --ch-color-base-d-l-40-set: 0.4;
+  --ch-color-base-d-l-45-set: 0.4;
+  --ch-color-base-d-l-50-set: 0.55;
+  --ch-color-base-d-l-55-set: 0.58;
+  --ch-color-base-d-l-60-set: 0.75;
+  --ch-color-base-d-l-65-set: 0.75;
+  --ch-color-base-d-l-70-set: 0.85;
+  --ch-color-base-d-l-75-set: 0.85;
+  --ch-color-base-d-l-80-set: 0.92;
+  --ch-color-base-d-l-85-set: 0.92;
+  --ch-color-base-d-l-90-set: 0.96;
+  --ch-color-base-d-l-95-set: 0.96;
+  --ch-color-base-d-l-100-set: 0.98;
+}
+
+.ssopt-col-base-lightness-d-glow,
+.ssopt-col-base-lightness-d-glow .theme-dark,
+.ssopt-col-base-lightness-d-glow.theme-dark {
+  --ch-color-base-d-l-00-set: 0.35;
+  --ch-color-base-d-l-05-set: 0.36;
+  --ch-color-base-d-l-10-set: 0.37;
+  --ch-color-base-d-l-15-set: 0.39;
+  --ch-color-base-d-l-20-set: 0.42;
+  --ch-color-base-d-l-25-set: 0.46;
+  --ch-color-base-d-l-30-set: 0.51;
+  --ch-color-base-d-l-35-set: 0.57;
+  --ch-color-base-d-l-40-set: 0.63;
+  --ch-color-base-d-l-45-set: 0.69;
+  --ch-color-base-d-l-50-set: 0.74;
+  --ch-color-base-d-l-55-set: 0.78;
+  --ch-color-base-d-l-60-set: 0.82;
+  --ch-color-base-d-l-65-set: 0.85;
+  --ch-color-base-d-l-70-set: 0.88;
+  --ch-color-base-d-l-75-set: 0.9;
+  --ch-color-base-d-l-80-set: 0.92;
+  --ch-color-base-d-l-85-set: 0.94;
+  --ch-color-base-d-l-90-set: 0.95;
+  --ch-color-base-d-l-95-set: 0.96;
+  --ch-color-base-d-l-100-set: 0.97;
+}
+
+.ssopt-col-base-lightness-d-catppuccin,
+.ssopt-col-base-lightness-d-catppuccin .theme-dark,
+.ssopt-col-base-lightness-d-catppuccin.theme-dark {
+  --ch-color-base-d-l-00-set: 0.28;
+  --ch-color-base-d-l-05-set: 0.265;
+  --ch-color-base-d-l-10-set: 0.25;
+  --ch-color-base-d-l-15-set: 0.29;
+  --ch-color-base-d-l-20-set: 0.35;
+  --ch-color-base-d-l-25-set: 0.42;
+  --ch-color-base-d-l-30-set: 0.47;
+  --ch-color-base-d-l-35-set: 0.52;
+  --ch-color-base-d-l-40-set: 0.57;
+  --ch-color-base-d-l-45-set: 0.62;
+  --ch-color-base-d-l-50-set: 0.67;
+  --ch-color-base-d-l-55-set: 0.71;
+  --ch-color-base-d-l-60-set: 0.75;
+  --ch-color-base-d-l-65-set: 0.78;
+  --ch-color-base-d-l-70-set: 0.81;
+  --ch-color-base-d-l-75-set: 0.84;
+  --ch-color-base-d-l-80-set: 0.87;
+  --ch-color-base-d-l-85-set: 0.89;
+  --ch-color-base-d-l-90-set: 0.91;
+  --ch-color-base-d-l-95-set: 0.93;
+  --ch-color-base-d-l-100-set: 0.95;
+}
+
+.ssopt-col-base-lightness-d-writing,
+.ssopt-col-base-lightness-d-writing .theme-dark,
+.ssopt-col-base-lightness-d-writing.theme-dark {
+  --ch-color-base-d-l-00-set: 0.3;
+  --ch-color-base-d-l-05-set: 0.315;
+  --ch-color-base-d-l-10-set: 0.33;
+  --ch-color-base-d-l-15-set: 0.36;
+  --ch-color-base-d-l-20-set: 0.4;
+  --ch-color-base-d-l-25-set: 0.46;
+  --ch-color-base-d-l-30-set: 0.52;
+  --ch-color-base-d-l-35-set: 0.36;
+  --ch-color-base-d-l-40-set: 0.4;
+  --ch-color-base-d-l-45-set: 0.44;
+  --ch-color-base-d-l-50-set: 0.48;
+  --ch-color-base-d-l-55-set: 0.55;
+  --ch-color-base-d-l-60-set: 0.62;
+  --ch-color-base-d-l-65-set: 0.69;
+  --ch-color-base-d-l-70-set: 0.76;
+  --ch-color-base-d-l-75-set: 0.82;
+  --ch-color-base-d-l-80-set: 0.87;
+  --ch-color-base-d-l-85-set: 0.91;
+  --ch-color-base-d-l-90-set: 0.94;
+  --ch-color-base-d-l-95-set: 0.965;
+  --ch-color-base-d-l-100-set: 0.98;
+}
+
+.ssopt-col-base-lightness-d-solarized,
+.ssopt-col-base-lightness-d-solarized .theme-dark,
+.ssopt-col-base-lightness-d-solarized.theme-dark {
+  --ch-color-base-d-l-00-set: 0.267;
+  --ch-color-base-d-l-05-set: 0.267;
+  --ch-color-base-d-l-10-set: 0.267;
+  --ch-color-base-d-l-15-set: 0.291;
+  --ch-color-base-d-l-20-set: 0.315;
+  --ch-color-base-d-l-25-set: 0.315;
+  --ch-color-base-d-l-30-set: 0.366;
+  --ch-color-base-d-l-35-set: 0.416;
+  --ch-color-base-d-l-40-set: 0.467;
+  --ch-color-base-d-l-45-set: 0.517;
+  --ch-color-base-d-l-50-set: 0.568;
+  --ch-color-base-d-l-55-set: 0.59;
+  --ch-color-base-d-l-60-set: 0.611;
+  --ch-color-base-d-l-65-set: 0.633;
+  --ch-color-base-d-l-70-set: 0.654;
+  --ch-color-base-d-l-75-set: 0.661;
+  --ch-color-base-d-l-80-set: 0.669;
+  --ch-color-base-d-l-85-set: 0.676;
+  --ch-color-base-d-l-90-set: 0.683;
+  --ch-color-base-d-l-95-set: 0.691;
+  --ch-color-base-d-l-100-set: 0.698;
+}
+
+.ssopt-col-base-lightness-d-flexoki,
+.ssopt-col-base-lightness-d-flexoki .theme-dark,
+.ssopt-col-base-lightness-d-flexoki.theme-dark {
+  --ch-color-base-d-l-00-set: 0.17;
+  --ch-color-base-d-l-05-set: 0.17;
+  --ch-color-base-d-l-10-set: 0.223;
+  --ch-color-base-d-l-15-set: 0.223;
+  --ch-color-base-d-l-20-set: 0.223;
+  --ch-color-base-d-l-25-set: 0.273;
+  --ch-color-base-d-l-30-set: 0.273;
+  --ch-color-base-d-l-35-set: 0.321;
+  --ch-color-base-d-l-40-set: 0.365;
+  --ch-color-base-d-l-45-set: 0.409;
+  --ch-color-base-d-l-50-set: 0.453;
+  --ch-color-base-d-l-55-set: 0.496;
+  --ch-color-base-d-l-60-set: 0.538;
+  --ch-color-base-d-l-65-set: 0.578;
+  --ch-color-base-d-l-70-set: 0.617;
+  --ch-color-base-d-l-75-set: 0.655;
+  --ch-color-base-d-l-80-set: 0.693;
+  --ch-color-base-d-l-85-set: 0.732;
+  --ch-color-base-d-l-90-set: 0.77;
+  --ch-color-base-d-l-95-set: 0.808;
+  --ch-color-base-d-l-100-set: 0.846;
+}
+

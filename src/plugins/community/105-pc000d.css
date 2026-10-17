@@ -1,0 +1,382 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000D
+\ Plugins > Community
+\ Style Settings
+\ Specific Customisations
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+PC000D-1 | Highlight Customisations - add text to that
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ensure picked colour is properly set */
+body.theme-light.css-settings-manager,
+body.theme-dark.css-settings-manager {
+  --col-highlight-text-pickr: var(--col-highlight-text);
+}
+
+body.css-settings-manager.theme-light .setting-item[data-id^="col-highlight-"] .theme-light .pickr .pcr-button {
+  color: var(--col-highlight-text-pickr);
+}
+
+body.css-settings-manager.theme-dark .setting-item[data-id^="col-highlight-"] .theme-dark .pickr .pcr-button {
+  color: var(--col-highlight-text-pickr);
+}
+
+/* add the highlight text */
+
+/* set the font and stuff */
+.setting-item:where([data-id^="col-highlight-0"]) .pickr button {
+  width: 12em;
+}
+
+.setting-item:where([data-id^="col-highlight-0"]) .pickr button::after {
+  font-family: var(--font-text);
+  vertical-align: middle;
+  line-height: 2;
+}
+
+body.theme-light .setting-item:where([data-id^="col-highlight-0"]) .theme-light .pickr button::after {
+  content: "==highlight==";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-0)); */
+
+ /* provides fallback if pcr not set */
+}
+
+body.theme-dark .setting-item:where([data-id^="col-highlight-0"]) .theme-dark .pickr button::after {
+  content: "==highlight==";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-0)); */
+}
+
+.setting-item:where([data-id^="col-highlight-1"]) .pickr button {
+  width: 12em;
+}
+
+.setting-item:where([data-id^="col-highlight-1"]) .pickr button::after {
+  font-family: var(--font-text);
+  vertical-align: middle;
+  line-height: 2;
+}
+
+body.theme-light .setting-item:where([data-id^="col-highlight-1"]) .theme-light .pickr button::after {
+  content: "*==highlight==*";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-1)); */
+
+ /* provides fallback if pcr not set */
+}
+
+body.theme-dark .setting-item:where([data-id^="col-highlight-1"]) .theme-dark .pickr button::after {
+  content: "*==highlight==*";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-1)); */
+}
+
+.setting-item:where([data-id^="col-highlight-2"]) .pickr button {
+  width: 12em;
+}
+
+.setting-item:where([data-id^="col-highlight-2"]) .pickr button::after {
+  font-family: var(--font-text);
+  vertical-align: middle;
+  line-height: 2;
+}
+
+body.theme-light .setting-item:where([data-id^="col-highlight-2"]) .theme-light .pickr button::after {
+  content: "**==highlight==**";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-2)); */
+
+ /* provides fallback if pcr not set */
+}
+
+body.theme-dark .setting-item:where([data-id^="col-highlight-2"]) .theme-dark .pickr button::after {
+  content: "**==highlight==**";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-2)); */
+}
+
+.setting-item:where([data-id^="col-highlight-3"]) .pickr button {
+  width: 12em;
+}
+
+.setting-item:where([data-id^="col-highlight-3"]) .pickr button::after {
+  font-family: var(--font-text);
+  vertical-align: middle;
+  line-height: 2;
+}
+
+body.theme-light .setting-item:where([data-id^="col-highlight-3"]) .theme-light .pickr button::after {
+  content: "***==highlight==***";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-3)); */
+
+ /* provides fallback if pcr not set */
+}
+
+body.theme-dark .setting-item:where([data-id^="col-highlight-3"]) .theme-dark .pickr button::after {
+  content: "***==highlight==***";
+
+  /* background-color: var(--pcr-color, var(--col-highlight-3)); */
+}
+
+/* mixin for all cols for all 8 */
+.setting-item:where([data-id="col-highlight-0"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-0));
+}
+
+.setting-item:where([data-id="col-highlight-1"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-1));
+}
+
+.setting-item:where([data-id="col-highlight-2"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-2));
+}
+
+.setting-item:where([data-id="col-highlight-3"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-3));
+}
+
+.setting-item:where([data-id="col-highlight-0-org"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-0-org));
+}
+
+.setting-item:where([data-id="col-highlight-1-org"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-1-org));
+}
+
+.setting-item:where([data-id="col-highlight-2-org"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-2-org));
+}
+
+.setting-item:where([data-id="col-highlight-3-org"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-3-org));
+}
+
+.setting-item:where([data-id="col-highlight-text"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-highlight-text));
+}
+
+.setting-item:where([data-id="col-accent-custom-headers-0"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-accent-custom-headers-0));
+}
+
+.setting-item:where([data-id="col-accent-custom-headers-1"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-accent-custom-headers-1));
+}
+
+.setting-item:where([data-id="col-accent-custom-headers-2"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-accent-custom-headers-2));
+}
+
+.setting-item:where([data-id="col-accent-custom-headers-0B"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-accent-custom-headers-0B));
+}
+
+.setting-item:where([data-id="col-accent-custom-headers-1B"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-accent-custom-headers-1B));
+}
+
+.setting-item:where([data-id="col-accent-custom-headers-2B"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-accent-custom-headers-2B));
+}
+
+.setting-item:where([data-id="col-custom-headers-H1"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-custom-headers-H1));
+}
+
+.setting-item:where([data-id="col-custom-headers-H2"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-custom-headers-H2));
+}
+
+.setting-item:where([data-id="col-custom-headers-H3"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-custom-headers-H3));
+}
+
+.setting-item:where([data-id="col-custom-headers-H4"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-custom-headers-H4));
+}
+
+.setting-item:where([data-id="col-custom-headers-H5"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-custom-headers-H5));
+}
+
+.setting-item:where([data-id="col-custom-headers-H6"]) .pickr button::after {
+  background-color: var(--pcr-color, var(--col-custom-headers-H6));
+}
+
+body:is(.is-phone) .setting-item:where([data-id^="col-highlight-"]) :where(.setting-item-control) {
+  justify-content: start;
+}
+
+body:is(.is-phone) .setting-item:where([data-id^="col-highlight-"]) :where(.setting-item-control) .pickr button {
+  width: 50vw;
+}
+
+/* hide the wrapper when it's not the right theme setting */
+body.theme-light .themed-color-wrapper > div.theme-dark {
+  display: none;
+}
+
+body.theme-dark .themed-color-wrapper > div.theme-light {
+  display: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+PC000D-2 | Underline Customisations + TWO LINE DISPLAY
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* TEST for Grid for long name dropdowns */
+.style-settings-heading[data-id="typography-underlines"] + .style-settings-container .setting-item {
+  display: grid;
+  gap: var(--size-4-2);
+  grid-template-areas: "top top" "btm btm";
+}
+
+.style-settings-heading[data-id="typography-underlines"] + .style-settings-container .setting-item-info {
+  grid-area: top;
+}
+
+.style-settings-heading[data-id="typography-underlines"] + .style-settings-container .setting-item-control {
+  grid-area: btm;
+}
+
+:where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="canvas-dot-pattern"], :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="col-header-hex"], :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="col-base-bg-alh"], :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="ssopt-callout-style"], :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="ssopt-bw-table-content-fit"] {
+  display: grid;
+  gap: var(--size-4-2);
+  grid-template-areas: "top top" "btm btm";
+}
+
+:where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="canvas-dot-pattern"] .setting-item-info, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="col-header-hex"] .setting-item-info, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="col-base-bg-alh"] .setting-item-info, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="ssopt-callout-style"] .setting-item-info, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-info {
+  grid-area: top;
+}
+
+:where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="canvas-dot-pattern"] .setting-item-control, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="col-header-hex"] .setting-item-control, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="col-base-bg-alh"] .setting-item-control, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="ssopt-callout-style"] .setting-item-control, :where(.style-settings-heading) + :where(.style-settings-container) .setting-item[data-id="ssopt-bw-table-content-fit"] .setting-item-control {
+  grid-area: btm;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+PC000D-3 | Willemstad Theme Information Customisations 
+──────────────────────────────────────────────────────────────────────────────── */
+.style-settings-heading[data-id="V1-Willemstad-Info"] {
+  /* Willemstad name */
+
+  /* add whitespace for Willemstad name */
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] .setting-item-name {
+  justify-self: center;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] .style-settings-collapse-indicator {
+  margin-left: 8px;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] {
+  justify-content: center; /* makes it centered */
+  font-family: Manrope;
+  background-color: var(--background-secondary-alt);
+  border: 1px solid var(--background-modifier-border); /* a nice border! */
+  padding-top: 0.75em;
+  padding-bottom: 0.75em; /* wtf is with the 6px */
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"].style-settings-heading[data-id="V1-Willemstad-Info"] {
+  margin-bottom: 0; /* remove bottom margin */ /* needs more specificity */
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] .setting-item-control {
+  display: none;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container {
+  padding-left: 0;
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item:first-of-type {
+  padding-top: 0.75em; /* following style settings */
+  border-top: 0 solid var(--background-modifier-border); /* sticks to header now hence not 1px */
+}
+
+.style-settings-heading[data-id="V1-Willemstad-Info"] + .style-settings-container .setting-item:last-of-type {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* for the box itself */
+.setting-item {
+  /* bold the website stuff */
+}
+
+.setting-item:is([data-id="info-theme-documentation"],
+[data-id="info-theme-repository"]) {
+  font-weight: var(--font-semibold);
+}
+
+.setting-item:is([data-id="info-theme-documentation"],
+[data-id="info-theme-repository"]) .setting-item-name {
+  font-weight: var(--font-semibold);
+}
+
+.setting-item:is([data-id="info-theme-documentation"],
+[data-id="info-theme-repository"]) .setting-item-description {
+  cursor: text;
+  user-select: all;
+  line-height: 1.75;
+  font-size: var(--font-ui-medium);
+}
+
+.setting-item:is([data-id="info-theme-documentation"],
+[data-id="info-theme-repository"]) .setting-item-description::before {
+  display: block;
+  width: fit-content; /* use these instead of inline-block since it will -stick- to the previous line if there is space */
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  font-weight: var(--font-normal);
+  white-space: pre-wrap;
+  line-height: initial;
+}
+
+.setting-item:is([data-id="info-theme-documentation"]) .setting-item-description::before {
+  content: "All the info you need, in one place.";
+}
+
+.setting-item:is([data-id="info-theme-repository"]) .setting-item-description::before {
+  content: "Your source to your own copy of Willemstad.";
+}
+
+.setting-item:is([data-id="info-theme-settings-search"]) {
+  /* copyable settings search */
+}
+
+.setting-item:is([data-id="info-theme-settings-search"]) .setting-item-name {
+  cursor: text;
+  user-select: all;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+PC000D-4 | For Callouts Info?
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIXIN */
+
+/* RULES */
+.setting-item:is([data-id="info-callouts"], [data-id="info-cssclass"], [data-id="info-cssc-latex"], [data-id="info-cssc-magazine"], [data-id="info-cssc-cornell"], [data-id="info-cssc-cornell-2"]) .setting-item-description {
+  cursor: text;
+  user-select: all;
+  line-height: 1.75;
+  font-size: var(--font-ui-medium);
+}
+
+.setting-item:is([data-id="syntax-type-callouts-metadata"], [data-id="syntax-type-callouts-standard"]) {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.75em !important; /* need to fix the important here one day */
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+PC000D-5 | actually what was i doing here
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* Customisation for SS */
+

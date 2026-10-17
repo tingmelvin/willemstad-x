@@ -1,0 +1,52 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC011
+\ Plugins > Community
+\ General
+    \\ PComm011 | Hover Editor
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Hover Editor]
+\\ (NOMEN | PComm011)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it nicer
+    ──────────────────────────────────────────────────────────────────────────── */
+.popover.hover-editor {
+  --he-title-bar-inactive-pinned-bg: var(--tab-container-background);
+  --he-title-bar-inactive-bg: var(--tab-container-background);
+  --he-title-bar-active-pinned-bg: var(--background-primary);
+  --he-title-bar-active-bg: var(--background-primary);
+  --he-title-bar-inactive-fg: var(--tab-text-color);
+  --he-title-bar-active-fg: var(--tab-text-color-active);
+
+  box-shadow: 0 0 0 1px var(--divider-color);
+}
+
+.popover.hover-editor .popover-titlebar > *, .popover.hover-editor .popover-titlebar > * > * {
+  color: var(--tab-text-color);
+}
+
+.popover.hover-editor .popover-titlebar .popover-title {
+  transition: none;
+}
+
+.popover.hover-editor.is-active .popover-titlebar > *, .popover.hover-editor.is-active .popover-titlebar > * > * {
+  color: var(--tab-text-color-active);
+}
+
+/* add border and synchronise colours */
+body:is(.ssopt-titlebar-use-accent):not(.PComm011-no-sync-colours) .popover.hover-editor {
+  --he-title-bar-inactive-pinned-bg: var(--tab-container-background);
+  --he-title-bar-inactive-bg: var(--tab-container-background);
+  --he-title-bar-active-pinned-bg: var(--col-titlebar-accent);
+  --he-title-bar-active-bg: var(--col-titlebar-accent);
+  --he-title-bar-inactive-fg: var(--tab-text-color);
+  --he-title-bar-active-fg: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):not(.PComm011-no-sync-colours) .popover.hover-editor.is-active .popover-titlebar > *, body:is(.ssopt-titlebar-use-accent):not(.PComm011-no-sync-colours) .popover.hover-editor.is-active .popover-titlebar > * > * {
+  color: var(--text-on-accent);
+}
+
+/* Hover Editor */
+

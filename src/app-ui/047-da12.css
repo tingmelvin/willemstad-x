@@ -1,0 +1,165 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DA12
+\ First-Level Main Elements \ Colour Appearance \ Applied Colours
+───────────────────────────────────────────────────────────────────────────────────
+This isn't for colour hotfixing (things that actually look AWRY), but
+on applying colours (incl. for hover) over objects
+
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* DA12-1 | Changing Top Bar/Titlebar Colour to `--color-accent`s */
+body {
+  --col-titlebar-accent: var(--color-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent) {
+  /* for frameless mode */
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless):not(.ssopt-sd-float-ribbon) .sidebar-toggle-button.mod-left .clickable-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless):not(.ssopt-exclude-titlebar-buttons):is(.mod-linux, .mod-windows) .titlebar-button {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) {
+  --titlebar-background: var(--col-titlebar-accent);
+
+  /* colours the top left hand corner and keeps it coloured when collapsed */
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) .sidebar-toggle-button.mod-right .clickable-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) :where(.mod-left-split, .mod-right-split) .mod-top.mod-top .workspace-tab-header .workspace-tab-header-inner-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) .mod-top.mod-top :where(.workspace-tab-header-new-tab,
+.workspace-tab-header-tab-list) .clickable-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) .mod-top.mod-top:not(.mod-stacked) {
+  --tab-text-color: var(--text-on-accent); /* need to set here not to affect non-mod-tops */
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) .mod-top.mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) .mod-top.mod-top:not(.mod-stacked):where(.mod-top-left-space, .mod-top-right-space) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) .mod-top.mod-top:not(.mod-stacked) :where(.workspace-tab-header-new-tab,
+.workspace-tab-header-tab-list) .clickable-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless) .mod-top.mod-top:not(.mod-stacked) .workspace-tab-header:not(.is-active) .workspace-tab-header-status-icon {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless.is-hidden-frameless):where(.mod-windows, .mod-linux) .workspace-ribbon.mod-left.is-collapsed::before {
+  --ribbon-background-collapsed: var(--col-titlebar-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless):not(.is-hidden-frameless) .titlebar {
+  background-color: var(--col-titlebar-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless):not(.is-hidden-frameless) .titlebar-text {
+  color: var(--text-on-accent);
+}
+
+body:is(.ssopt-titlebar-use-accent):where(.is-frameless):not(.is-hidden-frameless) .titlebar-button {
+  color: var(--text-on-accent);
+}
+
+/* DA12-2 | Make Icons take the accent colours */
+body:not(.ssopt-titlebar-use-accent) {
+  --icon-color-focused: var(--icon-color-active);
+  --tab-text-color-focused-active-current: var(--icon-color-active); /* this only takes it if it's focused */
+}
+
+/* DA12-3 | Make the Sidebar Toggle Button take colour when it is expanded */
+body:not(.ssopt-sidebar-toggle-button-no-colour, .ssopt-titlebar-use-accent) .workspace:is(.is-left-sidedock-open) .sidebar-toggle-button.mod-left .clickable-icon {
+  color: var(--icon-color-active);
+}
+
+body:not(.ssopt-sidebar-toggle-button-no-colour, .ssopt-titlebar-use-accent) .workspace:is(.is-left-sidedock-open) .sidebar-toggle-button.mod-left .clickable-icon:hover {
+  color: var(--icon-color-hover);
+}
+
+body:not(.ssopt-sidebar-toggle-button-no-colour, .ssopt-titlebar-use-accent) .workspace:is(.is-right-sidedock-open) .sidebar-toggle-button.mod-right .clickable-icon {
+  color: var(--icon-color-active);
+}
+
+body:not(.ssopt-sidebar-toggle-button-no-colour, .ssopt-titlebar-use-accent) .workspace:is(.is-right-sidedock-open) .sidebar-toggle-button.mod-right .clickable-icon:hover {
+  color: var(--icon-color-hover);
+}
+
+/* DA12-3 | Make Icons take the accent colours | hover */
+@media (hover: hover) {
+  body .workspace-drawer-vault-switcher:hover .svg-icon {
+    color: var(--icon-color-hover);
+  }
+} /* add colour? */
+.theme-dark {
+  --icon-color-hover: var(--color-accent-2);
+  --icon-color-active: var(--color-accent-1);
+}
+
+.theme-light {
+  --icon-color-hover: var(--color-accent-1);
+  --icon-color-active: var(--color-accent);
+}
+
+/* unify TEXT-ACCENT wtf is it diff in dark and light modes
+okay now i get it. */
+
+/* DA12-4 | Make words in both Nav and Vault Switcher take on colour when hover */
+.workspace-drawer-vault-switcher:hover .workspace-drawer-vault-name {
+  color: var(--nav-item-color-hover);
+
+  --nav-item-color-hover: var(--icon-color-hover);
+}
+
+/* give colour over hover */
+@media (hover: hover) {
+  body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
+    --nav-item-color-hover: var(--icon-color-hover);
+  }
+
+  body:not(.is-grabbing) .tree-item-self.is-clickable:hover .tree-item-icon {
+    color: var(--nav-item-color-hover);
+  }
+
+  /* give colour over hover */
+}
+
+/* DA12-5 | Change titlebar close button to be always a white X per Firefox style */
+@media (hover: hover) {
+  .mod-linux .titlebar-button.mod-close:hover, .mod-windows .titlebar-button.mod-close:hover {
+    color: white; /* kinda counterintuitive but ok */
+  }
+}
+
+/* DA12-6 | Give hover colours - taken from app.css */
+.mod-left-split .workspace-tab-header.has-active-menu .workspace-tab-header-inner-icon:hover,
+.mod-right-split .workspace-tab-header.has-active-menu .workspace-tab-header-inner-icon:hover,
+.mod-left-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon:hover,
+.mod-right-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon:hover {
+  color: var(--icon-color-hover);
+}
+
+/* Applied Colours */
+
+/* generally on the side pane elements */
+
+/* Spacing Control */
+

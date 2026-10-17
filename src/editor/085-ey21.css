@@ -1,0 +1,79 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EY21
+\ Editor > HTML Features
+\ Progress Bar
+──────────────────────────────────────────────────────────────────────────────── */
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress {
+  display: inline-flex;
+  appearance: none;
+
+  --col-progress-0: hsl(0deg 100% 52.55%);
+  --col-progress-1: hsl(13.39deg 100% 49.22%);
+  --col-progress-2: hsl(26.78deg 100% 45.69%);
+  --col-progress-3: hsl(40deg 100% 42.35%);
+  --col-progress-4: hsl(53.37deg 100% 39.02%);
+  --col-progress-5: hsl(66.63deg 100% 35.49%);
+  --col-progress-6: hsl(80.12deg 100% 32.16%);
+  --col-progress-7: hsl(93.47deg 100% 28.82%);
+  --col-progress-8: hsl(106.51deg 100% 25.29%);
+  --col-progress-9: hsl(120deg 100% 21.96%);
+  --col-progress-10: hsl(133.49deg 100% 18.63%);
+
+  height: calc(0.5 * var(--font-text-size));
+  vertical-align: middle;
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value]::-webkit-progress-bar, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value]::-webkit-progress-value {
+  height: calc(0.5 * var(--font-text-size));
+  border-radius: var(--radius-m);
+  vertical-align: middle;
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="1"]::-webkit-progress-value {
+  background-color: var(--col-progress-1);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="2"]::-webkit-progress-value {
+  background-color: var(--col-progress-2);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="3"]::-webkit-progress-value {
+  background-color: var(--col-progress-3);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="4"]::-webkit-progress-value {
+  background-color: var(--col-progress-4);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="5"]::-webkit-progress-value {
+  background-color: var(--col-progress-5);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="6"]::-webkit-progress-value {
+  background-color: var(--col-progress-6);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="7"]::-webkit-progress-value {
+  background-color: var(--col-progress-7);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="8"]::-webkit-progress-value {
+  background-color: var(--col-progress-8);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value^="9"]::-webkit-progress-value {
+  background-color: var(--col-progress-9);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="100"]::-webkit-progress-value {
+  background-color: var(--col-progress-10);
+}
+
+body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="0"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="1"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="2"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="3"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="4"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="5"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="6"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="7"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="8"]::-webkit-progress-value, body:not(.ssopt-progress-bar-original) :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.is-live-preview) progress[value="9"]::-webkit-progress-value {
+  background-color: var(--col-progress-0);
+}
+
+/* HTML Progress Bars */
+
+/* MODAL */
+

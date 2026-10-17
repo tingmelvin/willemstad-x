@@ -1,0 +1,54 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> MA02
+\ Modals \ General
+\ Modal Sizing Controls and Customisationss
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* HEAD SETTINGS */
+.theme-light, .theme-dark {
+  --modal-width-settings: 90vw;
+  --modal-width-community-plugin: 90vw;
+  --modal-width-community-theme: 90vw;
+  --modal-height-settings: 85vh;
+  --modal-height-community-plugin: 85vh;
+  --modal-height-community-theme: 85vh;
+
+  /* see Publish stuff in PB005-Publish.scss */
+}
+
+.modal:is(.mod-settings,
+.mod-community-plugin,
+.mod-community-theme):not(.is-mobile) {
+  min-width: 400px; /* sets minimum width so that it wouldn't turn distorted | not vw since larger screens should be able to take smaller % */
+  min-height: 400px;
+  max-height: unset;
+}
+
+/* MODAL CUSTOMISATIONS */
+.modal.mod-settings {
+  width: var(--modal-width-settings);
+  height: var(--modal-height-settings);
+}
+
+.modal.mod-settings .vertical-tab-header {
+  height: var(--modal-height-settings);
+}
+
+.modal.mod-settings .vertical-tab-content-container {
+  height: var(--modal-height-settings);
+}
+
+.modal.mod-community-plugin {
+  width: var(--modal-width-community-plugin);
+  height: var(--modal-height-community-plugin);
+}
+
+.modal.mod-community-theme {
+  width: var(--modal-width-community-theme);
+  height: var(--modal-height-community-theme);
+}
+
+/* Modal Sizing Controls */
+
+/* Settings Modal */
+

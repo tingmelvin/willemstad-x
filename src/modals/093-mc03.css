@@ -1,0 +1,201 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> MC03
+\ Modals \ Community Theme Modal \ Readme Grid and Customisations
+──────────────────────────────────────────────────────────────────────────────── */
+.modal.mod-community-theme {
+  /* README */
+}
+
+.modal.mod-community-theme .community-modal-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  grid-template-rows: auto auto auto auto 10fr;
+  row-gap: var(--size-2-1);
+  padding: var(--padding-tab-content-T) calc(var(--padding-tab-content-R) - var(--size-scrollbar-non-native)) var(--padding-tab-content-B) var(--padding-tab-content-L);
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-name {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  margin-bottom: 0; /* why is there a margin? */
+  padding-bottom: var(--size-4-1); /* mirror the top? */
+  border-bottom: 1px solid var(--background-modifier-border);
+  font-size: var(--h1-size); /* why h2 when you can h1? */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-name {
+  display: grid; /* GRID IT */
+  grid-template-columns: 2fr 1fr; /* follow top */ /* 1 to 3 merged since that makes the title fit in 1 to 3 */
+  grid-template-rows: auto;
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-name span.flair.mod-pop {
+  grid-column: 2/3; /* latter column */
+  grid-row: 1/2;
+  margin: auto 0 auto auto; /* top, bottom and left margins are autoed */ /* makes sure it wraps to text */
+  text-align: center; /* centers text */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-downloads {
+  margin: auto 0; /* top bottom auto margins */
+  font-size: var(--font-ui-medium); /* similar to author */
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: right;
+  margin-right: calc(2 * var(--elements-padding));
+
+  /* display: none; */
+
+ /* is this really needed? */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-downloads .community-modal-info-downloads-text {
+  top: 0; /* what is with thisss */
+  display: contents; /* take the downloads space */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-downloads .svg-icon {
+  display: none; /* this gives so much problems */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-version {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: var(--font-ui-smaller);
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.05em;
+  white-space: pre-wrap;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  /* top bottom margins */
+
+  /* margin-left: var(--size-2-2); */
+
+ /* space against the installed button */
+
+  /* margin-right: var(--size-2-2); */
+
+ /* follows github button spacing? */
+  color: var(--text-muted); /* similar to the list on the left */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-author {
+  display: none;
+  margin: auto 0; /* top and bottom margin to push up */
+  font-size: var(--font-ui-medium); /* align? */
+  color: var(--text-faint); /* similar to the list on the left */
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding-bottom: var(--size-2-2); /* follows a:before */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-author::first-letter {
+  text-transform: lowercase; /* lowercases the 'by' */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-repo {
+  margin: auto 0;
+  font-size: 0; /* hides! */
+  grid-column: 3/4;
+  grid-row: 2/3;
+  text-align: right;
+
+  /* GITHUB BUTTON */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-repo > a {
+  position: relative;
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-repo > a::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  padding: var(--header-padding);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  transition: background-color 0.2s ease-in-out;
+  content: none;
+  flex-shrink: 0;
+  margin-left: auto;
+
+  /*
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235a5a5a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-file-code'%3E%3Cpath d='M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3Cpath d='m9 18 3-3-3-3'%3E%3C/path%3E%3Cpath d='m5 12-3 3 3 3'%3E%3C/path%3E%3C/svg%3E"); */ /* stroke color is manual */ /* old icon */
+
+  /*
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg stroke-width='2' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' color='%23000000'%3E%3Cpath d='M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/svg%3E");
+
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  */
+
+  /* transform: scale(calc(var(--header-icon-size) / 18)); */
+
+  /* margin: var(--header-margin);
+
+  height='18' width='18'  */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-repo > a:hover::before {
+  color: var(--icon-color-hover);
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--clickable-icon-radius);
+  transition: opacity 0.15s ease-in-out;
+  opacity: var(--icon-opacity-hover);
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-info-repo > a::after {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  margin: var(--header-padding);
+  background-color: var(--icon-color);
+  border-radius: var(--clickable-icon-radius);
+  content: " ";
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg stroke-width='2' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' color='%23000000'%3E%3Cpath d='M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-button-container {
+  grid-column: 1/-1; /* full width */
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns-container-comm-modal), 1fr); /* for the buttons */ /* are there more than 3? */
+  gap: var(--spacing-comm-modal);
+  margin-top: 0;
+  padding-top: var(--spacing-comm-modal); /* switch margin to padding for the border */
+  border-top: 1px solid var(--background-modifier-border);
+  margin-bottom: 0; /* 1.5em is HUGE */
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-button-container > button {
+  margin-right: 0; /* use grid, save margins! */
+}
+
+.modal.mod-community-theme .community-modal-info hr {
+  display: none;
+  grid-column: 1/-1; /* full width */
+  grid-row: 4/5;
+}
+
+.modal.mod-community-theme .community-modal-info .community-modal-readme {
+  grid-column: 1/-1; /* full width */
+  grid-row: 5/6;
+  border-top: 1px solid var(--background-modifier-border); /* replaces hr? */
+  padding: 0; /* do we really need padding */
+}
+
+/* Readme Grid */
+
+/* Community Plugin Store Modal */
+

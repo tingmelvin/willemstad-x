@@ -1,0 +1,4145 @@
+/* @settings
+name: "Global Colours" 
+id: V1-Willemstad-Colours
+settings:
+    -
+        id: willemstad-theme-colours-light
+        title: Light Mode
+        description: "Options to manipulate colours in light mode. Click any of the headers within to reveal options to change their respective color palettes."
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: V3-willemstad-color-base-settings-light
+            title: "--color-base"
+            description: Background and Text
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: color-base-l-l-presets
+                title: "Presets for Base Lightness"
+                description: "Choose the amount of contrast you would prefer between your background and text elements."
+                type: class-select
+                allowEmpty: false
+                default: default
+                options:
+                    -
+                        label: "Default"
+                        value: default
+                    -
+                        label: "Writing Mode (Even Lower Contrast, Raises Base Tones)"
+                        value: ssopt-col-base-lightness-l-writing
+                    -
+                        label: "Ultra-Low Contrast (Nord)" 
+                        value: ssopt-col-base-lightness-l-ultra-low-contrast
+                    -
+                        label: "Low Contrast"
+                        value: ssopt-col-base-lightness-l-low-contrast
+                    -
+                        label: "High Contrast"
+                        value: ssopt-col-base-lightness-l-high-contrast
+                    -
+                        label: "Cinematic"
+                        value: ssopt-col-base-lightness-l-cinematic
+                    -
+                        label: "Paper"
+                        value: ssopt-col-base-lightness-l-paper
+                    -
+                        label: "Vivid"
+                        value: ssopt-col-base-lightness-l-vivid
+                    -
+                        label: "Analog"
+                        value: ssopt-col-base-lightness-l-analog
+                    -
+                        label: "Structural"
+                        value: ssopt-col-base-lightness-l-structural
+                    -
+                        label: "Glow"
+                        value: ssopt-col-base-lightness-l-glow
+                    -
+                        label: "  Tone Palettes Specific  "
+                        value: no-stuff-break-palette-specific
+                    -
+                        label: "Solarized (Collapses background colors from 4 → 2)"
+                        value: ssopt-col-base-lightness-l-solarized
+                    -
+                        label: "Flexoki"
+                        value: ssopt-col-base-lightness-l-flexoki
+    -
+                id: color-base-l-ch-presets
+                title: "Presets for Base Tone (Chroma and Hue)"
+                description: "Choose the color temperature and hue palette for your light theme. Some options are recommended with or require base lightness setting for better/true colours, please adjust your settings accordingly."
+                type: class-select
+                allowEmpty: false
+                default: default
+                options:
+                    - 
+                        label: "Default (Zero Chroma-Hue)"
+                        value: default
+                    -
+                        label: "  Willemstad Creations  "
+                        value: no-stuff-break-willemstad
+                    -
+                        label: "Blood Ruby"
+                        value: ssopt-col-base-tone-l-blood-ruby
+                    -
+                        label: "Cardinal Red"
+                        value: ssopt-col-base-tone-l-cardinal-red
+                    -
+                        label: "Crimson Velvet"
+                        value: ssopt-col-base-tone-l-crimson-velvet
+                    -
+                        label: "Scarlet Flame"
+                        value: ssopt-col-base-tone-l-scarlet-flame
+                    -
+                        label: "Ruby Spectrum"
+                        value: ssopt-col-base-tone-l-ruby-spectrum
+                    -
+                        label: "Strawberry Milk"
+                        value: ssopt-col-base-tone-l-strawberry-milk
+                    -
+                        label: "Sunset"
+                        value: ssopt-col-base-tone-l-sunset
+                    -
+                        label: "Salt Flat Sunset"
+                        value: ssopt-col-base-tone-l-salt-flat-sunset
+                    -
+                        label: "Burnt Sienna"
+                        value: ssopt-col-base-tone-l-burnt-sienna
+                    -
+                        label: "Citrus Intensity"
+                        value: ssopt-col-base-tone-l-citrus-intensity
+                    -
+                        label: "Apricot Dream"
+                        value: ssopt-col-base-tone-l-apricot-dream
+                    -
+                        label: "Pearl Mist"
+                        value: ssopt-col-base-tone-l-pearl-mist
+                    -
+                        label: "Amber Glow"
+                        value: ssopt-col-base-tone-l-amber-glow
+                    -
+                        label: "Tangerine Burst"
+                        value: ssopt-col-base-tone-l-tangerine-burst
+                    -
+                        label: "Golden Hour"
+                        value: ssopt-col-base-tone-l-golden-hour
+                    -
+                        label: "Lemon Chiffon"
+                        value: ssopt-col-base-tone-l-lemon-chiffon
+                    -
+                        label: "Honeydew Breeze"
+                        value: ssopt-col-base-tone-l-honeydew-breeze
+                    -
+                        label: "Electric Lime"
+                        value: ssopt-col-base-tone-l-electric-lime
+                    -
+                        label: "Terracotta Red"
+                        value: ssopt-col-base-tone-l-terracotta-red
+                    -
+                        label: "Canyon Sunset"
+                        value: ssopt-col-base-tone-l-canyon-sunset
+                    -
+                        label: "Spice Market"
+                        value: ssopt-col-base-tone-l-spice-market
+                    -
+                        label: "Cactus Desert"
+                        value: ssopt-col-base-tone-l-cactus-desert
+                    -
+                        label: "Leprechaun (Green and Gold)"
+                        value: ssopt-col-base-tone-l-leprechaun
+                    -
+                        label: "Gilded Leaf"
+                        value: ssopt-col-base-tone-l-gilded-leaf
+                    -
+                        label: "Shipwreck"
+                        value: ssopt-col-base-tone-l-shipwreck
+                    -
+                        label: "Equinox"
+                        value: ssopt-col-base-tone-l-equinox
+                    -
+                        label: "Chartreuse Shock"
+                        value: ssopt-col-base-tone-l-chartreuse-shock
+                    -
+                        label: "Spring Meadow"
+                        value: ssopt-col-base-tone-l-spring-meadow
+                    -
+                        label: "British Racing Green"
+                        value: ssopt-col-base-tone-l-british-racing-green
+                    -
+                        label: "Emerald Range"
+                        value: ssopt-col-base-tone-l-emerald-range
+                    -
+                        label: "Seafoam Whisper"
+                        value: ssopt-col-base-tone-l-seafoam-whisper
+                    -
+                        label: "New Growth (Brighter Greens)"
+                        value: ssopt-col-base-tone-l-forest-green
+                    -
+                        label: "Old Oak (Browner Greens)"
+                        value: ssopt-col-base-tone-l-forest
+                    -
+                        label: "Mint Breeze"
+                        value: ssopt-col-base-tone-l-mint-breeze
+                    -
+                        label: "Tropical Lagoon"
+                        value: ssopt-col-base-tone-l-tropical-lagoon
+                    -
+                        label: "Turquoise Jewel"
+                        value: ssopt-col-base-tone-l-turquoise-jewel
+                    -
+                        label: "Korean Celadon"
+                        value: ssopt-col-base-tone-l-korean-celadon
+                    -
+                        label: "Viridian Sky"
+                        value: ssopt-col-base-tone-l-viridian-sky
+                    -
+                        label: "Blueberries"
+                        value: ssopt-col-base-tone-l-blueberries
+                    -
+                        label: "Borealis (also known as Blueberries from another farm)"
+                        value: ssopt-col-base-tone-l-borealis
+                    -
+                        label: "Cambridge Blue"
+                        value: ssopt-col-base-tone-l-cambridge-blue
+                    -
+                        label: "Phthalo Blue"
+                        value: ssopt-col-base-tone-l-phthalo-blue
+                    -
+                        label: "Oxford Blue"
+                        value: ssopt-col-base-tone-l-oxford-blue
+                    -
+                        label: "Delft Blue"
+                        value: ssopt-col-base-tone-l-delft-blue
+                    -
+                        label: "Sapphire Study"
+                        value: ssopt-col-base-tone-l-sapphire-study
+                    -
+                        label: "Powder Blue"
+                        value: ssopt-col-base-tone-l-powder-blue
+                    -
+                        label: "Cloud Nine"
+                        value: ssopt-col-base-tone-l-cloud-nine
+                    -
+                        label: "Periwinkle Mist"
+                        value: ssopt-col-base-tone-l-periwinkle-mist
+                    -
+                        label: "Cyanus"
+                        value: ssopt-col-base-tone-l-cyanus
+                    -
+                        label: "Deep Sea (But It Isn't Blue?)"
+                        value: ssopt-col-base-tone-l-deep-sea-blue
+                    -
+                        label: "Indigo Dusk"
+                        value: ssopt-col-base-tone-l-indigo-dusk
+                    -
+                        label: "Cosmic Shift"
+                        value: ssopt-col-base-tone-l-cosmic-shift
+                    -
+                        label: "Arcade Glow"
+                        value: ssopt-col-base-tone-l-arcade-glow
+                    -
+                        label: "Viola"
+                        value: ssopt-col-base-tone-l-viola
+                    -
+                        label: "Hagia Sophia (Purple/Magenta)"
+                        value: ssopt-col-base-tone-l-hagia-sophia
+                    -
+                        label: "Mystic Plum"
+                        value: ssopt-col-base-tone-l-mystic-plum
+                    -
+                        label: "Amethyst Depth"
+                        value: ssopt-col-base-tone-l-amethyst-depth
+                    -
+                        label: "Lilac Silk"
+                        value: ssopt-col-base-tone-l-lilac-silk
+                    -
+                        label: "Rose Quartz"
+                        value: ssopt-col-base-tone-l-rose-quartz
+                    -
+                        label: "Cherry Blossom"
+                        value: ssopt-col-base-tone-l-cherry-blossom
+                    -
+                        label: "Magentis"
+                        value: ssopt-col-base-tone-l-magentis
+                    -
+                        label: "Amethystus"
+                        value: ssopt-col-base-tone-l-amethystus
+                    -
+                        label: "Imperial Robes"
+                        value: ssopt-col-base-tone-l-imperial-robes
+                    -
+                        label: "Electric Violet"
+                        value: ssopt-col-base-tone-l-electric-violet
+                    -
+                        label: "Arctic (Northern Grey)"
+                        value: ssopt-col-base-tone-l-arctic
+                    -
+                        label: "Horizon (Sunset Colors)"
+                        value: ssopt-col-base-tone-l-horizon
+                    -
+                        label: "Lumevari (Snow Shadow)"
+                        value: ssopt-col-base-tone-l-lumevari
+                    -
+                        label: "Öötaevas (Night Sky)"
+                        value: ssopt-col-base-tone-l-ootaevas
+                    -
+                        label: "Clay Pot"
+                        value: ssopt-col-base-tone-l-clay-pot
+                    -
+                        label: "Tuscan Earth"
+                        value: ssopt-col-base-tone-l-tuscan-earth
+                    -
+                        label: "Desert Sand"
+                        value: ssopt-col-base-tone-l-desert-sand
+                    -
+                        label: "Writing → Chocolate — use Writing Mode"
+                        value: ssopt-col-base-tone-l-writing-chocolate
+                    -
+                        label: "Writing → Coffee — use Writing Mode" 
+                        value: ssopt-col-base-tone-l-writing-coffee
+                    -
+                        label: "Writing → Sepia — use Writing Mode"
+                        value: ssopt-col-base-tone-l-writing-sepia
+                    -
+                        label: "Writing → Leather — use Writing Mode" 
+                        value: ssopt-col-base-tone-l-writing-leather
+                    -
+                        label: "  Themes from Code Editors  "
+                        value: no-stuff-break-editor
+                    -
+                        label: "Nord [Polar Night] — use Ultra-Low Contrast"
+                        value: ssopt-col-base-tone-l-nord
+                    -
+                        label: "Solarized — requires Solarized base lightness"
+                        value: ssopt-col-base-tone-l-solarized
+                    -
+                        label: "Gruvbox (Earth Tones)"
+                        value: ssopt-col-base-tone-l-gruvbox
+                    -
+                        label: "Catppuccin [Latte] — use Ultra-Low Contrast"
+                        value: ssopt-col-base-tone-l-catppuccin-latte
+                    -
+                        label: "Flexoki — use Flexoki base lightness"
+                        value: ssopt-col-base-tone-l-flexoki
+                    -
+                        label: "Dracula"
+                        value: ssopt-col-base-tone-l-dracula
+                    -
+                        label: "OneDark"
+                        value: ssopt-col-base-tone-l-one-dark
+                    -
+                        label: "Everforest [Soft]"
+                        value: ssopt-col-base-tone-l-everforest-soft
+                    -
+                        label: "Material"
+                        value: ssopt-col-base-tone-l-material
+                    -
+                        label: "  Adapted from MetBrewer Collection  "
+                        value: no-stuff-break-metbrewer
+                    -
+                        label: "Cassatt (Soft Pinks & Blues)"
+                        value: ssopt-col-base-tone-l-cassatt
+                    -
+                        label: "Hiroshige (Blue-Green Harmony)"
+                        value: ssopt-col-base-tone-l-hiroshige
+                    -
+                        label: "Kandinsky (Warm Yellows)"
+                        value: ssopt-col-base-tone-l-kandinsky
+                    -
+                        label: "Monet (Impressionist Blues & Greens)"
+                        value: ssopt-col-base-tone-l-monet
+                    -
+                        label: "Van Gogh (Sunflower & Starry Night)"
+                        value: ssopt-col-base-tone-l-vangogh
+                    -
+                        label: "Klimt (Rich Golds)"
+                        value: ssopt-col-base-tone-l-klimt
+                    -
+                        label: "Picasso (Blue Period)"
+                        value: ssopt-col-base-tone-l-picasso
+                    -
+                        label: "Renoir (Warm Skin Tones)"
+                        value: ssopt-col-base-tone-l-renoir
+                    -
+                        label: "Wissing (Museum Earth & Sky)"
+                        value: ssopt-col-base-tone-l-wissing
+                    -
+                        label: "Demuth (Architectural Modernism)"
+                        value: ssopt-col-base-tone-l-demuth
+                    -
+                        label: "Tiepolo (Baroque Grandeur)"
+                        value: ssopt-col-base-tone-l-tiepolo
+                    -
+                        label: "Ingres (Neoclassical Elegance)"
+                        value: ssopt-col-base-tone-l-ingres
+                    -
+                        label: "Hokusai"
+                        value: ssopt-col-base-tone-l-hokusai
+                    -
+                        label: "Archambault (Warm Peach & Burnt Orange)"
+                        value: ssopt-col-base-tone-l-archambault
+                    -
+                        label: "Homer (Coral & Deep Red-Orange)"
+                        value: ssopt-col-base-tone-l-homer
+                    -
+                        label: "Pillement (Rich Browns & Chocolate)"
+                        value: ssopt-col-base-tone-l-pillement
+                    -
+                        label: "Egypt (Forest Sage & Olive)"
+                        value: ssopt-col-base-tone-l-egypt
+                    -
+                        label: "Johnson (Pine Green & Forest)"
+                        value: ssopt-col-base-tone-l-johnson
+                    -
+                        label: "Benedictus (Muted Olive & Earth)"
+                        value: ssopt-col-base-tone-l-benedictus
+                    -
+                        label: "  Inspired By Artwork  "
+                        value: no-stuff-break-artwork
+                    -
+                        label: "James Turrell's Aftershock"
+                        value: ssopt-col-base-tone-l-aftershock
+                    -
+                        label: "Ellsworth Kelly's White Blue/Blue White"
+                        value: ssopt-col-base-tone-l-kelly-white-blue
+                    -
+                        label: "Olafur Eliasson's The Weather Project"
+                        value: ssopt-col-base-tone-l-eliasson-weather
+                    -
+                        label: "Mark Rothko's Rothko Chapel"
+                        value: ssopt-col-base-tone-l-rothko-chapel
+                    -
+                        label: "  Experimentals  "
+                        value: no-stuff-break-artwork
+                    -
+                        label: "Blistering Barnacles, We're in Syldavia"
+                        value: ssopt-col-base-tone-l-tintin
+                    -
+                        label: "Algae Bloom (The Surface)"
+                        value: ssopt-col-base-tone-l-algae-bloom
+                    -
+                        label: "Solar Flare"
+                        value: ssopt-col-base-tone-l-solar-flare
+    -
+                id: V4-willemstad-color-base-variations-light
+                title: Custom Settings
+                type: heading
+                level: 4
+                collapsed: true
+    -
+                    id: ssopt-custom-base-colours-light
+                    title: 'Enable User-Set Base Tone for Light Mode'
+                    type: class-toggle
+                    description: "When enabled, this allows you to override preset base tones (chroma and hue) with your preferred one."
+                    default: false
+    -
+                        id: ch-color-base-l-c-pax-num
+                        title: "Chroma"
+                        type: variable-number-slider
+                        min: 0
+                        max: 0.07
+                        step: 0.001
+                        default: 0.035
+    -
+                        id: ch-color-base-l-h-pax-num
+                        title: "Hue"
+                        type: variable-number-slider
+                        min: 0
+                        max: 360
+                        step: 0.5
+                        default: 270
+    -
+                        id: ssopt-enable-base-delta-light
+                        title: 'Enable Chroma & Hue Delta (Gradient Effect)'
+                        type: class-toggle
+                        description: "When enabled, this applies a range (delta) to the base chroma and hue, creating a subtle gradient effect across different UI layers. A delta of 0 results in no change. Please note that this effect is very subtle."
+                        default: false
+    -
+                            id: ch-color-base-l-c-pax-delta
+                            title: "Chroma Delta (Δ)"
+                            type: variable-number-slider
+                            min: -0.10
+                            max: 0.10
+                            step: 0.001
+                            default: 0
+    -
+                            id: ch-color-base-l-h-pax-delta
+                            title: "Hue Delta (Δ)"
+                            type: variable-number-slider
+                            min: -60
+                            max: 60
+                            step: 0.5
+                            default: 0
+    -
+            id: V3-willemstad-color-accent-settings-light
+            title: "--color-accent"
+            description: Accents and Interactives
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: color-accent-l-ch-presets
+                title: "Presets for Accent Colours"
+                description: ""
+                type: class-select
+                allowEmpty: false
+                default: ssopt-col-accent-l-default
+                options:
+                    -
+                        label: "  Willemstad Defaults  "
+                        value: no-stuff-break-tones
+                    - 
+                        label: "The London School (Default)"
+                        value: ssopt-col-accent-l-default
+                    -
+                        label: "Previous Willemstad Default"
+                        value: ssopt-col-accent-l-old-default
+                    -
+                        label: "Leonardo"
+                        value: ssopt-col-accent-l-leonardo
+                    -
+                        label: "  Themes from Code Editors "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Nord"
+                        value: ssopt-col-accent-l-nord
+                    -
+                        label: "Nord (Alternative)"
+                        value: ssopt-col-accent-l-nord-2
+                    -
+                        label: "  Monochromatic  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Ruby"
+                        value: ssopt-col-accent-l-ruby
+                    -
+                        label: "Crimson"
+                        value: ssopt-col-accent-l-crimson
+                    -
+                        label: "Burgundy"
+                        value: ssopt-col-accent-l-burgundy
+                    -
+                        label: "Pomegranate"
+                        value: ssopt-col-accent-l-pomegranate
+                    -
+                        label: "Oud"
+                        value: ssopt-col-accent-l-oud
+                    -
+                        label: "Persimmon"
+                        value: ssopt-col-accent-l-persimmon
+                    -
+                        label: "Ember"
+                        value: ssopt-col-accent-l-ember
+                    -
+                        label: "Cedar"
+                        value: ssopt-col-accent-l-cedar
+                    -
+                        label: "Cedarwood"
+                        value: ssopt-col-accent-l-cedarwood
+                    -
+                        label: "Bronze"
+                        value: ssopt-col-accent-l-bronze
+                    -
+                        label: "Apricot"
+                        value: ssopt-col-accent-l-apricot
+                    -
+                        label: "Cinnamon"
+                        value: ssopt-col-accent-l-cinnamon
+                    -
+                        label: "Topaz"
+                        value: ssopt-col-accent-l-topaz
+                    -
+                        label: "Ambergris"
+                        value: ssopt-col-accent-l-ambergris
+                    -
+                        label: "Sandalwood"
+                        value: ssopt-col-accent-l-sandalwood
+                    -
+                        label: "Santal"
+                        value: ssopt-col-accent-l-santal
+                    -
+                        label: "Saffron"
+                        value: ssopt-col-accent-l-saffron
+                    -
+                        label: "Frankincense"
+                        value: ssopt-col-accent-l-frankincense
+                    -
+                        label: "Bergamot"
+                        value: ssopt-col-accent-l-bergamot
+                    -
+                        label: "Jasmine"
+                        value: ssopt-col-accent-l-jasmine
+                    -
+                        label: "Chartreuse"
+                        value: ssopt-col-accent-l-chartreuse
+                    -
+                        label: "Yuzu"
+                        value: ssopt-col-accent-l-yuzu
+                    -
+                        label: "Cardamom"
+                        value: ssopt-col-accent-l-cardamom
+                    -
+                        label: "Basil"
+                        value: ssopt-col-accent-l-basil
+                    -
+                        label: "Ivy"
+                        value: ssopt-col-accent-l-ivy
+                    -
+                        label: "Vetiver"
+                        value: ssopt-col-accent-l-vetiver
+                    -
+                        label: "Spruce"
+                        value: ssopt-col-accent-l-spruce
+                    -
+                        label: "Sage"
+                        value: ssopt-col-accent-l-sage
+                    -
+                        label: "Malachite"
+                        value: ssopt-col-accent-l-malachite
+                    -
+                        label: "Mint"
+                        value: ssopt-col-accent-l-mint
+                    -
+                        label: "Rosemary"
+                        value: ssopt-col-accent-l-rosemary
+                    -
+                        label: "Juniper"
+                        value: ssopt-col-accent-l-juniper
+                    -
+                        label: "Turquoise"
+                        value: ssopt-col-accent-l-turquoise
+                    -
+                        label: "Verdigris"
+                        value: ssopt-col-accent-l-verdigris
+                    -
+                        label: "Sky"
+                        value: ssopt-col-accent-l-sky
+                    -
+                        label: "Ishtar"
+                        value: ssopt-col-accent-l-ishtar
+                    -
+                        label: "Azul"
+                        value: ssopt-col-accent-l-azul
+                    -
+                        label: "Sapphire"
+                        value: ssopt-col-accent-l-sapphire
+                    -
+                        label: "Azure"
+                        value: ssopt-col-accent-l-azure
+                    -
+                        label: "Ultramarine"
+                        value: ssopt-col-accent-l-ultramarine
+                    -
+                        label: "Prussia"
+                        value: ssopt-col-accent-l-prussia
+                    -
+                        label: "Myrrh"
+                        value: ssopt-col-accent-l-myrrh
+                    -
+                        label: "Mulberry"
+                        value: ssopt-col-accent-l-mulberry
+                    -
+                        label: "Midnight"
+                        value: ssopt-col-accent-l-midnight
+                    -
+                        label: "Lavender"
+                        value: ssopt-col-accent-l-lavender
+                    -
+                        label: "Grape"
+                        value: ssopt-col-accent-l-grape
+                    -
+                        label: "Thistle"
+                        value: ssopt-col-accent-l-thistle
+                    -
+                        label: "Patchouli"
+                        value: ssopt-col-accent-l-patchouli
+                    -
+                        label: "Carnation"
+                        value: ssopt-col-accent-l-carnation
+                    -
+                        label: "Cerise"
+                        value: ssopt-col-accent-l-cerise
+                    -
+                        label: "Salmon"
+                        value: ssopt-col-accent-l-salmon
+                    -
+                        label: "Peach"
+                        value: ssopt-col-accent-l-peach
+                    -
+                        label: "Mahogany"
+                        value: ssopt-col-accent-l-mahogany
+                    -
+                        label: "Copper"
+                        value: ssopt-col-accent-l-copper
+                    -
+                        label: "Clay"
+                        value: ssopt-col-accent-l-clay
+                    -
+                        label: "Sienna"
+                        value: ssopt-col-accent-l-sienna
+                    -
+                        label: "Paprika"
+                        value: ssopt-col-accent-l-paprika
+                    -
+                        label: "  Monochromatic (Neutrals)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Ash"
+                        value: ssopt-col-accent-l-ash
+                    -
+                        label: "Charcoal"
+                        value: ssopt-col-accent-l-charcoal
+                    -
+                        label: "Cream"
+                        value: ssopt-col-accent-l-cream
+                    -
+                        label: "Linen"
+                        value: ssopt-col-accent-l-linen
+                    -
+                        label: "Parchment"
+                        value: ssopt-col-accent-l-parchment
+                    -
+                        label: "Slate"
+                        value: ssopt-col-accent-l-slate
+                    -
+                        label: "Smoke"
+                        value: ssopt-col-accent-l-smoke
+                    -
+                        label: "  Analogous — 20 degrees  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Torch"
+                        value: ssopt-col-accent-l-torch
+                    -
+                        label: "Garnet"
+                        value: ssopt-col-accent-l-garnet
+                    -
+                        label: "Bonfire"
+                        value: ssopt-col-accent-l-bonfire
+                    -
+                        label: "Citrine"
+                        value: ssopt-col-accent-l-citrine
+                    -
+                        label: "Honey"
+                        value: ssopt-col-accent-l-honey
+                    -
+                        label: "Lime"
+                        value: ssopt-col-accent-l-lime
+                    -
+                        label: "Forest"
+                        value: ssopt-col-accent-l-forest
+                    -
+                        label: "Verdant"
+                        value: ssopt-col-accent-l-verdant
+                    -
+                        label: "Seafoam"
+                        value: ssopt-col-accent-l-seafoam
+                    -
+                        label: "Meridian"
+                        value: ssopt-col-accent-l-meridian
+                    -
+                        label: "Laguna"
+                        value: ssopt-col-accent-l-laguna
+                    -
+                        label: "Reverie"
+                        value: ssopt-col-accent-l-reverie
+                    -
+                        label: "Cascade"
+                        value: ssopt-col-accent-l-cascade
+                    -
+                        label: "Arctic"
+                        value: ssopt-col-accent-l-arctic
+                    -
+                        label: "Cobalt"
+                        value: ssopt-col-accent-l-cobalt
+                    -
+                        label: "Tempest"
+                        value: ssopt-col-accent-l-tempest
+                    -
+                        label: "Navy"
+                        value: ssopt-col-accent-l-navy
+                    -
+                        label: "Violet"
+                        value: ssopt-col-accent-l-violet
+                    -
+                        label: "Aurora"
+                        value: ssopt-col-accent-l-aurora
+                    -
+                        label: "Ethereal"
+                        value: ssopt-col-accent-l-ethereal
+                    -
+                        label: "Iris"
+                        value: ssopt-col-accent-l-iris
+                    -
+                        label: "Magenta"
+                        value: ssopt-col-accent-l-magenta
+                    -
+                        label: "Solstice"
+                        value: ssopt-col-accent-l-solstice
+                    -
+                        label: "Rose"
+                        value: ssopt-col-accent-l-rose
+                    -
+                        label: "Vermillion"
+                        value: ssopt-col-accent-l-vermillion
+                    -
+                        label: "  Analogous — 20 degrees (Muted)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Tuli"
+                        value: ssopt-col-accent-l-tuli
+                    -
+                        label: "Turvas"
+                        value: ssopt-col-accent-l-turvas
+                    -
+                        label: "Savi"
+                        value: ssopt-col-accent-l-savi
+                    -
+                        label: "Liiv"
+                        value: ssopt-col-accent-l-liiv
+                    -
+                        label: "Kõdu"
+                        value: ssopt-col-accent-l-kõdu
+                    -
+                        label: "Raba"
+                        value: ssopt-col-accent-l-raba
+                    -
+                        label: "Soo"
+                        value: ssopt-col-accent-l-soo
+                    -
+                        label: "Muda"
+                        value: ssopt-col-accent-l-muda
+                    -
+                        label: "Udu"
+                        value: ssopt-col-accent-l-udu
+                    -
+                        label: "Kaste"
+                        value: ssopt-col-accent-l-kaste
+                    -
+                        label: "Külm"
+                        value: ssopt-col-accent-l-külm
+                    -
+                        label: "Torm"
+                        value: ssopt-col-accent-l-torm
+                    -
+                        label: "Kõva"
+                        value: ssopt-col-accent-l-kõva
+                    -
+                        label: "Hall"
+                        value: ssopt-col-accent-l-hall
+                    -
+                        label: "Jää"
+                        value: ssopt-col-accent-l-jää
+                    -
+                        label: "Hämar"
+                        value: ssopt-col-accent-l-hämar
+                    -
+                        label: "Varjund"
+                        value: ssopt-col-accent-l-varjund
+                    -
+                        label: "Vine"
+                        value: ssopt-col-accent-l-vine
+                    -
+                        label: "Haav"
+                        value: ssopt-col-accent-l-haav
+                    -
+                        label: "Õhtu"
+                        value: ssopt-col-accent-l-õhtu
+                    -
+                        label: "Pakane"
+                        value: ssopt-col-accent-l-pakane
+                    -
+                        label: "Koor"
+                        value: ssopt-col-accent-l-koor
+                    -
+                        label: "  Analogous — 20 degrees (Vivid)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Helios"
+                        value: ssopt-col-accent-l-helios
+                    -
+                        label: "Eros"
+                        value: ssopt-col-accent-l-eros
+                    -
+                        label: "Apollo"
+                        value: ssopt-col-accent-l-apollo
+                    -
+                        label: "Elektra"
+                        value: ssopt-col-accent-l-elektra
+                    -
+                        label: "Aether"
+                        value: ssopt-col-accent-l-aether
+                    -
+                        label: "Persephone"
+                        value: ssopt-col-accent-l-persephone
+                    -
+                        label: "Artemis"
+                        value: ssopt-col-accent-l-artemis
+                    -
+                        label: "Atlas"
+                        value: ssopt-col-accent-l-atlas
+                    -
+                        label: "Nike"
+                        value: ssopt-col-accent-l-nike
+                    -
+                        label: "Poseidon"
+                        value: ssopt-col-accent-l-poseidon
+                    -
+                        label: "Hermes"
+                        value: ssopt-col-accent-l-hermes
+                    -
+                        label: "Chronos"
+                        value: ssopt-col-accent-l-chronos
+                    -
+                        label: "Zeus"
+                        value: ssopt-col-accent-l-zeus
+                    -
+                        label: "Morpheus"
+                        value: ssopt-col-accent-l-morpheus
+                    -
+                        label: "Tyche"
+                        value: ssopt-col-accent-l-tyche
+                    -
+                        label: "Hades"
+                        value: ssopt-col-accent-l-hades
+                    -
+                        label: "Nyx"
+                        value: ssopt-col-accent-l-nyx
+                    -
+                        label: "Dionysus"
+                        value: ssopt-col-accent-l-dionysus
+                    -
+                        label: "Aphrodite"
+                        value: ssopt-col-accent-l-aphrodite
+                    -
+                        label: "Hecate"
+                        value: ssopt-col-accent-l-hecate
+                    -
+                        label: "Thanatos"
+                        value: ssopt-col-accent-l-thanatos
+                    -
+                        label: "Phoenix"
+                        value: ssopt-col-accent-l-phoenix
+                    -
+                        label: "  Analogous — 30 degrees  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Luminous"
+                        value: ssopt-col-accent-l-luminous
+                    -
+                        label: "Terracotta"
+                        value: ssopt-col-accent-l-terracotta
+                    -
+                        label: "Amber"
+                        value: ssopt-col-accent-l-amber
+                    -
+                        label: "Marigold"
+                        value: ssopt-col-accent-l-marigold
+                    -
+                        label: "Radiant"
+                        value: ssopt-col-accent-l-radiant
+                    -
+                        label: "Zest"
+                        value: ssopt-col-accent-l-zest
+                    -
+                        label: "Verdure"
+                        value: ssopt-col-accent-l-verdure
+                    -
+                        label: "Meadow"
+                        value: ssopt-col-accent-l-meadow
+                    -
+                        label: "Spring"
+                        value: ssopt-col-accent-l-spring
+                    -
+                        label: "Celestial"
+                        value: ssopt-col-accent-l-celestial
+                    -
+                        label: "Aquamarine"
+                        value: ssopt-col-accent-l-aquamarine
+                    -
+                        label: "Boreal"
+                        value: ssopt-col-accent-l-boreal
+                    -
+                        label: "Lagoon"
+                        value: ssopt-col-accent-l-lagoon
+                    -
+                        label: "Oceanic"
+                        value: ssopt-col-accent-l-oceanic
+                    -
+                        label: "Periwinkle"
+                        value: ssopt-col-accent-l-periwinkle
+                    -
+                        label: "Majestic"
+                        value: ssopt-col-accent-l-majestic
+                    -
+                        label: "Indigo"
+                        value: ssopt-col-accent-l-indigo
+                    -
+                        label: "Mystical"
+                        value: ssopt-col-accent-l-mystical
+                    -
+                        label: "Amethyst"
+                        value: ssopt-col-accent-l-amethyst
+                    -
+                        label: "Lilac"
+                        value: ssopt-col-accent-l-lilac
+                    -
+                        label: "Orchid"
+                        value: ssopt-col-accent-l-orchid
+                    -
+                        label: "Fuchsia"
+                        value: ssopt-col-accent-l-fuchsia
+                    -
+                        label: "Passion"
+                        value: ssopt-col-accent-l-passion
+                    -
+                        label: "Coral"
+                        value: ssopt-col-accent-l-coral
+                    -
+                        label: "Sunset"
+                        value: ssopt-col-accent-l-sunset
+                    -
+                        label: "Poppy"
+                        value: ssopt-col-accent-l-poppy
+                    -
+                        label: "  Analogous — 30 degrees (Reverse)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Tizhed"
+                        value: ssopt-col-accent-l-tizhed
+                    -
+                        label: "Gwribell"
+                        value: ssopt-col-accent-l-gwribell
+                    -
+                        label: "Splann"
+                        value: ssopt-col-accent-l-splann
+                    -
+                        label: "Kornad"
+                        value: ssopt-col-accent-l-kornad
+                    -
+                        label: "Koadeg"
+                        value: ssopt-col-accent-l-koadeg
+                    -
+                        label: "Sterenn"
+                        value: ssopt-col-accent-l-sterenn
+                    -
+                        label: "Morzhol"
+                        value: ssopt-col-accent-l-morzhol
+                    -
+                        label: "Koumoul"
+                        value: ssopt-col-accent-l-koumoul
+                    -
+                        label: "Reter"
+                        value: ssopt-col-accent-l-reter
+                    -
+                        label: "Spered"
+                        value: ssopt-col-accent-l-spered
+                    -
+                        label: "Bruded"
+                        value: ssopt-col-accent-l-bruded
+                    -
+                        label: "Morzhed"
+                        value: ssopt-col-accent-l-morzhed
+                    -
+                        label: "  Analogous — 30 degrees (Muted)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Brick"
+                        value: ssopt-col-accent-l-brick
+                    -
+                        label: "Tuscany"
+                        value: ssopt-col-accent-l-tuscany
+                    -
+                        label: "Sandstone"
+                        value: ssopt-col-accent-l-sandstone
+                    -
+                        label: "Ochre"
+                        value: ssopt-col-accent-l-ochre
+                    -
+                        label: "Olive"
+                        value: ssopt-col-accent-l-olive
+                    -
+                        label: "Sage Green"
+                        value: ssopt-col-accent-l-sage-green
+                    -
+                        label: "Moss"
+                        value: ssopt-col-accent-l-moss
+                    -
+                        label: "Muted Seafoam"
+                        value: ssopt-col-accent-l-seafoam-muted
+                    -
+                        label: "Lichen"
+                        value: ssopt-col-accent-l-lichen
+                    -
+                        label: "Pewter"
+                        value: ssopt-col-accent-l-pewter
+                    -
+                        label: "Haze"
+                        value: ssopt-col-accent-l-haze
+                    -
+                        label: "Slate Blue"
+                        value: ssopt-col-accent-l-slate-blue
+                    -
+                        label: "Stone"
+                        value: ssopt-col-accent-l-stone
+                    -
+                        label: "Lavender Gray"
+                        value: ssopt-col-accent-l-lavender-gray
+                    -
+                        label: "Shadow"
+                        value: ssopt-col-accent-l-shadow
+                    -
+                        label: "Heather"
+                        value: ssopt-col-accent-l-heather
+                    -
+                        label: "Plum"
+                        value: ssopt-col-accent-l-plum
+                    -
+                        label: "Dusty Rose"
+                        value: ssopt-col-accent-l-dusty-rose
+                    -
+                        label: "  Analogous — 30 degrees (Vivid)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Inferno"
+                        value: ssopt-col-accent-l-inferno
+                    -
+                        label: "Flames"
+                        value: ssopt-col-accent-l-flames
+                    -
+                        label: "Solar"
+                        value: ssopt-col-accent-l-solar
+                    -
+                        label: "Neon"
+                        value: ssopt-col-accent-l-neon
+                    -
+                        label: "Citrus Pop"
+                        value: ssopt-col-accent-l-citrus-pop
+                    -
+                        label: "Volt"
+                        value: ssopt-col-accent-l-volt
+                    -
+                        label: "Laser"
+                        value: ssopt-col-accent-l-laser
+                    -
+                        label: "Jungle"
+                        value: ssopt-col-accent-l-jungle
+                    -
+                        label: "Pulse"
+                        value: ssopt-col-accent-l-pulse
+                    -
+                        label: "Cyber Sea"
+                        value: ssopt-col-accent-l-cyber-sea
+                    -
+                        label: "Shock"
+                        value: ssopt-col-accent-l-shock
+                    -
+                        label: "Abyss"
+                        value: ssopt-col-accent-l-abyss
+                    -
+                        label: "Plasma"
+                        value: ssopt-col-accent-l-plasma
+                    -
+                        label: "Arcade Glow"
+                        value: ssopt-col-accent-l-arcade-glow
+                    -
+                        label: "Nova"
+                        value: ssopt-col-accent-l-nova
+                    -
+                        label: "Rave"
+                        value: ssopt-col-accent-l-rave
+                    -
+                        label: "Burst"
+                        value: ssopt-col-accent-l-burst
+                    -
+                        label: "Electric Orchid"
+                        value: ssopt-col-accent-l-electric-orchid
+                    -
+                        label: "Flash"
+                        value: ssopt-col-accent-l-flash
+                    -
+                        label: "Flare"
+                        value: ssopt-col-accent-l-flare
+                    -
+                        label: "  Analogous — 45 degrees  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Ignite"
+                        value: ssopt-col-accent-l-ignite
+                    -
+                        label: "Blaze"
+                        value: ssopt-col-accent-l-blaze
+                    -
+                        label: "Zenith"
+                        value: ssopt-col-accent-l-zenith
+                    -
+                        label: "Citron"
+                        value: ssopt-col-accent-l-citron
+                    -
+                        label: "Tidal"
+                        value: ssopt-col-accent-l-tidal
+                    -
+                        label: "Depth"
+                        value: ssopt-col-accent-l-depth
+                    -
+                        label: "Cosmos"
+                        value: ssopt-col-accent-l-cosmos
+                    -
+                        label: "Nebula"
+                        value: ssopt-col-accent-l-nebula
+                    -
+                        label: "Twilight"
+                        value: ssopt-col-accent-l-twilight
+                    -
+                        label: "Imperial"
+                        value: ssopt-col-accent-l-imperial
+                    -
+                        label: "Sunrise"
+                        value: ssopt-col-accent-l-sunrise
+                    -
+                        label: "Volcano"
+                        value: ssopt-col-accent-l-volcano
+                    -
+                        label: "  Analogous — 45 degrees (Muted)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Eldur"
+                        value: ssopt-col-accent-l-eldur
+                    -
+                        label: "Logi"
+                        value: ssopt-col-accent-l-logi
+                    -
+                        label: "Jörð"
+                        value: ssopt-col-accent-l-jörð
+                    -
+                        label: "Mosi"
+                        value: ssopt-col-accent-l-mosi
+                    -
+                        label: "Sjór"
+                        value: ssopt-col-accent-l-sjór
+                    -
+                        label: "Djúp"
+                        value: ssopt-col-accent-l-djúp
+                    -
+                        label: "Himinn"
+                        value: ssopt-col-accent-l-himinn
+                    -
+                        label: "Þoka"
+                        value: ssopt-col-accent-l-thoka
+                    -
+                        label: "Skuggi"
+                        value: ssopt-col-accent-l-skuggi
+                    -
+                        label: "Konungur"
+                        value: ssopt-col-accent-l-konungur
+                    -
+                        label: "Morgun"
+                        value: ssopt-col-accent-l-morgun
+                    -
+                        label: "Eldfjall"
+                        value: ssopt-col-accent-l-eldfjall
+                    -
+                        label: "  Analogous — 45 degrees (Vivid)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Photon"
+                        value: ssopt-col-accent-l-photon
+                    -
+                        label: "Electron"
+                        value: ssopt-col-accent-l-electron
+                    -
+                        label: "Proton"
+                        value: ssopt-col-accent-l-proton
+                    -
+                        label: "Neutron"
+                        value: ssopt-col-accent-l-neutron
+                    -
+                        label: "Boson"
+                        value: ssopt-col-accent-l-boson
+                    -
+                        label: "Quark"
+                        value: ssopt-col-accent-l-quark
+                    -
+                        label: "Lepton"
+                        value: ssopt-col-accent-l-lepton
+                    -
+                        label: "Gluon"
+                        value: ssopt-col-accent-l-gluon
+                    -
+                        label: "Muon"
+                        value: ssopt-col-accent-l-muon
+                    -
+                        label: "Tachyon"
+                        value: ssopt-col-accent-l-tachyon
+                    -
+                        label: "Fermion"
+                        value: ssopt-col-accent-l-fermion
+                    -
+                        label: "Hadron"
+                        value: ssopt-col-accent-l-hadron
+                    -
+                        label: "  Triadic  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Kaleidoscope"
+                        value: ssopt-col-accent-l-kaleidoscope
+                    -
+                        label: "Constellation"
+                        value: ssopt-col-accent-l-constellation
+                    -
+                        label: "Prismatic"
+                        value: ssopt-col-accent-l-prismatic
+                    -
+                        label: "Spectrum"
+                        value: ssopt-col-accent-l-spectrum
+                    -
+                        label: "Trinity"
+                        value: ssopt-col-accent-l-trinity
+                    -
+                        label: "Nexus"
+                        value: ssopt-col-accent-l-nexus
+                    -
+                        label: "Fusion"
+                        value: ssopt-col-accent-l-fusion
+                    -
+                        label: "Synthesis"
+                        value: ssopt-col-accent-l-synthesis
+                    -
+                        label: "Harmony"
+                        value: ssopt-col-accent-l-harmony
+                    -
+                        label: "  Cyberpunk  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Aftershock"
+                        value: ssopt-col-accent-l-aftershock
+                    -
+                        label: "Aftershock for Dark (changes colour order)"
+                        value: ssopt-col-accent-l-aftershock-dark
+                    -
+                        label: "Solar Flare"
+                        value: ssopt-col-accent-l-solar-flare
+                    -
+                        label: "Magma Flow"
+                        value: ssopt-col-accent-l-magma-flow
+                    -
+                        label: "Acid Pop"
+                        value: ssopt-col-accent-l-acid-pop
+                    -
+                        label: "Stardust"
+                        value: ssopt-col-accent-l-stardust
+                    -
+                        label: "  MetBrewer Collection  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Archambault (Dusk)"
+                        value: ssopt-col-accent-l-archambault-dusk
+                    -
+                        label: "Archambault (Sunrise)"
+                        value: ssopt-col-accent-l-archambault-sunrise
+                    -
+                        label: "Austria (Primary)"
+                        value: ssopt-col-accent-l-austria-primary
+                    -
+                        label: "Austria (Jewel Tones)"
+                        value: ssopt-col-accent-l-austria-jewel-tones
+                    -
+                        label: "Benedictus (Deep Blues)"
+                        value: ssopt-col-accent-l-benedictus-deep-blues
+                    -
+                        label: "Benedictus (Sky Blues)"
+                        value: ssopt-col-accent-l-benedictus-sky-blues
+                    -
+                        label: "Benedictus (Reds)"
+                        value: ssopt-col-accent-l-benedictus-reds
+                    -
+                        label: "Cassatt (Parlor)"
+                        value: ssopt-col-accent-l-cassatt1-parlor
+                    -
+                        label: "Cassatt (Rose)"
+                        value: ssopt-col-accent-l-cassatt1-rose
+                    -
+                        label: "Cassatt (Forest)"
+                        value: ssopt-col-accent-l-cassatt2-forest
+                    -
+                        label: "Cassatt (Heather)"
+                        value: ssopt-col-accent-l-cassatt2-heather
+                    -
+                        label: "Cross (Ocean Sunset)"
+                        value: ssopt-col-accent-l-cross-ocean-sunset
+                    -
+                        label: "Cross (Warm Tones)"
+                        value: ssopt-col-accent-l-cross-warm-tones
+                    -
+                        label: "Degas (Forest Floor)"
+                        value: ssopt-col-accent-l-degas-forest-floor
+                    -
+                        label: "Degas (Autumn)"
+                        value: ssopt-col-accent-l-degas-autumn
+                    -
+                        label: "Demuth (Embers)"
+                        value: ssopt-col-accent-l-demuth-embers
+                    -
+                        label: "Demuth (Cityscape)"
+                        value: ssopt-col-accent-l-demuth-cityscape
+                    -
+                        label: "Derain (Meadow)"
+                        value: ssopt-col-accent-l-derain-meadow
+                    -
+                        label: "Derain (Twilight)"
+                        value: ssopt-col-accent-l-derain-twilight
+                    -
+                        label: "Egypt (Oasis)"
+                        value: ssopt-col-accent-l-egypt-oasis
+                    -
+                        label: "Egypt (Sunset)"
+                        value: ssopt-col-accent-l-egypt-sunset
+                    -
+                        label: "Gauguin (Jungle)"
+                        value: ssopt-col-accent-l-gauguin-jungle
+                    -
+                        label: "Gauguin (Spice)"
+                        value: ssopt-col-accent-l-gauguin-spice
+                    -
+                        label: "Greek (Fire)"
+                        value: ssopt-col-accent-l-greek-fire
+                    -
+                        label: "Greek (Pottery)"
+                        value: ssopt-col-accent-l-greek-pottery
+                    -
+                        label: "Hiroshige (Deep Ocean)"
+                        value: ssopt-col-accent-l-hiroshige-deep-ocean
+                    -
+                        label: "Hiroshige (Sunset)"
+                        value: ssopt-col-accent-l-hiroshige-sunset
+                    -
+                        label: "Hokusai (Clay)"
+                        value: ssopt-col-accent-l-hokusai1-clay
+                    -
+                        label: "Hokusai (Vista)"
+                        value: ssopt-col-accent-l-hokusai1-vista
+                    -
+                        label: "Hokusai (Deep Sea)"
+                        value: ssopt-col-accent-l-hokusai2-deep-sea
+                    -
+                        label: "Hokusai (Shallows)"
+                        value: ssopt-col-accent-l-hokusai2-shallows
+                    -
+                        label: "Hokusai (Wave)"
+                        value: ssopt-col-accent-l-hokusai3-wave
+                    -
+                        label: "Hokusai (Coastline)"
+                        value: ssopt-col-accent-l-hokusai3-coastline
+                    -
+                        label: "Homer (Storm)"
+                        value: ssopt-col-accent-l-homer1-storm
+                    -
+                        label: "Homer (Sea Spray)"
+                        value: ssopt-col-accent-l-homer1-sea-spray
+                    -
+                        label: "Homer (Autumn)"
+                        value: ssopt-col-accent-l-homer2-autumn
+                    -
+                        label: "Homer (Pasture)"
+                        value: ssopt-col-accent-l-homer2-pasture
+                    -
+                        label: "Ingres (Night)"
+                        value: ssopt-col-accent-l-ingres-night
+                    -
+                        label: "Ingres (Gilt)"
+                        value: ssopt-col-accent-l-ingres-gilt
+                    -
+                        label: "Isfahan (Spice)"
+                        value: ssopt-col-accent-l-isfahan1-spice
+                    -
+                        label: "Isfahan (Tiles)"
+                        value: ssopt-col-accent-l-isfahan1-tiles
+                    -
+                        label: "Isfahan (Market)"
+                        value: ssopt-col-accent-l-isfahan2-market
+                    -
+                        label: "Isfahan (Blossom)"
+                        value: ssopt-col-accent-l-isfahan2-blossom
+                    -
+                        label: "Java (Sunrise)"
+                        value: ssopt-col-accent-l-java-sunrise
+                    -
+                        label: "Java (Flora)"
+                        value: ssopt-col-accent-l-java-flora
+                    -
+                        label: "Johnson (Fire)"
+                        value: ssopt-col-accent-l-johnson-fire
+                    -
+                        label: "Johnson (Sea)"
+                        value: ssopt-col-accent-l-johnson-sea
+                    -
+                        label: "Juarez (Fiesta)"
+                        value: ssopt-col-accent-l-juarez-fiesta
+                    -
+                        label: "Juarez (Jungle)"
+                        value: ssopt-col-accent-l-juarez-jungle
+                    -
+                        label: "Kandinsky (Alternate)"
+                        value: ssopt-col-accent-l-kandinsky-alternate
+                    -
+                        label: "Kandinsky (Composition)"
+                        value: ssopt-col-accent-l-kandinsky-composition
+                    -
+                        label: "Klimt (Meadow)"
+                        value: ssopt-col-accent-l-klimt-meadow
+                    -
+                        label: "Klimt (Jewel)"
+                        value: ssopt-col-accent-l-klimt-jewel
+                    -
+                        label: "Lakota (Sun Dance)"
+                        value: ssopt-col-accent-l-lakota-sun-dance
+                    -
+                        label: "Lakota (Plains)"
+                        value: ssopt-col-accent-l-lakota-plains
+                    -
+                        label: "Manet (Atelier)"
+                        value: ssopt-col-accent-l-manet-atelier
+                    -
+                        label: "Manet (Regatta)"
+                        value: ssopt-col-accent-l-manet-regatta
+                    -
+                        label: "Monet (Water Lilies)"
+                        value: ssopt-col-accent-l-monet-water-lilies
+                    -
+                        label: "Monet (Impression)"
+                        value: ssopt-col-accent-l-monet-impression
+                    -
+                        label: "Moreau (Myth)"
+                        value: ssopt-col-accent-l-moreau-myth
+                    -
+                        label: "Moreau (Chimera)"
+                        value: ssopt-col-accent-l-moreau-chimera
+                    -
+                        label: "Morgenstern (Dawn)"
+                        value: ssopt-col-accent-l-morgenstern-dawn
+                    -
+                        label: "Morgenstern (Dusk)"
+                        value: ssopt-col-accent-l-morgenstern-dusk
+                    -
+                        label: "Nattier (Portrait)"
+                        value: ssopt-col-accent-l-nattier-portrait
+                    -
+                        label: "Nattier (Forest)"
+                        value: ssopt-col-accent-l-nattier-forest
+                    -
+                        label: "Navajo (Sunset)"
+                        value: ssopt-col-accent-l-navajo-sunset
+                    -
+                        label: "Navajo (Sandstone)"
+                        value: ssopt-col-accent-l-navajo-sandstone
+                    -
+                        label: "New Kingdom (Fresco)"
+                        value: ssopt-col-accent-l-newkingdom-fresco
+                    -
+                        label: "New Kingdom (Papyrus)"
+                        value: ssopt-col-accent-l-newkingdom-papyrus
+                    -
+                        label: "Nizami (Manuscript)"
+                        value: ssopt-col-accent-l-nizami-manuscript
+                    -
+                        label: "Nizami (Spice Route)"
+                        value: ssopt-col-accent-l-nizami-spice-route
+                    -
+                        label: "O'Keeffe (Canyon)"
+                        value: ssopt-col-accent-l-okeeffe1-canyon
+                    -
+                        label: "O'Keeffe (Sky)"
+                        value: ssopt-col-accent-l-okeeffe1-sky
+                    -
+                        label: "O'Keeffe (Badlands)"
+                        value: ssopt-col-accent-l-okeeffe2-badlands
+                    -
+                        label: "O'Keeffe (Ghost Ranch)"
+                        value: ssopt-col-accent-l-okeeffe2-ghost-ranch
+                    -
+                        label: "Paquin (Gala)"
+                        value: ssopt-col-accent-l-paquin-gala
+                    -
+                        label: "Paquin (Garden)"
+                        value: ssopt-col-accent-l-paquin-garden
+                    -
+                        label: "Peru (Inca)"
+                        value: ssopt-col-accent-l-peru1-inca
+                    -
+                        label: "Peru (Andes)"
+                        value: ssopt-col-accent-l-peru1-andes
+                    -
+                        label: "Peru (Quipu)"
+                        value: ssopt-col-accent-l-peru2-quipu
+                    -
+                        label: "Peru (Gold)"
+                        value: ssopt-col-accent-l-peru2-gold
+                    -
+                        label: "Pillement (Chinoiserie)"
+                        value: ssopt-col-accent-l-pillement-chinoiserie
+                    -
+                        label: "Pillement (Pastoral)"
+                        value: ssopt-col-accent-l-pillement-pastoral
+                    -
+                        label: "Pissaro (Seine)"
+                        value: ssopt-col-accent-l-pissaro-seine
+                    -
+                        label: "Pissaro (Jardin)"
+                        value: ssopt-col-accent-l-pissaro-jardin
+                    -
+                        label: "Redon (Dream)"
+                        value: ssopt-col-accent-l-redon-dream
+                    -
+                        label: "Redon (Ophelia)"
+                        value: ssopt-col-accent-l-redon-ophelia
+                    -
+                        label: "Renoir (Ball)"
+                        value: ssopt-col-accent-l-renoir-ball
+                    -
+                        label: "Renoir (Luncheon)"
+                        value: ssopt-col-accent-l-renoir-luncheon
+                    -
+                        label: "Signac (St Tropez)"
+                        value: ssopt-col-accent-l-signac-st-tropez
+                    -
+                        label: "Signac (Harbor)"
+                        value: ssopt-col-accent-l-signac-harbor
+                    -
+                        label: "Tam (Sunset)"
+                        value: ssopt-col-accent-l-tam-sunset
+                    -
+                        label: "Tam (Twilight)"
+                        value: ssopt-col-accent-l-tam-twilight
+                    -
+                        label: "Tara (Hill)"
+                        value: ssopt-col-accent-l-tara-hill
+                    -
+                        label: "Tara (Brooch)"
+                        value: ssopt-col-accent-l-tara-brooch
+                    -
+                        label: "Thomas (Gospel)"
+                        value: ssopt-col-accent-l-thomas-gospel
+                    -
+                        label: "Thomas (Garden)"
+                        value: ssopt-col-accent-l-thomas-garden
+                    -
+                        label: "Tiepolo (Fresco)"
+                        value: ssopt-col-accent-l-tiepolo-fresco
+                    -
+                        label: "Tiepolo (Banquet)"
+                        value: ssopt-col-accent-l-tiepolo-banquet
+                    -
+                        label: "Troy (Reading)"
+                        value: ssopt-col-accent-l-troy-reading
+                    -
+                        label: "Troy (Sea)"
+                        value: ssopt-col-accent-l-troy-sea
+                    -
+                        label: "Tsimshian (Totem)"
+                        value: ssopt-col-accent-l-tsimshian-totem
+                    -
+                        label: "Tsimshian (Forest)"
+                        value: ssopt-col-accent-l-tsimshian-forest
+                    -
+                        label: "Van Gogh (Irises)"
+                        value: ssopt-col-accent-l-vangogh1-irises
+                    -
+                        label: "Van Gogh (Olive Trees)"
+                        value: ssopt-col-accent-l-vangogh1-olive-trees
+                    -
+                        label: "Van Gogh (Starry Night)"
+                        value: ssopt-col-accent-l-vangogh2-starry-night
+                    -
+                        label: "Van Gogh (Sunflowers)"
+                        value: ssopt-col-accent-l-vangogh2-sunflowers
+                    -
+                        label: "Van Gogh (Wheatfield)"
+                        value: ssopt-col-accent-l-vangogh3-wheatfield
+                    -
+                        label: "Van Gogh (Cypresses)"
+                        value: ssopt-col-accent-l-vangogh3-cypresses
+                    -
+                        label: "Veronese (Wedding)"
+                        value: ssopt-col-accent-l-veronese-wedding
+                    -
+                        label: "Veronese (Feast)"
+                        value: ssopt-col-accent-l-veronese-feast
+                    -
+                        label: "Wissing (Portrait)"
+                        value: ssopt-col-accent-l-wissing-portrait
+                    -
+                        label: "Wissing (Library)"
+                        value: ssopt-col-accent-l-wissing-library
+    -
+                id: V4-willemstad-color-accent-variations-light
+                title: Custom Settings
+                type: heading
+                level: 4
+                collapsed: true
+    -
+                    id: ssopt-custom-accent-colours-light
+                    title: 'Enable User-Set Accents for Light Mode'
+                    type: class-toggle
+                    description: "When enabled, this allows you to override preset accents with your preferred ones."
+                    default: false
+    -
+                        id: info-about-colour-theory-accent-l
+                        title: 'A Brief Lesson on Colour Theory Before You Start'
+                        type: info-text
+                        description: "Colours can be organized on a 360° hue wheel to create specific harmonies. Analogous colours, which are close neighbours on the wheel (typically 15-45° apart), produce a calm and gentle effect. For a more vibrant yet balanced feel, a triadic scheme uses three colours spaced exactly 120° apart. A split-complementary harmony offers high contrast with less tension by pairing one colour with the two neighbours of its direct opposite."
+                        default: false
+    -
+                        id: color-pax-l-accent-h-shift
+                        title: 'Set Hue Range for Accents'
+                        type: variable-number-slider
+                        description: 'Adjust the hue shift to create different colour harmonies. 0° = monochromatic, 30-60° = analogous, 90° = tetradic, 120° = triadic, 150° = split-complementary, 180° = complementary.'
+                        format: ''
+                        default: 0
+                        min: 0
+                        max: 360
+                        step: 0.5
+
+    -
+                        id: color-pax-l-accent-l-shift
+                        title: 'Set Lightness Range for Accents'
+                        type: variable-number-slider
+                        description: 'Control how much darker each accent becomes. Higher values create more contrast between accent variations. Recommended: 5-15% (0.05-0.15) for subtle differences, 15-25% (0.15-0.25) for distinct variations.'
+                        format: ''
+                        default: 0.1
+                        min: 0
+                        max: 0.5
+                        step: 0.005
+    -
+                        id: color-pax-l-accent-picker
+                        title: 'Accent Color via Picker'
+                        type: variable-color
+                        description: 'The primary accent color for light mode. This will be used to generate additional accent variations based on your hue and lightness shift settings.'
+                        opacity: false
+                        format: hsl
+                        default: 'hsl(184 74% 20%)'
+    -
+                        id: ssopt-custom-accent-textfield-light
+                        title: "Set Accents via Text Field Instead"
+                        type: class-toggle
+                        description: "Use a text field instead of a colour picker for your primary accent. Accepts any valid CSS colour format (e.g., hex, RGB(A), HSL, OKLCH, var(--interactive-accent))."
+                        default: false
+    -
+                        id: color-pax-l-accent-textfield
+                        title: 'Custom Accent Colour'
+                        type: variable-text
+                        default: ''
+                        description: 'Overrides the default accent colour. If left empty, defaults to the preset accent. Accepts any valid CSS colour format (e.g., hex, RGB(A), HSL, OKLCH, var(--interactive-accent)).'  
+    -
+                        id: ssopt-custom-accents-total-enable-light
+                        title: "Enable Fully Custom Accents"
+                        type: class-toggle
+                        description: "When enabled, lets you override the secondary and tertiary accent colours (--color-accent-1 and --color-accent-2) using the fields below."
+                        default: false
+    -
+                        id: 'color-pax-l-accent-1-textfield'
+                        title: "Custom Accent Colour — Secondary"
+                        type: variable-text
+                        default: ''
+                        description: "Overrides the default secondary accent colour. If left empty, falls back to the preset. Accepts any valid CSS colour format (e.g., hex, RGB, HSL, OKLCH)."
+    -
+                        id: 'color-pax-l-accent-2-textfield'
+                        title: "Custom Accent Colour — Tertiary"
+                        type: variable-text
+                        default: ''
+                        description: "Overrides the default tertiary accent colour. If left empty, falls back to the preset. Accepts any valid CSS colour format (e.g., hex, RGB, HSL, OKLCH)."
+    -
+            id: V3-willemstad-color-rainbow-settings-light
+            title: "Rainbow Colours"
+            description: "Red, Orange, Yellow, Green, Cyan, Blue, Purple and Pink"
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: color-rainbow-l-presets
+                title: "Presets for Rainbow Colours (Light)"
+                type: class-select
+                description: "Presets might not cleanly fit into Obsidian's specific colour palette."
+                allowEmpty: false
+                default: default
+                options:
+                    - 
+                        label: "Obsidian Default"
+                        value: default
+                    -
+                        label: "  Willemstad Creations "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Big Band Fest"
+                        value: ssopt-col-rainbow-l-big-band-fest
+                    -
+                        label: "Tropical Reef"
+                        value: ssopt-col-rainbow-l-tropical-reef
+                    -
+                        label: "Nature"
+                        value: ssopt-col-rainbow-l-nature
+                    -
+                        label: "Chroma"
+                        value: ssopt-col-rainbow-l-chroma
+                    -
+                        label: "Pigment"
+                        value: ssopt-col-rainbow-l-pigment
+                    -
+                        label: "  Themes from Code Editors  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Nord"
+                        value: ssopt-col-rainbow-l-nord
+                    -
+                        label: "Solarized"
+                        value: ssopt-col-rainbow-l-solarized
+                    -
+                        label: "Gruvbox"
+                        value: ssopt-col-rainbow-l-gruvbox
+                    -
+                        label: "Dracula"
+                        value: ssopt-col-rainbow-l-dracula
+                    -
+                        label: "Kanagawa"
+                        value: ssopt-col-rainbow-l-kanagawa
+                    -
+                        label: "Monokai"
+                        value: ssopt-col-rainbow-l-monokai
+                    -
+                        label: "Tokyo Night"
+                        value: ssopt-col-rainbow-l-tokyo-night
+                    -
+                        label: "Catppuccin Mocha"
+                        value: ssopt-col-rainbow-l-catppuccin-mocha
+                    -
+                        label: "Flexoki Light"
+                        value: ssopt-col-rainbow-l-flexoki-light
+                    -
+                        label: "Flexoki Dark"
+                        value: ssopt-col-rainbow-l-flexoki-dark
+                    -
+                        label: "Everforest"
+                        value: ssopt-col-rainbow-l-everforest
+                    -
+                        label: "Everforest (Palette #2)"
+                        value: ssopt-col-rainbow-l-everforest-palette2
+                    -
+                        label: "OneDark"
+                        value: ssopt-col-rainbow-l-one-dark
+                    -
+                        label: "OneDark (Darker)"
+                        value: ssopt-col-rainbow-l-one-darker
+                    -
+                        label: "OneDark (Cool)"
+                        value: ssopt-col-rainbow-l-one-cool
+                    -
+                        label: "OneDark (Deep)"
+                        value: ssopt-col-rainbow-l-one-deep
+                    -
+                        label: "  MetBrewer Collection  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Tiepolo"
+                        value: ssopt-col-rainbow-l-tiepolo
+                    -
+                        label: "Henri-Edmond Cross"
+                        value: ssopt-col-rainbow-l-cross
+                    -
+                        label: "Nizami"
+                        value: ssopt-col-rainbow-l-nizami
+                    -
+                        label: "  Inspired by Artists, Artworks and Architecture  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Bauhaus/Klee"
+                        value: ssopt-col-rainbow-l-klee
+                    -
+                        label: "Kandinsky"
+                        value: ssopt-col-rainbow-l-kandinsky
+                    -
+                        label: "Paul Signac's Antibes"
+                        value: ssopt-col-rainbow-l-paul-signac-antibes
+                    -
+                        label: "James Turrell's Aftershock"
+                        value: ssopt-col-rainbow-l-aftershock
+                    -
+                        label: "Rothko: Dark and Emotive"
+                        value: ssopt-col-rainbow-l-rothko-dark-emotive
+                    -
+                        label: "Rothko: Radiance and Light"
+                        value: ssopt-col-rainbow-l-rothko-light-radiance
+                    -
+                        label: "  Le Corbusier's Polychromie Architecturale  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Le Corbusier"
+                        value: ssopt-col-rainbow-l-le-corbusier
+                    -
+                        label: "Accent 1931"
+                        value: ssopt-col-rainbow-l-accent-1931
+                    -
+                        label: "  Munsell Colour System  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Munsell colour keys (6/8)"
+                        value: ssopt-col-rainbow-l-munsell
+                    -
+                        label: "Munsell colour keys (6/10)"
+                        value: ssopt-col-rainbow-l-munsell-610
+    -
+                id: V4-willemstad-color-rainbows-variations-light
+                title: Custom Settings
+                type: heading
+                level: 4
+                collapsed: true
+    -
+                id: ssopt-custom-rainbow-colours-light
+                title: 'Enable User-Set Rainbow Colours for Light Mode'
+                type: class-toggle
+                description: "When enabled, this allows you to override preset rainbow colours with your preferred colours. Rainbow colours not overriden will use the prevailing colour available in the preset."
+                default: false
+    -
+                    id: color-pax-l-red
+                    title: 'Custom Colour — Red'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Red colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-l-orange
+                    title: 'Custom Colour — Orange'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Orange colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-l-yellow
+                    title: 'Custom Colour — Yellow'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Yellow colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-l-green
+                    title: 'Custom Colour — Green'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Green colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-l-cyan
+                    title: 'Custom Colour — Cyan'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Cyan colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-l-blue
+                    title: 'Custom Colour — Blue'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Blue colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-l-purple
+                    title: 'Custom Colour — Purple'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Purple colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-l-pink
+                    title: 'Custom Colour — Pink'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Pink colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+        id: V3-willemstad-color-selection-settings-light
+        title: "--text-selection"
+        description: "Text Selection and Highlights"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: col-selection-l-presets
+        title: "Presets for Selection Colour"
+        description: "Choose a color for selected text."
+        type: class-select
+        allowEmpty: false
+        default: ssopt-sel-l-default-yellow
+        options:
+            -
+                label: "Default Yellow"
+                value: ssopt-sel-l-default-yellow
+            -
+                label: "Vibrant Blue"
+                value: ssopt-sel-l-vibrant-blue
+            -
+                label: "Pastel Pink"
+                value: ssopt-sel-l-pastel-pink
+            -
+                label: "Le Corbusier (Sky)"
+                value: ssopt-sel-l-le-corbusier-sky
+            -
+                label: " Themes from Code Editors  "
+                value: no-stuff-break-editors
+            -
+                label: "Solarized Cyan"
+                value: ssopt-sel-l-solarized-cyan
+            -
+                label: "Gruvbox Orange"
+                value: ssopt-sel-l-gruvbox-orange
+            -
+                label: "Dracula Pink"
+                value: ssopt-sel-l-dracula-pink
+            -
+                label: "Nord (nord14 Green)"
+                value: ssopt-sel-l-nord-aurora
+            -
+                label: "Catppuccin (Mauve)"
+                value: ssopt-sel-l-catppuccin-mauve
+            -
+                label: " MetBrewer Collection  "
+                value: no-stuff-break-metbrewer
+            -
+                label: "Cross Deep Blue"
+                value: ssopt-sel-l-met-cross-deep-blue
+            -
+                label: "Nizami Lime"
+                value: ssopt-sel-l-met-nizami-lime
+            -
+                label: "Tiepolo Dusty Blue"
+                value: ssopt-sel-l-met-tiepolo-dusty-blue
+    -
+            id: V4-willemstad-color-selection-variations-light
+            title: Custom Settings
+            type: heading
+            level: 4
+            collapsed: true
+    -
+            id: ssopt-custom-selection-colours-light
+            title: 'Enable User-Set Selection Colour for Light Mode'
+            type: class-toggle
+            description: "When enabled, this allows you to override the preset selection colour with your preferred colour. If left empty, it will use the prevailing colour from the selected preset."
+            default: false
+    -
+                id: color-pax-l-selection
+                title: 'Custom Selection Colour'
+                type: variable-text
+                default: ''
+                description: 'Overrides the default selection colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+            id: V3-willemstad-color-contrast-settings-light
+            title: 'Cross-Colour UI (Dark UI)'
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: ssopt-theme-contrast-light
+                title: Enable Contrast
+                type: class-toggle
+                description: "When enabled, UI elements like the titlebar, ribbon, status bar, and side panes will use a contrasting colour scheme taken from the current mode's chroma and hue."
+                default: false
+    -
+                id: ssopt-tc-cross-l
+                title: Use Base Colours from Dark Mode
+                type: class-toggle
+                description: "Imports the base background and text colours from your dark mode settings to use for the contrasting UI elements. The base colours within your main editing workspace will not be affected."
+                default: false
+    -
+                id: ssopt-tc-accent-cross-l
+                title: Use Accent Colours from Dark Mode
+                type: class-toggle
+                description: "Imports the accent colours from your dark mode settings to use for the contrasting UI elements. The accent colours within your main editing workspace will not be affected."
+                default: false
+    -
+            id: info-override-template-light
+            title: Override via Custom Template Snippet
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: ssopt-custom-colour-template-light
+                title: Enable User-Set Colours via Template for Light Mode
+                description: "Enable this option to allow the use of a snippet, for specific preset variables which will customize colors for the theme's appearance in light mode. This will override the variables set within Style Settings."
+                type: class-toggle
+    -
+                id: info-template-file-light
+                title: Template Snippet File
+                description: "[Template File](https://willemstad.cc/Dev+Docs/Template+Snippet)"
+                type: info-text
+                markdown: true
+    -
+        id: willemstad-theme-colours-dark
+        title: Dark Mode
+        description: "Options to manipulate colours in dark mode. Click any of the headers within to reveal options to change their respective color palettes."
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: V3-willemstad-color-base-settings-dark
+            title: "--color-base"
+            description: Background and Text
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: color-base-d-l-presets
+                description: "Choose the amount of contrast you would prefer between your background and text elements."
+                title: "Presets for Base Lightness"
+                type: class-select
+                allowEmpty: false
+                default: default
+                options:
+                    - 
+                        label: "Default"
+                        value: default
+                    -
+                        label: "Writing Mode (Even Lower Contrast, Raises Base Tones)"
+                        value: ssopt-col-base-lightness-d-writing
+                    -
+                        label: "Ultra-Low Contrast (Nord)"
+                        value: ssopt-col-base-lightness-d-ultra-low-contrast
+                    -
+                        label: "Low Contrast"
+                        value: ssopt-col-base-lightness-d-low-contrast
+                    -
+                        label: "High Contrast"
+                        value: ssopt-col-base-lightness-d-high-contrast
+                    -
+                        label: "True Black/Dark"
+                        value: ssopt-col-base-lightness-d-true-black
+                    -
+                        label: "Cinematic"
+                        value: ssopt-col-base-lightness-d-cinematic
+                    -
+                        label: "Paper"
+                        value: ssopt-col-base-lightness-d-paper
+                    -
+                        label: "Vivid"
+                        value: ssopt-col-base-lightness-d-vivid
+                    -
+                        label: "Analog"
+                        value: ssopt-col-base-lightness-d-analog
+                    -
+                        label: "Structural"
+                        value: ssopt-col-base-lightness-d-structural
+                    -
+                        label: "Glow"
+                        value: ssopt-col-base-lightness-d-glow
+                    -
+                        label: "  Tone Palettes Specific  "
+                        value: no-stuff-break-palette-specific
+                    -
+                        label: "Catppuccin (Aggressive contrast with step 10 dip)"
+                        value: ssopt-col-base-lightness-d-catppuccin
+                    -
+                        label: "Solarized (Collapses background colors from 4 → 2)"
+                        value: ssopt-col-base-lightness-d-solarized
+                    -
+                        label: "Flexoki"
+                        value: ssopt-col-base-lightness-d-flexoki
+    -
+                id: color-base-d-ch-presets
+                title: "Presets for Base Tone (Chroma and Hue)"
+                description: "Choose the color temperature and hue palette for your dark theme. Some options are recommended with or require base lightness setting for better/true colours, please adjust your settings accordingly."
+                type: class-select
+                allowEmpty: false
+                default: default
+                options:
+                    - 
+                        label: "Default (Zero Chroma-Hue)"
+                        value: default
+                    -
+                        label: "  Willemstad Creations  "
+                        value: no-stuff-break-willemstad
+                    -
+                        label: "Blood Ruby"
+                        value: ssopt-col-base-tone-d-blood-ruby
+                    -
+                        label: "Cardinal Red"
+                        value: ssopt-col-base-tone-d-cardinal-red
+                    -
+                        label: "Crimson Velvet"
+                        value: ssopt-col-base-tone-d-crimson-velvet
+                    -
+                        label: "Scarlet Flame"
+                        value: ssopt-col-base-tone-d-scarlet-flame
+                    -
+                        label: "Ruby Spectrum"
+                        value: ssopt-col-base-tone-d-ruby-spectrum
+                    -
+                        label: "Strawberry Milk"
+                        value: ssopt-col-base-tone-d-strawberry-milk
+                    -
+                        label: "Sunset"
+                        value: ssopt-col-base-tone-d-sunset
+                    -
+                        label: "Burnt Sienna"
+                        value: ssopt-col-base-tone-d-burnt-sienna
+                    -
+                        label: "Citrus Intensity"
+                        value: ssopt-col-base-tone-d-citrus-intensity
+                    -
+                        label: "Apricot Dream"
+                        value: ssopt-col-base-tone-d-apricot-dream
+                    -
+                        label: "Pearl Mist"
+                        value: ssopt-col-base-tone-d-pearl-mist
+                    -
+                        label: "Amber Glow"
+                        value: ssopt-col-base-tone-d-amber-glow
+                    -
+                        label: "Tangerine Burst"
+                        value: ssopt-col-base-tone-d-tangerine-burst
+                    -
+                        label: "Golden Hour"
+                        value: ssopt-col-base-tone-d-golden-hour
+                    -
+                        label: "Lemon Chiffon"
+                        value: ssopt-col-base-tone-d-lemon-chiffon
+                    -
+                        label: "Honeydew Breeze"
+                        value: ssopt-col-base-tone-d-honeydew-breeze
+                    -
+                        label: "Electric Lime"
+                        value: ssopt-col-base-tone-d-electric-lime
+                    -
+                        label: "Nocturnal Study"
+                        value: ssopt-col-base-tone-d-nocturnal-study
+                    -
+                        label: "Terracotta Red"
+                        value: ssopt-col-base-tone-d-terracotta-red
+                    -
+                        label: "Canyon Sunset"
+                        value: ssopt-col-base-tone-d-canyon-sunset
+                    -
+                        label: "Spice Market"
+                        value: ssopt-col-base-tone-d-spice-market
+                    -
+                        label: "Cactus Desert"
+                        value: ssopt-col-base-tone-d-cactus-desert
+                    -
+                        label: "Leprechaun (Green and Gold)"
+                        value: ssopt-col-base-tone-d-leprechaun
+                    -
+                        label: "Gilded Leaf"
+                        value: ssopt-col-base-tone-d-gilded-leaf
+                    -
+                        label: "Shipwreck"
+                        value: ssopt-col-base-tone-d-shipwreck
+                    -
+                        label: "Equinox"
+                        value: ssopt-col-base-tone-d-equinox
+                    -
+                        label: "Chartreuse Shock"
+                        value: ssopt-col-base-tone-d-chartreuse-shock
+                    -
+                        label: "Spring Meadow"
+                        value: ssopt-col-base-tone-d-spring-meadow
+                    -
+                        label: "British Racing Green"
+                        value: ssopt-col-base-tone-d-british-racing-green
+                    -
+                        label: "Emerald Range"
+                        value: ssopt-col-base-tone-d-emerald-range
+                    -
+                        label: "Seafoam Whisper"
+                        value: ssopt-col-base-tone-d-seafoam-whisper
+                    -
+                        label: "New Growth (But It Isn't Green!)"
+                        value: ssopt-col-base-tone-d-forest-green
+                    -
+                        label: "Old Oak (Browner Greens)"
+                        value: ssopt-col-base-tone-d-forest
+                    -
+                        label: "Mint Breeze"
+                        value: ssopt-col-base-tone-d-mint-breeze
+                    -
+                        label: "Tropical Lagoon"
+                        value: ssopt-col-base-tone-d-tropical-lagoon
+                    -
+                        label: "Turquoise Jewel"
+                        value: ssopt-col-base-tone-d-turquoise-jewel
+                    -
+                        label: "Korean Celadon"
+                        value: ssopt-col-base-tone-d-korean-celadon
+                    -
+                        label: "Viridian Sky"
+                        value: ssopt-col-base-tone-d-viridian-sky
+                    -
+                        label: "Blueberries"
+                        value: ssopt-col-base-tone-d-blueberries
+                    -
+                        label: "Borealis (also known as Blueberries from another farm)"
+                        value: ssopt-col-base-tone-d-borealis
+                    -
+                        label: "Cambridge Blue"
+                        value: ssopt-col-base-tone-d-cambridge-blue
+                    -
+                        label: "Phthalo Blue"
+                        value: ssopt-col-base-tone-d-phthalo-blue
+                    -
+                        label: "Oxford Blue"
+                        value: ssopt-col-base-tone-d-oxford-blue
+                    -
+                        label: "Delft Blue"
+                        value: ssopt-col-base-tone-d-delft-blue
+                    -
+                        label: "Sapphire Study"
+                        value: ssopt-col-base-tone-d-sapphire-study
+                    -
+                        label: "Powder Blue"
+                        value: ssopt-col-base-tone-d-powder-blue
+                    -
+                        label: "Cloud Nine"
+                        value: ssopt-col-base-tone-d-cloud-nine
+                    -
+                        label: "Periwinkle Mist"
+                        value: ssopt-col-base-tone-d-periwinkle-mist
+                    -
+                        label: "Cyanus"
+                        value: ssopt-col-base-tone-d-cyanus
+                    -
+                        label: "Midnight Ocean"
+                        value: ssopt-col-base-tone-d-midnight-ocean
+                    -
+                        label: "Deep Sea (But It Isn't Blue?)"
+                        value: ssopt-col-base-tone-d-deep-sea-blue
+                    -
+                        label: "Indigo Dusk"
+                        value: ssopt-col-base-tone-d-indigo-dusk
+                    -
+                        label: "Cosmic Shift"
+                        value: ssopt-col-base-tone-d-cosmic-shift
+                    -
+                        label: "Arcade Glow"
+                        value: ssopt-col-base-tone-d-arcade-glow
+                    -
+                        label: "Viola"
+                        value: ssopt-col-base-tone-d-viola
+                    -
+                        label: "Hagia Sophia (Purple/Magenta)"
+                        value: ssopt-col-base-tone-d-hagia-sophia
+                    -
+                        label: "Mystic Plum"
+                        value: ssopt-col-base-tone-d-mystic-plum
+                    -
+                        label: "Amethyst Depth"
+                        value: ssopt-col-base-tone-d-amethyst-depth
+                    -
+                        label: "Lilac Silk"
+                        value: ssopt-col-base-tone-d-lilac-silk
+                    -
+                        label: "Rose Quartz"
+                        value: ssopt-col-base-tone-d-rose-quartz
+                    -
+                        label: "Cherry Blossom"
+                        value: ssopt-col-base-tone-d-cherry-blossom
+                    -
+                        label: "Magentis"
+                        value: ssopt-col-base-tone-d-magentis
+                    -
+                        label: "Amethystus"
+                        value: ssopt-col-base-tone-d-amethystus
+                    -
+                        label: "Imperial Robes"
+                        value: ssopt-col-base-tone-d-imperial-robes
+                    -
+                        label: "Electric Violet"
+                        value: ssopt-col-base-tone-d-electric-violet
+                    -
+                        label: "Arctic (Northern Grey)"
+                        value: ssopt-col-base-tone-d-arctic
+                    -
+                        label: "Horizon (Sunset Colors)"
+                        value: ssopt-col-base-tone-d-horizon
+                    -
+                        label: "Lumevari (Snow Shadow)"
+                        value: ssopt-col-base-tone-d-lumevari
+                    -
+                        label: "Öötaevas (Night Sky)"
+                        value: ssopt-col-base-tone-d-ootaevas
+                    -
+                        label: "Clay Pot"
+                        value: ssopt-col-base-tone-d-clay-pot
+                    -
+                        label: "Tuscan Earth"
+                        value: ssopt-col-base-tone-d-tuscan-earth
+                    -
+                        label: "Desert Sand"
+                        value: ssopt-col-base-tone-d-desert-sand
+                    -
+                        label: "Writing → Chocolate — use Writing Mode"
+                        value: ssopt-col-base-tone-d-writing-chocolate
+                    -
+                        label: "Writing → Coffee — use Writing Mode" 
+                        value: ssopt-col-base-tone-d-writing-coffee
+                    -
+                        label: "Writing → Sepia — use Writing Mode"
+                        value: ssopt-col-base-tone-d-writing-sepia
+                    -
+                        label: "Writing → Leather — use Writing Mode" 
+                        value: ssopt-col-base-tone-d-writing-leather
+                    -
+                        label: "  Themes from Code Editors  "
+                        value: no-stuff-break-editor
+                    -
+                        label: "Nord [Snow Storm] — use Ultra-Low Contrast"
+                        value: ssopt-col-base-tone-d-nord
+                    -
+                        label: "Solarized  — use Solarized base lightness"
+                        value: ssopt-col-base-tone-d-solarized
+                    -
+                        label: "Gruvbox (Earth Tones)"
+                        value: ssopt-col-base-tone-d-gruvbox
+                    -
+                        label: "Catppuccin [Frappé] — use Catppuccin base lightness"
+                        value: ssopt-col-base-tone-d-catppuccin-frappe
+                    -
+                        label: "Catppuccin [Macchiato] — use Catppuccin base lightness"
+                        value: ssopt-col-base-tone-d-catppuccin-macchiato
+                    -
+                        label: "Catppuccin [Mocha] — use Catppuccin base lightness"
+                        value: ssopt-col-base-tone-d-catppuccin-mocha
+                    -
+                        label: "Flexoki — use Flexoki base lightness"
+                        value: ssopt-col-base-tone-d-flexoki
+                    -
+                        label: "Dracula, Alucard-style"
+                        value: ssopt-col-base-tone-d-dracula
+                    -
+                        label: "OneDark"
+                        value: ssopt-col-base-tone-d-one-dark
+                    -
+                        label: "Everforest [Soft]"
+                        value: ssopt-col-base-tone-d-everforest-soft
+                    -
+                        label: "  Adapted from MetBrewer Collection  "
+                        value: no-stuff-break-metbrewer
+                    -
+                        label: "Cassatt (Soft Pinks & Blues)"
+                        value: ssopt-col-base-tone-d-cassatt
+                    -
+                        label: "Hiroshige (Blue-Green Harmony)"
+                        value: ssopt-col-base-tone-d-hiroshige
+                    -
+                        label: "Kandinsky (Warm Yellows)"
+                        value: ssopt-col-base-tone-d-kandinsky
+                    -
+                        label: "Monet (Impressionist Blues & Greens)"
+                        value: ssopt-col-base-tone-d-monet
+                    -
+                        label: "Van Gogh (Sunflower & Starry Night)"
+                        value: ssopt-col-base-tone-d-vangogh
+                    -
+                        label: "Klimt (Rich Golds)"
+                        value: ssopt-col-base-tone-d-klimt
+                    -
+                        label: "Picasso (Blue Period)"
+                        value: ssopt-col-base-tone-d-picasso
+                    -
+                        label: "Renoir (Warm Skin Tones)"
+                        value: ssopt-col-base-tone-d-renoir
+                    -
+                        label: "Wissing (Museum Earth & Sky)"
+                        value: ssopt-col-base-tone-d-wissing
+                    -
+                        label: "Demuth (Architectural Modernism)"
+                        value: ssopt-col-base-tone-d-demuth
+                    -
+                        label: "Tiepolo (Baroque Grandeur)"
+                        value: ssopt-col-base-tone-d-tiepolo
+                    -
+                        label: "Ingres (Neoclassical Elegance)"
+                        value: ssopt-col-base-tone-d-ingres
+                    -
+                        label: "Hokusai"
+                        value: ssopt-col-base-tone-d-hokusai
+                    -
+                        label: "Troy (Cool Slate & Blue-Gray)" 
+                        value: ssopt-col-base-tone-d-troy
+                    -
+                        label: "Cross (Elegant Purple-Blues)"
+                        value: ssopt-col-base-tone-d-cross
+                    -
+                        label: "Lakota (Serene Teal & Aqua)"
+                        value: ssopt-col-base-tone-d-lakota
+                    -
+                        label: "Egypt (Forest Sage & Olive)"
+                        value: ssopt-col-base-tone-d-egypt
+                    -
+                        label: "Johnson (Pine Green & Forest)"
+                        value: ssopt-col-base-tone-d-johnson
+                    -
+                        label: "Benedictus (Muted Olive & Earth)"
+                        value: ssopt-col-base-tone-d-benedictus
+                    -
+                        label: " Inspired by Artwork  "
+                        value: no-stuff-break-artwork
+                    -
+                        label: "James Turrell's Aftershock"
+                        value: ssopt-col-base-tone-d-aftershock
+                    -
+                        label: "Ellsworth Kelly's White Blue/Blue White"
+                        value: ssopt-col-base-tone-d-kelly-white-blue
+                    -
+                        label: "Olafur Eliasson's The Weather Project"
+                        value: ssopt-col-base-tone-d-eliasson-weather
+                    -
+                        label: "Mark Rothko's Rothko Chapel"
+                        value: ssopt-col-base-tone-d-rothko-chapel
+                    -
+                        label: "  Experimentals  "
+                        value: no-stuff-break-artwork
+                    -
+                        label: "Blistering Barnacles, We're in Syldavia"
+                        value: ssopt-col-base-tone-d-tintin
+                    -
+                        label: "Algae Bloom (The Depths)"
+                        value: ssopt-col-base-tone-d-algae-bloom
+                    -
+                        label: "Bioluminescent Grotto"
+                        value: ssopt-col-base-tone-d-bioluminescent-grotto
+    -
+            id: V4-willemstad-color-base-variations-dark
+            title: Custom Settings
+            type: heading
+            level: 4
+            collapsed: true
+    -
+                id: ssopt-custom-base-colours-dark
+                title: 'Enable User-Set Base Tone for Dark Mode'
+                type: class-toggle
+                description: "When enabled, this allows you to override preset base tones (chroma and hue) with your preferred one."
+                default: false
+    -
+                id: ch-color-base-d-c-pax-num
+                title: "Base Chroma"
+                type: variable-number-slider
+                min: 0
+                max: 0.07
+                step: 0.001
+                default: 0.035
+    -
+                id: ch-color-base-d-h-pax-num
+                title: "Base Hue"
+                type: variable-number-slider
+                min: 0
+                max: 360
+                step: 0.5
+                default: 270
+    -
+                    id: ssopt-enable-base-delta-dark
+                    title: 'Enable Chroma & Hue Delta (Gradient Effect)'
+                    type: class-toggle
+                    description: "When enabled, this applies a range (delta) to the base chroma and hue, creating a subtle gradient effect across different UI layers. A delta of 0 results in no change. Please note that this effect is very subtle."
+                    default: false
+    -
+                    id: ch-color-base-d-c-pax-delta
+                    title: "Chroma Delta (Δ)"
+                    type: variable-number-slider
+                    min: -0.10
+                    max: 0.10
+                    step: 0.001
+                    default: 0
+    -
+                    id: ch-color-base-d-h-pax-delta
+                    title: "Hue Delta (Δ)"
+                    type: variable-number-slider
+                    min: -60
+                    max: 60
+                    step: 0.5
+                    default: 0
+    -
+            id: V3-willemstad-color-accent-settings-dark
+            title: "--color-accent"
+            description: Accents and Interactives
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: color-accent-d-ch-presets
+                title: "Presets for Accent Colours"
+                description: ""
+                type: class-select
+                allowEmpty: false
+                default: ssopt-col-accent-d-default
+                options:
+                    -
+                        label: "  Willemstad Defaults  "
+                        value: no-stuff-break-tones
+                    - 
+                        label: "The London School (Default)"
+                        value: ssopt-col-accent-d-default
+                    -
+                        label: "Previous Willemstad Default"
+                        value: ssopt-col-accent-d-old-default
+                    -
+                        label: "Leonardo"
+                        value: ssopt-col-accent-d-leonardo
+                    -
+                        label: "  Themes from Code Editors "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Nord"
+                        value: ssopt-col-accent-d-nord
+                    -
+                        label: "Nord (Alternative)"
+                        value: ssopt-col-accent-d-nord-2
+                    -
+                        label: "  Monochromatic  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Ruby"
+                        value: ssopt-col-accent-d-ruby
+                    -
+                        label: "Crimson"
+                        value: ssopt-col-accent-d-crimson
+                    -
+                        label: "Burgundy"
+                        value: ssopt-col-accent-d-burgundy
+                    -
+                        label: "Pomegranate"
+                        value: ssopt-col-accent-d-pomegranate
+                    -
+                        label: "Oud"
+                        value: ssopt-col-accent-d-oud
+                    -
+                        label: "Persimmon"
+                        value: ssopt-col-accent-d-persimmon
+                    -
+                        label: "Ember"
+                        value: ssopt-col-accent-d-ember
+                    -
+                        label: "Cedar"
+                        value: ssopt-col-accent-d-cedar
+                    -
+                        label: "Cedarwood"
+                        value: ssopt-col-accent-d-cedarwood
+                    -
+                        label: "Bronze"
+                        value: ssopt-col-accent-d-bronze
+                    -
+                        label: "Apricot"
+                        value: ssopt-col-accent-d-apricot
+                    -
+                        label: "Cinnamon"
+                        value: ssopt-col-accent-d-cinnamon
+                    -
+                        label: "Topaz"
+                        value: ssopt-col-accent-d-topaz
+                    -
+                        label: "Ambergris"
+                        value: ssopt-col-accent-d-ambergris
+                    -
+                        label: "Sandalwood"
+                        value: ssopt-col-accent-d-sandalwood
+                    -
+                        label: "Santal"
+                        value: ssopt-col-accent-d-santal
+                    -
+                        label: "Saffron"
+                        value: ssopt-col-accent-d-saffron
+                    -
+                        label: "Frankincense"
+                        value: ssopt-col-accent-d-frankincense
+                    -
+                        label: "Bergamot"
+                        value: ssopt-col-accent-d-bergamot
+                    -
+                        label: "Jasmine"
+                        value: ssopt-col-accent-d-jasmine
+                    -
+                        label: "Chartreuse"
+                        value: ssopt-col-accent-d-chartreuse
+                    -
+                        label: "Yuzu"
+                        value: ssopt-col-accent-d-yuzu
+                    -
+                        label: "Cardamom"
+                        value: ssopt-col-accent-d-cardamom
+                    -
+                        label: "Basil"
+                        value: ssopt-col-accent-d-basil
+                    -
+                        label: "Ivy"
+                        value: ssopt-col-accent-d-ivy
+                    -
+                        label: "Vetiver"
+                        value: ssopt-col-accent-d-vetiver
+                    -
+                        label: "Spruce"
+                        value: ssopt-col-accent-d-spruce
+                    -
+                        label: "Sage"
+                        value: ssopt-col-accent-d-sage
+                    -
+                        label: "Malachite"
+                        value: ssopt-col-accent-d-malachite
+                    -
+                        label: "Mint"
+                        value: ssopt-col-accent-d-mint
+                    -
+                        label: "Rosemary"
+                        value: ssopt-col-accent-d-rosemary
+                    -
+                        label: "Juniper"
+                        value: ssopt-col-accent-d-juniper
+                    -
+                        label: "Turquoise"
+                        value: ssopt-col-accent-d-turquoise
+                    -
+                        label: "Verdigris"
+                        value: ssopt-col-accent-d-verdigris
+                    -
+                        label: "Sky"
+                        value: ssopt-col-accent-d-sky
+                    -
+                        label: "Ishtar"
+                        value: ssopt-col-accent-d-ishtar
+                    -
+                        label: "Azul"
+                        value: ssopt-col-accent-d-azul
+                    -
+                        label: "Sapphire"
+                        value: ssopt-col-accent-d-sapphire
+                    -
+                        label: "Azure"
+                        value: ssopt-col-accent-d-azure
+                    -
+                        label: "Ultramarine"
+                        value: ssopt-col-accent-d-ultramarine
+                    -
+                        label: "Prussia"
+                        value: ssopt-col-accent-d-prussia
+                    -
+                        label: "Myrrh"
+                        value: ssopt-col-accent-d-myrrh
+                    -
+                        label: "Mulberry"
+                        value: ssopt-col-accent-d-mulberry
+                    -
+                        label: "Midnight"
+                        value: ssopt-col-accent-d-midnight
+                    -
+                        label: "Lavender"
+                        value: ssopt-col-accent-d-lavender
+                    -
+                        label: "Grape"
+                        value: ssopt-col-accent-d-grape
+                    -
+                        label: "Thistle"
+                        value: ssopt-col-accent-d-thistle
+                    -
+                        label: "Patchouli"
+                        value: ssopt-col-accent-d-patchouli
+                    -
+                        label: "Carnation"
+                        value: ssopt-col-accent-d-carnation
+                    -
+                        label: "Cerise"
+                        value: ssopt-col-accent-d-cerise
+                    -
+                        label: "Salmon"
+                        value: ssopt-col-accent-d-salmon
+                    -
+                        label: "Peach"
+                        value: ssopt-col-accent-d-peach
+                    -
+                        label: "Mahogany"
+                        value: ssopt-col-accent-d-mahogany
+                    -
+                        label: "Copper"
+                        value: ssopt-col-accent-d-copper
+                    -
+                        label: "Clay"
+                        value: ssopt-col-accent-d-clay
+                    -
+                        label: "Sienna"
+                        value: ssopt-col-accent-d-sienna
+                    -
+                        label: "Paprika"
+                        value: ssopt-col-accent-d-paprika
+                    -
+                        label: "  Monochromatic (Neutrals)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Ash"
+                        value: ssopt-col-accent-d-ash
+                    -
+                        label: "Charcoal"
+                        value: ssopt-col-accent-d-charcoal
+                    -
+                        label: "Cream"
+                        value: ssopt-col-accent-d-cream
+                    -
+                        label: "Linen"
+                        value: ssopt-col-accent-d-linen
+                    -
+                        label: "Parchment"
+                        value: ssopt-col-accent-d-parchment
+                    -
+                        label: "Slate"
+                        value: ssopt-col-accent-d-slate
+                    -
+                        label: "Smoke"
+                        value: ssopt-col-accent-d-smoke
+                    -
+                        label: "  Analogous — 20 degrees  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Torch"
+                        value: ssopt-col-accent-d-torch
+                    -
+                        label: "Garnet"
+                        value: ssopt-col-accent-d-garnet
+                    -
+                        label: "Bonfire"
+                        value: ssopt-col-accent-d-bonfire
+                    -
+                        label: "Citrine"
+                        value: ssopt-col-accent-d-citrine
+                    -
+                        label: "Honey"
+                        value: ssopt-col-accent-d-honey
+                    -
+                        label: "Lime"
+                        value: ssopt-col-accent-d-lime
+                    -
+                        label: "Forest"
+                        value: ssopt-col-accent-d-forest
+                    -
+                        label: "Verdant"
+                        value: ssopt-col-accent-d-verdant
+                    -
+                        label: "Seafoam"
+                        value: ssopt-col-accent-d-seafoam
+                    -
+                        label: "Meridian"
+                        value: ssopt-col-accent-d-meridian
+                    -
+                        label: "Laguna"
+                        value: ssopt-col-accent-d-laguna
+                    -
+                        label: "Reverie"
+                        value: ssopt-col-accent-d-reverie
+                    -
+                        label: "Cascade"
+                        value: ssopt-col-accent-d-cascade
+                    -
+                        label: "Arctic"
+                        value: ssopt-col-accent-d-arctic
+                    -
+                        label: "Cobalt"
+                        value: ssopt-col-accent-d-cobalt
+                    -
+                        label: "Tempest"
+                        value: ssopt-col-accent-d-tempest
+                    -
+                        label: "Navy"
+                        value: ssopt-col-accent-d-navy
+                    -
+                        label: "Violet"
+                        value: ssopt-col-accent-d-violet
+                    -
+                        label: "Aurora"
+                        value: ssopt-col-accent-d-aurora
+                    -
+                        label: "Ethereal"
+                        value: ssopt-col-accent-d-ethereal
+                    -
+                        label: "Iris"
+                        value: ssopt-col-accent-d-iris
+                    -
+                        label: "Magenta"
+                        value: ssopt-col-accent-d-magenta
+                    -
+                        label: "Solstice"
+                        value: ssopt-col-accent-d-solstice
+                    -
+                        label: "Rose"
+                        value: ssopt-col-accent-d-rose
+                    -
+                        label: "Vermillion"
+                        value: ssopt-col-accent-d-vermillion
+                    -
+                        label: "  Analogous — 20 degrees (Muted)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Tuli"
+                        value: ssopt-col-accent-d-tuli
+                    -
+                        label: "Turvas"
+                        value: ssopt-col-accent-d-turvas
+                    -
+                        label: "Savi"
+                        value: ssopt-col-accent-d-savi
+                    -
+                        label: "Liiv"
+                        value: ssopt-col-accent-d-liiv
+                    -
+                        label: "Kõdu"
+                        value: ssopt-col-accent-d-kõdu
+                    -
+                        label: "Raba"
+                        value: ssopt-col-accent-d-raba
+                    -
+                        label: "Soo"
+                        value: ssopt-col-accent-d-soo
+                    -
+                        label: "Muda"
+                        value: ssopt-col-accent-d-muda
+                    -
+                        label: "Udu"
+                        value: ssopt-col-accent-d-udu
+                    -
+                        label: "Kaste"
+                        value: ssopt-col-accent-d-kaste
+                    -
+                        label: "Külm"
+                        value: ssopt-col-accent-d-külm
+                    -
+                        label: "Torm"
+                        value: ssopt-col-accent-d-torm
+                    -
+                        label: "Kõva"
+                        value: ssopt-col-accent-d-kõva
+                    -
+                        label: "Hall"
+                        value: ssopt-col-accent-d-hall
+                    -
+                        label: "Jää"
+                        value: ssopt-col-accent-d-jää
+                    -
+                        label: "Hämar"
+                        value: ssopt-col-accent-d-hämar
+                    -
+                        label: "Varjund"
+                        value: ssopt-col-accent-d-varjund
+                    -
+                        label: "Vine"
+                        value: ssopt-col-accent-d-vine
+                    -
+                        label: "Haav"
+                        value: ssopt-col-accent-d-haav
+                    -
+                        label: "Õhtu"
+                        value: ssopt-col-accent-d-õhtu
+                    -
+                        label: "Pakane"
+                        value: ssopt-col-accent-d-pakane
+                    -
+                        label: "Koor"
+                        value: ssopt-col-accent-d-koor
+                    -
+                        label: "  Analogous — 20 degrees (Vivid)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Helios"
+                        value: ssopt-col-accent-d-helios
+                    -
+                        label: "Eros"
+                        value: ssopt-col-accent-d-eros
+                    -
+                        label: "Apollo"
+                        value: ssopt-col-accent-d-apollo
+                    -
+                        label: "Elektra"
+                        value: ssopt-col-accent-d-elektra
+                    -
+                        label: "Aether"
+                        value: ssopt-col-accent-d-aether
+                    -
+                        label: "Persephone"
+                        value: ssopt-col-accent-d-persephone
+                    -
+                        label: "Artemis"
+                        value: ssopt-col-accent-d-artemis
+                    -
+                        label: "Atlas"
+                        value: ssopt-col-accent-d-atlas
+                    -
+                        label: "Nike"
+                        value: ssopt-col-accent-d-nike
+                    -
+                        label: "Poseidon"
+                        value: ssopt-col-accent-d-poseidon
+                    -
+                        label: "Hermes"
+                        value: ssopt-col-accent-d-hermes
+                    -
+                        label: "Chronos"
+                        value: ssopt-col-accent-d-chronos
+                    -
+                        label: "Zeus"
+                        value: ssopt-col-accent-d-zeus
+                    -
+                        label: "Morpheus"
+                        value: ssopt-col-accent-d-morpheus
+                    -
+                        label: "Tyche"
+                        value: ssopt-col-accent-d-tyche
+                    -
+                        label: "Hades"
+                        value: ssopt-col-accent-d-hades
+                    -
+                        label: "Nyx"
+                        value: ssopt-col-accent-d-nyx
+                    -
+                        label: "Dionysus"
+                        value: ssopt-col-accent-d-dionysus
+                    -
+                        label: "Aphrodite"
+                        value: ssopt-col-accent-d-aphrodite
+                    -
+                        label: "Hecate"
+                        value: ssopt-col-accent-d-hecate
+                    -
+                        label: "Thanatos"
+                        value: ssopt-col-accent-d-thanatos
+                    -
+                        label: "Phoenix"
+                        value: ssopt-col-accent-d-phoenix
+                    -
+                        label: "  Analogous — 30 degrees  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Luminous"
+                        value: ssopt-col-accent-d-luminous
+                    -
+                        label: "Terracotta"
+                        value: ssopt-col-accent-d-terracotta
+                    -
+                        label: "Amber"
+                        value: ssopt-col-accent-d-amber
+                    -
+                        label: "Marigold"
+                        value: ssopt-col-accent-d-marigold
+                    -
+                        label: "Radiant"
+                        value: ssopt-col-accent-d-radiant
+                    -
+                        label: "Zest"
+                        value: ssopt-col-accent-d-zest
+                    -
+                        label: "Verdure"
+                        value: ssopt-col-accent-d-verdure
+                    -
+                        label: "Meadow"
+                        value: ssopt-col-accent-d-meadow
+                    -
+                        label: "Spring"
+                        value: ssopt-col-accent-d-spring
+                    -
+                        label: "Celestial"
+                        value: ssopt-col-accent-d-celestial
+                    -
+                        label: "Aquamarine"
+                        value: ssopt-col-accent-d-aquamarine
+                    -
+                        label: "Boreal"
+                        value: ssopt-col-accent-d-boreal
+                    -
+                        label: "Lagoon"
+                        value: ssopt-col-accent-d-lagoon
+                    -
+                        label: "Oceanic"
+                        value: ssopt-col-accent-d-oceanic
+                    -
+                        label: "Periwinkle"
+                        value: ssopt-col-accent-d-periwinkle
+                    -
+                        label: "Majestic"
+                        value: ssopt-col-accent-d-majestic
+                    -
+                        label: "Indigo"
+                        value: ssopt-col-accent-d-indigo
+                    -
+                        label: "Mystical"
+                        value: ssopt-col-accent-d-mystical
+                    -
+                        label: "Amethyst"
+                        value: ssopt-col-accent-d-amethyst
+                    -
+                        label: "Lilac"
+                        value: ssopt-col-accent-d-lilac
+                    -
+                        label: "Orchid"
+                        value: ssopt-col-accent-d-orchid
+                    -
+                        label: "Fuchsia"
+                        value: ssopt-col-accent-d-fuchsia
+                    -
+                        label: "Passion"
+                        value: ssopt-col-accent-d-passion
+                    -
+                        label: "Coral"
+                        value: ssopt-col-accent-d-coral
+                    -
+                        label: "Sunset"
+                        value: ssopt-col-accent-d-sunset
+                    -
+                        label: "Poppy"
+                        value: ssopt-col-accent-d-poppy
+                    -
+                        label: "  Analogous — 30 degrees (Reverse)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Tizhed"
+                        value: ssopt-col-accent-d-tizhed
+                    -
+                        label: "Gwribell"
+                        value: ssopt-col-accent-d-gwribell
+                    -
+                        label: "Splann"
+                        value: ssopt-col-accent-d-splann
+                    -
+                        label: "Kornad"
+                        value: ssopt-col-accent-d-kornad
+                    -
+                        label: "Koadeg"
+                        value: ssopt-col-accent-d-koadeg
+                    -
+                        label: "Sterenn"
+                        value: ssopt-col-accent-d-sterenn
+                    -
+                        label: "Morzhol"
+                        value: ssopt-col-accent-d-morzhol
+                    -
+                        label: "Koumoul"
+                        value: ssopt-col-accent-d-koumoul
+                    -
+                        label: "Reter"
+                        value: ssopt-col-accent-d-reter
+                    -
+                        label: "Spered"
+                        value: ssopt-col-accent-d-spered
+                    -
+                        label: "Bruded"
+                        value: ssopt-col-accent-d-bruded
+                    -
+                        label: "Morzhed"
+                        value: ssopt-col-accent-d-morzhed
+                    -
+                        label: "  Analogous — 30 degrees (Muted)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Brick"
+                        value: ssopt-col-accent-d-brick
+                    -
+                        label: "Tuscany"
+                        value: ssopt-col-accent-d-tuscany
+                    -
+                        label: "Sandstone"
+                        value: ssopt-col-accent-d-sandstone
+                    -
+                        label: "Ochre"
+                        value: ssopt-col-accent-d-ochre
+                    -
+                        label: "Olive"
+                        value: ssopt-col-accent-d-olive
+                    -
+                        label: "Sage Green"
+                        value: ssopt-col-accent-d-sage-green
+                    -
+                        label: "Moss"
+                        value: ssopt-col-accent-d-moss
+                    -
+                        label: "Muted Seafoam"
+                        value: ssopt-col-accent-d-seafoam-muted
+                    -
+                        label: "Lichen"
+                        value: ssopt-col-accent-d-lichen
+                    -
+                        label: "Pewter"
+                        value: ssopt-col-accent-d-pewter
+                    -
+                        label: "Haze"
+                        value: ssopt-col-accent-d-haze
+                    -
+                        label: "Slate Blue"
+                        value: ssopt-col-accent-d-slate-blue
+                    -
+                        label: "Stone"
+                        value: ssopt-col-accent-d-stone
+                    -
+                        label: "Lavender Gray"
+                        value: ssopt-col-accent-d-lavender-gray
+                    -
+                        label: "Shadow"
+                        value: ssopt-col-accent-d-shadow
+                    -
+                        label: "Heather"
+                        value: ssopt-col-accent-d-heather
+                    -
+                        label: "Plum"
+                        value: ssopt-col-accent-d-plum
+                    -
+                        label: "Dusty Rose"
+                        value: ssopt-col-accent-d-dusty-rose
+                    -
+                        label: "  Analogous — 30 degrees (Vivid)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Inferno"
+                        value: ssopt-col-accent-d-inferno
+                    -
+                        label: "Flames"
+                        value: ssopt-col-accent-d-flames
+                    -
+                        label: "Solar"
+                        value: ssopt-col-accent-d-solar
+                    -
+                        label: "Neon"
+                        value: ssopt-col-accent-d-neon
+                    -
+                        label: "Citrus Pop"
+                        value: ssopt-col-accent-d-citrus-pop
+                    -
+                        label: "Volt"
+                        value: ssopt-col-accent-d-volt
+                    -
+                        label: "Laser"
+                        value: ssopt-col-accent-d-laser
+                    -
+                        label: "Jungle"
+                        value: ssopt-col-accent-d-jungle
+                    -
+                        label: "Pulse"
+                        value: ssopt-col-accent-d-pulse
+                    -
+                        label: "Cyber Sea"
+                        value: ssopt-col-accent-d-cyber-sea
+                    -
+                        label: "Shock"
+                        value: ssopt-col-accent-d-shock
+                    -
+                        label: "Abyss"
+                        value: ssopt-col-accent-d-abyss
+                    -
+                        label: "Plasma"
+                        value: ssopt-col-accent-d-plasma
+                    -
+                        label: "Arcade Glow"
+                        value: ssopt-col-accent-d-arcade-glow
+                    -
+                        label: "Nova"
+                        value: ssopt-col-accent-d-nova
+                    -
+                        label: "Rave"
+                        value: ssopt-col-accent-d-rave
+                    -
+                        label: "Burst"
+                        value: ssopt-col-accent-d-burst
+                    -
+                        label: "Electric Orchid"
+                        value: ssopt-col-accent-d-electric-orchid
+                    -
+                        label: "Flash"
+                        value: ssopt-col-accent-d-flash
+                    -
+                        label: "Flare"
+                        value: ssopt-col-accent-d-flare
+                    -
+                        label: "  Analogous — 45 degrees  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Ignite"
+                        value: ssopt-col-accent-d-ignite
+                    -
+                        label: "Blaze"
+                        value: ssopt-col-accent-d-blaze
+                    -
+                        label: "Zenith"
+                        value: ssopt-col-accent-d-zenith
+                    -
+                        label: "Citron"
+                        value: ssopt-col-accent-d-citron
+                    -
+                        label: "Tidal"
+                        value: ssopt-col-accent-d-tidal
+                    -
+                        label: "Depth"
+                        value: ssopt-col-accent-d-depth
+                    -
+                        label: "Cosmos"
+                        value: ssopt-col-accent-d-cosmos
+                    -
+                        label: "Nebula"
+                        value: ssopt-col-accent-d-nebula
+                    -
+                        label: "Twilight"
+                        value: ssopt-col-accent-d-twilight
+                    -
+                        label: "Imperial"
+                        value: ssopt-col-accent-d-imperial
+                    -
+                        label: "Sunrise"
+                        value: ssopt-col-accent-d-sunrise
+                    -
+                        label: "Volcano"
+                        value: ssopt-col-accent-d-volcano
+                    -
+                        label: "  Analogous — 45 degrees (Muted)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Eldur"
+                        value: ssopt-col-accent-d-eldur
+                    -
+                        label: "Logi"
+                        value: ssopt-col-accent-d-logi
+                    -
+                        label: "Jörð"
+                        value: ssopt-col-accent-d-jörð
+                    -
+                        label: "Mosi"
+                        value: ssopt-col-accent-d-mosi
+                    -
+                        label: "Sjór"
+                        value: ssopt-col-accent-d-sjór
+                    -
+                        label: "Djúp"
+                        value: ssopt-col-accent-d-djúp
+                    -
+                        label: "Himinn"
+                        value: ssopt-col-accent-d-himinn
+                    -
+                        label: "Þoka"
+                        value: ssopt-col-accent-d-thoka
+                    -
+                        label: "Skuggi"
+                        value: ssopt-col-accent-d-skuggi
+                    -
+                        label: "Konungur"
+                        value: ssopt-col-accent-d-konungur
+                    -
+                        label: "Morgun"
+                        value: ssopt-col-accent-d-morgun
+                    -
+                        label: "Eldfjall"
+                        value: ssopt-col-accent-d-eldfjall
+                    -
+                        label: "  Analogous — 45 degrees (Vivid)  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Photon"
+                        value: ssopt-col-accent-d-photon
+                    -
+                        label: "Electron"
+                        value: ssopt-col-accent-d-electron
+                    -
+                        label: "Proton"
+                        value: ssopt-col-accent-d-proton
+                    -
+                        label: "Neutron"
+                        value: ssopt-col-accent-d-neutron
+                    -
+                        label: "Boson"
+                        value: ssopt-col-accent-d-boson
+                    -
+                        label: "Quark"
+                        value: ssopt-col-accent-d-quark
+                    -
+                        label: "Lepton"
+                        value: ssopt-col-accent-d-lepton
+                    -
+                        label: "Gluon"
+                        value: ssopt-col-accent-d-gluon
+                    -
+                        label: "Muon"
+                        value: ssopt-col-accent-d-muon
+                    -
+                        label: "Tachyon"
+                        value: ssopt-col-accent-d-tachyon
+                    -
+                        label: "Fermion"
+                        value: ssopt-col-accent-d-fermion
+                    -
+                        label: "Hadron"
+                        value: ssopt-col-accent-d-hadron
+                    -
+                        label: "  Triadic  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Kaleidoscope"
+                        value: ssopt-col-accent-d-kaleidoscope
+                    -
+                        label: "Constellation"
+                        value: ssopt-col-accent-d-constellation
+                    -
+                        label: "Prismatic"
+                        value: ssopt-col-accent-d-prismatic
+                    -
+                        label: "Spectrum"
+                        value: ssopt-col-accent-d-spectrum
+                    -
+                        label: "Trinity"
+                        value: ssopt-col-accent-d-trinity
+                    -
+                        label: "Nexus"
+                        value: ssopt-col-accent-d-nexus
+                    -
+                        label: "Fusion"
+                        value: ssopt-col-accent-d-fusion
+                    -
+                        label: "Synthesis"
+                        value: ssopt-col-accent-d-synthesis
+                    -
+                        label: "Harmony"
+                        value: ssopt-col-accent-d-harmony
+                    -
+                        label: "  Cyberpunk  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Aftershock"
+                        value: ssopt-col-accent-d-aftershock
+                    -
+                        label: "Aftershock for Dark (changes colour order)"
+                        value: ssopt-col-accent-d-aftershock-dark
+                    -
+                        label: "Solar Flare"
+                        value: ssopt-col-accent-d-solar-flare
+                    -
+                        label: "Magma Flow"
+                        value: ssopt-col-accent-d-magma-flow
+                    -
+                        label: "Acid Pop"
+                        value: ssopt-col-accent-d-acid-pop
+                    -
+                        label: "Stardust"
+                        value: ssopt-col-accent-d-stardust
+                    -
+                        label: "  MetBrewer Collection  "
+                        value: no-stuff-break-tones
+                    -
+                        label: "Archambault (Dusk)"
+                        value: ssopt-col-accent-d-archambault-dusk
+                    -
+                        label: "Archambault (Sunrise)"
+                        value: ssopt-col-accent-d-archambault-sunrise
+                    -
+                        label: "Austria (Primary)"
+                        value: ssopt-col-accent-d-austria-primary
+                    -
+                        label: "Austria (Jewel Tones)"
+                        value: ssopt-col-accent-d-austria-jewel-tones
+                    -
+                        label: "Benedictus (Deep Blues)"
+                        value: ssopt-col-accent-d-benedictus-deep-blues
+                    -
+                        label: "Benedictus (Sky Blues)"
+                        value: ssopt-col-accent-d-benedictus-sky-blues
+                    -
+                        label: "Benedictus (Reds)"
+                        value: ssopt-col-accent-d-benedictus-reds
+                    -
+                        label: "Cassatt (Parlor)"
+                        value: ssopt-col-accent-d-cassatt1-parlor
+                    -
+                        label: "Cassatt (Rose)"
+                        value: ssopt-col-accent-d-cassatt1-rose
+                    -
+                        label: "Cassatt (Forest)"
+                        value: ssopt-col-accent-d-cassatt2-forest
+                    -
+                        label: "Cassatt (Heather)"
+                        value: ssopt-col-accent-d-cassatt2-heather
+                    -
+                        label: "Cross (Ocean Sunset)"
+                        value: ssopt-col-accent-d-cross-ocean-sunset
+                    -
+                        label: "Cross (Warm Tones)"
+                        value: ssopt-col-accent-d-cross-warm-tones
+                    -
+                        label: "Degas (Forest Floor)"
+                        value: ssopt-col-accent-d-degas-forest-floor
+                    -
+                        label: "Degas (Autumn)"
+                        value: ssopt-col-accent-d-degas-autumn
+                    -
+                        label: "Demuth (Embers)"
+                        value: ssopt-col-accent-d-demuth-embers
+                    -
+                        label: "Demuth (Cityscape)"
+                        value: ssopt-col-accent-d-demuth-cityscape
+                    -
+                        label: "Derain (Meadow)"
+                        value: ssopt-col-accent-d-derain-meadow
+                    -
+                        label: "Derain (Twilight)"
+                        value: ssopt-col-accent-d-derain-twilight
+                    -
+                        label: "Egypt (Oasis)"
+                        value: ssopt-col-accent-d-egypt-oasis
+                    -
+                        label: "Egypt (Sunset)"
+                        value: ssopt-col-accent-d-egypt-sunset
+                    -
+                        label: "Gauguin (Jungle)"
+                        value: ssopt-col-accent-d-gauguin-jungle
+                    -
+                        label: "Gauguin (Spice)"
+                        value: ssopt-col-accent-d-gauguin-spice
+                    -
+                        label: "Greek (Fire)"
+                        value: ssopt-col-accent-d-greek-fire
+                    -
+                        label: "Greek (Pottery)"
+                        value: ssopt-col-accent-d-greek-pottery
+                    -
+                        label: "Hiroshige (Deep Ocean)"
+                        value: ssopt-col-accent-d-hiroshige-deep-ocean
+                    -
+                        label: "Hiroshige (Sunset)"
+                        value: ssopt-col-accent-d-hiroshige-sunset
+                    -
+                        label: "Hokusai (Clay)"
+                        value: ssopt-col-accent-d-hokusai1-clay
+                    -
+                        label: "Hokusai (Vista)"
+                        value: ssopt-col-accent-d-hokusai1-vista
+                    -
+                        label: "Hokusai (Deep Sea)"
+                        value: ssopt-col-accent-d-hokusai2-deep-sea
+                    -
+                        label: "Hokusai (Shallows)"
+                        value: ssopt-col-accent-d-hokusai2-shallows
+                    -
+                        label: "Hokusai (Wave)"
+                        value: ssopt-col-accent-d-hokusai3-wave
+                    -
+                        label: "Hokusai (Coastline)"
+                        value: ssopt-col-accent-d-hokusai3-coastline
+                    -
+                        label: "Homer (Storm)"
+                        value: ssopt-col-accent-d-homer1-storm
+                    -
+                        label: "Homer (Sea Spray)"
+                        value: ssopt-col-accent-d-homer1-sea-spray
+                    -
+                        label: "Homer (Autumn)"
+                        value: ssopt-col-accent-d-homer2-autumn
+                    -
+                        label: "Homer (Pasture)"
+                        value: ssopt-col-accent-d-homer2-pasture
+                    -
+                        label: "Ingres (Night)"
+                        value: ssopt-col-accent-d-ingres-night
+                    -
+                        label: "Ingres (Gilt)"
+                        value: ssopt-col-accent-d-ingres-gilt
+                    -
+                        label: "Isfahan (Spice)"
+                        value: ssopt-col-accent-d-isfahan1-spice
+                    -
+                        label: "Isfahan (Tiles)"
+                        value: ssopt-col-accent-d-isfahan1-tiles
+                    -
+                        label: "Isfahan (Market)"
+                        value: ssopt-col-accent-d-isfahan2-market
+                    -
+                        label: "Isfahan (Blossom)"
+                        value: ssopt-col-accent-d-isfahan2-blossom
+                    -
+                        label: "Java (Sunrise)"
+                        value: ssopt-col-accent-d-java-sunrise
+                    -
+                        label: "Java (Flora)"
+                        value: ssopt-col-accent-d-java-flora
+                    -
+                        label: "Johnson (Fire)"
+                        value: ssopt-col-accent-d-johnson-fire
+                    -
+                        label: "Johnson (Sea)"
+                        value: ssopt-col-accent-d-johnson-sea
+                    -
+                        label: "Juarez (Fiesta)"
+                        value: ssopt-col-accent-d-juarez-fiesta
+                    -
+                        label: "Juarez (Jungle)"
+                        value: ssopt-col-accent-d-juarez-jungle
+                    -
+                        label: "Kandinsky (Alternate)"
+                        value: ssopt-col-accent-d-kandinsky-alternate
+                    -
+                        label: "Kandinsky (Composition)"
+                        value: ssopt-col-accent-d-kandinsky-composition
+                    -
+                        label: "Klimt (Meadow)"
+                        value: ssopt-col-accent-d-klimt-meadow
+                    -
+                        label: "Klimt (Jewel)"
+                        value: ssopt-col-accent-d-klimt-jewel
+                    -
+                        label: "Lakota (Sun Dance)"
+                        value: ssopt-col-accent-d-lakota-sun-dance
+                    -
+                        label: "Lakota (Plains)"
+                        value: ssopt-col-accent-d-lakota-plains
+                    -
+                        label: "Manet (Atelier)"
+                        value: ssopt-col-accent-d-manet-atelier
+                    -
+                        label: "Manet (Regatta)"
+                        value: ssopt-col-accent-d-manet-regatta
+                    -
+                        label: "Monet (Water Lilies)"
+                        value: ssopt-col-accent-d-monet-water-lilies
+                    -
+                        label: "Monet (Impression)"
+                        value: ssopt-col-accent-d-monet-impression
+                    -
+                        label: "Moreau (Myth)"
+                        value: ssopt-col-accent-d-moreau-myth
+                    -
+                        label: "Moreau (Chimera)"
+                        value: ssopt-col-accent-d-moreau-chimera
+                    -
+                        label: "Morgenstern (Dawn)"
+                        value: ssopt-col-accent-d-morgenstern-dawn
+                    -
+                        label: "Morgenstern (Dusk)"
+                        value: ssopt-col-accent-d-morgenstern-dusk
+                    -
+                        label: "Nattier (Portrait)"
+                        value: ssopt-col-accent-d-nattier-portrait
+                    -
+                        label: "Nattier (Forest)"
+                        value: ssopt-col-accent-d-nattier-forest
+                    -
+                        label: "Navajo (Sunset)"
+                        value: ssopt-col-accent-d-navajo-sunset
+                    -
+                        label: "Navajo (Sandstone)"
+                        value: ssopt-col-accent-d-navajo-sandstone
+                    -
+                        label: "New Kingdom (Fresco)"
+                        value: ssopt-col-accent-d-newkingdom-fresco
+                    -
+                        label: "New Kingdom (Papyrus)"
+                        value: ssopt-col-accent-d-newkingdom-papyrus
+                    -
+                        label: "Nizami (Manuscript)"
+                        value: ssopt-col-accent-d-nizami-manuscript
+                    -
+                        label: "Nizami (Spice Route)"
+                        value: ssopt-col-accent-d-nizami-spice-route
+                    -
+                        label: "O'Keeffe (Canyon)"
+                        value: ssopt-col-accent-d-okeeffe1-canyon
+                    -
+                        label: "O'Keeffe (Sky)"
+                        value: ssopt-col-accent-d-okeeffe1-sky
+                    -
+                        label: "O'Keeffe (Badlands)"
+                        value: ssopt-col-accent-d-okeeffe2-badlands
+                    -
+                        label: "O'Keeffe (Ghost Ranch)"
+                        value: ssopt-col-accent-d-okeeffe2-ghost-ranch
+                    -
+                        label: "Paquin (Gala)"
+                        value: ssopt-col-accent-d-paquin-gala
+                    -
+                        label: "Paquin (Garden)"
+                        value: ssopt-col-accent-d-paquin-garden
+                    -
+                        label: "Peru (Inca)"
+                        value: ssopt-col-accent-d-peru1-inca
+                    -
+                        label: "Peru (Andes)"
+                        value: ssopt-col-accent-d-peru1-andes
+                    -
+                        label: "Peru (Quipu)"
+                        value: ssopt-col-accent-d-peru2-quipu
+                    -
+                        label: "Peru (Gold)"
+                        value: ssopt-col-accent-d-peru2-gold
+                    -
+                        label: "Pillement (Chinoiserie)"
+                        value: ssopt-col-accent-d-pillement-chinoiserie
+                    -
+                        label: "Pillement (Pastoral)"
+                        value: ssopt-col-accent-d-pillement-pastoral
+                    -
+                        label: "Pissaro (Seine)"
+                        value: ssopt-col-accent-d-pissaro-seine
+                    -
+                        label: "Pissaro (Jardin)"
+                        value: ssopt-col-accent-d-pissaro-jardin
+                    -
+                        label: "Redon (Dream)"
+                        value: ssopt-col-accent-d-redon-dream
+                    -
+                        label: "Redon (Ophelia)"
+                        value: ssopt-col-accent-d-redon-ophelia
+                    -
+                        label: "Renoir (Ball)"
+                        value: ssopt-col-accent-d-renoir-ball
+                    -
+                        label: "Renoir (Luncheon)"
+                        value: ssopt-col-accent-d-renoir-luncheon
+                    -
+                        label: "Signac (St Tropez)"
+                        value: ssopt-col-accent-d-signac-st-tropez
+                    -
+                        label: "Signac (Harbor)"
+                        value: ssopt-col-accent-d-signac-harbor
+                    -
+                        label: "Tam (Sunset)"
+                        value: ssopt-col-accent-d-tam-sunset
+                    -
+                        label: "Tam (Twilight)"
+                        value: ssopt-col-accent-d-tam-twilight
+                    -
+                        label: "Tara (Hill)"
+                        value: ssopt-col-accent-d-tara-hill
+                    -
+                        label: "Tara (Brooch)"
+                        value: ssopt-col-accent-d-tara-brooch
+                    -
+                        label: "Thomas (Gospel)"
+                        value: ssopt-col-accent-d-thomas-gospel
+                    -
+                        label: "Thomas (Garden)"
+                        value: ssopt-col-accent-d-thomas-garden
+                    -
+                        label: "Tiepolo (Fresco)"
+                        value: ssopt-col-accent-d-tiepolo-fresco
+                    -
+                        label: "Tiepolo (Banquet)"
+                        value: ssopt-col-accent-d-tiepolo-banquet
+                    -
+                        label: "Troy (Reading)"
+                        value: ssopt-col-accent-d-troy-reading
+                    -
+                        label: "Troy (Sea)"
+                        value: ssopt-col-accent-d-troy-sea
+                    -
+                        label: "Tsimshian (Totem)"
+                        value: ssopt-col-accent-d-tsimshian-totem
+                    -
+                        label: "Tsimshian (Forest)"
+                        value: ssopt-col-accent-d-tsimshian-forest
+                    -
+                        label: "Van Gogh (Irises)"
+                        value: ssopt-col-accent-d-vangogh1-irises
+                    -
+                        label: "Van Gogh (Olive Trees)"
+                        value: ssopt-col-accent-d-vangogh1-olive-trees
+                    -
+                        label: "Van Gogh (Starry Night)"
+                        value: ssopt-col-accent-d-vangogh2-starry-night
+                    -
+                        label: "Van Gogh (Sunflowers)"
+                        value: ssopt-col-accent-d-vangogh2-sunflowers
+                    -
+                        label: "Van Gogh (Wheatfield)"
+                        value: ssopt-col-accent-d-vangogh3-wheatfield
+                    -
+                        label: "Van Gogh (Cypresses)"
+                        value: ssopt-col-accent-d-vangogh3-cypresses
+                    -
+                        label: "Veronese (Wedding)"
+                        value: ssopt-col-accent-d-veronese-wedding
+                    -
+                        label: "Veronese (Feast)"
+                        value: ssopt-col-accent-d-veronese-feast
+                    -
+                        label: "Wissing (Portrait)"
+                        value: ssopt-col-accent-d-wissing-portrait
+                    -
+                        label: "Wissing (Library)"
+                        value: ssopt-col-accent-d-wissing-library
+    -
+                id: V4-willemstad-color-accent-variations-dark
+                title: Custom Settings
+                type: heading
+                level: 4
+                collapsed: true
+    -
+                    id: ssopt-custom-accent-colours-dark
+                    title: 'Enable User-Set Accents for Dark Mode'
+                    type: class-toggle
+                    description: "When enabled, this allows you to override preset accents with your preferred ones."
+                    default: false
+    -
+                        id: info-about-colour-theory-accent-d
+                        title: 'A Brief Lesson on Colour Theory Before You Start'
+                        type: info-text
+                        description: "Colours can be organized on a 360° hue wheel to create specific harmonies. Analogous colours, which are close neighbours on the wheel (typically 15-45° apart), produce a calm and gentle effect. For a more vibrant yet balanced feel, a triadic scheme uses three colours spaced exactly 120° apart. A split-complementary harmony offers high contrast with less tension by pairing one colour with the two neighbours of its direct opposite."
+                        default: false
+    -
+                        id: color-pax-d-accent-h-shift
+                        title: 'Set Hue Range for Accents'
+                        type: variable-number-slider
+                        description: 'Adjust the hue shift to create different colour harmonies. 0° = monochromatic, 30-60° = analogous, 90° = tetradic, 120° = triadic, 150° = split-complementary, 180° = complementary.'
+                        format: ''
+                        default: 0
+                        min: 0
+                        max: 360
+                        step: 0.5
+
+    -
+                        id: color-pax-d-accent-l-shift
+                        title: 'Set Lightness Range for Accents'
+                        type: variable-number-slider
+                        description: 'Control how much darker each accent becomes. Higher values create more contrast between accent variations. Recommended: 5-15% (0.05-0.15) for subtle differences, 15-25% (0.15-0.25) for distinct variations.'
+                        format: ''
+                        default: 0.1
+                        min: 0
+                        max: 0.5
+                        step: 0.005
+
+    -
+                        id: color-pax-d-accent-picker
+                        title: 'Accent Color via Picker'
+                        type: variable-color
+                        description: 'The primary accent color for light mode. This will be used to generate additional accent variations based on your hue and lightness shift settings.'
+                        opacity: false
+                        format: hsl
+                        default: 'hsl(184 74% 20%)'
+
+    -
+                            id: ssopt-custom-accent-textfield-dark
+                            title: "Set Accents via Text Field Instead"
+                            type: class-toggle
+                            description: "Use a text field instead of a colour picker for your primary accent. Accepts any valid CSS colour format (e.g., hex, RGB(A), HSL, OKLCH, var(--interactive-accent))."
+                            default: false
+
+    -
+                            id: color-pax-d-accent-textfield
+                            title: 'Custom Accent Colour'
+                            type: variable-text
+                            default: ''
+                            description: 'Overrides the default accent colour. If left empty, defaults to the preset accent. Accepts any valid CSS colour format (e.g., hex, RGB(A), HSL, OKLCH, var(--interactive-accent)).'
+
+    -
+                            id: ssopt-custom-accents-total-enable-dark
+                            title: "Enable Fully Custom Accents"
+                            type: class-toggle
+                            description: "When enabled, lets you override the secondary and tertiary accent colours (--col-accent-1 and --col-accent-2) using the fields below."
+                            default: false
+
+    -
+                            id: 'color-pax-d-accent-1-textfield'
+                            title: "Custom Accent Colour — Secondary"
+                            type: variable-text
+                            default: ''
+                            description: "Overrides the default secondary accent colour. If left empty, falls back to the preset. Accepts any valid CSS colour format (e.g., hex, RGB, HSL, OKLCH)."
+
+    -
+                            id: 'color-pax-d-accent-2-textfield'
+                            title: "Custom Accent Colour — Tertiary"
+                            type: variable-text
+                            default: ''
+                            description: "Overrides the default tertiary accent colour. If left empty, falls back to the preset. Accepts any valid CSS colour format (e.g., hex, RGB, HSL, OKLCH)."
+    -
+            id: V3-willemstad-color-rainbow-settings-dark
+            title: "Rainbow Colours"
+            description: "Red, Orange, Yellow, Green, Cyan, Blue, Purple and Pink"
+            type: heading
+            level: 3
+            collapsed: true
+    -
+                id: color-rainbow-d-presets
+                title: "Presets for Rainbow Colours"
+                type: class-select
+                description: "Presets might not cleanly fit into Obsidian's specific colour palette."
+                allowEmpty: false
+                default: default
+                options:
+                    -
+                        label: "Obsidian Default"
+                        value: default
+                    -
+                        label: "  Willemstad Creations "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Big Band Fest"
+                        value: ssopt-col-rainbow-d-big-band-fest
+                    -
+                        label: "Tropical Reef"
+                        value: ssopt-col-rainbow-d-tropical-reef
+                    -
+                        label: "Nature"
+                        value: ssopt-col-rainbow-d-nature
+                    -
+                        label: "Chroma"
+                        value: ssopt-col-rainbow-d-chroma
+                    -
+                        label: "Pigment"
+                        value: ssopt-col-rainbow-d-pigment
+                    -
+                        label: "  Themes from Code Editors  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Nord"
+                        value: ssopt-col-rainbow-d-nord
+                    -
+                        label: "Solarized"
+                        value: ssopt-col-rainbow-d-solarized
+                    -
+                        label: "Gruvbox"
+                        value: ssopt-col-rainbow-d-gruvbox
+                    -
+                        label: "Dracula"
+                        value: ssopt-col-rainbow-d-dracula
+                    -
+                        label: "Kanagawa"
+                        value: ssopt-col-rainbow-d-kanagawa
+                    -
+                        label: "Monokai"
+                        value: ssopt-col-rainbow-d-monokai
+                    -
+                        label: "Tokyo Night"
+                        value: ssopt-col-rainbow-d-tokyo-night
+                    -
+                        label: "Catppuccin Mocha"
+                        value: ssopt-col-rainbow-d-catppuccin-mocha
+                    -
+                        label: "Flexoki Light"
+                        value: ssopt-col-rainbow-d-flexoki-light
+                    -
+                        label: "Flexoki Dark"
+                        value: ssopt-col-rainbow-d-flexoki-dark
+                    -
+                        label: "Everforest"
+                        value: ssopt-col-rainbow-d-everforest
+                    -
+                        label: "Everforest (Palette #2)"
+                        value: ssopt-col-rainbow-d-everforest-palette2
+                    -
+                        label: "OneDark"
+                        value: ssopt-col-rainbow-d-one-dark
+                    -
+                        label: "OneDark (Darker)"
+                        value: ssopt-col-rainbow-d-one-darker
+                    -
+                        label: "OneDark (Cool)"
+                        value: ssopt-col-rainbow-d-one-cool
+                    -
+                        label: "OneDark (Deep)"
+                        value: ssopt-col-rainbow-d-one-deep
+                    -
+                        label: "  MetBrewer Collection  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Tiepolo"
+                        value: ssopt-col-rainbow-d-tiepolo
+                    -
+                        label: "Henri-Edmond Cross"
+                        value: ssopt-col-rainbow-d-cross
+                    -
+                        label: "Nizami"
+                        value: ssopt-col-rainbow-d-nizami
+                    -
+                        label: "  Inspired by Artists, Artworks and Architecture  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Bauhaus/Klee"
+                        value: ssopt-col-rainbow-d-klee
+                    -
+                        label: "Kandinsky"
+                        value: ssopt-col-rainbow-d-kandinsky
+                    -
+                        label: "Paul Signac's Antibes"
+                        value: ssopt-col-rainbow-d-paul-signac-antibes
+                    -
+                        label: "James Turrell's Aftershock"
+                        value: ssopt-col-rainbow-d-aftershock
+                    -
+                        label: "Rothko: Dark and Emotive"
+                        value: ssopt-col-rainbow-d-rothko-dark-emotive
+                    -
+                        label: "Rothko: Radiance and Light"
+                        value: ssopt-col-rainbow-d-rothko-light-radiance      
+                    -
+                        label: "  Le Corbusier's Polychromie Architecturale  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Le Corbusier"
+                        value: ssopt-col-rainbow-d-le-corbusier
+                    -
+                        label: "Accent 1931"
+                        value: ssopt-col-rainbow-d-accent-1931
+                    -
+                        label: "  Munsell Colour System  "
+                        value: no-stuff-break-rainbow
+                    -
+                        label: "Munsell colour keys (6/8)"
+                        value: ssopt-col-rainbow-d-munsell
+                    -
+                        label: "Munsell colour keys (6/10)"
+                        value: ssopt-col-rainbow-d-munsell-610
+    -
+                id: V4-willemstad-color-rainbows-variations-dark
+                title: Custom Settings
+                type: heading
+                level: 4
+                collapsed: true
+    -
+                id: ssopt-custom-rainbow-colours-dark
+                title: 'Enable User-Set Rainbow Colours for Dark Mode'
+                type: class-toggle
+                description: "When enabled, this allows you to override preset rainbow colours with your preferred colours. Rainbow colours not overriden will use the prevailing colour available in the preset."
+                default: false
+    -
+                    id: color-pax-d-red
+                    title: 'Custom Colour — Red'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Red colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-d-orange
+                    title: 'Custom Colour — Orange'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Orange colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-d-yellow
+                    title: 'Custom Colour — Yellow'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Yellow colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-d-green
+                    title: 'Custom Colour — Green'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Green colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-d-cyan
+                    title: 'Custom Colour — Cyan'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Cyan colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-d-blue
+                    title: 'Custom Colour — Blue'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Blue colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-d-purple
+                    title: 'Custom Colour — Purple'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Purple colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+                    id: color-pax-d-pink
+                    title: 'Custom Colour — Pink'
+                    type: variable-text
+                    default: ''
+                    description: 'Overrides the default Pink colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+        id: V3-willemstad-color-selection-settings-dark
+        title: "--text-selection"
+        description: "Text Selection and Highlights"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: col-selection-d-presets
+        title: "Presets for Selection Colour"
+        description: "Choose a color for selected text."
+        type: class-select
+        allowEmpty: false
+        default: ssopt-sel-d-default-yellow
+        options:
+            -
+                label: "Default Yellow"
+                value: ssopt-sel-d-default-yellow
+            -
+                label: "Vibrant Blue"
+                value: ssopt-sel-d-vibrant-blue
+            -
+                label: "Pastel Pink"
+                value: ssopt-sel-d-pastel-pink
+            -
+                label: "Le Corbusier (Sky)"
+                value: ssopt-sel-d-le-corbusier-sky
+            -
+                label: " Themes from Code Editors  "
+                value: no-stuff-break-editors
+            -
+                label: "Solarized Cyan"
+                value: ssopt-sel-d-solarized-cyan
+            -
+                label: "Gruvbox Orange"
+                value: ssopt-sel-d-gruvbox-orange
+            -
+                label: "Dracula Pink"
+                value: ssopt-sel-d-dracula-pink
+            -
+                label: "Nord (nord14 Green)"
+                value: ssopt-sel-d-nord-aurora
+            -
+                label: "Catppuccin (Mauve)"
+                value: ssopt-sel-d-catppuccin-mauve
+            -
+                label: " MetBrewer Collection  "
+                value: no-stuff-break-metbrewer
+            -
+                label: "Cross Deep Blue"
+                value: ssopt-sel-d-met-cross-deep-blue
+            -
+                label: "Nizami Lime"
+                value: ssopt-sel-d-met-nizami-lime
+            -
+                label: "Tiepolo Dusty Blue"
+                value: ssopt-sel-d-met-tiepolo-dusty-blue
+    -
+        id: V4-willemstad-color-selection-variations-dark
+        title: Custom Settings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: ssopt-custom-selection-colours-dark
+        title: 'Enable User-Set Selection Colour for Dark Mode'
+        type: class-toggle
+        description: "When enabled, this allows you to override the preset selection colour with your preferred colour. If left empty, it will use the prevailing colour from the selected preset."
+        default: false
+    -
+        id: color-pax-d-selection
+        title: 'Custom Selection Colour'
+        type: variable-text
+        default: ''
+        description: 'Overrides the default selection colour. If left empty, defaults to the preset colour. Accepts all valid CSS colour values (e.g., hex, RGB, HSL, var(--interactive-accent)).'
+    -
+        id: V3-willemstad-color-contrast-settings-dark
+        title: 'Cross-Colour UI (Light UI)'
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: ssopt-theme-contrast-dark
+        title: Enable Contrast
+        type: class-toggle
+        description: "When enabled, UI elements like the titlebar, ribbon, status bar, and side panes will use a contrasting colour scheme taken from the current mode's chroma and hue."
+        default: false
+    -
+        id: ssopt-tc-cross-d
+        title: Use Base Colours from Light Mode
+        type: class-toggle
+        description: "Imports the base background and text colours from your light mode settings to use for the contrasting UI elements. The base colours within your main editing workspace will not be affected."
+        default: false
+    -
+        id: ssopt-tc-accent-cross-d
+        title: Use Accent Colours from Light Mode
+        type: class-toggle
+        description: "Imports the accent colours from your light mode settings to use for the contrasting UI elements. The accent colours within your main editing workspace will not be affected."
+        default: false
+    -
+        id: info-override-template-dark
+        title: Override via Custom Template Snippet
+        type: heading
+        level: 3
+        collapsed: true
+    -
+            id: ssopt-custom-colour-template-dark
+            title: Enable User-Set Colours via Template for Dark Mode
+            description: "Enable this option to allow the use of a snippet, for specific preset variables which will customize colors for the theme's appearance in dark mode. This will override the variables set within Style Settings."
+            type: class-toggle
+    -
+            id: info-template-file-dark
+            title: Template Snippet File
+            description: "[Template File](https://willemstad.cc/Dev+Docs/Template+Snippet)"
+            type: info-text
+            markdown: true
+*/

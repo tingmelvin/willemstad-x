@@ -1,0 +1,37 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC009
+\ Plugins > Community
+\ General
+    \\ PComm009 | Full Calendar
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Full Calendar]
+\\ (NOMEN | PComm009)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> PC009-1 | remove half-hour border grid
+    ──────────────────────────────────────────────────────────────────────────── */
+body:where(.PComm009-no-halfhour-grid) .workspace-leaf-content[data-type="full-calendar-view"] .fc .fc-timegrid-slot-minor {
+  border-top-style: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>>> PC009-2 | fit it nicely in Sidepanes
+──────────────────────────────────────────────────────────────────────────────── */
+.mod-left-split .workspace-leaf-content[data-type="full-calendar-view"] .view-content, .mod-right-split .workspace-leaf-content[data-type="full-calendar-view"] .view-content {
+  padding: var(--header-margin); /* // to the rest of the sidepanes stuff from DB */
+}
+
+.mod-left-split .workspace-leaf-content[data-type="full-calendar-view"] .view-content .fc, .mod-right-split .workspace-leaf-content[data-type="full-calendar-view"] .view-content .fc {
+  /* padding: 0; */
+}
+
+.mod-left-split .workspace-leaf-content[data-type="full-calendar-view"] .view-content .fc .fc-toolbar.fc-header-toolbar, .mod-right-split .workspace-leaf-content[data-type="full-calendar-view"] .view-content .fc .fc-toolbar.fc-header-toolbar {
+  display: grid;
+  margin: 0.5em auto; /* makes sure it's centered */
+  gap: var(--size-4-1);
+  justify-items: center;
+}
+
+/* Full Calendar */
+

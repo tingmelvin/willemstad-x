@@ -1,0 +1,100 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> MA02
+\ Modals \ General \ Community Modal Specific Fixes
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --spacing-comm-modal: var(--padding-modal-side);
+  --grid-columns-container-comm-modal: 5;
+}
+
+.mod-community-modal .modal-sidebar {
+  padding: 0;
+}
+
+.mod-community-modal .community-modal-controls {
+  /* settings */
+
+  /* for buttons on sorting stuff at the top */
+}
+
+.mod-community-modal .community-modal-controls {
+  --button-padding-comm-modal: 6px;
+}
+
+.mod-community-modal .community-modal-controls {
+  padding-top: var(--spacing-comm-modal);
+}
+
+.mod-community-modal .community-modal-controls .setting-item {
+  /* fixes for the filter/search bar */
+}
+
+.mod-community-modal .community-modal-controls .setting-item {
+  padding: 0 var(--spacing-comm-modal) var(--spacing-comm-modal);
+}
+
+.mod-community-modal .community-modal-controls .setting-item:first-child {
+  margin-bottom: 0;
+  padding-left: var(--spacing-comm-modal);
+  padding-right: var(--spacing-comm-modal);
+}
+
+.mod-community-modal .community-modal-controls .setting-item:first-child .setting-item-info {
+  display: none;
+}
+
+.mod-community-modal .community-modal-controls .setting-item-control {
+  gap: var(--spacing-comm-modal);
+}
+
+.mod-community-modal .community-modal-controls .setting-item-info .setting-item-name {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+.mod-community-modal .community-modal-controls button.clickable-icon {
+  padding: var(--button-padding-comm-modal);
+  order: -1;
+}
+
+body:not(.native-scrollbars) .modal-sidebar .setting-item:first-child {
+  max-width: calc(100% - var(--size-scrollbar-non-native) + var(--border-scrollbar-non-native));
+}
+
+/* CLOSE BUTTON */
+body:not(.native-scrollbars) :where(.mod-community-plugin, .mod-community-theme) .modal-close-button {
+  top: var(--spacing-comm-modal);
+  right: var(--spacing-comm-modal);
+}
+
+/* back button, close button, and nav bar FIX */
+.community-modal-details .modal-setting-nav-bar {
+  padding: var(--spacing-comm-modal);
+  border-bottom: 0; /* 1px solid var(--background-modifier-border) */
+
+  /* move it away since the border-box issues */
+
+  /* use community-modal-info instead */
+}
+
+.community-modal-details .modal-setting-nav-bar .clickable-icon {
+  /* back button */
+
+ /* BACK BUTTON */
+  padding: var(--size-2-1);
+  padding-left: var(--size-4-3); /* elongate it */
+  padding-right: var(--size-4-3); /* elongate it */
+}
+
+.community-modal-details .modal-setting-nav-bar .clickable-icon > .svg-icon {
+  --icon-size: calc(24px - calc(2 * var(--size-2-1)));
+
+  /* follows the close button */
+}
+
+.community-modal-info {
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+/* Community Modals-Wide Fixes */
+

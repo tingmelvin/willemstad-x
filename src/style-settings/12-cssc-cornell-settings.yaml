@@ -1,0 +1,81 @@
+/*
+@settings
+name: Cornell Notes
+id: cssc-cornell-settings
+settings:
+    -
+        id: cssc-cornell
+        title: "Cornell Notes CSSClass"
+        description: "Transform your notes into the classic Cornell Note-taking format with a two-column layout: a narrow left column for keywords and cues, and a wider right column for detailed content. To use Cornell Notes CSSClass, type `cssclasses: cornell` in the document's YAML."
+        type: heading
+        level: 3
+        collapsed: false
+    -
+        id: documentation-cssclass-cornell
+        title: Documentation for Cornell Notes CSSClass
+        type: info-text
+        description: "[Example](https://willemstad.cc/Features/Global+CSSClass/Cornell+Notes+Example) [Docs](https://willemstad.cc/Features/Global+CSSClass/Cornell+Notes)"
+        markdown: true
+    -
+        id: cssc-cornell-aside-min
+        title: "Minimum Aside Width"
+        type: variable-number-slider
+        description: "Sets the minimum pixel width for the aside panel. The aside will not shrink below this size."
+        default: 125
+        min: 50
+        max: 300
+        step: 1
+        format: 'px'
+    -
+        id: cssc-cornell-aside-max
+        title: "Preferred Aside Width"
+        type: variable-number-slider
+        description: "Use this setting to change the preferred percentage width of the left aside panel."
+        default: 30
+        min: 10
+        max: 50
+        step: 0.5
+        format: '%'
+    -
+        id: cssc-cornell-gap
+        title: "Gap Between Left and Right Content"
+        type: variable-text
+        description: "Use this setting to change the gap between the left and right content of the Cornell Notes CSSClass."
+        default: "var(--p-spacing)"
+    -
+        id: cssc-cornell-text-align
+        title: "Text Alignment"
+        type: variable-select
+        default: justify
+        options:
+            -
+                label: 'Justify'
+                value: justify
+            -
+                label: 'Left'
+                value: left
+            -
+                label: 'Right'
+                value: right
+            -
+                label: 'Centre'
+                value: center
+    -
+        id: cssc-cornell-text-align-last
+        title: "Text Alignment (Last Line)"
+        type: variable-select
+        default: right
+        options:
+            -
+                label: 'Justify'
+                value: justify
+            -
+                label: 'Left'
+                value: left
+            -
+                label: 'Right'
+                value: right
+            -
+                label: 'Centre'
+                value: center
+*/

@@ -1,0 +1,32 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EA02
+\ Editor > Document Titlebar
+\ Titlebar Buttons
+───────────────────────────────────────────────────────────────────────────────────
+
+        ──────────────────────────────────────────────────────────────────────── */
+body:not(.is-mobile, .is-tablet) .workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) {
+  gap: var(--header-margin);
+
+  /* follows header-icon-size */
+}
+
+body:not(.is-mobile, .is-tablet) .workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) .clickable-icon {
+  padding: var(--header-padding);
+}
+
+body:not(.is-mobile, .is-tablet) .workspace-leaf-content :where(.view-header-nav-buttons, .view-actions) .clickable-icon .svg-icon {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+}
+
+body:not(.is-mobile, .is-tablet) .workspace-leaf-content .view-header {
+  padding: var(--header-margin) calc(1.5 * var(--header-margin)); /* follow EV 01 */
+}
+
+.titlebar-button {
+  transition: background-color 50ms ease-in-out, color 50ms ease-in-out;
+}
+
+/* Titlebar Buttons */
+

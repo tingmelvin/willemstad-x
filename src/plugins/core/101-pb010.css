@@ -1,0 +1,42 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PB010
+\ Plugins > Core
+\ Properties View and Others
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* PB010-01 | Fix Wrap for View | Need to add SS */
+[data-type="file-properties"] .metadata-property-value > * {
+  /* IDK WHY DOESN'T IT WRAP */
+}
+
+/* PB010-02 | Fix Workspace */
+.workspace-leaf-content[data-type="all-properties"] .view-content {
+  padding: var(--nav-padding);
+}
+
+.workspace-leaf-content[data-type="properties"] .view-content {
+  padding: var(--nav-padding);
+}
+
+.workspace-leaf-content[data-type="file-properties"] .view-content {
+  padding: var(--nav-padding);
+}
+
+.workspace-leaf-content[data-type="footnotes"] .view-content {
+  padding: var(--nav-padding);
+}
+
+.workspace-leaf-content[data-type="outline"] .view-content {
+  padding: var(--nav-padding);
+}
+
+/* PB010-03 | Uniformity - it's moved too left for some reason */
+.markdown-source-view .metadata-container,
+.markdown-preview-view .metadata-container {
+  transform: unset;
+}
+
+/* Properties View and Others */
+
+/* (PComm) COMMUNITY PLUGINS */
+

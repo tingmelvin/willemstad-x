@@ -1,0 +1,152 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> CD00
+\ Colour \ Accent \ Set Selection
+──────────────────────────────────────────────────────────────────────────────── */
+.ssopt-sel-l-default-yellow,
+.ssopt-sel-l-default-yellow .theme-light,
+.ssopt-sel-l-default-yellow.theme-light {
+  --color-set-l-selection: oklch(80.92% 0.170357 75.4802deg);
+}
+
+.ssopt-sel-d-default-yellow,
+.ssopt-sel-d-default-yellow .theme-dark,
+.ssopt-sel-d-default-yellow.theme-dark {
+  --color-set-d-selection: oklch(80.92% 0.170357 75.4802deg);
+}
+
+.ssopt-sel-l-vibrant-blue,
+.ssopt-sel-l-vibrant-blue .theme-light,
+.ssopt-sel-l-vibrant-blue.theme-light {
+  --color-set-l-selection: #18dcff;
+}
+
+.ssopt-sel-d-vibrant-blue,
+.ssopt-sel-d-vibrant-blue .theme-dark,
+.ssopt-sel-d-vibrant-blue.theme-dark {
+  --color-set-d-selection: #18dcff;
+}
+
+.ssopt-sel-l-pastel-pink,
+.ssopt-sel-l-pastel-pink .theme-light,
+.ssopt-sel-l-pastel-pink.theme-light {
+  --color-set-l-selection: #ffc6ff;
+}
+
+.ssopt-sel-d-pastel-pink,
+.ssopt-sel-d-pastel-pink .theme-dark,
+.ssopt-sel-d-pastel-pink.theme-dark {
+  --color-set-d-selection: #ffc6ff;
+}
+
+.ssopt-sel-l-solarized-cyan,
+.ssopt-sel-l-solarized-cyan .theme-light,
+.ssopt-sel-l-solarized-cyan.theme-light {
+  --color-set-l-selection: oklch(64.4% 0.102 187.4deg);
+}
+
+.ssopt-sel-d-solarized-cyan,
+.ssopt-sel-d-solarized-cyan .theme-dark,
+.ssopt-sel-d-solarized-cyan.theme-dark {
+  --color-set-d-selection: oklch(64.4% 0.102 187.4deg);
+}
+
+.ssopt-sel-l-gruvbox-orange,
+.ssopt-sel-l-gruvbox-orange .theme-light,
+.ssopt-sel-l-gruvbox-orange.theme-light {
+  --color-set-l-selection: oklch(73.1% 0.182 51.7deg);
+}
+
+.ssopt-sel-d-gruvbox-orange,
+.ssopt-sel-d-gruvbox-orange .theme-dark,
+.ssopt-sel-d-gruvbox-orange.theme-dark {
+  --color-set-d-selection: oklch(73.1% 0.182 51.7deg);
+}
+
+.ssopt-sel-l-dracula-pink,
+.ssopt-sel-l-dracula-pink .theme-light,
+.ssopt-sel-l-dracula-pink.theme-light {
+  --color-set-l-selection: oklch(75.5% 0.183 346.8deg);
+}
+
+.ssopt-sel-d-dracula-pink,
+.ssopt-sel-d-dracula-pink .theme-dark,
+.ssopt-sel-d-dracula-pink.theme-dark {
+  --color-set-d-selection: oklch(75.5% 0.183 346.8deg);
+}
+
+.ssopt-sel-l-nord-aurora,
+.ssopt-sel-l-nord-aurora .theme-light,
+.ssopt-sel-l-nord-aurora.theme-light {
+  --color-set-l-selection: oklch(76.8% 0.075 131.1deg);
+}
+
+.ssopt-sel-d-nord-aurora,
+.ssopt-sel-d-nord-aurora .theme-dark,
+.ssopt-sel-d-nord-aurora.theme-dark {
+  --color-set-d-selection: oklch(76.8% 0.075 131.1deg);
+}
+
+.ssopt-sel-l-le-corbusier-sky,
+.ssopt-sel-l-le-corbusier-sky .theme-light,
+.ssopt-sel-l-le-corbusier-sky.theme-light {
+  --color-set-l-selection: oklch(84.1% 0.044 230.1deg);
+}
+
+.ssopt-sel-d-le-corbusier-sky,
+.ssopt-sel-d-le-corbusier-sky .theme-dark,
+.ssopt-sel-d-le-corbusier-sky.theme-dark {
+  --color-set-d-selection: oklch(84.1% 0.044 230.1deg);
+}
+
+.ssopt-sel-l-catppuccin-mauve,
+.ssopt-sel-l-catppuccin-mauve .theme-light,
+.ssopt-sel-l-catppuccin-mauve.theme-light {
+  --color-set-l-selection: oklch(78.7% 0.119 304.8deg);
+}
+
+.ssopt-sel-d-catppuccin-mauve,
+.ssopt-sel-d-catppuccin-mauve .theme-dark,
+.ssopt-sel-d-catppuccin-mauve.theme-dark {
+  --color-set-d-selection: oklch(78.7% 0.119 304.8deg);
+}
+
+.ssopt-sel-l-met-cross-deep-blue,
+.ssopt-sel-l-met-cross-deep-blue .theme-light,
+.ssopt-sel-l-met-cross-deep-blue.theme-light {
+  --color-set-l-selection: oklch(39.7% 0.073 222.27deg);
+}
+
+.ssopt-sel-d-met-cross-deep-blue,
+.ssopt-sel-d-met-cross-deep-blue .theme-dark,
+.ssopt-sel-d-met-cross-deep-blue.theme-dark {
+  --color-set-d-selection: oklch(39.7% 0.073 222.27deg);
+}
+
+.ssopt-sel-l-met-nizami-lime,
+.ssopt-sel-l-met-nizami-lime .theme-light,
+.ssopt-sel-l-met-nizami-lime.theme-light {
+  --color-set-l-selection: oklch(79.7% 0.14 78.9deg);
+}
+
+.ssopt-sel-d-met-nizami-lime,
+.ssopt-sel-d-met-nizami-lime .theme-dark,
+.ssopt-sel-d-met-nizami-lime.theme-dark {
+  --color-set-d-selection: oklch(79.7% 0.14 78.9deg);
+}
+
+.ssopt-sel-l-met-tiepolo-dusty-blue,
+.ssopt-sel-l-met-tiepolo-dusty-blue .theme-light,
+.ssopt-sel-l-met-tiepolo-dusty-blue.theme-light {
+  --color-set-l-selection: oklch(61.3% 0.071 220.9deg);
+}
+
+.ssopt-sel-d-met-tiepolo-dusty-blue,
+.ssopt-sel-d-met-tiepolo-dusty-blue .theme-dark,
+.ssopt-sel-d-met-tiepolo-dusty-blue.theme-dark {
+  --color-set-d-selection: oklch(61.3% 0.071 220.9deg);
+}
+
+/* set selection presets */
+
+/* RGB Phase Out - OKLCH Replace */
+

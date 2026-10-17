@@ -1,0 +1,63 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DB02
+\ Generally Side Pane Elements \ Spacing Control
+\ Search
+──────────────────────────────────────────────────────────────────────────────── */
+.search-result-container.mod-global-search {
+  padding: var(--header-margin);
+  padding-left: calc(var(--header-margin) + var(--header-padding));
+}
+
+.search-result-file-match {
+  padding: var(--header-padding);
+}
+
+.nav-header ~ .search-input-container {
+  width: calc(100% - (var(--header-margin) + var(--account-scrollbar-size)) - (var(--header-margin) + var(--header-padding)));
+  margin-left: calc(var(--header-margin) + var(--header-padding));
+  margin-right: calc(var(--header-margin) + var(--account-scrollbar-size));
+} /* search input container */
+
+/* buttons "Show more context */
+.search-result-hover-button {
+  right: 3px;
+  padding: 0;
+
+  /* 2 fits better than 3 when it is on one line */
+}
+
+.search-result-hover-button.mod-top {
+  top: 2px;
+}
+
+.search-result-hover-button.mod-bottom {
+  bottom: 2px;
+}
+
+.workspace-leaf-content[data-type="search"] .clickable-icon {
+  padding: var(--header-padding);
+}
+
+.workspace-leaf-content[data-type="search"] .clickable-icon .svg-icon {
+  --icon-size: var(--header-icon-size); /* parallel to the rest */
+}
+
+/* clear button */
+.search-input-clear-button {
+  width: calc(var(--tab-icon-size) + var(--tab-padding));
+}
+
+.search-input-clear-button::after {
+  --search-clear-button-size: var(--tab-icon-size);
+}
+
+.search-row {
+  margin: var(--header-margin) calc(1.5 * var(--header-margin)); /* follows workspace leaf-content view header and the uhh */
+}
+
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  box-shadow: 0 1px 0 3px var(--text-accent);
+}
+
+/* Search */
+

@@ -1,0 +1,145 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EH12
+\ Headers > Colours
+\ Old Willemstad Colours
+──────────────────────────────────────────────────────────────────────────────── */
+
+/*
+WILLEMSTAD LIGHT
+
+  --col-h1: hsl(155, 100%, 37%);
+  --col-h2: hsl(184, 74%, 20%);
+  --col-h3: hsl(238, 70%, 39%);
+  --col-h4: hsl(19, 100%, 57%);
+  --col-h5: hsl(324, 100%, 15%);
+  --col-h6: hsl(184, 74%, 20%);
+
+  --col-h1-bg: hsla(184, 74%, 20%, 0.08);
+  --col-h2-bg: hsla(155, 100%, 37%, 0.2);
+  --col-h3-bg: hsla(188, 100%, 39%, 0.25);
+  --col-h4-bg: hsla(41, 100%, 55%, 0.2);
+  --col-h5-bg: hsla(352, 100%, 85%, 0.2);
+  --col-h6-bg: transparent;
+
+
+---
+WILLEMSTAD DARK
+
+  --col-h1: hsl(187, 13%, 87%);
+  --col-h2: hsl(155, 100%, 37%);
+  --col-h3: hsl(188, 100%, 39%);
+  --col-h4: hsl(41, 100%, 55%);
+  --col-h5: hsl(352, 100%, 85%);
+  --col-h6: hsl(155, 100%, 37%);
+
+  --col-h1-bg: hsla(155, 100%, 37%, 0.73);
+  --col-h2-bg: hsla(184, 74%, 20%, 0.2);
+  --col-h3-bg: hsla(238, 70%, 39%, 0.25);
+  --col-h4-bg: hsla(19, 100%, 50%, 0.2);
+  --col-h5-bg: hsla(324, 100%, 15%, 0.2);
+  --col-h6-bg: transparent;
+
+---
+NORD LIGHT
+
+  --col-h1: hsl(193, 43%, 62%);
+  --col-h2: hsl(213, 32%, 32%);
+  --col-h3: hsl(213, 32%, 37%);
+  --col-h4: hsl(213, 32%, 42%);
+  --col-h5: hsl(213, 32%, 47%);
+  --col-h6: hsl(213, 32%, 52%);
+
+  --col-h1-bg: transparent;
+  --col-h2-bg: hsla(193, 43%, 67%, 0.4);
+  --col-h3-bg: hsla(179, 25%, 65%, 0.3);
+  --col-h4-bg: hsla(210, 34%, 63%, 0.2);
+  --col-h5-bg: hsla(213, 32%, 52%, 0.1);
+  --col-h6-bg: transparent;  
+
+---
+NORD DARK
+
+  --col-h1: hsl(193, 43%, 57%);
+  --col-h2: hsl(219, 28%, 88%);
+  --col-h3: hsl(218, 27%, 92%);
+  --col-h4: hsl(218, 27%, 94%);
+  --col-h5: hsl(217, 26%, 96%);
+  --col-h6: hsl(193, 43%, 67%);
+
+  --col-h1-bg: hsla(218, 27%, 94%, 0.8);
+  --col-h2-bg: hsla(193, 43%, 67%, 0.8);
+  --col-h3-bg: hsla(179, 25%, 65%, 0.8);
+  --col-h4-bg: hsla(210, 34%, 63%, 0.8);
+  --col-h5-bg: hsla(213, 32%, 52%, 0.8);
+  --col-h6-bg: transparent;
+
+*/
+body:is(.ssopt-headers-old-willemstad) {
+  /* old font settings was 600; now in new Willemstad is 500 */
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+}
+
+body:is(.ssopt-headers-old-willemstad):where(.theme-light.ssopt-headers-old-style-willemstad) {
+  --col-h1: hsl(155deg 100% 37%);
+  --col-h2: hsl(184deg 74% 20%);
+  --col-h3: hsl(238deg 70% 39%);
+  --col-h4: hsl(19deg 100% 57%);
+  --col-h5: hsl(324deg 100% 15%);
+  --col-h6: hsl(184deg 74% 20%);
+  --col-h1-bg: hsl(184deg 74% 20% / 8%);
+  --col-h2-bg: hsl(155deg 100% 37% / 20%);
+  --col-h3-bg: hsl(188deg 100% 39% / 25%);
+  --col-h4-bg: hsl(41deg 100% 55% / 20%);
+  --col-h5-bg: hsl(352deg 100% 85% / 20%);
+  --col-h6-bg: transparent;
+}
+
+body:is(.ssopt-headers-old-willemstad):where(.theme-dark.ssopt-headers-old-style-willemstad) {
+  --col-h1: hsl(187deg 13% 87%);
+  --col-h2: hsl(155deg 100% 37%);
+  --col-h3: hsl(188deg 100% 39%);
+  --col-h4: hsl(41deg 100% 55%);
+  --col-h5: hsl(352deg 100% 85%);
+  --col-h6: hsl(155deg 100% 37%);
+  --col-h1-bg: hsl(155deg 100% 37% / 73%);
+  --col-h2-bg: hsl(184deg 74% 20% / 20%);
+  --col-h3-bg: hsl(238deg 70% 39% / 25%);
+  --col-h4-bg: hsl(19deg 100% 50% / 20%);
+  --col-h5-bg: hsl(324deg 100% 15% / 20%);
+  --col-h6-bg: transparent;
+}
+
+body:is(.ssopt-headers-old-willemstad):where(.theme-light.ssopt-headers-old-style-nord) {
+  --col-h1: hsl(193deg 43% 62%);
+  --col-h2: hsl(213deg 32% 32%);
+  --col-h3: hsl(213deg 32% 37%);
+  --col-h4: hsl(213deg 32% 42%);
+  --col-h5: hsl(213deg 32% 47%);
+  --col-h6: hsl(213deg 32% 52%);
+  --col-h1-bg: transparent;
+  --col-h2-bg: hsl(193deg 43% 67% / 40%);
+  --col-h3-bg: hsl(179deg 25% 65% / 30%);
+  --col-h4-bg: hsl(210deg 34% 63% / 20%);
+  --col-h5-bg: hsl(213deg 32% 52% / 10%);
+  --col-h6-bg: transparent;
+}
+
+body:is(.ssopt-headers-old-willemstad):where(.theme-dark.ssopt-headers-old-style-nord) {
+  --col-h1: hsl(193deg 43% 57%);
+  --col-h2: hsl(219deg 28% 88%);
+  --col-h3: hsl(218deg 27% 92%);
+  --col-h4: hsl(218deg 27% 94%);
+  --col-h5: hsl(217deg 26% 96%);
+  --col-h6: hsl(193deg 43% 67%);
+  --col-h1-bg: hsl(218deg 27% 94% / 80%);
+  --col-h2-bg: hsl(193deg 43% 67% / 80%);
+  --col-h3-bg: hsl(179deg 25% 65% / 80%);
+  --col-h4-bg: hsl(210deg 34% 63% / 80%);
+  --col-h5-bg: hsl(213deg 32% 52% / 80%);
+  --col-h6-bg: transparent;
+}
+
+/* Headers Colours > Old Willemstad */
+

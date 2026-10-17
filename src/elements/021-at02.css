@@ -1,0 +1,25 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AT02
+\ Titlebar \ Options
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* AT02-1 | titlebar similar to macOS
+removes the three buttons */
+body:is(.ssopt-exclude-titlebar-buttons) {
+  /* empty space rightwards is removed for ALL options */
+}
+
+body:is(.ssopt-exclude-titlebar-buttons).is-hidden-frameless:is(.mod-windows, .mod-linux) .titlebar {
+  display: none;
+}
+
+body:is(.ssopt-exclude-titlebar-buttons):is(.theme-light, .theme-dark) {
+  --frame-right-space: 0;
+}
+
+/* Titlebar Options */
+
+/* COLOURS */
+
+/* --color-accent */
+

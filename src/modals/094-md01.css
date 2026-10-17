@@ -1,0 +1,132 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> MD01
+\ Modals \ Community Plugin Modal \ Modal-specific Fixes and Customisation
+──────────────────────────────────────────────────────────────────────────────── */
+.modal.mod-community-plugin {
+  /* for search results */
+
+  /* TOP BIT */
+
+  /* FLIPS ORDER OF TOP BIT SETTING CONTROLS BUTTONS */
+
+  /* color fixes */
+}
+
+.modal.mod-community-plugin .community-item {
+  /* background-color: var(--background-primary-alt); */
+  gap: var(--size-4-1); /* smaller gap */
+  border-width: 0;
+}
+
+.modal.mod-community-plugin .community-item:not(.is-selected):hover {
+  background-color: var(--interactive-hover);
+}
+
+.modal.mod-community-plugin .community-item:is(.is-selected):hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+.modal.mod-community-plugin .community-item.mod-active {
+  grid-column: 1/-1; /* full width */
+  order: -1; /* brings it in front */
+}
+
+.modal.mod-community-plugin .community-item.mod-active .community-plugin-title {
+  font-size: calc(2 * var(--font-text-size));
+}
+
+.modal.mod-community-plugin .community-item.mod-active .community-plugin-title::after {
+  /* content: ""; */
+
+ /* see file A */
+  font-weight: normal;
+  display: grid;
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: var(--size-4-1);
+
+  /* text-align: right; */
+}
+
+.modal.mod-community-plugin .community-item.mod-active:hover .community-plugin-title::after {
+  border-top: 1px solid var(--text-faint);
+}
+
+.modal.mod-community-plugin .community-modal-search-results {
+  padding: var(--padding-modal-side);
+  padding-right: calc(var(--padding-modal-side) - var(--border-scrollbar-non-native)); /* accounts for scrollbar */
+  gap: var(--padding-modal-side);
+}
+
+.modal.mod-community-plugin .search-input-container > input {
+  border: 0;
+}
+
+.modal.mod-community-plugin .community-modal-search-summary {
+  display: none; /* extraneous! */
+}
+
+.modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info {
+  order: 2;
+}
+
+.modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info .setting-item-name {
+  padding-left: 0;
+}
+
+.modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-control {
+  order: 1;
+  flex: 0 0 auto;
+}
+
+.modal.mod-community-plugin .community-item.is-selected .community-item-desc {
+  color: var(--text-on-accent);
+  opacity: 0.95;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin {
+  /* to make sure it goes the the right place with something open */
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(240px, 1.5fr) 2fr;
+  padding-right: var(--spacing-comm-modal);
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info {
+  order: 2;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-info .setting-item-name {
+  padding-left: 0;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item .setting-item-control {
+  order: 1;
+  flex: 1 0 auto;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .community-modal-controls .setting-item.mod-toggle {
+  justify-self: center;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls {
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle {
+  justify-self: end;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-info {
+  order: 1;
+}
+
+body:not(.is-phone, .ssopt-revert-mod-community) .modal.mod-community-plugin .modal-sidebar:has(+ .community-modal-details) .community-modal-controls .setting-item.mod-toggle .setting-item-control {
+  order: 2;
+}
+
+/* Fixes and Customisations */
+

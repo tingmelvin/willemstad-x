@@ -1,0 +1,69 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DB01
+\ Generally Side Pane Elements \ Spacing Control
+\ Nav
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  /* --nav-item-padding: var(--size-2-1) var(--size-2-2) var(--size-2-1) var(--header-padding); */
+
+  /* more spacing to the left than the right */
+  --nav-item-padding-left-no-icon: var(--size-4-3);
+  --nav-padding: 0 calc(var(--header-margin) - var(--account-scrollbar-border)) 0 var(--header-margin);
+  --nav-title-margin: 2px; /* original */
+}
+
+body:not(.is-mobile) .nav-files-container {
+  overflow: auto;
+} /* you will always h going to account for it */
+.nav-files-container {
+  padding: var(--nav-padding);
+}
+
+/* containers for nav buttons alignment */
+@container whole-body (style(--ssopt-nav-align: center)) {
+  .nav-header .nav-buttons-container {
+    justify-content: center;
+  }
+}
+
+@container whole-body (style(--ssopt-nav-align: right)) {
+  .nav-header .nav-buttons-container {
+    justify-content: flex-end;
+  }
+}
+
+@container whole-body (style(--ssopt-nav-align: stretch)) {
+  .nav-header .nav-buttons-container .nav-action-button {
+    flex-grow: 1;
+  }
+}
+
+/*
+.nav-folder.mod-root .nav-folder > .nav-folder-children {
+    margin-left: 11px; /* because I think I moved it rightwards by 1px for the box-shadow, so I have to account for it */
+
+/* } */
+.nav-file-title, .nav-folder-title {
+  margin-bottom: var(--nav-title-margin);
+}
+
+.nav-folder-title .nav-folder-title-content {
+  font-weight: var(--font-weight-nav-folder);
+
+  --font-weight-nav-folder: var(--font-semibold); /* another Style Settings? KIV */
+}
+
+body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border-focus); /* perfect! inset is a blessing */
+}
+
+/* Nav folder title sticky options */
+body.ssopt-sticky-nav-folder-title .nav-folder > .nav-folder-title {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--background-primary-alt); /* Crucial for covering content */
+}
+
+/* Nav */
+

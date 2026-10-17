@@ -1,0 +1,133 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PB001
+\ Plugins > Core
+\ Command Palette and Slash Commands
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* DISPLAY: GRID VERSION */
+
+/* PB001-00 | General Prompt Changes */
+body {
+  --prompt-padding: var(--size-2-3) ;
+}
+
+.prompt-results {
+  display: grid; /* to make the suggestion items work */
+  padding: var(--prompt-padding);
+
+  /* padding-right: calc(var(--prompt-padding) - var(--account-scrollbar-size)); */
+
+  /* can we make one where the scrollbars are just invisible? then I don't have to account for scrollbar size */
+}
+
+/* PB001-01 | Restyling Command Palette (Prompt) */
+
+/* removed .prompt from the .suggestion-item.mod-complex to ensure it applies to Slash Commands too */
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) {
+  /* QUICK SWITCHER STUFF */
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) {
+  display: flex;
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-content, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-content {
+  justify-self: start;
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > :not(.qsp-content), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > :not(.qsp-content) {
+  justify-self: end;
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux {
+  display: flex;
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux .suggestion-flair, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion):is([class*="qsp"]) > .qsp-aux .suggestion-flair {
+  margin-inline-start: var(--size-4-1);
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) {
+  display: grid;
+  column-gap: var(--size-4-2); /* should follow the bottom gap in sug-title */
+  grid-column: 1/-1;
+  grid-template-columns: minmax(0, 1fr) max-content;
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-content, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-content {
+  display: grid;
+  flex-grow: 1;
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-aux, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-aux {
+  gap: var(--size-4-1) var(--size-4-2); /* needs this for gaps between two in a vertical line */
+
+  /* grid-template-columns: repeat(2, max-content); */
+  grid-auto-flow: column;
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title {
+  display: inline-block;
+  align-items: center;
+  /*
+  column-gap: var(--size-4-2);
+
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  */ /* necessary else havoc is wreaked via Ctrl-O else grid is better */
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title span:not(.suggestion-prefix, .suggestion-highlight), :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title span:not(.suggestion-prefix, .suggestion-highlight) {
+  /* for the not-suggestion-prefix stuff */
+
+  /*
+  grid-column: 2;
+  grid-row: 1 / span 2; */
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title span.suggestion-prefix, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title span.suggestion-prefix {
+  padding: 2px 6px; /* follow the app.css for kbd */
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-accent);
+  background-color: var(--code-background);
+  border-radius: var(--radius-m);
+  margin-right: var(--size-4-1); /* instead of column-gap: var(--size-4-2);
+
+/*
+grid-row: 1;
+grid-column: 1; */
+
+ /* sticks to top left even when overflow wraps */
+}
+
+:where(.suggestion-container):not(.mod-property-key) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title span.suggestion-prefix::after, :where(.prompt-results) .suggestion-item.mod-complex:not(.webviewer-addressbar-suggestion) .suggestion-title span.suggestion-prefix::after {
+  content: none;
+}
+
+/* app.css overrides */
+.suggestion-item.mod-complex {
+  /* original flex */
+}
+
+.suggestion-item.mod-complex .suggestion-icon, .suggestion-item.mod-complex .suggestion-aux {
+  display: grid;
+}
+
+.suggestion-item.mod-complex .suggestion-hotkey {
+  white-space: nowrap; /* forces it not to wrap inside */
+}
+
+.suggestion-item.mod-complex .suggestion-hotkey:not(:last-child) {
+  margin-inline-start: 0; /* 10px taken over by the grid */
+}
+
+/*
+.suggestion-item {
+    padding: var(--size-2-2) var(--size-4-2);
+    padding-inline-start: var(--size-4-2);
+}
+*/
+
+/* Command Palette and Slash Commands (Prompt) */
+

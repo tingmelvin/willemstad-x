@@ -1,0 +1,87 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> ED04
+\ Editor > Document Display
+\ Focused Mode and Super Focused Mode
+\ v2
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --distant-opacity: 0.2;
+  --near-fade-factor: 0.15;
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-sidedock,
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .side-dock-ribbon,
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .workspace-leaf-content .view-header,
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .titlebar,
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .status-bar,
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .markdown-source-view.is-live-preview.show-properties .metadata-container.metadata-container {
+  display: none;
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: 0;
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container::after {
+  display: none;
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .sidebar-toggle-button.mod-right .clickable-icon {
+  display: none;
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-embed-block, .cm-gutterElement) {
+  opacity: var(--distant-opacity);
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement):is(:has(+ .cm-line.cm-active), .cm-active + .cm-line,
+:has(+ .cm-gutterElement.cm-active), .cm-active + .cm-gutterElement) {
+  --distance: 1;
+
+  opacity: max(1 - var(--distance) * var(--near-fade-factor), var(--distant-opacity));
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement):is(:has(+ .cm-line + .cm-line.cm-active), .cm-active + .cm-line + .cm-line,
+:has(+ .cm-gutterElement + .cm-gutterElement.cm-active), .cm-active + .cm-gutterElement + .cm-gutterElement) {
+  --distance: 2;
+
+  opacity: max(1 - var(--distance) * var(--near-fade-factor), var(--distant-opacity));
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement):is(:has(+ .cm-line + .cm-line + .cm-line.cm-active), .cm-active + .cm-line + .cm-line + .cm-line,
+:has(+ .cm-gutterElement + .cm-gutterElement + .cm-gutterElement.cm-active), .cm-active + .cm-gutterElement + .cm-gutterElement + .cm-gutterElement) {
+  --distance: 3;
+
+  opacity: max(1 - var(--distance) * var(--near-fade-factor), var(--distant-opacity));
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) .mod-active > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-gutterElement).cm-active {
+  opacity: 1;
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode) :not(.mod-active) > .workspace-leaf-content[data-type="markdown"] :where(.cm-line, .cm-embed-block, .cm-gutterElement) {
+  opacity: var(--distant-opacity);
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode).mod-macos .workspace .mod-root .workspace-tabs:first-of-type .workspace-tab-header-container {
+  padding-left: calc(var(--frame-left-space) + var(--ribbon-width));
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode).mod-macos:not(.is-fullscreen) .mod-active.workspace-tabs {
+  padding-top: var(--header-height);
+}
+
+body:is(.ssopt-focused-mode, .ssopt-super-focused-mode).mod-macos:not(.is-fullscreen) .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
+  padding-top: 0;
+}
+
+body.ssopt-super-focused-mode .workspace-tabs:not(.mod-active) {
+  display: none;
+}
+
+body.ssopt-super-focused-mode .workspace-tab-header-container {
+  display: none;
+}
+
+/* Focused Mode and Super Focused Mode */
+

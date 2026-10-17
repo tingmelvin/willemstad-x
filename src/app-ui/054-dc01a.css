@@ -1,0 +1,126 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DC01A
+\ First-Level Main Elements \ Options for Ribbons
+\ Floating Ribbons
+───────────────────────────────────────────────────────────────────────────────────
+The original Willemstad floating ribbon, now back!
+
+──────────────────────────────────────────────────────────────────────────────── */
+.theme-light, .theme-dark {
+  --width-norm-sd: var(--ribbon-width);
+  --height-norm-sd: 25%;
+  --height-hover-sd: 50%;
+  --opacity-sd: 100%;
+  --ribbon-float-color: var(--ribbon-background);
+}
+
+body:where(.ssopt-sd-float-ribbon) {
+  /* END */
+
+  /* OVERRIDES DA04-1 - ribbon shift once */
+
+  /* override DV01 accounting for default ribbon */
+}
+
+body:where(.ssopt-sd-float-ribbon):is(.ssopt-titlebar-use-accent) {
+  /* force floating ribbons to take the original colours */
+}
+
+body:where(.ssopt-sd-float-ribbon):is(.ssopt-titlebar-use-accent):where(.mod-windows, .mod-linux) .workspace-ribbon.mod-left::before {
+  background-color: var(--ribbon-float-color);
+  transition: background-color 250ms 95ms ease-in-out;
+}
+
+body:where(.ssopt-sd-float-ribbon):is(.ssopt-titlebar-use-accent):where(.mod-windows, .mod-linux) .workspace-ribbon.mod-left.is-collapsed::before {
+  --ribbon-background-collapsed: var(--background-primary); /* follows app.css */
+
+  background-color: var(--ribbon-background-collapsed);
+}
+
+body:where(.ssopt-sd-float-ribbon) .workspace-ribbon {
+  position: absolute;
+  top: calc((100% - var(--height-norm-sd)) / 2);
+  width: var(--width-norm-sd);
+  height: var(--height-norm-sd);
+  transition: var(--medium-transition);
+  opacity: 1;
+
+  /* border: 1px solid var(--divider-color); */
+
+  /* borders are bad for health */
+  border-top-right-radius: var(--clickable-icon-radius);
+  border-bottom-right-radius: var(--clickable-icon-radius); /* parallel to icons */
+
+  /* DISABLE DRAGGABLE RIBBON */
+  -webkit-app-region: no-drag !important; /* I MUST important this before people do stuff to it. */
+
+  /* Draggable Ribbon + Ribbon Float and Increasing Ribbon Sizes? = Bad */
+
+  /* Things will be janky */
+
+  /* DC01-1 | COLOURS UNIFICATION FOR RIBBON */
+
+  /* OVERRIDES DA04-1 */
+
+  /* OVERRIDES DA02-1 */
+}
+
+body:where(.ssopt-sd-float-ribbon) .workspace-ribbon {
+  background-color: var(--ribbon-float-color);
+}
+
+body:where(.ssopt-sd-float-ribbon) .workspace-ribbon.mod-left::before {
+  background-color: var(--ribbon-float-color);
+}
+
+body:where(.ssopt-sd-float-ribbon) .workspace-ribbon.mod-left {
+  box-shadow: 0 0 0 1px var(--divider-color);
+  margin-top: 0; /* unsets app.css 2007 */
+}
+
+body:where(.ssopt-sd-float-ribbon) .workspace-ribbon .sidebar-toggle-button {
+  position: relative;
+  width: unset;
+  margin: 0;
+}
+
+body:where(.ssopt-sd-float-ribbon) .workspace-ribbon:hover {
+  top: calc((100% - var(--height-hover-sd)) / 2);
+  height: var(--height-hover-sd);
+}
+
+body:where(.ssopt-sd-float-ribbon):is(.mod-windows, .mod-linux) .workspace-ribbon {
+  /* OVERRIDES DA04-1 */
+}
+
+body:where(.ssopt-sd-float-ribbon):is(.mod-windows, .mod-linux) .workspace-ribbon.mod-left {
+  box-shadow: 0 0 0 1px var(--divider-color);
+}
+
+body:where(.ssopt-sd-float-ribbon):is(.mod-windows, .mod-linux) .mod-root, body:where(.ssopt-sd-float-ribbon):is(.mod-windows, .mod-linux) .mod-left-split {
+  left: 0;
+}
+
+body:where(.ssopt-sd-float-ribbon) .status-bar {
+  left: 0;
+}
+
+body:where(.ssopt-sd-float-ribbon):where(.ssopt-sd-float-ribbon-blur) {
+  --blur-floating-ribbon: var(--blur-4);
+
+  /* TRANSITION ITEMS - FOR IT TO DISAPPEAR AND POP OUT */
+}
+body:where(.ssopt-sd-float-ribbon):where(.ssopt-sd-float-ribbon-blur) .workspace-ribbon.workspace-ribbon { /* need the specificity */ }
+
+body:where(.ssopt-sd-float-ribbon):where(.ssopt-sd-float-ribbon-blur) .workspace-ribbon.workspace-ribbon {
+  backdrop-filter: var(--blur-4);
+  background-color: unset;
+}
+
+body:where(.ssopt-sd-float-ribbon):where(.ssopt-sd-float-ribbon-blur) .workspace-ribbon.workspace-ribbon.mod-left::before {
+  backdrop-filter: var(--blur-4);
+  background-color: unset;
+}
+
+/* Willemstad's original floating ribbon */
+

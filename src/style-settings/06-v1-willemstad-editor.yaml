@@ -1,0 +1,1863 @@
+/* @settings
+name: "Editor" 
+id: V1-Willemstad-Editor
+settings:
+    -
+        id: info-editor-typography-split
+        title: Note on Typography
+        type: info-text
+        description: "Global typography settings (like global font sizes, underlines, bold, italic, and strikethrough) are controlled in the **Global Typography** section. Settings specific to the editor (like Header and Canvas font sizes) can be found within this Editor section."
+        markdown: true
+    -
+        id: info-editor-block-widths
+        title: Note on Block Widths
+        type: info-text
+        description: "Block Widths are an optional feature and must be enabled to take effect. This feature is being progressively implemented and is currently available for **Bases**, **Tables**, **iFrames**, and **PDF Embeds**."
+        markdown: true
+    -
+        id: global-block-width-mode
+        title: "Block Widths — Master Control"
+        type: variable-select
+        description: "Use this to master-control for all block width features."
+        allowEmpty: false
+        default: 'auto'
+        options:
+            -
+                label: "Manual (Use individual toggles)"
+                value: 'auto'
+            -
+                label: "Force All On"
+                value: '1'
+            -
+                label: "Force All Off"
+                value: '0'
+    -
+        id: document-titlebar
+        title: Document Titlebar
+        type: heading
+        description: 'Tweak the document titlebar.'
+        level: 2
+        collapsed: false
+    -
+            id: info-tab-stacked-text
+            title: Note on Stacked Tabs Text Direction and Alignment
+            type: class-toggle
+            document: app.css
+            description: "In order to keep the stacked tabs in their original position whilst changing their text direction, use the text alignment option and set it to the opposite of the original option. (Left > Right; Right > Left)"
+    -
+        id: codeblock-settings
+        title: Codeblocks
+        type: heading
+        description: Options to change codeblock display.
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-codeblock-language
+            title: Codeblock Language Display
+            type: class-select
+            document: ED00-Elements
+            description: "Use the dropdown to choose a codeblock language display type."
+            default: default
+            options:
+                -
+                    label: Default (UI font, flushed at bottom-right of codeblock)
+                    value: default
+                -
+                    label: 'Old-Style Willemstad & Shimmering Focus (Monospaced font, top-right of codeblock)'
+                    value: ssopt-codeblock-lang-old
+                -
+                    label: None
+                    value: ssopt-codeblock-lang-none
+    -
+        id: active-line-highlight
+        title: Active Line Highlight
+        type: heading
+        description: Options to change the active line highlighting in the editing modes.
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-disable-alh
+            title: Disable Active Line Highlight
+            type: class-toggle
+            document: ED03-ActiveLineHighlight
+            description: "Willemstad has active line highlights by default across the specific line you're editing on. When toggled, this disables the highlighting."
+            default: false
+            addCommand: true
+    -
+            id: col-base-bg-alh
+            title: Colour for Active Line Highlight
+            type: variable-text
+            description: "Sets the base colour for the active line highlight. The theme will apply transparency to this colour. Accepts any valid CSS colour format (e.g., hex, rgb, oklch, var(--color-accent)). Please note that the input field is meant to be colour-responsive and mimics how the Active Line Highlight looks in the editor when in focus."
+            default: 'var(--color-base-50)'
+    -
+            id: col-base-alpha-alh
+            title: Opacity of Active Line Highlight
+            type: variable-number-slider
+            description: "Controls the opacity of the active line highlight. Lower values are more transparent. The default is 0.25; you are recommended to set values below 0.5."
+            format: ""
+            min: 0
+            max: 1
+            step: 0.01
+            default: 0.25
+    -
+        id: variable-line-lengths
+        title: "Editor Pane Manipulation (Readable Line Lengths and Pane Margins)"
+        type: heading
+        description: "Options to change the line lengths and pane margin/padding of the editor."
+        level: 2
+        collapsed: false
+    -
+            id: width-vll
+            title: Custom Maximum Line Length for Readable Line Lengths
+            type: variable-text
+            document: ED01-VarLineLength
+            notes: (Requires 'Override Line Lengths' enabled)
+            description: "Set the maximum line length. Accepts all valid CSS units. Requires Obsidian's own 'Readable Line Lengths' option toggled on for this to work."
+            default: 700px
+    -
+            id: file-margins
+            title: Pane Margins in Editing Workspace
+            type: variable-number-slider
+            description: "Controls the padding on all sides within the editor pane, creating more or less 'breathing room' around your content. Please note that this option might affect components such as header numbering and header collapse indicators. The default is 32px."
+            format: "px"
+            min: 20
+            max: 60
+            step: 1
+            default: 32
+    -
+        id: headers
+        title: Headers
+        type: heading
+        description: Options to change the headers.
+        level: 2
+        collapsed: false
+    -
+        id: ssopt-add-header-number
+        title: Add Header Number (H1-H6)
+        type: class-toggle
+        document: EH91-HAdditions
+        description: "When enabled, this will add the header number to the left side just outside of the header to enable easier identification."
+        default: false
+    -
+        id: coloured-headers
+        title: Coloured Headers
+        type: heading
+        description: Options for coloured headers.
+        level: 3
+        collapsed: true
+    -
+            id: info-coloured-headers
+            title: Note on Coloured Headers
+            type: class-toggle
+            description: "By default, Willemstad uses the accent colours (--color-accent, --color-accent-1 and --color-accent-2) to colour the background of the headers. You can customise these by enabling 'Custom Header Colours (Background Colours)'. For legacy users of Willemstad, the previous header styles are available under 'Old Willemstad Header Colours'. If you prefer no background colours but coloured header text, please toggle the 'No Background Coloured Headers' option."  
+            default: false    
+    -
+            id: info-coloured-headers-text
+            title: Note on Header Text Colours
+            type: class-toggle
+            description: "If the Background Coloured Headers are enabled, Willemstad sets the header text colours mathematically in accordance to the colours chosen for your headers."  
+            default: false    
+    -
+            id: ssopt-no-coloured-headers
+            title: No Background Coloured Headers
+            type: class-toggle
+            document: EH01-HSetBase
+            description: "Headers with background colours are enabled by default in Willemstad. When enabled, this will remove the background colouring for headers, and also optionally allows you to set headers with coloured text."
+            default: false
+    -
+            id: ssopt-headers-custom-colours
+            title: Custom Header Colours (Background Colours)
+            type: class-toggle
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled)
+            description: "When enabled, this will allow you to set custom header colours."
+            default: false
+    -
+            id: ssopt-headers-old-willemstad
+            title: Old Willemstad Header Colours
+            type: class-toggle
+            document: EH12-HCol-OldStad
+            notes: (Requires 'No Background Coloured Headers' disabled)
+            description: "When enabled, this will use the old Willemstad header colours. There are two options for the old header colours: the original Willemstad colours, and the old Willemstad-style Nord colours."
+            default: false
+    -
+            id: ssopt-headers-old-style-col-palette
+            title: Old Header Colour Palettes
+            type: class-select
+            document: EH12-HCol-OldStad
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Old Willemstad Header Colours' enabled)
+            description: "Use the dropdown to choose either the original Willemstad colours, or the old Willemstad-style Nord colours."
+            default: ssopt-headers-old-style-willemstad
+            options:
+                -
+                    label: Original Willemstad
+                    value: ssopt-headers-old-style-willemstad
+                -
+                    label: Previous Willemstad-style Nord
+                    value: ssopt-headers-old-style-nord
+    -
+            id: col-accent-custom-headers-0
+            title: Custom Header Colour 0
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            description: "This header colour is applied to H1 (and H4 headers, if 'Complete Header Colour Control' is not enabled)."
+            opacity: false
+            format: hsl
+            default-light: hsl(211, 100%, 19%)
+            default-dark: hsl(211, 100%, 19%)
+    -
+            id: col-accent-custom-headers-1
+            title: Custom Header Colour 1
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            description: "This header colour is applied to H2 (and H5 headers, if 'Complete Header Colour Control' is not enabled)."
+            opacity: false
+            format: hsl
+            default-light: hsl(181, 100%, 32%)
+            default-dark: hsl(181, 100%, 32%)
+    -
+            id: col-accent-custom-headers-2
+            title: Custom Header Colour 2
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            description: "This header colour is applied to H3 (and H6 headers, if 'Complete Header Colour Control' is not enabled)."
+            opacity: false
+            format: hsl
+            default-light: hsl(161, 100%, 41%)
+            default-dark: hsl(161, 100%, 41%)
+    -
+            id: ssopt-headers-custom-colours-max
+            title: Complete Header Colour Control
+            type: class-toggle
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' enabled)
+            description: "When enabled, this will allow you to fully customise all header colours."
+            default: false
+    -
+            id: col-accent-custom-headers-0B
+            title: Custom Header Colour H4
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This header colour is applied to H4 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(211, 100%, 19%)
+            default-dark: hsl(211, 100%, 19%)
+    -
+            id: col-accent-custom-headers-1B
+            title: Custom Header Colour H5
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This header colour is applied to H5 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(181, 100%, 32%)
+            default-dark: hsl(181, 100%, 32%)
+    -
+            id: col-accent-custom-headers-2B
+            title: Custom Header Colour H6
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This header colour is applied to H6 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(161, 100%, 41%)
+            default-dark: hsl(161, 100%, 41%)
+    -
+            id: col-custom-headers-H1
+            title: Custom Header Text Colour H1
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This text colour is applied to H1 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 100%)
+            default-dark: hsl(0, 0%, 100%)
+    -
+            id: col-custom-headers-H2
+            title: Custom Header Text Colour H2
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This text colour is applied to H2 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 100%)
+            default-dark: hsl(0, 0%, 100%)
+    -
+            id: col-custom-headers-H3
+            title: Custom Header Text Colour H3
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This text colour is applied to H3 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 100%)
+            default-dark: hsl(0, 0%, 100%)
+    -
+            id: col-custom-headers-H4
+            title: Custom Header Text Colour H4
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This text colour is applied to H4 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 100%)
+            default-dark: hsl(0, 0%, 100%)
+    -
+            id: col-custom-headers-H5
+            title: Custom Header Text Colour H5
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This text colour is applied to H5 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 100%)
+            default-dark: hsl(0, 0%, 100%)
+    -
+            id: col-custom-headers-H6
+            title: Custom Header Text Colour H6
+            type: variable-themed-color
+            document: EH13-HCol-Custom
+            notes: (Requires 'No Background Coloured Headers' disabled; Requires 'Custom Header Colours' and 'Complete Header Colour Control' enabled)
+            description: 'This text colour is applied to H6 headers.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 100%)
+            default-dark: hsl(0, 0%, 100%)
+    -
+        id: header-text-colours
+        title: Header Text Colours
+        type: heading
+        description: "These settings allow you to set the color for each header level from the set accent and rainbow palettes, should you prefer coloured text. These settings will automatically show you the options for the current light/dark theme mode. You are able to set different header text colours for both modes without them affecting each other."
+        level: 3
+        collapsed: false
+    -
+            id: header-text-colours-light
+            title: Light Mode
+            type: heading
+            level: 4
+            collapsed: false
+    -
+                id: h1-color-light
+                title: "H1 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h2-color-light
+                title: "H2 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h3-color-light
+                title: "H3 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h4-color-light
+                title: "H4 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h5-color-light
+                title: "H5 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h6-color-light
+                title: "H6 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+            id: header-text-colours-dark
+            title: Dark Mode
+            type: heading
+            level: 4
+            collapsed: false
+    -
+                id: h1-color-dark
+                title: "H1 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h2-color-dark
+                title: "H2 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h3-color-dark
+                title: "H3 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h4-color-dark
+                title: "H4 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h5-color-dark
+                title: "H5 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+                id: h6-color-dark
+                title: "H6 Color"
+                type: variable-select
+                allowEmpty: false
+                default: 'inherit'
+                options:
+                    -
+                        label: "Default (Inherit)"
+                        value: 'inherit'
+                    -
+                        label: "  Accent Colours  "
+                        value: 'no-stuff-break-accent'
+                    -
+                        label: "Accent"
+                        value: 'var(--color-accent)'
+                    -
+                        label: "Accent 1"
+                        value: 'var(--color-accent-1)'
+                    -
+                        label: "Accent 2"
+                        value: 'var(--color-accent-2)'
+                    -
+                        label: "  Rainbow Colours  "
+                        value: 'no-stuff-break-rainbow'
+                    -
+                        label: "Red"
+                        value: 'var(--color-red)'
+                    -
+                        label: "Orange"
+                        value: 'var(--color-orange)'
+                    -
+                        label: "Yellow"
+                        value: 'var(--color-yellow)'
+                    -
+                        label: "Green"
+                        value: 'var(--color-green)'
+                    -
+                        label: "Cyan"
+                        value: 'var(--color-cyan)'
+                    -
+                        label: "Blue"
+                        value: 'var(--color-blue)'
+                    -
+                        label: "Purple"
+                        value: 'var(--color-purple)'
+                    -
+                        label: "Pink"
+                        value: 'var(--color-pink)'
+    -
+        id: header-typography-settings
+        title: Header Typography
+        type: heading
+        description: "Provides detailed control over the font size, weight, and style for each header level."
+        level: 3
+        collapsed: true
+    -
+        id: h1-settings
+        title: H1 Settings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: h1-size
+        title: Font Size
+        type: variable-number-slider
+        format: "em"
+        min: 1
+        max: 4
+        step: 0.05
+        default: 1.8
+    -
+        id: h1-weight
+        title: Font Weight
+        type: variable-number-slider
+        min: 100
+        max: 900
+        step: 100
+        default: 600
+    -
+        id: h1-style
+        title: Font Style
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Italic"
+                value: 'italic'
+            -
+                label: "Oblique"
+                value: 'oblique'
+    -
+        id: h1-variant
+        title: Font Variant
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Small Caps"
+                value: 'small-caps'
+            -
+                label: "All Small Caps"
+                value: 'all-small-caps'
+    -
+        id: h2-settings
+        title: H2 Settings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: h2-size
+        title: Font Size
+        type: variable-number-slider
+        format: "em"
+        min: 1
+        max: 3.5
+        step: 0.05
+        default: 1.6
+    -
+        id: h2-weight
+        title: Font Weight
+        type: variable-number-slider
+        min: 100
+        max: 900
+        step: 100
+        default: 600
+    -
+        id: h2-style
+        title: Font Style
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Italic"
+                value: 'italic'
+            -
+                label: "Oblique"
+                value: 'oblique'
+    -
+        id: h2-variant
+        title: Font Variant
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Small Caps"
+                value: 'small-caps'
+            -
+                label: "All Small Caps"
+                value: 'all-small-caps'
+    -
+        id: h3-settings
+        title: H3 Settings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: h3-size
+        title: Font Size
+        type: variable-number-slider
+        format: "em"
+        min: 1
+        max: 3
+        step: 0.05
+        default: 1.45
+    -
+        id: h3-weight
+        title: Font Weight
+        type: variable-number-slider
+        min: 100
+        max: 900
+        step: 100
+        default: 600
+    -
+        id: h3-style
+        title: Font Style
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Italic"
+                value: 'italic'
+            -
+                label: "Oblique"
+                value: 'oblique'
+    -
+        id: h3-variant
+        title: Font Variant
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Small Caps"
+                value: 'small-caps'
+            -
+                label: "All Small Caps"
+                value: 'all-small-caps'
+    -
+        id: h4-settings
+        title: H4 Settings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: h4-size
+        title: Font Size
+        type: variable-number-slider
+        format: "em"
+        min: 1
+        max: 2.5
+        step: 0.05
+        default: 1.3
+    -
+        id: h4-weight
+        title: Font Weight
+        type: variable-number-slider
+        min: 100
+        max: 900
+        step: 100
+        default: 500
+    -
+        id: h4-style
+        title: Font Style
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Italic"
+                value: 'italic'
+            -
+                label: "Oblique"
+                value: 'oblique'
+    -
+        id: h4-variant
+        title: Font Variant
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Small Caps"
+                value: 'small-caps'
+            -
+                label: "All Small Caps"
+                value: 'all-small-caps'
+    -
+        id: h5-settings
+        title: H5 Settings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: h5-size
+        title: Font Size
+        type: variable-number-slider
+        format: "em"
+        min: 1
+        max: 2
+        step: 0.05
+        default: 1.15
+    -
+        id: h5-weight
+        title: Font Weight
+        type: variable-number-slider
+        min: 100
+        max: 900
+        step: 100
+        default: 500
+    -
+        id: h5-style
+        title: Font Style
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Italic"
+                value: 'italic'
+            -
+                label: "Oblique"
+                value: 'oblique'
+    -
+        id: h5-variant
+        title: Font Variant
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Small Caps"
+                value: 'small-caps'
+            -
+                label: "All Small Caps"
+                value: 'all-small-caps'
+    -
+        id: h6-settings
+        title: H6 Settings
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: h6-size
+        title: Font Size
+        type: variable-number-slider
+        format: "em"
+        min: 1
+        max: 1.5
+        step: 0.05
+        default: 1.05
+    -
+        id: h6-weight
+        title: Font Weight
+        type: variable-number-slider
+        min: 100
+        max: 900
+        step: 100
+        default: 500
+    -
+        id: h6-style
+        title: Font Style
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Italic"
+                value: 'italic'
+            -
+                label: "Oblique"
+                value: 'oblique'
+    -
+        id: h6-variant
+        title: Font Variant
+        type: variable-select
+        allowEmpty: false
+        default: 'normal'
+        options:
+            -
+                label: "Normal"
+                value: 'normal'
+            -
+                label: "Small Caps"
+                value: 'small-caps'
+            -
+                label: "All Small Caps"
+                value: 'all-small-caps'
+    -
+        id: header-hexes
+        title: Header Hexes
+        type: heading
+        description: Options to change the header hexes (# at the start of a heading).
+        level: 3
+        collapsed: true
+    -
+            id: ssopt-smaller-header-hexes
+            title: Make Header Hexes Smaller
+            type: class-toggle
+            document: EH91-HAdditions
+            description: "Headers Hexes (#) in Obsidian take the same font size as the header text. This option makes them smaller."
+            default: false
+    -
+            id: header-hex-size
+            title: Size of Header Hexes
+            type: variable-number-slider
+            document: EH91-HAdditions
+            note: (Requires 'Make Header Hexes Smaller' enabled)
+            description: "Change the size of the header hexes, relative to the header text's own font size. The default is 0.7em."
+            format: 'em'
+            default: 0.7
+            min: 0.1
+            max: 0.9
+            step: 0.05
+    -
+            id: col-header-hex
+            title: Colour of Header Hexes
+            type: variable-select
+            document: EH91-HAdditions
+            description: "Use the dropdown to choose the colour of the header hexes. While text-faint is the default in Obsidian, this is harder to discern with coloured headers. Willemstad matches the header hexes colours to that of the header text."
+            allowEmpty: false
+            default: var(--col-header-hex-special)
+            options:
+                -
+                    label: "Match Colour of Header Hexes to Header Text"
+                    value: var(--col-header-hex-special)
+                -
+                    label: text-on-accent
+                    value: var(--text-on-accent)
+                -
+                    label: text-faint
+                    value: var(--text-faint)
+    -
+        id: empty-state-screen
+        title: Empty State Screen
+        type: heading
+        description: "Options to customise the empty state screen (the screen that is displayed when no note is opened)."
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-empty-state-original
+            title: Revert to Default Empty State Screen
+            type: class-toggle
+            document: ES01-EmptyState
+            description: "When enabled, this reverts the empty state screen to the Obsidian default."
+            default: false
+    -
+        id: typography-highlight
+        title: Highlights
+        description: Options to change highlighting colours.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-highlight-no-box-shadow
+            title: Remove Highlight Box Shadow
+            type: class-toggle
+            document: ET11-Highlights
+            description: 'By default, Willemstad extends highlights by adding box shadows for better visual appearance. This, however, interferes with highlighting plugins such as Highlightr. This option allows for the removal of the highlighting box shadows.'
+            default: false
+    -
+            id: ssopt-typ-highlight-col-original
+            title: 'Use Original Highlight Colours'
+            type: class-toggle
+            document: ET11-Highlights
+            description: When enabled, this will disable the custom Willemstad highlight colours and use the original colours used for highlighting.
+            default: false
+    -
+            id: col-highlight-text
+            title: 'Highlighted Text Colour'
+            type: variable-themed-color
+            document: ET11-Highlights
+            description: 'Colour of the text highlighted — this defaults to black.'
+            opacity: false
+            format: hsl
+            default-light: hsl(0, 0%, 0%)
+            default-dark: hsl(0, 0%, 0%)
+    -
+            id: col-highlight-0
+            title: 'Highlight Colour — default'
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (highlight markdown)
+            description: 'Default highlight colour (==)'
+            opacity: false
+            format: hsl
+            default-light: hsl(46, 100%, 50%)
+            default-dark: hsl(46, 100%, 50%)
+    -
+            id: col-highlight-1
+            title: 'Highlight Colour — additional #1'
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (italics + highlight markdown)
+            description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(76, 100%, 50%)
+            default-dark: hsl(76, 100%, 50%)
+    -
+            id: col-highlight-2
+            title: 'Highlight Colour — additional #2'     
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (bold + highlight markdown)
+            description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(166, 100%, 50%)
+            default-dark: hsl(166, 100%, 50%)
+    -
+            id: col-highlight-3
+            title: 'Highlight Colour — additional #3'     
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (bold + italics + highlight markdown)
+            description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(262, 44%, 82%)
+            default-dark: hsl(262, 44%, 82%)
+    -
+            id: col-highlight-0-org
+            title: 'Highlight Colour (Old) — default'
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (highlight markdown)
+            description: 'Default highlight colour (==)'
+            opacity: false
+            format: hsl
+            default-light: hsl(60, 100%, 50%)
+            default-dark: hsl(60, 100%, 50%)
+    -
+            id: col-highlight-1-org
+            title: 'Highlight Colour (Old) — additional #1'
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (italics + highlight markdown)
+            description: 'Colour of the highlight when you use the italics markdown syntax with the highlight markdown syntax (*==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(120, 100%, 50%)
+            default-dark: hsl(120, 100%, 50%)
+    -
+            id: col-highlight-2-org
+            title: 'Highlight Colour (Old) — additional #2'     
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (bold + highlight markdown)
+            description: 'Colour of the highlight when you use the bold markdown syntax with the highlight markdown syntax (**==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(180, 100%, 50%)
+            default-dark: hsl(180, 100%, 50%)
+    -
+            id: col-highlight-3-org
+            title: 'Highlight Colour (Old) — additional #3'
+            type: variable-themed-color
+            document: ET11-Highlights
+            notes: (bold + italics + highlight markdown)
+            description: 'Colour of the highlight when you use the italics, bold and highlight markdown syntax together (***==).'
+            opacity: false
+            format: hsl
+            default-light: hsl(300, 100%, 50%)
+            default-dark: hsl(300, 100%, 50%)    
+    -
+        id: Frontmatter
+        title: "Frontmatter/Properties"
+        description: "Options to manipulate and control the frontmatter. Also known as 'Properties' in Obsidian parlance."
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-yaml-no-colour
+            title: No YAML Colouring
+            type: class-toggle
+            document: EF01-Frontmatter
+            notes: (Editing View Source Mode)
+            description: "Willemstad colours the frontmatter YAML by default in Source Mode. When enabled, the frontmatter YAML will not be coloured."
+            default: false
+    -
+            id: ssopt-hide-metadata-container
+            title: Hide Properties in Reading Mode
+            type: class-toggle
+            document: EF02-PropertiesMetadata
+            notes: (Reading View)
+            description: "When enabled, this hides the entire Properties block when in Reading Mode."
+            default: false
+    -
+            id: ssopt-hide-metadata-container-lp
+            title: Hide Properties in Live Preview
+            type: class-toggle
+            document: EF02-PropertiesMetadata
+            notes: (Reading View)
+            description: "When enabled, this hides the entire Properties block when in Live Preview."
+            default: false
+    -
+            id: ssopt-hide-properties-title
+            title: Hide 'Properties' Title
+            type: class-toggle
+            document: EF02-PropertiesMetadata
+            notes: (Reading View and Editing View Live Preview)
+            description: "When enabled, this hides the 'Properties' heading above the metadata frontmatter table in both Live Preview and Reading Mode."
+            default: false
+    -
+            id: ssopt-frontmatter-in-front
+            title: Move Properties to Top of Note in Reading View
+            type: class-toggle
+            description: "When enabled, this moves the Properties block to appear before the in-line note title in Reading Mode."
+            default: false
+    -
+            id: ssopt-frontmatter-in-front-lp
+            title: Move Properties to Top of Note in Live Preview
+            type: class-toggle
+            description: "When enabled, this moves the Properties block to appear before the in-line note title in Live Preview."
+            default: false
+    -
+            id: ssopt-properties-button-original
+            title: Revert 'Add Property' Button to Default
+            type: class-toggle
+            document: EF02-PropertiesMetadata
+            notes: (Reading View and Editing View Live Preview)
+            description: "When enabled, this reverts the 'Add Property' button to its original appearance, with text and its default position."
+            default: false
+    -
+            id: ssopt-properties-aliases-original
+            title: Revert Alias Pill Style to Default
+            type: class-toggle
+            document: EF02-PropertiesMetadata
+            notes: (Reading View and Editing View Live Preview)
+            description: "When enabled, this reverts the styling for alias pills (and other multi-select items) to the Obsidian default."
+            default: false
+    -
+        id: embeds-settings
+        title: Embeds
+        type: heading
+        description: "Options to control the appearance of embedded notes and files."
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-not-seamless-embeds
+            title: Disable Seamless Embeds
+            type: class-toggle
+            description: "By default, this theme makes embedded notes seamless (no borders, padding, or scrollbars). When enabled, this reverts embeds to the standard Obsidian style, adding back borders and scrollbars."
+            default: false
+    -
+            id: ssopt-block-width-iframe
+            title: Enable Block Widths for iFrames
+            type: class-toggle
+            description: "Enables a modern, content-aware width system for iFrames (e.g. YouTube videos, Google forms). When off, tables will take Obsidian's original settings."
+            default: false
+    -
+                id: magnifier-bw-iframe
+                title: "iFrame Content Width Magnifier"
+                type: variable-number-slider
+                description: "A multiplier to increase the base width of the iFrame content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable Line Lengths is turned off."
+                min: 0.5
+                max: 3
+                step: 0.05
+                default: 1.5
+    -
+                id: ratio-bw-iframe-source
+                title: "iFrames Max Width Ratio (Live Preview)"
+                type: variable-number-slider
+                description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 1."
+                min: 0.5
+                max: 1
+                step: 0.01
+                default: 1
+    -
+                id: ratio-bw-iframe-reading
+                title: "iFrames Max Width Ratio (Reading Mode)"
+                type: variable-number-slider
+                description: "The maximum width the iFrame can occupy, as a ratio of the container's width. 1 = 100%. Default is 0.96."
+                min: 0.5
+                max: 1
+                step: 0.01
+                default: 0.96
+    -
+                id: aspect-ratio-bw-iframe
+                title: iFrames Aspect Ratio
+                type: variable-text
+                description: "Sets the aspect ratio of the iFrame. Use the format 'width / height', and 'auto' for it to default to its original aspect ratio, which can be used alone, or added before or after to the 'width / height' format. Default is 'auto 16/9'."
+                default: 'auto 16/9'
+    -
+            id: ssopt-block-width-pdfembed
+            title: Enable Block Widths for PDF Embeds
+            type: class-toggle
+            description: "Enables a modern, content-aware width system for PDF embeds. When off, PDF embeds will have a simple, standard layout."
+            default: false
+    -
+                id: magnifier-bw-pdfembed
+                title: "PDF Embed Content Width Magnifier"
+                type: variable-number-slider
+                description: "A multiplier to increase the base width of the PDF embed content, with respect to the document's line lengths. Default is 1.5 (150%)."
+                min: 0.5
+                max: 3
+                step: 0.05
+                default: 1.5
+    -
+                id: ratio-bw-pdfembed-source
+                title: "PDF Embed Max Width Ratio (Live Preview)"
+                type: variable-number-slider
+                description: "The maximum width the PDF embed can occupy, as a ratio of the container's width. 1 = 100%. Default is 1."
+                min: 0.5
+                max: 1
+                step: 0.01
+                default: 1
+    -
+                id: ratio-bw-pdfembed-reading
+                title: "PDF Embed Max Width Ratio (Reading Mode)"
+                type: variable-number-slider
+                description: "The maximum width the PDF embed can occupy, as a ratio of the container's width. 1 = 100%. Default is 0.96."
+                min: 0.5
+                max: 1
+                step: 0.01
+                default: 0.96
+    -
+        id: Lists
+        title: Lists
+        description: Options to manipulate and control user-created lists.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: checkbox-radius
+            title: Checkbox Radius
+            type: variable-select
+            document: EL01-ListCheckbox
+            description: "This option allows one to change the radius of the checkbox in lists."
+            default: 50rem
+            options:
+                -
+                    label: Square
+                    value: 0rem
+                -
+                    label: Small-Rounded Square
+                    value: var(--radius-s)
+                -
+                    label: Medium-Rounded Square
+                    value: var(--radius-m)
+                -
+                    label: Almost-Round
+                    value: var(--radius-l)
+                -
+                    label: Round
+                    value: 50rem
+    -
+            id: ssopt-acrs-enable
+            title: Enable Alternative Checkboxes
+            type: class-toggle
+            document: EL-02-AltCheckboxRS
+            description: "When enabled, this allows the usage of the Alternative Checkboxes Reference Set developed by Damian Korcz, also supported by other themes, in your lists."
+            default: false
+    -
+        id: table-settings
+        title: Tables
+        description: Options to manipulate and control Markdown tables.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-block-width-tables
+            title: Enable Block Widths for Tables
+            type: class-toggle
+            description: "Enables a modern, content-aware block width system for tables. When off, tables will take Obsidian's original settings."
+            default: false
+    -
+            id: ssopt-no-table-colours
+            title: Disable Table Striping
+            type: class-toggle
+            document: PB006-BasesTables (PB006-01A)
+            description: "By default, Willemstad colours alternate rows differently in Markdown tables. Enable this should you prefer Obsidian’s default look for ordinary Markdown tables."
+            default: false
+
+    -
+            id: ssopt-bw-table-content-fit
+            title: Table Width Behavior
+            type: variable-select
+            description: "Choose whether tables should shrink-to-fit their content (standard Obsidian behaviour) or be forced to fill the available width. The two Fit to Width options differ in their Live Preview look. Not requiring scrolling for the button is functionally sensible and aesthetically less pleasing, and vice versa."
+            allowEmpty: false
+            default: '0'
+            options:
+                -
+                    label: "Fit to Content"
+                    value: '0'
+                -
+                    label: "Fit to Width (Add Table Column button does not require scrolling)"
+                    value: '1'
+                -
+                    label: "Fit to Width (Add Table Column button requires scrolling)"
+                    value: '2'
+    -
+            id: magnifier-bw-table
+            title: "Tables Content Width Magnifier"
+            type: variable-number-slider
+            description: "A multiplier to increase the base width of the table content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable Line Lengths is turned off."
+            min: 0.5
+            max: 3
+            step: 0.05
+            default: 1.5
+    -
+            id: ratio-bw-table-source
+            title: "Tables Max Width Ratio (Live Preview)"
+            type: variable-number-slider
+            description: "The maximum width the table can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 1."
+            min: 0.5
+            max: 1
+            step: 0.01
+            default: 1
+    -
+            id: ratio-bw-table-reading
+            title: "Tables Max Width Ratio (Reading Mode)"
+            type: variable-number-slider
+            description: "The maximum width the table can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 0.96 (96%)."
+            min: 0.5
+            max: 1
+            step: 0.01
+            default: 0.96
+    -
+        id: bases-settings
+        title: Bases
+        type: heading
+        description: Options to manipulate and control the Bases core plugin.
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-block-width-bases
+            title: "Enable Block Widths for Bases"
+            type: class-toggle
+            description: "Enables a modern, content-aware block width system for Bases."
+            default: false
+    -
+            id: ssopt-standard-bases-colours
+            title: Revert to Standard Bases Appearance
+            type: class-toggle
+            document: PB006-BasesTables (PB006-01B)
+            description: "Reverts the Bases core plugin to its stock colour scheme instead of Willemstad’s palette."
+            default: false
+    -
+            id: ssopt-bases-no-edit
+            title: "Non-Editable and Read-Only Bases in Reading Mode"
+            type: class-toggle
+            document: PB006-BasesTables (PB006-02)
+            description: "By default in Obsidian, Bases are editable in Reading Mode. Enable this to turn off editing in Reading Mode."
+            default: false
+
+    -
+            id: magnifier-bw-bases
+            title: "Bases Content Width Magnifier"
+            type: variable-number-slider
+            description: "A multiplier to increase the base width of the Bases content, with respect to the document's line lengths. Default is 1.5 (150%). This setting will hardly make a difference if Readable Line Lengths is turned off."
+            min: 0.5
+            max: 3
+            step: 0.05
+            default: 1.5
+    -
+            id: ratio-bw-bases-source
+            title: "Bases Max Width Ratio (Live Preview)"
+            type: variable-number-slider
+            description: "The maximum width Bases can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 1."
+            min: 0.5
+            max: 1
+            step: 0.01
+            default: 1
+    -
+            id: ratio-bw-bases-reading
+            title: "Bases Max Width Ratio (Reading Mode)"
+            type: variable-number-slider
+            description: "The maximum width Bases can occupy, as a ratio of the container's width. 1 = 100% (whole container width). Default is 0.96 (96%)."
+            min: 0.5
+            max: 1
+            step: 0.01
+            default: 0.96
+    -
+        id: canvas-settings
+        title: Canvas
+        type: heading
+        description: 'Options to manipulate items in the Canvas.'
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-canvas-hide-node-labels
+            title: Hide Node Labels
+            type: class-toggle
+            description: "When enabled, hides the labels/titles on individual nodes (files/cards) in the Canvas."
+            default: false
+    -
+            id: ssopt-canvas-hide-group-labels
+            title: Hide Group Labels
+            type: class-toggle
+            description: "When enabled, hides the labels on groups in the Canvas."
+            default: false
+    -
+            id: canvas-node-font-size
+            title: Node Label Font Size
+            type: variable-text
+            description: "Sets the font size for labels on individual nodes (files/cards). Accepts any valid CSS unit (e.g., 1em, 14px, 1.2rem)."
+            default: '1em'
+    -
+            id: canvas-group-font-size
+            title: Group Label Font Size
+            type: variable-text
+            description: "Sets the font size for labels on groups. Accepts any valid CSS unit."
+            default: '1.5em'
+    -
+            id: canvas-background
+            title: Canvas Background Colour
+            type: variable-text
+            description: "Sets the background colour of the Canvas. Accepts any valid CSS colour format (e.g., hex, rgb, hsl, oklch, var(--some-variable))."
+            default: 'var(--background-primary)'
+    -
+            id: canvas-settings-grid
+            title: Grid and Dots
+            type: heading
+            level: 3
+            collapsed: false
+    -
+                id: canvas-dot-pattern
+                title: Canvas Background Dot Colour
+                type: variable-text
+                description: "Sets the colour of the dots in the Canvas background. Accepts any valid CSS colour format."
+                default: 'var(--color-base-30)'
+    -
+                id: canvas-dot-size
+                title: Canvas Background Dot Size
+                type: variable-number-slider
+                description: "Controls the size of the dots in the Canvas background. Obsidian's default is 0.7. Change this to zero to get a Heptabase-like background."
+                format: ""
+                min: 0
+                max: 2
+                step: 0.1
+                default: 0.7
+    -
+        id: pdf-viewer-settings
+        title: PDF Viewer
+        type: heading
+        description: 'Options to manipulate and control the PDF viewer. For PDF embeds, please refer to the Embeds section above.'
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-invert-pdf-dark
+            title: Invert PDF Colours in Dark Mode
+            type: class-toggle
+            description: "When in dark mode, this inverts the colors of embedded PDFs to make them easier to read. Please note that this option is very rudimentary and there are no good CSS options given the limitations of accessing colours within PDF in Obsidian. You are strongly recommended to use Obsidian's 'Adapt to Theme' option, accessible via the PDF toolbar, first, and only resort to this should it fail to work."
+            default: false
+    -
+        id: ancillary-editor-options
+        title: Ancillary Editor Options
+        description: Options to manipulate and control other aspects of the editor.
+        type: heading
+        level: 2
+        collapsed: false
+    -
+            id: ssopt-show-urls
+            title: Show URLs By Default
+            type: class-toggle
+            document: X101
+            notes: (For Source Mode only)
+            description: "Courtesy of Chris (Shimmering Focus), Willemstad has a feature that hides the URLs by default. When enabled, the URLs will be visible by default."
+            default: false
+    -
+            id: ssopt-overflow-hack
+            title: Overflow Fix
+            type: class-toggle
+            document: X101
+            notes: "(For Reading Mode only)"
+            description: "Courtesy of SlRvB (ITS Theme), this is a fix for possible overflow issues in the editor in Reading Mode, which is especially obvious when HTML Aside and Infobox are aligned to the left. When enabled, the overflow issue will be fixed."
+            default: false
+*/

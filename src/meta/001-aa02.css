@@ -1,0 +1,236 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AA02
+\ Print Stylesheet
+
+\\ partially based on Hartija by Vladimir Carrer
+\\ https://github.com/vladocar/Hartija---CSS-Print-Framework
+\\ MIT License - associated rights of Vladimir Carrer preserved
+
+\\ MIT License
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* use mixin in order to combine print preview in Markdown + the exported file */
+
+/* CODE ABOVE FOR PRINT AND PRINT PREVIEW */
+
+/* Apply to .print class */
+.print {
+  /* issues to resolve:
+
+  kanban callout
+  column callouts
+
+  */
+
+  /* follows the Ob stylesheet math */
+}
+
+.print h1, .print h2, .print h3, .print h4, .print h5, .print h6 {
+  page-break-after: avoid;
+}
+
+.print .image-embed, .print img, .print .callout, .print .callout-content, .print .callout-title,
+.print blockquote, .print table, .print pre {
+  page-break-inside: avoid;
+}
+
+.print p {
+  orphans: 3;
+  widows: 3;
+}
+
+.print *::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.print .markdown-rendered h1 {
+  color: var(--col-h1);
+  background-color: var(--col-h1-bg);
+}
+
+.print .markdown-rendered h2 {
+  color: var(--col-h2);
+  background-color: var(--col-h2-bg);
+}
+
+.print .markdown-rendered h3 {
+  color: var(--col-h3);
+  background-color: var(--col-h3-bg);
+}
+
+.print .markdown-rendered h4 {
+  color: var(--col-h4);
+  background-color: var(--col-h4-bg);
+}
+
+.print .markdown-rendered h5 {
+  color: var(--col-h5);
+  background-color: var(--col-h5-bg);
+}
+
+.print .markdown-rendered h6 {
+  color: var(--col-h6);
+  background-color: var(--col-h6-bg);
+}
+
+.print .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+  margin: var(--p-spacing-root) 0;
+  padding: var(--padding-headers);
+}
+
+.print .markdown-preview-view {
+  color: var(--text-normal);
+}
+
+/* for print previews */
+
+/* Apply during print */
+@media print {
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  .image-embed, img, .callout, .callout-content, .callout-title,
+  blockquote, table, pre {
+    page-break-inside: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  /* issues to resolve:
+
+  kanban callout
+  column callouts
+
+  */
+  .markdown-rendered h1 {
+    color: var(--col-h1);
+    background-color: var(--col-h1-bg);
+  }
+
+  .markdown-rendered h2 {
+    color: var(--col-h2);
+    background-color: var(--col-h2-bg);
+  }
+
+  .markdown-rendered h3 {
+    color: var(--col-h3);
+    background-color: var(--col-h3-bg);
+  }
+
+  .markdown-rendered h4 {
+    color: var(--col-h4);
+    background-color: var(--col-h4-bg);
+  }
+
+  .markdown-rendered h5 {
+    color: var(--col-h5);
+    background-color: var(--col-h5-bg);
+  }
+
+  .markdown-rendered h6 {
+    color: var(--col-h6);
+    background-color: var(--col-h6-bg);
+  }
+
+  .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+    margin: var(--p-spacing-root) 0;
+    padding: var(--padding-headers);
+  } /* follows the Ob stylesheet math */
+  .markdown-preview-view {
+    color: var(--text-normal);
+  }
+} /* for prints/PDF itself */
+.print .markdown-preview-view:has(> h1 + .mod-frontmatter) > h1:first-of-type {
+  color: var(--text-normal);
+  background-color: unset;
+  margin-left: unset;
+  padding-left: 0;
+}
+
+/* use print and theme-blah */
+body {
+  --padding-print: 2cm;
+
+  -webkit-print-adjust: exact;
+}
+
+/* turn off margin in Print to PDF */
+@media print {
+  * {
+    -webkit-print-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  blockquote, pre, code, .callout, li, hr, ul, ol, tr {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  p, li, blockquote {
+    widows: 3;
+    orphans: 3;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    page-break-before: avoid;
+  }
+
+  img {
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: avoid;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+    word-wrap: break-word;
+  }
+}
+
+.print {
+  --callout-blend-mode: normal;
+
+  position: relative;
+  isolation: isolate;
+  background: none !important;
+}
+
+.print .mod-frontmatter {
+  z-index: -5;
+}
+
+.print .mod-frontmatter::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  background: var(--background-primary);
+  box-sizing: border-box !important;
+}
+
+/* for use for print debugging */
+
+/*
+.in-progress :where(.progress-bar-container, .titlebar, .app-container) {
+    display: none;
+}
+*/
+
+/* Print Stylesheet */
+

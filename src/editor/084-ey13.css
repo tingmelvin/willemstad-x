@@ -1,0 +1,24 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EY13
+\ Editor > HTML Features
+\ HTML Aside
+──────────────────────────────────────────────────────────────────────────────── */
+body {
+  --aside-text-align: left;
+  --aside-float: right;
+  --aside-padding: var(--size-4-3);
+}
+
+aside {
+  padding: var(--aside-padding);
+  background-color: var(--background-primary-alt);
+  box-shadow: none;
+  max-width: 25%;
+  min-width: 125px;
+  text-align: var(--aside-text-align);
+  overflow-wrap: break-word;
+  float: var(--aside-float);
+}
+
+/* HTML Aside */
+

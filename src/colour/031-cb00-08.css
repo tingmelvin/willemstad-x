@@ -1,0 +1,945 @@
+/* =================================================================== */
+
+/* CB00-08 | Neutral and Writing Palette Classes */
+
+/* =================================================================== */
+.ssopt-col-base-tone-l-neutral,
+.ssopt-col-base-tone-l-neutral .theme-light,
+.ssopt-col-base-tone-l-neutral.theme-light {
+  --ch-color-base-l-c-00-set: 0;
+  --ch-color-base-l-h-00-set: 0;
+  --ch-color-base-l-c-05-set: 0;
+  --ch-color-base-l-h-05-set: 0;
+  --ch-color-base-l-c-10-set: 0;
+  --ch-color-base-l-h-10-set: 0;
+  --ch-color-base-l-c-15-set: 0;
+  --ch-color-base-l-h-15-set: 0;
+  --ch-color-base-l-c-20-set: 0;
+  --ch-color-base-l-h-20-set: 0;
+  --ch-color-base-l-c-25-set: 0;
+  --ch-color-base-l-h-25-set: 0;
+  --ch-color-base-l-c-30-set: 0;
+  --ch-color-base-l-h-30-set: 0;
+  --ch-color-base-l-c-35-set: 0;
+  --ch-color-base-l-h-35-set: 0;
+  --ch-color-base-l-c-40-set: 0;
+  --ch-color-base-l-h-40-set: 0;
+  --ch-color-base-l-c-45-set: 0;
+  --ch-color-base-l-h-45-set: 0;
+  --ch-color-base-l-c-50-set: 0;
+  --ch-color-base-l-h-50-set: 0;
+  --ch-color-base-l-c-55-set: 0;
+  --ch-color-base-l-h-55-set: 0;
+  --ch-color-base-l-c-60-set: 0;
+  --ch-color-base-l-h-60-set: 0;
+  --ch-color-base-l-c-65-set: 0;
+  --ch-color-base-l-h-65-set: 0;
+  --ch-color-base-l-c-70-set: 0;
+  --ch-color-base-l-h-70-set: 0;
+  --ch-color-base-l-c-75-set: 0;
+  --ch-color-base-l-h-75-set: 0;
+  --ch-color-base-l-c-80-set: 0;
+  --ch-color-base-l-h-80-set: 0;
+  --ch-color-base-l-c-85-set: 0;
+  --ch-color-base-l-h-85-set: 0;
+  --ch-color-base-l-c-90-set: 0;
+  --ch-color-base-l-h-90-set: 0;
+  --ch-color-base-l-c-95-set: 0;
+  --ch-color-base-l-h-95-set: 0;
+  --ch-color-base-l-c-100-set: 0;
+  --ch-color-base-l-h-100-set: 0;
+}
+
+.ssopt-col-base-tone-d-neutral,
+.ssopt-col-base-tone-d-neutral .theme-dark,
+.ssopt-col-base-tone-d-neutral.theme-dark {
+  --ch-color-base-d-c-00-set: 0;
+  --ch-color-base-d-h-00-set: 0;
+  --ch-color-base-d-c-05-set: 0;
+  --ch-color-base-d-h-05-set: 0;
+  --ch-color-base-d-c-10-set: 0;
+  --ch-color-base-d-h-10-set: 0;
+  --ch-color-base-d-c-15-set: 0;
+  --ch-color-base-d-h-15-set: 0;
+  --ch-color-base-d-c-20-set: 0;
+  --ch-color-base-d-h-20-set: 0;
+  --ch-color-base-d-c-25-set: 0;
+  --ch-color-base-d-h-25-set: 0;
+  --ch-color-base-d-c-30-set: 0;
+  --ch-color-base-d-h-30-set: 0;
+  --ch-color-base-d-c-35-set: 0;
+  --ch-color-base-d-h-35-set: 0;
+  --ch-color-base-d-c-40-set: 0;
+  --ch-color-base-d-h-40-set: 0;
+  --ch-color-base-d-c-45-set: 0;
+  --ch-color-base-d-h-45-set: 0;
+  --ch-color-base-d-c-50-set: 0;
+  --ch-color-base-d-h-50-set: 0;
+  --ch-color-base-d-c-55-set: 0;
+  --ch-color-base-d-h-55-set: 0;
+  --ch-color-base-d-c-60-set: 0;
+  --ch-color-base-d-h-60-set: 0;
+  --ch-color-base-d-c-65-set: 0;
+  --ch-color-base-d-h-65-set: 0;
+  --ch-color-base-d-c-70-set: 0;
+  --ch-color-base-d-h-70-set: 0;
+  --ch-color-base-d-c-75-set: 0;
+  --ch-color-base-d-h-75-set: 0;
+  --ch-color-base-d-c-80-set: 0;
+  --ch-color-base-d-h-80-set: 0;
+  --ch-color-base-d-c-85-set: 0;
+  --ch-color-base-d-h-85-set: 0;
+  --ch-color-base-d-c-90-set: 0;
+  --ch-color-base-d-h-90-set: 0;
+  --ch-color-base-d-c-95-set: 0;
+  --ch-color-base-d-h-95-set: 0;
+  --ch-color-base-d-c-100-set: 0;
+  --ch-color-base-d-h-100-set: 0;
+}
+
+.ssopt-col-base-tone-l-egypt,
+.ssopt-col-base-tone-l-egypt .theme-light,
+.ssopt-col-base-tone-l-egypt.theme-light {
+  --ch-color-base-l-c-00-set: 0.007;
+  --ch-color-base-l-h-00-set: 125;
+  --ch-color-base-l-c-05-set: 0.0095;
+  --ch-color-base-l-h-05-set: 123.25;
+  --ch-color-base-l-c-10-set: 0.012;
+  --ch-color-base-l-h-10-set: 121.5;
+  --ch-color-base-l-c-15-set: 0.0145;
+  --ch-color-base-l-h-15-set: 119.75;
+  --ch-color-base-l-c-20-set: 0.017;
+  --ch-color-base-l-h-20-set: 118;
+  --ch-color-base-l-c-25-set: 0.0203;
+  --ch-color-base-l-h-25-set: 116;
+  --ch-color-base-l-c-30-set: 0.0235;
+  --ch-color-base-l-h-30-set: 114;
+  --ch-color-base-l-c-35-set: 0.0268;
+  --ch-color-base-l-h-35-set: 112;
+  --ch-color-base-l-c-40-set: 0.03;
+  --ch-color-base-l-h-40-set: 110;
+  --ch-color-base-l-c-45-set: 0.0338;
+  --ch-color-base-l-h-45-set: 108;
+  --ch-color-base-l-c-50-set: 0.0375;
+  --ch-color-base-l-h-50-set: 106;
+  --ch-color-base-l-c-55-set: 0.0412;
+  --ch-color-base-l-h-55-set: 104;
+  --ch-color-base-l-c-60-set: 0.045;
+  --ch-color-base-l-h-60-set: 102;
+  --ch-color-base-l-c-65-set: 0.0493;
+  --ch-color-base-l-h-65-set: 100.25;
+  --ch-color-base-l-c-70-set: 0.0535;
+  --ch-color-base-l-h-70-set: 98.5;
+  --ch-color-base-l-c-75-set: 0.0578;
+  --ch-color-base-l-h-75-set: 96.75;
+  --ch-color-base-l-c-80-set: 0.062;
+  --ch-color-base-l-h-80-set: 95;
+  --ch-color-base-l-c-85-set: 0.0665;
+  --ch-color-base-l-h-85-set: 93.25;
+  --ch-color-base-l-c-90-set: 0.071;
+  --ch-color-base-l-h-90-set: 91.5;
+  --ch-color-base-l-c-95-set: 0.0755;
+  --ch-color-base-l-h-95-set: 89.75;
+  --ch-color-base-l-c-100-set: 0.08;
+  --ch-color-base-l-h-100-set: 88;
+}
+
+.ssopt-col-base-tone-d-egypt,
+.ssopt-col-base-tone-d-egypt .theme-dark,
+.ssopt-col-base-tone-d-egypt.theme-dark {
+  --ch-color-base-d-c-00-set: 0.007;
+  --ch-color-base-d-h-00-set: 125;
+  --ch-color-base-d-c-05-set: 0.0095;
+  --ch-color-base-d-h-05-set: 123.25;
+  --ch-color-base-d-c-10-set: 0.012;
+  --ch-color-base-d-h-10-set: 121.5;
+  --ch-color-base-d-c-15-set: 0.0145;
+  --ch-color-base-d-h-15-set: 119.75;
+  --ch-color-base-d-c-20-set: 0.017;
+  --ch-color-base-d-h-20-set: 118;
+  --ch-color-base-d-c-25-set: 0.0203;
+  --ch-color-base-d-h-25-set: 116;
+  --ch-color-base-d-c-30-set: 0.0235;
+  --ch-color-base-d-h-30-set: 114;
+  --ch-color-base-d-c-35-set: 0.0268;
+  --ch-color-base-d-h-35-set: 112;
+  --ch-color-base-d-c-40-set: 0.03;
+  --ch-color-base-d-h-40-set: 110;
+  --ch-color-base-d-c-45-set: 0.0338;
+  --ch-color-base-d-h-45-set: 108;
+  --ch-color-base-d-c-50-set: 0.0375;
+  --ch-color-base-d-h-50-set: 106;
+  --ch-color-base-d-c-55-set: 0.0412;
+  --ch-color-base-d-h-55-set: 104;
+  --ch-color-base-d-c-60-set: 0.045;
+  --ch-color-base-d-h-60-set: 102;
+  --ch-color-base-d-c-65-set: 0.0493;
+  --ch-color-base-d-h-65-set: 100.25;
+  --ch-color-base-d-c-70-set: 0.0535;
+  --ch-color-base-d-h-70-set: 98.5;
+  --ch-color-base-d-c-75-set: 0.0578;
+  --ch-color-base-d-h-75-set: 96.75;
+  --ch-color-base-d-c-80-set: 0.062;
+  --ch-color-base-d-h-80-set: 95;
+  --ch-color-base-d-c-85-set: 0.0665;
+  --ch-color-base-d-h-85-set: 93.25;
+  --ch-color-base-d-c-90-set: 0.071;
+  --ch-color-base-d-h-90-set: 91.5;
+  --ch-color-base-d-c-95-set: 0.0755;
+  --ch-color-base-d-h-95-set: 89.75;
+  --ch-color-base-d-c-100-set: 0.08;
+  --ch-color-base-d-h-100-set: 88;
+}
+
+.ssopt-col-base-tone-l-johnson,
+.ssopt-col-base-tone-l-johnson .theme-light,
+.ssopt-col-base-tone-l-johnson.theme-light {
+  --ch-color-base-l-c-00-set: 0.013;
+  --ch-color-base-l-h-00-set: 135;
+  --ch-color-base-l-c-05-set: 0.0155;
+  --ch-color-base-l-h-05-set: 134.25;
+  --ch-color-base-l-c-10-set: 0.018;
+  --ch-color-base-l-h-10-set: 133.5;
+  --ch-color-base-l-c-15-set: 0.0205;
+  --ch-color-base-l-h-15-set: 132.75;
+  --ch-color-base-l-c-20-set: 0.023;
+  --ch-color-base-l-h-20-set: 132;
+  --ch-color-base-l-c-25-set: 0.026;
+  --ch-color-base-l-h-25-set: 131;
+  --ch-color-base-l-c-30-set: 0.029;
+  --ch-color-base-l-h-30-set: 130;
+  --ch-color-base-l-c-35-set: 0.032;
+  --ch-color-base-l-h-35-set: 129;
+  --ch-color-base-l-c-40-set: 0.035;
+  --ch-color-base-l-h-40-set: 128;
+  --ch-color-base-l-c-45-set: 0.038;
+  --ch-color-base-l-h-45-set: 127.25;
+  --ch-color-base-l-c-50-set: 0.041;
+  --ch-color-base-l-h-50-set: 126.5;
+  --ch-color-base-l-c-55-set: 0.044;
+  --ch-color-base-l-h-55-set: 125.75;
+  --ch-color-base-l-c-60-set: 0.047;
+  --ch-color-base-l-h-60-set: 125;
+  --ch-color-base-l-c-65-set: 0.05;
+  --ch-color-base-l-h-65-set: 124.25;
+  --ch-color-base-l-c-70-set: 0.053;
+  --ch-color-base-l-h-70-set: 123.5;
+  --ch-color-base-l-c-75-set: 0.056;
+  --ch-color-base-l-h-75-set: 122.75;
+  --ch-color-base-l-c-80-set: 0.059;
+  --ch-color-base-l-h-80-set: 122;
+  --ch-color-base-l-c-85-set: 0.062;
+  --ch-color-base-l-h-85-set: 121;
+  --ch-color-base-l-c-90-set: 0.065;
+  --ch-color-base-l-h-90-set: 120;
+  --ch-color-base-l-c-95-set: 0.068;
+  --ch-color-base-l-h-95-set: 119;
+  --ch-color-base-l-c-100-set: 0.071;
+  --ch-color-base-l-h-100-set: 118;
+}
+
+.ssopt-col-base-tone-d-johnson,
+.ssopt-col-base-tone-d-johnson .theme-dark,
+.ssopt-col-base-tone-d-johnson.theme-dark {
+  --ch-color-base-d-c-00-set: 0.013;
+  --ch-color-base-d-h-00-set: 135;
+  --ch-color-base-d-c-05-set: 0.0155;
+  --ch-color-base-d-h-05-set: 134.25;
+  --ch-color-base-d-c-10-set: 0.018;
+  --ch-color-base-d-h-10-set: 133.5;
+  --ch-color-base-d-c-15-set: 0.0205;
+  --ch-color-base-d-h-15-set: 132.75;
+  --ch-color-base-d-c-20-set: 0.023;
+  --ch-color-base-d-h-20-set: 132;
+  --ch-color-base-d-c-25-set: 0.026;
+  --ch-color-base-d-h-25-set: 131;
+  --ch-color-base-d-c-30-set: 0.029;
+  --ch-color-base-d-h-30-set: 130;
+  --ch-color-base-d-c-35-set: 0.032;
+  --ch-color-base-d-h-35-set: 129;
+  --ch-color-base-d-c-40-set: 0.035;
+  --ch-color-base-d-h-40-set: 128;
+  --ch-color-base-d-c-45-set: 0.038;
+  --ch-color-base-d-h-45-set: 127.25;
+  --ch-color-base-d-c-50-set: 0.041;
+  --ch-color-base-d-h-50-set: 126.5;
+  --ch-color-base-d-c-55-set: 0.044;
+  --ch-color-base-d-h-55-set: 125.75;
+  --ch-color-base-d-c-60-set: 0.047;
+  --ch-color-base-d-h-60-set: 125;
+  --ch-color-base-d-c-65-set: 0.05;
+  --ch-color-base-d-h-65-set: 124.25;
+  --ch-color-base-d-c-70-set: 0.053;
+  --ch-color-base-d-h-70-set: 123.5;
+  --ch-color-base-d-c-75-set: 0.056;
+  --ch-color-base-d-h-75-set: 122.75;
+  --ch-color-base-d-c-80-set: 0.059;
+  --ch-color-base-d-h-80-set: 122;
+  --ch-color-base-d-c-85-set: 0.062;
+  --ch-color-base-d-h-85-set: 121;
+  --ch-color-base-d-c-90-set: 0.065;
+  --ch-color-base-d-h-90-set: 120;
+  --ch-color-base-d-c-95-set: 0.068;
+  --ch-color-base-d-h-95-set: 119;
+  --ch-color-base-d-c-100-set: 0.071;
+  --ch-color-base-d-h-100-set: 118;
+}
+
+.ssopt-col-base-tone-l-benedictus,
+.ssopt-col-base-tone-l-benedictus .theme-light,
+.ssopt-col-base-tone-l-benedictus.theme-light {
+  --ch-color-base-l-c-00-set: 0.013;
+  --ch-color-base-l-h-00-set: 65;
+  --ch-color-base-l-c-05-set: 0.0155;
+  --ch-color-base-l-h-05-set: 64.25;
+  --ch-color-base-l-c-10-set: 0.018;
+  --ch-color-base-l-h-10-set: 63.5;
+  --ch-color-base-l-c-15-set: 0.0205;
+  --ch-color-base-l-h-15-set: 62.75;
+  --ch-color-base-l-c-20-set: 0.023;
+  --ch-color-base-l-h-20-set: 62;
+  --ch-color-base-l-c-25-set: 0.026;
+  --ch-color-base-l-h-25-set: 61;
+  --ch-color-base-l-c-30-set: 0.029;
+  --ch-color-base-l-h-30-set: 60;
+  --ch-color-base-l-c-35-set: 0.032;
+  --ch-color-base-l-h-35-set: 59;
+  --ch-color-base-l-c-40-set: 0.035;
+  --ch-color-base-l-h-40-set: 58;
+  --ch-color-base-l-c-45-set: 0.038;
+  --ch-color-base-l-h-45-set: 57.25;
+  --ch-color-base-l-c-50-set: 0.041;
+  --ch-color-base-l-h-50-set: 56.5;
+  --ch-color-base-l-c-55-set: 0.044;
+  --ch-color-base-l-h-55-set: 55.75;
+  --ch-color-base-l-c-60-set: 0.047;
+  --ch-color-base-l-h-60-set: 55;
+  --ch-color-base-l-c-65-set: 0.05;
+  --ch-color-base-l-h-65-set: 54.25;
+  --ch-color-base-l-c-70-set: 0.053;
+  --ch-color-base-l-h-70-set: 53.5;
+  --ch-color-base-l-c-75-set: 0.056;
+  --ch-color-base-l-h-75-set: 52.75;
+  --ch-color-base-l-c-80-set: 0.059;
+  --ch-color-base-l-h-80-set: 52;
+  --ch-color-base-l-c-85-set: 0.062;
+  --ch-color-base-l-h-85-set: 51;
+  --ch-color-base-l-c-90-set: 0.065;
+  --ch-color-base-l-h-90-set: 50;
+  --ch-color-base-l-c-95-set: 0.068;
+  --ch-color-base-l-h-95-set: 49;
+  --ch-color-base-l-c-100-set: 0.071;
+  --ch-color-base-l-h-100-set: 48;
+}
+
+.ssopt-col-base-tone-d-benedictus,
+.ssopt-col-base-tone-d-benedictus .theme-dark,
+.ssopt-col-base-tone-d-benedictus.theme-dark {
+  --ch-color-base-d-c-00-set: 0.013;
+  --ch-color-base-d-h-00-set: 65;
+  --ch-color-base-d-c-05-set: 0.0155;
+  --ch-color-base-d-h-05-set: 64.25;
+  --ch-color-base-d-c-10-set: 0.018;
+  --ch-color-base-d-h-10-set: 63.5;
+  --ch-color-base-d-c-15-set: 0.0205;
+  --ch-color-base-d-h-15-set: 62.75;
+  --ch-color-base-d-c-20-set: 0.023;
+  --ch-color-base-d-h-20-set: 62;
+  --ch-color-base-d-c-25-set: 0.026;
+  --ch-color-base-d-h-25-set: 61;
+  --ch-color-base-d-c-30-set: 0.029;
+  --ch-color-base-d-h-30-set: 60;
+  --ch-color-base-d-c-35-set: 0.032;
+  --ch-color-base-d-h-35-set: 59;
+  --ch-color-base-d-c-40-set: 0.035;
+  --ch-color-base-d-h-40-set: 58;
+  --ch-color-base-d-c-45-set: 0.038;
+  --ch-color-base-d-h-45-set: 57.25;
+  --ch-color-base-d-c-50-set: 0.041;
+  --ch-color-base-d-h-50-set: 56.5;
+  --ch-color-base-d-c-55-set: 0.044;
+  --ch-color-base-d-h-55-set: 55.75;
+  --ch-color-base-d-c-60-set: 0.047;
+  --ch-color-base-d-h-60-set: 55;
+  --ch-color-base-d-c-65-set: 0.05;
+  --ch-color-base-d-h-65-set: 54.25;
+  --ch-color-base-d-c-70-set: 0.053;
+  --ch-color-base-d-h-70-set: 53.5;
+  --ch-color-base-d-c-75-set: 0.056;
+  --ch-color-base-d-h-75-set: 52.75;
+  --ch-color-base-d-c-80-set: 0.059;
+  --ch-color-base-d-h-80-set: 52;
+  --ch-color-base-d-c-85-set: 0.062;
+  --ch-color-base-d-h-85-set: 51;
+  --ch-color-base-d-c-90-set: 0.065;
+  --ch-color-base-d-h-90-set: 50;
+  --ch-color-base-d-c-95-set: 0.068;
+  --ch-color-base-d-h-95-set: 49;
+  --ch-color-base-d-c-100-set: 0.071;
+  --ch-color-base-d-h-100-set: 48;
+}
+
+.ssopt-col-base-tone-l-cyanus,
+.ssopt-col-base-tone-l-cyanus .theme-light,
+.ssopt-col-base-tone-l-cyanus.theme-light {
+  --ch-color-base-l-c-00-set: 0.01;
+  --ch-color-base-l-h-00-set: 255;
+  --ch-color-base-l-c-05-set: 0.0138;
+  --ch-color-base-l-h-05-set: 255;
+  --ch-color-base-l-c-10-set: 0.0175;
+  --ch-color-base-l-h-10-set: 255;
+  --ch-color-base-l-c-15-set: 0.0213;
+  --ch-color-base-l-h-15-set: 255;
+  --ch-color-base-l-c-20-set: 0.025;
+  --ch-color-base-l-h-20-set: 255;
+  --ch-color-base-l-c-25-set: 0.03;
+  --ch-color-base-l-h-25-set: 255;
+  --ch-color-base-l-c-30-set: 0.035;
+  --ch-color-base-l-h-30-set: 255;
+  --ch-color-base-l-c-35-set: 0.04;
+  --ch-color-base-l-h-35-set: 255;
+  --ch-color-base-l-c-40-set: 0.045;
+  --ch-color-base-l-h-40-set: 255;
+  --ch-color-base-l-c-45-set: 0.05;
+  --ch-color-base-l-h-45-set: 255;
+  --ch-color-base-l-c-50-set: 0.055;
+  --ch-color-base-l-h-50-set: 255;
+  --ch-color-base-l-c-55-set: 0.06;
+  --ch-color-base-l-h-55-set: 255;
+  --ch-color-base-l-c-60-set: 0.065;
+  --ch-color-base-l-h-60-set: 255;
+  --ch-color-base-l-c-65-set: 0.07;
+  --ch-color-base-l-h-65-set: 255;
+  --ch-color-base-l-c-70-set: 0.075;
+  --ch-color-base-l-h-70-set: 255;
+  --ch-color-base-l-c-75-set: 0.08;
+  --ch-color-base-l-h-75-set: 255;
+  --ch-color-base-l-c-80-set: 0.085;
+  --ch-color-base-l-h-80-set: 255;
+  --ch-color-base-l-c-85-set: 0.09;
+  --ch-color-base-l-h-85-set: 255;
+  --ch-color-base-l-c-90-set: 0.095;
+  --ch-color-base-l-h-90-set: 255;
+  --ch-color-base-l-c-95-set: 0.1;
+  --ch-color-base-l-h-95-set: 255;
+  --ch-color-base-l-c-100-set: 0.105;
+  --ch-color-base-l-h-100-set: 255;
+}
+
+.ssopt-col-base-tone-d-cyanus,
+.ssopt-col-base-tone-d-cyanus .theme-dark,
+.ssopt-col-base-tone-d-cyanus.theme-dark {
+  --ch-color-base-d-c-00-set: 0.01;
+  --ch-color-base-d-h-00-set: 255;
+  --ch-color-base-d-c-05-set: 0.0138;
+  --ch-color-base-d-h-05-set: 255;
+  --ch-color-base-d-c-10-set: 0.0175;
+  --ch-color-base-d-h-10-set: 255;
+  --ch-color-base-d-c-15-set: 0.0213;
+  --ch-color-base-d-h-15-set: 255;
+  --ch-color-base-d-c-20-set: 0.025;
+  --ch-color-base-d-h-20-set: 255;
+  --ch-color-base-d-c-25-set: 0.03;
+  --ch-color-base-d-h-25-set: 255;
+  --ch-color-base-d-c-30-set: 0.035;
+  --ch-color-base-d-h-30-set: 255;
+  --ch-color-base-d-c-35-set: 0.04;
+  --ch-color-base-d-h-35-set: 255;
+  --ch-color-base-d-c-40-set: 0.045;
+  --ch-color-base-d-h-40-set: 255;
+  --ch-color-base-d-c-45-set: 0.05;
+  --ch-color-base-d-h-45-set: 255;
+  --ch-color-base-d-c-50-set: 0.055;
+  --ch-color-base-d-h-50-set: 255;
+  --ch-color-base-d-c-55-set: 0.06;
+  --ch-color-base-d-h-55-set: 255;
+  --ch-color-base-d-c-60-set: 0.065;
+  --ch-color-base-d-h-60-set: 255;
+  --ch-color-base-d-c-65-set: 0.07;
+  --ch-color-base-d-h-65-set: 255;
+  --ch-color-base-d-c-70-set: 0.075;
+  --ch-color-base-d-h-70-set: 255;
+  --ch-color-base-d-c-75-set: 0.08;
+  --ch-color-base-d-h-75-set: 255;
+  --ch-color-base-d-c-80-set: 0.085;
+  --ch-color-base-d-h-80-set: 255;
+  --ch-color-base-d-c-85-set: 0.09;
+  --ch-color-base-d-h-85-set: 255;
+  --ch-color-base-d-c-90-set: 0.095;
+  --ch-color-base-d-h-90-set: 255;
+  --ch-color-base-d-c-95-set: 0.1;
+  --ch-color-base-d-h-95-set: 255;
+  --ch-color-base-d-c-100-set: 0.105;
+  --ch-color-base-d-h-100-set: 255;
+}
+
+.ssopt-col-base-tone-l-viola,
+.ssopt-col-base-tone-l-viola .theme-light,
+.ssopt-col-base-tone-l-viola.theme-light {
+  --ch-color-base-l-c-00-set: 0.015;
+  --ch-color-base-l-h-00-set: 295;
+  --ch-color-base-l-c-05-set: 0.0188;
+  --ch-color-base-l-h-05-set: 294.25;
+  --ch-color-base-l-c-10-set: 0.0225;
+  --ch-color-base-l-h-10-set: 293.5;
+  --ch-color-base-l-c-15-set: 0.0263;
+  --ch-color-base-l-h-15-set: 292.75;
+  --ch-color-base-l-c-20-set: 0.03;
+  --ch-color-base-l-h-20-set: 292;
+  --ch-color-base-l-c-25-set: 0.035;
+  --ch-color-base-l-h-25-set: 291.5;
+  --ch-color-base-l-c-30-set: 0.04;
+  --ch-color-base-l-h-30-set: 291;
+  --ch-color-base-l-c-35-set: 0.045;
+  --ch-color-base-l-h-35-set: 290.5;
+  --ch-color-base-l-c-40-set: 0.05;
+  --ch-color-base-l-h-40-set: 290;
+  --ch-color-base-l-c-45-set: 0.055;
+  --ch-color-base-l-h-45-set: 289.5;
+  --ch-color-base-l-c-50-set: 0.06;
+  --ch-color-base-l-h-50-set: 289;
+  --ch-color-base-l-c-55-set: 0.065;
+  --ch-color-base-l-h-55-set: 288.5;
+  --ch-color-base-l-c-60-set: 0.07;
+  --ch-color-base-l-h-60-set: 288;
+  --ch-color-base-l-c-65-set: 0.0738;
+  --ch-color-base-l-h-65-set: 287.5;
+  --ch-color-base-l-c-70-set: 0.0775;
+  --ch-color-base-l-h-70-set: 287;
+  --ch-color-base-l-c-75-set: 0.0813;
+  --ch-color-base-l-h-75-set: 286.5;
+  --ch-color-base-l-c-80-set: 0.085;
+  --ch-color-base-l-h-80-set: 286;
+  --ch-color-base-l-c-85-set: 0.0875;
+  --ch-color-base-l-h-85-set: 285.75;
+  --ch-color-base-l-c-90-set: 0.09;
+  --ch-color-base-l-h-90-set: 285.5;
+  --ch-color-base-l-c-95-set: 0.0925;
+  --ch-color-base-l-h-95-set: 285.25;
+  --ch-color-base-l-c-100-set: 0.095;
+  --ch-color-base-l-h-100-set: 285;
+}
+
+.ssopt-col-base-tone-d-viola,
+.ssopt-col-base-tone-d-viola .theme-dark,
+.ssopt-col-base-tone-d-viola.theme-dark {
+  --ch-color-base-d-c-00-set: 0.015;
+  --ch-color-base-d-h-00-set: 295;
+  --ch-color-base-d-c-05-set: 0.0188;
+  --ch-color-base-d-h-05-set: 294.25;
+  --ch-color-base-d-c-10-set: 0.0225;
+  --ch-color-base-d-h-10-set: 293.5;
+  --ch-color-base-d-c-15-set: 0.0263;
+  --ch-color-base-d-h-15-set: 292.75;
+  --ch-color-base-d-c-20-set: 0.03;
+  --ch-color-base-d-h-20-set: 292;
+  --ch-color-base-d-c-25-set: 0.035;
+  --ch-color-base-d-h-25-set: 291.5;
+  --ch-color-base-d-c-30-set: 0.04;
+  --ch-color-base-d-h-30-set: 291;
+  --ch-color-base-d-c-35-set: 0.045;
+  --ch-color-base-d-h-35-set: 290.5;
+  --ch-color-base-d-c-40-set: 0.05;
+  --ch-color-base-d-h-40-set: 290;
+  --ch-color-base-d-c-45-set: 0.055;
+  --ch-color-base-d-h-45-set: 289.5;
+  --ch-color-base-d-c-50-set: 0.06;
+  --ch-color-base-d-h-50-set: 289;
+  --ch-color-base-d-c-55-set: 0.065;
+  --ch-color-base-d-h-55-set: 288.5;
+  --ch-color-base-d-c-60-set: 0.07;
+  --ch-color-base-d-h-60-set: 288;
+  --ch-color-base-d-c-65-set: 0.0738;
+  --ch-color-base-d-h-65-set: 287.5;
+  --ch-color-base-d-c-70-set: 0.0775;
+  --ch-color-base-d-h-70-set: 287;
+  --ch-color-base-d-c-75-set: 0.0813;
+  --ch-color-base-d-h-75-set: 286.5;
+  --ch-color-base-d-c-80-set: 0.085;
+  --ch-color-base-d-h-80-set: 286;
+  --ch-color-base-d-c-85-set: 0.0875;
+  --ch-color-base-d-h-85-set: 285.75;
+  --ch-color-base-d-c-90-set: 0.09;
+  --ch-color-base-d-h-90-set: 285.5;
+  --ch-color-base-d-c-95-set: 0.0925;
+  --ch-color-base-d-h-95-set: 285.25;
+  --ch-color-base-d-c-100-set: 0.095;
+  --ch-color-base-d-h-100-set: 285;
+}
+
+.ssopt-col-base-tone-l-magentis,
+.ssopt-col-base-tone-l-magentis .theme-light,
+.ssopt-col-base-tone-l-magentis.theme-light {
+  --ch-color-base-l-c-00-set: 0.01;
+  --ch-color-base-l-h-00-set: 320;
+  --ch-color-base-l-c-05-set: 0.015;
+  --ch-color-base-l-h-05-set: 320;
+  --ch-color-base-l-c-10-set: 0.02;
+  --ch-color-base-l-h-10-set: 320;
+  --ch-color-base-l-c-15-set: 0.025;
+  --ch-color-base-l-h-15-set: 320;
+  --ch-color-base-l-c-20-set: 0.03;
+  --ch-color-base-l-h-20-set: 320;
+  --ch-color-base-l-c-25-set: 0.0375;
+  --ch-color-base-l-h-25-set: 320;
+  --ch-color-base-l-c-30-set: 0.045;
+  --ch-color-base-l-h-30-set: 320;
+  --ch-color-base-l-c-35-set: 0.0525;
+  --ch-color-base-l-h-35-set: 320;
+  --ch-color-base-l-c-40-set: 0.06;
+  --ch-color-base-l-h-40-set: 320;
+  --ch-color-base-l-c-45-set: 0.0675;
+  --ch-color-base-l-h-45-set: 320;
+  --ch-color-base-l-c-50-set: 0.075;
+  --ch-color-base-l-h-50-set: 320;
+  --ch-color-base-l-c-55-set: 0.0825;
+  --ch-color-base-l-h-55-set: 320;
+  --ch-color-base-l-c-60-set: 0.09;
+  --ch-color-base-l-h-60-set: 320;
+  --ch-color-base-l-c-65-set: 0.0963;
+  --ch-color-base-l-h-65-set: 320;
+  --ch-color-base-l-c-70-set: 0.1025;
+  --ch-color-base-l-h-70-set: 320;
+  --ch-color-base-l-c-75-set: 0.1088;
+  --ch-color-base-l-h-75-set: 320;
+  --ch-color-base-l-c-80-set: 0.115;
+  --ch-color-base-l-h-80-set: 320;
+  --ch-color-base-l-c-85-set: 0.12;
+  --ch-color-base-l-h-85-set: 320;
+  --ch-color-base-l-c-90-set: 0.125;
+  --ch-color-base-l-h-90-set: 320;
+  --ch-color-base-l-c-95-set: 0.13;
+  --ch-color-base-l-h-95-set: 320;
+  --ch-color-base-l-c-100-set: 0.135;
+  --ch-color-base-l-h-100-set: 320;
+}
+
+.ssopt-col-base-tone-d-magentis,
+.ssopt-col-base-tone-d-magentis .theme-dark,
+.ssopt-col-base-tone-d-magentis.theme-dark {
+  --ch-color-base-d-c-00-set: 0.01;
+  --ch-color-base-d-h-00-set: 320;
+  --ch-color-base-d-c-05-set: 0.015;
+  --ch-color-base-d-h-05-set: 320;
+  --ch-color-base-d-c-10-set: 0.02;
+  --ch-color-base-d-h-10-set: 320;
+  --ch-color-base-d-c-15-set: 0.025;
+  --ch-color-base-d-h-15-set: 320;
+  --ch-color-base-d-c-20-set: 0.03;
+  --ch-color-base-d-h-20-set: 320;
+  --ch-color-base-d-c-25-set: 0.0375;
+  --ch-color-base-d-h-25-set: 320;
+  --ch-color-base-d-c-30-set: 0.045;
+  --ch-color-base-d-h-30-set: 320;
+  --ch-color-base-d-c-35-set: 0.0525;
+  --ch-color-base-d-h-35-set: 320;
+  --ch-color-base-d-c-40-set: 0.06;
+  --ch-color-base-d-h-40-set: 320;
+  --ch-color-base-d-c-45-set: 0.0675;
+  --ch-color-base-d-h-45-set: 320;
+  --ch-color-base-d-c-50-set: 0.075;
+  --ch-color-base-d-h-50-set: 320;
+  --ch-color-base-d-c-55-set: 0.0825;
+  --ch-color-base-d-h-55-set: 320;
+  --ch-color-base-d-c-60-set: 0.09;
+  --ch-color-base-d-h-60-set: 320;
+  --ch-color-base-d-c-65-set: 0.0963;
+  --ch-color-base-d-h-65-set: 320;
+  --ch-color-base-d-c-70-set: 0.1025;
+  --ch-color-base-d-h-70-set: 320;
+  --ch-color-base-d-c-75-set: 0.1088;
+  --ch-color-base-d-h-75-set: 320;
+  --ch-color-base-d-c-80-set: 0.115;
+  --ch-color-base-d-h-80-set: 320;
+  --ch-color-base-d-c-85-set: 0.12;
+  --ch-color-base-d-h-85-set: 320;
+  --ch-color-base-d-c-90-set: 0.125;
+  --ch-color-base-d-h-90-set: 320;
+  --ch-color-base-d-c-95-set: 0.13;
+  --ch-color-base-d-h-95-set: 320;
+  --ch-color-base-d-c-100-set: 0.135;
+  --ch-color-base-d-h-100-set: 320;
+}
+
+.ssopt-col-base-tone-l-amethystus,
+.ssopt-col-base-tone-l-amethystus .theme-light,
+.ssopt-col-base-tone-l-amethystus.theme-light {
+  --ch-color-base-l-c-00-set: 0.01;
+  --ch-color-base-l-h-00-set: 325;
+  --ch-color-base-l-c-05-set: 0.0125;
+  --ch-color-base-l-h-05-set: 325;
+  --ch-color-base-l-c-10-set: 0.015;
+  --ch-color-base-l-h-10-set: 325;
+  --ch-color-base-l-c-15-set: 0.0175;
+  --ch-color-base-l-h-15-set: 325;
+  --ch-color-base-l-c-20-set: 0.02;
+  --ch-color-base-l-h-20-set: 325;
+  --ch-color-base-l-c-25-set: 0.0238;
+  --ch-color-base-l-h-25-set: 325;
+  --ch-color-base-l-c-30-set: 0.0275;
+  --ch-color-base-l-h-30-set: 325;
+  --ch-color-base-l-c-35-set: 0.0313;
+  --ch-color-base-l-h-35-set: 325;
+  --ch-color-base-l-c-40-set: 0.035;
+  --ch-color-base-l-h-40-set: 325;
+  --ch-color-base-l-c-45-set: 0.04;
+  --ch-color-base-l-h-45-set: 325;
+  --ch-color-base-l-c-50-set: 0.045;
+  --ch-color-base-l-h-50-set: 325;
+  --ch-color-base-l-c-55-set: 0.05;
+  --ch-color-base-l-h-55-set: 325;
+  --ch-color-base-l-c-60-set: 0.055;
+  --ch-color-base-l-h-60-set: 325;
+  --ch-color-base-l-c-65-set: 0.0588;
+  --ch-color-base-l-h-65-set: 325;
+  --ch-color-base-l-c-70-set: 0.0625;
+  --ch-color-base-l-h-70-set: 325;
+  --ch-color-base-l-c-75-set: 0.0663;
+  --ch-color-base-l-h-75-set: 325;
+  --ch-color-base-l-c-80-set: 0.07;
+  --ch-color-base-l-h-80-set: 325;
+  --ch-color-base-l-c-85-set: 0.0738;
+  --ch-color-base-l-h-85-set: 325;
+  --ch-color-base-l-c-90-set: 0.0775;
+  --ch-color-base-l-h-90-set: 325;
+  --ch-color-base-l-c-95-set: 0.0813;
+  --ch-color-base-l-h-95-set: 325;
+  --ch-color-base-l-c-100-set: 0.085;
+  --ch-color-base-l-h-100-set: 325;
+}
+
+.ssopt-col-base-tone-d-amethystus,
+.ssopt-col-base-tone-d-amethystus .theme-dark,
+.ssopt-col-base-tone-d-amethystus.theme-dark {
+  --ch-color-base-d-c-00-set: 0.01;
+  --ch-color-base-d-h-00-set: 325;
+  --ch-color-base-d-c-05-set: 0.0125;
+  --ch-color-base-d-h-05-set: 325;
+  --ch-color-base-d-c-10-set: 0.015;
+  --ch-color-base-d-h-10-set: 325;
+  --ch-color-base-d-c-15-set: 0.0175;
+  --ch-color-base-d-h-15-set: 325;
+  --ch-color-base-d-c-20-set: 0.02;
+  --ch-color-base-d-h-20-set: 325;
+  --ch-color-base-d-c-25-set: 0.0238;
+  --ch-color-base-d-h-25-set: 325;
+  --ch-color-base-d-c-30-set: 0.0275;
+  --ch-color-base-d-h-30-set: 325;
+  --ch-color-base-d-c-35-set: 0.0313;
+  --ch-color-base-d-h-35-set: 325;
+  --ch-color-base-d-c-40-set: 0.035;
+  --ch-color-base-d-h-40-set: 325;
+  --ch-color-base-d-c-45-set: 0.04;
+  --ch-color-base-d-h-45-set: 325;
+  --ch-color-base-d-c-50-set: 0.045;
+  --ch-color-base-d-h-50-set: 325;
+  --ch-color-base-d-c-55-set: 0.05;
+  --ch-color-base-d-h-55-set: 325;
+  --ch-color-base-d-c-60-set: 0.055;
+  --ch-color-base-d-h-60-set: 325;
+  --ch-color-base-d-c-65-set: 0.0588;
+  --ch-color-base-d-h-65-set: 325;
+  --ch-color-base-d-c-70-set: 0.0625;
+  --ch-color-base-d-h-70-set: 325;
+  --ch-color-base-d-c-75-set: 0.0663;
+  --ch-color-base-d-h-75-set: 325;
+  --ch-color-base-d-c-80-set: 0.07;
+  --ch-color-base-d-h-80-set: 325;
+  --ch-color-base-d-c-85-set: 0.0738;
+  --ch-color-base-d-h-85-set: 325;
+  --ch-color-base-d-c-90-set: 0.0775;
+  --ch-color-base-d-h-90-set: 325;
+  --ch-color-base-d-c-95-set: 0.0813;
+  --ch-color-base-d-h-95-set: 325;
+  --ch-color-base-d-c-100-set: 0.085;
+  --ch-color-base-d-h-100-set: 325;
+}
+
+.ssopt-col-base-tone-l-ootaevas,
+.ssopt-col-base-tone-l-ootaevas .theme-light,
+.ssopt-col-base-tone-l-ootaevas.theme-light {
+  --ch-color-base-l-c-00-set: 0.008;
+  --ch-color-base-l-h-00-set: 270;
+  --ch-color-base-l-c-05-set: 0.01;
+  --ch-color-base-l-h-05-set: 270;
+  --ch-color-base-l-c-10-set: 0.012;
+  --ch-color-base-l-h-10-set: 270;
+  --ch-color-base-l-c-15-set: 0.015;
+  --ch-color-base-l-h-15-set: 269;
+  --ch-color-base-l-c-20-set: 0.018;
+  --ch-color-base-l-h-20-set: 268;
+  --ch-color-base-l-c-25-set: 0.022;
+  --ch-color-base-l-h-25-set: 265;
+  --ch-color-base-l-c-30-set: 0.029;
+  --ch-color-base-l-h-30-set: 264.25;
+  --ch-color-base-l-c-35-set: 0.036;
+  --ch-color-base-l-h-35-set: 263.5;
+  --ch-color-base-l-c-40-set: 0.043;
+  --ch-color-base-l-h-40-set: 262.75;
+  --ch-color-base-l-c-45-set: 0.05;
+  --ch-color-base-l-h-45-set: 262;
+  --ch-color-base-l-c-50-set: 0.0583;
+  --ch-color-base-l-h-50-set: 261.33;
+  --ch-color-base-l-c-55-set: 0.0667;
+  --ch-color-base-l-h-55-set: 260.67;
+  --ch-color-base-l-c-60-set: 0.075;
+  --ch-color-base-l-h-60-set: 260;
+  --ch-color-base-l-c-65-set: 0.0788;
+  --ch-color-base-l-h-65-set: 259.5;
+  --ch-color-base-l-c-70-set: 0.0825;
+  --ch-color-base-l-h-70-set: 259;
+  --ch-color-base-l-c-75-set: 0.0862;
+  --ch-color-base-l-h-75-set: 258.5;
+  --ch-color-base-l-c-80-set: 0.09;
+  --ch-color-base-l-h-80-set: 258;
+  --ch-color-base-l-c-85-set: 0.0712;
+  --ch-color-base-l-h-85-set: 258;
+  --ch-color-base-l-c-90-set: 0.0525;
+  --ch-color-base-l-h-90-set: 258;
+  --ch-color-base-l-c-95-set: 0.0338;
+  --ch-color-base-l-h-95-set: 258;
+  --ch-color-base-l-c-100-set: 0.015;
+  --ch-color-base-l-h-100-set: 258;
+}
+
+.ssopt-col-base-tone-d-ootaevas,
+.ssopt-col-base-tone-d-ootaevas .theme-dark,
+.ssopt-col-base-tone-d-ootaevas.theme-dark {
+  --ch-color-base-d-c-00-set: 0.008;
+  --ch-color-base-d-h-00-set: 270;
+  --ch-color-base-d-c-05-set: 0.01;
+  --ch-color-base-d-h-05-set: 270;
+  --ch-color-base-d-c-10-set: 0.012;
+  --ch-color-base-d-h-10-set: 270;
+  --ch-color-base-d-c-15-set: 0.015;
+  --ch-color-base-d-h-15-set: 269;
+  --ch-color-base-d-c-20-set: 0.018;
+  --ch-color-base-d-h-20-set: 268;
+  --ch-color-base-d-c-25-set: 0.022;
+  --ch-color-base-d-h-25-set: 265;
+  --ch-color-base-d-c-30-set: 0.029;
+  --ch-color-base-d-h-30-set: 264.25;
+  --ch-color-base-d-c-35-set: 0.036;
+  --ch-color-base-d-h-35-set: 263.5;
+  --ch-color-base-d-c-40-set: 0.043;
+  --ch-color-base-d-h-40-set: 262.75;
+  --ch-color-base-d-c-45-set: 0.05;
+  --ch-color-base-d-h-45-set: 262;
+  --ch-color-base-d-c-50-set: 0.0583;
+  --ch-color-base-d-h-50-set: 261.33;
+  --ch-color-base-d-c-55-set: 0.0667;
+  --ch-color-base-d-h-55-set: 260.67;
+  --ch-color-base-d-c-60-set: 0.075;
+  --ch-color-base-d-h-60-set: 260;
+  --ch-color-base-d-c-65-set: 0.0788;
+  --ch-color-base-d-h-65-set: 259.5;
+  --ch-color-base-d-c-70-set: 0.0825;
+  --ch-color-base-d-h-70-set: 259;
+  --ch-color-base-d-c-75-set: 0.0862;
+  --ch-color-base-d-h-75-set: 258.5;
+  --ch-color-base-d-c-80-set: 0.09;
+  --ch-color-base-d-h-80-set: 258;
+  --ch-color-base-d-c-85-set: 0.0712;
+  --ch-color-base-d-h-85-set: 258;
+  --ch-color-base-d-c-90-set: 0.0525;
+  --ch-color-base-d-h-90-set: 258;
+  --ch-color-base-d-c-95-set: 0.0338;
+  --ch-color-base-d-h-95-set: 258;
+  --ch-color-base-d-c-100-set: 0.015;
+  --ch-color-base-d-h-100-set: 258;
+}
+
+.ssopt-col-base-tone-l-lumevari,
+.ssopt-col-base-tone-l-lumevari .theme-light,
+.ssopt-col-base-tone-l-lumevari.theme-light {
+  --ch-color-base-l-c-00-set: 0.006;
+  --ch-color-base-l-h-00-set: 280;
+  --ch-color-base-l-c-05-set: 0.008;
+  --ch-color-base-l-h-05-set: 277.5;
+  --ch-color-base-l-c-10-set: 0.01;
+  --ch-color-base-l-h-10-set: 275;
+  --ch-color-base-l-c-15-set: 0.0125;
+  --ch-color-base-l-h-15-set: 272.5;
+  --ch-color-base-l-c-20-set: 0.015;
+  --ch-color-base-l-h-20-set: 270;
+  --ch-color-base-l-c-25-set: 0.018;
+  --ch-color-base-l-h-25-set: 265;
+  --ch-color-base-l-c-30-set: 0.0223;
+  --ch-color-base-l-h-30-set: 262.5;
+  --ch-color-base-l-c-35-set: 0.0265;
+  --ch-color-base-l-h-35-set: 260;
+  --ch-color-base-l-c-40-set: 0.0308;
+  --ch-color-base-l-h-40-set: 257.5;
+  --ch-color-base-l-c-45-set: 0.035;
+  --ch-color-base-l-h-45-set: 255;
+  --ch-color-base-l-c-50-set: 0.0417;
+  --ch-color-base-l-h-50-set: 251.67;
+  --ch-color-base-l-c-55-set: 0.0483;
+  --ch-color-base-l-h-55-set: 248.33;
+  --ch-color-base-l-c-60-set: 0.055;
+  --ch-color-base-l-h-60-set: 245;
+  --ch-color-base-l-c-65-set: 0.0575;
+  --ch-color-base-l-h-65-set: 243.75;
+  --ch-color-base-l-c-70-set: 0.06;
+  --ch-color-base-l-h-70-set: 242.5;
+  --ch-color-base-l-c-75-set: 0.0625;
+  --ch-color-base-l-h-75-set: 241.25;
+  --ch-color-base-l-c-80-set: 0.065;
+  --ch-color-base-l-h-80-set: 240;
+  --ch-color-base-l-c-85-set: 0.0508;
+  --ch-color-base-l-h-85-set: 240;
+  --ch-color-base-l-c-90-set: 0.0365;
+  --ch-color-base-l-h-90-set: 240;
+  --ch-color-base-l-c-95-set: 0.0223;
+  --ch-color-base-l-h-95-set: 240;
+  --ch-color-base-l-c-100-set: 0.008;
+  --ch-color-base-l-h-100-set: 240;
+}
+
+.ssopt-col-base-tone-d-lumevari,
+.ssopt-col-base-tone-d-lumevari .theme-dark,
+.ssopt-col-base-tone-d-lumevari.theme-dark {
+  --ch-color-base-d-c-00-set: 0.006;
+  --ch-color-base-d-h-00-set: 280;
+  --ch-color-base-d-c-05-set: 0.008;
+  --ch-color-base-d-h-05-set: 277.5;
+  --ch-color-base-d-c-10-set: 0.01;
+  --ch-color-base-d-h-10-set: 275;
+  --ch-color-base-d-c-15-set: 0.0125;
+  --ch-color-base-d-h-15-set: 272.5;
+  --ch-color-base-d-c-20-set: 0.015;
+  --ch-color-base-d-h-20-set: 270;
+  --ch-color-base-d-c-25-set: 0.018;
+  --ch-color-base-d-h-25-set: 265;
+  --ch-color-base-d-c-30-set: 0.0223;
+  --ch-color-base-d-h-30-set: 262.5;
+  --ch-color-base-d-c-35-set: 0.0265;
+  --ch-color-base-d-h-35-set: 260;
+  --ch-color-base-d-c-40-set: 0.0308;
+  --ch-color-base-d-h-40-set: 257.5;
+  --ch-color-base-d-c-45-set: 0.035;
+  --ch-color-base-d-h-45-set: 255;
+  --ch-color-base-d-c-50-set: 0.0417;
+  --ch-color-base-d-h-50-set: 251.67;
+  --ch-color-base-d-c-55-set: 0.0483;
+  --ch-color-base-d-h-55-set: 248.33;
+  --ch-color-base-d-c-60-set: 0.055;
+  --ch-color-base-d-h-60-set: 245;
+  --ch-color-base-d-c-65-set: 0.0575;
+  --ch-color-base-d-h-65-set: 243.75;
+  --ch-color-base-d-c-70-set: 0.06;
+  --ch-color-base-d-h-70-set: 242.5;
+  --ch-color-base-d-c-75-set: 0.0625;
+  --ch-color-base-d-h-75-set: 241.25;
+  --ch-color-base-d-c-80-set: 0.065;
+  --ch-color-base-d-h-80-set: 240;
+  --ch-color-base-d-c-85-set: 0.0508;
+  --ch-color-base-d-h-85-set: 240;
+  --ch-color-base-d-c-90-set: 0.0365;
+  --ch-color-base-d-h-90-set: 240;
+  --ch-color-base-d-c-95-set: 0.0223;
+  --ch-color-base-d-h-95-set: 240;
+  --ch-color-base-d-c-100-set: 0.008;
+  --ch-color-base-d-h-100-set: 240;
+}
+

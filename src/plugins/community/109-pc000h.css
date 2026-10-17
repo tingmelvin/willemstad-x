@@ -1,0 +1,1732 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC000H
+\ Plugins > Community
+\ Style Settings
+\ RealDisplay
+───────────────────────────────────────────────────────────────────────────────────
+Refactored for improved maintainability by using a placeholder selector for the 
+common grid pattern. This keeps the structure flat and explicit, avoiding complex 
+mixins or deep nesting, while still reducing code duplication.
+──────────────────────────────────────────────────────────────────────────────── */
+
+/*
+  MASTER MIXIN: Generates a selector for a list of data-ids.
+  This is kept from the original as it is clear and effective.
+*/
+
+/*
+  PLACEHOLDER: A reusable, non-outputting ruleset for the 2-column grid layout.
+  Any rule that uses `@extend %real-display-grid` will inherit these properties in the
+  final compiled CSS. This is the main tool for reducing repetition while keeping
+  the code readable and flat.
+*/
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-info, .setting-item[data-id="infobox-title-font-size"] .setting-item-info, .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info, .setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info {
+  display: grid;
+  grid-template: "left-top   right-col" auto "left-bottom right-col" 1fr / 49% 49%;
+  column-gap: 2%;
+}
+
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-info .setting-item-name, .setting-item[data-id="infobox-title-font-size"] .setting-item-info .setting-item-name, .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info .setting-item-name, .setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info .setting-item-name {
+  grid-area: left-top;
+}
+
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-info .setting-item-description, .setting-item[data-id="infobox-title-font-size"] .setting-item-info .setting-item-description, .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info .setting-item-description, .setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info .setting-item-description {
+  grid-area: left-bottom;
+}
+
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-info::after, .setting-item[data-id="infobox-title-font-size"] .setting-item-info::after, .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::after, .setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info::after, .setting-item[data-id="ssopt-codeblock-language"] .setting-item-info::before, .setting-item[data-id="infobox-title-font-size"] .setting-item-info::before, .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::before, .setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info::before {
+  grid-area: right-col;
+}
+
+@keyframes changeHeaderNum {
+  0%, 100% {
+    content: "H1";
+    color: var(--col-h1);
+    background-color: var(--col-h1-bg);
+  }
+
+  16.67% {
+    content: "H2";
+    color: var(--col-h2);
+    background-color: var(--col-h2-bg);
+  }
+
+  33.33% {
+    content: "H3";
+    color: var(--col-h3);
+    background-color: var(--col-h3-bg);
+  }
+
+  50% {
+    content: "H4";
+    color: var(--col-h4);
+    background-color: var(--col-h4-bg);
+  }
+
+  66.67% {
+    content: "H5";
+    color: var(--col-h5);
+    background-color: var(--col-h5-bg);
+  }
+
+  83.33% {
+    content: "H6";
+    color: var(--col-h6);
+    background-color: var(--col-h6-bg);
+  }
+}
+
+@keyframes changeHeaderNumNoColor {
+  0%, 100% {
+    content: "H1";
+    color: var(--h1-color);
+  }
+
+  16.67% {
+    content: "H2";
+    color: var(--h2-color);
+  }
+
+  33.33% {
+    content: "H3";
+    color: var(--h3-color);
+  }
+
+  50% {
+    content: "H4";
+    color: var(--h4-color);
+  }
+
+  66.67% {
+    content: "H5";
+    color: var(--h5-color);
+  }
+
+  83.33% {
+    content: "H6";
+    color: var(--h6-color);
+  }
+}
+
+@keyframes header-hex-color-snap {
+  0%, 100% {
+    background-color: var(--col-h1-bg);
+  }
+
+  16.67% {
+    background-color: var(--col-h2-bg);
+  }
+
+  33.33% {
+    background-color: var(--col-h3-bg);
+  }
+
+  50% {
+    background-color: var(--col-h4-bg);
+  }
+
+  66.67% {
+    background-color: var(--col-h5-bg);
+  }
+
+  83.33% {
+    background-color: var(--col-h6-bg);
+  }
+}
+
+@keyframes color-snap {
+  0%, 100% {
+    background-color: var(--col-highlight-0);
+  }
+
+  25% {
+    background-color: var(--col-highlight-1);
+  }
+
+  50% {
+    background-color: var(--col-highlight-2);
+  }
+
+  75% {
+    background-color: var(--col-highlight-3);
+  }
+}
+
+@keyframes header-color-rotate {
+  0%, 100% {
+    color: oklch(from var(--color-red) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-red) l c h / 80%);
+  }
+
+  12.5% {
+    color: oklch(from var(--color-orange) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-orange) l c h / 80%);
+  }
+
+  25% {
+    color: oklch(from var(--color-yellow) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-yellow) l c h / 80%);
+  }
+
+  37.5% {
+    color: oklch(from var(--color-green) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-green) l c h / 80%);
+  }
+
+  50% {
+    color: oklch(from var(--color-cyan) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-cyan) l c h / 80%);
+  }
+
+  62.5% {
+    color: oklch(from var(--color-blue) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-blue) l c h / 80%);
+  }
+
+  75% {
+    color: oklch(from var(--color-purple) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-purple) l c h / 80%);
+  }
+
+  87.5% {
+    color: oklch(from var(--color-pink) calc(l + var(--text-lightness-mod)) calc(c * var(--text-chroma-mod)) h);
+    background-color: oklch(from var(--color-pink) l c h / 80%);
+  }
+}
+
+@keyframes switch-header-mask {
+  0%, 100% {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-file-search'%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'%3E%3C/path%3E%3Cpath d='M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3'%3E%3C/path%3E%3Cpath d='m9 18-1.5-1.5'%3E%3C/path%3E%3Ccircle cx='5' cy='14' r='3'%3E%3C/circle%3E%3C/svg%3E");
+  }
+
+  20% {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-git-fork'%3E%3Ccircle cx='12' cy='18' r='3'%3E%3C/circle%3E%3Ccircle cx='6' cy='6' r='3'%3E%3C/circle%3E%3Ccircle cx='18' cy='6' r='3'%3E%3C/circle%3E%3Cpath d='M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9'%3E%3C/path%3E%3Cpath d='M12 12v3'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  40% {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-layout-dashboard'%3E%3Crect x='3' y='3' width='7' height='9' rx='1'%3E%3C/rect%3E%3Crect x='14' y='3' width='7' height='5' rx='1'%3E%3C/rect%3E%3Crect x='14' y='12' width='7' height='9' rx='1'%3E%3C/rect%3E%3Crect x='3' y='16' width='7' height='5' rx='1'%3E%3C/rect%3E%3C/svg%3E");
+  }
+
+  60% {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-terminal'%3E%3Cpolyline points='4 17 10 11 4 5'%3E%3C/polyline%3E%3Cline x1='12' y1='19' x2='20' y2='19'%3E%3C/line%3E%3C/svg%3E");
+  }
+
+  80% {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-trello'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Crect x='7' y='7' width='3' height='9'%3E%3C/rect%3E%3Crect x='14' y='7' width='3' height='5'%3E%3C/rect%3E%3C/svg%3E");
+  }
+}
+
+/* --------------------------------------------------------------------------------
+   [0] Website Links
+----------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------
+   [1] Typeface/Fonts RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item:is([data-id="font-monospace-theme"], [data-id="font-heading"], [data-id="font-editor"], [data-id="font-menu"], [data-id="font-ui"], [data-id="font-editor-m"], [data-id="font-menu-m"], [data-id="font-ui-m"], [data-id="font-mermaid"]) .setting-item-control::before {
+  content: "Hello!";
+  padding: 4px 8px;
+  background-color: var(--background-primary-alt);
+  border-radius: var(--radius-s);
+}
+
+.setting-item[data-id="font-monospace-theme"] .setting-item-control::before {
+  font-family: var(--font-monospace-theme);
+}
+
+.setting-item[data-id="font-heading"] .setting-item-control::before {
+  font-family: var(--font-heading);
+}
+
+.setting-item[data-id="font-editor"] .setting-item-control::before {
+  font-family: var(--font-editor);
+}
+
+.setting-item[data-id="font-menu"] .setting-item-control::before {
+  font-family: var(--font-menu);
+}
+
+.setting-item[data-id="font-ui"] .setting-item-control::before {
+  font-family: var(--font-ui);
+}
+
+.setting-item[data-id="font-editor-m"] .setting-item-control::before {
+  font-family: var(--font-editor-m);
+}
+
+.setting-item[data-id="font-menu-m"] .setting-item-control::before {
+  font-family: var(--font-menu-m);
+}
+
+.setting-item[data-id="font-ui-m"] .setting-item-control::before {
+  font-family: var(--font-ui-m);
+}
+
+.setting-item[data-id="font-mermaid"] .setting-item-control::before {
+  font-family: var(--font-mermaid);
+}
+
+/* --------------------------------------------------------------------------------
+   [2] Status Bar | Frosted Glass Aesthetic RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info {
+  position: relative;
+}
+
+.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info::after {
+  display: flex;
+  padding: var(--size-4-3) var(--size-4-4);
+  border-radius: var(--code-radius);
+  box-shadow: 0 0 0 1px var(--code-background);
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere velit eget volutpat finibus. Fusce in libero at ante gravida posuere id fermentum est. Donec aliquet accumsan lacus non faucibus. Morbi eu lacus consectetur, convallis justo quis, dignissim ligula. Mauris scelerisque ipsum ac venenatis volutpat. Nulla bibendum ut lacus vitae ullamcorper. Proin vestibulum sapien at dolor feugiat, ultricies faucibus sem auctor. Duis pharetra, est vitae tincidunt porta, risus risus eleifend neque, eu tristique tortor nisl maximus leo. Nunc ante libero, vehicula sit amet accumsan vel, rutrum ac leo. ";
+  flex-shrink: 0;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  padding: var(--size-4-2) 20px;
+  color: var(--status-bar-text-color);
+  background-color: var(--status-bar-background);
+  border: var(--sbb-divider-width) solid var(--status-bar-border-color);
+  border-radius: var(--radius-m);
+  transform: translate(-50%, -50%);
+  content: "0 backlinks 3 properties 45 notes";
+  white-space: nowrap;
+}
+
+body:is(.ssopt-status-bar-glass):not(.no-blur) .setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info::before {
+  backdrop-filter: blur(var(--status-bar-glass-blur));
+  background-color: unset;
+}
+
+body:is(.ssopt-status-bar-float-not) .setting-item[data-id="ssopt-status-bar-glass"] .setting-item-info::before {
+  transform: translate(-50%, 0%);
+}
+
+.setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-control::before {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  padding: var(--size-4-2) 20px;
+  color: var(--status-bar-text-color);
+  background-color: var(--status-bar-background);
+  border: var(--sbb-divider-width) solid var(--status-bar-border-color);
+  border-radius: var(--radius-m);
+  content: "0 backlinks 3 properties 45 notes";
+  white-space: nowrap;
+  order: -1;
+}
+
+body:is(.ssopt-status-bar-glass):not(.no-blur) .setting-item[data-id="ssopt-status-bar-borderless"] .setting-item-control::before {
+  backdrop-filter: blur(var(--status-bar-glass-blur));
+  background-color: unset;
+}
+
+/* --------------------------------------------------------------------------------
+   [2b] Tab Style RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="workspace-tabs-style-select"] .setting-item-info {
+  position: relative;
+}
+
+.setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::before {
+  display: flex;
+  padding: var(--size-4-3) var(--size-4-4);
+  background-color: var(--background-secondary);
+  border-radius: var(--code-radius);
+  content: "";
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::after {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  padding: var(--size-2-2);
+  color: var(--tab-text-color-focused-active-current);
+  background-color: var(--background-primary);
+  border: var(--tab-focus-border-width) solid var(--background-modifier-border);
+  border-radius: var(--tab-radius);
+  transform: translate(-50%, 0%);
+  content: "Note Title   x";
+  white-space: nowrap;
+}
+
+.ssopt-tabs-square .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::after {
+  bottom: 0;
+  padding: var(--size-2-3) var(--size-2-2);
+  border: none;
+  border-radius: 0;
+}
+
+.ssopt-tabs-underline .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::after {
+  --tab-underline-height: 2px;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: inset 0 calc(-1 * var(--tab-underline-height)) var(--col-tab-style);
+}
+
+.ssopt-tabs-index-box .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::after {
+  bottom: 0;
+  padding: var(--size-2-3) var(--size-2-2) var(--size-2-2);
+  border: none;
+  border-radius: 0;
+}
+
+.ssopt-tabs-index-old .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info::after {
+  bottom: 0;
+  padding: var(--size-2-3) var(--size-2-2) var(--size-2-2);
+  border: none;
+  border-radius: var(--tab-radius) var(--tab-radius) 0 0;
+}
+
+.ssopt-tabs-underline .setting-item[data-id="workspace-tabs-style-select"] .setting-item-info:hover::after {
+  box-shadow: inset 0 calc(-1.5 * var(--tab-underline-height)) var(--col-tab-style);
+}
+
+/* --------------------------------------------------------------------------------
+   [3] Coloured Headers & Infobox RealDisplays
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="coloured-headers"] .setting-item-control::before {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  padding: 4px 8px;
+  border-radius: var(--radius-s);
+  content: "H1";
+  animation: changeHeaderNumNoColor 9s infinite steps(1, end);
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="coloured-headers"] .setting-item-control::before {
+  animation: changeHeaderNum 9s infinite steps(1, end);
+}
+
+/*
+.setting-item[data-id="col-header-hex"] .setting-item-control::before {
+  content: "#";
+  padding: 4px 8px;
+  border-radius: var(--radius-s);
+  color: var(--col-header-hex);
+  body:not(.ssopt-no-coloured-headers) & {
+    animation: header-hex-color-snap 9s infinite steps(1, end);
+  }
+}
+*/
+@keyframes header-hex-special-cycle {
+  0%, 100% {
+    --col-header-hex-special: oklch(from var(--col-h1-bg) var(--l) 0.03 h);
+  }
+
+  16.67% {
+    --col-header-hex-special: oklch(from var(--col-h2-bg) var(--l) 0.03 h);
+  }
+
+  33.33% {
+    --col-header-hex-special: oklch(from var(--col-h3-bg) var(--l) 0.03 h);
+  }
+
+  50% {
+    --col-header-hex-special: oklch(from var(--col-h4-bg) var(--l) 0.03 h);
+  }
+
+  66.67% {
+    --col-header-hex-special: oklch(from var(--col-h5-bg) var(--l) 0.03 h);
+  }
+
+  83.33% {
+    --col-header-hex-special: oklch(from var(--col-h6-bg) var(--l) 0.03 h);
+  }
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-1 {
+  color: var(--col-header-hex, var(--col-h1, oklch(from var(--col-h1-bg) var(--l) 0.03 h)));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-2 {
+  color: var(--col-header-hex, var(--col-h2, oklch(from var(--col-h2-bg) var(--l) 0.03 h)));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-3 {
+  color: var(--col-header-hex, var(--col-h3, oklch(from var(--col-h3-bg) var(--l) 0.03 h)));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-4 {
+  color: var(--col-header-hex, var(--col-h4, oklch(from var(--col-h4-bg) var(--l) 0.03 h)));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-5 {
+  color: var(--col-header-hex, var(--col-h5, oklch(from var(--col-h5-bg) var(--l) 0.03 h)));
+}
+
+body:not(.ssopt-no-coloured-headers) .cm-formatting-header-6 {
+  color: var(--col-header-hex, var(--col-h6, oklch(from var(--col-h6-bg) var(--l) 0.03 h)));
+}
+
+.setting-item[data-id="col-header-hex"] .setting-item-control::before {
+  padding: 4px 8px;
+  color: var(--col-header-hex, var(--col-header-hex-special));
+  border-radius: var(--radius-s);
+  content: "#";
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="col-header-hex"] .setting-item-control::before {
+  animation: header-hex-special-cycle 9s infinite steps(1, end), header-hex-color-snap 9s infinite steps(1, end);
+}
+
+.setting-item[data-id="infobox-title-font-size"] .setting-item-info {
+  position: relative;
+}
+
+.setting-item[data-id="infobox-title-font-size"] .setting-item-info::after {
+  display: flex;
+  justify-content: center;
+  padding: var(--size-2-3) var(--size-4-2);
+  font-size: var(--infobox-title-font-size);
+  border-radius: var(--radius-s);
+  content: "This is your title";
+  white-space: pre-wrap;
+  animation: header-color-rotate 12s infinite steps(1, end);
+  text-align: center;
+  align-self: center;
+  font-weight: bold;
+
+  --text-lightness-mod: -0.15;
+  --text-chroma-mod: 0.85;
+}
+
+/* --------------------------------------------------------------------------------
+   [3A] Headers RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="h1-settings"] .setting-item-control::before {
+  padding: var(--padding-headers);
+  font-family: var(--h1-font);
+  font-size: var(--h1-size);
+  color: var(--h1-color);
+  content: "Header 1";
+  font-variant: var(--h1-variant);
+  letter-spacing: -0.015em;
+  line-height: var(--h1-line-height);
+  font-weight: var(--font-weight);
+  font-style: var(--h1-style);
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  --font-weight: var(--h1-weight);
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h1-settings"] .setting-item-control::before {
+  color: var(--col-h1);
+  background-color: var(--col-h1-bg);
+}
+
+.setting-item[data-id="h2-settings"] .setting-item-control::before {
+  padding: var(--padding-headers);
+  font-family: var(--h2-font);
+  font-size: var(--h2-size);
+  color: var(--h2-color);
+  content: "Header 2";
+  font-variant: var(--h2-variant);
+  letter-spacing: -0.015em;
+  line-height: var(--h2-line-height);
+  font-weight: var(--font-weight);
+  font-style: var(--h2-style);
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  --font-weight: var(--h2-weight);
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h2-settings"] .setting-item-control::before {
+  color: var(--col-h2);
+  background-color: var(--col-h2-bg);
+}
+
+.setting-item[data-id="h3-settings"] .setting-item-control::before {
+  padding: var(--padding-headers);
+  font-family: var(--h3-font);
+  font-size: var(--h3-size);
+  color: var(--h3-color);
+  content: "Header 3";
+  font-variant: var(--h3-variant);
+  letter-spacing: -0.015em;
+  line-height: var(--h3-line-height);
+  font-weight: var(--font-weight);
+  font-style: var(--h3-style);
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  --font-weight: var(--h3-weight);
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h3-settings"] .setting-item-control::before {
+  color: var(--col-h3);
+  background-color: var(--col-h3-bg);
+}
+
+.setting-item[data-id="h4-settings"] .setting-item-control::before {
+  padding: var(--padding-headers);
+  font-family: var(--h4-font);
+  font-size: var(--h4-size);
+  color: var(--h4-color);
+  content: "Header 4";
+  font-variant: var(--h4-variant);
+  letter-spacing: -0.015em;
+  line-height: var(--h4-line-height);
+  font-weight: var(--font-weight);
+  font-style: var(--h4-style);
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  --font-weight: var(--h4-weight);
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h4-settings"] .setting-item-control::before {
+  color: var(--col-h4);
+  background-color: var(--col-h4-bg);
+}
+
+.setting-item[data-id="h5-settings"] .setting-item-control::before {
+  padding: var(--padding-headers);
+  font-family: var(--h5-font);
+  font-size: var(--h5-size);
+  color: var(--h5-color);
+  content: "Header 5";
+  font-variant: var(--h5-variant);
+  letter-spacing: -0.015em;
+  line-height: var(--h5-line-height);
+  font-weight: var(--font-weight);
+  font-style: var(--h5-style);
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  --font-weight: var(--h5-weight);
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h5-settings"] .setting-item-control::before {
+  color: var(--col-h5);
+  background-color: var(--col-h5-bg);
+}
+
+.setting-item[data-id="h6-settings"] .setting-item-control::before {
+  padding: var(--padding-headers);
+  font-family: var(--h6-font);
+  font-size: var(--h6-size);
+  color: var(--h6-color);
+  content: "Header 6";
+  font-variant: var(--h6-variant);
+  letter-spacing: -0.015em;
+  line-height: var(--h6-line-height);
+  font-weight: var(--font-weight);
+  font-style: var(--h6-style);
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  --font-weight: var(--h6-weight);
+}
+
+body:not(.ssopt-no-coloured-headers) .setting-item[data-id="h6-settings"] .setting-item-control::before {
+  color: var(--col-h6);
+  background-color: var(--col-h6-bg);
+}
+
+/* --------------------------------------------------------------------------------
+   [4] Titlebar Accent & Calendar RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="col-titlebar-accent"] .setting-item-control::before {
+  padding: 4px 8px;
+  color: var(--text-on-accent);
+  background-color: var(--col-titlebar-accent);
+  border-radius: var(--radius-s);
+  content: "Text";
+}
+
+.setting-item:is([data-id="color-text-today"], [data-id="PComm001-col-year"]) .setting-item-control::before {
+  padding: 4px 8px;
+  font-size: var(--font-ui-smaller);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+}
+
+.setting-item:is([data-id="color-text-today"]) .setting-item-control::before {
+  content: "Jan 1";
+  white-space: nowrap;
+}
+
+.setting-item:is([data-id="PComm001-col-year"]) .setting-item-control::before {
+  content: "2020";
+}
+
+.setting-item[data-id="color-text-today"] .setting-item-control::before {
+  color: var(--color-text-today);
+}
+
+.setting-item[data-id="PComm001-col-year"] .setting-item-control::before {
+  color: var(--PComm001-col-year);
+}
+
+/* --------------------------------------------------------------------------------
+   [5] Underline Descenders RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="undl-text-norm"] .setting-item-control::before {
+  content: "pig, joy & quiz";
+  padding: 4px 8px;
+  background-color: var(--background-primary-alt);
+  border-radius: var(--radius-s);
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: 1px;
+}
+
+.ssopt-typ-undl-nor-min .setting-item[data-id="undl-text-norm"] .setting-item-control::before {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 0;
+}
+
+.ssopt-typ-undl-nor-add .setting-item[data-id="undl-text-norm"] .setting-item-control::before {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 1px;
+}
+
+.setting-item[data-id="undl-hlink"] .setting-item-control::before {
+  padding: 4px 8px;
+  color: var(--link-external-color);
+  background-color: var(--background-primary-alt);
+  border-radius: var(--radius-s);
+  content: "query.jpg";
+  cursor: url(), pointer;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: 1px;
+}
+
+.ssopt-typ-undl-hyp-min .setting-item[data-id="undl-hlink"] .setting-item-control::before {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 0;
+}
+
+.ssopt-typ-undl-hyp-add .setting-item[data-id="undl-hlink"] .setting-item-control::before {
+  text-decoration: underline;
+  text-underline-position: auto;
+  text-underline-offset: 1px;
+}
+
+/* --------------------------------------------------------------------------------
+   [6] Checkbox Radius RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="checkbox-radius"] .setting-item-control {
+  position: relative;
+}
+
+.setting-item[data-id="checkbox-radius"] .setting-item-control::before {
+  display: inline-block;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  background-color: var(--checkbox-color);
+  border-radius: var(--checkbox-radius);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="checkbox-radius"] .setting-item-control:hover::before {
+  background-color: unset;
+  box-shadow: inset 0 0 0 1px var(--checkbox-border-color);
+}
+
+.setting-item[data-id="checkbox-radius"] .setting-item-control:not(:hover)::after {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  background-color: var(--checkbox-marker-color);
+  content: "";
+  inset-inline-start: 0;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate%28-4.000000, -6.000000%29" fill="%23000000"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+  mask-size: 60%;
+}
+
+/* --------------------------------------------------------------------------------
+   [7] Sidebar Button & MWB Icon RealDisplays
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="ssopt-sidebar-toggle-button-no-colour"] .setting-item-control {
+  position: relative;
+}
+
+.setting-item[data-id="ssopt-sidebar-toggle-button-no-colour"] .setting-item-control::before {
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  padding: var(--sidebar-icon-padding);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="ssopt-sidebar-toggle-button-no-colour"] .setting-item-control::after {
+  position: absolute;
+  left: var(--sidebar-icon-padding);
+  z-index: 2;
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  content: "";
+  mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%20fill%3D'none'%20stroke%3D'currentColor'%20stroke-width%3D'2'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%20class%3D'svg-icon%20sidebar-toggle-button-icon'%3E%3Crect%20x%3D'1'%20y%3D'3'%20width%3D'22'%20height%3D'20'%20rx%3D'4'%3E%3C%2Frect%3E%3Crect%20x%3D'4'%20y%3D'6'%20width%3D'2'%20height%3D'14'%20rx%3D'2'%20fill%3D'currentColor'%20class%3D'sidebar-toggle-icon-inner'%3E%3C%2Frect%3E%3C%2Fsvg%3E");
+  mask-position: center;
+}
+
+body:is(.ssopt-sidebar-toggle-button-no-colour) .setting-item[data-id="ssopt-sidebar-toggle-button-no-colour"] .setting-item-control::after {
+  background-color: var(--icon-color);
+  opacity: var(--icon-opacity);
+}
+
+body:not(.ssopt-sidebar-toggle-button-no-colour) .setting-item[data-id="ssopt-sidebar-toggle-button-no-colour"] .setting-item-control::after {
+  background-color: var(--icon-color-active);
+  opacity: var(--icon-opacity);
+}
+
+.setting-item:is([data-id="sidebar-icon-size"], [data-id="header-icon-size"], [data-id="tab-icon-size"], [data-id="hover-frac, "]) .setting-item-control {
+  position: relative;
+}
+
+.setting-item:is([data-id="sidebar-icon-size"], [data-id="header-icon-size"], [data-id="tab-icon-size"], [data-id="hover-frac, "]) .setting-item-control::before {
+  display: flex;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  padding: var(--header-padding);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  order: -1;
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item:is([data-id="sidebar-icon-size"], [data-id="header-icon-size"], [data-id="tab-icon-size"], [data-id="hover-frac, "]) .setting-item-control::after {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  background-color: var(--icon-color);
+  order: -1;
+  content: "";
+  mask-repeat: no-repeat;
+  mask-position: center;
+  opacity: var(--icon-opacity);
+}
+
+.setting-item:is([data-id="sidebar-icon-size"], [data-id="header-icon-size"], [data-id="tab-icon-size"], [data-id="hover-frac, "]) .setting-item-control:hover::after {
+  background-color: var(--icon-color-hover);
+}
+
+.setting-item:is([data-id="sidebar-icon-size"]) .setting-item-control::after {
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  margin: var(--sidebar-icon-padding);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon sidebar-toggle-button-icon'%3E%3Crect x='1' y='3' width='22' height='20' rx='4'%3E%3C/rect%3E%3Crect x='4' y='6' width='2' height='14' rx='2' fill='currentColor' class='sidebar-toggle-icon-inner'%3E%3C/rect%3E%3C/svg%3E");
+}
+
+.setting-item:is([data-id="sidebar-icon-size"]) .setting-item-control:hover::after {
+  width: var(--sidebar-icon-size-hover);
+  height: var(--sidebar-icon-size-hover);
+  margin: var(--sidebar-padding-hover);
+}
+
+.setting-item:is([data-id="header-icon-size"], [data-id="hover-frac"]) .setting-item-control::after {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  margin: var(--header-padding);
+  animation: switch-header-mask 5s steps(1, end) infinite;
+}
+
+.setting-item:is([data-id="header-icon-size"], [data-id="hover-frac"]) .setting-item-control:hover::after {
+  width: var(--header-icon-size-hover);
+  height: var(--header-icon-size-hover);
+  margin: var(--header-padding-hover);
+}
+
+.setting-item:is([data-id="tab-icon-size"]) .setting-item-control::after {
+  width: var(--tab-icon-size);
+  height: var(--tab-icon-size);
+  margin: var(--tab-padding);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-plus'%3E%3Cpath d='M5 12h14'%3E%3C/path%3E%3Cpath d='M12 5v14'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.setting-item:is([data-id="tab-icon-size"]) .setting-item-control:hover::after {
+  width: var(--tab-icon-size-hover);
+  height: var(--tab-icon-size-hover);
+  margin: var(--tab-padding-hover);
+}
+
+/* --------------------------------------------------------------------------------
+   [8] Highlighting RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="ssopt-highlight-no-box-shadow"] .setting-item-control::before {
+  padding: var(--padding-highlight-TB) var(--padding-highlight-LR);
+  color: var(--text-normal);
+  background-color: var(--col-highlight-0);
+  content: "Example Text";
+  white-space: nowrap;
+}
+
+.ssopt-highlight-no-box-shadow .setting-item[data-id="ssopt-highlight-no-box-shadow"] .setting-item-control::before {
+  padding: 0;
+}
+
+.setting-item[data-id="col-highlight-text"] .setting-item-control::before {
+  content: "Text";
+  white-space: nowrap;
+  padding: 4px 8px;
+  color: var(--col-highlight-text);
+  border-radius: var(--radius-s);
+  font-weight: bold;
+  animation: color-snap 8s infinite steps(1, end);
+}
+
+/* --------------------------------------------------------------------------------
+   [9] Codeblock Language Display RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="ssopt-codeblock-language"] {
+  grid-template-areas: "top top" "btm btm";
+}
+
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-control {
+  grid-area: btm;
+}
+
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-info {
+  grid-area: top;
+  position: relative;
+}
+
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-info::after {
+  display: flex;
+  padding: var(--size-4-3) var(--size-4-4);
+  background-color: var(--code-background);
+  border-radius: var(--code-radius);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="ssopt-codeblock-language"] .setting-item-info::before {
+  position: absolute;
+  bottom: 4px;
+  z-index: 1;
+  color: var(--text-muted);
+  content: "css";
+  inset-inline-end: 8px;
+}
+
+.ssopt-codeblock-lang-old .setting-item[data-id="ssopt-codeblock-language"] .setting-item-info::before {
+  top: 4px;
+  bottom: unset;
+  font-family: monospace;
+  color: var(--color-red);
+}
+
+.ssopt-codeblock-lang-none .setting-item[data-id="ssopt-codeblock-language"] .setting-item-info::before {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------------
+   [10] Frontmatter/Properties RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-control {
+  position: relative;
+}
+
+.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-control::before {
+  padding: var(--size-4-1) 0 var(--size-4-1) var(--size-4-2);
+  font-family: var(--font-monospace);
+  color: var(--col-frontmatter-atom);
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-right: none;
+  content: "aliases";
+  order: -2;
+  font-weight: bold;
+}
+
+.ssopt-yaml-no-colour .setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-control::before {
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-control::after {
+  position: relative;
+  right: var(--size-4-2);
+  padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) 0;
+  font-family: var(--font-monospace);
+  color: var(--col-frontmatter-default);
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-left: none;
+  content: ": brinjal";
+  order: -1;
+}
+
+.ssopt-yaml-no-colour .setting-item[data-id="ssopt-yaml-no-colour"] .setting-item-control::after {
+  color: var(--text-muted);
+}
+
+.setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-control::before {
+  content: "oranges";
+  white-space: nowrap;
+  padding: 2px calc(var(--icon-xs) + var(--padding-multi-select));
+  color: var(--pill-color);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+}
+
+.ssopt-properties-aliases-original .setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-control {
+  position: relative;
+}
+
+.ssopt-properties-aliases-original .setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-control::before {
+  background-color: transparent;
+  padding-right: 16px;
+}
+
+.ssopt-properties-aliases-original .setting-item[data-id="ssopt-properties-aliases-original"] .setting-item-control::after {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: var(--icon-xs);
+  height: var(--icon-xs);
+  background-color: var(--pill-color-remove);
+  content: "";
+  inset-inline-end: calc(34px + var(--size-4-2) + var(--checkbox-size) - 2px);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-image: /*@svg assets/icons/icon-6.svg */;
+}
+
+.setting-item[data-id="ssopt-properties-button-original"] .setting-item-control {
+  position: relative;
+}
+
+.setting-item[data-id="ssopt-properties-button-original"] .setting-item-control::before {
+  display: block;
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  padding: var(--size-2-3);
+  border-radius: var(--radius-s);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="ssopt-properties-button-original"] .setting-item-control:hover::before {
+  background-color: var(--background-modifier-hover);
+}
+
+.setting-item[data-id="ssopt-properties-button-original"] .setting-item-control::after {
+  position: absolute;
+  left: calc(0.5 * (2 * var(--size-2-3) + var(--header-icon-size) - var(--icon-m)));
+  z-index: 1;
+  display: block;
+  width: var(--icon-m);
+  height: var(--icon-m);
+  background-color: var(--titlebar-text-color-focused);
+  content: "";
+  mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-plus'%3E%3Cpath d='M5 12h14'%3E%3C/path%3E%3Cpath d='M12 5v14'%3E%3C/path%3E%3C/svg%3E");
+  mask-position: center;
+  pointer-events: none;
+}
+
+.setting-item[data-id="ssopt-properties-button-original"] .setting-item-control:hover::after {
+  background-color: var(--icon-color-hover);
+}
+
+.ssopt-properties-button-original .setting-item[data-id="ssopt-properties-button-original"] .setting-item-control::before {
+  display: flex;
+  width: fit-content;
+  font-family: var(--metadata-label-font);
+  color: var(--text-muted);
+  content: "Add property";
+  white-space: nowrap;
+  padding-left: calc(4 * var(--size-2-3));
+  align-items: center;
+}
+
+.ssopt-properties-button-original .setting-item[data-id="ssopt-properties-button-original"] .setting-item-control:hover::before {
+  color: var(--text-normal);
+}
+
+.ssopt-properties-button-original .setting-item[data-id="ssopt-properties-button-original"] .setting-item-control::after {
+  content: " ";
+  white-space: nowrap;
+  inset-inline-start: 0;
+  width: calc(var(--icon-m) + 2 * var(--size-2-3));
+  mask-position: var(--size-2-3);
+}
+
+/* --------------------------------------------------------------------------------
+   [11] Frontmatter/Properties RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="startup-obsidian-image"] .setting-item-control {
+  position: relative;
+}
+
+.setting-item[data-id="startup-obsidian-image"] .setting-item-control::before {
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  padding: var(--sidebar-icon-padding);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="startup-obsidian-image"] .setting-item-control::after {
+  position: absolute;
+  left: var(--sidebar-icon-padding);
+  z-index: 2;
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  background-color: oklch(70.98% 0.1592 293.99deg);
+  content: "";
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: var(--startup-obsidian-image);
+}
+
+/* --------------------------------------------------------------------------------
+   [12] Alternative Checkboxes Reference Set RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="ssopt-acrs-enable"] .setting-item-control {
+  position: relative;
+}
+
+.setting-item[data-id="ssopt-acrs-enable"] .setting-item-control::before {
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  padding: var(--sidebar-icon-padding);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="ssopt-acrs-enable"] .setting-item-control::after {
+  position: absolute;
+  left: var(--sidebar-icon-padding);
+  z-index: 2;
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  background-color: var(--color-accent);
+  content: "";
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-brackets-icon lucide-brackets'%3E%3Cpath d='M16 3h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-3'/%3E%3Cpath d='M8 21H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h3'/%3E%3C/svg%3E");
+}
+
+body:is(.ssopt-acrs-enable) .setting-item[data-id="ssopt-acrs-enable"] .setting-item-control::after {
+  animation: cycle-acrs-icons 20s steps(1, end) infinite;
+}
+
+.setting-item[data-id="ssopt-acrs-enable"] .setting-item-control:hover::after {
+  background-color: var(--color-accent-1);
+}
+
+@keyframes cycle-acrs-icons {
+  0%, 100% { /* [/] Incomplete */
+    mask-image: /*@svg assets/icons/icon-mask-image.svg */;
+  }
+
+  5% { /* [-] Cancelled */
+    mask-image: /*@svg assets/icons/icon-mask-image-2.svg */;
+  }
+
+  10% { /* [>] Forwarded */
+    mask-image: /*@svg assets/icons/icon-mask-image-3.svg */;
+  }
+
+  15% { /* [<] Scheduling */
+    mask-image: /*@svg assets/icons/icon-mask-image-4.svg */;
+  }
+
+  20% { /* [?] Question */
+    mask-image: /*@svg assets/icons/icon-mask-image-5.svg */;
+  }
+
+  25% { /* [!] Important */
+    mask-image: /*@svg assets/icons/icon-mask-image-6.svg */;
+  }
+
+  30% { /* [*] Star */
+    mask-image: /*@svg assets/icons/icon-mask-image-7.svg */;
+  }
+
+  35% { /* ["] Quote */
+    mask-image: /*@svg assets/icons/icon-mask-image-8.svg */;
+  }
+
+  40% { /* [l] Location */
+    mask-image: /*@svg assets/icons/icon-mask-image-9.svg */;
+  }
+
+  45% { /* [b] Bookmark */
+    mask-image: /*@svg assets/icons/icon-mask-image-10.svg */;
+  }
+
+  50% { /* [i] Information */
+    mask-image: /*@svg assets/icons/icon-mask-image-11.svg */;
+  }
+
+  55% { /* [S] Savings */
+    mask-image: /*@svg assets/icons/icon-mask-image-12.svg */;
+  }
+
+  60% { /* [I] Idea */
+    mask-image: /*@svg assets/icons/icon-mask-image-13.svg */;
+  }
+
+  65% { /* [p] Pros */
+    mask-image: /*@svg assets/icons/icon-mask-image-14.svg */;
+  }
+
+  70% { /* [c] Cons */
+    mask-image: /*@svg assets/icons/icon-mask-image-15.svg */;
+  }
+
+  75% { /* [f] Fire */
+    mask-image: /*@svg assets/icons/icon-mask-image-16.svg */;
+  }
+
+  80% { /* [k] Key */
+    mask-image: /*@svg assets/icons/icon-mask-image-17.svg */;
+  }
+
+  85% { /* [w] Win */
+    mask-image: /*@svg assets/icons/icon-mask-image-18.svg */;
+  }
+
+  90% { /* [u] Up */
+    mask-image: /*@svg assets/icons/icon-mask-image-19.svg */;
+  }
+
+  95% { /* [d] Down */
+    mask-image: /*@svg assets/icons/icon-mask-image-20.svg */;
+  }
+}
+
+/* --------------------------------------------------------------------------------
+   [13] Colour Preview Boxes RealDisplay (originally for Rainbows)
+----------------------------------------------------------------------------------- */
+.setting-item:is([data-id="color-pax-d-red"], [data-id="color-pax-d-orange"], [data-id="color-pax-d-yellow"], [data-id="color-pax-d-green"], [data-id="color-pax-d-cyan"], [data-id="color-pax-d-blue"], [data-id="color-pax-d-purple"], [data-id="color-pax-d-pink"], [data-id="color-pax-l-red"], [data-id="color-pax-l-orange"], [data-id="color-pax-l-yellow"], [data-id="color-pax-l-green"], [data-id="color-pax-l-cyan"], [data-id="color-pax-l-blue"], [data-id="color-pax-l-purple"], [data-id="color-pax-l-pink"], [data-id="color-pax-l-accent-textfield"], [data-id="color-pax-l-accent-1-textfield"], [data-id="color-pax-l-accent-2-textfield"], [data-id="color-pax-d-accent-textfield"], [data-id="color-pax-d-accent-1-textfield"], [data-id="color-pax-d-accent-2-textfield"], [data-id="canvas-background"], [data-id="h1-color-dark"], [data-id="h2-color-dark"], [data-id="h3-color-dark"], [data-id="h4-color-dark"], [data-id="h5-color-dark"], [data-id="h6-color-dark"], [data-id="h1-color-light"], [data-id="h2-color-light"], [data-id="h3-color-light"], [data-id="h4-color-light"], [data-id="h5-color-light"], [data-id="h6-color-light"]) .setting-item-control::before {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  padding: var(--size-2-3);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="color-pax-d-red"] .setting-item-control::before {
+  background-color: var(--color-pax-d-red);
+}
+
+.setting-item[data-id="color-pax-d-orange"] .setting-item-control::before {
+  background-color: var(--color-pax-d-orange);
+}
+
+.setting-item[data-id="color-pax-d-yellow"] .setting-item-control::before {
+  background-color: var(--color-pax-d-yellow);
+}
+
+.setting-item[data-id="color-pax-d-green"] .setting-item-control::before {
+  background-color: var(--color-pax-d-green);
+}
+
+.setting-item[data-id="color-pax-d-cyan"] .setting-item-control::before {
+  background-color: var(--color-pax-d-cyan);
+}
+
+.setting-item[data-id="color-pax-d-blue"] .setting-item-control::before {
+  background-color: var(--color-pax-d-blue);
+}
+
+.setting-item[data-id="color-pax-d-purple"] .setting-item-control::before {
+  background-color: var(--color-pax-d-purple);
+}
+
+.setting-item[data-id="color-pax-d-pink"] .setting-item-control::before {
+  background-color: var(--color-pax-d-pink);
+}
+
+.setting-item[data-id="color-pax-l-red"] .setting-item-control::before {
+  background-color: var(--color-pax-l-red);
+}
+
+.setting-item[data-id="color-pax-l-orange"] .setting-item-control::before {
+  background-color: var(--color-pax-l-orange);
+}
+
+.setting-item[data-id="color-pax-l-yellow"] .setting-item-control::before {
+  background-color: var(--color-pax-l-yellow);
+}
+
+.setting-item[data-id="color-pax-l-green"] .setting-item-control::before {
+  background-color: var(--color-pax-l-green);
+}
+
+.setting-item[data-id="color-pax-l-cyan"] .setting-item-control::before {
+  background-color: var(--color-pax-l-cyan);
+}
+
+.setting-item[data-id="color-pax-l-blue"] .setting-item-control::before {
+  background-color: var(--color-pax-l-blue);
+}
+
+.setting-item[data-id="color-pax-l-purple"] .setting-item-control::before {
+  background-color: var(--color-pax-l-purple);
+}
+
+.setting-item[data-id="color-pax-l-pink"] .setting-item-control::before {
+  background-color: var(--color-pax-l-pink);
+}
+
+.setting-item[data-id="color-pax-l-accent-textfield"] .setting-item-control::before {
+  background-color: var(--color-pax-l-accent-textfield);
+}
+
+.setting-item[data-id="color-pax-l-accent-1-textfield"] .setting-item-control::before {
+  background-color: var(--color-pax-l-accent-1-textfield);
+}
+
+.setting-item[data-id="color-pax-l-accent-2-textfield"] .setting-item-control::before {
+  background-color: var(--color-pax-l-accent-2-textfield);
+}
+
+.setting-item[data-id="color-pax-d-accent-textfield"] .setting-item-control::before {
+  background-color: var(--color-pax-d-accent-textfield);
+}
+
+.setting-item[data-id="color-pax-d-accent-1-textfield"] .setting-item-control::before {
+  background-color: var(--color-pax-d-accent-1-textfield);
+}
+
+.setting-item[data-id="color-pax-d-accent-2-textfield"] .setting-item-control::before {
+  background-color: var(--color-pax-d-accent-2-textfield);
+}
+
+.setting-item[data-id="canvas-background"] .setting-item-control::before {
+  background-color: var(--canvas-background);
+}
+
+.setting-item[data-id="h1-color-dark"] .setting-item-control::before {
+  background-color: var(--h1-color-dark);
+}
+
+.setting-item[data-id="h2-color-dark"] .setting-item-control::before {
+  background-color: var(--h2-color-dark);
+}
+
+.setting-item[data-id="h3-color-dark"] .setting-item-control::before {
+  background-color: var(--h3-color-dark);
+}
+
+.setting-item[data-id="h4-color-dark"] .setting-item-control::before {
+  background-color: var(--h4-color-dark);
+}
+
+.setting-item[data-id="h5-color-dark"] .setting-item-control::before {
+  background-color: var(--h5-color-dark);
+}
+
+.setting-item[data-id="h6-color-dark"] .setting-item-control::before {
+  background-color: var(--h6-color-dark);
+}
+
+.setting-item[data-id="h1-color-light"] .setting-item-control::before {
+  background-color: var(--h1-color-light);
+}
+
+.setting-item[data-id="h2-color-light"] .setting-item-control::before {
+  background-color: var(--h2-color-light);
+}
+
+.setting-item[data-id="h3-color-light"] .setting-item-control::before {
+  background-color: var(--h3-color-light);
+}
+
+.setting-item[data-id="h4-color-light"] .setting-item-control::before {
+  background-color: var(--h4-color-light);
+}
+
+.setting-item[data-id="h5-color-light"] .setting-item-control::before {
+  background-color: var(--h5-color-light);
+}
+
+.setting-item[data-id="h6-color-light"] .setting-item-control::before {
+  background-color: var(--h6-color-light);
+}
+
+.setting-item:is([data-id="canvas-dot-pattern"]) .setting-item-control::before {
+  width: 30%;
+  height: var(--header-icon-size);
+  padding: var(--size-2-3);
+  box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item:is([data-id="canvas-dot-pattern"])[data-id="canvas-dot-pattern"] .setting-item-control::before {
+  background-image: radial-gradient(circle, var(--canvas-dot-pattern) calc(var(--canvas-dot-size) * 0.1rem), transparent calc(var(--canvas-dot-size) * 0.1rem));
+  background-size: 10px 10px;
+  background-color: var(--canvas-background);
+  background-position: center center;
+}
+
+.setting-item:is([data-id="col-base-bg-alh"]) {
+  /*
+  & .setting-item-control::before {
+      content: "Eyes here!";
+      white-space: pre;
+      height: var(--header-icon-size);
+      width: 30%;
+      padding: var(--size-2-3);
+      flex-shrink: 0;
+      box-shadow: inset 0 0 0 1px var(--background-modifier-border);
+      background-color: var(--col-background-activeline);
+      align-items: center;
+      display: inline-flex;
+
+  }
+      */
+}
+
+.setting-item:is([data-id="col-base-bg-alh"]) .setting-item-control input {
+  background-color: var(--col-background-activeline);
+}
+
+.setting-item:is([data-id="col-base-bg-alh"]) .setting-item-control input:focus {
+  box-shadow: 10vw 0 0 0 var(--col-background-activeline), -10vw 0 0 0 var(--col-background-activeline);
+}
+
+/* --------------------------------------------------------------------------------
+   [14] Disable Custom File Extension Icons in File Explorer RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control {
+  position: relative;
+}
+
+.setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::before {
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  padding: var(--sidebar-icon-padding);
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--radius-s);
+  content: "";
+  flex-shrink: 0;
+}
+
+.setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::after {
+  position: absolute;
+  left: var(--sidebar-icon-padding);
+  z-index: 2;
+  display: flex;
+  width: var(--sidebar-icon-size);
+  height: var(--sidebar-icon-size);
+  background-color: var(--nav-item-color);
+  content: "";
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M2.9918 21C2.44405 21 2 20.5551 2 20.0066V3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918ZM20 15V5H4V19L14 9L20 15ZM20 17.8284L14 11.8284L6.82843 19H20V17.8284ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::before {
+  display: grid;
+  padding: 0 var(--size-4-1);
+  font-size: 9px;
+  color: var(--nav-item-color);
+  border-radius: var(--radius-s);
+  content: "JPG";
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.05em;
+  line-height: var(--line-height-normal);
+  margin-inline-start: auto;
+  text-transform: uppercase;
+  align-self: center;
+  place-content: center;
+}
+
+body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control:hover::before {
+  color: var(--nav-item-color-active);
+}
+
+body:is(.ssopt-disable-nav-icons) .setting-item[data-id="ssopt-disable-nav-icons"] .setting-item-control::after {
+  mask-image: none;
+  background-color: transparent;
+}
+
+/* --------------------------------------------------------------------------------
+   [15] Callouts RealDisplay
+----------------------------------------------------------------------------------- */
+.setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control {
+  position: relative;
+  display: grid;
+  grid-template-columns: 25px 1fr 25px 2fr auto;
+  grid-template-rows: 1fr;
+
+  --callout-color: rgb(150, 150, 150);
+}
+
+body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control:hover::before {
+  --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
+
+  border-left: var(--callout-border-left-width) solid oklch(from var(--callout-color) l c h);
+  transition: var(--quick-transition);
+}
+
+@container whole-body style(--ssopt-callout-style: 1) {
+  body:not(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control:hover::after {
+    padding-left: calc(0.75em + var(--callout-border-left-extra));
+    transition: var(--quick-transition);
+  }
+}
+
+.setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
+  height: var(--header-icon-size);
+  padding: var(--size-2-3);
+  font-family: var(--font-text);
+  background-color: color-mix(in srgb, var(--callout-color) 12.5%, transparent);
+  border-radius: var(--callout-radius);
+  box-shadow: inset 0 0 0 var(--callout-border-other-width) oklch(from var(--callout-color) l c h);
+  content: "";
+  grid-column: 1/4;
+  grid-row: 1/1;
+  flex-shrink: 0;
+  line-height: 1;
+  animation: changeCalloutText 10s infinite, changeCalloutColor 10s infinite;
+  text-align: start;
+  align-self: center;
+
+  --callout-radius: var(--radius-s);
+  --callout-border-other-width: var(--callout-border-base-width);
+  --callout-border-base-width: var(--callout-border-base-width-override, var(--callout-border-base-width-preset, 0px));
+}
+
+@container whole-body style(--ssopt-callout-style: 0) {
+  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
+    --callout-border-base-width-preset: 0px;
+
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+
+  .theme-light .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
+    color: oklch(from var(--callout-color) calc(l - 0.15) calc(c * 0.85) h);
+  }
+
+  .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
+    color: oklch(from var(--callout-color) calc(l + 0.1) calc(c * 1.5) h);
+  }
+}
+
+@container whole-body style(--ssopt-callout-style: 1) {
+  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
+    --callout-border-base-width-preset: 1px;
+    --callout-radius: 0px;
+
+    font-weight: 500;
+    padding-left: calc(0.75em + 20px + 0.75em);
+    color: var(--text-normal);
+  }
+
+  .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
+    box-shadow: none;
+  }
+}
+
+body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::before {
+  --callout-border-left-width: calc(var(--callout-border-other-width) + var(--callout-border-left-extra));
+
+  border-left: var(--callout-border-left-width) solid oklch(from var(--callout-color) l c h);
+}
+
+@keyframes changeCalloutText {
+  0%, 100% {
+    content: "Note";
+  }
+
+  10% {
+    content: "Abstract";
+  }
+
+  20% {
+    content: "Info";
+  }
+
+  30% {
+    content: "Tip";
+  }
+
+  40% {
+    content: "Check";
+  }
+
+  50% {
+    content: "Question";
+  }
+
+  60% {
+    content: "Warning";
+  }
+
+  70% {
+    content: "Missing";
+  }
+
+  80% {
+    content: "Danger";
+  }
+
+  90% {
+    content: "Bug";
+  }
+}
+
+@keyframes changeCalloutIcon {
+  0%, 100% {
+    content: "\efe0";
+  }
+
+  10% {
+    content: "\eec2";
+  }
+
+  20% {
+    content: "\ee59";
+  }
+
+  30% {
+    content: "\ea81";
+  }
+
+  40% {
+    content: "\eb7b";
+  }
+
+  50% {
+    content: "\f045";
+  }
+
+  60% {
+    content: "\ea21";
+  }
+
+  70% {
+    content: "\eb99";
+  }
+
+  80% {
+    content: "\ed3d";
+  }
+
+  90% {
+    content: "\eb07";
+  }
+}
+
+@keyframes changeCalloutColor {
+  0%, 100% {
+    --callout-color: rgb(0, 191, 111);
+  }
+
+  10% {
+    --callout-color: rgb(91, 197, 219);
+  }
+
+  20% {
+    --callout-color: rgb(0, 170, 199);
+  }
+
+  30% {
+    --callout-color: rgb(34, 148, 1);
+  }
+
+  40% {
+    --callout-color: rgb(0, 158, 76);
+  }
+
+  50% {
+    --callout-color: rgb(160, 199, 92);
+  }
+
+  60% {
+    --callout-color: rgb(255, 182, 26);
+  }
+
+  70% {
+    --callout-color: rgb(161, 40, 100);
+  }
+
+  80% {
+    --callout-color: rgb(241, 0, 34);
+  }
+
+  90% {
+    --callout-color: rgb(164, 103, 80);
+  }
+}
+
+.setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
+  width: 20px;
+  font-family: remixicon;
+  color: var(--callout-color);
+  content: "\f18c";
+  text-align: center;
+  animation: changeCalloutColor 10s infinite, changeCalloutIcon 10s infinite;
+}
+
+@container whole-body style(--ssopt-callout-style: 0) {
+  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
+    grid-column: 3/4;
+    grid-row: 1/1;
+  }
+
+  .theme-light .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
+    color: oklch(from var(--callout-color) calc(l - 0.15) calc(c * 0.85) h);
+  }
+
+  .theme-dark .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
+    color: oklch(from var(--callout-color) calc(l + 0.1) calc(c * 1.5) h);
+  }
+}
+
+@container whole-body style(--ssopt-callout-style: 1) {
+  .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    padding-left: 0.75em;
+  }
+
+  body:is(.ssopt-callout-no-hover) .setting-item:is([data-id="ssopt-callout-style"]) .setting-item-control::after {
+    padding-left: calc(0.75em + var(--callout-border-left-extra));
+  }
+}
+
+/* RealDisplay for SS */
+

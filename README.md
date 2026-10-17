@@ -1,3 +1,35 @@
+> **本仓库是 Willemstad-X 的 fork，由社区独立维护。**
+> 原作者 [@tingmelvin](https://github.com/tingmelvin) 已停止维护，本 fork 接手后续迭代。
+> 上游原版：[tingmelvin/willemstad-x](https://github.com/tingmelvin/willemstad-x)。
+>
+> 本 fork 的主要变化：主题 CSS 从单文件拆分为 `src/` 模块，由 `scripts/build.mjs` 构建出
+> `theme.css`（`publish.css` 为 Publish 冻结轨道）；自动化测试位于 `tests/`；
+> 历史版本快照归档到本地 `archive/`（已 gitignore，不入库）。
+> **目录结构、构建流程与数据流见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)，日常开发流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。**
+>
+> 许可证与版权归属不变：仍为 **GNU GPL 3.0**，原作者署名与第三方 attribution 完整保留在下方原文中。
+
+## 开发与构建（fork 新增）
+
+```bash
+# 环境：Node.js >= 20
+pnpm install          # 或 npm install
+
+node scripts/build.mjs           # 由 src/ 生成 theme.css
+node scripts/build.mjs --check   # 只校验：src/ 构建结果与磁盘 theme.css 是否字节一致
+node scripts/check-version.mjs   # 校验 manifest / versions / theme.css 三处版本号一致
+npm test                         # 运行 tests/ 下的自动化测试
+npm run lint:css                 # stylelint 检查 src/ 分片
+npm run verify                   # build:check + check:version + lint:css + test
+```
+
+- 源码入口：`src/entries/theme.css`（按顺序 `@include` 所有分片，顺序即 CSS 级联顺序）
+- 构建产物：`theme.css`（用户安装的主题）、`publish.css`（Obsidian Publish 用，暂为冻结轨道）
+- 一次性迁移脚本：`scripts/extract.mjs`（`theme.css` → `src/`，可重复运行，是拆分的溯源记录）
+- 所有 CSS 文件使用 **CRLF** 换行，构建做字节级比对，改动换行会被 `--check` 判定为漂移
+
+---
+
 ## Set once (via [Style Settings](obsidian://show-plugin?id=obsidian-style-settings)), and get on with work.
 This theme is made for work. You download it, and it comes pretty much without colour. _Tabula rasa._
 

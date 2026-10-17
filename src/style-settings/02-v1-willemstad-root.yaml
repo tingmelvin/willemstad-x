@@ -1,0 +1,69 @@
+/* @settings
+name: "Root Options and Settings" 
+id: V1-Willemstad-Root
+settings:
+    -
+        id: no-animations
+        title: No Animations
+        type: class-toggle
+        document: AC01-Opt-Animations
+        description: "When enabled, this disables all animations in this theme."
+        default: false
+    -
+        id: no-blur
+        title: No Blur Backdrop Filter
+        type: class-toggle
+        document: AC02-Opt-BackdropFilter
+        description: "The blur filter is activated by default in Willemstad, and might cause slight performance degradation on less powerful devices. When enabled, this disables all blur backdrop filters set by this theme."
+        default: false
+    -
+        id: yes-shadows
+        title: Re-enable Shadows
+        type: class-toggle
+        document: AC03-Opt-Shadows
+        description: "Willemstad removes all shadows in Obsidian by default. When enabled, this enables all shadows disabled by this theme."
+        default: false
+    -
+        id: ssopt-hidden-scrollbars
+        title: Hide Scrollbars
+        type: class-toggle
+        document: AJ04-Scrollbars
+        notes: (For Windows and Linux only)
+        description: "When enabled, Obsidian’s non-native scrollbars in Windows and Linux are replaced with zero-width tracks, giving the interface a neater look."
+        default: false
+        addCommand: true
+    -
+        id: ssopt-hide-tooltips
+        title: Hide Tooltips
+        type: class-toggle
+        description: "When enabled, this hides all tooltips that appear when hovering over buttons and other UI elements."
+        default: false
+        addCommand: true
+    -
+        id: shape-roundish
+        title: "Border Radius"
+        type: variable-number-slider
+        document: AB11-Set-Radius
+        description: "This setting controls the border radius of all elements in this theme, and/or are calculated from this value. The default value is 6px."
+        format: "px"
+        min: 0
+        max: 10
+        step: 1
+        default: 6
+    -
+        id: radius-image
+        title: 'Border Radius of Images'
+        type: variable-text
+        description: "Controls the default border radius for images throughout the theme. Accepts any valid CSS radius value (e.g., 8px, 0, var(--radius-m)). Set '0' if you do not want your images to take a border radius."
+        default: 'var(--radius-s)'
+    -
+        id: divider-width
+        title: Divider Width
+        type: variable-number-slider
+        description: "Controls the thickness of divider lines throughout the theme."
+        format: "px"
+        min: 0
+        max: 5
+        step: 1
+        default: 1
+*/

@@ -1,0 +1,43 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AJ04
+\ Disparate Elements
+\ Scrollbars
+──────────────────────────────────────────────────────────────────────────────── */
+body:not(.native-scrollbars) {
+  --size-scrollbar-non-native: var(--size-4-2);
+  --border-scrollbar-non-native: var(--size-2-1);
+  --account-scrollbar-size: var(--size-scrollbar-non-native); /* account for scrollbar size. to switch off if possible */
+  --account-scrollbar-border: var(--border-scrollbar-non-native); /* this is to switch off if people don't want it accounted */
+  --scrollbar-bg: var(--background-modifier-border); /* not sure if working - to check */
+
+  /* HIDES ALL SCROLLBARS */
+}
+
+body:not(.native-scrollbars):is(.ssopt-hidden-scrollbars) {
+  --size-scrollbar-non-native: 0px;
+  --border-scrollbar-non-native: 0px;
+}
+
+body:not(.native-scrollbars) {
+  /* see app.css 5121 */
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+  width: var(--size-scrollbar-non-native);
+  height: var(--size-scrollbar-non-native);
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+  border-width: var(--border-scrollbar-non-native);
+  border-left-width: var(--border-scrollbar-non-native); /* even if I take into account this with the above math, I cannot take into account if there is no scrollbars */ /* hence zero */
+  border-right-width: var(--border-scrollbar-non-native); /* to account for the border and border-box? */
+}
+
+body:not(.native-scrollbars).styled-scrollbars .modal-close-button {
+  inset-inline-end: var(--size-2-3);
+}
+
+/* Scrollbars */
+
+/* TITLEBAR */
+

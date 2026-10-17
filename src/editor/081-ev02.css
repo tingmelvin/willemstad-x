@@ -1,0 +1,17 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EV02
+\ Editor > Viewers > Web Viewer
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* fix header button padding for refresh button in line with other buttons */
+.view-header-reload-button .clickable-icon {
+  padding: var(--header-padding); /* NOTE ? */
+}
+
+.view-header-reload-button .clickable-icon svg.svg-icon {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+}
+
+/* Web Viewer */
+

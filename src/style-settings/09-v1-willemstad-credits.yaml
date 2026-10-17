@@ -1,0 +1,82 @@
+/* @settings
+name: "Credits" 
+id: V1-Willemstad-Credits
+settings:
+    -
+        id: info-credits-willemstad
+        title: 'Supporting Willemstad'
+        type: info-text
+        description: 'As a matter of principle, I have not, do not, and will not accept monetary compensation/donations of any kind for Willemstad, as my intention has always been to create something that works for me and contribute back to the community. In the event you would like to support Willemstad, please spread the word about the theme, and star the GitHub repository, accessible on the button to the right. Should you still wish to contribute monetarily, please direct your funds elsewhere to other Obsidian community members and theme developers in this list, all of which have contributed to Willemstad and/or the Obsidian theme development scene in one way or another. [GitHub Repository](https://github.com/tingmelvin/willemstad-x)'
+        markdown: true
+    -
+        id: info-credits-pseudometa
+        title: 'Chris Grieser (@pseudometa)'
+        type: info-text
+        description: "Theme developer of Shimmering Focus and various plugins for Obsidian and Alfred, and Obsidian's resident minimalist; Willemstad's original form as a snippet was built upon SF, and pretty much Willemstad's existence (and quite a number of its early code and its support for Longform) can be attributed to Chris [Ko-Fi](https://ko-fi.com/pseudometa) [GitHub](https://github.com/chrisgrieser/)"
+        markdown: true
+    -
+        id: info-credits-damikiller
+        title: 'Damian Korcz'
+        type: info-text
+        description: "Theme developer of Prism, and Maintainer of the Alternative Checkboxes Reference Set; for contributing input to the No-Shadow Sliding Panes and literally saving weeks of my time by introducing and teaching me how to compile SASS/SCSS (if not, Willemstad would be totally unmaintainable since it consists of almost 130 SCSS files and way too many mixins); almost every wacky idea in early Willemstad has roots to him [BuyMeACoffee](https://www.buymeacoffee.com/DamianKorcz) [GitHub](https://github.com/damiankorcz)"
+        markdown: true
+    -
+        id: info-credits-ceciliamay
+        title: 'Cecilia May'
+        type: info-text
+        description: "Theme developer of Primary and pretty much Obsidian's purveyor of colours; whom I co-wrote the Varying/Readable Underlines code with [Ko-Fi](https://ko-fi.com/ceciliamay) [GitHub](https://github.com/ceciliamay)"
+        markdown: true
+    -
+        id: info-credits-slrvb
+        title: 'SlRvB'
+        type: info-text
+        description: "Theme developer of ITS Theme; the brains behind a lot of the wonderful things now seen in Obsidian themes; for the Dataview Word Wraps solutions [Ko-Fi](https://ko-fi.com/slrvb) [GitHub](https://github.com/SlRvB)"
+        markdown: true
+    -
+        id: info-credits-kepano
+        title: 'Stephan Ango (@kepano)'
+        type: info-text
+        description: "Theme developer of Minimal (and Flexoki) and Obsidian's CEO; for writing Minimal Cards and Grids previously included in Willemstad, and for the Flexoki colour scheme now supported by Willemstad in its base tones and syntax highlighting [BuyMeACoffee](https://www.buymeacoffee.com/kepano) [GitHub](https://github.com/kepano)"
+        markdown: true
+    -
+        id: info-credits-jdanielmourao
+        title: '@jdanielmourao'
+        type: info-text
+        description: "Theme developer of Sanctum; for having written the original theme I used in Obsidian whilst studying at the London School of Hygiene and Tropical Medicine and for hearing my constant lamentations about how he changed something up in Sanctum's early days that was breaking my workflow [Ko-fi](https://ko-fi.com/jdanielmourao) [GitHub](https://github.com/jdanielmourao)"
+        markdown: true
+    -
+        id: info-credits-zcysxy
+        title: 'Zhang Chenyu (@zcysxy/Atlas)'
+        type: info-text
+        description: "Theme developer of Terminal; For writing the Multi-Colour Highlighting code that was adapted by Willemstad in its very early days [Ko-Fi](https://ko-fi.com/zcysxy) [GitHub](https://github.com/zcysxy)"
+        markdown: true
+    -
+        id: info-credits-mgmeyers
+        title: 'Matthew Meyers (@mgmeyers)'
+        type: info-text
+        description: "Now one of Obsidian's developers, also theme developer of California Coast, and developer of various plugins in Obsidian, including Kanban and the very cherished Style Settings plugin [BuyMeACoffee](https://www.buymeacoffee.com/mgme) [GitHub](https://github.com/chetachiezikeuzor)"
+        markdown: true
+    -
+        id: info-credits-chetachi
+        title: 'Chetachi Ezikeuzor (@chetachi)'
+        type: info-text
+        description: "Theme developer of Yin and Yang; for popularising Base64 font encoding amongst theme developers in Obsidian [Ko-Fi](https://ko-fi.com/chetachi) [GitHub](https://github.com/chetachiezikeuzor)"
+        markdown: true
+    -
+        id: info-credits-others
+        title: 'Special Thanks'
+        type: info-text
+        description: "Willemstad also gives its special thanks to Rasmus Andersson (Inter font), Mikhail Sharanda (Manrope font), Colophon Foundry (DM Sans and DM Mono fonts), Jacques Le Bailly/Sebastian Kosch (Crimson Pro font), Nate Baldwin et al. (Leonardo), Blake Robert Mills (MetBrewer), Jimmy Cheung et al. (RemixIcons), Tobias Fried (Phosphor Icons), Cole Bemis et al. (Lucide Icons). Where available, their GitHub repositories are linked here. [](https://github.com/rsms/inter) [](https://github.com/adobe/leonardo) [](https://github.com/BlakeRMills/MetBrewer) [](https://github.com/Remix-Design/RemixIcon) [](https://github.com/phosphor-icons/homepage) [](https://github.com/lucide-icons/lucide)"
+        markdown: true
+    -
+        id: info-credits-theme-showcase
+        title: 'Theme Showcase'
+        type: info-text
+        description: "This segment is reserved for showcasing themes beyond Willemstad, which have pushed the boundaries of what is possible with CSS in Obsidian. Stay tuned for more!"
+    -
+        id: info-credits-obsidian
+        title: 'Supporting Obsidian'
+        type: info-text
+        description: "Last but not least, you can also choose to support Obsidian by purchasing a Catalyst license, or by subscribing to Obsidian Publish and/or Obsidian Sync. [Catalyst](https://obsidian.md/account/catalyst) [Sync](https://obsidian.md/sync) [Publish](https://obsidian.md/publish)"
+        markdown: true
+*/

@@ -1,0 +1,62 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC006
+\ Plugins > Community
+\ General
+    \\ PComm006 | Breadcrumbs
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Breadcrumbs]
+\\ (NOMEN | PComm006)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> Fix Issues with Sizing and Alignment
+    ──────────────────────────────────────────────────────────────────────────── */
+div.BC-trail {
+  width: unset !important; /* need to counteract element.style */
+}
+
+div.BC-settings-tab .icon.icon {
+  padding-top: 0;
+}
+
+div.BC-settings-tab .icon.icon, div.BC-settings-tab .icon.icon > svg {
+  --icon-size: var(--header-icon-size);
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: var(--icon-color);
+  max-height: unset;
+}
+
+div.BC-settings-tab .BC-Buttons > button {
+  width: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  height: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  margin: unset;
+  padding: var(--header-padding);
+  border-radius: var(--radius-s);
+}
+
+div.BC-settings-tab span.BC-Buttons {
+  display: inline-flex;
+  gap: var(--header-margin);
+}
+
+.workspace-leaf-content[data-type="BC-matrix"] button,
+.workspace-leaf-content[data-type="BC-tree"] button {
+  --icon-size: var(--header-icon-size);
+
+  width: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  height: calc(var(--header-icon-size) + 2 * var(--header-padding));
+  padding: var(--header-padding);
+  border-radius: var(--radius-s);
+  fill: var(--icon-color);
+  margin-right: 0;
+}
+
+.workspace-leaf-content[data-type="BC-matrix"] .BC-Matrix.BC-Matrix, .workspace-leaf-content[data-type="BC-matrix"] .BC-Matrix.BC-Matrix .BC-matrix-hier {
+  border-width: 1px;
+  border-radius: var(--radius-s);
+}
+
+/* Breadcrumbs */
+

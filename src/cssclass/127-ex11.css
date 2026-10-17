@@ -1,0 +1,268 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> EX11
+\ CSSClass
+\ LaTeX
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* MIT License | Copyright (c) 2022 Melvin Ting (@tingmelvin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────────────────
+
+LaTeX CSSClass for Obsidian
+Author: @tingmelvin
+Version: 0.1.1
+Last tested for Obsidian v1.0
+Last Updated: 2022-11-08
+
+───────────────────────────────────────────────────────────────────────────────────
+
+Version: 0.2.0
+Last tested for Obsidian v1.9
+Last Updated: 2025-06-22
+
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> FONT SIZE
+──────────────────────────────────────────────────────────────────────────── */
+body {
+  --cssc-latex-font-size: 14pt;
+  --cssc-latex-font-reading: "MathJax Main", "MJXZERO", "MJXTEX";
+  --cssc-latex-font-source: "DM Mono" ,"MathJax Main", "MJXZERO", "MJXTEX";
+  --cssc-latex-text-indent: 0em;
+}
+
+.latex.markdown-preview-view {
+  font-family: var(--cssc-latex-font-reading);
+  font-size: var(--cssc-latex-font-size);
+  letter-spacing: 0.01rem;
+}
+
+.latex.mod-cm6.cm-s-obsidian .cm-contentContainer,
+.latex .cm-header.cm-header {
+  font-family: var(--cssc-latex-font-source);
+  font-size: var(--cssc-latex-font-size);
+  letter-spacing: 0.01rem;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> LINE HEIGHT
+──────────────────────────────────────────────────────────────────────────── */
+.latex.markdown-preview-view table {
+  line-height: 100%;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> DIFFERENT HEADING STYLE
+──────────────────────────────────────────────────────────────────────────── */
+.latex :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--cssc-latex-font-reading);
+  line-height: 1em;
+}
+
+:is(.latex.markdown-preview-view,
+.latex.mod-cm6.cm-s-obsidian .cm-contentContainer) {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> P
+──────────────────────────────────────────────────────────────────────────── */
+.latex p {
+  text-indent: var(--cssc-latex-text-indent);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> BLOCKQUOTES
+──────────────────────────────────────────────────────────────────────────── */
+.latex blockquote {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> CODEBLOCKS
+──────────────────────────────────────────────────────────────────────────── */
+.latex :is(.theme-light :not(pre) > code[class*="language-"], .theme-light pre[class*="language-"]) {
+  background-color: transparent;
+  border-top: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  border-radius: 0;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> HEADERS
+──────────────────────────────────────────────────────────────────────────── */
+.latex .cm-s-obsidian .cm-header,
+.latex :is(h1, h2, h3, h4, h5, h6),
+.latex :is(.HyperMD-header-1.cm-line,
+.HyperMD-header-2.cm-line,
+.HyperMD-header-3.cm-line,
+.HyperMD-header-4.cm-line,
+.HyperMD-header-5.cm-line,
+.HyperMD-header-6.cm-line),
+.latex .cm-header.cm-header {
+  color: var(--text-normal);
+  background-color: transparent;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> CALLOUT INNER TITLE
+──────────────────────────────────────────────────────────────────────────── */
+.latex .callout-title-inner {
+  font-family: var(--cssc-latex-font-reading);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> FIX FOR BREADCRUMB TRAIL GRID 
+──────────────────────────────────────────────────────────────────────────── */
+.latex div.BC-trail-grid.BC-trail-grid.BC-trail-grid {
+  text-align: initial;
+}
+
+.latex .cm-cursor {
+  height: 10px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> TABLES (READING MODE) | I HAVE NO PATIENCE FOR A CSSCLASS, !IMPORTANT IT IS
+──────────────────────────────────────────────────────────────────────────── */
+.body {
+  --cssc-latex-table-preview-font-size: 1em;
+  --cssc-latex-table-editor-font-size: 0.8em;
+}
+
+.latex table {
+  border-top: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+}
+
+.latex table, .latex th, .latex td {
+  border-left: none !important;
+  border-right: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--cssc-latex-table-preview-font-size);
+}
+
+.latex th {
+  background-color: transparent !important;
+  text-align: center;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> TABLES (LIVE PREVIEW) | RESET ".table-lp-magic" for latex cssclass 
+──────────────────────────────────────────────────────────────────────────── */
+
+/* why you no work?? */
+
+/* note to self, cannot put .latex in front of .cm-s-obsidian */
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> {to fix} EQUATION NUMBERS | INCREMENTAL
+──────────────────────────────────────────────────────────────────────────── */
+.latex {
+  counter-reset: math-block;
+
+  /* to center */
+}
+
+.latex .math-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  counter-increment: math-block;
+}
+
+.latex .math-block::before {
+  content: "(" counter(math-block) ")";
+  visibility: hidden;
+}
+
+.ssopt-cssc-latex-counter-brackets .latex .math-block::before {
+  content: "[" counter(math-block) "]";
+}
+
+.ssopt-cssc-latex-counter-plain .latex .math-block::before {
+  content: "" counter(math-block) "";
+}
+
+.latex .math-block::after {
+  content: "(" counter(math-block) ")";
+}
+
+.ssopt-cssc-latex-counter-brackets .latex .math-block::after {
+  content: "[" counter(math-block) "]";
+}
+
+.ssopt-cssc-latex-counter-plain .latex .math-block::after {
+  content: "" counter(math-block) "";
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> FIX PADDINGS
+──────────────────────────────────────────────────────────────────────────── */
+.latex .markdown-preview-section :where(h1, h2, h3, h4, h5, h6) {
+  padding-left: 0;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> FIX COLOURS
+──────────────────────────────────────────────────────────────────────────── */
+.latex {
+  --col-h1: var(--text-normal);
+  --col-h2: var(--text-normal);
+  --col-h3: var(--text-normal);
+  --col-h4: var(--text-normal);
+  --col-h5: var(--text-normal);
+  --col-h6: var(--text-normal);
+
+  /*
+  --col-h1-bg: var(--background-primary);
+  --col-h2-bg: var(--background-primary);
+  --col-h3-bg: var(--background-primary);
+  --col-h4-bg: var(--background-primary);
+  --col-h5-bg: var(--background-primary);
+  --col-h6-bg: var(--background-primary);
+  */
+  --col-h1-bg: transparent;
+  --col-h2-bg: transparent;
+  --col-h3-bg: transparent;
+  --col-h4-bg: transparent;
+  --col-h5-bg: transparent;
+  --col-h6-bg: transparent;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+>> PRINT ON WHITE - overrides
+──────────────────────────────────────────────────────────────────────────── */
+body:not(.ssopt-cssc-latex-preserve-bg-colour) .print .latex .mod-frontmatter::after {
+  background: white !important;
+}
+
+/*@raw style-settings/11-cssc-latex-settings.yaml */
+
+/* CSSClass > LaTeX */
+

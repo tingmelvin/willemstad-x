@@ -1,0 +1,20 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> AC02
+\ Root \ Options for Backdrop Filter
+──────────────────────────────────────────────────────────────────────────────── */
+body:not(.no-blur) {
+  --blur-0: blur(0.5px);
+  --blur-1: blur(1px);
+  --blur-2: blur(2px);
+  --blur-4: blur(4px);
+  --blur-8: blur(8px);
+}
+
+body {
+  --brightness-25: brightness(25%);
+  --brightness-50: brightness(50%);
+  --brightness-75: brightness(75%);
+}
+
+/* Root Option for Backdrop Filter */
+

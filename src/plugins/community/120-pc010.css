@@ -1,0 +1,91 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> PC010
+\ Plugins > Community
+\ General
+    \\ PComm010 | Excalidraw
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+>> [COMMUNITY PLUGIN | Excalidraw]
+\\ (NOMEN | PComm010)
+───────────────────────────────────────────────────────────────────────────────────
+    >>> make it nicer
+    ──────────────────────────────────────────────────────────────────────────── */
+body:not(.PComm010-original-colours) .excalidraw {
+  --border-radius-md: var(--radius-s);
+  --border-radius-lg: var(--radius-s);
+  --sab: var(--size-4-8);
+  --button-gray-1: var(--background-primary-alt);
+}
+
+
+body:not(.PComm010-original-colours) .excalidraw .Island {
+  background-color: var(--background-primary-alt);
+  box-shadow: none;
+}
+
+body:not(.PComm010-original-colours) .excalidraw .color-picker-label-swatch {
+  border: 1px solid var(--background-primary-alt);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .ToolIcon__icon {
+  color: var(--color-accent);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .App-toolbar-container .ToolIcon_type_floating:not(.is-mobile) .ToolIcon__icon {
+  background-color: initial;
+  border-radius: 1px solid var(--color-accent);
+  box-shadow: none;
+}
+
+body:not(.PComm010-original-colours) .excalidraw .App-toolbar .ToolIcon .ToolIcon_type_radio:checked + .ToolIcon__icon,
+body:not(.PComm010-original-colours) .excalidraw .App-toolbar .ToolIcon .ToolIcon_type_checkbox:checked + .ToolIcon__icon,
+body:not(.PComm010-original-colours) .excalidraw .active,
+body:not(.PComm010-original-colours) .excalidraw .buttonList label.active {
+  background: initial;
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .panelColumn h3, body:not(.PComm010-original-colours) .excalidraw .panelColumn legend, body:not(.PComm010-original-colours) .excalidraw .panelColumn .control-label,
+body:not(.PComm010-original-colours) .excalidraw .reset-zoom-button {
+  color: var(--text-normal);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .ToolIcon__icon svg {
+  fill: var(--text-normal);
+  color: var(--text-normal);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .excalidraw .ToolIcon_type_button,
+body:not(.PComm010-original-colours) .excalidraw .Modal .ToolIcon_type_button,
+body:not(.PComm010-original-colours) .excalidraw .ToolIcon_type_button {
+  background-color: initial;
+
+  /* no border! border-box issues */
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+body:not(.PComm010-original-colours) .excalidraw button.ToolIcon_type_button.ToolIcon_size_small.reset-zoom-button.ToolIcon_type_button--show.ToolIcon {
+  background-color: var(--background-primary-alt);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .ToolIcon__keybinding {
+  font-size: calc(0.6 * var(--font-text-size));
+  color: var(--text-normal);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .App-toolbar .ToolIcon .ToolIcon__keybinding {
+  bottom: 0;
+}
+
+body:not(.PComm010-original-colours) .excalidraw .App-toolbar {
+  box-shadow: 0 0 0 1px var(--divider-color);
+}
+
+body:not(.PComm010-original-colours) .excalidraw .App-toolbar-content {
+  z-index: 100;
+  padding: var(--size-4-1) var(--size-2-1);
+}
+
+/* Excalidraw */
+

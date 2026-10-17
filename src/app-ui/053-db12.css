@@ -1,0 +1,17 @@
+/* ────────────────────────────────────────────────────────────────────────────────
+> DB12
+\ Generally Side Pane Elements \ Colour Application
+\ Search
+──────────────────────────────────────────────────────────────────────────────── */
+
+/* DB12-1 | Making Search Result Text Colour same as Highlighted Text */
+.search-result-file-matched-text {
+  color: var(--col-highlight-text);
+}
+
+/* Search */
+
+/* options for First Level Items */
+
+/* RIBBONS */
+

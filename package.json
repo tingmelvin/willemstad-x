@@ -1,0 +1,31 @@
+{
+  "name": "willemstad-x",
+  "version": "1.11.1",
+  "private": true,
+  "description": "Willemstad-X — an Obsidian theme. Fork maintained independently.",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:check": "node scripts/build.mjs --check",
+    "build:audit": "node scripts/build.mjs --audit",
+    "extract": "node scripts/extract.mjs",
+    "check:version": "node scripts/check-version.mjs",
+    "bump": "node scripts/bump-version.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "test:build": "node --test tests/build.test.mjs",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
+    "verify": "npm run build:audit && npm run build:check && npm run check:version && npm run lint:css && npm test",
+    "verify:all": "npm run verify"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.6",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
+    "yaml": "^2.8.1"
+  }
+}

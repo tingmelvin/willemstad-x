@@ -1,0 +1,52 @@
+/* @settings
+name: "Immersive Editing Modes — Focused & Super Focused Mode"
+id: pluglets-iem-settings
+settings:
+    -
+        id: immersive-editing-modes
+        title: Immersive Editing Modes (Focused Mode and Super Focused Mode)
+        type: heading
+        description: "Styles that hide UI elements and fade out non-active lines to help you focus on writing."
+        level: 3
+        collapsed: false
+    -
+        id: info-immersive-editing-modes
+        title: Note on Immersive Editing Modes
+        type: info-text
+        description: "Please note that the immersive editing modes (Focused and Super Focused Modes) can be set via hotkeys and is accessible via the Command Palette. Please see the Obsidian's documentation (accessible via the button on the right) to do this. Immersive Editing Modes takes inspiration from [Ryan McQuen's Focus Mode plugin](https://github.com/ryanpcmcquen/obsidian-focus-mode), which Willemstad's maintainer used to use extensively years ago. [Obsidian Docs](https://help.obsidian.md/hotkeys)"
+        markdown: true
+    -
+        id: ssopt-focused-mode
+        title: Focused Mode
+        type: class-toggle
+        description: "Hides all UI elements (status bar, sidebars, etc.) except for the tab header bar, and fades out lines of text that are not near your active line. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
+        default: false
+        addCommand: true
+    -
+        id: ssopt-super-focused-mode
+        title: Super Focused Mode
+        type: class-toggle
+        description: "An even more extreme focus mode. Hides all elements, except the current active page. Does not require 'Focused Mode' enabled. Please note that this setting can be set to a hotkey, and is available via your Command Palette."
+        default: false
+        addCommand: true
+    -
+        id: distant-opacity
+        title: Distant Line Opacity
+        type: variable-number-slider
+        description: "Controls the minimum opacity for lines far away from your active line in Focused Mode. Default is 0.2."
+        format: ""
+        min: 0
+        max: 1
+        step: 0.05
+        default: 0.2
+    -
+        id: near-fade-factor
+        title: Near Line Fade Factor
+        type: variable-number-slider
+        description: "Controls the opacity of the lines fade out as they get further from the active line. Higher values mean a bigger difference in opacity, which is stepped by the value you input here, multiplied by the amount of lines away from the active line it is (up to the third line). The default is 0.15."
+        format: ""
+        min: 0
+        max: 0.5
+        step: 0.01
+        default: 0.15
+*/
