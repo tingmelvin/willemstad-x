@@ -2,12 +2,12 @@
   "$comment": "Allowlist of custom properties that theme.css references with var() but never defines. The contract is: a NEW undefined reference fails the test until it is registered here with a reason. Categories: obsidianBuiltin (Obsidian app.css), styleSettingsInjected (written at runtime by the Style Settings plugin from a setting id), externallyProvided (supplied by a library or community plugin), patterns (generated families, matched by regex with a pinned count). See docs/KNOWN-ISSUES.md.",
   "version": 2,
   "generatedFrom": {
-    "themeCssSha256": "0384718b4397846158efa2db0621cf274f4551f21e24306fca629ab755a6d2a4",
-    "themeCssBytes": 5257337,
-    "refs": 1123,
-    "defs": 997,
+    "themeCssSha256": "a66dd63c510291dc2170196e3f64eb10a6e265aef1b51283f924c072b82320c2",
+    "themeCssBytes": 5258014,
+    "refs": 1124,
+    "defs": 998,
     "undefined": 339,
-    "note": "Regenerated after the KNOWN-ISSUES #4 fixes. Five properties left the list because they are now defined (or their dead reference was deleted); the four remaining were reclassified from \"suspected typos\" to externallyProvided."
+    "note": "Regenerated after merging origin/main and fixing the unquoted --willemstad-release token. Five properties left the list when the KNOWN-ISSUES #4 defects were fixed; the four remaining are supplied outside the theme."
   },
   "patterns": [
     {

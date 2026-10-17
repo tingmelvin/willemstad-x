@@ -171,6 +171,69 @@ test('every font MIME label matches the container it actually holds (#8, fixed)'
   assert.equal(truetype, EXPECTED_TRUETYPE, `expected ${EXPECTED_TRUETYPE} TrueType payloads, found ${truetype}`);
 });
 
+test('every @font-face format() hint agrees with the container it declares', () => {
+  // The MIME test above covers the `data:` label. This covers the *other* half of
+  // the same claim: the `format()` keyword in the src descriptor.
+  //
+  // It is a separate test because the two can drift apart independently, and
+  // because the keywords are not extensions — `.ttf` is `truetype`, `.otf` is
+  // `opentype`, `.ttc` is `collection`. A checker that compares a hint against a
+  // file extension reports a false mismatch for every TrueType face, which is
+  // precisely how the original mislabelling (KNOWN-ISSUES #8) stayed buried.
+  const MAGIC_TO_KEYWORDS = {
+    '774f4632': ['woff2'], // wOF2
+    '774f4646': ['woff'], // wOFF
+    '00010000': ['truetype'], // raw sfnt with TrueType outlines
+    '4f54544f': ['opentype'], // OTTO, CFF outlines
+    '74746366': ['collection'], // ttcf
+  };
+
+  const problems = [];
+  let checked = 0;
+  themeRoot().walkAtRules('font-face', (at) => {
+    const decls = new Map();
+    at.walkDecls((d) => decls.set(d.prop, d.value));
+    const family = decls.get('font-family') ?? '(unnamed)';
+    const src = decls.get('src') ?? '';
+
+    const b64 = /base64,([A-Za-z0-9+/=]+)/.exec(src)?.[1];
+    const hint = /format\(\s*"([^"]+)"\s*\)/.exec(src)?.[1];
+    if (!b64) {
+      problems.push(`${family}: src has no base64 payload`);
+      return;
+    }
+    if (!hint) {
+      problems.push(`${family}: src has no format() hint`);
+      return;
+    }
+
+    const magic = Buffer.from(b64, 'base64').subarray(0, 4).toString('hex');
+    const keywords = MAGIC_TO_KEYWORDS[magic];
+    if (!keywords) {
+      problems.push(`${family}: unrecognised container magic ${magic}`);
+      return;
+    }
+
+    checked++;
+    // `woff` must not satisfy `woff2`, so require the exact keyword or a
+    // `-variations` / `-<feature>` suffix.
+    const ok = keywords.some((k) => hint === k || hint.startsWith(`${k}-`));
+    if (!ok) {
+      problems.push(
+        `${family}: format("${hint}") does not describe the ${keywords[0]} container (magic ${magic})`,
+      );
+    }
+  });
+
+  assert.equal(checked, EXPECTED_FONT_PAYLOADS, `checked ${checked} @font-face blocks, expected ${EXPECTED_FONT_PAYLOADS}`);
+  assert.deepEqual(
+    problems,
+    [],
+    `@font-face descriptors that misdescribe their own payload:\n  ${problems.join('\n  ')}\n` +
+      'A browser is entitled to trust this hint and skip the face.',
+  );
+});
+
 test('@font-face blocks are well-formed', () => {
   const root = themeRoot();
   const faces = [];

@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # The theme-side gate: the verification skill's helpers must be syntactically
+  # sound, and the Python tests lock the release metadata (manifest.json,
+  # versions.json, README, .gitattributes) to the shipped theme.css.
+  theme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - uses: extractions/setup-just@v4
+      - run: just ci
+
+  # The source-side gate. src/ is the source of truth and theme.css is a build
+  # artifact that happens to be committed (Obsidian installs it directly), so:
+  #
+  #   build:audit    no orphan partial — a file that exists but never ships
+  #   build:check    src/ reproduces theme.css byte-for-byte
+  #   check:version  manifest.json / versions.json / theme.css agree
+  #   lint:css       stylelint over src/, per-rule counts pinned
+  #   test           the node:test suite
+  #
+  # Same command a contributor runs locally, so "passed on my machine" and
+  # "passed in CI" cannot mean different things.
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: pnpm
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run verify
+
+  # scripts/extract.mjs is the provenance record of the src/ split: it must keep
+  # producing a tree that rebuilds to the exact same theme.css. Without this job,
+  # src/ and extract.mjs could drift apart silently and the "the split changed
+  # nothing" claim would quietly stop being true.
+  #
+  # Separate from `sources` because it mutates the working tree.
+  extract-roundtrip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Re-extract and compare
+        run: |
+          cp theme.css /tmp/theme.css.orig
+          node scripts/extract.mjs --force
+          node scripts/build.mjs --check
+          cmp /tmp/theme.css.orig theme.css
+          echo "extract round-trip is lossless"

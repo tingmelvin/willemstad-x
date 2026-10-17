@@ -18,6 +18,10 @@ node_modules/
 .yarn/
 package-lock.json
 
+# ---- Python（.cursor/skills/verify-willemstad 与其测试） ---------------------
+__pycache__/
+*.py[cod]
+
 # ---- 构建 / 测试临时目录 ----------------------------------------------------
 /.tmp/
 .tmp-*/

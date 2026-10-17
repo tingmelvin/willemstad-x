@@ -46,6 +46,12 @@ There's features, like Focused Mode. Multiple [callout types](https://willemstad
 # Willemstad
 Named after the capital of Curaçao (which is known for its colourful houses), the extended _Willemstad_ is a fully-fledged theme and extension of [the original _Willemstad_ snippet/theme variant proof-of-concept](https://github.com/tingmelvin/willemstad) for Chris Grieser (pseudometa)'s [Obsidian](https://obsidian.md/) theme, [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus). You can sponsor Chris [here](https://ko-fi.com/pseudometa)!
 
+## What this repository ships
+
+Obsidian loads **`theme.css`** plus **`manifest.json`**. That pair is the live community theme. **`versions.json`** copies `manifest.json`'s `minAppVersion` for the current `version` key so the installer does not offer this release to older apps.
+
+**`publish.css`** is the Obsidian Publish stylesheet — a separate runtime, not the app theme. **`obsidian.css`** is a historical compile, not the CSS Obsidian should load today. `old/` and `V1.9/` are archives.
+
 ---
 
 ### Why is Inter embedded into Willemstad X, isn't that included in Obsidian proper?

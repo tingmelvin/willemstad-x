@@ -222,3 +222,42 @@ test('check-version fails when the manifest is rolled back below versions.json',
     );
   });
 });
+
+// ---------------------------------------------------------------------------
+// the release token rendered into the theme
+// ---------------------------------------------------------------------------
+
+test('--willemstad-release is a quoted string that tracks the manifest', () => {
+  // The version the user actually sees is rendered from one custom property, so
+  // this is the fourth place the version lives (after manifest.json,
+  // versions.json and the licence banner) and the only one whose *type* matters.
+  //
+  // It is substituted into `content`, which accepts <content-list> only. An
+  // unquoted `v1.11.1 Newfoundland` substitutes to a run of idents and numbers,
+  // making the declaration invalid at computed-value time — the version text
+  // then disappears from both the title bar and the community card, silently.
+  // Quoted, the substitution yields two adjacent strings, which concatenate.
+  const text = readFileSync(path.join(ROOT, 'theme.css'), 'utf8');
+  const manifest = JSON.parse(readFileSync(path.join(ROOT, 'manifest.json'), 'utf8'));
+
+  const raw = /--willemstad-release:\s*([^;]+);/.exec(text)?.[1]?.trim();
+  assert.ok(raw, 'theme.css must declare --willemstad-release');
+
+  assert.ok(
+    raw.length >= 2 && raw.startsWith('"') && raw.endsWith('"'),
+    `--willemstad-release must be a double-quoted string, got ${JSON.stringify(raw)}.\n` +
+      'Unquoted, every consumer becomes an invalid `content` value and the version\n' +
+      'text silently renders as nothing.',
+  );
+  assert.ok(
+    raw.slice(1, -1).startsWith(`v${manifest.version}`),
+    `--willemstad-release ${JSON.stringify(raw)} must start with v${manifest.version}`,
+  );
+
+  // Both consumers must go through the token, or the two can drift apart.
+  for (const selector of ['div\\.titlebar-text::after', '\\.community-item\\.mod-active \\.community-item-name::after']) {
+    const block = new RegExp(`${selector}\\s*\\{[^}]*\\}`).exec(text)?.[0];
+    assert.ok(block, `expected a rule for ${selector.replace(/\\\\/g, '')}`);
+    assert.match(block, /var\(--willemstad-release\)/, `${selector} must use the release token`);
+  }
+});

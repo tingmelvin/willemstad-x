@@ -1,0 +1,177 @@
+/* Verification scaffolding — NOT part of Willemstad.
+   Obsidian's app.css owns workspace layout. The theme only paints it.
+   These rules recreate enough chrome for theme.css selectors to match. */
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--background-primary, #111);
+  color: var(--text-normal, #ddd);
+  font-family: var(--font-text), var(--font-ui), "Inter 4.1", Inter, system-ui, sans-serif;
+  --size-2-3: 6px;
+  --size-4-1: 4px;
+  --default-font: Inter, system-ui, sans-serif;
+  --font-text-theme: "Inter 4.1", Inter, sans-serif;
+  --font-interface-theme: "Manrope", Inter, sans-serif;
+  --font-heading: "Manrope", "Inter 4.1", sans-serif;
+  --p-spacing: 1rem;
+  --p-spacing-root: 1rem;
+  --list-indent: 2em;
+  --editor-font-size: 16px;
+  --font-ui-small: 13px;
+  --header-height: 40px;
+  --ribbon-width: 44px;
+  --anim-duration-superfast: 80ms;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  background: var(--background-secondary, #1b1b1b);
+  color: var(--text-muted, #999);
+}
+
+.workspace {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.side-dock-ribbon {
+  width: var(--ribbon-width);
+  background: var(--background-secondary-alt, #161616);
+}
+
+.mod-sidedock {
+  width: 220px;
+  background: var(--background-secondary, #1b1b1b);
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.workspace-split.mod-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.workspace-tabs.mod-active {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.workspace-tab-header-container {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--background-secondary, #1b1b1b);
+}
+
+.workspace-tab-header {
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.workspace-leaf-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.view-header {
+  padding: 8px 16px;
+  background: var(--background-primary-alt, #181818);
+}
+
+.view-content {
+  flex: 1;
+  overflow: auto;
+  padding: 24px 32px 64px;
+}
+
+.markdown-preview-view,
+.markdown-rendered {
+  max-width: 720px;
+}
+
+.status-bar {
+  min-height: 24px;
+  padding: 4px 12px;
+  background: var(--background-secondary, #1b1b1b);
+  color: var(--text-muted, #999);
+  font-size: 12px;
+}
+
+.nav-file-title {
+  padding: 4px 0;
+}
+
+.verify-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 1.5rem;
+}
+
+.verify-nav a {
+  color: var(--text-accent, var(--color-accent));
+}
+
+.callout {
+  --callout-padding: 0.75em;
+  --callout-radius: 4px;
+  --callout-border-left-width: 4px;
+  --callout-border-other-width: 1px;
+  --callout-border-opacity: 0.25;
+  --callout-color: rgb(0, 170, 199);
+  margin: 1rem 0;
+  padding: var(--callout-padding);
+  border-radius: var(--callout-radius);
+}
+
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 600;
+}
+
+.callout-content > .callout {
+  flex: 1;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.task-list-item {
+  list-style: none;
+}
+
+.cm-editor {
+  font-family: var(--font-editor), ui-monospace, monospace;
+}
+
+.cm-line {
+  padding: 0.15em 0;
+}
+
+img {
+  max-width: 100%;
+}

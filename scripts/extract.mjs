@@ -349,6 +349,32 @@ function sniffFontFormat(buf) {
 }
 
 /**
+ * CSS `format()` keywords are not file extensions.
+ *
+ * `.ttf` is spelled `truetype` in a `src` descriptor, `.otf` is `opentype`, and
+ * `.ttc` is `collection`. Comparing a hint against the extension directly reports
+ * a false mismatch for every TrueType face — which is exactly what happened the
+ * first time these five were relabelled, and it buried the one signal that
+ * mattered under five lines of noise.
+ */
+const FORMAT_KEYWORDS = new Map([
+  ['woff2', ['woff2']],
+  ['woff', ['woff']],
+  ['ttf', ['truetype']],
+  ['otf', ['opentype']],
+  ['ttc', ['collection']],
+]);
+
+/** Does a `format("…")` hint describe a file with this extension? */
+export function hintMatchesExtension(hint, ext) {
+  const keywords = FORMAT_KEYWORDS.get(ext);
+  if (!keywords) return hint === ext;
+  // `woff` must not match `woff2`, so accept only the exact keyword or a
+  // `-variant` suffix (`woff2-variations`, `truetype-variations`, …).
+  return keywords.some((k) => hint === k || hint.startsWith(`${k}-`));
+}
+
+/**
  * Rewrite every @font-face block, replacing its base64 payload with a @font
  * directive and naming the file after the face it actually describes.
  *
@@ -413,7 +439,7 @@ function hoistFonts(lines, registry, report) {
       if (declared !== ext) {
         report?.push(`${face}: declared font/${declared}, actually ${label}`);
       }
-      if (hint && !hint.startsWith(ext)) {
+      if (hint && !hintMatchesExtension(hint, ext)) {
         report?.push(`${face}: format("${hint}") disagrees with ${label}`);
       }
 

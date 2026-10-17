@@ -13,25 +13,33 @@ ruled that Obsidian **1.13** is the compatibility target. All eight issues were
 fixed and the stylesheet rebuilt:
 
 ```
-before  f223ca9debab7e4ac50e37190b67dcd4c331e9014cde6282e45e96f71dfd202b  5,260,865 B
-after   0384718b4397846158efa2db0621cf274f4551f21e24306fca629ab755a6d2a4  5,257,337 B
+upstream   f223ca9debab7e4ac50e37190b67dcd4c331e9014cde6282e45e96f71dfd202b  5,260,865 B
+after fix  a66dd63c510291dc2170196e3f64eb10a6e265aef1b51283f924c072b82320c2  5,258,014 B
 ```
 
 The byte-identical invariant is therefore **retired on purpose**. It did its job:
 it made milestone 1 provably lossless. It would now only prevent fixes.
 
+Milestone 2 also had to be **rebased onto upstream's next 13 commits**, which by
+then already contained PRs #82–#89: the `verify-willemstad` skill, a `justfile`
+with its Python test suite, a CI workflow, and — notably — upstream's own fix for
+#1 plus a release-token refactor that introduced #9 below.
+
 ---
 
 ## Which fixes you should eyeball
 
-Only three of the eight alter rendering. Everything else is metadata, dead code, or
-a label correction. If you review anything in Obsidian, review these:
+Three of the nine alter rendering. Everything else is metadata, dead code, or a
+label correction. If you review anything in Obsidian, review these:
 
 | Fix | What to look at |
 | --- | --- |
 | #4a `--opp-table-border-color` | A table header border, **only with contrast mode on** (`ssopt-theme-contrast-*`) |
 | #4b `--opp-pdf-shadow` | A PDF embed, **only with contrast mode on** |
 | #4c `--col-bg-table` | An `[!infobox]` callout title — it now has a background where it previously had none |
+
+#9 restores rendering that upstream had already broken: the version text in the
+title bar and the community card. Check it appears; before this fix it did not.
 
 Everything else was verified to produce identical output, or to remove something
 that already had no effect.
@@ -153,6 +161,47 @@ derives the MIME type from the extension. The five files are now `.ttf`, emit
 
 **No font was re-encoded.** Verified: of 69 `data:` URIs, exactly 5 changed their
 MIME label and **0 changed their payload bytes**.
+
+## 9. The release token made the version text disappear — *regression*
+
+Upstream introduced one custom property so the rendered version tracks
+`manifest.json`:
+
+```css
+:root { --willemstad-release: v1.11.1 Newfoundland; }
+div.titlebar-text::after { content: "  /  Willemstad " var(--willemstad-release); }
+```
+
+The value was **not quoted**. A custom property is substituted as a *token
+stream*, so the consumer sees:
+
+```css
+content: "  /  Willemstad " v1.11.1 Newfoundland;
+```
+
+That is a run of idents and numbers, which does not match `<content-list>`.
+The declaration is invalid at computed-value time, so the version text silently
+renders as **nothing** — in both the title bar and the community card.
+
+Verified against the CSS grammar (css-tree + `mdn-data`):
+
+| substituted value | verdict |
+| --- | --- |
+| the pre-token original, `"  /  Willemstad v1.11.1 Newfoundland"` | **valid** |
+| unquoted token (as shipped) | **invalid — mismatch** |
+| quoted token | **valid** |
+
+**Fixed:** quote the value. Substitution then yields two adjacent strings, which
+concatenate to exactly the text the theme printed before the token existed — so
+this fixes the regression without changing what any user sees.
+
+A bare token sequence is also why the lint gate flagged it: `value-keyword-case`
+read `Newfoundland` as a keyword and errored.
+
+Guarded by `tests/version.test.mjs` (the value must be a quoted string that
+tracks the manifest, and both consumers must use the token) and by
+`test/test_release_token.py`, which now asserts the quoting rather than just the
+prefix.
 
 ---
 

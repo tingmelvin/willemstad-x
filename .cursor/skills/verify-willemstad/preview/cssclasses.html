@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSSClasses — Willemstad</title>
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/preview/harness.css">
+</head>
+<body class="theme-dark">
+  <div class="app-container">
+    <div class="titlebar"><div class="titlebar-text">CSSClasses</div></div>
+    <div class="workspace">
+      <div class="side-dock-ribbon" aria-label="ribbon"></div>
+      <div class="mod-sidedock" aria-label="file explorer">
+        <div class="nav-file-title">LaTeX.md</div>
+        <div class="nav-file-title">Cornell.md</div>
+      </div>
+      <div class="workspace-split mod-root">
+        <div class="workspace-tabs mod-active">
+          <div class="workspace-tab-header-container">
+            <div class="workspace-tab-header">CSSClasses.md</div>
+          </div>
+          <div class="workspace-leaf-content" data-type="markdown">
+            <div class="view-header">CSSClasses.md</div>
+            <div class="view-content">
+              <nav class="verify-nav" aria-label="features">
+                <a href="/preview/index.html">Index</a>
+              </nav>
+              <section aria-label="latex note">
+                <div class="latex markdown-preview-view markdown-rendered">
+                  <h1>LaTeX display</h1>
+                  <p>Users set <code>cssclass: latex</code> on the note. Paragraphs justify and the reading face switches to the MathJax stack at 14pt.</p>
+                  <div class="math-block">E = mc^{2}</div>
+                </div>
+              </section>
+              <section aria-label="cornell note">
+                <div class="cornell markdown-preview-view markdown-rendered">
+                  <div class="markdown-preview-section">
+                    <div class="callout" data-callout="aside" data-callout-metadata="">
+                      <div class="callout-title"><div class="callout-title-inner">Cue</div></div>
+                      <div class="callout-content"><p>Left cue column</p></div>
+                    </div>
+                    <div class="el-h1"><h1>Cornell notes</h1></div>
+                    <div class="el-p"><p>Users set <code>cssclass: cornell</code>. Body text sits to the right of the cue gutter; aside callouts float left into that gutter.</p></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="status-bar">cssclasses</div>
+  </div>
+  <script type="application/json" id="verify-report">{}</script>
+  <script src="/preview/boot.js"></script>
+</body>
+</html>

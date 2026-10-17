@@ -36,10 +36,25 @@ Copyright 2022-2025 Melvin Ting (@tingmelvin)
         >>> add Willemstad Version Number
         ──────────────────────────────────────────────────────────────────────── */
 
+/* The value MUST be a quoted string.
+ *
+ * A custom property is substituted as a token stream, so an unquoted
+ * `v1.11.1 Newfoundland` makes the consumers read
+ * `content: "  /  Willemstad " v1.11.1 Newfoundland` — a sequence of idents and
+ * numbers, which does not match <content-list>. The declaration is then invalid
+ * at computed-value time and the version text silently disappears from both the
+ * title bar and the community card.
+ *
+ * Quoted, the substitution yields two adjacent strings, which concatenate:
+ * exactly the text the theme printed before this token existed. */
+:root {
+  --willemstad-release: "v1.11.1 Newfoundland";
+}
+
 /* AA01-1-1 */
 div.titlebar-text::after {
   white-space: pre;
-  content: "  /  Willemstad v1.11.1 Newfoundland";
+  content: "  /  Willemstad " var(--willemstad-release);
 
   /* for title bar */
 }
@@ -69,7 +84,7 @@ div.titlebar-text::after {
 }
 
 .community-item.mod-active .community-item-name::after {
-  content: "\av1.11.1 Newfoundland"; /* prints version number */
+  content: "\a" var(--willemstad-release); /* prints version number */
   font-size: var(--font-ui-small);
 
   /* color: var(--text-muted); */
